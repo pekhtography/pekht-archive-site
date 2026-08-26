@@ -1,5 +1,5 @@
 ---
-title: "heavy-orange-velvet-petals-smell-of-pollen-and-sun-while-the"
+title: "Heavy orange velvet petals"
 image: "/images/archive/heavy-orange-velvet-petals-smell-of-pollen-and-sun-while-the.jpg"
 hashtags:
   - "GrowthMindset"
