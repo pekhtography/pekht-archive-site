@@ -36,6 +36,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && npx -y pagefind --site dist",
+    "archive:add": "tsx scripts/archive-add.ts",
     "build:serve": "astro build && npx -y pagefind --site dist --serve",
     "preview": "astro preview",
     "astro": "astro",
@@ -86,6 +87,7 @@
     "globals": "^17.6.0",
     "husky": "^9.1.7",
     "jiti": "^2.6.1",
-    "shadcn": "^4.1.2"
+    "shadcn": "^4.1.2",
+    "tsx": "^4.23.12"
   }
 }
