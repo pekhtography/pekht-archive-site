@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v3.4.1](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.4.1) | 2026-08-26
+
+### Bug Fixes
+- normalize archive titles [7706739](https://github.com/pekhtography/pekht-archive-site/commit/7706739)
+
 ## [v3.4.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.4.0) | 2026-08-26
 
 ### Features
