@@ -64,3 +64,12 @@ type variantType = "default" | "secondary" | "outline" | "ghost" | "destructive"
 
 export type portfolioCategoryType = "robotics" | "analytics" | "gameplay" | "software" | "ai" | "hardware";
 export type blogCategoryType = "engineering" | "workflow" | "strategy" | "devlog";
+export interface archiveConfig {
+  id: string;
+  data: {
+    title: string;
+    image: string;
+    hashtags: string[];
+  };
+  body: string;
+}

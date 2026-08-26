@@ -15,4 +15,13 @@ export const collections = {
       author: z.string().optional().default("Subhashis Hansda"),
     }),
   }),
+
+  archive: defineCollection({
+    loader: glob({ pattern: "**/*.md", base: "./src/content/archive" }),
+    schema: z.object({
+      title: z.string(),
+      image: z.string(),
+      hashtags: z.array(z.string()).default([]),
+    }),
+  }),
 };
