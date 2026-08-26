@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3.1.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.1.0) | 2026-08-26
+
+### Features
+- add photography archive [80e2371](https://github.com/pekhtography/pekht-archive-site/commit/80e2371)
+### Other
+- Initial commit [649c3c4](https://github.com/pekhtography/pekht-archive-site/commit/649c3c4)
+
 ## [v3.0.0](https://github.com/A58361/Ryze/releases/tag/v3.0.0) | 2026-06-01
 
 ### Features
