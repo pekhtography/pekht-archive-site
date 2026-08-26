@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v3.2.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.2.0) | 2026-08-26
+
+### Features
+- add X archive importer [8639dae](https://github.com/pekhtography/pekht-archive-site/commit/8639dae)
+
 ## [v3.1.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.1.0) | 2026-08-26
 
 ### Features
