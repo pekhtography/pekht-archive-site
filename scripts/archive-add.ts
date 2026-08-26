@@ -5,7 +5,7 @@ const POST_URL = process.argv[2];
 
 if (!POST_URL) {
   console.error(
-    'Usage: pnpm archive:add "https://x.com/pekhtography/status/1234567890"',
+    'Usage: pnpm archive:add "https://x.com/PEKHTography/status/1234567890"',
   );
   process.exit(1);
 }
@@ -31,7 +31,7 @@ const response = await fetch(
   {
     headers: {
       "User-Agent":
-        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/151.0 Safari/537.36",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/151.0.0.0 Safari/537.36",
       Accept:
         "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
     },
@@ -39,59 +39,153 @@ const response = await fetch(
 );
 
 if (!response.ok) {
-  console.error(`X page returned HTTP ${response.status}`);
+  console.error(`X returned HTTP ${response.status}.`);
   process.exit(1);
 }
 
 const html = await response.text();
 
-await fs.writeFile("/tmp/x.html", html, "utf8");
+const decodeHtml = (value: string) =>
+  value
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<")
+    .replace(/&gt;/g, ">")
+    .replace(/&#x27;/gi, "'")
+    .replace(/&#x2F;/gi, "/")
+    .replace(/&#(\d+);/g, (_, code) =>
+      String.fromCharCode(Number(code)),
+    );
 
-/*
- * X exposes the post text through og:description.
- */
-const descriptionMatch = html.match(
-  /<meta[^>]+property=["']og:description["'][^>]+content=["']([^"]*)["']/i,
-);
+const cleanText = (value: string) =>
+  decodeHtml(value)
+    .replace(/\\n/g, "\n")
+    .replace(/\\"/g, '"')
+    .replace(/\\u0026/g, "&")
+    .replace(/\\u003C/gi, "<")
+    .replace(/\\u003E/gi, ">")
+    .replace(/\s+/g, " ")
+    .trim();
 
-let tweetText = descriptionMatch?.[1] ?? "";
+const extractMeta = (property: string) => {
+  const regex = new RegExp(
+    `<meta[^>]+property=["']${property}["'][^>]+content=["']([^"']*)["'][^>]*>`,
+    "i",
+  );
 
-tweetText = tweetText
-  .replace(/&quot;/g, '"')
-  .replace(/&#39;/g, "'")
-  .replace(/&amp;/g, "&")
-  .replace(/&lt;/g, "<")
-  .replace(/&gt;/g, ">");
+  const match = html.match(regex);
 
-console.log(`Text found: ${tweetText ? "YES" : "NO"}`);
+  return match ? cleanText(match[1]) : "";
+};
+
+const extractNameMeta = (name: string) => {
+  const regex = new RegExp(
+    `<meta[^>]+name=["']${name}["'][^>]+content=["']([^"']*)["'][^>]*>`,
+    "i",
+  );
+
+  const match = html.match(regex);
+
+  return match ? cleanText(match[1]) : "";
+};
+
+const description =
+  extractMeta("og:description") ||
+  extractNameMeta("description");
+
+let tweetText = description
+  .replace(/^.*?:\s*/, "")
+  .trim();
+
+const authorPrefix = `${username} on X: `;
+
+if (tweetText.toLowerCase().startsWith(authorPrefix.toLowerCase())) {
+  tweetText = tweetText.slice(authorPrefix.length).trim();
+}
+
+const articleTags = extractMeta("article:tag");
 
 if (!tweetText) {
-  console.error("");
-  console.error("Could not extract the post text from X.");
+  console.error("Text found: NO");
   process.exit(1);
 }
 
-/*
- * Find X media IDs from pbs.twimg.com URLs.
- *
- * X may expose several sizes/formats of the same image.
- * We extract the media ID and construct our own stable download URL.
- */
-const mediaIds = [
+console.log("Text found: YES");
+
+const imageMatches = [
   ...html.matchAll(
-    /https:\/\/pbs\.twimg\.com\/media\/([A-Za-z0-9_-]+)/g,
+    /https:\/\/pbs\.twimg\.com\/media\/[^"'&<\s?]+(?:\?[^"'&<\s]*)?/gi,
   ),
-].map((m) => m[1]);
+];
 
-const uniqueMediaIds = [...new Set(mediaIds)];
+const imageUrls = [
+  ...new Set(
+    imageMatches.map((match) =>
+      decodeHtml(match[0]),
+    ),
+  ),
+];
 
-console.log(`Photos found: ${uniqueMediaIds.length}`);
+console.log(`Photos found: ${imageUrls.length}`);
 
-if (uniqueMediaIds.length === 0) {
-  console.error("");
-  console.error("No X photos found.");
+if (imageUrls.length === 0) {
+  console.error("No photo found in this post.");
   process.exit(1);
 }
+
+const imageUrl = imageUrls[0]
+  .replace(/&amp;/g, "&")
+  .replace(/name=[^&]+/i, "name=large");
+
+const textWithoutHashtags = tweetText
+  .replace(/(^|\s)#[A-Za-z0-9_]+/g, " ")
+  .replace(/\s+/g, " ")
+  .trim();
+
+const hashtags = [
+  ...new Set(
+    (
+      tweetText.match(/(^|\s)#([A-Za-z0-9_]+)/g) ?? []
+    ).map((tag) =>
+      tag.trim().replace(/^#/, ""),
+    ),
+  ),
+];
+
+if (articleTags) {
+  for (const tag of articleTags.split(/\s+/)) {
+    const cleanTag = tag.replace(/^#/, "").trim();
+
+    if (
+      cleanTag &&
+      !hashtags.some(
+        (existing) =>
+          existing.toLowerCase() === cleanTag.toLowerCase(),
+      )
+    ) {
+      hashtags.push(cleanTag);
+    }
+  }
+}
+
+const firstSentence =
+  textWithoutHashtags.match(/^(.+?[.!?])(?:\s|$)/)?.[1] ??
+  textWithoutHashtags;
+
+const title = firstSentence
+  .replace(/[.!?]+$/, "")
+  .trim();
+
+const slug = textWithoutHashtags
+  .replace(/[^\p{L}\p{N}\s-]/gu, "")
+  .toLowerCase()
+  .trim()
+  .replace(/\s+/g, "-")
+  .replace(/-+/g, "-")
+  .slice(0, 60);
+
+const safeSlug = slug || `x-${postId}`;
 
 const projectRoot = process.cwd();
 
@@ -112,37 +206,10 @@ const contentDir = path.join(
 await fs.mkdir(imageDir, { recursive: true });
 await fs.mkdir(contentDir, { recursive: true });
 
-/*
- * Remove URLs from X metadata.
- */
-let cleanText = tweetText
-  .replace(/https?:\/\/t\.co\/\S+/g, "")
-  .trim();
-
-/*
- * Extract hashtags before removing them.
- */
-const hashtags = [
-  ...cleanText.matchAll(/(^|\s)#([A-Za-z0-9_]+)/g),
-].map((m) => m[2]);
-
-cleanText = cleanText
-  .replace(/(^|\s)#[A-Za-z0-9_]+/g, "")
-  .replace(/\n{3,}/g, "\n\n")
-  .trim();
-
-/*
- * Generate slug from the actual post text.
- */
-const slug = cleanText
-  .replace(/[^\p{L}\p{N}\s-]/gu, "")
-  .toLowerCase()
-  .trim()
-  .replace(/\s+/g, "-")
-  .replace(/-+/g, "-")
-  .slice(0, 60);
-
-const safeSlug = slug || `x-${postId}`;
+const imagePath = path.join(
+  imageDir,
+  `${safeSlug}.jpg`,
+);
 
 const markdownPath = path.join(
   contentDir,
@@ -156,74 +223,41 @@ try {
   console.error(
     `Archive entry already exists: ${safeSlug}.md`,
   );
+  console.error("");
+
   process.exit(1);
 } catch {
-  // Does not exist — continue.
+  // File does not exist — continue.
 }
 
 console.log("Downloading image...");
+console.log(`Trying: ${imageUrl}`);
 
-/*
- * Try each discovered media ID until one downloads successfully.
- */
-let imageBuffer: Buffer | null = null;
-let downloadedImageUrl = "";
+const imageResponse = await fetch(imageUrl, {
+  headers: {
+    "User-Agent": "Mozilla/5.0",
+  },
+});
 
-for (const mediaId of uniqueMediaIds) {
-  const candidates = [
-    `https://pbs.twimg.com/media/${mediaId}?format=jpg&name=large`,
-    `https://pbs.twimg.com/media/${mediaId}?format=jpg&name=orig`,
-  ];
-
-  for (const imageUrl of candidates) {
-    console.log(`Trying: ${imageUrl}`);
-
-    const imageResponse = await fetch(imageUrl, {
-      headers: {
-        "User-Agent": "Mozilla/5.0",
-        Referer: `https://x.com/${username}/status/${postId}`,
-      },
-    });
-
-    if (imageResponse.ok) {
-      imageBuffer = Buffer.from(
-        await imageResponse.arrayBuffer(),
-      );
-
-      downloadedImageUrl = imageUrl;
-      break;
-    }
-
-    console.log(
-      `Image request returned HTTP ${imageResponse.status}`,
-    );
-  }
-
-  if (imageBuffer) {
-    break;
-  }
-}
-
-if (!imageBuffer) {
-  console.error("");
-  console.error("Unable to download any X image.");
+if (!imageResponse.ok) {
+  console.error(
+    `Unable to download image: HTTP ${imageResponse.status}`,
+  );
   process.exit(1);
 }
 
-const imagePath = path.join(
-  imageDir,
-  `${safeSlug}.jpg`,
+const imageBuffer = Buffer.from(
+  await imageResponse.arrayBuffer(),
 );
 
 await fs.writeFile(imagePath, imageBuffer);
 
 console.log(`Image saved: ${imagePath}`);
 
-/*
- * YAML-safe string.
- */
 const yamlString = (value: string) =>
-  `"${value.replace(/\\/g, "\\\\").replace(/"/g, '\\"')}"`;
+  `"${value
+    .replace(/\\/g, "\\\\")
+    .replace(/"/g, '\\"')}"`;
 
 const hashtagYaml = hashtags.length
   ? hashtags
@@ -232,13 +266,13 @@ const hashtagYaml = hashtags.length
   : "  []";
 
 const markdown = `---
-title: ${yamlString(safeSlug)}
+title: ${yamlString(title)}
 image: "/images/archive/${safeSlug}.jpg"
 hashtags:
 ${hashtagYaml}
 ---
 
-${cleanText}
+${textWithoutHashtags}
 `;
 
 await fs.writeFile(
@@ -251,10 +285,11 @@ console.log("");
 console.log("Archive import successful.");
 console.log("");
 console.log(`Post:    ${POST_URL}`);
+console.log(`Title:   ${title}`);
 console.log(`Image:   ${imagePath}`);
 console.log(`Content: ${markdownPath}`);
 console.log(
   `Tags:    ${hashtags.length ? hashtags.join(", ") : "none"}`,
 );
-console.log(`Source:  ${downloadedImageUrl}`);
+console.log(`Source:  ${imageUrl}`);
 console.log("");
