@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v3.6.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.6.0) | 2026-08-27
+
+### Features
+- add archive post [0912d71](https://github.com/pekhtography/pekht-archive-site/commit/0912d71)
+
 ## [v3.5.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.5.0) | 2026-08-27
 
 ### Features
