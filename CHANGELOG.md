@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v3.7.1](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.7.1) | 2026-08-27
+
+### Bug Fixes
+- avoid duplicate archive push [f703aef](https://github.com/pekhtography/pekht-archive-site/commit/f703aef)
+
 ## [v3.7.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.7.0) | 2026-08-27
 
 ### Features
