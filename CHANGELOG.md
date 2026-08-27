@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v3.4.2](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.4.2) | 2026-08-27
+
+### Bug Fixes
+- preserve archive post formatting [882b564](https://github.com/pekhtography/pekht-archive-site/commit/882b564)
+
 ## [v3.4.1](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.4.1) | 2026-08-26
 
 ### Bug Fixes
