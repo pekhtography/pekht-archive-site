@@ -65,8 +65,22 @@ const cleanText = (value: string) =>
     .replace(/\\u0026/g, "&")
     .replace(/\\u003C/gi, "<")
     .replace(/\\u003E/gi, ">")
-    .replace(/\s+/g, " ")
+    .split(/\r?\n/)
+    .map((line) => line.replace(/[ \t]+/g, " ").trim())
+    .join("\n")
+    .replace(/\n{3,}/g, "\n\n")
     .trim();
+
+const extractXField = (field: string) => {
+  const regex = new RegExp(
+    `${field}:"((?:\\\\.|[^"\\\\])*)"`,
+    "i",
+  );
+
+  const match = html.match(regex);
+
+  return match ? cleanText(match[1]) : "";
+};
 
 const extractMeta = (property: string) => {
   const regex = new RegExp(
@@ -94,9 +108,10 @@ const description =
   extractMeta("og:description") ||
   extractNameMeta("description");
 
-let tweetText = description
-  .replace(/^.*?:\s*/, "")
-  .trim();
+let tweetText =
+  extractXField("bodyText") ||
+  extractXField("full_text") ||
+  description;
 
 const authorPrefix = `${username} on X: `;
 
@@ -139,8 +154,12 @@ const imageUrl = imageUrls[0]
   .replace(/name=[^&]+/i, "name=large");
 
 const textWithoutHashtags = tweetText
-  .replace(/(^|\s)#[A-Za-z0-9_]+/g, " ")
-  .replace(/\s+/g, " ")
+  .replace(/(^|\s)#[A-Za-z0-9_]+/g, "$1")
+  .replace(/https?:\/\/t\.co\/[A-Za-z0-9]+/g, "")
+  .split(/\r?\n/)
+  .map((line) => line.replace(/[ \t]+/g, " ").trim())
+  .filter(Boolean)
+  .join("\n")
   .trim();
 
 const hashtags = [
