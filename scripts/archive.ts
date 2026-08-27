@@ -34,12 +34,9 @@ try {
   ]);
 
   console.log("");
-  console.log("=== 3/3 Pushing to GitHub ===");
+  console.log("=== 3/3 Published by Aureus ===");
   console.log("");
 
-  await execFileAsync("git", ["push"]);
-
-  console.log("");
   console.log("=== Archive published successfully ===");
   console.log("");
 } catch (error) {
