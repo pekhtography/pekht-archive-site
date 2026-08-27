@@ -36,7 +36,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "astro build && npx -y pagefind --site dist",
-    "archive:add": "tsx scripts/archive-add.ts",
+    "archive": "tsx scripts/archive.ts",
     "build:serve": "astro build && npx -y pagefind --site dist --serve",
     "preview": "astro preview",
     "astro": "astro",
