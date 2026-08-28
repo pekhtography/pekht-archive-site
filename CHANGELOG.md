@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v3.8.2](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.8.2) | 2026-08-28
+
+### Bug Fixes
+- display archive posts without duplicate title [08833c3](https://github.com/pekhtography/pekht-archive-site/commit/08833c3)
+
 ## [v3.8.1](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.8.1) | 2026-08-28
 
 ### Bug Fixes
