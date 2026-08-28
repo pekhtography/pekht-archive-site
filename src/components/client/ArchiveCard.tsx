@@ -12,11 +12,7 @@ export function ArchiveCard({ item }: { item: ArchiveItem }) {
       />
 
       <div className="p-6">
-        <h2 className="text-2xl font-semibold">
-          {item.data.title}
-        </h2>
-
-        <div className="mt-4 whitespace-pre-line text-base leading-relaxed">
+        <div className="whitespace-pre-line text-base leading-relaxed">
           {item.body}
         </div>
 
