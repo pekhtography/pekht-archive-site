@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v3.8.1](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.8.1) | 2026-08-28
+
+### Bug Fixes
+- publish archive through pre-push [9d79a69](https://github.com/pekhtography/pekht-archive-site/commit/9d79a69)
+
 ## [v3.8.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.8.0) | 2026-08-28
 
 ### Features
