@@ -1,5 +1,14 @@
 # CHANGELOG
 
+## [v3.8.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.8.0) | 2026-08-28
+
+### Features
+- add archive post [1dcb153](https://github.com/pekhtography/pekht-archive-site/commit/1dcb153)
+- add archive post [67785bf](https://github.com/pekhtography/pekht-archive-site/commit/67785bf)
+### Bug Fixes
+- restore archive post [b686d0c](https://github.com/pekhtography/pekht-archive-site/commit/b686d0c)
+- reimport archive post [db15699](https://github.com/pekhtography/pekht-archive-site/commit/db15699)
+
 ## [v3.7.1](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.7.1) | 2026-08-27
 
 ### Bug Fixes
