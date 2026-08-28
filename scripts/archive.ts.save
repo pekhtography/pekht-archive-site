@@ -33,7 +33,7 @@ try {
     "feat: add archive post",
   ]);
 
-console.log("");
+  console.log("");
 console.log("=== 3/3 Publishing with Aureus ===");
 console.log("");
 
@@ -51,7 +51,6 @@ await execFileAsync(
 console.log("");
 console.log("=== Archive published successfully ===");
 console.log("");
-
 } catch (error) {
   console.error("");
   console.error("Archive process failed.");
