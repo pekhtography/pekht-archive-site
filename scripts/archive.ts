@@ -34,19 +34,10 @@ try {
   ]);
 
 console.log("");
-console.log("=== 3/3 Publishing with Aureus ===");
+console.log("=== 3/3 Publishing to GitHub ===");
 console.log("");
 
-await execFileAsync(
-  "npx",
-  ["aureus", "bump"],
-  {
-    env: {
-      ...process.env,
-      AUREUS_INTERNAL_PUSH: "true",
-    },
-  },
-);
+await execFileAsync("git", ["push"]);
 
 console.log("");
 console.log("=== Archive published successfully ===");
