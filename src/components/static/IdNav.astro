@@ -8,7 +8,7 @@ interface PostNav {
     };
 }
 
-const { type, prev, next } = Astro.props as { type: "blog" | "portfolio"; prev?: PostNav | null; next?: PostNav | null };
+const { type, prev, next } = Astro.props as { type: "blog" | "portfolio" | "archive"; prev?: PostNav | null; next?: PostNav | null };
 ---
 
 {

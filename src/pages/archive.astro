@@ -4,7 +4,9 @@ import IndexHeader from "@/components/static/IndexHeader.astro";
 import IndexLayout from "@/layouts/IndexLayout.astro";
 import { ArchiveCard } from "@/components/client/ArchiveCard";
 
-const items = await getCollection("archive");
+const items = (await getCollection("archive")).sort((a, b) =>
+    a.id.localeCompare(b.id)
+);
 ---
 
 <IndexLayout

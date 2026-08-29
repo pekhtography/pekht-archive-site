@@ -7,7 +7,7 @@ import Head, { type Props as HeadProps } from "@/components/static/Head.astro";
 import FooterId from "@/components/static/FooterId.astro";
 
 const { type, prev, next, ...headProps } = Astro.props as HeadProps & {
-    type: "blog" | "portfolio";
+    type: "blog" | "portfolio" | "archive";
     prev: any;
     next: any;
 };
