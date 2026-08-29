@@ -6,7 +6,7 @@
   "domain": "https://pekht-archive-site.pages.dev",
   "bNavigation": true,
   "homeLabel": "home",
-  "navigationItems": ["portfolio", "blog"],
+  "navigationItems": ["portfolio", "blog", "archive"],
   "bPageFind": true,
   "bThemeToggle": true,
   "bRssFeed": true,
