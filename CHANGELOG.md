@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v3.10.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.10.0) | 2026-08-29
+
+### Features
+- add archive to navigation [7e9335b](https://github.com/pekhtography/pekht-archive-site/commit/7e9335b)
+
 ## [v3.9.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.9.0) | 2026-08-28
 
 ### Features
