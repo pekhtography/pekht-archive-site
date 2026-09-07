@@ -19,6 +19,8 @@ export const collections = {
   archive: defineCollection({
     loader: glob({ pattern: "**/*.md", base: "./src/content/archive" }),
     schema: z.object({
+      x_id: z.string().optional(),
+      x_created_at: z.string().optional(),
       title: z.string(),
       image: z.string(),
       hashtags: z.array(z.string()).default([]),

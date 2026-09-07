@@ -1,0 +1,27 @@
+---
+title: "#Rose #Beauty #Glass #Transparency #Vase #Petals #Delicacy #Orange #Warmth #Pink #Affection #Love #Connection #Joy #Happ"
+x_id: "1904118496465952792"
+x_created_at: "2025-03-24T10:30:01Z"
+image: "/images/archive/rose-beauty-glass-transparency-vase-petals-delicacy-orange-w.jpg"
+hashtags:
+  - "Rose"
+  - "Beauty"
+  - "Glass"
+  - "Transparency"
+  - "Vase"
+  - "Petals"
+  - "Delicacy"
+  - "Orange"
+  - "Warmth"
+  - "Pink"
+  - "Affection"
+  - "Love"
+  - "Connection"
+  - "Joy"
+  - "Happiness"
+  - "Aesthetics"
+  - "Blossom"
+  - "Bloom"
+  - "Growth"
+---
+#Rose #Beauty #Glass #Transparency #Vase #Petals #Delicacy #Orange #Warmth #Pink #Affection #Love #Connection #Joy #Happiness #Beauty #Aesthetics #Blossom #Bloom #Growth https://t.co/oTf9eMPGa9

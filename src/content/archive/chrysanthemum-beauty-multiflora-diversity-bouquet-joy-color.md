@@ -1,0 +1,27 @@
+---
+title: "#Chrysanthemum #Beauty #Multiflora #Diversity #Bouquet #Joy #Color #Vibrancy #Bushy #Resilience #Early #Freshness #Burgu"
+x_id: "1899324404636537188"
+x_created_at: "2025-03-11T05:00:00Z"
+image: "/images/archive/chrysanthemum-beauty-multiflora-diversity-bouquet-joy-color.jpg"
+hashtags:
+  - "Chrysanthemum"
+  - "Beauty"
+  - "Multiflora"
+  - "Diversity"
+  - "Bouquet"
+  - "Joy"
+  - "Color"
+  - "Vibrancy"
+  - "Bushy"
+  - "Resilience"
+  - "Early"
+  - "Freshness"
+  - "Burgundy"
+  - "Richness"
+  - "Yellow"
+  - "Sunshine"
+  - "Petals"
+  - "Softness"
+  - "Celebration"
+---
+#Chrysanthemum #Beauty #Multiflora #Diversity #Bouquet #Joy #Color #Vibrancy #Bushy #Resilience #Early #Freshness #Burgundy #Richness #Yellow #Sunshine #Petals #Softness #Celebration https://t.co/Jk3e9ex3sd

@@ -1,0 +1,25 @@
+---
+title: "#Chrysanthemum #Ikebana #Balance #Flowers #Nature #Arrangement #Creativity #Elegance #Artistry #Culture #Tradition #Symb"
+x_id: "1900572628789649422"
+x_created_at: "2025-03-14T15:40:00Z"
+image: "/images/archive/chrysanthemum-ikebana-balance-flowers-nature-arrangement-cre.jpg"
+hashtags:
+  - "Chrysanthemum"
+  - "Ikebana"
+  - "Balance"
+  - "Flowers"
+  - "Nature"
+  - "Arrangement"
+  - "Creativity"
+  - "Elegance"
+  - "Artistry"
+  - "Culture"
+  - "Tradition"
+  - "Symbolism"
+  - "Meaning"
+  - "Art"
+  - "Yellow"
+  - "Sunshine"
+  - "Beauty"
+---
+#Chrysanthemum #Ikebana #Balance #Flowers #Nature #Arrangement #Creativity #Elegance #Artistry #Culture #Tradition #Symbolism #Meaning #Art #Yellow #Sunshine #Beauty https://t.co/tKB7DXw6u5

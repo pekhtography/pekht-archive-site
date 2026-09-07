@@ -1,0 +1,32 @@
+---
+title: "In the wake of the storm, homes stood like lonely ships adrift on a turbulent sea"
+x_id: "1892311444324307139"
+x_created_at: "2025-02-19T20:33:00Z"
+image: "/images/archive/in-the-wake-of-the-storm-homes-stood-like-lonely-ships-adrif.jpg"
+hashtags:
+  - "Floods"
+  - "Deluge"
+  - "Fury"
+  - "Evacuated"
+  - "Relocation"
+  - "Rain"
+  - "Drench"
+  - "Wind"
+  - "Whirlwind"
+  - "storm"
+  - "homes"
+  - "ships"
+  - "sea"
+  - "turbulent"
+  - "aftermath"
+  - "tempest"
+  - "vessels"
+  - "ocean"
+  - "tide"
+  - "shelter"
+  - "chaos"
+  - "lonely"
+  - "adrift"
+---
+In the wake of the storm, homes stood like lonely ships adrift on a turbulent sea
+#Floods #Deluge #Fury #Evacuated #Relocation #Rain #Drench #Wind #Whirlwind #storm #homes #ships #sea #turbulent #aftermath #tempest #vessels #ocean #tide #shelter #chaos #lonely #adrift https://t.co/AZM8oSu6Aw

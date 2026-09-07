@@ -1,0 +1,26 @@
+---
+title: "#fireweed #seeds #nature #fluffy #wind #delicate #light #floating #whimsical #ethereal #botany #plantlife #outdoors #gar"
+x_id: "1906802428953202927"
+x_created_at: "2025-03-31T20:15:00Z"
+image: "/images/archive/fireweed-seeds-nature-fluffy-wind-delicate-light-floating-wh.jpg"
+hashtags:
+  - "fireweed"
+  - "seeds"
+  - "nature"
+  - "fluffy"
+  - "wind"
+  - "delicate"
+  - "light"
+  - "floating"
+  - "whimsical"
+  - "ethereal"
+  - "botany"
+  - "plantlife"
+  - "outdoors"
+  - "garden"
+  - "summer"
+  - "growth"
+  - "beauty"
+  - "serenity"
+---
+#fireweed #seeds #nature #fluffy #wind #delicate #light #floating #whimsical #ethereal #botany #plantlife #outdoors #garden #summer #growth #beauty #serenity https://t.co/itgXTiyGEZ

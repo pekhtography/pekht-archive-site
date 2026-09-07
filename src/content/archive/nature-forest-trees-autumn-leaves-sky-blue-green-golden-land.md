@@ -1,0 +1,28 @@
+---
+title: "#nature #forest #trees #autumn #leaves #sky #blue #green #golden #landscape #outdoors #woods #birch #shadow #grass #mead"
+x_id: "1906288794225066249"
+x_created_at: "2025-03-30T10:14:00Z"
+image: "/images/archive/nature-forest-trees-autumn-leaves-sky-blue-green-golden-land.jpg"
+hashtags:
+  - "nature"
+  - "forest"
+  - "trees"
+  - "autumn"
+  - "leaves"
+  - "sky"
+  - "blue"
+  - "green"
+  - "golden"
+  - "landscape"
+  - "outdoors"
+  - "woods"
+  - "birch"
+  - "shadow"
+  - "grass"
+  - "meadow"
+  - "wilderness"
+  - "serene"
+  - "peaceful"
+  - "scenic"
+---
+#nature #forest #trees #autumn #leaves #sky #blue #green #golden #landscape #outdoors #woods #birch #shadow #grass #meadow #wilderness #serene #peaceful #scenic https://t.co/UfjhdzLpWZ

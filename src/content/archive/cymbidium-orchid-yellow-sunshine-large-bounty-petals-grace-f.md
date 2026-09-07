@@ -1,0 +1,28 @@
+---
+title: "#Cymbidium #Orchid #Yellow #Sunshine #Large #Bounty #Petals #Grace #Flowers #Beauty #Resilience #Strength #Nature #Elega"
+x_id: "1895815281853022359"
+x_created_at: "2025-03-01T12:36:00Z"
+image: "/images/archive/cymbidium-orchid-yellow-sunshine-large-bounty-petals-grace-f.jpg"
+hashtags:
+  - "Cymbidium"
+  - "Orchid"
+  - "Yellow"
+  - "Sunshine"
+  - "Large"
+  - "Bounty"
+  - "Petals"
+  - "Grace"
+  - "Flowers"
+  - "Beauty"
+  - "Resilience"
+  - "Strength"
+  - "Nature"
+  - "Elegance"
+  - "Bloom"
+  - "Waxy"
+  - "Glossy"
+  - "Matte"
+  - "Simplicity"
+  - "Epiphytic"
+---
+#Cymbidium #Orchid #Yellow #Sunshine #Large #Bounty #Petals #Grace #Flowers #Beauty #Resilience #Strength #Nature #Elegance #Bloom #Waxy #Glossy #Matte #Simplicity #Epiphytic https://t.co/nnTjU6F9kf

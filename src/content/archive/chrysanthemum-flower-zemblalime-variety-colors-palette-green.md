@@ -1,0 +1,28 @@
+---
+title: "#Chrysanthemum #Flower #ZemblaLime #Variety #Colors #Palette #Green #Nature #White #Purity #Pink #Love #Burgundy #Richne"
+x_id: "1904989734780461475"
+x_created_at: "2025-03-26T20:12:00Z"
+image: "/images/archive/chrysanthemum-flower-zemblalime-variety-colors-palette-green.jpg"
+hashtags:
+  - "Chrysanthemum"
+  - "Flower"
+  - "ZemblaLime"
+  - "Variety"
+  - "Colors"
+  - "Palette"
+  - "Green"
+  - "Nature"
+  - "White"
+  - "Purity"
+  - "Pink"
+  - "Love"
+  - "Burgundy"
+  - "Richness"
+  - "Violet"
+  - "Mystery"
+  - "Bouquet"
+  - "Arrangement"
+  - "Beauty"
+  - "Aesthetics"
+---
+#Chrysanthemum #Flower #ZemblaLime #Variety #Colors #Palette #Green #Nature #White #Purity #Pink #Love #Burgundy #Richness #Violet #Mystery #Bouquet #Arrangement #Beauty #Aesthetics https://t.co/mdNkXFF1lH

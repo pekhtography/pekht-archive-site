@@ -1,0 +1,31 @@
+---
+title: "The daylily knows it only has one act in this garden play, but what a show it puts on"
+x_id: "1881209288951259559"
+x_created_at: "2025-01-20T05:17:00Z"
+image: "/images/archive/the-daylily-knows-it-only-has-one-act-in-this-garden-play-bu.jpg"
+hashtags:
+  - "daylily"
+  - "flower"
+  - "blooms"
+  - "day"
+  - "shines"
+  - "radiance"
+  - "lifetime"
+  - "beauty"
+  - "slight"
+  - "magic"
+  - "garden"
+  - "enchantment"
+  - "ephemeral"
+  - "nature"
+  - "theater"
+  - "treasure"
+  - "moment"
+  - "show"
+  - "quality"
+  - "spotlight"
+  - "wonder"
+  - "power"
+---
+The daylily knows it only has one act in this garden play, but what a show it puts on!
+#daylily #flower #blooms #day #shines #radiance #lifetime #beauty #slight #magic #garden #enchantment #ephemeral #nature #theater #treasure #moment #show #quality #spotlight #wonder #power https://t.co/SChmRFJbE3

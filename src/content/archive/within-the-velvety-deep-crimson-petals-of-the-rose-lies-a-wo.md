@@ -1,0 +1,32 @@
+---
+title: "Within the velvety, deep crimson petals of the rose lies a world where love eternally blooms"
+x_id: "1882331684667830779"
+x_created_at: "2025-01-23T07:37:00Z"
+image: "/images/archive/within-the-velvety-deep-crimson-petals-of-the-rose-lies-a-wo.jpg"
+hashtags:
+  - "love"
+  - "passion"
+  - "crimson"
+  - "blood"
+  - "rose"
+  - "beauty"
+  - "petals"
+  - "world"
+  - "realm"
+  - "bloom"
+  - "growth"
+  - "thorns"
+  - "pain"
+  - "emotions"
+  - "feelings"
+  - "red"
+  - "flower"
+  - "promise"
+  - "declaration"
+  - "sweet"
+  - "scent"
+  - "heart"
+  - "tenderness"
+---
+Within the velvety, deep crimson petals of the rose lies a world where love eternally blooms
+#love #passion #crimson #blood #rose #beauty #petals #world #realm #bloom #growth #thorns #pain #emotions #feelings #red #flower #promise #declaration #sweet #scent #heart #tenderness https://t.co/Ve5Pe2hQeB

@@ -1,0 +1,26 @@
+---
+title: "#Allium #Schoenoprasum #purple #Petals #green #Leaves #garden #beauty #fragrance #salad #bloom #vitality #design #taste "
+x_id: "1908011646477324366"
+x_created_at: "2025-04-04T04:20:00Z"
+image: "/images/archive/allium-schoenoprasum-purple-petals-green-leaves-garden-beaut.jpg"
+hashtags:
+  - "Allium"
+  - "Schoenoprasum"
+  - "purple"
+  - "Petals"
+  - "green"
+  - "Leaves"
+  - "garden"
+  - "beauty"
+  - "fragrance"
+  - "salad"
+  - "bloom"
+  - "vitality"
+  - "design"
+  - "taste"
+  - "aroma"
+  - "Fresh"
+  - "Chives"
+  - "Plant"
+---
+#Allium #Schoenoprasum #purple #Petals #green #Leaves #garden #beauty #fragrance #salad #bloom #vitality #design #taste #aroma #Fresh #Chives #Plant https://t.co/rZUPT8aUge

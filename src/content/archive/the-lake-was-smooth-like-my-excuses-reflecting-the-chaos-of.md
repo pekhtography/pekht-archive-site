@@ -1,0 +1,31 @@
+---
+title: "The lake was smooth like my excuses, reflecting the chaos of autumn without a ripple"
+x_id: "1867699771407741352"
+x_created_at: "2024-12-13T22:35:00Z"
+image: "/images/archive/the-lake-was-smooth-like-my-excuses-reflecting-the-chaos-of.jpg"
+hashtags:
+  - "autumn"
+  - "lake"
+  - "smooth"
+  - "mirror"
+  - "stillness"
+  - "nature"
+  - "hues"
+  - "colors"
+  - "palette"
+  - "trees"
+  - "leaves"
+  - "floaters"
+  - "wind"
+  - "reflection"
+  - "feelings"
+  - "depths"
+  - "gold"
+  - "crimson"
+  - "chaos"
+  - "tranquility"
+  - "ripple"
+  - "calm"
+---
+The lake was smooth like my excuses, reflecting the chaos of autumn without a ripple
+#autumn #lake #smooth #mirror #stillness #nature #hues #colors #palette #trees #leaves #floaters #wind #reflection #feelings #depths #gold #crimson #chaos #tranquility #ripple #calm https://t.co/ee62VqMMEQ

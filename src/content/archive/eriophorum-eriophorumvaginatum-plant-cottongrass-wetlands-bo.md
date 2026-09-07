@@ -1,0 +1,25 @@
+---
+title: "#Eriophorum #EriophorumVaginatum #Plant #CottonGrass #Wetlands #Bogs #Flowers #Blooms #Perennial #Everlasting #Wildlife "
+x_id: "1898084735563243849"
+x_created_at: "2025-03-07T18:54:00Z"
+image: "/images/archive/eriophorum-eriophorumvaginatum-plant-cottongrass-wetlands-bo.jpg"
+hashtags:
+  - "Eriophorum"
+  - "EriophorumVaginatum"
+  - "Plant"
+  - "CottonGrass"
+  - "Wetlands"
+  - "Bogs"
+  - "Flowers"
+  - "Blooms"
+  - "Perennial"
+  - "Everlasting"
+  - "Wildlife"
+  - "Nature"
+  - "Ecosystem"
+  - "Harmony"
+  - "Biodiversity"
+  - "NorthernHemisphere"
+  - "Fluffy"
+---
+#Eriophorum #EriophorumVaginatum #Plant #CottonGrass #Wetlands #Bogs #Flowers #Blooms #Perennial #Everlasting #Wildlife #Nature #Ecosystem #Harmony #Biodiversity #NorthernHemisphere #Fluffy https://t.co/XctXKLIeNy

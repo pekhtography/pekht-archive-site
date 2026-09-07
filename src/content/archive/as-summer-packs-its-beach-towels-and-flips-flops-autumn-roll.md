@@ -1,0 +1,31 @@
+---
+title: "As summer packs its beach towels and flips flops, autumn rolls in with its stash of cozy sweaters and hot cocoa"
+x_id: "1882241087789789523"
+x_created_at: "2025-01-23T01:37:00Z"
+image: "/images/archive/as-summer-packs-its-beach-towels-and-flips-flops-autumn-roll.jpg"
+hashtags:
+  - "autumn"
+  - "hotcocoa"
+  - "hug"
+  - "flames"
+  - "romance"
+  - "vibrant"
+  - "fading"
+  - "warmth"
+  - "golden"
+  - "hues"
+  - "winds"
+  - "russet"
+  - "gold"
+  - "beach"
+  - "towels"
+  - "cozy"
+  - "sweaters"
+  - "cocoa"
+  - "dramatic"
+  - "epic"
+  - "warm"
+  - "spicy"
+---
+As summer packs its beach towels and flips flops, autumn rolls in with its stash of cozy sweaters and hot cocoa!
+#autumn #hotcocoa #hug #flames #romance #vibrant #fading #warmth #golden #hues #winds #russet #gold #beach #towels #cozy #sweaters #cocoa #dramatic #epic #warm #spicy https://t.co/y1AouP6Kqv

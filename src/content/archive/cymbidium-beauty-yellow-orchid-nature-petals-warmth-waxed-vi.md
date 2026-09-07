@@ -1,0 +1,26 @@
+---
+title: "#Cymbidium #Beauty #Yellow #Orchid #Nature #Petals #Warmth #Waxed #Vitality #Flowers #Sunshine #Sunlight #exotic #cheerf"
+x_id: "1896688284149194865"
+x_created_at: "2025-03-03T22:25:00Z"
+image: "/images/archive/cymbidium-beauty-yellow-orchid-nature-petals-warmth-waxed-vi.jpg"
+hashtags:
+  - "Cymbidium"
+  - "Beauty"
+  - "Yellow"
+  - "Orchid"
+  - "Nature"
+  - "Petals"
+  - "Warmth"
+  - "Waxed"
+  - "Vitality"
+  - "Flowers"
+  - "Sunshine"
+  - "Sunlight"
+  - "exotic"
+  - "cheerfulness"
+  - "gentleness"
+  - "blooms"
+  - "celebration"
+  - "garden"
+---
+#Cymbidium #Beauty #Yellow #Orchid #Nature #Petals #Warmth #Waxed #Vitality #Flowers #Sunshine #Sunlight #exotic #cheerfulness #gentleness #blooms #celebration #garden https://t.co/5xtfKcRNWo
