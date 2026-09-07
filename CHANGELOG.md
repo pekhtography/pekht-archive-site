@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3.13.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.13.0) | 2026-09-07
+
+### Features
+- sort archive by post text [208f7a1](https://github.com/pekhtography/pekht-archive-site/commit/208f7a1)
+### Bug Fixes
+- clean up pagefind indexing and navigation [b3aa108](https://github.com/pekhtography/pekht-archive-site/commit/b3aa108)
+
 ## [v3.12.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.12.0) | 2026-09-07
 
 ### Features
