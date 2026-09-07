@@ -4,7 +4,7 @@ import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
     const items = (await getCollection("archive")).sort((a, b) =>
-        a.id.localeCompare(b.id)
+        a.body.localeCompare(b.body) || a.id.localeCompare(b.id)
     );
 
     return items.map((item) => ({
@@ -17,7 +17,7 @@ const { item } = Astro.props;
 const { Content } = await render(item);
 
 const allItems = (await getCollection("archive")).sort((a, b) =>
-    a.id.localeCompare(b.id)
+    a.body.localeCompare(b.body) || a.id.localeCompare(b.id)
 );
 const currentIndex = allItems.findIndex((i) => i.id === item.id);
 

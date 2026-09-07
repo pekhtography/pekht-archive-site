@@ -6,7 +6,7 @@ import { ArchiveCard } from "@/components/client/ArchiveCard";
 
 export async function getStaticPaths({ paginate }) {
     const items = (await getCollection("archive")).sort((a, b) =>
-        a.id.localeCompare(b.id)
+        a.body.localeCompare(b.body) || a.id.localeCompare(b.id)
     );
 
     return paginate(items, {
