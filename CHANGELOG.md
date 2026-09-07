@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## [v3.12.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.12.0) | 2026-09-07
+
+### Features
+- import 2646 PEKHTography archive posts [ede27a6](https://github.com/pekhtography/pekht-archive-site/commit/ede27a6)
+- expand archive grid to four columns [94e0f5f](https://github.com/pekhtography/pekht-archive-site/commit/94e0f5f)
+### Other
+- checkpoint before archive migration [6062682](https://github.com/pekhtography/pekht-archive-site/commit/6062682)
+
 ## [v3.11.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.11.0) | 2026-08-29
 
 ### Features
