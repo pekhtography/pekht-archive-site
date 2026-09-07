@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v3.13.1](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.13.1) | 2026-09-07
+
+### Bug Fixes
+- add rehype-figure type declaration [85c8c96](https://github.com/pekhtography/pekht-archive-site/commit/85c8c96)
+
 ## [v3.13.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.13.0) | 2026-09-07
 
 ### Features
