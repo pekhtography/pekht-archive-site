@@ -285,6 +285,7 @@ const hashtagYaml = hashtags.length
   : "  []";
 
 const markdown = `---
+postId: ${yamlString(postId)}
 title: ${yamlString(title)}
 image: "/images/archive/${safeSlug}.jpg"
 hashtags:
