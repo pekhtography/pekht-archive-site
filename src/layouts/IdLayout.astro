@@ -19,7 +19,7 @@ const { type, prev, next, ...headProps } = Astro.props as HeadProps & {
     <body class="mx-auto">
         <Header />
         {/* Content */}
-        <main class={`max-w-4xl mx-auto ${type === "archive" ? "min-h-0" : ""}`} >
+        <main class={`max-w-4xl mx-auto ${type === "archive" ? "min-h-0" : ""}`} data-pagefind-body>
             <slot />
         </main>
         <FooterId type={type} prev={prev} next={next} />
