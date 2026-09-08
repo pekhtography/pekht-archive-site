@@ -157,8 +157,7 @@ tweetText = tweetText
   .replace(/https?:\/\/t\.co\/[A-Za-z0-9]+/g, "")
   .trim();
 
-const textWithoutHashtags = tweetText
-  .replace(/(^|\s)#[A-Za-z0-9_]+/g, "")
+const archiveBody = tweetText
   .split(/\r?\n/)
   .map((line) => line.replace(/[ \t]+/g, " ").trim())
   .filter(Boolean)
@@ -192,14 +191,14 @@ if (articleTags) {
 }
 
 const firstSentence =
-  textWithoutHashtags.match(/^(.+?[.!?])(?:\s|$)/)?.[1] ??
-  textWithoutHashtags;
+  archiveBody.match(/^(.+?[.!?])(?:\s|$)/)?.[1] ??
+  archiveBody;
 
 const title = firstSentence
   .replace(/[.!?]+$/, "")
   .trim();
 
-const slug = textWithoutHashtags
+const slug = archiveBody
   .replace(/[^\p{L}\p{N}\s-]/gu, "")
   .toLowerCase()
   .trim()
@@ -288,14 +287,14 @@ const hashtagYaml = hashtags.length
   : "  []";
 
 const markdown = `---
-postId: ${yamlString(postId)}
+x_id: ${yamlString(postId)}
 title: ${yamlString(title)}
 image: "/images/archive/${safeSlug}.jpg"
 hashtags:
 ${hashtagYaml}
 ---
 
-${textWithoutHashtags}
+${archiveBody}
 `;
 
 await fs.writeFile(
