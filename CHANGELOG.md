@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3.13.2](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.13.2) | 2026-09-08
+
+### Bug Fixes
+- disable math parsing for archive markdown [977c82e](https://github.com/pekhtography/pekht-archive-site/commit/977c82e)
+### Other
+- sort archive by post body [39782c1](https://github.com/pekhtography/pekht-archive-site/commit/39782c1)
+
 ## [v3.13.1](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.13.1) | 2026-09-07
 
 ### Bug Fixes
