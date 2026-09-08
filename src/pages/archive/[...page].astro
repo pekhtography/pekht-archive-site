@@ -1,13 +1,12 @@
 ---
 import { getCollection } from "astro:content";
+import { sortArchiveItems } from "@/lib/archive-sort";
 import IndexHeader from "@/components/static/IndexHeader.astro";
 import IndexLayout from "@/layouts/IndexLayout.astro";
 import { ArchiveCard } from "@/components/client/ArchiveCard";
 
 export async function getStaticPaths({ paginate }) {
-    const items = (await getCollection("archive")).sort((a, b) =>
-        a.body.localeCompare(b.body) || a.id.localeCompare(b.id)
-    );
+    const items = sortArchiveItems(await getCollection("archive"));
 
     return paginate(items, {
         pageSize: 48,

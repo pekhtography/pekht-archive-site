@@ -1,11 +1,10 @@
 ---
 import IdLayout from "@/layouts/IdLayout.astro";
 import { getCollection, render } from "astro:content";
+import { sortArchiveItems } from "@/lib/archive-sort";
 
 export async function getStaticPaths() {
-    const items = (await getCollection("archive")).sort((a, b) =>
-        a.body.localeCompare(b.body) || a.id.localeCompare(b.id)
-    );
+    const items = sortArchiveItems(await getCollection("archive"));
 
     return items.map((item) => ({
         params: { id: item.id },
@@ -16,9 +15,7 @@ export async function getStaticPaths() {
 const { item } = Astro.props;
 const { Content } = await render(item);
 
-const allItems = (await getCollection("archive")).sort((a, b) =>
-    a.body.localeCompare(b.body) || a.id.localeCompare(b.id)
-);
+const allItems = sortArchiveItems(await getCollection("archive"));
 const currentIndex = allItems.findIndex((i) => i.id === item.id);
 
 const prev =
