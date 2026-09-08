@@ -54,9 +54,22 @@ const next =
         </div>
 
         <div class="mt-8 border border-border p-6">
-            <div class="whitespace-pre-line text-base leading-relaxed">
+            <div class="whitespace-pre-line text-base leading-relaxed text-center px-20">
                 <Content />
             </div>
+
+            {item.data.x_id && (
+                <div class="mt-8 border-t border-border pt-6 text-center">
+                    <a
+                        href={`https://x.com/PEKHTography/status/${item.data.x_id}`}
+                        target="_blank"
+                        rel="nofollow noopener noreferrer"
+                        class="text-sm text-muted-foreground transition-colors hover:text-foreground"
+                    >
+                        Original publication
+                    </a>
+                </div>
+            )}
 
         </div>
     </article>

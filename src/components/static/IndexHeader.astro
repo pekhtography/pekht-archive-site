@@ -1,10 +1,18 @@
 ---
 import BackButton from "./BackButton.astro";
 
-const { url, heading } = Astro.props;
+const { url, heading, description, variant } = Astro.props;
 ---
 
 <div class="border border-border p-6 mt-10 bg-background">
     <BackButton url={url} />
     <h1 class="pt-3 text-5xl font-semibold opacity-90 select-none">{heading}</h1>
+
+    {
+        description && (
+            <p class={variant === "archive" ? "mt-3 max-w-3xl text-lg text-muted-foreground whitespace-pre-line" : "mt-4 max-w-prose text-base leading-relaxed text-secondary-foreground/80"}>
+                {description}
+            </p>
+        )
+    }
 </div>

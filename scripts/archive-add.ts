@@ -153,9 +153,12 @@ const imageUrl = imageUrls[0]
   .replace(/&amp;/g, "&")
   .replace(/name=[^&]+/i, "name=large");
 
-const textWithoutHashtags = tweetText
-  .replace(/(^|\s)#[A-Za-z0-9_]+/g, "$1")
+tweetText = tweetText
   .replace(/https?:\/\/t\.co\/[A-Za-z0-9]+/g, "")
+  .trim();
+
+const textWithoutHashtags = tweetText
+  .replace(/(^|\s)#[A-Za-z0-9_]+/g, "")
   .split(/\r?\n/)
   .map((line) => line.replace(/[ \t]+/g, " ").trim())
   .filter(Boolean)

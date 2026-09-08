@@ -15,6 +15,8 @@ export async function getStaticPaths({ paginate }) {
 
 const { page } = Astro.props;
 const items = page.data;
+const allItems = sortArchiveItems(await getCollection("archive"));
+const archiveCount = allItems.length;
 ---
 
 <IndexLayout
@@ -23,7 +25,12 @@ const items = page.data;
     image="/og/default.png"
 >
     <div transition:animate="fade">
-        <IndexHeader url="/" heading="Archive" />
+        <IndexHeader
+            url="/"
+            heading="Archive"
+            description={`${archiveCount} observations.\nPhotographs and fragments from encounters with the everyday world.`}
+            variant="archive"
+        />
 
         <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
             {
