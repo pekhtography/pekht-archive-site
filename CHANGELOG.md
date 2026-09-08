@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## [v3.16.2](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.16.2) | 2026-09-08
+
+### Bug Fixes
+- refine original publication divider width [686d30a](https://github.com/pekhtography/pekht-archive-site/commit/686d30a)
+
 ## [v3.16.1](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.16.1) | 2026-09-08
 
 ### Bug Fixes
