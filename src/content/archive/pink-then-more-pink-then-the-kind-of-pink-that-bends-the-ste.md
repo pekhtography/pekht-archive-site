@@ -14,4 +14,4 @@ Then the kind of pink that bends the stem —
 forty layers of silk refusing to stop, 
 each petal arriving like it has a point to prove. 
 Pure weight. 💥
-#Flowers #Peonyseason #GardenTherapy #PinkMood https://t.co/Fmt3uLeKVI
+#Flowers #Peonyseason #GardenTherapy #PinkMood

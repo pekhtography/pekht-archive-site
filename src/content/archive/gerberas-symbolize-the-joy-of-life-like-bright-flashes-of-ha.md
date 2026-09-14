@@ -18,4 +18,4 @@ hashtags:
   - "spring"
 ---
 Gerberas symbolize the joy of life, like bright flashes of happiness on our journey 
-#gerbera #flower #bloom #petals #nature #garden #vibrant #pink #beauty #floral #blossom #spring https://t.co/Ng5dkOPrdM
+#gerbera #flower #bloom #petals #nature #garden #vibrant #pink #beauty #floral #blossom #spring

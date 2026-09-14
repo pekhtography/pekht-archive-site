@@ -19,4 +19,4 @@ hashtags:
   - "serene"
 ---
 This bridge has witnessed more life crises than my search history 🔍 At least it keeps its secrets better than Google 🤫 #PrivacyRights
-#garden #japanese #zen #pagoda #bridge #pond #reflection #tranquil #peaceful #nature #traditional #serene https://t.co/UJmLUUVDcX
+#garden #japanese #zen #pagoda #bridge #pond #reflection #tranquil #peaceful #nature #traditional #serene

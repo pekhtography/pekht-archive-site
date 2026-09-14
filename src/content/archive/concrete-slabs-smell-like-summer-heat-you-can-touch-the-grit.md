@@ -13,4 +13,4 @@ Concrete slabs smell like summer heat (you can touch the grit),
 yet the water below breathes green and cool.
 The circle docks, the trees crowd, and a white speck proves:
 a whole universe moves for a single boat.🍃⛴️
-#UrbanLife #ArchitecturePhotography #UrbanExploration #CityVibes https://t.co/gC3oYIiMhf
+#UrbanLife #ArchitecturePhotography #UrbanExploration #CityVibes

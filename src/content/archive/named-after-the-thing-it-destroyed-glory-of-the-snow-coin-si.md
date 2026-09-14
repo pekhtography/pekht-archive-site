@@ -13,4 +13,4 @@ Named after the thing it destroyed. 🏆
 "Glory of the Snow" — 
 coin-sized, gold-centered, arrived before the invite. 💙
 History's pettiest flex.
-#Spring #GardenPhotography #Chionodoxa #FirstBloom https://t.co/0dsc1jepOR
+#Spring #GardenPhotography #Chionodoxa #FirstBloom

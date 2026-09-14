@@ -18,4 +18,4 @@ hashtags:
   - "landmark"
 ---
 The interplay of light and shadow on the historic facade is a visual symphony, each ray a melodious note in the grand opus of architectural splendor
-#architecture #night #columns #lighting #grand #historic #facade #heritage #majestic #illumination #culture #landmark https://t.co/f3Zpuk49jv
+#architecture #night #columns #lighting #grand #historic #facade #heritage #majestic #illumination #culture #landmark

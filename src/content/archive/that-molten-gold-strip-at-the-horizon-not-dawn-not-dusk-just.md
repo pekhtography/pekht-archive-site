@@ -13,4 +13,4 @@ That molten gold strip at the horizon —
 not dawn, not dusk 🌇 
 just the sky tearing itself open to show what's underneath. 
 The wound is the light ✨
-#GoldenHour #SkyPhotography #UrbanLandscape #Atmospheric https://t.co/vXaUWJBjwK
+#GoldenHour #SkyPhotography #UrbanLandscape #Atmospheric

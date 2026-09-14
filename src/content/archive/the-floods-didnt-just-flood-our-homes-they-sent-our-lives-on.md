@@ -17,4 +17,4 @@ hashtags:
   - "Aquatic"
 ---
 The floods didn’t just flood our homes; they sent our lives on a one-way cruise!
-#Lives #Dreams #Water #Flood #Homes #Shelter #Storm #Tempest #Rain #Wind #Aquatic https://t.co/x8DjwT7QIr
+#Lives #Dreams #Water #Flood #Homes #Shelter #Storm #Tempest #Rain #Wind #Aquatic

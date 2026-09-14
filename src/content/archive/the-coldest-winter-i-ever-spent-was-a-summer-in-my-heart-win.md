@@ -18,4 +18,4 @@ hashtags:
   - "Magic"
 ---
 The coldest winter I ever spent was a summer in my heart
-#Winter #Home #Snow #Night #Cozy #Warm #Moon #Glow #Charm #Cold #Peace #Magic https://t.co/zc7nvbEZhm
+#Winter #Home #Snow #Night #Cozy #Warm #Moon #Glow #Charm #Cold #Peace #Magic

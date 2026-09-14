@@ -17,4 +17,4 @@ hashtags:
   - "Heritage"
 ---
 Golden hues paint the sky as stories of friendship flow from the fountain's heart
-#Friendship #Fountain #Sunset #Crowd #Golden #Water #Park #Evening #Flowers #Monument #Heritage https://t.co/qUJmiPFNGc
+#Friendship #Fountain #Sunset #Crowd #Golden #Water #Park #Evening #Flowers #Monument #Heritage

@@ -13,4 +13,4 @@ She’s a ghost in the reeds.
 He’s a walking neon sign that says “eat here.” 
 The only thing holding this marriage together is a golden hour filter 
 and a mutual fear of herring gulls. 🪶🥂
-#Relationships #Birding #UrbanWildlife #OppositesAttract https://t.co/jzDkmK9rr8
+#Relationships #Birding #UrbanWildlife #OppositesAttract

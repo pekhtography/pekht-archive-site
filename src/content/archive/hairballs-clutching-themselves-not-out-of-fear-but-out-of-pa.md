@@ -13,4 +13,4 @@ Hairballs clutching themselves—
 not out of fear, but out of patience. 
 When the sun hits, they break into pink avalanches. 
 Softness is the loudest scream. ☀️🤜🌸
-#Nature  #GardenDesign #TightBuds  #RawBeauty https://t.co/IlzE6vwL8N
+#Nature  #GardenDesign #TightBuds  #RawBeauty

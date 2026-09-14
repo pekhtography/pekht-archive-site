@@ -11,4 +11,4 @@ hashtags:
   - "tourism"
 ---
 Standing on the edge of tomorrow while history whispers beneath your feet 🌅 The Kremlin's golden domes have seen empires rise and fall, but this bridge… this bridge sees hope take flight 🕊️ Dare to dream above the river of time ⏰ #EdgeOfTomorrow
-#bridge #Moscow #river #tourism https://t.co/ttKzzLSLHs
+#bridge #Moscow #river #tourism

@@ -19,4 +19,4 @@ hashtags:
   - "nocturnal"
 ---
 Fashion tip from a gecko: if you can’t beat the haters, grow eyelashes that do! 🦎💅 #FakeItTillYouMakeIt
-#gecko #crested #lizard #reptile #nature #wildlife #jungle #exotic #pets #amphibian #camouflage #nocturnal https://t.co/bdXvDBBedH
+#gecko #crested #lizard #reptile #nature #wildlife #jungle #exotic #pets #amphibian #camouflage #nocturnal

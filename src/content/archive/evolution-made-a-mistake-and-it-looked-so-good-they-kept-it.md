@@ -13,4 +13,4 @@ Evolution made a mistake and it looked so good they kept it. 🤍
 Forty million years of survival instinct — 
 traded for this haircut. 
 The crown still points up. 👁️ 
-#NaturePhotography #WhitePeacock #MainCharacter #SideEye https://t.co/NmdRwz8PGM
+#NaturePhotography #WhitePeacock #MainCharacter #SideEye

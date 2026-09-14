@@ -14,4 +14,4 @@ she didn't ask the chaos for permission. 🌸
 Called herself prima rosa without owning a single petal of rose DNA. 
 The trash around her? 
 That's the throne. 👑
-#SpringVibes #WildFlowerPhotography #PrimroseBloom #PurpleMood https://t.co/HfA69MjSaK
+#SpringVibes #WildFlowerPhotography #PrimroseBloom #PurpleMood

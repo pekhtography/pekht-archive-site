@@ -13,4 +13,4 @@ Bear suit and airplane—
 portals back when wonder fit inside a cardboard box.
 Inheritance isn't always money.
 Sometimes it's fragile, perfect 🕰️ 💙
-#Vintage #Handmade https://t.co/lB3me2agp8
+#Vintage #Handmade

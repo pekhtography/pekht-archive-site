@@ -18,4 +18,4 @@ hashtags:
   - "wildlife"
 ---
 Real men don’t mow the lawn; they create a habitat for grass snakes!
-#snake #grass #glide #nature #sanctuary #slither #lawn #gardener #smooth #scared #habitat #wildlife https://t.co/OrfhYMwgFK
+#snake #grass #glide #nature #sanctuary #slither #lawn #gardener #smooth #scared #habitat #wildlife

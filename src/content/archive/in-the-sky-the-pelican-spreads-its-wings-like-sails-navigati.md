@@ -18,4 +18,4 @@ hashtags:
   - "Water"
 ---
 In the sky, the pelican spreads its wings like sails, navigating the winds of freedom with elegance
-#GreatWhitePelican #Grace #Patience #Freedom #Harmony #Wingspan #Diving #Habitat #Fishing #Fish #Sky #Water https://t.co/WZ3vJx2xyj
+#GreatWhitePelican #Grace #Patience #Freedom #Harmony #Wingspan #Diving #Habitat #Fishing #Fish #Sky #Water

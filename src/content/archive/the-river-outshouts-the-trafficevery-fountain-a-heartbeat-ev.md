@@ -17,4 +17,4 @@ hashtags:
   - "urbanmagic"
 ---
 The river outshouts the traffic—every fountain a heartbeat, every splash a punchline 💓🌊 Moscow doesn’t make noise, it makes rhythm. #PulseOfTheCity
-#travel #cityscape #moscow #architecture #urbanphotography #fountain #riverside #beautifuldestinations #cityvibes #urbanmagic https://t.co/2B6iGbCZQL
+#travel #cityscape #moscow #architecture #urbanphotography #fountain #riverside #beautifuldestinations #cityvibes #urbanmagic

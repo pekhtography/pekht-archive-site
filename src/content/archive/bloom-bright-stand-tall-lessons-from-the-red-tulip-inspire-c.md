@@ -20,4 +20,4 @@ hashtags:
   - "Plant"
 ---
 ✨ Bloom bright, stand tall — lessons from the red tulip. #Inspire #courage 
-#Tulip #Flower #Red #Bloom #Nature #Spring #Petals #Garden #Floral #Beauty #Botany #Plant https://t.co/Wq6xIXpnYN
+#Tulip #Flower #Red #Bloom #Nature #Spring #Petals #Garden #Floral #Beauty #Botany #Plant

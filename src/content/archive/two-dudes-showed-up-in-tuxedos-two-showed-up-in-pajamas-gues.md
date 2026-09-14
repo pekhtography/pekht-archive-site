@@ -15,4 +15,4 @@ Guess which ones are trying to impress.
 Nature's dating app runs on feathers and delusion.
 The females already swiped left mentally 
 but they're too polite to leave.
-#Wildlife #BirdPhotography #SpringVibes #NatureHumor https://t.co/6rXzETvc2G
+#Wildlife #BirdPhotography #SpringVibes #NatureHumor

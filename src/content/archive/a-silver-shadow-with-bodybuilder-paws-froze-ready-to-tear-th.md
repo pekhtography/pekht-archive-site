@@ -12,4 +12,4 @@ hashtags:
 A silver shadow with bodybuilder paws froze. 
 Ready to tear the curtain? 
 Nope — just waiting for your lap as a legal throne for 20 years. 🐾💪😸
-#CatLovers #AmericanShorthair #MuscularCat #FluffyButFierce https://t.co/IvVyYU0nLB
+#CatLovers #AmericanShorthair #MuscularCat #FluffyButFierce

@@ -13,4 +13,4 @@ hashtags:
   - "fur"
 ---
 Watching this majestic collie on the bustling street reminds me of the saying, “A dog is the only thing on earth that loves you more than you love yourself.” 🐕✨ The city moves fast, but pure loyalty stays still. #UnspokenDevotionInTheCity
-#dog #collie #street #pet #urban #fur https://t.co/lnBoEu4cyB
+#dog #collie #street #pet #urban #fur

@@ -10,4 +10,4 @@ hashtags:
   - "shine"
   - "garden"
 ---
-Like a globe of sunshine, the flower blooms with an energy that seems to light up the world #spherical #flower #sunlight #shine #garden https://t.co/NBMwdLo3C7
+Like a globe of sunshine, the flower blooms with an energy that seems to light up the world #spherical #flower #sunlight #shine #garden

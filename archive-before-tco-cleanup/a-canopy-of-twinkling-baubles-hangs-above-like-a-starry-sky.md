@@ -1,0 +1,30 @@
+---
+title: "A canopy of twinkling baubles hangs above, like a starry sky come down to celebrate the joy of New Year's magic"
+x_id: "1877386348958548094"
+x_created_at: "2025-01-09T16:06:00Z"
+image: "/images/archive/a-canopy-of-twinkling-baubles-hangs-above-like-a-starry-sky.jpg"
+hashtags:
+  - "Baubles"
+  - "Glitter"
+  - "Icicles"
+  - "Chill"
+  - "Lights"
+  - "Glow"
+  - "Gifts"
+  - "Surprise"
+  - "Joy"
+  - "Cheer"
+  - "NewYear"
+  - "Celebration"
+  - "Magic"
+  - "Wonder"
+  - "Stars"
+  - "Dreams"
+  - "Ornaments"
+  - "Wishes"
+  - "Hope"
+  - "Colors"
+  - "Life"
+---
+A canopy of twinkling baubles hangs above, like a starry sky come down to celebrate the joy of New Year's magic
+#Baubles #Glitter #Icicles #Chill #Lights #Glow #Gifts #Surprise #Joy #Cheer #NewYear #Celebration #Magic #Wonder #Stars #Dreams #Ornaments #Wishes #Hope #Colors #Life https://t.co/ftnftLIOxl

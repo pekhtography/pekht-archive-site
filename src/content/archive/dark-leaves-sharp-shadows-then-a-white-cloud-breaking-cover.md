@@ -13,4 +13,4 @@ Dark leaves. Sharp shadows.
 Then — a white cloud breaking cover.
 The peony wasn’t blooming.
 It was listening. 🌼🕵️
-#Nature #GardeningLife #PetalPower #JoyfulMoments https://t.co/LcNXNpXSYl
+#Nature #GardeningLife #PetalPower #JoyfulMoments

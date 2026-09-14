@@ -23,4 +23,4 @@ hashtags:
   - "elixirs"
 ---
 The glasses are our personal sommeliers, whispering, "Just trust us; we know how to make your night fabulously tipsy!"
-#glasses #aesthetic #allurement #enchant #sip #elegance #delight #mirrors #dreams #reflection #fantasy #taste #flavors #memories #sommeliers #tipsy #elixirs https://t.co/kHoxNaW938
+#glasses #aesthetic #allurement #enchant #sip #elegance #delight #mirrors #dreams #reflection #fantasy #taste #flavors #memories #sommeliers #tipsy #elixirs

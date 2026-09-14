@@ -13,4 +13,4 @@ City council: "We need a 6-foot Christmas display."
 Designer: enlarges childhood toy to 500% "Done."
 Council: "That's not what we—" 
 Everyone else: "PERFECT." 🎄😂 
-#Christmas #ChristmasMarket #ChristmasDecor #ChristmasMagic https://t.co/KunQxuQ4mk
+#Christmas #ChristmasMarket #ChristmasDecor #ChristmasMagic

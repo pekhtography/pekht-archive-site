@@ -14,4 +14,4 @@ hashtags:
   - "Essence"
   - "Garden"
 ---
-#Hydrangea #Beauty #Bloom #Burst #Color #Palette #Soil #Essence #Garden https://t.co/nDhFgzvA4w
+#Hydrangea #Beauty #Bloom #Burst #Color #Palette #Soil #Essence #Garden

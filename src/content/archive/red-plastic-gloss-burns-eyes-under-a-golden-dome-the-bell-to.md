@@ -12,4 +12,4 @@ hashtags:
 Red plastic gloss burns eyes under a golden dome. 
 The bell tower rings, but only for those seeking 50% off. 
 Modern pilgrims trade candles for designer tags. 🛍️🔔 
-#Love #StreetArt #EclecticArchitecture #VibrantVibes https://t.co/q1JCpdM5BT
+#Love #StreetArt #EclecticArchitecture #VibrantVibes

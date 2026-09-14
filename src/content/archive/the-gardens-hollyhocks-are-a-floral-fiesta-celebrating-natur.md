@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 The garden's hollyhocks are a floral fiesta, celebrating nature's exuberance
-#Alcea #Hollyhock #Mallow #Bloom #Flora #Petals #Garden #Nature #Blossom #Vibrant #Pink #Beauty https://t.co/Aecckmfbv0
+#Alcea #Hollyhock #Mallow #Bloom #Flora #Petals #Garden #Nature #Blossom #Vibrant #Pink #Beauty

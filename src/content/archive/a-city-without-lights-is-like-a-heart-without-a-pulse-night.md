@@ -18,4 +18,4 @@ hashtags:
   - "dreams"
 ---
 A city without lights is like a heart without a pulse
-#night #city #beauty #twilight #architecture #arts #light #heart #soul #life #buildings #dreams https://t.co/Vs2wYF1ejD
+#night #city #beauty #twilight #architecture #arts #light #heart #soul #life #buildings #dreams

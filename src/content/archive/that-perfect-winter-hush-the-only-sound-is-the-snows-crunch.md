@@ -14,4 +14,4 @@ The only sound is the snow's crunch and the bare trees' whisper
 Then you see it—
 one birch holding the last drop of sunlight like stolen honey.
 A tiny rebellion of gold in a world of blue and white🍯
-#WinterWonderland #BirchTree #QuietJoy #ForestBathing https://t.co/skyPYUMuzx
+#WinterWonderland #BirchTree #QuietJoy #ForestBathing

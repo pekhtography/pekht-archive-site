@@ -18,4 +18,4 @@ hashtags:
   - "white"
 ---
 She bloomed in silence, defying storms and soil — and still got judged for being ‘too fluffy’
-#meadowsweet #wildflower #nature #herb #blossom #flora #summer #medicinal #botany #field #beauty #white https://t.co/HuVzHdHILF
+#meadowsweet #wildflower #nature #herb #blossom #flora #summer #medicinal #botany #field #beauty #white

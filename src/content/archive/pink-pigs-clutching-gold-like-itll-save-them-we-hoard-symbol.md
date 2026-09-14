@@ -11,4 +11,4 @@ hashtags:
 Pink pigs clutching gold like it'll save them 🐷✨ 
 We hoard symbols of abundance while abundance hoards us — 
 trading freedom for glitter-wrapped certainty 
-#Viral #Aesthetic #LunarNewYear https://t.co/zMTVt9Sfkk
+#Viral #Aesthetic #LunarNewYear

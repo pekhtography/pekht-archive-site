@@ -16,4 +16,4 @@ hashtags:
   - "nature"
   - "garden"
 ---
-Every rose is a book  waiting to be told; the red ones are the brightest chapters #rose #fire #red #passion #bloom #beauty #huge #light #sun #nature #garden https://t.co/cOauOWQE27
+Every rose is a book  waiting to be told; the red ones are the brightest chapters #rose #fire #red #passion #bloom #beauty #huge #light #sun #nature #garden

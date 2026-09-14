@@ -18,4 +18,4 @@ hashtags:
   - "SpiritualMood"
 ---
 A golden dome kisses the sunset while the city rushes below — where prayers meet deadlines, and heaven shares WiFi with the street. #FaithIn4G
-#HolyGlowUp #Architecture #Cityscape #Travel #Church #Orthodox #GoldenDomes #UrbanContrast #PeacefulVibes #LightInDarkness #SpiritualMood https://t.co/ZvuE7gEHRV
+#HolyGlowUp #Architecture #Cityscape #Travel #Church #Orthodox #GoldenDomes #UrbanContrast #PeacefulVibes #LightInDarkness #SpiritualMood

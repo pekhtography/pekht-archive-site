@@ -13,4 +13,4 @@ Outside — a 1397 monastery. Inside — latte and WiFi.
 No password needed for holiness.📱
 Sacredness doesn't compete with progress.
 It just shines where you stopped looking.
-#SacredAndProfane #UrbanOrthodoxy #GoldenDomes https://t.co/TgDGuSr2Lj
+#SacredAndProfane #UrbanOrthodoxy #GoldenDomes

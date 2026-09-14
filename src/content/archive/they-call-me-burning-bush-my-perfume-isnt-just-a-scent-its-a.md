@@ -13,4 +13,4 @@ They call me "Burning Bush".
 My perfume isn't just a scent; it's a deterrent. 
 I smell like a lemon grove in heaven, 
 but touch me on a hot day and we're testing your health insurance 🔥🍋 
-#Vibe #PlantFacts #DangerousBeauty #Unbothered https://t.co/fl0B0X2yNA
+#Vibe #PlantFacts #DangerousBeauty #Unbothered

@@ -19,4 +19,4 @@ hashtags:
   - "station"
 ---
 Warning: Side effects of train travel include existential thoughts and sudden urges to write poetry 📝 Proceed with caution 🚨 #TransitPoetry
-#train #interior #transport #railway #commute #seats #public #modern #urban #travel #passenger #station https://t.co/SNlfchxja3
+#train #interior #transport #railway #commute #seats #public #modern #urban #travel #passenger #station

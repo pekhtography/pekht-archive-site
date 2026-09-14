@@ -14,4 +14,4 @@ gold bleeding through the shatter.
 Clouds threw fists, sun dodged every punch. 
 Your commute? Missed the whole heavyweight bout. 🌪️ 
 Nature's paywall: zero ⚡ 
-#NaturePhotography #StormChasing #GoldenHour #Breathtaking https://t.co/rya8mar5v5
+#NaturePhotography #StormChasing #GoldenHour #Breathtaking

@@ -11,4 +11,4 @@ hashtags:
 That walk where your phone dies, the sky splits open, and you remember: 
 silence isn't empty—
 it's the sound everything makes when it stops performing. 🖤🌾📵 
-#UrbanWilderness #MelancholyVibes #NaturePhotography https://t.co/RzHeAkVNqq
+#UrbanWilderness #MelancholyVibes #NaturePhotography

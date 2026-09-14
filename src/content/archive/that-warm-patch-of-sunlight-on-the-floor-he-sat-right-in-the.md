@@ -14,4 +14,4 @@ He sat right in the middle of it,
 looked down, 
 sighed with his whole body. 🌤️ 
 Enlightenment arrived — and it's deeply unimpressed. 😒
-#CatsOfTwitter #KittenVibes #MondayMood #TinyFury https://t.co/2rOXlsYOth
+#CatsOfTwitter #KittenVibes #MondayMood #TinyFury

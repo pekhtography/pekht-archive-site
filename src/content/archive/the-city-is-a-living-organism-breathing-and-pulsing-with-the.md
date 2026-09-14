@@ -13,4 +13,4 @@ hashtags:
   - "dance"
   - "asphalt"
 ---
-The city is a living organism, breathing and pulsing with the rhythm of its people #city #living #movement #beauty #streets #daylight #dance #asphalt https://t.co/8IgaYKo1Yp
+The city is a living organism, breathing and pulsing with the rhythm of its people #city #living #movement #beauty #streets #daylight #dance #asphalt

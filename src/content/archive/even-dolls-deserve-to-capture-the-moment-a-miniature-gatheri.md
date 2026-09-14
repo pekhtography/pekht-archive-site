@@ -11,4 +11,4 @@ hashtags:
   - "Park"
   - "Adventure"
 ---
-Even dolls deserve to capture the moment. A miniature gathering, immortalized in a park's embrace #Dolls #Miniature #Photo #Memory #Park #Adventure https://t.co/Zj12xSVbtY
+Even dolls deserve to capture the moment. A miniature gathering, immortalized in a park's embrace #Dolls #Miniature #Photo #Memory #Park #Adventure

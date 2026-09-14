@@ -18,4 +18,4 @@ hashtags:
   - "cityscape"
 ---
 When ancient prayers meet morning commutes⛪ Sometimes the most profound moments happen in the spaces between old and new, where centuries whisper to smartphones 📱✨ #SacredUrban
-#church #architecture #contrast #urban #heritage #spiritual #dome #shadows #modern #light #cityscape https://t.co/kIt8D8Bqry
+#church #architecture #contrast #urban #heritage #spiritual #dome #shadows #modern #light #cityscape

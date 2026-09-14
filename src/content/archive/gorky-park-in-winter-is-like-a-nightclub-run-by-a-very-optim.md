@@ -13,4 +13,4 @@ The dress code is «puffy jacket chic,» the bouncer is Frost,
 and the only drink 
 is overpriced mulled wine that tastes like childhood regret. 
 Still, 10/10 would rave again. 🌲🎶 
-#Winter #City https://t.co/OuyQHAeV6G
+#Winter #City

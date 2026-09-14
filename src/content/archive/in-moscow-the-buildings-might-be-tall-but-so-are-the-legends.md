@@ -19,4 +19,4 @@ hashtags:
   - "Landmark"
 ---
 In Moscow, the buildings might be tall, but so are the legends that surround them! 🏢😂 #SkyHighStories
-#Moscow #Architecture #Skyscraper #Cityscape #Russia #Sunset #Buildings #Urban #Travel #Historic #Winter #Landmark https://t.co/llut98bAo4
+#Moscow #Architecture #Skyscraper #Cityscape #Russia #Sunset #Buildings #Urban #Travel #Historic #Winter #Landmark

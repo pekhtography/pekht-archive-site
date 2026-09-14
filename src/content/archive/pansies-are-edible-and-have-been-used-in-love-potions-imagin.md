@@ -19,4 +19,4 @@ hashtags:
   - "Beauty"
 ---
 Pansies are edible and have been used in love potions. Imagine a flower salad with a side of eternal love! 🥗💖 #EdibleLove
-#Flower #Pansy #Nature #Garden #Bloom #Colorful #Botany #Macro #Petals #Vibrant #Spring #Beauty https://t.co/TTu6sfLfbM
+#Flower #Pansy #Nature #Garden #Bloom #Colorful #Botany #Macro #Petals #Vibrant #Spring #Beauty

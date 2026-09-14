@@ -13,4 +13,4 @@ Gold trees. White rooftops. -20°C. 🌨️
 Someone's been "five minutes away" for forty-three minutes. 
 The city built a snow globe — then filled it with traffic. ✨ 
 Perfection honks. 🚗 
-#WinterVibes #CityLightsPhotography #WinterCity #FrozenFire https://t.co/N4BbSZ5Rih
+#WinterVibes #CityLightsPhotography #WinterCity #FrozenFire

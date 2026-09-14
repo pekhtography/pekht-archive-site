@@ -10,4 +10,4 @@ hashtags:
   - "Garden"
   - "Fiery"
 ---
-Like a king in a jeweled crown, the Crown Imperial stands tall, flaunting its regal orange blooms #CrownImperial #Orange #Vibrant #Garden #Fiery https://t.co/QfHUkX7l1i
+Like a king in a jeweled crown, the Crown Imperial stands tall, flaunting its regal orange blooms #CrownImperial #Orange #Vibrant #Garden #Fiery

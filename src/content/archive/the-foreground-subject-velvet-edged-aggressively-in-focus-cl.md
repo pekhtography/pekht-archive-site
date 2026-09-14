@@ -14,4 +14,4 @@ clearly outperformed the background talent —
 domes, river, entire embankment — 
 which blurred out mid-audition 🎭🌸 
 Classic petunia.
-#CityNature #UrbanBloom #MomentOverMonument #FlowerPower https://t.co/ucwHBrCBX6
+#CityNature #UrbanBloom #MomentOverMonument #FlowerPower

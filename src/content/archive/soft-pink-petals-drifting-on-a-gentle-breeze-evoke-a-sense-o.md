@@ -11,4 +11,4 @@ hashtags:
   - "nature"
   - "garden"
 ---
-Soft pink petals drifting on a gentle breeze evoke a sense of calm and peace  #rose #beauty #pink #green #nature #garden https://t.co/v6IzpqKLaY
+Soft pink petals drifting on a gentle breeze evoke a sense of calm and peace  #rose #beauty #pink #green #nature #garden

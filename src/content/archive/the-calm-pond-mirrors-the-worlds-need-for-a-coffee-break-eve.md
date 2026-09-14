@@ -22,4 +22,4 @@ hashtags:
   - "tranquility"
 ---
 The calm pond mirrors the world’s need for a coffee break; everything pauses to enjoy the breathtaking view of nature's artistry
-#Amber #Leaves #Pond #Nature #Autumn #Landscape #Transformation #Beauty #Ephemeral #Gold #Reflections #Lounge #Ripples #Performance #fall #tranquility https://t.co/u9GjV9m4g8
+#Amber #Leaves #Pond #Nature #Autumn #Landscape #Transformation #Beauty #Ephemeral #Gold #Reflections #Lounge #Ripples #Performance #fall #tranquility

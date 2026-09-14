@@ -13,4 +13,4 @@ Nature just ran your personality test. ❄️
 You walked straight into a white corridor going nowhere, 
 grinned like an idiot, took seventeen photos. 😂 
 Diagnosis: irreversible. 🌲
-#NatureHeals #WinterForest #SnowRoad #WildSilence https://t.co/1aRF4kceTo
+#NatureHeals #WinterForest #SnowRoad #WildSilence

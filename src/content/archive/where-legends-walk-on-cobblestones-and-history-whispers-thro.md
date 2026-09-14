@@ -19,4 +19,4 @@ hashtags:
   - "Landmark"
 ---
 Where legends walk on cobblestones and history whispers through ancient towers 🏰 Every step here echoes with centuries of stories ✨ #MoscowLegends
-#Moscow #RedSquare #Kremlin #Architecture #Tourism #Russia #History #Cathedral #Travel #Culture #Heritage #Landmark https://t.co/5aVSLpwPuu
+#Moscow #RedSquare #Kremlin #Architecture #Tourism #Russia #History #Cathedral #Travel #Culture #Heritage #Landmark

@@ -13,4 +13,4 @@ hashtags:
 The branch got cut — the attitude stayed. 
 Some thrones are stumps. 
 Perch anyway. 👑
-#NaturePhotography #TinyButMighty #BlueTit #BirdPhotography https://t.co/85EJHZvSmh
+#NaturePhotography #TinyButMighty #BlueTit #BirdPhotography

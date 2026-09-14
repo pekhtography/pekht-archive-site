@@ -12,4 +12,4 @@ hashtags:
 Wings wide in the bokeh storm. 
 She holds the stillness we forgot to keep 🕊️💫 
 Every blurred light used to be a prayer we rushed past.
-#Christmas #ChristmasDecor #ChristmasAngel #MagicMoments https://t.co/P549mg6RPj
+#Christmas #ChristmasDecor #ChristmasAngel #MagicMoments

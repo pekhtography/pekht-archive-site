@@ -19,4 +19,4 @@ hashtags:
   - "Sly"
   - "Fun"
 ---
-#Chinese #NewYear #Lunar #Festival #Snake #Wisdom #Zodiac #Cycle #Feast #Reflection #Renewal #Charm #Sly #Fun https://t.co/4rBb2Ewu8E
+#Chinese #NewYear #Lunar #Festival #Snake #Wisdom #Zodiac #Cycle #Feast #Reflection #Renewal #Charm #Sly #Fun

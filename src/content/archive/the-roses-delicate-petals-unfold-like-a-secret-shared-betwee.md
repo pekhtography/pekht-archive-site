@@ -11,4 +11,4 @@ hashtags:
   - "garden"
   - "love"
 ---
-The rose's delicate petals unfold like a secret shared between lovers #rose #pink #rosy #blooming #garden #love https://t.co/55H9o6RR9T
+The rose's delicate petals unfold like a secret shared between lovers #rose #pink #rosy #blooming #garden #love

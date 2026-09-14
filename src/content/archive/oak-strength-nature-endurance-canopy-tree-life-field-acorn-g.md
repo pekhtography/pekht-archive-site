@@ -25,4 +25,4 @@ hashtags:
   - "Diversity"
   - "OakTree"
 ---
-#Oak #Strength #Nature #Endurance #Canopy #Tree #Life #Field #Acorn #Growth #Majesty #Leaves #Grove #Person #Harmony #Wisdom #Longevity #Wildlife #Diversity #OakTree https://t.co/4QKoSDO29P
+#Oak #Strength #Nature #Endurance #Canopy #Tree #Life #Field #Acorn #Growth #Majesty #Leaves #Grove #Person #Harmony #Wisdom #Longevity #Wildlife #Diversity #OakTree

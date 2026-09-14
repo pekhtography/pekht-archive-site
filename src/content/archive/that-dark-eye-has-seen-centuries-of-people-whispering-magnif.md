@@ -14,4 +14,4 @@ That dark eye has seen centuries of people whispering
 He just wanted to be a pigeon. 
 Eat bread. 
 Be invisible.
-#TheAbsurdityOfBeauty #GracefulChaos #WhitePeacockSyndrome #QuietLuxuryFails https://t.co/dXyrcl9TIj
+#TheAbsurdityOfBeauty #GracefulChaos #WhitePeacockSyndrome #QuietLuxuryFails

@@ -12,4 +12,4 @@ hashtags:
 14 colors, two wing-sails that do absolutely nothing aerodynamic — 
 evolution blew the entire budget here 🎨✨ 
 and somehow that's the whole point.
-#NatureIsUnreal #BirdPhotography #MandarinDuck #ShowingUp https://t.co/ixs2EIuHz2
+#NatureIsUnreal #BirdPhotography #MandarinDuck #ShowingUp

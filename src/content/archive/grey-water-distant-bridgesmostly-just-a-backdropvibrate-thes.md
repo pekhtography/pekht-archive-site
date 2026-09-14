@@ -13,4 +13,4 @@ Grey water, distant bridges—mostly just a backdrop—vibrate.
 These pink nightshades (the stylish rebels) 
 drink rain and demand a standing ovation 🎭. 
 Waiting...
-#Nature #UrbanGardening #PetalPower #RainyDayVibes https://t.co/YJyopprDF9
+#Nature #UrbanGardening #PetalPower #RainyDayVibes

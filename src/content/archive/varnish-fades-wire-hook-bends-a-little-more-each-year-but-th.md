@@ -13,4 +13,4 @@ Varnish fades. Wire hook bends a little more each year. 🎄
 But those eyes haven't moved — 
 still watching, still knowing something you haven't figured out yet. ❄️ 
 Handmade things remember everything. ✨ 
-#ChristmasVibes #VintageOrnaments #SovietNostalgia #WarmAndFuzzy https://t.co/wVnKYCn57M
+#ChristmasVibes #VintageOrnaments #SovietNostalgia #WarmAndFuzzy

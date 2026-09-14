@@ -13,4 +13,4 @@ hashtags:
   - "sunny"
   - "beautiful"
 ---
-Dolls are not just playthings; they are companions of imagination #dolls #companions #friendship #imagination #park #joy #sunny #beautiful https://t.co/vPOiEJkmjm
+Dolls are not just playthings; they are companions of imagination #dolls #companions #friendship #imagination #park #joy #sunny #beautiful

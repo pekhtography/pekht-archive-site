@@ -18,4 +18,4 @@ hashtags:
   - "Happiness"
   - "Celebration"
 ---
-#Gerbera #Brightness #Bouquet #Arrangement #Orange #Energy #Yellow #Flowers #Nature #Beauty #Elegance #Happiness #Celebration https://t.co/dpPleoWkw9
+#Gerbera #Brightness #Bouquet #Arrangement #Orange #Energy #Yellow #Flowers #Nature #Beauty #Elegance #Happiness #Celebration

@@ -19,4 +19,4 @@ hashtags:
   - "PlantLife"
 ---
 🌸✨Simple joys: a primula’s whisper of spring. #BloomMagic 
-#Primula #Flower #Nature #Bloom #Garden #Floral #Petals #Greenery #Spring #Beauty #Botany #PlantLife https://t.co/E4au85zbxy
+#Primula #Flower #Nature #Bloom #Garden #Floral #Petals #Greenery #Spring #Beauty #Botany #PlantLife

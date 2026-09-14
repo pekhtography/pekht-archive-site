@@ -12,4 +12,4 @@ hashtags:
 My face is a bright yellow clock 💛⏰
 No numbers, just pure radiation ✨
 I’m that optimistic neighbor who keeps the holiday lights on until late February 🎄
-#NewYearSurvival #MensLogic #NatureWhisper #GoldenVibe https://t.co/x3Fa3dL1Rx
+#NewYearSurvival #MensLogic #NatureWhisper #GoldenVibe

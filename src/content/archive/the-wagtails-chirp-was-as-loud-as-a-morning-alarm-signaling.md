@@ -18,4 +18,4 @@ hashtags:
   - "sunlight"
 ---
 The wagtail's chirp was as loud as a morning alarm, signaling the start of a new day 
-#bird #nature #wagtail #white #grass #outdoors #wildlife #green #spring #feathers #chirp #sunlight https://t.co/F22VFiN0Lc
+#bird #nature #wagtail #white #grass #outdoors #wildlife #green #spring #feathers #chirp #sunlight

@@ -19,4 +19,4 @@ hashtags:
   - "colorful"
 ---
 Life is like a bird on a wooden box - sometimes colorful, sometimes just trying not to be onion-breathed. 🍂🧅😂 #WhimsicalWisdom
-#bird #figurine #ornament #woodenbox #onions #nature #garden #redonion #market #decor #outdoor #colorful https://t.co/De22dIZzk6
+#bird #figurine #ornament #woodenbox #onions #nature #garden #redonion #market #decor #outdoor #colorful

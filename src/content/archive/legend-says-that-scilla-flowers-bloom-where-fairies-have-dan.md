@@ -21,4 +21,4 @@ hashtags:
   - "Blossom"
 ---
 Legend says that Scilla flowers bloom where fairies have danced 
-#Siberian #squill #Scilla #siberica #Flowers #Nature #Bloom #Spring #Garden #Blue #Wildflowers #Botany #Beauty #Outdoors #Blossom https://t.co/jrhogbemRe
+#Siberian #squill #Scilla #siberica #Flowers #Nature #Bloom #Spring #Garden #Blue #Wildflowers #Botany #Beauty #Outdoors #Blossom

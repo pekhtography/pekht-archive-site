@@ -24,4 +24,4 @@ hashtags:
   - "Ghost"
 ---
 Beneath its polished exterior, the "Soviet Chariot of Dreams" whispers secrets of an era steeped in elegance and intrigue
-#Elegance #Grace #Soviet #Legacy #Chariot #Journey #Dreams #Desires #Stories #Opulence #Wealth #Power #Strength #Time #Eternity #Noble #Phantom #Ghost https://t.co/Buie664GMX
+#Elegance #Grace #Soviet #Legacy #Chariot #Journey #Dreams #Desires #Stories #Opulence #Wealth #Power #Strength #Time #Eternity #Noble #Phantom #Ghost

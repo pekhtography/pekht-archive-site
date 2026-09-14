@@ -19,4 +19,4 @@ hashtags:
   - "culture"
 ---
 Society: "Follow your dreams!" Me: becomes purple farmer in designer tracksuit 🎨👨‍🌾 Society: "Wait, not like that…" 😅 #DreamFollowing
-#art #surreal #figures #purple #sports #farming #tools #contemporary #contrast #graphic #lifestyle #culture https://t.co/bkOa22YKM9
+#art #surreal #figures #purple #sports #farming #tools #contemporary #contrast #graphic #lifestyle #culture

@@ -15,4 +15,4 @@ hashtags:
   - "Skyline"
 ---
 The tower stands tall, a concrete poem in the sky, broadcasting not just signals, but the dreams of engineers who dared to defy gravity
-#Tower #Television #Broadcast #Architecture #Landmark #Night #Lights #Iconic #Skyline https://t.co/8gCSWefe91
+#Tower #Television #Broadcast #Architecture #Landmark #Night #Lights #Iconic #Skyline

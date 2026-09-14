@@ -19,4 +19,4 @@ hashtags:
   - "macro"
 ---
 Rhododendron energy: Show up once a year, absolutely slay, leave everyone speechless, disappear 👑🌸 #IconicBehavior
-#rhododendron #flower #bloom #pink #purple #garden #nature #spring #petals #stamens #botanical #macro https://t.co/v1SEISbWM2
+#rhododendron #flower #bloom #pink #purple #garden #nature #spring #petals #stamens #botanical #macro

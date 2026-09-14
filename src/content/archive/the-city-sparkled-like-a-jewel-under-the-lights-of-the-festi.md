@@ -12,4 +12,4 @@ hashtags:
   - "illumination"
   - "sparkling"
 ---
-The city sparkled like a jewel under the lights of the festive decorations #streets #magic #city #jewel #evening #illumination #sparkling https://t.co/kzI6IAOynj
+The city sparkled like a jewel under the lights of the festive decorations #streets #magic #city #jewel #evening #illumination #sparkling

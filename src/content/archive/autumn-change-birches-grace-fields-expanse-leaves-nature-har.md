@@ -17,4 +17,4 @@ hashtags:
   - "Landscape"
   - "Beauty"
 ---
-#Autumn #Change #Birches #Grace #Fields #Expanse #Leaves #Nature #Harmony #Transition #Landscape #Beauty https://t.co/acvZd8ZWje
+#Autumn #Change #Birches #Grace #Fields #Expanse #Leaves #Nature #Harmony #Transition #Landscape #Beauty

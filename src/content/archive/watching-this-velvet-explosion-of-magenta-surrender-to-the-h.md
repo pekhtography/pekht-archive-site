@@ -11,4 +11,4 @@ hashtags:
 ---
 Watching this velvet explosion of magenta surrender to the heat is like a grand ballroom diva losing her heels, smelling of sun-drenched silk. 
 Drama queen. 💃✨
-#NatureDrama #GardenLife #PetalDrop #VelvetVibes https://t.co/gYzgPNlNIV
+#NatureDrama #GardenLife #PetalDrop #VelvetVibes

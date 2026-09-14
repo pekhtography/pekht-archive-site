@@ -18,4 +18,4 @@ hashtags:
   - "Heritage"
   - "Ruins"
 ---
-#Earthquake #Bridge #Historic #Palace #Destruction #Building #Collapse #Disaster #Asia #Natural #Catastrophe #Heritage #Ruins https://t.co/as7ZPLFvw5
+#Earthquake #Bridge #Historic #Palace #Destruction #Building #Collapse #Disaster #Asia #Natural #Catastrophe #Heritage #Ruins

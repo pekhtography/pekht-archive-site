@@ -14,4 +14,4 @@ before this feathered speck shrieks.
 This single, piercing note—
 a tiny tremor—
 actually holds the entire cosmos together. 🌌🎶
-#Nature #WildlifePerfection #MorningVibes #Diva https://t.co/VuzZflDFNL
+#Nature #WildlifePerfection #MorningVibes #Diva

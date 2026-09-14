@@ -14,4 +14,4 @@ Then a crosswalk sign planted next to a baroque cornice like a punctuation mark 
 the 18th century forgot to erase. 
 Same Tuesday. Different centuries. 🏛️ 
 Both unbothered.
-#CityLife #UrbanExploration #MoscowVibes #SummerMoments https://t.co/VcB9kCxA1N
+#CityLife #UrbanExploration #MoscowVibes #SummerMoments

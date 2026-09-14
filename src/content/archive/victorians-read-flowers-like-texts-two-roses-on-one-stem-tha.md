@@ -14,4 +14,4 @@ The recipient leaned in close, searching for the center —
 which kept folding inward, petal after petal, deeper —
 and never arrived. 🌿
 The message was the maze.
-#Roses #GardenLife #OldGardenRoses https://t.co/dPF8JFGaG7
+#Roses #GardenLife #OldGardenRoses

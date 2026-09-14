@@ -18,4 +18,4 @@ hashtags:
   - "resort"
 ---
 These aren't vacation portals, they're expensive therapy booths with better views 🏖️💸 Dr. Ocean will see you now🌊 Insurance doesn't cover it, but your soul does💙 #BeachTherapy
-#beach #cabanas #reflection #sunset #waterfront #summer #vacation #serenity #golden #peaceful #resort https://t.co/mAetj0oRpM
+#beach #cabanas #reflection #sunset #waterfront #summer #vacation #serenity #golden #peaceful #resort

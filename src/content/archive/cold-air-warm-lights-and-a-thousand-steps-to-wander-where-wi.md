@@ -19,4 +19,4 @@ hashtags:
   - "Russia"
 ---
 Cold air, warm lights, and a thousand steps to wander 🚶‍♀️💡 Where will your path lead? #WinterWanderlust
-#city #street #lights #winter #architecture #church #walking #decorations #urban #people #morning #Russia https://t.co/EZUgBW0fZE
+#city #street #lights #winter #architecture #church #walking #decorations #urban #people #morning #Russia

@@ -15,4 +15,4 @@ heavy enough to bend iron—
 weigh down this neon-pink safe. 
 Botanical heist. 
 Nature’s crown jewels. 💎💖
-#NaturePhotography #GardenLife #MorningDew #PinkAesthetic https://t.co/pQZO79NHkb
+#NaturePhotography #GardenLife #MorningDew #PinkAesthetic

@@ -19,4 +19,4 @@ hashtags:
   - "summer"
 ---
 The sweet scent of roses fills the air 🌹💧. A beautiful reminder of nature's beauty! #RoseScent
-#rose #flowers #pink #garden #nature #beauty #bloom #floral #lovely #green #blossom #summer https://t.co/LCKqrLTweS
+#rose #flowers #pink #garden #nature #beauty #bloom #floral #lovely #green #blossom #summer

@@ -24,4 +24,4 @@ hashtags:
   - "Bounty"
   - "Nourishing"
 ---
-#Porcini #Treasure #Forest #Nature #Flavor #Delight #Nutty #Joy #Mushroom #Fiesta #Sweetness #Surprise #Fresh #Sustenance #Cooking #Gourmet #Harvest #Bounty #Nourishing https://t.co/bnBTx4vXIc
+#Porcini #Treasure #Forest #Nature #Flavor #Delight #Nutty #Joy #Mushroom #Fiesta #Sweetness #Surprise #Fresh #Sustenance #Cooking #Gourmet #Harvest #Bounty #Nourishing

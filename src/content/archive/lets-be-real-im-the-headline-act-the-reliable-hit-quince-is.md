@@ -16,4 +16,4 @@ Quince is a niche intellectual, grape is a seasonal mood.
 But me? 
 I'm the currency of crunch. 
 The king that toppled empires and still fits in your lunchbox 👑💼 
-#Vibes #StillLife #AutumnHarvest #AbundanceMindset #Apple https://t.co/mDrYNy0OPi
+#Vibes #StillLife #AutumnHarvest #AbundanceMindset #Apple

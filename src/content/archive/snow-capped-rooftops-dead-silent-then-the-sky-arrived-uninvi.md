@@ -12,4 +12,4 @@ Then the sky arrived — uninvited, unannounced, absolutely unhinged🔥
 Moscow in a crimson sunset looks like Ivan the Terrible sent a Valentine's card and nobody knows how to react❄️✨
 History runs cold.
 The sky didn't get the memo
-#Sunset #Moscow https://t.co/FbLTu36Cg6
+#Sunset #Moscow

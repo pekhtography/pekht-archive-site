@@ -14,4 +14,4 @@ Someone spent weeks carving a fortress that'll puddle by April.
 That's not futility — that's defiance.
 Nothing permanent is worth building. 
 Everything temporary is worth seeing 🏛️✨
-#Art #IceSculpture #Transience #Wonder https://t.co/wZGpSuN1Lk
+#Art #IceSculpture #Transience #Wonder

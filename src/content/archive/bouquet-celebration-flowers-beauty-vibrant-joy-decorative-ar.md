@@ -20,4 +20,4 @@ hashtags:
   - "Imagination"
   - "Creativity"
 ---
-#Bouquet #Celebration #Flowers #Beauty #Vibrant #Joy #Decorative #Art #Artificial #Eternity #Angels #Hope #Statues #Imagination #Creativity https://t.co/hX93DMUi3t
+#Bouquet #Celebration #Flowers #Beauty #Vibrant #Joy #Decorative #Art #Artificial #Eternity #Angels #Hope #Statues #Imagination #Creativity

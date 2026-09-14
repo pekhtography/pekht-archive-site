@@ -22,4 +22,4 @@ hashtags:
   - "Culture"
 ---
 This massive tree isn't just Christmas — it's a colorful farewell to winter myth! ❄️🌞🎉 Mixing old and new for fun. #SeasonalMashup
-#RedSquare #Moscow #Kremlin #Christmas #Tree #Russia #Winter #Holiday #Festival #Celebration #Architecture #Tourism #NewYear #Tradition #Culture https://t.co/xjNMAt8D0V
+#RedSquare #Moscow #Kremlin #Christmas #Tree #Russia #Winter #Holiday #Festival #Celebration #Architecture #Tourism #NewYear #Tradition #Culture

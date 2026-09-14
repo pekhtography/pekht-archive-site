@@ -19,4 +19,4 @@ hashtags:
   - "Aster"
   - "Celebration"
 ---
-#Bouquet #Collection #Wildflowers #Nature #Sunflower #Alstroemeria #Beauty #Summer #Warmth #White #Daisy #Purple #Aster #Celebration https://t.co/r5T3P2IGF8
+#Bouquet #Collection #Wildflowers #Nature #Sunflower #Alstroemeria #Beauty #Summer #Warmth #White #Daisy #Purple #Aster #Celebration

@@ -18,4 +18,4 @@ hashtags:
   - "morning"
   - "garden"
 ---
-#tulip #nature #beauty #flower #water #droplets #petal #vibrant #bloom #fresh #spring #morning #garden https://t.co/3PM9Xgiy9D
+#tulip #nature #beauty #flower #water #droplets #petal #vibrant #bloom #fresh #spring #morning #garden

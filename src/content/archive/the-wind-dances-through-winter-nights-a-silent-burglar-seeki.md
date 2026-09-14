@@ -19,4 +19,4 @@ hashtags:
   - "Snow"
 ---
 The wind dances through winter nights, a silent burglar seeking the treasure of your warmth
-#Winter #Wind #Dance #Tale #Comfort #Snowflakes #Beauty #Nature #Moon #Stars #Frost #Magic #Snow https://t.co/FhNi7sTJHE
+#Winter #Wind #Dance #Tale #Comfort #Snowflakes #Beauty #Nature #Moon #Stars #Frost #Magic #Snow

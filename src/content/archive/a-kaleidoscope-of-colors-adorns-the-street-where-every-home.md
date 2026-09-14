@@ -13,4 +13,4 @@ hashtags:
   - "art"
   - "street"
 ---
-A kaleidoscope of colors adorns the street, where every home is a masterpiece #colors #harmony #houses #facades #sunlight #masterpiece #art #street https://t.co/OCYnnpuFtq
+A kaleidoscope of colors adorns the street, where every home is a masterpiece #colors #harmony #houses #facades #sunlight #masterpiece #art #street

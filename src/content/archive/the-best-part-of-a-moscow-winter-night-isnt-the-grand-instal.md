@@ -15,4 +15,4 @@ meets the glow from a festooned window.
 That silent trade:
 you give the city your shiver,
 it gives you back a story written in light🌟❄️
-#Moscow #Winter https://t.co/FJRSyUqKH9
+#Moscow #Winter

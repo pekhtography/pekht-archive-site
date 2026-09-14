@@ -17,4 +17,4 @@ hashtags:
   - "colorful"
 ---
 When nature decides to throw a color party and forgot to invite boring!🌸 These phlox are basically the confetti of my garden - who needs fireworks when you have flowers this dramatic?✨🎉 #GardenGoals
-#flowers #phlox #garden #blooms #petals #summer #nature #pink #white #colorful https://t.co/SODZUBkhMv
+#flowers #phlox #garden #blooms #petals #summer #nature #pink #white #colorful

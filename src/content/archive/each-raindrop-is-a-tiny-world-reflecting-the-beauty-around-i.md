@@ -13,4 +13,4 @@ hashtags:
   - "garden"
   - "gem"
 ---
-Each raindrop is a tiny world, reflecting the beauty around it #raindrop #magic #sparkle #jewels #beauty #tears #garden #gem https://t.co/uJI90GqiKD
+Each raindrop is a tiny world, reflecting the beauty around it #raindrop #magic #sparkle #jewels #beauty #tears #garden #gem

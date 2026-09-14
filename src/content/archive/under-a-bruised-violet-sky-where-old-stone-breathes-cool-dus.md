@@ -13,4 +13,4 @@ Under a bruised violet sky where old stone breathes cool dust,
 these red taillights flow like lava beneath ancient, 
 jagged brick teeth. 
 Tower. 🌆🗼
-#Sunset #Cityscape #MoscowNights #GoldenHour https://t.co/LW7lHfDzb2
+#Sunset #Cityscape #MoscowNights #GoldenHour

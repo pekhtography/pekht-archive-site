@@ -12,4 +12,4 @@ hashtags:
   - "Kremlin"
 ---
 When Moscow's architecture plays dress-up with golden hour lighting, even the pigeons stop to take selfies🐦 This is what happens when a city has main character energy for 875+ years running 💫 The glow-up is real🔥 #MainCharacterEnergy
-#Moscow #RedSquare #Sunset #Russia #Kremlin https://t.co/BYmq99LSng
+#Moscow #RedSquare #Sunset #Russia #Kremlin

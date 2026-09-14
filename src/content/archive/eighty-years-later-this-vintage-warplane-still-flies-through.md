@@ -18,4 +18,4 @@ hashtags:
   - "Russia"
 ---
 Eighty years later, this vintage warplane still flies through the skies of history, reminding us that victory is never just a moment, but a legacy✈️🕊️🔥 #VictoryWingsLegacy
-#airplane #vintage #victory #history #military #aviation #warplane #memorial #celebration #monument #Russia https://t.co/PW2a9dvU1c
+#airplane #vintage #victory #history #military #aviation #warplane #memorial #celebration #monument #Russia

@@ -19,4 +19,4 @@ hashtags:
   - "landmark"
 ---
 Walking past this place feels like time-travel — half Soviet past, half Netflix sci-fi set 🚀🏙️🎬 #urbanparallelworld
-#architecture #urban #building #industrial #sky #clouds #cityscape #modern #historic #structure #design #landmark https://t.co/YZ3eQvCcuR
+#architecture #urban #building #industrial #sky #clouds #cityscape #modern #historic #structure #design #landmark

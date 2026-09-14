@@ -19,4 +19,4 @@ hashtags:
   - "awakening"
 ---
 Crocus marketing strategy: Be so pretty that humans can't scroll past without stopping 📱 Mission accomplished, you manipulative little beauties 😏💜 #FloralManipulation
-#crocus #spring #flowers #purple #bloom #nature #garden #petals #sunlight #beautiful #fresh #awakening https://t.co/MpPgfH9Axb
+#crocus #spring #flowers #purple #bloom #nature #garden #petals #sunlight #beautiful #fresh #awakening

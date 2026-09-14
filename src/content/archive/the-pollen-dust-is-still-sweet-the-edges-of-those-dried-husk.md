@@ -12,4 +12,4 @@ The pollen dust is still sweet,
 the edges of those dried husks are brittle and sharp,
 yet they hang side by side with silky, unscarred yellow petals—
 proving that life doesn't wait for death to pack its bags before announcing the next act.🌼💀✨
-#Nature #BotanicalArt #OneDayBloom https://t.co/76FKbF9KIL
+#Nature #BotanicalArt #OneDayBloom

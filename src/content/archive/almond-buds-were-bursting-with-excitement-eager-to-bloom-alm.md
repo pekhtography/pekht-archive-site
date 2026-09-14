@@ -18,4 +18,4 @@ hashtags:
   - "Floral"
 ---
 Almond buds were bursting with excitement, eager to bloom 
-#Almond #Blossoms #Buds #Spring #Blooming #Nature #Pink #Delicate #Growth #Beauty #Renewal #Floral https://t.co/pF12p5meFp
+#Almond #Blossoms #Buds #Spring #Blooming #Nature #Pink #Delicate #Growth #Beauty #Renewal #Floral

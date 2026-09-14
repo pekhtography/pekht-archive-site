@@ -12,4 +12,4 @@ hashtags:
 The street promises a horizon. 🌥️ 
 Then two towers lean in and whisper: we ARE the horizon. 
 The walker doesn't flinch — keeps moving. 🚶
-#MoscowSkyline #SovietGothic #StreetPhotography #EternalCity https://t.co/tbHAYAA3TD
+#MoscowSkyline #SovietGothic #StreetPhotography #EternalCity

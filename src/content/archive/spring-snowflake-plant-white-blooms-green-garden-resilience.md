@@ -17,4 +17,4 @@ hashtags:
   - "Purity"
   - "Growth"
 ---
-#Spring #Snowflake #Plant #White #Blooms #Green #Garden #Resilience #Season #Nature #Purity #Growth https://t.co/QebPbTbjfU
+#Spring #Snowflake #Plant #White #Blooms #Green #Garden #Resilience #Season #Nature #Purity #Growth

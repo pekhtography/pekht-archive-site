@@ -17,4 +17,4 @@ hashtags:
   - "ecosystem"
 ---
 As queens of the garden, hollyhocks reign with a quiet majesty, their white robes a symbol of serene beauty
-#hollyhocks #flowers #nature #blooms #garden #white #petals #beauty #summer #pollination #ecosystem https://t.co/7nPMhDwdsm
+#hollyhocks #flowers #nature #blooms #garden #white #petals #beauty #summer #pollination #ecosystem

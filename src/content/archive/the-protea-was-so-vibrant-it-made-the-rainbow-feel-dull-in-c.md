@@ -18,4 +18,4 @@ hashtags:
   - "Blossom"
 ---
 The protea was so vibrant, it made the rainbow feel dull in comparison 
-#Protea #Bloom #Nature #Orange #Flower #Beauty #Garden #Wildflower #Botanical #Vibrant #Petals #Blossom https://t.co/diZ4Vrr9Mz
+#Protea #Bloom #Nature #Orange #Flower #Beauty #Garden #Wildflower #Botanical #Vibrant #Petals #Blossom

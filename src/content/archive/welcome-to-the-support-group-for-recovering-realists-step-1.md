@@ -16,4 +16,4 @@ hashtags:
   - "contemporary"
 ---
 Welcome to the support group for recovering realists 🙄 Step 1: Admit your imagination has a drinking problem 🍷 Step 2: Let these three be your sponsors into madness 🤪 #RecoveringRealists
-#surreal #art #painting #creative #fantasy #colorful #whimsical #imagination #contemporary https://t.co/Tat01rJHpq
+#surreal #art #painting #creative #fantasy #colorful #whimsical #imagination #contemporary

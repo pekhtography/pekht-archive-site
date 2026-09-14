@@ -14,4 +14,4 @@ hashtags:
   - "Elegance"
   - "Dreams"
 ---
-#Phalaenopsis #Orchid #Violet #Color #Petals #Beauty #Bloom #Elegance #Dreams https://t.co/zwMh5AXAun
+#Phalaenopsis #Orchid #Violet #Color #Petals #Beauty #Bloom #Elegance #Dreams

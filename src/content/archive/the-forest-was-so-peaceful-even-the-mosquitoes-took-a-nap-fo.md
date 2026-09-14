@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 The forest was so peaceful, even the mosquitoes took a nap 
-#forest #nature #trees #sunset #landscape #outdoors #wilderness #silhouette #tranquility #goldenhour #serenity #beauty https://t.co/EMs1ZUHm1V
+#forest #nature #trees #sunset #landscape #outdoors #wilderness #silhouette #tranquility #goldenhour #serenity #beauty

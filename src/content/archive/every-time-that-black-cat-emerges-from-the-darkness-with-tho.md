@@ -24,4 +24,4 @@ hashtags:
   - "mischief"
 ---
 Every time that black cat emerges from the darkness with those glowing eyes, I half-expect him to hand me a business card for a local exorcist!
-#black #cat #dark #darkness #shadows #glowing #eyes #look #gaze #scare #sneak #surprise #exorcist #fear #panic #drama #mystery #mischief https://t.co/gvSC72LkoJ
+#black #cat #dark #darkness #shadows #glowing #eyes #look #gaze #scare #sneak #surprise #exorcist #fear #panic #drama #mystery #mischief

@@ -18,4 +18,4 @@ hashtags:
   - "wilderness"
 ---
 In the forest's embrace, fiddleheads gently unroll, sharing stories of rebirth and vitality 
-#fiddleheads #nature #growth #green #spring #fern #forest #life #earth #renewal #botany #wilderness https://t.co/uorJzjlRqg
+#fiddleheads #nature #growth #green #spring #fern #forest #life #earth #renewal #botany #wilderness

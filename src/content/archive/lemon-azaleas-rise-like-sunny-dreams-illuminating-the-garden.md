@@ -13,4 +13,4 @@ hashtags:
   - "fragrance"
   - "happiness"
 ---
-Lemon azaleas rise like sunny dreams, illuminating the garden with their vibrant glow #azaleas #lemon #color #garden #sunshine #bloom #fragrance #happiness https://t.co/uyYhZBUgx2
+Lemon azaleas rise like sunny dreams, illuminating the garden with their vibrant glow #azaleas #lemon #color #garden #sunshine #bloom #fragrance #happiness

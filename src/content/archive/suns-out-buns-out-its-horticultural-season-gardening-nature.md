@@ -18,4 +18,4 @@ hashtags:
   - "freedom"
 ---
 Sun’s out, buns out — it’s horticultural season
-#gardening #nature #spring #backyard #funny #relatable #flowers #humor #plants #greenery #sunshine #freedom https://t.co/ErXfR9Zuzt
+#gardening #nature #spring #backyard #funny #relatable #flowers #humor #plants #greenery #sunshine #freedom

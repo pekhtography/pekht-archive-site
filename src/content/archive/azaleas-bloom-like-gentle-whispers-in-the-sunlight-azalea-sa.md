@@ -13,4 +13,4 @@ hashtags:
   - "Nature"
   - "Bloom"
 ---
-Azaleas bloom like gentle whispers in the sunlight #Azalea #Salmon #Sunshine #Garden #Flowers #Color #Nature #Bloom https://t.co/59RFMqWUGJ
+Azaleas bloom like gentle whispers in the sunlight #Azalea #Salmon #Sunshine #Garden #Flowers #Color #Nature #Bloom

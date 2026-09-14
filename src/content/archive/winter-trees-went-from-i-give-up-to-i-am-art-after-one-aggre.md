@@ -11,4 +11,4 @@ hashtags:
 ---
 🎄 Winter trees went from "I give up" to "I am art" after one aggressive knitting session with LED yarn 💡
 The city's new flex: seasonal taxidermy with lights ✨
-#Christmas #CityLights #HolidayDecor #MagicMoments https://t.co/P3ttZWIuzu
+#Christmas #CityLights #HolidayDecor #MagicMoments

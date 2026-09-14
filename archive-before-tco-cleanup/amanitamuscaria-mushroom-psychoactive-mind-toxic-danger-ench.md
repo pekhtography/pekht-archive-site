@@ -1,0 +1,27 @@
+---
+title: "#AmanitaMuscaria #Mushroom #Psychoactive #Mind #Toxic #Danger #Enchanting #Magic #Beauty #Nature #Forest #Mystery #White"
+x_id: "1900035590521053221"
+x_created_at: "2025-03-13T04:06:00Z"
+image: "/images/archive/amanitamuscaria-mushroom-psychoactive-mind-toxic-danger-ench.jpg"
+hashtags:
+  - "AmanitaMuscaria"
+  - "Mushroom"
+  - "Psychoactive"
+  - "Mind"
+  - "Toxic"
+  - "Danger"
+  - "Enchanting"
+  - "Magic"
+  - "Beauty"
+  - "Nature"
+  - "Forest"
+  - "Mystery"
+  - "WhiteDots"
+  - "Contrast"
+  - "FlyAgaric"
+  - "Mystical"
+  - "Red"
+  - "WhiteSpots"
+  - "Caution"
+---
+#AmanitaMuscaria #Mushroom #Psychoactive #Mind #Toxic #Danger #Enchanting #Magic #Beauty #Nature #Forest #Mystery #WhiteDots #Contrast #FlyAgaric #Mystical #Red #WhiteSpots #Caution https://t.co/IdPyLeWdXE

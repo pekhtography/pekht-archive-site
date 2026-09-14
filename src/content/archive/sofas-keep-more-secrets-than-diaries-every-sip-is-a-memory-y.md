@@ -19,4 +19,4 @@ hashtags:
   - "SlowLife"
 ---
 Sofas keep more secrets than diaries 📖🍷 every sip is a memory you didn’t know you stored. #VelvetConfessions
-#CouchPhilosophy 🍷 #Luxury #InteriorDesign #WineLovers #HomeDecor #VintageVibes #CozyCorners #Aesthetic #WarmVibes #MindfulLiving #ElegantSpaces #SlowLife https://t.co/LTyYp1rwWV
+#CouchPhilosophy 🍷 #Luxury #InteriorDesign #WineLovers #HomeDecor #VintageVibes #CozyCorners #Aesthetic #WarmVibes #MindfulLiving #ElegantSpaces #SlowLife

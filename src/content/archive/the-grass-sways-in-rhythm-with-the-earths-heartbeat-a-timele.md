@@ -18,4 +18,4 @@ hashtags:
   - "grassy"
 ---
 The grass sways in rhythm with the earth's heartbeat, a timeless dance of resilience and renewal
-#grass #nature #outdoors #field #green #plants #wild #growth #stems #meadow #blades #grassy https://t.co/xLuy0yhjRu
+#grass #nature #outdoors #field #green #plants #wild #growth #stems #meadow #blades #grassy

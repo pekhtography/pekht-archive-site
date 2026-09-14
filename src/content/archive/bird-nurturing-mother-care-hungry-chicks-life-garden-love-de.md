@@ -15,4 +15,4 @@ hashtags:
   - "love"
   - "dedication"
 ---
-#bird #nurturing #mother #care #hungry #chicks #life #garden #love #dedication https://t.co/BbGkehhDXo
+#bird #nurturing #mother #care #hungry #chicks #life #garden #love #dedication

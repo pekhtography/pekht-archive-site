@@ -18,4 +18,4 @@ hashtags:
   - "aquatic"
 ---
 Floating through Monday like this water lily - graceful on the surface, roots deep in the chaos below 🌊😌 Sometimes the best strategy is just to bloom where you're planted 🌸 #MondayZen
-#waterlily #pond #nature #flower #serenity #reflection #bloom #zen #peace #botanical #aquatic https://t.co/7VX8dzt6gb
+#waterlily #pond #nature #flower #serenity #reflection #bloom #zen #peace #botanical #aquatic

@@ -15,4 +15,4 @@ hashtags:
   - "hope"
   - "dreams"
 ---
-The magic of a city's lights can transform even the darkest nights into a festival of dreams #night #illumination #colorful #NewYear  #evening #park #city #lights #hope #dreams https://t.co/fmvg6UzusQ
+The magic of a city's lights can transform even the darkest nights into a festival of dreams #night #illumination #colorful #NewYear  #evening #park #city #lights #hope #dreams

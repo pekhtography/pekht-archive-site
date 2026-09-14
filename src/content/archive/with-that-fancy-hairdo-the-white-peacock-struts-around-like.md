@@ -23,4 +23,4 @@ hashtags:
   - "memorable"
 ---
 With that fancy hairdo, the white peacock struts around like it’s the king of elegance—someone get this bird a throne and a tiara!
-#peacock #white #bird #crown #reign #king #royalty #fashion #style #beauty #extravagant #pride #elegance #rare #grace  #aesthetics #memorable https://t.co/OYUwbDpoiR
+#peacock #white #bird #crown #reign #king #royalty #fashion #style #beauty #extravagant #pride #elegance #rare #grace  #aesthetics #memorable

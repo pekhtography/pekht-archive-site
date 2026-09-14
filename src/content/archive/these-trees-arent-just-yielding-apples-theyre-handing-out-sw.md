@@ -14,4 +14,4 @@ hashtags:
   - "bounty"
 ---
 These trees aren't just yielding apples; they're handing out sweet little nuggets of sunshine!
-#orchard #garden #apple #fruit #tree #nature #harvest #bounty https://t.co/6J1dM9Cz3V
+#orchard #garden #apple #fruit #tree #nature #harvest #bounty

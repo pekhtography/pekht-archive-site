@@ -27,4 +27,4 @@ hashtags:
   - "PEKHTography"
 ---
 They say you are what you eat, so I guess I'm a pizza—hot, cheesy, and adored by many!
-#Food #Nourishment #Tasty #Delicious #Flavorful #Serving #Experience #Adventure #Journey #Dreams #Aspiration #Love #Passion #Wishes #Hopes #Begin #Beginning #Start #Fresh #Warm #PEKHTography https://t.co/0dAFeJGGrp
+#Food #Nourishment #Tasty #Delicious #Flavorful #Serving #Experience #Adventure #Journey #Dreams #Aspiration #Love #Passion #Wishes #Hopes #Begin #Beginning #Start #Fresh #Warm #PEKHTography

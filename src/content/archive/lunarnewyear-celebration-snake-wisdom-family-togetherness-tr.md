@@ -20,4 +20,4 @@ hashtags:
   - "Festival"
   - "Light"
 ---
-#LunarNewYear #Celebration #Snake #Wisdom #Family #Togetherness #Traditions #Food #Red #Fortune #GoodLuck #Joy #Lantern #Festival #Light https://t.co/7FLci0ieDS
+#LunarNewYear #Celebration #Snake #Wisdom #Family #Togetherness #Traditions #Food #Red #Fortune #GoodLuck #Joy #Lantern #Festival #Light

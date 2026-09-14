@@ -9,4 +9,4 @@ hashtags:
   - "peacefulmind"
 ---
 The ice tries to teach the water stillness. The water replies: “Not today.” 😌💦
-#naturephotography #wintervibes #peacefulmind https://t.co/PAVrNxrBgO
+#naturephotography #wintervibes #peacefulmind

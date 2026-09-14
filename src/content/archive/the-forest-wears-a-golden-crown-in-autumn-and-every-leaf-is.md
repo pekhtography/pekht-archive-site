@@ -18,4 +18,4 @@ hashtags:
   - "forest"
 ---
 The forest wears a golden crown in autumn, and every leaf is a jewel
-#leaves #autumn #maple #nature #fall #yellow #season #tree #foliage #golden #outdoors #forest https://t.co/PjIB1mGmDm
+#leaves #autumn #maple #nature #fall #yellow #season #tree #foliage #golden #outdoors #forest

@@ -17,4 +17,4 @@ hashtags:
   - "wildflower"
   - "wilderness"
 ---
-#Fireweed #Blossoms #beauty #Landscape #Flora #nature #Color #vibrancy #bloom #growth #wildflower #wilderness https://t.co/qQupHTPEty
+#Fireweed #Blossoms #beauty #Landscape #Flora #nature #Color #vibrancy #bloom #growth #wildflower #wilderness

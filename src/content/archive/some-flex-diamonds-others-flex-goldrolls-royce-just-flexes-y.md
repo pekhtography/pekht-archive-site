@@ -19,4 +19,4 @@ hashtags:
   - "exclusive"
 ---
 Some flex diamonds, others flex gold—Rolls-Royce just flexes your entire existence. 😎💎🚘 #FlexingReality
-#luxury #gold #prestige #style #elite #power #glamour #icon #status #design #legend #exclusive https://t.co/0tSFrewLrG
+#luxury #gold #prestige #style #elite #power #glamour #icon #status #design #legend #exclusive

@@ -16,4 +16,4 @@ hashtags:
   - "hope"
 ---
 In the embrace of neon dreams, the city pulsates like a living organism
-#city #dreams #lights #heartbeat #evening #twilight #shadows #mystery #story #hope https://t.co/0Mylqq8q29
+#city #dreams #lights #heartbeat #evening #twilight #shadows #mystery #story #hope

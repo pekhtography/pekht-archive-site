@@ -12,4 +12,4 @@ hashtags:
   - "poetry"
   - "silence"
 ---
-Three sister roses bloom as one #roses #beauty #garden #love #nature #poetry #silence https://t.co/xAZYwlfVjh
+Three sister roses bloom as one #roses #beauty #garden #love #nature #poetry #silence

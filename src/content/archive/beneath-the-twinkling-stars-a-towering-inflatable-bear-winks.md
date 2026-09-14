@@ -20,4 +20,4 @@ hashtags:
   - "Happiness"
 ---
 Beneath the twinkling stars, a towering inflatable bear winks with its glittering facade, promising wishes fulfilled amidst the joy of the new year
-#Stars #Bear #Inflatable #Wishes #Dreams #Joy #Laughter #NewYear #FreshStart #Celebration #Sparkle #Colossal #Giant #Happiness https://t.co/YqofTzB82X
+#Stars #Bear #Inflatable #Wishes #Dreams #Joy #Laughter #NewYear #FreshStart #Celebration #Sparkle #Colossal #Giant #Happiness

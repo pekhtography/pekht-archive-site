@@ -23,4 +23,4 @@ hashtags:
   - "celebration"
 ---
 Trees are just showing off with their diamond-tufted snow hats – winter couture at its finest!
-#Trees #Nature #Snow #Winter #Hats #Fashion #Diamonds #Luxury #Couture #Branches #Glistening #Sparkle #Beauty #Aesthetic #bling #chill #celebration https://t.co/1UwvmJ87LO
+#Trees #Nature #Snow #Winter #Hats #Fashion #Diamonds #Luxury #Couture #Branches #Glistening #Sparkle #Beauty #Aesthetic #bling #chill #celebration

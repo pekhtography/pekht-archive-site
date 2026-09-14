@@ -19,4 +19,4 @@ hashtags:
   - "green"
 ---
 Plot armor for city stress: one (1) perfectly manicured garden 🛡️🌸 Side effects include: actual relaxation and vitamin D 😎☀️ #UrbanAntidote
-#park #garden #landscape #urban #flowers #peaceful #nature #architecture #city #beauty #tranquil #green https://t.co/PPLQoaflq7
+#park #garden #landscape #urban #flowers #peaceful #nature #architecture #city #beauty #tranquil #green

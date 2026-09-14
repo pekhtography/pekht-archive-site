@@ -13,4 +13,4 @@ Granite shelf, two inches wide. 🐐
 Junior's hooves are still soft, legs still trembling — 
 dad's already scanning the ridge like he owns the whole cliff. 
 Every generation starts terrified on someone else's ledge. 🌄
-#AlpineWild #StonePath #WildInstinct #NatureUnfiltered https://t.co/b3qULu0KFh
+#AlpineWild #StonePath #WildInstinct #NatureUnfiltered

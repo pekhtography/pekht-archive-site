@@ -6,4 +6,4 @@ image: "/images/archive/that-moment-when-your-yorkshire-realizes-theyre-the-main
 hashtags:
   []
 ---
-That moment when your Yorkshire realizes they're the main character at brunch 🐕 Sometimes the best conversations happen without words, just you, your furry soulmate, and a perfect glass of wine ✨ Life's simple pleasures hit different when shared with unconditional love 💕 https://t.co/N3jPaHdbw8
+That moment when your Yorkshire realizes they're the main character at brunch 🐕 Sometimes the best conversations happen without words, just you, your furry soulmate, and a perfect glass of wine ✨ Life's simple pleasures hit different when shared with unconditional love 💕

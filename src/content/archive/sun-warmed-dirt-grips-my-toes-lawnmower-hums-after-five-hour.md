@@ -14,4 +14,4 @@ Lawnmower hums.
 After five hours of surgical trimming, 
 one dandelion winks from the fence. 🌿 
 Resistance is fertile. 🚜
-#Nature #GardenLife #DachaVibes #PeacefulChaos https://t.co/C1P1gbxB5Y
+#Nature #GardenLife #DachaVibes #PeacefulChaos

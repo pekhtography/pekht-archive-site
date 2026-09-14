@@ -13,4 +13,4 @@ It's the pedestal.
 Sun uses it like a nightstand to put its keys before leaving. 
 The darker the buildings grow, the brighter the horizon burns. 
 Trade deal signed in shadows. ✨🏙️ 
-#GoldenHour #Photography #CityOnFire https://t.co/zDDPtiztLt
+#GoldenHour #Photography #CityOnFire

@@ -14,4 +14,4 @@ cold white, faintly waxy,
 six points catching the only available photon🌿—
 a planetarium that assembled itself at ground level.🌟
 Wrong altitude.
-#WildFlowers #BotanicalBeauty #MacroPhotography https://t.co/9FdzB7FqdR
+#WildFlowers #BotanicalBeauty #MacroPhotography

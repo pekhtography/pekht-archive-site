@@ -19,4 +19,4 @@ hashtags:
   - "Closeup"
 ---
 A floral firework? A fuzzy miracle? Call it what you want, it’s fabulous
-#Spirea #Spiraea #Pink #Blooming #Nature #Fluffy #Garden #Shrub #Flower #Summer #Petals #Vibrant #Closeup https://t.co/9ZSt04kMPP
+#Spirea #Spiraea #Pink #Blooming #Nature #Fluffy #Garden #Shrub #Flower #Summer #Petals #Vibrant #Closeup

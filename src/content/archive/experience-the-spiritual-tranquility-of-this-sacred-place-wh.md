@@ -19,4 +19,4 @@ hashtags:
   - "landmark"
 ---
 Experience the spiritual tranquility of this sacred place 🙏🏰🌿, where history meets serenity. #SacredSpaces
-#architecture #history #castle #monastery #heritage #medieval #travel #culture #ancient #fortress #religion #landmark https://t.co/birTTlraAw
+#architecture #history #castle #monastery #heritage #medieval #travel #culture #ancient #fortress #religion #landmark

@@ -12,4 +12,4 @@ hashtags:
 Leased. Branded. Delivered across an ocean. 🌊 
 The mountains are painted but the weight of every step — 
 that part is real. 🐼
-#Wildlife #PandaDiplomacy #ZooLife #MondayMood https://t.co/2aZrylfhk5
+#Wildlife #PandaDiplomacy #ZooLife #MondayMood

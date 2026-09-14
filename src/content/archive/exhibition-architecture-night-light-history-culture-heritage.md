@@ -20,4 +20,4 @@ hashtags:
   - "Iconic"
   - "Monument"
 ---
-#Exhibition #Architecture #Night #Light #History #Culture #Heritage #Landmark #Tourism #Art #Beauty #Travel #Urban #Iconic #Monument https://t.co/2kYkHYzvKI
+#Exhibition #Architecture #Night #Light #History #Culture #Heritage #Landmark #Tourism #Art #Beauty #Travel #Urban #Iconic #Monument

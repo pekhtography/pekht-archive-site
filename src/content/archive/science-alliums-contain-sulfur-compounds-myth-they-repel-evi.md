@@ -20,4 +20,4 @@ hashtags:
   - "beauty"
 ---
 🔬 Science: Alliums contain sulfur compounds. Myth: They repel evil spirits. Reality: They just make vampires cry! 😭🧄 #ScienceMeetsSuperstition #FlowerDrama
-#allium #flower #purple #garden #bloom #nature #spring #botanical #photography #macro #bokeh #beauty https://t.co/Z54ePTuguF
+#allium #flower #purple #garden #bloom #nature #spring #botanical #photography #macro #bokeh #beauty

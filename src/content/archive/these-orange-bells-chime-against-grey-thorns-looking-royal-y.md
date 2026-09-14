@@ -12,4 +12,4 @@ hashtags:
 These orange bells chime against grey thorns, 
 looking royal yet smelling like a skunk’s basement. 
 Nature’s punk rock queen finally arrived at the mud gala. 🦊🎸
-#BotanicalAnarchy #CrownImperial #GardenPunk #NatureUnfiltered https://t.co/0QKdOUR6LS
+#BotanicalAnarchy #CrownImperial #GardenPunk #NatureUnfiltered

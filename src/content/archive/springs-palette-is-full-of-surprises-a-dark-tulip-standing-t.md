@@ -19,4 +19,4 @@ hashtags:
   - "flowerphotography"
 ---
 Spring's palette is full of surprises 🌸💜🌿. A dark tulip standing tall among 'bleeding hearts' - nature's own masterpiece. #GardenHarmony
-#tulip #dicentra #flowers #garden #nature #plants #bloom #floral #botany #beauty #flora #flowerphotography https://t.co/f5UVOI1VCq
+#tulip #dicentra #flowers #garden #nature #plants #bloom #floral #botany #beauty #flora #flowerphotography

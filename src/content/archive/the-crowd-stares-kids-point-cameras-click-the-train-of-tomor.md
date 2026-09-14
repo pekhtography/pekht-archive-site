@@ -20,4 +20,4 @@ hashtags:
 ---
 The crowd stares, kids point, cameras click 🤳🚇 The train of tomorrow stands right here today.
 #FutureOnDisplay
-#metro #train #city #transport #innovation #design #technology #architecture #festival #travel #urban #modern https://t.co/BNRA4HLwgE
+#metro #train #city #transport #innovation #design #technology #architecture #festival #travel #urban #modern

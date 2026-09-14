@@ -18,4 +18,4 @@ hashtags:
   - "Landscape"
 ---
 Right in the middle of the garden, where spring is doing its happy little jig, the rhododendron throws a party—it's a riot of colors and elegance, and everyone’s invited!
-#Rhododendron #Blooms #Nature #Garden #Spring #Flora #Green #Purple #Blossom #Outdoors #Beauty #Landscape https://t.co/YUB54MBGpl
+#Rhododendron #Blooms #Nature #Garden #Spring #Flora #Green #Purple #Blossom #Outdoors #Beauty #Landscape

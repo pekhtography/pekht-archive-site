@@ -13,4 +13,4 @@ Petal geometry failed.
 Red pixels leaked. 
 Rainwater hardware upgrade complete. 
 The garden rebooted and produced a dragon instead of a flower. 🐉🌧️
-#nature #gardeninglife #floralphotography #wetbeauty https://t.co/tHIiK6RTwy
+#nature #gardeninglife #floralphotography #wetbeauty

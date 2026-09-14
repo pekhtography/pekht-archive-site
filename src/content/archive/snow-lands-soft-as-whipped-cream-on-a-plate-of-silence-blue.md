@@ -14,4 +14,4 @@ Blue shadows pool like spilled ink where sun gave up.
 Bare trees stand unedited. 
 Minimalism went so hard here, 
 it filed for aesthetic bankruptcy 🏔️❄️ 
-#NatureIsWeird #WinterMinimalism #SnowWaves #SilentBeauty https://t.co/ngspTp0GG6
+#NatureIsWeird #WinterMinimalism #SnowWaves #SilentBeauty

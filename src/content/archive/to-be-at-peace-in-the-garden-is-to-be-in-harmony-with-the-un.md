@@ -10,4 +10,4 @@ hashtags:
   - "peace"
   - "soul"
 ---
-To be at peace in the garden is to be in harmony with the universe #garden #serenity #tranquility #peace #soul https://t.co/JxXT7vp6sb
+To be at peace in the garden is to be in harmony with the universe #garden #serenity #tranquility #peace #soul

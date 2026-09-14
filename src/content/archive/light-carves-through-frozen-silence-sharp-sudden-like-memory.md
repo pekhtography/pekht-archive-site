@@ -15,4 +15,4 @@ Trees cast long shadows;
 footprints curve away, chasing something already gone 🌨️✨
 Winter teaches you:
 beauty doesn't warm you, but it holds you still.
-#NaturePhotography #Winter #Snow #Serenity https://t.co/SfPpysZCnw
+#NaturePhotography #Winter #Snow #Serenity

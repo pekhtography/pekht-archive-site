@@ -23,4 +23,4 @@ hashtags:
   - "laughter"
 ---
 Helenium (Sneezeweed), the monarch of summer gardens, presides with a royal flair that leaves us... ahem... breathless
-#summer #sun #verdant #lush #landscape #scenery #flower #petal #Helenium #unique #Sneezeweed #quirky #mysteries #sunkissed #radiance #sneezing #laughter https://t.co/kX0UzNFyTL
+#summer #sun #verdant #lush #landscape #scenery #flower #petal #Helenium #unique #Sneezeweed #quirky #mysteries #sunkissed #radiance #sneezing #laughter

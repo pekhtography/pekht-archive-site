@@ -12,4 +12,4 @@ hashtags:
   - "night"
   - "water"
 ---
-In the shimmering river, the towers of glass and steel become a dreamscape #skyscrapers #dreamscape #reflections #lights #cityscape #night #water https://t.co/A2T8wQVqKg
+In the shimmering river, the towers of glass and steel become a dreamscape #skyscrapers #dreamscape #reflections #lights #cityscape #night #water

@@ -16,4 +16,4 @@ hashtags:
   - "new"
   - "modern"
 ---
-The street is a landscape of time, where the past and present walk hand in hand #street #time #eternity #past #history #present #city #urban #ancient #new #modern https://t.co/bGZh0G4hRP
+The street is a landscape of time, where the past and present walk hand in hand #street #time #eternity #past #history #present #city #urban #ancient #new #modern

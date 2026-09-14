@@ -19,4 +19,4 @@ hashtags:
   - "Life"
 ---
 Like a heart entwined in love, the clematis wraps itself around the support, reaching for light and freedom
-#Clematis #Garden #Gardener #Climb #Flower #Bloom #Beauty #Sun #Seasons #Warmth #Love #Petals #Life https://t.co/SvJpovZTG4
+#Clematis #Garden #Gardener #Climb #Flower #Bloom #Beauty #Sun #Seasons #Warmth #Love #Petals #Life

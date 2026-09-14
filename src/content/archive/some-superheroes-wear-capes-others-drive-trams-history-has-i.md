@@ -19,4 +19,4 @@ hashtags:
   - "parade"
 ---
 Some superheroes wear capes, others drive trams 🚋💼 History has its own kind of heroes. #EverydayHeroesOnRails
-#history #uniform #tram #retro #vintage #festival #transport #street #heritage #costume #event #parade https://t.co/6dSWyYCa3N
+#history #uniform #tram #retro #vintage #festival #transport #street #heritage #costume #event #parade

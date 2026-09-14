@@ -18,4 +18,4 @@ hashtags:
   - "lightstem"
   - "beauty"
 ---
-#Mushroom #Nature #Redcapped #Vibrant #Light #Graceful #Forest #Serenity #Autumn #charming #fungus #lightstem #beauty https://t.co/VqNgycwRNP
+#Mushroom #Nature #Redcapped #Vibrant #Light #Graceful #Forest #Serenity #Autumn #charming #fungus #lightstem #beauty

@@ -13,4 +13,4 @@ hashtags:
   - "garden"
   - "sunny"
 ---
-In the city, red tulips sway like tiny flames, igniting the spirit #tulips #colorful #red #passion #city #vibrant #garden #sunny https://t.co/5XgBGTjADW
+In the city, red tulips sway like tiny flames, igniting the spirit #tulips #colorful #red #passion #city #vibrant #garden #sunny

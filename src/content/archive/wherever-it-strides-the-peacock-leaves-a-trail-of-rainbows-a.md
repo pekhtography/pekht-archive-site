@@ -24,4 +24,4 @@ hashtags:
   - "spotlight"
 ---
 Wherever it strides, the peacock leaves a trail of rainbows and wonder, a living testament to beauty's audacity
-#pomp #royalty #peacock #colorful #plumage #jewels #display #canvas #iridescent #enchanting #splendor #beauty #audacity #strut #celebrity #fabulous #runway #spotlight https://t.co/rq8klwyOeG
+#pomp #royalty #peacock #colorful #plumage #jewels #display #canvas #iridescent #enchanting #splendor #beauty #audacity #strut #celebrity #fabulous #runway #spotlight

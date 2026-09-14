@@ -25,4 +25,4 @@ hashtags:
   - "Season"
 ---
 The snow-dusted path winds like a playful serpent, weaving through mounds of white, beneath birch branches cloaked in frost
-#snow #trail #winter #wonderland #birch #frost #nature #path #playful #crunching #frozen #journey #adventure #cold #beauty #Twisting #Trees #Chill #Season https://t.co/AfYjyd259V
+#snow #trail #winter #wonderland #birch #frost #nature #path #playful #crunching #frozen #journey #adventure #cold #beauty #Twisting #Trees #Chill #Season

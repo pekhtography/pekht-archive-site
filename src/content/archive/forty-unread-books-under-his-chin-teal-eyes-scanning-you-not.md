@@ -13,4 +13,4 @@ Forty unread books under his chin. 📚
 Teal eyes scanning you — not the pages. 
 The exam was never about the books. 
 It was always about you. 😼 
-#BookTok #LibraryCat #CatWisdom #GoldenHour https://t.co/AEJaNPh1ko
+#BookTok #LibraryCat #CatWisdom #GoldenHour

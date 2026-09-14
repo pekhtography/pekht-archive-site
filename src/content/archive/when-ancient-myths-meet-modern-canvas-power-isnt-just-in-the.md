@@ -19,4 +19,4 @@ hashtags:
   - "creativity"
 ---
 When ancient myths meet modern canvas 🎨 Power isn't just in the horns, it's in the story we tell 💫 Art transforms pain into beauty ✨ #BullishOnArt
-#bull #art #red #painting #contemporary #expressionism #collage #urban #power #strength #modern #creativity https://t.co/gM4IGb71gq
+#bull #art #red #painting #contemporary #expressionism #collage #urban #power #strength #modern #creativity

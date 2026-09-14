@@ -23,4 +23,4 @@ hashtags:
   - "elusive"
 ---
 With a wardrobe that screams 'Look at me!', the Common Redstart takes the stage and exits faster than you can say 'What bird?'
-#CommonRedstart #bird #vibrant #color #scarlet #breast #nature #tail #flight #standout #uniqueness #garden #beauty #flashes #sudden #disappears #elusive https://t.co/03PCxnu00x
+#CommonRedstart #bird #vibrant #color #scarlet #breast #nature #tail #flight #standout #uniqueness #garden #beauty #flashes #sudden #disappears #elusive

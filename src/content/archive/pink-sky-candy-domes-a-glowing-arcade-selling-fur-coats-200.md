@@ -13,4 +13,4 @@ Pink sky. Candy domes.
 A glowing arcade selling fur coats 200 steps from the altar 🍬 
 God and retail have shared this address for five centuries. ✨ 
 The landlord apparently approved. 🏛️
-#Moscow #RedSquare #SacredKitsch #GoldenHour https://t.co/HRcCxKiAV3
+#Moscow #RedSquare #SacredKitsch #GoldenHour

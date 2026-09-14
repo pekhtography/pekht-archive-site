@@ -14,4 +14,4 @@ It's the sound of your own breath becoming a ghost,
 the forest holding its snow-laden breath,
 waiting for you to pass and leave only this:
 a trail of quiet that the next snow will gently take back ❄️👣
-#SilentSpaces #Winter #TracesLeft #ColdBreath https://t.co/3CwowgGg2S
+#SilentSpaces #Winter #TracesLeft #ColdBreath

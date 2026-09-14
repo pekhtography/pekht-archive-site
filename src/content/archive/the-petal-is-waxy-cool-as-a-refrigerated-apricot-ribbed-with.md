@@ -14,4 +14,4 @@ ribbed with thin copper lines—🍊
 and when the garden goes fully quiet you almost catch it:
 that faint foxy warmth,
 the smell of a crown defending itself against the world.
-#SpringVibes #WildFlowers #BotanicalOddities #NatureHumor https://t.co/rdvTFJERXO
+#SpringVibes #WildFlowers #BotanicalOddities #NatureHumor

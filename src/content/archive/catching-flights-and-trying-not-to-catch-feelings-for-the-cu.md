@@ -19,4 +19,4 @@ hashtags:
   - "aerial"
 ---
 Catching flights and trying not to catch feelings for the cute stranger in 12B. ✈️💖 #LoveToFly
-#airplane #sky #flight #contrails #travel #aviation #clouds #journey #altitude #wings #horizon #aerial https://t.co/W87ilEcXLq
+#airplane #sky #flight #contrails #travel #aviation #clouds #journey #altitude #wings #horizon #aerial

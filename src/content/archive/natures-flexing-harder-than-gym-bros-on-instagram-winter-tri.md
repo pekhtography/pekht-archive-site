@@ -19,4 +19,4 @@ hashtags:
   - "growth"
 ---
 Nature's flexing harder than gym bros on Instagram 💪🌷 Winter tried to cancel spring but got served instead 😤 #NatureFlexing
-#spring #flowers #tulips #garden #bloom #nature #colorful #beautiful #fresh #outdoors #sunshine #growth https://t.co/QGREF7HTHG
+#spring #flowers #tulips #garden #bloom #nature #colorful #beautiful #fresh #outdoors #sunshine #growth

@@ -21,4 +21,4 @@ hashtags:
   - "Vase"
   - "Elegance"
 ---
-#Zinnia #Resilience #Freesia #Friendship #Hydrangea #Diversity #Hosta #Foliage #Tomato #Harvest #Autumn #Change #Bouquet #Beauty #Vase #Elegance https://t.co/GyVafCNVzZ
+#Zinnia #Resilience #Freesia #Friendship #Hydrangea #Diversity #Hosta #Foliage #Tomato #Harvest #Autumn #Change #Bouquet #Beauty #Vase #Elegance

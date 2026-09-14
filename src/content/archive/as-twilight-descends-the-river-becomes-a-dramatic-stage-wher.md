@@ -19,4 +19,4 @@ hashtags:
   - "show"
 ---
 As twilight descends, the river becomes a dramatic stage, where the buildings strut their stuff, vying for ‘best silhouette’ in this urban reality show
-#Reflection #Water #Architecture #Stage #twilight #river #buildings #dramatic #performance #silhouette #urban #reality #show https://t.co/fUtZecOwXH
+#Reflection #Water #Architecture #Stage #twilight #river #buildings #dramatic #performance #silhouette #urban #reality #show

@@ -11,4 +11,4 @@ hashtags:
 This tiny branch holds a whole frozen galaxy. 
 The sun tries to steal it with a kiss, one drop at a time.
 The universe's quietest battle between pause and flow. ❄️✨🌱
-#Winter #MacroPhotography #Balance https://t.co/FWWbyJyls6
+#Winter #MacroPhotography #Balance

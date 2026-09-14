@@ -20,4 +20,4 @@ hashtags:
   - "Narrative"
 ---
 Graffiti is the urban poet, scribbling verses on brick and mortar while the critics sip their lattes in silence
-#Graffiti #Rebellion #Art #Expression #Design #Creativity #Urban #Vibrancy #Medium #Innovation #Walls #Canvas #Stories #Narrative https://t.co/qjRZxFTg9f
+#Graffiti #Rebellion #Art #Expression #Design #Creativity #Urban #Vibrancy #Medium #Innovation #Walls #Canvas #Stories #Narrative

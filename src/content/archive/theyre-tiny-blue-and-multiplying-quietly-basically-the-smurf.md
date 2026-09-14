@@ -19,4 +19,4 @@ hashtags:
   - "petals"
 ---
 They’re tiny, blue, and multiplying quietly — basically the Smurfs of the flower world
-#grape #hyacinth #muscari #spring #blue #garden #nature #flowers #blossom #flora #bloom #bulbs #petals https://t.co/ITUKPavFuK
+#grape #hyacinth #muscari #spring #blue #garden #nature #flowers #blossom #flora #bloom #bulbs #petals

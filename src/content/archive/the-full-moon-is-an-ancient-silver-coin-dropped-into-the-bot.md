@@ -13,4 +13,4 @@ hashtags:
   - "universe"
 ---
 The full moon is an ancient silver coin dropped into the bottomless well of the night
-#moon #coin #night #dreams #brightness #light #universe https://t.co/SG0RHpNTh6
+#moon #coin #night #dreams #brightness #light #universe

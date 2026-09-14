@@ -20,4 +20,4 @@ hashtags:
   - "Travel"
   - "Exploration"
 ---
-#Heritage #Temple #Bridge #Sunset #Silhouette #History #Culture #Architecture #River #Dusk #Journey #Reflection #Ancient #Travel #Exploration https://t.co/FOmx0295HX
+#Heritage #Temple #Bridge #Sunset #Silhouette #History #Culture #Architecture #River #Dusk #Journey #Reflection #Ancient #Travel #Exploration

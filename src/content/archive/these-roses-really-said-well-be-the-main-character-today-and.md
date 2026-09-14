@@ -19,4 +19,4 @@ hashtags:
   - "elegant"
 ---
 These roses really said "we'll be the main character today" and left no room for argument 🌹🎭 Meanwhile I'm just the supporting cast in my own garden 😂 #MainCharacterEnergy
-#roses #red #flowers #garden #blooming #petals #nature #beauty #romantic #vibrant #floral #elegant https://t.co/gzUbK20UGu
+#roses #red #flowers #garden #blooming #petals #nature #beauty #romantic #vibrant #floral #elegant

@@ -16,4 +16,4 @@ hashtags:
   - "TimelessElegance"
 ---
 Autumn doesn't ask for permission, it paints with fire and writes poetry with fallen leaves. 🍂🔥 The most beautiful apocalypse you'll ever witness. #BeautifulApocalypse
-#Nature #Autumn #GoldenHour #Architecture #FallFoliage #Beauty #Peaceful #SereneMoments #TimelessElegance https://t.co/37zN9xghcr
+#Nature #Autumn #GoldenHour #Architecture #FallFoliage #Beauty #Peaceful #SereneMoments #TimelessElegance

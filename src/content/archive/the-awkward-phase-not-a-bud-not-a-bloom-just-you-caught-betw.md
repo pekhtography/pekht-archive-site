@@ -13,4 +13,4 @@ The awkward phase.
 Not a bud, not a bloom.
 Just you, caught between "who I was" and "who the sun is trying to make me."
 Hilarious, terrifying, essential. 🌅
-#NewYear #Mindfulness #Tulip #Transformation https://t.co/MMGoqvYhD8
+#NewYear #Mindfulness #Tulip #Transformation

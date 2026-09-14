@@ -13,4 +13,4 @@ The lower tiers haven't seen sun for three hours.
 While the dome negotiates with clouds, 
 the foundation quietly holds a five-century grudge. ☁️ 
 Glory is a gold hat. Humility is the neck that holds it up. 🏛️
-#Timeless #GoldenHour #MoscowContrasts #HumbleAndGreat https://t.co/UuMBmee5Kf
+#Timeless #GoldenHour #MoscowContrasts #HumbleAndGreat

@@ -18,4 +18,4 @@ hashtags:
   - "peaceful"
 ---
 In a world of rushing chaos, be like Epimedium - quietly magnificent, blooming in shadows, teaching patience 🌸 Sometimes the most profound beauty whispers 🤫💚 #QuietMagnificence
-#Epimedium #flowers #woodland #delicate #spring #nature #garden #petals #forest #blooms #peaceful https://t.co/X20JeUfxRs
+#Epimedium #flowers #woodland #delicate #spring #nature #garden #petals #forest #blooms #peaceful

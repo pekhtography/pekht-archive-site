@@ -13,4 +13,4 @@ Two fish. Zero words.
 One stare that says "I was here first" — 
 one tail that says "prove it." 🐟⚡ 
 Every territory ever claimed started exactly like this. 
-#NatureIsUnhinged #AquariumDrama #CichlidKeepers #ThatSilenceBefore https://t.co/TozHR7kEeh
+#NatureIsUnhinged #AquariumDrama #CichlidKeepers #ThatSilenceBefore

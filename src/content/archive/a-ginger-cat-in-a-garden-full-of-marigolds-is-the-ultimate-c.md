@@ -16,4 +16,4 @@ hashtags:
   - "enigma"
 ---
 A ginger cat in a garden full of marigolds is the ultimate connoisseur of floral comfort!
-#cat #whiskers #flowers #marigolds #beauty #garden #harmony #warmth #vibrancy #enigma https://t.co/SKVmLjVIAK
+#cat #whiskers #flowers #marigolds #beauty #garden #harmony #warmth #vibrancy #enigma

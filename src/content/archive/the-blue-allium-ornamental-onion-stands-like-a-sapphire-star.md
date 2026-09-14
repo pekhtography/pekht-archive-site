@@ -27,4 +27,4 @@ hashtags:
   - "Grace"
 ---
 The Blue Allium (Ornamental Onion) stands like a sapphire star in the emerald sea of the garden's foliage
-#Blue #Allium #Flowers #Flowering #Blossom #Beauty #Ornamental #Onion #Sapphire #Gem #Star #Light #Emerald #Sea #Sky #Garden #Nature #Life #Foliage #Nature #Elegance #Grace https://t.co/48aypiBreo
+#Blue #Allium #Flowers #Flowering #Blossom #Beauty #Ornamental #Onion #Sapphire #Gem #Star #Light #Emerald #Sea #Sky #Garden #Nature #Life #Foliage #Nature #Elegance #Grace

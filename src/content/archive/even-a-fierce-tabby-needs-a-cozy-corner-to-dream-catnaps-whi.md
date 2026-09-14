@@ -20,4 +20,4 @@ hashtags:
   - "Soft"
 ---
 Even a fierce tabby needs a cozy corner to dream 💤🐱 #CatNaps #WhiskerWisdom
-#Cat #Tabby #Kitten #Pet #Feline #Sleepy #Cute #Animal #Cozy #Relax #Whiskers #Soft https://t.co/I6NRqj97gO
+#Cat #Tabby #Kitten #Pet #Feline #Sleepy #Cute #Animal #Cozy #Relax #Whiskers #Soft

@@ -13,4 +13,4 @@ Just angles his head higher,
 white feathers catching light that shouldn't exist here.
 Dignity isn't location-dependent🦅
 It's portable🔥
-#Resilience #Wild https://t.co/XaDu5VTyus
+#Resilience #Wild

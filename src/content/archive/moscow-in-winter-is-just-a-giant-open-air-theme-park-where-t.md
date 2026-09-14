@@ -14,4 +14,4 @@ where the main attraction is
 «Try Not to Slip While Admiring The Architecture.»
 The buildings are the rides,
 and Cafe Pushkin is the VIP pass that comes with borscht🎢🏛️
-#TimeTravel #MoscowVibe #WinterFairytale #HistoricalSwag https://t.co/NJiA7C4Ewv
+#TimeTravel #MoscowVibe #WinterFairytale #HistoricalSwag

@@ -25,4 +25,4 @@ hashtags:
   - "energy"
   - "grace"
 ---
-#Autumn #Change #Forest #Birch #Leaves #Transformation #Colors #Vibrancy #Trees #Life #Beauty #Aesthetics #Nature #Harmony #season #woodland #gold #orange #energy #grace https://t.co/rkhfqCbzPU
+#Autumn #Change #Forest #Birch #Leaves #Transformation #Colors #Vibrancy #Trees #Life #Beauty #Aesthetics #Nature #Harmony #season #woodland #gold #orange #energy #grace

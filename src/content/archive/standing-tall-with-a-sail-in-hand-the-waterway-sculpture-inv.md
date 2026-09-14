@@ -19,4 +19,4 @@ hashtags:
   - "Travel"
 ---
 Standing tall with a sail in hand, the ‘Waterway’ sculpture invites us to navigate the currents of history and dreams. 🌊✨ #WaterwaySymbol
-#Sculpture #Waterway #Culture #History #Park #Moscow #River #Landmark #Outdoor #Art #Nature #Travel https://t.co/pgJvGJBrsm
+#Sculpture #Waterway #Culture #History #Park #Moscow #River #Landmark #Outdoor #Art #Nature #Travel

@@ -14,4 +14,4 @@ hashtags:
   - "Lives"
   - "Stories"
 ---
-To rise above is to gain a new perspective on the world #City #Urban #Perspective #View #Above #Sky #Tapestry #Lives #Stories https://t.co/PXCV3R7RwD
+To rise above is to gain a new perspective on the world #City #Urban #Perspective #View #Above #Sky #Tapestry #Lives #Stories

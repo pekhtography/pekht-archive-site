@@ -14,4 +14,4 @@ hashtags:
   - "Harmony"
   - "Garden"
 ---
-A garden is a mirror; the pagoda captures the tranquility of nature's gentle hand #Pagoda #Peace #Stone #Strength #Sunlight #Warmth #Japanese #Harmony #Garden https://t.co/8CJq2MaFn1
+A garden is a mirror; the pagoda captures the tranquility of nature's gentle hand #Pagoda #Peace #Stone #Strength #Sunlight #Warmth #Japanese #Harmony #Garden

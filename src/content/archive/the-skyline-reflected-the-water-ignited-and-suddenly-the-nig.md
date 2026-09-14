@@ -19,4 +19,4 @@ hashtags:
   - "celebration"
 ---
 The skyline reflected, the water ignited, and suddenly the night forgot to be ordinary 🌙💡🔥 #NightUnfolded
-#lanterns #cityscape #nightscape #festival #reflection #urban #lights #magic #dream #water #skyline #celebration https://t.co/xpSeOHCsON
+#lanterns #cityscape #nightscape #festival #reflection #urban #lights #magic #dream #water #skyline #celebration

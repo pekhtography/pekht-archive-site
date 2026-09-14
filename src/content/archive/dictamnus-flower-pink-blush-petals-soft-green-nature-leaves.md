@@ -25,4 +25,4 @@ hashtags:
   - "Growth"
   - "Outdoors"
 ---
-#Dictamnus #Flower #Pink #Blush #Petals #Soft #Green #Nature #Leaves #Beauty #Bloom #Garden #Flora #Plants #Blossom #Botanical #Vibrant #Natural #Growth #Outdoors https://t.co/pKJZqW7075
+#Dictamnus #Flower #Pink #Blush #Petals #Soft #Green #Nature #Leaves #Beauty #Bloom #Garden #Flora #Plants #Blossom #Botanical #Vibrant #Natural #Growth #Outdoors

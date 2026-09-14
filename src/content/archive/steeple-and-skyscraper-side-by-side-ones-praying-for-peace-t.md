@@ -20,4 +20,4 @@ hashtags:
   - "Culture"
 ---
 Steeple and skyscraper side by side: one’s praying for peace, the other’s just praying for tenants. 😂🙏🏢 Hey, city life’s complicated! 🤣⚡⛪ #TenantPrayers
-#City #Architecture #Church #Modern #Traffic #Building #Urban #Street #Car #Skyline #Heritage #History #Urban #Culture https://t.co/akJLmwSVdR
+#City #Architecture #Church #Modern #Traffic #Building #Urban #Street #Car #Skyline #Heritage #History #Urban #Culture

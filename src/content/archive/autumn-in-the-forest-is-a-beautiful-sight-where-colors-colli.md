@@ -12,4 +12,4 @@ hashtags:
   - "trees"
   - "tapestry"
 ---
-Autumn in the forest is a beautiful sight, where colors collide in a tapestry of light #Autumn #Trees #Colors #forest #woods #trees #tapestry https://t.co/vYqpluLr8q
+Autumn in the forest is a beautiful sight, where colors collide in a tapestry of light #Autumn #Trees #Colors #forest #woods #trees #tapestry

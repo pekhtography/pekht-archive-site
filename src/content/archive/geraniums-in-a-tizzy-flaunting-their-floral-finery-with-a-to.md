@@ -18,4 +18,4 @@ hashtags:
   - "Serenity"
 ---
 Geraniums in a tizzy, flaunting their floral finery with a touch of whimsy
-#Geranium #Blooms #Nature #Purple #Flora #Petals #Garden #Wildflowers #Botany #Blossoms #Meadow #Serenity https://t.co/8ojtaJE4hs
+#Geranium #Blooms #Nature #Purple #Flora #Petals #Garden #Wildflowers #Botany #Blossoms #Meadow #Serenity

@@ -21,4 +21,4 @@ hashtags:
   - "Flowers"
 ---
 Like a vibrant rainbow spilled across the earth, my phlox bloom with abandon, celebrating life in each delicate petal
-#Phlox #Landscape #Masterpiece #Rainbow #Petals #Sun #Happiness #Color #Whimsy #Color #Garden #Celebration #Stars #Oasis #Sunlight #Flowers https://t.co/elfiTOEF8C
+#Phlox #Landscape #Masterpiece #Rainbow #Petals #Sun #Happiness #Color #Whimsy #Color #Garden #Celebration #Stars #Oasis #Sunlight #Flowers

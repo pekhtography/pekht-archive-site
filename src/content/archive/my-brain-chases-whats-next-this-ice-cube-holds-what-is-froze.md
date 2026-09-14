@@ -13,4 +13,4 @@ This ice cube holds 'what is.'
 Frozen bubbles: captured conversations between wind and water. 
 The universe's best ideas come pre-silenced. 
 Listen. 🧊🤫 
-#Mindfulness #WinterWonder #IcePhoto https://t.co/ziOIQAf9fp
+#Mindfulness #WinterWonder #IcePhoto

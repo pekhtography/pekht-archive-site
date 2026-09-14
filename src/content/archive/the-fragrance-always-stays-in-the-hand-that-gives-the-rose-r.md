@@ -13,4 +13,4 @@ hashtags:
   - "color"
   - "harmony"
 ---
-The fragrance always stays in the hand that gives the rose #rose #beauty #fragrance #memory #garden #tea #color #harmony https://t.co/FnvkTS0khs
+The fragrance always stays in the hand that gives the rose #rose #beauty #fragrance #memory #garden #tea #color #harmony

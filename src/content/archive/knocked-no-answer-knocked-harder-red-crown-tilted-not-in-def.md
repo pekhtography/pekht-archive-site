@@ -13,4 +13,4 @@ Knocked. No answer. Knocked harder.
 Red crown tilted — not in defeat, just recalibrating. 🎩🌨️ 
 A gentleman never stops mid-bark. 
 He simply adjusts the angle. 
-#WoodpeckerEnergy #BirdPhotography #WinterWildlife #NatureVibes https://t.co/HWpFkF4kgd
+#WoodpeckerEnergy #BirdPhotography #WinterWildlife #NatureVibes

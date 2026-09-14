@@ -12,4 +12,4 @@ hashtags:
 Those little claws gripped the sawdust like a conductor’s baton. 🎻 
 The tuxedo bird is performing “Flight of the Bumblebee” to absolute silence. 
 If you listen closely, the grass gives a standing ovation. 
-#NatureHumor #BirdWatchingHumor #TinyCommander #UnexpectedSwagger https://t.co/wA9ijYIqiG
+#NatureHumor #BirdWatchingHumor #TinyCommander #UnexpectedSwagger

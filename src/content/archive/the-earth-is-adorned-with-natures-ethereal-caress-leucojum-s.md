@@ -19,4 +19,4 @@ hashtags:
   - "Beauty"
 ---
 The earth is adorned with nature's ethereal caress
-#Leucojum #Spring #Snowflake #Blooms #Nature #White #Flowers #Garden #Blossoms #Botany #Elegance #Serenity #Beauty https://t.co/iawoD4xSZy
+#Leucojum #Spring #Snowflake #Blooms #Nature #White #Flowers #Garden #Blossoms #Botany #Elegance #Serenity #Beauty

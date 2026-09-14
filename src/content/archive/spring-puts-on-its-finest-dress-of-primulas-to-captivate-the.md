@@ -18,4 +18,4 @@ hashtags:
   - "Vibrant"
 ---
 Spring puts on its finest dress of primulas to captivate the world 
-#Primula #Flowers #Nature #Bloom #Purple #Petals #Garden #Spring #Beauty #Wildflowers #Blossom #Vibrant https://t.co/RTMuQazfsq
+#Primula #Flowers #Nature #Bloom #Purple #Petals #Garden #Spring #Beauty #Wildflowers #Blossom #Vibrant

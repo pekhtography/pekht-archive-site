@@ -23,4 +23,4 @@ hashtags:
   - "magical"
 ---
 When the cold bites, city warmth bites back 🔥🎅 Cozy vibes only around these festive streets 🌨️ #CityChillHolidayThrills #MainCharacterTree
-#Christmas #City #Winter #Holiday #Street #Architecture #Decorations #Snow #Festive #People #Urban #Cold #tree #plaza #magical https://t.co/WkEdQSnXLA
+#Christmas #City #Winter #Holiday #Street #Architecture #Decorations #Snow #Festive #People #Urban #Cold #tree #plaza #magical

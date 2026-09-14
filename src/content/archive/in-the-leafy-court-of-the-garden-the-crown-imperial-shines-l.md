@@ -28,4 +28,4 @@ hashtags:
   - "Reign"
 ---
 In the leafy court of the garden, the Crown Imperial shines like a monarch at a grand ball
-#Crown #Imperial #Majesty #Royal #Shine #Nature #Court #Leaf #Glow #Garden #Celebrity #Ball #Heritage #Entourage #Jewel #Throne #Aura #Grandeur #Kingdom #Foliage #Treasure #Nature #Reign https://t.co/WGnVubCtdR
+#Crown #Imperial #Majesty #Royal #Shine #Nature #Court #Leaf #Glow #Garden #Celebrity #Ball #Heritage #Entourage #Jewel #Throne #Aura #Grandeur #Kingdom #Foliage #Treasure #Nature #Reign

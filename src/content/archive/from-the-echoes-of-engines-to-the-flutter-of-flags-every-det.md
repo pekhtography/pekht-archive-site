@@ -19,4 +19,4 @@ hashtags:
   - "nostalgia"
 ---
 From the echoes of engines to the flutter of flags, every detail tells a story of grit and glory. 🛩️🔥🟥 #LegacyInMotion
-#military #history #vintage #aviation #uniform #Soviet #redstar #reenactment #warplane #heritage #patriotism #nostalgia https://t.co/G9nIywfiEb
+#military #history #vintage #aviation #uniform #Soviet #redstar #reenactment #warplane #heritage #patriotism #nostalgia

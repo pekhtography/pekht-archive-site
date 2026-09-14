@@ -17,4 +17,4 @@ hashtags:
   - "Public"
 ---
 Moscow's art scene: "Subtlety is so last century!" 💃🎨 This installation is basically the extrovert friend who shows up uninvited but makes the party ten times better 🎉✨ #ExtrovertArt
-#Installation #Art #LED #Light #Moscow #Digital #Night #Technology #Interactive #Public https://t.co/00nlPy4XGn
+#Installation #Art #LED #Light #Moscow #Digital #Night #Technology #Interactive #Public

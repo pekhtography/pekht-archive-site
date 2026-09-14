@@ -19,4 +19,4 @@ hashtags:
   - "Beauty"
 ---
 Petals might fade, but memories bloom forever 🌸💭💜 #EternalBloom
-#Rhododendron #Flower #Bloom #Purple #Nature #Garden #Petals #Shrub #Floral #Botany #Spring #Beauty https://t.co/8ny4KSN2zE
+#Rhododendron #Flower #Bloom #Purple #Nature #Garden #Petals #Shrub #Floral #Botany #Spring #Beauty

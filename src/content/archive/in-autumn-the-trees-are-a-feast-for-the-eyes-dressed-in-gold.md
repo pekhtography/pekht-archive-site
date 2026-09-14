@@ -12,4 +12,4 @@ hashtags:
   - "gold"
   - "park"
 ---
-In autumn, the trees are a feast for the eyes, dressed in gold and amber #trees #yellow #autumn #leaves #dressed #gold #park https://t.co/TbgqGQYaWy
+In autumn, the trees are a feast for the eyes, dressed in gold and amber #trees #yellow #autumn #leaves #dressed #gold #park

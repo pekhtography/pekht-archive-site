@@ -13,4 +13,4 @@ Mint. Terracotta. Battlements. 🎨
 Each era dropped its résumé on the same block and left. 
 The city filed none of them. 
 It just kept all three — and called it a street. 
-#Architecture #UrbanExploration #CityLayers #MoodySkies https://t.co/KMRSPoy3Um
+#Architecture #UrbanExploration #CityLayers #MoodySkies

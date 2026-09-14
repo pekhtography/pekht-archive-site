@@ -14,4 +14,4 @@ bloom so loud the whole garden has to adjust its saturation.
 Let the buds watch and learn. 
 This isn't just color; it's a declaration. 
 My stage, my rules 🐯🎨 
-#TigerLily #OrangeFlowers #PeakBloom #Leader https://t.co/bXHW32AjDg
+#TigerLily #OrangeFlowers #PeakBloom #Leader

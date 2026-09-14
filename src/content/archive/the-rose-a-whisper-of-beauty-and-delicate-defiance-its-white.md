@@ -14,4 +14,4 @@ hashtags:
   - "Ethereal"
 ---
 The rose, a whisper of beauty and delicate defiance, its white edge a promise in the moonlight. It's ethereal, holding contrast
-#Rose #Beauty #WhiteEdge #Contrast #Petals #Delicate #Moonlight #Ethereal https://t.co/yoXR6KHIYb
+#Rose #Beauty #WhiteEdge #Contrast #Petals #Delicate #Moonlight #Ethereal

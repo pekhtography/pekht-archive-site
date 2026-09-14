@@ -12,4 +12,4 @@ hashtags:
 Fifty million years of engineering — 
 and the warmest house on earth still breathes, still moves, still smells like hay and milk. 🌾 
 The only architecture that loves you back. 🤍
-#WildlifePhotography #Marsupial #JoeyLife #TinyAndWarm https://t.co/SHXBkqDPQh
+#WildlifePhotography #Marsupial #JoeyLife #TinyAndWarm

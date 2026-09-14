@@ -13,4 +13,4 @@ Teal crown, copper sideburns, orange sail fin, burgundy chest —
 standing in cold slush. 🦆✨ 
 Scientists call it "Mandarin Duck." 
 The other ducks call it "the problem."
-#Nature #BirdPhotography #MandarinDuck #Unbothered https://t.co/siITuBkC1d
+#Nature #BirdPhotography #MandarinDuck #Unbothered

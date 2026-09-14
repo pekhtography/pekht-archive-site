@@ -18,4 +18,4 @@ hashtags:
   - "botany"
 ---
 Every leaf is a chronicle of bygone days, and the berries are the pledge of winter's banquet
-#rowan #berries #nature #autumn #leaves #orange #green #wild #forest #trees #outdoors #botany https://t.co/IPHkjARop3
+#rowan #berries #nature #autumn #leaves #orange #green #wild #forest #trees #outdoors #botany

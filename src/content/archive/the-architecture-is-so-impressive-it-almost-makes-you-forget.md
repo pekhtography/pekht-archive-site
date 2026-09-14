@@ -15,4 +15,4 @@ hashtags:
   - "Beauty"
 ---
 The architecture is so impressive, it almost makes you forget how cold your toes are! 
-#Architecture #IceRink #Night #Winter #History #Landmark #Heritage #Skating #Beauty https://t.co/LyTBtMhRpJ
+#Architecture #IceRink #Night #Winter #History #Landmark #Heritage #Skating #Beauty

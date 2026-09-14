@@ -25,4 +25,4 @@ hashtags:
   - "Longevity"
   - "Wisdom"
 ---
-#Oak #Strength #Tree #Nature #Canopy #Shade #Leaves #Whispers #Trunk #Stability #Soil #Roots #Sunlight #Growth #Resistance #Endurance #Gardens #Beauty #Longevity #Wisdom https://t.co/K63e09EuBZ
+#Oak #Strength #Tree #Nature #Canopy #Shade #Leaves #Whispers #Trunk #Stability #Soil #Roots #Sunlight #Growth #Resistance #Endurance #Gardens #Beauty #Longevity #Wisdom

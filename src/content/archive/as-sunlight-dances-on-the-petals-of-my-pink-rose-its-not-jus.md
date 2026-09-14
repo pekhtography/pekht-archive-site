@@ -16,4 +16,4 @@ hashtags:
   - "color"
 ---
 As sunlight dances on the petals of my pink rose, it's not just a flower; it's a full-blown solar-powered diva!
-#rose #love #garden #beauty #joy #hope #sunlight #diva #petals #color https://t.co/M5NooeznHM
+#rose #love #garden #beauty #joy #hope #sunlight #diva #petals #color

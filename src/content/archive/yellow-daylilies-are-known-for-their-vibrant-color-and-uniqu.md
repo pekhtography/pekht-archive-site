@@ -13,4 +13,4 @@ hashtags:
   - "fragrance"
   - "garden"
 ---
-Yellow daylilies are known for their vibrant color and unique shape, blooming prolifically in gardens #flower #bloom #daylily #vibrance #yellow #sunshine #fragrance #garden https://t.co/13hqahLBI6
+Yellow daylilies are known for their vibrant color and unique shape, blooming prolifically in gardens #flower #bloom #daylily #vibrance #yellow #sunshine #fragrance #garden

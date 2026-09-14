@@ -13,4 +13,4 @@ hashtags:
   - "gratitude"
   - "humility"
 ---
-These flowers symbolize gratitude and humility, making them a meaningful addition to any garden #Campanula #bellflower #blue #nature #garden #beauty #gratitude #humility https://t.co/vB6gY09LIm
+These flowers symbolize gratitude and humility, making them a meaningful addition to any garden #Campanula #bellflower #blue #nature #garden #beauty #gratitude #humility

@@ -12,4 +12,4 @@ Barely upright, swaying after endless New Year feasts, supporting questionable l
 "Existing vertically counts."
 That's brotherhood:
 lowering the bar until we step over it lying down through Chinese New Year💚
-#NewYear #January https://t.co/r2tHRN81B8
+#NewYear #January

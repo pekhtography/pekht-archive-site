@@ -13,4 +13,4 @@ City strung a thousand lights.
 Snow built a monument. 
 The lamp just… stands there, like a referee who gave up.
 Governance is vibes over infrastructure. ✨🏔️🚨 
-#WinterVibes #UrbanAbsurdity #SnowChaos #IronicBeauty https://t.co/GyOblNcVU6
+#WinterVibes #UrbanAbsurdity #SnowChaos #IronicBeauty

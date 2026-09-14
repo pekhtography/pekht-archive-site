@@ -18,4 +18,4 @@ hashtags:
   - "stealth"
 ---
 A snake is just a noodle with a bad attitude
-#snake #nature #wildlife #reptile #serpent #venomous #slither #predator #forest #jungle #danger #stealth https://t.co/mKhPEXhczB
+#snake #nature #wildlife #reptile #serpent #venomous #slither #predator #forest #jungle #danger #stealth

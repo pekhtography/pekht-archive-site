@@ -18,4 +18,4 @@ hashtags:
   - "Medicinal"
 ---
 Elecampane was once believed to ward off evil spirits, and today it's known to ward off the common cold
-#Elecampane #Yellow #Blooms #Nature #Garden #Flora #Petals #Sunshine #Botany #Wildflowers #Herbal #Medicinal https://t.co/tzkjah9WBv
+#Elecampane #Yellow #Blooms #Nature #Garden #Flora #Petals #Sunshine #Botany #Wildflowers #Herbal #Medicinal

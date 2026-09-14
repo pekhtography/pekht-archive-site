@@ -15,4 +15,4 @@ hashtags:
   - "Field"
 ---
 As trees shed their vibrant leaves, like a gentle farewell, the landscape transforms into a tapestry of warm hues, where grass whispers secrets of the past to the golden field
-#Autumn #Change #Trees #Strength #Leaves #Transformation #Grass #Freshness #Field https://t.co/FVfX8CvymK
+#Autumn #Change #Trees #Strength #Leaves #Transformation #Grass #Freshness #Field

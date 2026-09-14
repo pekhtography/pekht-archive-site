@@ -13,4 +13,4 @@ God looked down, saw an empty field with scattered trees 🌲❄️,
 and went "I can work with this." 
 Never underestimate a minimalist setup plus divine intervention. 
 Pure visual jazz ✨ 
-#Nature #Minimalism #WinterWonderland #Celestial https://t.co/vc3p8LShrv
+#Nature #Minimalism #WinterWonderland #Celestial

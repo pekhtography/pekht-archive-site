@@ -14,4 +14,4 @@ The white tram nudges past—
 a small, wet laugh against all that vertical glass.
 Towers watch. Grass grows. People walk.
 Eternity smells like damp leaves and moves on.🌿💧🏙️
-#UrbanLife #Brutalism #River https://t.co/nDRchp3jIV
+#UrbanLife #Brutalism #River

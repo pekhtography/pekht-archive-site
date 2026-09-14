@@ -19,4 +19,4 @@ hashtags:
   - "Commuting"
 ---
 🚪 Doors so shiny you might get lost in your own reflection. Just don’t miss your train! #MirrorMadness
-#Matveevskaya #Railway #Station #MCD #Moscow #Train #Transport #Travel #Russia #Infrastructure #Architecture #Commuting https://t.co/9xxbjVQHyf
+#Matveevskaya #Railway #Station #MCD #Moscow #Train #Transport #Travel #Russia #Infrastructure #Architecture #Commuting

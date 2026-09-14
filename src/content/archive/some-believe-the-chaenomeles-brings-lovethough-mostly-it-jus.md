@@ -18,4 +18,4 @@ hashtags:
   - "bloom"
 ---
 Some believe the chaenomeles brings love—though mostly it just brings bees
-#chaenomeles #flowering #japonica #blossom #pine #contrast #nature #springtime #botanical #vivid #garden #bloom https://t.co/CgSvOwgOrI
+#chaenomeles #flowering #japonica #blossom #pine #contrast #nature #springtime #botanical #vivid #garden #bloom

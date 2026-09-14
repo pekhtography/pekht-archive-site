@@ -18,4 +18,4 @@ hashtags:
   - "mystery"
 ---
 Beneath the shimmering frost of the birch, a winding snow trail teases the imagination, leading into the heart of the winter’s fairy tale
-#snowy #winter #birch #tree #frosty #jewels #path #journey #whimsical #magic #curve #mystery https://t.co/awdryp7Unn
+#snowy #winter #birch #tree #frosty #jewels #path #journey #whimsical #magic #curve #mystery

@@ -19,4 +19,4 @@ hashtags:
   - "beautiful"
 ---
 When you realize you've been the designated driver of your friend group for 3 years straight 🚗 The eternal watchman struggles are real 😮‍💨🤷‍♂️ #DesignatedWatcher
-#meerkat #wildlife #nature #sentinel #golden #hour #photography #safari #africa #watching #peaceful #beautiful https://t.co/OWH2zXljqO
+#meerkat #wildlife #nature #sentinel #golden #hour #photography #safari #africa #watching #peaceful #beautiful

@@ -19,4 +19,4 @@ hashtags:
   - "Radiance"
 ---
 The almond tree's blossoms presented a spectacle of botanical jubilation, a floral pyrotechnic display in the garden's natural theater
-#Almond #Blossom #Nature #Bloom #Garden #Spring #Petals #Beauty #Floral #Elegance #Serenity #Whispers #Radiance https://t.co/QzxbsGK6Xp
+#Almond #Blossom #Nature #Bloom #Garden #Spring #Petals #Beauty #Floral #Elegance #Serenity #Whispers #Radiance

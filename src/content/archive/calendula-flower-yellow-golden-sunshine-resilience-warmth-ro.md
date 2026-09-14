@@ -25,4 +25,4 @@ hashtags:
   - "Petals"
   - "Delicacy"
 ---
-#Calendula #Flower #Yellow #Golden #Sunshine #Resilience #Warmth #Rose #Love #Pink #Romance #Beauty #Elegance #Emotion #Feelings #Passion #Garden #Life #Petals #Delicacy https://t.co/roB3zF9bSh
+#Calendula #Flower #Yellow #Golden #Sunshine #Resilience #Warmth #Rose #Love #Pink #Romance #Beauty #Elegance #Emotion #Feelings #Passion #Garden #Life #Petals #Delicacy

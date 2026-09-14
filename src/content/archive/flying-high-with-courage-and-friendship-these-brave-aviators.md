@@ -19,4 +19,4 @@ hashtags:
   - "soviet"
 ---
 Flying high with courage and friendship ✈️💪 These brave aviators remind us that history is written by those who dare to soar. 🚀🌟 #SkyBoundSisters
-#aviators #history #women #military #warriors #friendship #pilot #airplane #vintage #courage #smile #soviet https://t.co/lgibb5V6ok
+#aviators #history #women #military #warriors #friendship #pilot #airplane #vintage #courage #smile #soviet

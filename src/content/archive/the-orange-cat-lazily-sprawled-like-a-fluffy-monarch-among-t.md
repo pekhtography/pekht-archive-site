@@ -14,4 +14,4 @@ hashtags:
   - "warmth"
 ---
 The orange cat lazily sprawled like a fluffy monarch among the fruit treasures of nature, basking in the sunlight and plotting mischief with playful, whiskered charm.
-#cat #orange #orchard #bounty #harvest #fruits #garden #warmth https://t.co/cl1PhgZQzo
+#cat #orange #orchard #bounty #harvest #fruits #garden #warmth

@@ -13,4 +13,4 @@ hashtags:
   - "model"
 ---
 The legendary Hotel Rossiya lives on in miniature! 🏨 This iconic Soviet-era giant once welcomed millions to the heart of Moscow ✨ Some buildings may disappear, but their stories remain forever illuminated 💡 #HotelRossiyaLegacy
-#Russia #hotel #Moscow #Soviet #history #model https://t.co/NsTRFcodE0
+#Russia #hotel #Moscow #Soviet #history #model

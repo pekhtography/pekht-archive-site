@@ -13,4 +13,4 @@ Dead mulch, dried stems, last year's rot —
 and then this blue spike, already dressed, already loud. 🌱
 Turns out winter wasn't the hard part.
 It was just the green room. 💙
-#SpringVibes #BloomingAgainst #WildGardening #PetrichorMood https://t.co/JnOF89xVnF
+#SpringVibes #BloomingAgainst #WildGardening #PetrichorMood

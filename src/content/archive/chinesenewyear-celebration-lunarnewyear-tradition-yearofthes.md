@@ -27,4 +27,4 @@ hashtags:
   - "Festival"
   - "Zodiac"
 ---
-#ChineseNewYear #Celebration #LunarNewYear #Tradition #YearOfTheSnake #Wisdom #Wisdom #Intelligence #Renewal #Freshness #Prosperity #Wealth #Feasts #Food #Family #Togetherness #Leadership #NewYear #Snake #Fortune #Luck #Festival #Renewal #Zodiac https://t.co/zOYJQAjNfp
+#ChineseNewYear #Celebration #LunarNewYear #Tradition #YearOfTheSnake #Wisdom #Wisdom #Intelligence #Renewal #Freshness #Prosperity #Wealth #Feasts #Food #Family #Togetherness #Leadership #NewYear #Snake #Fortune #Luck #Festival #Renewal #Zodiac

@@ -16,4 +16,4 @@ hashtags:
   - "Trail"
   - "Garden"
 ---
-The vibrant hues of the cat against the backdrop of the lush garden create a visual symphony, a moment of simple beauty #Colorful #Rainbow #Cat #Feline #Resting #Relaxing #Eating #Munching #Path #Trail #Garden https://t.co/mYXAzDyZQ6
+The vibrant hues of the cat against the backdrop of the lush garden create a visual symphony, a moment of simple beauty #Colorful #Rainbow #Cat #Feline #Resting #Relaxing #Eating #Munching #Path #Trail #Garden

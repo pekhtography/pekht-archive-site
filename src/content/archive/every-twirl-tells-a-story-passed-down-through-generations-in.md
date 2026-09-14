@@ -19,4 +19,4 @@ hashtags:
   - "colorful"
 ---
 Every twirl tells a story passed down through generations ✨ In these moments, the past lives brilliantly in the present 🌟💫 #LivingHeritage
-#dance #folk #traditional #culture #performance #costume #festival #heritage #celebration #community #stage #colorful https://t.co/vCFu9RGzO6
+#dance #folk #traditional #culture #performance #costume #festival #heritage #celebration #community #stage #colorful

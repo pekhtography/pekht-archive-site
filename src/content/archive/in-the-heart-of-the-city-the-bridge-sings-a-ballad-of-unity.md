@@ -20,4 +20,4 @@ hashtags:
   - "separation"
 ---
 In the heart of the city, the bridge sings a ballad of unity over the waters of separation
-#bridge #unity #water #dreams #harmony #togetherness #artistic #creativity #expression #realm #connection #art #imagination #separation https://t.co/IYIEUn509P
+#bridge #unity #water #dreams #harmony #togetherness #artistic #creativity #expression #realm #connection #art #imagination #separation

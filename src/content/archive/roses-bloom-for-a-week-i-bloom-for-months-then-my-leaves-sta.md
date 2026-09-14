@@ -15,4 +15,4 @@ then my leaves stay perfect for years.
 This isn't a sprint. 
 It's a centuries-old chess game with winter, 
 and I just calmly said "checkmate" with a purple flower ♟️🌱 
-#Hellebore #Evergreen #LongGame #WinterKing https://t.co/NP9cpTbvG0
+#Hellebore #Evergreen #LongGame #WinterKing

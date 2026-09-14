@@ -15,4 +15,4 @@ hashtags:
   - "perspective"
 ---
 The monument's grandeur is so immense, it seems to hold up the very sky, a testament to the unbreakable spirit of those it honors 
-#monument #victory #architecture #history #memorial #heroism #tribute #sky #perspective https://t.co/NjxLFOtqtr
+#monument #victory #architecture #history #memorial #heroism #tribute #sky #perspective

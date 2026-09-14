@@ -18,4 +18,4 @@ hashtags:
   - "Architecture"
 ---
 Between Kremlin’s ticking clock and the old plane’s stillness lies a story of time, courage, and resilience. Here, history isn’t just seen—it’s felt ⏳✈️🕰️ #TimelessValor
-#Aircraft #History #Moscow #Kremlin #RedSquare #Cathedral #Heritage #Tourism #Culture #Memorial #Architecture https://t.co/IyCdUqkT9p
+#Aircraft #History #Moscow #Kremlin #RedSquare #Cathedral #Heritage #Tourism #Culture #Memorial #Architecture

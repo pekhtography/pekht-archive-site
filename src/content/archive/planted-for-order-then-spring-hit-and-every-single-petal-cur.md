@@ -14,4 +14,4 @@ Then spring hit —
 and every single petal curled outward like a tiny fist mid-argument, 
 magenta-sharp, white-edged, unanimous. 
 A field. A riot. 💜
-#Spring #TulipSeason #FlowerPhotography #PurpleAesthetic https://t.co/hnCl8m80Ub
+#Spring #TulipSeason #FlowerPhotography #PurpleAesthetic

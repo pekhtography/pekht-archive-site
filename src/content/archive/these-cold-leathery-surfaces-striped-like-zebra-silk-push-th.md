@@ -14,4 +14,4 @@ striped like zebra-silk —
 push through the grit. 
 Pure muscle. Pure growth. 
 This tiny patch is an ancient mountain range. 🏔️🌿
-#Nature #GardenLife #HostaHype #LushGreen https://t.co/c3Rr6Ke1XT
+#Nature #GardenLife #HostaHype #LushGreen

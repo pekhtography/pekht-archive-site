@@ -18,4 +18,4 @@ hashtags:
   - "Architecture"
 ---
 When the city lights mimic stars and the river becomes a mirror, Moscow dances between reality and dreams. 💃🌃 Let's sail where history and fantasy collide! #CityMagicUnfolds
-#Kremlin #Moscow #River #Evening #Boats #Sunset #Cityscape #Lights #Tourism #History #Architecture https://t.co/pS6cfrt7Dp
+#Kremlin #Moscow #River #Evening #Boats #Sunset #Cityscape #Lights #Tourism #History #Architecture

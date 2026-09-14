@@ -13,4 +13,4 @@ Theatre survived Napoleon. Communism. Three fires.
 Then city plunked Hansel &amp; Gretel house on doorstep. 
 Bronze horses upstairs pretending not to notice. 
 Architect somewhere drinking heavily. 🏛️🍭🥃
-#Architecture #CulturalHeritage #ContrastVibes #MagicalMoments https://t.co/3swIIuUciJ
+#Architecture #CulturalHeritage #ContrastVibes #MagicalMoments

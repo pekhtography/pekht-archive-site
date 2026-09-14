@@ -20,4 +20,4 @@ hashtags:
   - "urban"
 ---
 Forget lions at the gates — we’ve upgraded to XXL cats in Gucci glasses 🐱🕶️💎 #GatekeeperGlowUp #ModernArtFlex
-#art #cat #sculpture #city #style #fun #park #giant #people #design #event #urban https://t.co/9hvWdAF2PJ
+#art #cat #sculpture #city #style #fun #park #giant #people #design #event #urban

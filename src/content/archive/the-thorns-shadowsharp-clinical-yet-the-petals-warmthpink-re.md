@@ -12,4 +12,4 @@ hashtags:
 The thorn's shadow—sharp, clinical. 
 Yet the petal's warmth—pink, reckless—leans in (closer than it should). 
 Points collide, energy flares, and the garden holds its breath. 🔪🌺✨
-#Nature #GardenFlowers #BotanicalSurvival #PinkPulse https://t.co/Tg9SoAhhky
+#Nature #GardenFlowers #BotanicalSurvival #PinkPulse

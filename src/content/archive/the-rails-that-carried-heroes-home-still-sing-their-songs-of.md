@@ -16,4 +16,4 @@ hashtags:
   - "celebration"
 ---
 The rails that carried heroes home still sing their songs of triumph 🎵 Every uniform tells a tale, every voice carries the weight of history's greatest moments 🎖️ #RailsOfMemory
-#history #victory #railway #military #commemoration #nostalgia #performance #soviet #celebration https://t.co/QOlehKHiL6
+#history #victory #railway #military #commemoration #nostalgia #performance #soviet #celebration

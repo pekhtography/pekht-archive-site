@@ -19,4 +19,4 @@ hashtags:
   - "Photography"
 ---
 This flower is proof that nature knows how to flaunt! 🌿🌹 #NatureIsArt
-#Flower #Purple #Nature #Clematis #Bloom #Garden #Flora #Botany #Petals #Beauty #Plant #Photography https://t.co/UIxXCBSiYQ
+#Flower #Purple #Nature #Clematis #Bloom #Garden #Flora #Botany #Petals #Beauty #Plant #Photography

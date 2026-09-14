@@ -17,4 +17,4 @@ hashtags:
   - "Transvaal"
   - "daisy"
 ---
-#gerbera #flower #petals #vibrancy #colors #sunshine #garden #bloom #beauty #celebration #Transvaal #daisy https://t.co/hAR8kUEY7A
+#gerbera #flower #petals #vibrancy #colors #sunshine #garden #bloom #beauty #celebration #Transvaal #daisy

@@ -13,4 +13,4 @@ Knelt in wet pine duff, heart doing that stupid fast thing 🍄
 Two black morels. Same spot. Untouched. 
 Someone else walked right past this 😤 
 Their loss, my butter
-#ForagingLife #MushroomSeason #WildFood #MomentOfFind https://t.co/ROiOe3bx4m
+#ForagingLife #MushroomSeason #WildFood #MomentOfFind

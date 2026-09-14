@@ -15,4 +15,4 @@ The "flaw" was the point.
 Broken = rare. 
 Rare = mortgage. 💸 
 We still do this — find the cracked thing and call it irreplaceable. ✨
-#Nature #TulipSeason #GardenEye #GoldenLight https://t.co/eFxgcJR7uW
+#Nature #TulipSeason #GardenEye #GoldenLight

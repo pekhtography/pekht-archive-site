@@ -16,4 +16,4 @@ mounted on a donkey restaurant — in front of a Soviet tower —
 next to a glass skyscraper. 
 Moscow doesn't do themes. 
 It does everything. 🌍😂
-#CityLife #MoscowStreets #ArbatMoscow #OnlyInRussia https://t.co/4QWQZPtmpz
+#CityLife #MoscowStreets #ArbatMoscow #OnlyInRussia

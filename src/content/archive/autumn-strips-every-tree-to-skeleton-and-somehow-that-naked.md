@@ -12,4 +12,4 @@ Autumn strips every tree to skeleton
 and somehow that naked honesty is the realest thing you'll witness all year 🍁💀 
 No makeup, no filter, no apology—
 just raw truth standing in water 
-#AutumnVibes #NaturePhotography #MelancholyBeauty https://t.co/CvkpUHPA0J
+#AutumnVibes #NaturePhotography #MelancholyBeauty

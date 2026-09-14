@@ -13,4 +13,4 @@ Blue neck shimmering like stained glass,
 three kilos of feathers rustling — 
 evolution traded his escape route for the entrance. 🦚✨ 
 Some bets were never meant to be safe.
-#NaturePhotography #WildlifePortrait #PeacockDisplay #Unbothered https://t.co/M6ZuAyWDQQ
+#NaturePhotography #WildlifePortrait #PeacockDisplay #Unbothered

@@ -10,4 +10,4 @@ hashtags:
   - "sport"
 ---
 After every storm comes a rainbow, and after every struggle comes victory 🌧️➡️🌈 This stadium has witnessed countless dreams being born and shattered, but today nature reminds us that beauty follows every battle 🏆 Keep pushing forward! ✨ #DreamsComeTrue
-#stadium #rainbow #sport https://t.co/SUIhFZsLSz
+#stadium #rainbow #sport

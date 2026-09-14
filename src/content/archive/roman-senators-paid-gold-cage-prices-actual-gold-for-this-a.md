@@ -13,4 +13,4 @@ a live improviser running 200 phrase variants per night 🎵,
 each one unrepeatable,
 each one gone before the stylus could catch it in wax.🏛️
 The invoice never covered the performance.
-#Nature #Birdsong #NightingaleEffect https://t.co/0F2VapDMKb
+#Nature #Birdsong #NightingaleEffect

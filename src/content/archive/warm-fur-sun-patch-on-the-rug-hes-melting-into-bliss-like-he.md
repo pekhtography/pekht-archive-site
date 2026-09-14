@@ -12,4 +12,4 @@ hashtags:
 Warm fur, sun patch on the rug — 
 he's melting into bliss like he earned it. 😌🔥 
 This enlightened creature will headbutt you at 4am for breakfast.
-#CatsOfTwitter #SunbathingCats #CatEnlightenment #GoldenHour https://t.co/vnL2VyDefZ
+#CatsOfTwitter #SunbathingCats #CatEnlightenment #GoldenHour

@@ -14,4 +14,4 @@ hashtags:
   - "Square"
 ---
 They say the Kremlin keeps secrets in its bricks 🧱. Here, beneath the tower, crowds gather blending past echoes with present footsteps 🌿🕰️. A living history painted with flowers and faces. #WhispersBeneathTheClock
-#Spasskaya #Tower #Kremlin #Moscow #Clock #Historic #Square https://t.co/pOxIcByWoz
+#Spasskaya #Tower #Kremlin #Moscow #Clock #Historic #Square

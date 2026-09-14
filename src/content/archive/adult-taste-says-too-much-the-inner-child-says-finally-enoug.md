@@ -12,4 +12,4 @@ hashtags:
 Adult taste says “too much” 🎄
 the inner child says “finally enough” 🎅
 Happiness doesn’t scale down — it expands ✨
-#ChristmasDecor #HolidayMagic #FestiveVibes #JoyfulMoments https://t.co/MdjEW8q2zH
+#ChristmasDecor #HolidayMagic #FestiveVibes #JoyfulMoments

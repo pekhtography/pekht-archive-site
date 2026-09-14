@@ -11,4 +11,4 @@ hashtags:
   - "bloom"
   - "garden"
 ---
-Like delicate jewels, rhododendrons adorn the garden with grace #rhododendron #delicate #petals #grace #bloom #garden https://t.co/UqsCQUeae4
+Like delicate jewels, rhododendrons adorn the garden with grace #rhododendron #delicate #petals #grace #bloom #garden

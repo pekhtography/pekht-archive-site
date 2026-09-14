@@ -13,4 +13,4 @@ hashtags:
   - "Memories"
   - "nostalgia"
 ---
-The beauty of nature is captured in the colors of the fall #Autumn #fall #Leaves #nature #Lake #reflection #Memories #nostalgia https://t.co/Y5y87KMv3v
+The beauty of nature is captured in the colors of the fall #Autumn #fall #Leaves #nature #Lake #reflection #Memories #nostalgia

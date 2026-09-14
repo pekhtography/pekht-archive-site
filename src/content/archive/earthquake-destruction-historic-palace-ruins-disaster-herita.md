@@ -18,4 +18,4 @@ hashtags:
   - "Devastation"
   - "Asia"
 ---
-#Earthquake #Destruction #Historic #Palace #Ruins #Disaster #Heritage #Collapse #Tragedy #Cultural #Loss #Devastation #Asia https://t.co/keRqDzgArL
+#Earthquake #Destruction #Historic #Palace #Ruins #Disaster #Heritage #Collapse #Tragedy #Cultural #Loss #Devastation #Asia

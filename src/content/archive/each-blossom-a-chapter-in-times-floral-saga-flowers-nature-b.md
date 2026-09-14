@@ -18,4 +18,4 @@ hashtags:
   - "blossoms"
 ---
 Each blossom a chapter, in time's floral saga
-#flowers #nature #blooms #purple #bellflowers #garden #botany #petals #flora #wildflowers #spring #blossoms https://t.co/y20kUbNU1y
+#flowers #nature #blooms #purple #bellflowers #garden #botany #petals #flora #wildflowers #spring #blossoms

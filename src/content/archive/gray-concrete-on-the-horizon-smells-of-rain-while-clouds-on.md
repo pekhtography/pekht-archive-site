@@ -13,4 +13,4 @@ while clouds, on the contrary, taste hard, like set cement,
 and only the river stirs so this picture doesn't harden forever,
 as the boat drags a trail behind it—
 a thin thread tying them together🚤🌫️🥀
-#UrbanNature #tinyboat #Clouds https://t.co/pCy4X7uUbw
+#UrbanNature #tinyboat #Clouds

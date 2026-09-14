@@ -19,4 +19,4 @@ hashtags:
   - "peaceful"
 ---
 This bird just discovered the ultimate life hack: show up, look cute, get photographed by humans 📸 Influencer career launched without even trying 🚀✨ #InfluencerBird
-#bird #nature #wildlife #photography #branch #leaves #sky #perched #songbird #green #blue #peaceful https://t.co/C1Ox21kkeH
+#bird #nature #wildlife #photography #branch #leaves #sky #perched #songbird #green #blue #peaceful

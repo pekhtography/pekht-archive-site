@@ -10,4 +10,4 @@ hashtags:
   - "Beauty"
   - "garden"
 ---
-Actaea ‘Chocoholic’ is known for its striking dark foliage and white flowers, making it a unique presence in any garden #Garden #Creation #Nature #Beauty #garden https://t.co/qaWLWjJBL2
+Actaea ‘Chocoholic’ is known for its striking dark foliage and white flowers, making it a unique presence in any garden #Garden #Creation #Nature #Beauty #garden

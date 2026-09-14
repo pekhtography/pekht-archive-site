@@ -13,4 +13,4 @@ Bubbles tickle your gills. You charge the enemy.
 Then the glass hits. 
 Your kingdom is four feet long, and your Waterloo is transparent. 🐡 
 Absolute power. 🌊
-#Nature #AquariumLife #FishDrama #Shimmer https://t.co/guQFQv4LOg
+#Nature #AquariumLife #FishDrama #Shimmer

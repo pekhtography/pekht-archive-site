@@ -24,4 +24,4 @@ hashtags:
   - "View"
 ---
 Prayers? Sure. Selfies? Absolutely. The petunia-covered bridge’s new motto: Pose and Pray! 🤳🙏 #SaintlySelfies
-#River #Catamaran #Christian #Cathedral #City #scape #Cruise #Golden #Domes #Religious #Architecture #Flowers #Urban #Nature #Travel #Scenic #View https://t.co/iZSM8IKsX8
+#River #Catamaran #Christian #Cathedral #City #scape #Cruise #Golden #Domes #Religious #Architecture #Flowers #Urban #Nature #Travel #Scenic #View

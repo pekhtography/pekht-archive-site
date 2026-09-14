@@ -19,4 +19,4 @@ hashtags:
   - "yard"
 ---
 Plot twist: My apple tree is actually a wedding planner and just decorated for free 💒👰 Best. Decorator. Ever! 💕🌸 #NaturalWeddingDecor
-#petals #apple #blossom #fallen #spring #garden #romantic #nature #white #carpet #bloom #yard https://t.co/aNXgQg49qR
+#petals #apple #blossom #fallen #spring #garden #romantic #nature #white #carpet #bloom #yard

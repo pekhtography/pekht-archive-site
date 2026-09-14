@@ -15,4 +15,4 @@ hashtags:
   - "beautiful"
 ---
 Breaking news: Local rainbow refuses to follow weather app predictions, creates unauthorized beauty in corporate-sponsored skyline 🌈📱 Authorities report zero ability to monetize this incident 💸 #UnauthorizedBeauty
-#rainbow #storm #city #nature #sky #clouds #urban #beautiful https://t.co/XweVscvR9B
+#rainbow #storm #city #nature #sky #clouds #urban #beautiful

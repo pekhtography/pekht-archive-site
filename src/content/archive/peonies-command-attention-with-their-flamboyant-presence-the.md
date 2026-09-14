@@ -20,4 +20,4 @@ hashtags:
   - "Elegance"
 ---
 Peonies command attention with their flamboyant presence, the true stars of any garden
-#Peonies #Peony #Paeonia #Blooms #Garden #Nature #Flora #Petals #Vibrant #Blossoms #Botanical #Lush #Foliage #Elegance https://t.co/6unn8P2jVw
+#Peonies #Peony #Paeonia #Blooms #Garden #Nature #Flora #Petals #Vibrant #Blossoms #Botanical #Lush #Foliage #Elegance

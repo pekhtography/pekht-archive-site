@@ -15,4 +15,4 @@ hashtags:
   - "water"
 ---
 Concrete jungle where dreams are made of… and apparently where physics gets really show-offy with perfect mirror tricks 🎭 Who needs VR when reality already has cheat codes? 🎮 #RealityHacks
-#skyline #cityscape #reflection #skyscrapers #twilight #urban #architecture #water https://t.co/SO3ZXhoe8G
+#skyline #cityscape #reflection #skyscrapers #twilight #urban #architecture #water

@@ -18,4 +18,4 @@ hashtags:
   - "Journey"
 ---
 Millions of dramatic farewells happened here, but most were just 'see you next weekend' 🎭🚂 Peak emotional manipulation! #FakeGoodbyes
-#Station #Railway #Architecture #Travel #Transport #Building #Clock #Historic #Terminal #Platform #Journey https://t.co/rTa1coROpn
+#Station #Railway #Architecture #Travel #Transport #Building #Clock #Historic #Terminal #Platform #Journey

@@ -23,4 +23,4 @@ hashtags:
   - "Nature"
   - "Majesty"
 ---
-#OakTree #Strength #Grove #Sanctuary #Field #Vastness #DryGrass #Sustainability #Forest #Mystery #Acorn #Potential #Autumn #Metamorphosis #Habitat #Biodiversity #Nature #Majesty https://t.co/ghBSAQ6HcH
+#OakTree #Strength #Grove #Sanctuary #Field #Vastness #DryGrass #Sustainability #Forest #Mystery #Acorn #Potential #Autumn #Metamorphosis #Habitat #Biodiversity #Nature #Majesty

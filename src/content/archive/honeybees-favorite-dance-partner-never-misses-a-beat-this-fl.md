@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 Honeybees' favorite dance partner never misses a beat 🐝💃 This flower knows how to throw the sweetest garden parties #BeeFriendly
-#flowers #white #garden #blooming #petals #nature #spring #delicate #clusters #fragrant #beauty https://t.co/72EZShPPc7
+#flowers #white #garden #blooming #petals #nature #spring #delicate #clusters #fragrant #beauty

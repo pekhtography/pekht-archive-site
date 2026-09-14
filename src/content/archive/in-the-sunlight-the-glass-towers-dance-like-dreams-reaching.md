@@ -12,4 +12,4 @@ hashtags:
   - "dreams"
   - "architecture"
 ---
-"In the sunlight, the glass towers dance like dreams reaching the heavens #skyscrapers #aspiration #oldbuildings #history #sunlight #dreams #oldbuildings #architecture https://t.co/honKbYopzf
+"In the sunlight, the glass towers dance like dreams reaching the heavens #skyscrapers #aspiration #oldbuildings #history #sunlight #dreams #oldbuildings #architecture

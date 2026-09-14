@@ -13,4 +13,4 @@ Cold air in the lungs. Warm light on the face. 🌿
 Snow records every step — 
 sky watches like it knew you'd make it this far. ☀️ 
 Some places only exist when someone walks into them. ❄️ 
-#NatureHeals #CrossCountrySkiing #WinterLight #SolitudeFeels https://t.co/jHy4bMH3NS
+#NatureHeals #CrossCountrySkiing #WinterLight #SolitudeFeels

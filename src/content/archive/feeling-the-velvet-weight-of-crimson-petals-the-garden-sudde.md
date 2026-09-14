@@ -12,4 +12,4 @@ hashtags:
 Feeling the velvet weight of crimson petals, 
 the garden suddenly snaps into a crisp purple hum of electric allium sparks that taste like static. ⚡ 
 Botanical high fashion. 💃
-#NatureLovers #GardenInspiration #FloralDesign #JoyfulVibes https://t.co/ufbxVC9KXx
+#NatureLovers #GardenInspiration #FloralDesign #JoyfulVibes

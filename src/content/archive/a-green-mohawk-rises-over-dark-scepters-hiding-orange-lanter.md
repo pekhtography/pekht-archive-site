@@ -12,4 +12,4 @@ hashtags:
 A green mohawk rises over dark scepters, hiding orange lanterns. 
 This flower didn't choose the punk life; 
 the punk life chose it. 🎸🔥
-#Nature #Gardening #BotanicalOddities #Stately https://t.co/xsPWOZph4X
+#Nature #Gardening #BotanicalOddities #Stately

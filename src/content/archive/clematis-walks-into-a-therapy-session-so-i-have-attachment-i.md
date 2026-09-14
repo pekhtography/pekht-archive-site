@@ -19,4 +19,4 @@ hashtags:
   - "botanical"
 ---
 Clematis walks into a therapy session: "So I have attachment issues…" 🛋️ Therapist: "That's not attachment, that's full-scale invasion!" 😂🌿 #FlowerTherapyGoneWrong
-#clematis #flower #purple #vine #petals #climbing #garden #bloom #perennial #ornamental #vibrant #botanical https://t.co/ohIWaiHYs8
+#clematis #flower #purple #vine #petals #climbing #garden #bloom #perennial #ornamental #vibrant #botanical

@@ -13,4 +13,4 @@ The tower borrowed a Stalinist silhouette. 🏙️
 Taller. More eternal. A 1950s ghost in fresh concrete. 
 Now a bank logo glows cyan at its ankle — open till 9. ⚡ 
 History, with office hours.
-#Architecture #UrbanHistory #CityAtDusk #TimelessCity https://t.co/IL6O9CFc2P
+#Architecture #UrbanHistory #CityAtDusk #TimelessCity

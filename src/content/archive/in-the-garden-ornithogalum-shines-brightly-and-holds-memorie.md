@@ -10,4 +10,4 @@ hashtags:
   - "garden"
   - "memories"
 ---
-In the garden, Ornithogalum shines brightly and holds memories of spring #Ornithogalum #starry #elegance #garden #memories https://t.co/AX1QnHelVY
+In the garden, Ornithogalum shines brightly and holds memories of spring #Ornithogalum #starry #elegance #garden #memories

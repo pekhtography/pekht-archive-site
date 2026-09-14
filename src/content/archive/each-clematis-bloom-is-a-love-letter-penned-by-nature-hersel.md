@@ -19,4 +19,4 @@ hashtags:
   - "charm"
 ---
 Each clematis bloom is a love letter penned by nature herself
-#Clematis #flower #kiss #breeze #love #nature #dreams #garden #star #perfume #petals #botanical #charm https://t.co/KciM7eHxfh
+#Clematis #flower #kiss #breeze #love #nature #dreams #garden #star #perfume #petals #botanical #charm

@@ -12,4 +12,4 @@ hashtags:
 Softest pink up front. 
 Darkest red bleeding into the shadows behind. 🌸 
 Different truths, growing from the same soil.
-#GardenLife #Peonies #NatureMoments #FlowerPhotography https://t.co/4GS023UW32
+#GardenLife #Peonies #NatureMoments #FlowerPhotography

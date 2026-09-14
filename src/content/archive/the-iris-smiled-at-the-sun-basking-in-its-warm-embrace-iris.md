@@ -18,4 +18,4 @@ hashtags:
   - "serenity"
 ---
 The iris smiled at the sun, basking in its warm embrace 
-#iris #flower #purple #nature #bloom #petals #garden #dewdrops #spring #beauty #grace #serenity https://t.co/hSOlnuzWsE
+#iris #flower #purple #nature #bloom #petals #garden #dewdrops #spring #beauty #grace #serenity

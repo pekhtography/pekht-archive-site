@@ -12,4 +12,4 @@ hashtags:
 Tight purple fists, then — 
 one petal cracks open like a secret that got too heavy to keep. 🌸 
 The whole bush exhales. 💜
-#Blooming #RhododendronSeason #NatureUnfiltered #PetalDrop https://t.co/uUmqfHaNqO
+#Blooming #RhododendronSeason #NatureUnfiltered #PetalDrop

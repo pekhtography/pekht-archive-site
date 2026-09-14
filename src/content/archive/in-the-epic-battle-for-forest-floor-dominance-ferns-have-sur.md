@@ -15,4 +15,4 @@ hashtags:
   - "fronds"
 ---
 In the epic battle for forest floor dominance, ferns have survived mass extinctions and dinosaur stampedes, only to face their greatest challenge yet: being mistaken for plastic plants at garden centers
-#fern #woodland #green #nature #forest #plant #leaves #undergrowth #fronds https://t.co/gXCbxByBNC
+#fern #woodland #green #nature #forest #plant #leaves #undergrowth #fronds

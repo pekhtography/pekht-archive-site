@@ -12,4 +12,4 @@ hashtags:
 Warm evening light glazes glass towers ☀️ 
 A painted bike stencil disappears under muddy sneakers strolling at zero miles per hour. 
 Civilization’s ultimate test passed. 👟🌆 
-#CityLife #UrbanDesign #BikeLaneWalkers #MainCharacterEnergy https://t.co/B25sNoid8K
+#CityLife #UrbanDesign #BikeLaneWalkers #MainCharacterEnergy

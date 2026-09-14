@@ -14,4 +14,4 @@ Suddenly this spinning cathedral makes PERFECT sense—
 we built rockets to escape Earth, 
 but our grandfathers built THIS to make Earth worth staying for. 
 Checkmate, Elon 🍷🚀 
-#Christmas #WinterMagic #ChristmasMarket #NostalgicVibes https://t.co/3PAAdgfiaD
+#Christmas #WinterMagic #ChristmasMarket #NostalgicVibes

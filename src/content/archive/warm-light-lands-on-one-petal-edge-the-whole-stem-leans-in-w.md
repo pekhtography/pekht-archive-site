@@ -13,4 +13,4 @@ Warm light lands on one petal edge 🌅 —
 the whole stem leans in without thinking. 
 Magenta crowd behind it, cool and shadowed. 
 Some decisions the body makes first. 🌿🔥
-#GoldenHour #NaturePhilosophy #WildGarden #FlowerMoment https://t.co/mfyvJGP192
+#GoldenHour #NaturePhilosophy #WildGarden #FlowerMoment

@@ -25,4 +25,4 @@ hashtags:
   - "Shade"
   - "Comfort"
 ---
-#Pendula #Graceful #Serenity #Peace #Garden #Nature #Branches #Growth #Dancing #Joy #Season #Change #Beauty #Wonder #Harmony #Unity #Bouncer #Fun #Shade #Comfort https://t.co/rnPhebZVCO
+#Pendula #Graceful #Serenity #Peace #Garden #Nature #Branches #Growth #Dancing #Joy #Season #Change #Beauty #Wonder #Harmony #Unity #Bouncer #Fun #Shade #Comfort

@@ -12,4 +12,4 @@ hashtags:
 That quiet promise you made to yourself, folded tight.
 It’s okay to keep it close a little longer.
 The world can wait. 🌱✨
-#NewYear #Mindfulness #Tulip #Transformation https://t.co/OStSLAmHMK
+#NewYear #Mindfulness #Tulip #Transformation

@@ -18,4 +18,4 @@ hashtags:
   - "outdoors"
 ---
 The forest wears rowanberries like jewels, each one a glowing ember of autumn's fire
-#rowanberries #nature #autumn #berries #wildlife #forest #orange #fruits #trees #botany #season #outdoors https://t.co/ANmRXKshL1
+#rowanberries #nature #autumn #berries #wildlife #forest #orange #fruits #trees #botany #season #outdoors

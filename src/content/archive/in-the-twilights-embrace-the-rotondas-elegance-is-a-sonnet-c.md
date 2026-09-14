@@ -18,4 +18,4 @@ hashtags:
   - "Charm"
 ---
 In the twilight's embrace, the rotonda's elegance is a sonnet carved in stone, a silent serenade to the stars
-#Rotonda #Park #Sunset #Architecture #Evening #Beauty #Tranquility #Nature #Elegance #Serenity #Twilight #Charm https://t.co/sYkr6VFhHR
+#Rotonda #Park #Sunset #Architecture #Evening #Beauty #Tranquility #Nature #Elegance #Serenity #Twilight #Charm

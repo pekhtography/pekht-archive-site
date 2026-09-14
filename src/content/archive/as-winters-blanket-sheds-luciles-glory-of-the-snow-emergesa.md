@@ -25,4 +25,4 @@ hashtags:
   - "blanket"
 ---
 As winter's blanket sheds, Lucile's Glory-of-the-Snow emerges—a cerulean symphony for the senses
-#Lucile #Glory #Snow #Enchanting #Magic #Blue #Sky #Petals #Blossom #Spring #Renewal #delicate #nature #bloom #symphony #melody #azure #winter #blanket https://t.co/aIha5lcCDd
+#Lucile #Glory #Snow #Enchanting #Magic #Blue #Sky #Petals #Blossom #Spring #Renewal #delicate #nature #bloom #symphony #melody #azure #winter #blanket

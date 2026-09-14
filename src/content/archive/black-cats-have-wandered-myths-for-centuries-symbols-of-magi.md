@@ -18,4 +18,4 @@ hashtags:
   - "night"
 ---
 Black cats have wandered myths for centuries 🌑🖤 — symbols of magic, luck, or stealth. Look deep in those eyes, and you might find a secret older than time itself 🌌👁️. #LegendInTheDark
-#cat #blackcat #eyes #nature #wild #stealth #mystery #animal #pet #hidden #night https://t.co/jmOBmXzGzj
+#cat #blackcat #eyes #nature #wild #stealth #mystery #animal #pet #hidden #night

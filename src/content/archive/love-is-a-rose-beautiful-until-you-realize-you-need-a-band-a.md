@@ -24,4 +24,4 @@ hashtags:
   - "surprise"
 ---
 Love is a rose – beautiful until you realize you need a band-aid for those pesky thorns!
-#Love #Heart #Rose #Beauty #BandAid #Healing #Thorns #Pain #Joy #Garden #Nature #romance #growth #neglect #passion #emotion #story #surprise https://t.co/90Vn7J39RG
+#Love #Heart #Rose #Beauty #BandAid #Healing #Thorns #Pain #Joy #Garden #Nature #romance #growth #neglect #passion #emotion #story #surprise

@@ -19,4 +19,4 @@ hashtags:
   - "shrub"
 ---
 Shakespeare rewritten: "To bloom spectacularly or to bloom even more spectacularly" - my rhododendrons chose chaos and beauty 🎭💜 #FlowerDrama
-#rhododendron #flowers #blooming #purple #coral #garden #spring #nature #petals #botanical #colorful #shrub https://t.co/fUelHS3Oeg
+#rhododendron #flowers #blooming #purple #coral #garden #spring #nature #petals #botanical #colorful #shrub

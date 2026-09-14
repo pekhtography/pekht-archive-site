@@ -16,4 +16,4 @@ hashtags:
   - "classic"
 ---
 Sometimes the best journeys start with two wheels and a dream 🛵✨ Life's too short for traffic jams when you can weave through stories instead 🌟 #StoryOnWheels
-#street #green #vintage #city #urban #architecture #travel #style #classic https://t.co/GJQYm0iHt2
+#street #green #vintage #city #urban #architecture #travel #style #classic

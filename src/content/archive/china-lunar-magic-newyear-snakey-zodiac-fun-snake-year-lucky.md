@@ -24,4 +24,4 @@ hashtags:
   - "Greetings"
   - "Lovely"
 ---
-#China #Lunar #Magic #NewYear #Snakey #Zodiac #Fun #Snake #Year #Lucky #Happy #Joyful #Chinese #Culture #Wishes #Prosperity #Beautiful #Greetings #Lovely https://t.co/Gn3gyExPRf
+#China #Lunar #Magic #NewYear #Snakey #Zodiac #Fun #Snake #Year #Lucky #Happy #Joyful #Chinese #Culture #Wishes #Prosperity #Beautiful #Greetings #Lovely

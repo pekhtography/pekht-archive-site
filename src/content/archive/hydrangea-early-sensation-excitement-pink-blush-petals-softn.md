@@ -21,4 +21,4 @@ hashtags:
   - "Flourish"
   - "Beauty"
 ---
-#Hydrangea #Early #Sensation #Excitement #Pink #Blush #Petals #Softness #Green #Life #Leaves #Embrace #Garden #Bloom #Flourish #Beauty https://t.co/ljrCPqM0Xl
+#Hydrangea #Early #Sensation #Excitement #Pink #Blush #Petals #Softness #Green #Life #Leaves #Embrace #Garden #Bloom #Flourish #Beauty

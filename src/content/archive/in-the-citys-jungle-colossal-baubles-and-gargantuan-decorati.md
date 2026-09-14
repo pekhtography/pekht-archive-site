@@ -20,4 +20,4 @@ hashtags:
   - "Snowflakes"
 ---
 In the city’s jungle, colossal baubles and gargantuan decorations wink down at us, as if to say, 'Dream big, but maybe don’t wear that sequined sweater!'
-#Giant #Colossal #Christmas #City #Urban #Celebration #Festivity #Winter #Magic #Candy #Sweetness #Laughter #Joy #Snowflakes https://t.co/wrnY3CZ46w
+#Giant #Colossal #Christmas #City #Urban #Celebration #Festivity #Winter #Magic #Candy #Sweetness #Laughter #Joy #Snowflakes

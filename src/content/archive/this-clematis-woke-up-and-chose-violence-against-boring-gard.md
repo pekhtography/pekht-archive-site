@@ -19,4 +19,4 @@ hashtags:
   - "blossom"
 ---
 This clematis woke up and chose violence… against boring gardens 💜⚔️ Aesthetic warfare in progress #AestheticWarfare
-#clematis #flower #purple #garden #bloom #nature #petals #climbing #vine #beautiful #spring #blossom https://t.co/OuPEEosn6Y
+#clematis #flower #purple #garden #bloom #nature #petals #climbing #vine #beautiful #spring #blossom

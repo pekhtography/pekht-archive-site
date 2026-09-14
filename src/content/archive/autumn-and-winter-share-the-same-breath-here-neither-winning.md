@@ -12,4 +12,4 @@ Autumn and winter share the same breath here—
 neither winning, neither leaving, 
 just two truths standing in emerald-shining water holding hands. 
 Someone tell them the water's cold? 🍁❄️🤝 
-#NaturePhotography #ForestStream #Peace https://t.co/pQqr0UNbrz
+#NaturePhotography #ForestStream #Peace

@@ -13,4 +13,4 @@ Freckles, not scars.
 Sun kissed, not spoiled. 
 Petals paint rebellion against glossy airbrushes. 
 Life bleeds pigment. 🍂🌹
-#ImperfectBeauty #WabiSabi #FreckledRose #GrittyBloom https://t.co/hnCTfPqHSo
+#ImperfectBeauty #WabiSabi #FreckledRose #GrittyBloom

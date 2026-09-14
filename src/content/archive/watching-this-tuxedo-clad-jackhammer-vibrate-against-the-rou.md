@@ -11,4 +11,4 @@ hashtags:
 ---
 Watching this tuxedo-clad jackhammer vibrate against the rough, mossy pine makes my morning coffee feel entirely too quiet and civilized. 
 Head-banging breakfast. ☕️🔨
-#Nature #Birdwatching #MorningRoutine #Persistence https://t.co/mBoeZUFpAe
+#Nature #Birdwatching #MorningRoutine #Persistence

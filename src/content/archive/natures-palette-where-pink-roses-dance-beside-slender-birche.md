@@ -9,4 +9,4 @@ hashtags:
   - "Birch"
   - "Garden"
 ---
-Nature's palette, where pink roses dance beside slender birches #Roses #Pink #Birch #Garden https://t.co/9HqLPtT1p4
+Nature's palette, where pink roses dance beside slender birches #Roses #Pink #Birch #Garden

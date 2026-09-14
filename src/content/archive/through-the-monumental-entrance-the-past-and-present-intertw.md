@@ -16,4 +16,4 @@ hashtags:
   - "Landmark"
 ---
 Through the monumental entrance, the past and present intertwine in a dance of shadows
-#Arch #Entrance #Gate #Sunset #Architecture #Monument #History #Crowd #Evening #Landmark https://t.co/17ClFw1aMn
+#Arch #Entrance #Gate #Sunset #Architecture #Monument #History #Crowd #Evening #Landmark

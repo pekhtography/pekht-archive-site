@@ -21,6 +21,7 @@ const posts = JSON.parse(
 ) as SourcePost[];
 
 const hashtagRegex = /(^|\s)#([\p{L}\p{N}_]+)/gu;
+const tcoRegex = /https?:\/\/t\.co\/[A-Za-z0-9]+/g;
 
 function extractHashtags(text: string): string[] {
   return [
@@ -28,6 +29,15 @@ function extractHashtags(text: string): string[] {
       [...text.matchAll(hashtagRegex)].map((match) => match[2]),
     ),
   ];
+}
+
+function cleanBody(text: string): string {
+  return text
+    .replace(tcoRegex, "")
+    .split(/\r?\n/)
+    .map((line) => line.replace(/[ \t]+/g, " ").trim())
+    .join("\n")
+    .trim();
 }
 
 function makeTitle(text: string): string {
@@ -87,19 +97,18 @@ console.log(`Source: ${sourcePath}`);
 console.log(`Posts:  ${posts.length}`);
 console.log("");
 
+let totalImages = 0;
+
 for (const [index, post] of posts.entries()) {
   if (!post.id || !post.created_at || !post.text) {
     throw new Error(`Invalid post at index ${index}: missing id/date/text`);
   }
 
-  if (!post.media?.length || post.media[0]?.type !== "photo") {
+  if (
+    !post.media?.length ||
+    post.media.some((media) => media.type !== "photo")
+  ) {
     throw new Error(`Invalid media for X ID ${post.id}`);
-  }
-
-  const imageUrl = post.media[0].url;
-
-  if (!imageUrl) {
-    throw new Error(`Missing image URL for X ID ${post.id}`);
   }
 
   const baseSlug = makeBaseSlug(post.text);
@@ -120,6 +129,7 @@ for (const [index, post] of posts.entries()) {
 
   usedSlugs.add(slug);
 
+  const body = cleanBody(post.text);
   const title = makeTitle(post.text);
 
   if (!title) {
@@ -127,23 +137,50 @@ for (const [index, post] of posts.entries()) {
   }
 
   const hashtags = extractHashtags(post.text);
-  const extension = getImageExtension(imageUrl);
-  const imageFilename = `${slug}${extension}`;
-  const imagePath = path.join(imageDir, imageFilename);
-  const markdownPath = path.join(archiveDir, `${slug}.md`);
+  const imagePaths: string[] = [];
 
   console.log(`[${index + 1}/${posts.length}] ${slug}`);
 
-  const response = await fetch(imageUrl);
+  for (const [mediaIndex, media] of post.media.entries()) {
+    if (!media.url) {
+      throw new Error(`Missing image URL for X ID ${post.id}`);
+    }
 
-  if (!response.ok) {
-    throw new Error(
-      `Image download failed for ${post.id}: ${response.status} ${response.statusText}`,
-    );
+    const extension = getImageExtension(media.url);
+
+    const imageFilename =
+      post.media.length === 1
+        ? `${slug}${extension}`
+        : `${slug}-${mediaIndex + 1}${extension}`;
+
+    const imagePath = path.join(imageDir, imageFilename);
+
+    const response = await fetch(media.url);
+
+    if (!response.ok) {
+      throw new Error(
+        `Image download failed for ${post.id}: ${response.status} ${response.statusText}`,
+      );
+    }
+
+    const imageBuffer = Buffer.from(await response.arrayBuffer());
+    await fs.writeFile(imagePath, imageBuffer);
+
+    imagePaths.push(`/images/archive/${imageFilename}`);
+    totalImages++;
   }
 
-  const imageBuffer = Buffer.from(await response.arrayBuffer());
-  await fs.writeFile(imagePath, imageBuffer);
+  const firstImage = imagePaths[0];
+
+  const galleryYaml =
+    imagePaths.length > 1
+      ? [
+          "gallery:",
+          ...imagePaths.slice(1).map(
+            (image) => `  - ${yamlString(image)}`,
+          ),
+        ].join("\n")
+      : "gallery: []";
 
   const hashtagYaml =
     hashtags.length > 0
@@ -155,16 +192,19 @@ for (const [index, post] of posts.entries()) {
     `title: ${yamlString(title)}`,
     `x_id: ${yamlString(post.id)}`,
     `x_created_at: ${yamlString(post.created_at)}`,
-    `image: ${yamlString(`/images/archive/${imageFilename}`)}`,
+    `image: ${yamlString(firstImage)}`,
+    galleryYaml,
     "hashtags:",
     hashtagYaml,
     "---",
     "",
   ].join("\n");
 
+  const markdownPath = path.join(archiveDir, `${slug}.md`);
+
   await fs.writeFile(
     markdownPath,
-    frontmatter + post.text,
+    frontmatter + body,
     "utf8",
   );
 }
@@ -172,5 +212,5 @@ for (const [index, post] of posts.entries()) {
 console.log("");
 console.log("=== IMPORT COMPLETE ===");
 console.log(`Markdown files: ${posts.length}`);
-console.log(`Images:         ${posts.length}`);
+console.log(`Images:         ${totalImages}`);
 console.log("");

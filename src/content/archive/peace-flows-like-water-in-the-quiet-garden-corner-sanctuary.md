@@ -13,4 +13,4 @@ hashtags:
   - "peace"
   - "harmony"
 ---
-Peace flows like water in the quiet garden #corner #sanctuary #pond #serenity #calm #tranquility #peace #harmony https://t.co/nLgVVXUBc1
+Peace flows like water in the quiet garden #corner #sanctuary #pond #serenity #calm #tranquility #peace #harmony

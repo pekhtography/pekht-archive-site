@@ -19,4 +19,4 @@ hashtags:
   - "elegance"
 ---
 Every door hides a story, but some look like they were carved to hold centuries of secrets. 🚪✨🌾 #WhispersOfArchitecture
-#architecture #design #history #art #doors #heritage #classic #decor #details #vintage #interior #elegance https://t.co/Umg08XTb4P
+#architecture #design #history #art #doors #heritage #classic #decor #details #vintage #interior #elegance

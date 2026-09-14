@@ -20,4 +20,4 @@ hashtags:
   - "Blossom"
 ---
 ✨🌸🍃 Warning: horse chestnut flowers may cause sudden urges to stop, stare, breathe deeply, and forget your to-do list 🌼🌿😵‍💫📋 #FloralDistraction #BloomingMoments
-#HorseChestnut #Tree #Flowers #Nature #Leaves #Spring #Bloom #Green #Forest #Botany #Plant #Blossom https://t.co/1oui0poBTz
+#HorseChestnut #Tree #Flowers #Nature #Leaves #Spring #Bloom #Green #Forest #Botany #Plant #Blossom

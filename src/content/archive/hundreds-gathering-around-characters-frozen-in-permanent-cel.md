@@ -12,4 +12,4 @@ hashtags:
 Hundreds gathering around characters frozen in permanent celebration 🎄 
 phones raised like offerings to the algorithm gods 💡 
 This is how we remember joy now — through lit screens under string lights ✨ 
-#ChristmasMarket #HolidayLights #FestiveCrowd #MagicalMoments https://t.co/avgSQqdKNt
+#ChristmasMarket #HolidayLights #FestiveCrowd #MagicalMoments

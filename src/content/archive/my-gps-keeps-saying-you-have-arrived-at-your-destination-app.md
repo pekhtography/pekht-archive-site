@@ -19,4 +19,4 @@ hashtags:
   - "tourists"
 ---
 My GPS keeps saying 'You have arrived at your destination' - apparently I'm destined for greatness! 📍🏰👑 #DestinedForGreatness
-#kremlin #moscow #russia #redsquare #architecture #dome #tower #fortress #historic #landmark #cobblestone #tourists https://t.co/Fq9EOxU1Rw
+#kremlin #moscow #russia #redsquare #architecture #dome #tower #fortress #historic #landmark #cobblestone #tourists

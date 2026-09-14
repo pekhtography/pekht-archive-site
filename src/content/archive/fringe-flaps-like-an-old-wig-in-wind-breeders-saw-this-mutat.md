@@ -13,4 +13,4 @@ Fringe flaps like an old wig in wind.
 Breeders saw this mutation and said «Leave it, it’s funny.» 
 We did the same with chihuahuas and these tulips. 
 Nature just stopped arguing. 🤷🐕🌷
-#NatureIsShowOff #WeirdPlantParent #ParrotTulipMadness #FloralExplosion https://t.co/UMZhjYaOWb
+#NatureIsShowOff #WeirdPlantParent #ParrotTulipMadness #FloralExplosion

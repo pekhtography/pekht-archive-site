@@ -8,4 +8,4 @@ hashtags:
   - "MoscowNights"
   - "FairytaleVibes"
 ---
-That moment when a fortress of history melts into a cup of warm, sparkling light... and you're just a happy shadow, drinking it all in. ✨❄️🇷🇺 #WinterMagic #MoscowNights #FairytaleVibes https://t.co/2xXZPevh6N
+That moment when a fortress of history melts into a cup of warm, sparkling light... and you're just a happy shadow, drinking it all in. ✨❄️🇷🇺 #WinterMagic #MoscowNights #FairytaleVibes

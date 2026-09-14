@@ -13,4 +13,4 @@ Sunset caught between steel and petal 🌆 —
 the steel reflected it, the petal absorbed it whole. 
 One holds light. 
 The other becomes it. 🌼
-#GoldenHour #NatureVsCity #Sunset #FlowerPhotography https://t.co/b4TYYorNLD
+#GoldenHour #NatureVsCity #Sunset #FlowerPhotography

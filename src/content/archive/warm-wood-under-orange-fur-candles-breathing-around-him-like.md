@@ -13,4 +13,4 @@ Warm wood under orange fur. 🕯️
 Candles breathing around him like the night hired backup dancers just for this moment. 
 Presence doesn't explain itself. 
 It just glows. 🧡
-#CatsOfTwitter #OrangeCat #CandlelightVibes #UnbotheredEnergy https://t.co/haCIGHNNiB
+#CatsOfTwitter #OrangeCat #CandlelightVibes #UnbotheredEnergy

@@ -12,4 +12,4 @@ hashtags:
   - "beauty"
   - "garden"
 ---
-The fragrance of flowers is not as rare as the elegance of the pink rose #elegance #grace #rose #mystery #fragrance #beauty #garden https://t.co/jesKbsOUbD
+The fragrance of flowers is not as rare as the elegance of the pink rose #elegance #grace #rose #mystery #fragrance #beauty #garden

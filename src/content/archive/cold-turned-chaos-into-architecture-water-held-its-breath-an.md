@@ -13,4 +13,4 @@ Cold turned chaos into architecture.
 Water held its breath and became something you'd stop to photograph. 
 Tomorrow it's gone. 
 Today it's art. 💎❄️ 
-#Nature #MacroPhotography #Icicle #Fragile https://t.co/oQGXD2nqeX
+#Nature #MacroPhotography #Icicle #Fragile

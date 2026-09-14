@@ -14,4 +14,4 @@ and spat back twice as many.
 Between the 1890s cornice and the avocado neon, 
 the city forgot which century it was running. 
 Same. 🌙 
-#CityAtNight #WinterStreets #GoldenReflections #WarmAndWet https://t.co/ds52EasvTE
+#CityAtNight #WinterStreets #GoldenReflections #WarmAndWet

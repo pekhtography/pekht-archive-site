@@ -18,4 +18,4 @@ hashtags:
   - "spring"
 ---
 A flycatcher jokes, 'Garden shed, you could use some paint, but you're still my favorite spot!' 
-#flycatcher #garden #nature #outdoors #wildlife #feathers #perch #green #wooden #rustic #peaceful #spring https://t.co/d6DTtePHrG
+#flycatcher #garden #nature #outdoors #wildlife #feathers #perch #green #wooden #rustic #peaceful #spring

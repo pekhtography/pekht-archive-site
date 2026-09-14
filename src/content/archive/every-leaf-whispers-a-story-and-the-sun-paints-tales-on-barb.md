@@ -22,4 +22,4 @@ hashtags:
   - "shrub"
 ---
 Every leaf whispers a story 🍂, and the sun paints tales on barberry’s delicate blooms🌞. Nature’s poetry is all around us✨. #NatureSpeaksThroughLeaves
-#barberry #branch #leaves #flowers #nature #garden #sunlight #bokeh #green #botany #plant #blooming #spring #landscaping #shrub https://t.co/m0akHErNSc
+#barberry #branch #leaves #flowers #nature #garden #sunlight #bokeh #green #botany #plant #blooming #spring #landscaping #shrub

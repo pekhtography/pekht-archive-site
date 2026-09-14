@@ -11,4 +11,4 @@ hashtags:
   - "purity"
   - "freshness"
 ---
-In the garden, the white tulip sparkles like a pearl among the plants #white #tulip #garden #sparkle #purity #freshness https://t.co/rKHRifq03F
+In the garden, the white tulip sparkles like a pearl among the plants #white #tulip #garden #sparkle #purity #freshness

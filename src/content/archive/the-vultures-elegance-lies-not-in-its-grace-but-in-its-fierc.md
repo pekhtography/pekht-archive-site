@@ -12,4 +12,4 @@ hashtags:
   - "Soar"
   - "Nature"
 ---
-The vulture's elegance lies not in its grace, but in its fierce presence #Vulture #Elegance #Grace #Presence #World #Soar #Nature https://t.co/wkQWrrqiXa
+The vulture's elegance lies not in its grace, but in its fierce presence #Vulture #Elegance #Grace #Presence #World #Soar #Nature

@@ -16,4 +16,4 @@ hashtags:
   - "Travel"
 ---
 Step into a world of wonder and architecture, but don't forget to check your phone's battery first
-#Pavilion #Architecture #Night #Beautiful #History #Culture #Heritage #Landmark #Exhibition #Travel https://t.co/M8bJQ1kkxw
+#Pavilion #Architecture #Night #Beautiful #History #Culture #Heritage #Landmark #Exhibition #Travel

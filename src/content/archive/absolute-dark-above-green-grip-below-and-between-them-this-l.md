@@ -13,4 +13,4 @@ Absolute dark above, green grip below —
 and between them 🌿 
 this lavender cluster, beaded and lit, hovering. 
 The same blue humans have been stopping for 💧 since cave walls.
-#MacroPhotography #PlantLife #RainyMoodVibes #FloralDetails https://t.co/c2FtuvY8NF
+#MacroPhotography #PlantLife #RainyMoodVibes #FloralDetails

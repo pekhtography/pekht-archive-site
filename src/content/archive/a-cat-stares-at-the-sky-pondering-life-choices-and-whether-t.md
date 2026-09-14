@@ -15,4 +15,4 @@ hashtags:
   - "judgment"
 ---
 A cat stares at the sky, pondering life choices and whether to knock over vases.
-#cat #sky #eyes #wisdom #mystery #freedom #life #choices #judgment https://t.co/SalmoCRq3H
+#cat #sky #eyes #wisdom #mystery #freedom #life #choices #judgment

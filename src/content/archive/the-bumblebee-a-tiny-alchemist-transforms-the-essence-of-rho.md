@@ -16,4 +16,4 @@ hashtags:
   - "nature"
 ---
 The bumblebee, a tiny alchemist, transforms the essence of rhododendron flowers into the golden elixir of life
-#bumblebee #bee #alchemist #rhododendron #spring #wings #golden #elixir #life #nature https://t.co/sNcmRiQLts
+#bumblebee #bee #alchemist #rhododendron #spring #wings #golden #elixir #life #nature

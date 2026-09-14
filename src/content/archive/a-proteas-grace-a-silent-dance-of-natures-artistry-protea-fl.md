@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 A protea's grace, a silent dance of nature's artistry
-#Protea #Flower #Nature #Bloom #Botanical #Garden #White #Elegant #Petals #Exotic #Floral #Beauty https://t.co/pk6QwjX1aC
+#Protea #Flower #Nature #Bloom #Botanical #Garden #White #Elegant #Petals #Exotic #Floral #Beauty

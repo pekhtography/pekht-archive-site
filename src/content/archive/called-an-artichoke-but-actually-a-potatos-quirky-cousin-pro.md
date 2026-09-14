@@ -21,4 +21,4 @@ hashtags:
   - "Flora"
 ---
 Called an artichoke but actually a potato’s quirky cousin — proof that family reunions can be deliciously confusing
-#Jerusalem #Artichoke #Sunchoke #Yellow #Flower #Power #Wildflower #Nature #Bloom #Plant #Garden #Sunflower #Family #Botany #Flora https://t.co/5vXU4p4hDP
+#Jerusalem #Artichoke #Sunchoke #Yellow #Flower #Power #Wildflower #Nature #Bloom #Plant #Garden #Sunflower #Family #Botany #Flora

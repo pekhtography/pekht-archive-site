@@ -15,4 +15,4 @@ the weight of a petal that has nowhere left to fold 🌸 —
 someone once counted these at flower shows, 
 wrote the number in a ledger, 
 went home satisfied 🌿…
-#RoseGarden #CottageCore #OldGardenRoses #PetalOverload https://t.co/WzdYUIUDo0
+#RoseGarden #CottageCore #OldGardenRoses #PetalOverload

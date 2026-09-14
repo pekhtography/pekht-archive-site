@@ -6,4 +6,4 @@ image: "/images/archive/meanwhile-modern-buildings-are-having-midlife-crises-at-
 hashtags:
   []
 ---
-Meanwhile, modern buildings are having midlife crises at 20 years old 🏢 This architectural diva has been serving looks since before your great-great-grandmother was born, and she's STILL the main character on this street 💅 Some of us just age better than others, darling ✨ https://t.co/OTCZjWsSUj
+Meanwhile, modern buildings are having midlife crises at 20 years old 🏢 This architectural diva has been serving looks since before your great-great-grandmother was born, and she's STILL the main character on this street 💅 Some of us just age better than others, darling ✨

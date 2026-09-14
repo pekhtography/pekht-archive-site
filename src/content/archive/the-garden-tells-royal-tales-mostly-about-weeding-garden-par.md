@@ -20,4 +20,4 @@ hashtags:
   - "journey"
 ---
 The garden tells royal tales, mostly about weeding!
-#garden #paradise #tranquility #calm #beauty #charm #art #expression #landscape #view #nature #wildness #walk #journey https://t.co/SNWoBMewz8
+#garden #paradise #tranquility #calm #beauty #charm #art #expression #landscape #view #nature #wildness #walk #journey

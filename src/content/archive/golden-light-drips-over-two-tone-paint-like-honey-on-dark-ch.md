@@ -11,4 +11,4 @@ hashtags:
 ---
 Golden light drips over two-tone paint like honey on dark chocolate, turning this parking spot into a high-calorie feast for the hungry eyes of peasants. 
 Forbidden snack. 🍫✨
-#LuxuryLifestyle #MaybachMusic #StreetCathedral #Gilded https://t.co/d1UsNKyfA4
+#LuxuryLifestyle #MaybachMusic #StreetCathedral #Gilded

@@ -19,4 +19,4 @@ hashtags:
   - "Blossom"
 ---
 Stop and smell the roses 🌹👃💛. Savoring life's little joys. #SimplePleasures
-#Rose #Flowers #Pink #Garden #Nature #Floral #Blooming #Beautiful #Gardening #Lovely #Petals #Blossom https://t.co/5VXno3E1D5
+#Rose #Flowers #Pink #Garden #Nature #Floral #Blooming #Beautiful #Gardening #Lovely #Petals #Blossom

@@ -12,4 +12,4 @@ hashtags:
 Fingertips freeze while eyes drink red light. 
 The 2026 Red Horse has arrived in neon wireframe, 
 burning through frost without melting a single snowflake. ❄️🐎🔴 
-#Nature #Cyberpunk #WinterAesthetic #RedHorse2026 https://t.co/rM0MbTOGGr
+#Nature #Cyberpunk #WinterAesthetic #RedHorse2026

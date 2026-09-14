@@ -19,4 +19,4 @@ hashtags:
   - "Aspiration"
   - "Stories"
 ---
-#Central #Pavilion #Gathering #Columns #Structure #Night #Mystery #Light #Illumination #Culture #Heritage #Dreams #Aspiration #Stories https://t.co/3xlMuFOCiv
+#Central #Pavilion #Gathering #Columns #Structure #Night #Mystery #Light #Illumination #Culture #Heritage #Dreams #Aspiration #Stories

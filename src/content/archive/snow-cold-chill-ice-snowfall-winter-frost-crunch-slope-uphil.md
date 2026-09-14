@@ -41,4 +41,4 @@ hashtags:
   - "path"
   - "trail"
 ---
-#snow #cold #chill #ice #snowfall #winter #frost #crunch #slope #uphill #mountain #glistens #glints #pale #danger #thrill #nature #wildlife #life #vitality #journey #wander #footprint #glimmer #breeze #hilltop #summit #climb #peak #shine #slip #risk #beauty #way #path #trail https://t.co/PtvRZULkLy
+#snow #cold #chill #ice #snowfall #winter #frost #crunch #slope #uphill #mountain #glistens #glints #pale #danger #thrill #nature #wildlife #life #vitality #journey #wander #footprint #glimmer #breeze #hilltop #summit #climb #peak #shine #slip #risk #beauty #way #path #trail

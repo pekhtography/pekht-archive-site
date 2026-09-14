@@ -14,4 +14,4 @@ hashtags:
   - "winter"
   - "magic"
 ---
-Skating on colorful ice is like painting the canvas of winter with joy and cheer #ice #colorful #celebration #laughter #joy #snow #skating #winter #magic https://t.co/pzmD65wmXV
+Skating on colorful ice is like painting the canvas of winter with joy and cheer #ice #colorful #celebration #laughter #joy #snow #skating #winter #magic

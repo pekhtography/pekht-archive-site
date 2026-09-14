@@ -14,4 +14,4 @@ back when each petal-spur held exactly one dove.
 The double form arrived later 
 (eight doves, same stem, zero consensus) 
 and the name quietly stopped making sense. 🌿
-#WildGarden #CottageGarden #DoubleAquilegia #FlowerMood https://t.co/mhLZrflelB
+#WildGarden #CottageGarden #DoubleAquilegia #FlowerMood

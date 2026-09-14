@@ -14,4 +14,4 @@ the boat drifts pale and slow,
 the whole embankment breathes cold stone and distance —
 and then, in focus, magenta trumpets with a faint sugar smell. 🌺
 The city was the backdrop all along. 😂
-#CityNature #UrbanFlowers #MoscowMoments #ForegroundMagic https://t.co/6gy8VUBVvO
+#CityNature #UrbanFlowers #MoscowMoments #ForegroundMagic

@@ -20,4 +20,4 @@ hashtags:
   - "adventure"
 ---
 As the sun throws its golden confetti upon the leaves, I wonder: is this magic or just a very talented light show?
-#sun #gold #path #garden #light #warmth #explore #ray #treasure #journey #oasis #glow #cosiness #adventure https://t.co/5GSQZEAA8p
+#sun #gold #path #garden #light #warmth #explore #ray #treasure #journey #oasis #glow #cosiness #adventure

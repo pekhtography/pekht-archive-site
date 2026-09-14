@@ -15,4 +15,4 @@ hashtags:
   - "Spring"
 ---
 The Crown Imperial stands tall, a regal beacon in the garden 👑🌿. Like ancient myths whispering through orange bells, these blooms remind us that nature is the original artist 🎨🍊. #GardenRoyaltyWonder
-#Fritillaria #CrownImperial #Orange #Flower #Garden #Nature #Plant #Spring https://t.co/Krljj6gtEj
+#Fritillaria #CrownImperial #Orange #Flower #Garden #Nature #Plant #Spring

@@ -24,4 +24,4 @@ hashtags:
   - "Photosynthesis"
 ---
 Amidst the chlorophyll-infused foliage, botanical enigmas perform their photosynthetic ballet
-#SolomonsSeal #Polygonatum #Garden #Nature #Green #Bloom #Leaves #Botany #Flora #Growth #Buds #Foliage #Plants #Serenity #Emerald #Whispers #Chlorophyll #Photosynthesis https://t.co/fVUy4EVO0O
+#SolomonsSeal #Polygonatum #Garden #Nature #Green #Bloom #Leaves #Botany #Flora #Growth #Buds #Foliage #Plants #Serenity #Emerald #Whispers #Chlorophyll #Photosynthesis

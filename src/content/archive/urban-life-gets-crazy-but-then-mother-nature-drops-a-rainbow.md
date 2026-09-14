@@ -18,4 +18,4 @@ hashtags:
   - "landscape"
 ---
 Urban life gets crazy, but then Mother Nature drops a rainbow like "Hey, take a breath and look up" 🌆🌈 Sometimes the best therapy is free and right above your head 💫 #CityRainbow
-#rainbow #cityscape #storm #clouds #urban #weather #nature #dramatic #sky #photography #landscape https://t.co/d2Sn64cVkC
+#rainbow #cityscape #storm #clouds #urban #weather #nature #dramatic #sky #photography #landscape

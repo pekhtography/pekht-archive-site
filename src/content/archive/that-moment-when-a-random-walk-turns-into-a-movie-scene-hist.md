@@ -19,4 +19,4 @@ hashtags:
   - "culture"
 ---
 That moment when a random walk turns into a movie scene 🎬🌇 History doesn’t just sit in museums—it lives on the street. #StreetCinematography
-#architecture #cityscape #church #heritage #travel #gold #urban #historic #skyline #faith #sunlight #culture https://t.co/WJ6b3sbNBL
+#architecture #cityscape #church #heritage #travel #gold #urban #historic #skyline #faith #sunlight #culture

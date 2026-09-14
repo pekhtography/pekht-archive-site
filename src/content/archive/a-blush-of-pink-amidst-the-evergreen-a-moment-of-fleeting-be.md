@@ -23,4 +23,4 @@ hashtags:
   - "fir"
 ---
 A blush of pink amidst the evergreen, a moment of fleeting beauty captured in time
-#Peony #Nature #Bloom #Petals #Green #Garden #Flower #Beauty #Spring #Fresh #Vibrant #Abies #koreana #Blue #Emperor #Korean #fir https://t.co/DYcvjsae7v
+#Peony #Nature #Bloom #Petals #Green #Garden #Flower #Beauty #Spring #Fresh #Vibrant #Abies #koreana #Blue #Emperor #Korean #fir

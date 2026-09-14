@@ -12,4 +12,4 @@ hashtags:
 First warm week. This bush didn't wait for permission. 🧡
 Every petal a bet placed before the last frost.
 Evolution's oldest rule: scream orange or disappear. 🌿
-#NaturePhotography #JapaneseQuince #TooMuchIsEnough #BurntOrange https://t.co/kll2hnGo3R
+#NaturePhotography #JapaneseQuince #TooMuchIsEnough #BurntOrange

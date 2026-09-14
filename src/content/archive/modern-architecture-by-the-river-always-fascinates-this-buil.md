@@ -19,4 +19,4 @@ hashtags:
   - "Landscape"
 ---
 Modern architecture by the river always fascinates 🌊🏙️❤️. This building is a perfect example of combining the past and the present. #RiverfrontArchitecture
-#Architecture #Modern #River #Building #City #Waterfront #Style #Clouds #Sky #Riverbank #Urban #Landscape https://t.co/LkJ9oCJOGo
+#Architecture #Modern #River #Building #City #Waterfront #Style #Clouds #Sky #Riverbank #Urban #Landscape

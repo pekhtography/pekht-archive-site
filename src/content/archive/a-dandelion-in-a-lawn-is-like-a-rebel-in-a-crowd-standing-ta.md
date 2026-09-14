@@ -18,4 +18,4 @@ hashtags:
   - "sunlight"
 ---
 A dandelion in a lawn is like a rebel in a crowd, standing tall and defiant
-#dandelion #nature #green #flower #meadow #bloom #summer #outdoors #wildflower #petals #breeze #sunlight https://t.co/qSsfuQVVFd
+#dandelion #nature #green #flower #meadow #bloom #summer #outdoors #wildflower #petals #breeze #sunlight

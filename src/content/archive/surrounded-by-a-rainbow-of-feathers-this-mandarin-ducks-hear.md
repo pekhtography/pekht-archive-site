@@ -23,4 +23,4 @@ hashtags:
   - "yearning"
 ---
 Surrounded by a rainbow of feathers, this Mandarin duck’s heart seems to have chosen ‘grey’ as its favorite color!
-#sadness #melancholy #duck #bird #mandarinduck #exotic #loneliness #solitude #beauty #rainbow #elegance #feathers #plumage #sorrow #grief #longing #yearning https://t.co/mM6rTSD4KE
+#sadness #melancholy #duck #bird #mandarinduck #exotic #loneliness #solitude #beauty #rainbow #elegance #feathers #plumage #sorrow #grief #longing #yearning

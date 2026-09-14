@@ -17,4 +17,4 @@ hashtags:
   - "floral"
 ---
 Scientists: "Flowers evolved to attract pollinators" This rose: "Actually, I evolved to make humans question their life choices on social media"🌹🐝📱 Mission accomplished!🎯😏 #EvolutionaryTrolling
-#rose #pink #garden #flower #bloom #nature #beauty #photography #romantic #floral https://t.co/AItYgSTZuo
+#rose #pink #garden #flower #bloom #nature #beauty #photography #romantic #floral

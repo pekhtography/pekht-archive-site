@@ -19,4 +19,4 @@ hashtags:
   - "Blossom"
 ---
 This flower has better climbing skills than most humans 🧗‍♀️💜 Gym membership not included #NaturalAthlete
-#Clematis #Purple #Flower #Vine #Garden #Blooming #Nature #Petals #Climbing #Beautiful #Spring #Blossom https://t.co/4o8USjZ4iZ
+#Clematis #Purple #Flower #Vine #Garden #Blooming #Nature #Petals #Climbing #Beautiful #Spring #Blossom

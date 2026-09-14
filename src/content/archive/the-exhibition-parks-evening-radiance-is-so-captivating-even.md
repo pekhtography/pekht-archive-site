@@ -17,4 +17,4 @@ hashtags:
   - "Heritage"
 ---
 The Exhibition Park's evening radiance is so captivating, even the statues ponder a leisurely walk
-#Exhibition #Architecture #Fountains #Sunset #Park #Culture #History #Landmark #Evening #Walk #Heritage https://t.co/JqnKf8T0K0
+#Exhibition #Architecture #Fountains #Sunset #Park #Culture #History #Landmark #Evening #Walk #Heritage

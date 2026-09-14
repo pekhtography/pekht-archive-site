@@ -14,4 +14,4 @@ One daredevil ignores it: bursts open, flashes,
 ignoring the fluffy conspiracy,
 and pollen scatters onto the green,
 turning silence into a scandal you can't sweep under the rug 🌸😲
-#Nature #GardenLife https://t.co/B59rI9krAC
+#Nature #GardenLife

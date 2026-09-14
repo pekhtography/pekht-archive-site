@@ -40,4 +40,4 @@ hashtags:
   - "Wild"
   - "Life"
 ---
-#Snow #Winter #Wonder #Frost #Bite #Chill #Breeze #Slope #Adventure #Uphill #Challenge #Mountain #Height #Glistens #Beauty #Shimmer #Glow #Sparkle #Glimmer #Twinkle #Glisten #Pale #Slight #Light #Glow #Slippery #Risk #Danger #Peril #Slide #Fun #Glide #Smooth #Nature #Wild #Life https://t.co/oekZzoZpc8
+#Snow #Winter #Wonder #Frost #Bite #Chill #Breeze #Slope #Adventure #Uphill #Challenge #Mountain #Height #Glistens #Beauty #Shimmer #Glow #Sparkle #Glimmer #Twinkle #Glisten #Pale #Slight #Light #Glow #Slippery #Risk #Danger #Peril #Slide #Fun #Glide #Smooth #Nature #Wild #Life

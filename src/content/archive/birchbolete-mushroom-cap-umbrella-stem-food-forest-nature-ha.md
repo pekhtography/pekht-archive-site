@@ -20,4 +20,4 @@ hashtags:
   - "Taste"
   - "Fungi"
 ---
-#BirchBolete #Mushroom #Cap #Umbrella #Stem #Food #Forest #Nature #Harvest #Gathering #Resilience #Strength #Flavor #Taste #Fungi https://t.co/ca4gx9h5lu
+#BirchBolete #Mushroom #Cap #Umbrella #Stem #Food #Forest #Nature #Harvest #Gathering #Resilience #Strength #Flavor #Taste #Fungi

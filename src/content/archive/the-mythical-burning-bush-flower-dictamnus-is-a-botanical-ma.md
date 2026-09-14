@@ -18,4 +18,4 @@ hashtags:
   - "Plants"
 ---
 The mythical burning bush flower, Dictamnus, is a botanical marvel of resilience
-#Dictamnus #Flowers #Nature #Blooms #Garden #Botany #Wildflowers #Petals #Flora #Beauty #Blossoms #Plants https://t.co/WyxU5msbr0
+#Dictamnus #Flowers #Nature #Blooms #Garden #Botany #Wildflowers #Petals #Flora #Beauty #Blossoms #Plants

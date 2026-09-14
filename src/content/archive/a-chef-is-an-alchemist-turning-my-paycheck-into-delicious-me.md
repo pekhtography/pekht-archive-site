@@ -27,4 +27,4 @@ hashtags:
   - "gastronomic"
 ---
 A chef is an alchemist, turning my paycheck into delicious meals—voilà, culinary magic!
-#Cooking #Art #Chef #Magician #Ingredient #Treasures #Flavor #Joy #Passion #Fire #Dish #Presentation #masterchef #kitchen #genius #gourmet #meal #taste #food #culinary #gastronomic https://t.co/gL8Ivwt2Fz
+#Cooking #Art #Chef #Magician #Ingredient #Treasures #Flavor #Joy #Passion #Fire #Dish #Presentation #masterchef #kitchen #genius #gourmet #meal #taste #food #culinary #gastronomic

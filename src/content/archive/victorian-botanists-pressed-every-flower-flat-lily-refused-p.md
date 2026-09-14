@@ -14,4 +14,4 @@ Lily refused.
 Petals sprang back. Stained the pages. Stained the fingers. 
 Stained the whole collection. 🌸 
 Case closed — the lily won.
-#FlowerPhotography #MacroNature #OrientalLily #WildBeauty https://t.co/2X1NiUAEuP
+#FlowerPhotography #MacroNature #OrientalLily #WildBeauty

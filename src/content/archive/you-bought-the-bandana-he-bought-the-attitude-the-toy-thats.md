@@ -15,4 +15,4 @@ He's not ignoring you—
 he's finished with today's mortal interactions.
 Private jet to the window sill.
 Departure in T-minus… whenever he feels like it🕶️🐈✈️
-#CatsOfX #PetFashion #CatCEO #MorningLight https://t.co/dYhgmrP3ri
+#CatsOfX #PetFashion #CatCEO #MorningLight

@@ -39,4 +39,4 @@ hashtags:
   - "Sparkling"
   - "Icy"
 ---
-#Snow #Winter #Frost #Chill #Slope #Uphill #Mountain #Glistens #Shimmer #Sparkle #Twinkle #Pale #Light #Slippery #Danger #Slide #Glide #Nature #Wildlife #Grace #Elegance #Trail #Path #Footprint #Breezy #Serene #Frozen #Chilly #Steep #Adventure #Glowing #Shining #Sparkling #Icy https://t.co/NMMSYQHtAO
+#Snow #Winter #Frost #Chill #Slope #Uphill #Mountain #Glistens #Shimmer #Sparkle #Twinkle #Pale #Light #Slippery #Danger #Slide #Glide #Nature #Wildlife #Grace #Elegance #Trail #Path #Footprint #Breezy #Serene #Frozen #Chilly #Steep #Adventure #Glowing #Shining #Sparkling #Icy

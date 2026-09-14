@@ -14,4 +14,4 @@ hashtags:
   - "dreamscape"
   - "fantasy"
 ---
-#River #Flow #Illumination #Brightness #NewYear #Hope #vibrance #dreamscape #fantasy https://t.co/Du1IYtJASd
+#River #Flow #Illumination #Brightness #NewYear #Hope #vibrance #dreamscape #fantasy

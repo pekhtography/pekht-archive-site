@@ -12,4 +12,4 @@ hashtags:
 Raw wood bleeding neon pink petals. 
 It feels like a glitch in the garden’s code, 
 a beautiful, fragrant, unskippable spring ad. 🌸💾🪄
-#NaturePhotography #BotanicalArt #PinkBloom #SpringVibes https://t.co/F32Ym5g85y
+#NaturePhotography #BotanicalArt #PinkBloom #SpringVibes

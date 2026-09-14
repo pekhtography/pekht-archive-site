@@ -14,4 +14,4 @@ hashtags:
   - "details"
   - "garden"
 ---
-The intricate patterns of nature remind us of the beauty in complexity #pattern #leaf #intricate #autumn #beauty #nature #secrets #details #garden https://t.co/eQyRvmWvKq
+The intricate patterns of nature remind us of the beauty in complexity #pattern #leaf #intricate #autumn #beauty #nature #secrets #details #garden

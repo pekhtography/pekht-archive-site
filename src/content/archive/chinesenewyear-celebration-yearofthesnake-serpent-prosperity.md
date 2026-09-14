@@ -24,4 +24,4 @@ hashtags:
   - "China"
   - "Adventure"
 ---
-#ChineseNewYear #Celebration #YearOfTheSnake #Serpent #Prosperity #Wealth #Wisdom #Knowledge #FreshBeginnings #Renewal #Fortune #Luck #Secrets #Mysteries #Snake #Zodiac #LunarNewYear #China #Adventure https://t.co/gg3nal1WVl
+#ChineseNewYear #Celebration #YearOfTheSnake #Serpent #Prosperity #Wealth #Wisdom #Knowledge #FreshBeginnings #Renewal #Fortune #Luck #Secrets #Mysteries #Snake #Zodiac #LunarNewYear #China #Adventure

@@ -20,4 +20,4 @@ hashtags:
   - "textures"
 ---
 Aesthetic harmony in architecture is like crafting a perfect sandwich—the layers need to complement each other, or it's just a mess of bread!
-#Aesthetic #Harmony #Architecture #building #Design #creativity #Beauty #elegance #Proportion #balance #Structure #form #Layers #textures https://t.co/WN5u368qo8
+#Aesthetic #Harmony #Architecture #building #Design #creativity #Beauty #elegance #Proportion #balance #Structure #form #Layers #textures

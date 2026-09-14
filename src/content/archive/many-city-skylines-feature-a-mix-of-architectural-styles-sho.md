@@ -21,4 +21,4 @@ hashtags:
   - "Creativity"
 ---
 Many city skylines feature a mix of architectural styles, showcasing the history and development of urban design over decades
-#City #Urban #Skyline #Architecture #Design #Variety #History #Heritage #Development #Progress #Cityscape #Culture #Identity #Innovation #Creativity https://t.co/QVvgHkBqyW
+#City #Urban #Skyline #Architecture #Design #Variety #History #Heritage #Development #Progress #Cityscape #Culture #Identity #Innovation #Creativity

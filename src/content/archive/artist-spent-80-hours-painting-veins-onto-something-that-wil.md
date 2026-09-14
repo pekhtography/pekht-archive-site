@@ -13,4 +13,4 @@ Artist spent 80 hours painting veins onto something that will never have a heart
 The price tag says $2,400. 
 The look in those eyes says "you owe me more than that." 💀 
 Motherhood: now available in silicone. 
-#Reborn #RebornDolls #UncannyValley #SiliconSoul https://t.co/rSTE7jr0IP
+#Reborn #RebornDolls #UncannyValley #SiliconSoul

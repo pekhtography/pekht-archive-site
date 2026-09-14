@@ -24,4 +24,4 @@ hashtags:
   - "Seasons"
   - "Transformation"
 ---
-#Leaves #Nature #Hazelnut #Jagged #Gold #Green #Life #Autumn #Change #Hazel #Leaf #Serrated #Drama #Color #Beauty #Nut #Foliage #Seasons #Transformation https://t.co/P0fO1yVMNq
+#Leaves #Nature #Hazelnut #Jagged #Gold #Green #Life #Autumn #Change #Hazel #Leaf #Serrated #Drama #Color #Beauty #Nut #Foliage #Seasons #Transformation

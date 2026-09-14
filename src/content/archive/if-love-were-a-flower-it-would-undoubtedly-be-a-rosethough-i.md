@@ -23,4 +23,4 @@ hashtags:
   - "doubt"
 ---
 If love were a flower, it would undoubtedly be a rose—though I suspect daisies have a thing or two to say about unrequited love
-#rose #beauty #flower #nature #love #affection #passion #desire #fire #flame #masterpiece #perfection #daisies #unrequited #heartbreak #missteps #doubt https://t.co/tM6J8o6JV1
+#rose #beauty #flower #nature #love #affection #passion #desire #fire #flame #masterpiece #perfection #daisies #unrequited #heartbreak #missteps #doubt

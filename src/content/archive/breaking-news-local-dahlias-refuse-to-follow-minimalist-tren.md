@@ -14,4 +14,4 @@ hashtags:
   - "nature"
 ---
 Breaking news: Local dahlias refuse to follow minimalist trends, choose maximalist fabulous instead!🌸 'Go big or go home' - their official motto 😂 Meanwhile, my succulent is having an identity crisis 🌵 #FloralMaximalism
-#dahlia #flowers #pink #purple #garden #blooming  #nature https://t.co/tfjxe91Qjn
+#dahlia #flowers #pink #purple #garden #blooming  #nature

@@ -19,4 +19,4 @@ hashtags:
   - "Plant"
 ---
 Clematis: turning gardens into fairy tales, one bloom at a time. Who needs a filter with such natural beauty? 🌸📸 #GardenMagic
-#Clematis #Flower #Nature #Purple #Garden #Bloom #Botany #Macro #Petals #Spring #Beauty #Plant https://t.co/MMWB5JBfCE
+#Clematis #Flower #Nature #Purple #Garden #Bloom #Botany #Macro #Petals #Spring #Beauty #Plant

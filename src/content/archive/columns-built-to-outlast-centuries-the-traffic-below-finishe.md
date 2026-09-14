@@ -12,4 +12,4 @@ hashtags:
 Columns built to outlast centuries. 🚗 
 The traffic below finished that argument in forty seconds. 
 Permanence is just impatience that found a better architect.
-#Architecture #UrbanLife #CityVibes #MoscowCity https://t.co/5EpB1Bb6ot
+#Architecture #UrbanLife #CityVibes #MoscowCity

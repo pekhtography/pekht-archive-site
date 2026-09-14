@@ -14,4 +14,4 @@ hashtags:
   - "Tranquility"
   - "lily"
 ---
-In gardens, as in life, it is the white lilies that capture the heart #Lilium #Elegance #White #Beauty #Grace #Fragrance #Purity #Tranquility #lily https://t.co/1nMoBPKC8C
+In gardens, as in life, it is the white lilies that capture the heart #Lilium #Elegance #White #Beauty #Grace #Fragrance #Purity #Tranquility #lily

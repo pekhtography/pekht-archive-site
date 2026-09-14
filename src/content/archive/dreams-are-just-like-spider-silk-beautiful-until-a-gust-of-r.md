@@ -21,4 +21,4 @@ hashtags:
   - "sanity"
 ---
 Dreams are just like spider silk: beautiful until a gust of reality blows them away
-#Life #delicate #spider #web #patterns #unpredictable #creations #dreams #dew #time #decisions #threads #complexities #choices #sanity https://t.co/ogO8Zx12cU
+#Life #delicate #spider #web #patterns #unpredictable #creations #dreams #dew #time #decisions #threads #complexities #choices #sanity

@@ -26,4 +26,4 @@ hashtags:
   - "Treats"
 ---
 The nuthatch: nature's little acrobat, defying gravity and etiquette to nab a snack!
-#Nuthatch #Acrobat #Food #Feast #Winter #Chill #Feeders #Dining #UpsideDown #Inversion #Acrobatics #Flip #Laughter #Joy #Nature #Wild #Bird #Flight #Delicacies #Treats https://t.co/HYzl1qihLA
+#Nuthatch #Acrobat #Food #Feast #Winter #Chill #Feeders #Dining #UpsideDown #Inversion #Acrobatics #Flip #Laughter #Joy #Nature #Wild #Bird #Flight #Delicacies #Treats

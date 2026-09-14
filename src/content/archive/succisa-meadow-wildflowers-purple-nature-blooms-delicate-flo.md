@@ -17,4 +17,4 @@ hashtags:
   - "Serenity"
   - "Beauty"
 ---
-#Succisa #Meadow #Wildflowers #Purple #Nature #Blooms #Delicate #Flora #Grassland #Elegance #Serenity #Beauty https://t.co/F4xHxEVrii
+#Succisa #Meadow #Wildflowers #Purple #Nature #Blooms #Delicate #Flora #Grassland #Elegance #Serenity #Beauty

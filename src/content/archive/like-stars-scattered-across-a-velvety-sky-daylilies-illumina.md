@@ -21,4 +21,4 @@ hashtags:
   - "beauty"
 ---
 Like stars scattered across a velvety sky, daylilies illuminate the garden, inviting dreams and inspiring exploration of the depths of imagination
-#Daylily #flowers #blossoms #bloom #flourish #petals #delicate #cosmos #stars #galaxy #garden #nature #dreams #imagination #beauty https://t.co/b5jK69blKe
+#Daylily #flowers #blossoms #bloom #flourish #petals #delicate #cosmos #stars #galaxy #garden #nature #dreams #imagination #beauty

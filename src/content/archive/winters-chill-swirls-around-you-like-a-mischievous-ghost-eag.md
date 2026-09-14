@@ -21,4 +21,4 @@ hashtags:
   - "Hug"
 ---
 Winter's chill swirls around you like a mischievous ghost, eager to whisk away your warmth
-#Winter #Wind #Thief #Body #Chill #Ghost #Magic #Cozy #Heist #Embrace #Mischief #Frost #Cuddle #Snowflakes #Hug https://t.co/ml6AXEi7eA
+#Winter #Wind #Thief #Body #Chill #Ghost #Magic #Cozy #Heist #Embrace #Mischief #Frost #Cuddle #Snowflakes #Hug

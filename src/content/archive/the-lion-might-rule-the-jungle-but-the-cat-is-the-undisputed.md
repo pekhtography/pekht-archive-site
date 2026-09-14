@@ -22,4 +22,4 @@ hashtags:
   - "feline"
   - "majesty"
 ---
-The lion might rule the jungle, but the cat is the undisputed overlord of the living room! #cats #family #guardians #puzzle #tiger #wild #lion #ancestors #heritage #DNA #Elegance #Genetics #Nobility #revered #domestic #feline #majesty https://t.co/83bAhZ9JS4
+The lion might rule the jungle, but the cat is the undisputed overlord of the living room! #cats #family #guardians #puzzle #tiger #wild #lion #ancestors #heritage #DNA #Elegance #Genetics #Nobility #revered #domestic #feline #majesty

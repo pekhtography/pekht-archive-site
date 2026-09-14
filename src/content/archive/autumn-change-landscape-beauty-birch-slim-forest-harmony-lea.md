@@ -23,4 +23,4 @@ hashtags:
   - "Colors"
   - "Nature"
 ---
-#Autumn #Change #Landscape #Beauty #Birch #Slim #Forest #Harmony #Leaves #Falling #Renewal #Promise #Scenery #MixedForest #Biodiversity #BirchTrees #Colors #Nature https://t.co/sCcKOBIitk
+#Autumn #Change #Landscape #Beauty #Birch #Slim #Forest #Harmony #Leaves #Falling #Renewal #Promise #Scenery #MixedForest #Biodiversity #BirchTrees #Colors #Nature

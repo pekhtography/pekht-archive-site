@@ -14,4 +14,4 @@ Rough concrete breathes.
 Lights pulse. 
 One tiny, sharp sliver of silver hangs above. 
 Human ambition versus the silent, infinite abyss. 🏙️👁️
-#NightCity #SkyscraperLife #UrbanGlow #MidnightBlue https://t.co/KyjIx2g1kq
+#NightCity #SkyscraperLife #UrbanGlow #MidnightBlue

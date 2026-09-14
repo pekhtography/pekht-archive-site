@@ -15,4 +15,4 @@ hashtags:
   - "symphony"
   - "skyline"
 ---
-Every building is a symbol of the dreams and aspirations of its time #building #symbol #dreams #skyscrapers #light #architecture #danc #steel #symphony #skyline https://t.co/BYVcs2wgOr
+Every building is a symbol of the dreams and aspirations of its time #building #symbol #dreams #skyscrapers #light #architecture #danc #steel #symphony #skyline

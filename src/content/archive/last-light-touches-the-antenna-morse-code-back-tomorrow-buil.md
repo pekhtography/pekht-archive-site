@@ -14,4 +14,4 @@ Buildings pretend they didn't hear.
 But their shadows already stretched toward bed. 
 The city yawns in glass and steel. 
 Goodnight, you beautiful liar. ✨🏢🌙 
-#Sunset #CitySilhouette #GoldenHourTheater #QuietAwe https://t.co/8NNqlOOmxc
+#Sunset #CitySilhouette #GoldenHourTheater #QuietAwe

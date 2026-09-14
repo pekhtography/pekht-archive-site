@@ -12,4 +12,4 @@ hashtags:
 Heavy velvet curtains drift apart. A single stage light hits the city. 
 Silence falls. 
 The show is about to begin. 🎭✨
-#Skyline #ChasingLight #Cloudscape #Mood https://t.co/JCOv1VK2uF
+#Skyline #ChasingLight #Cloudscape #Mood

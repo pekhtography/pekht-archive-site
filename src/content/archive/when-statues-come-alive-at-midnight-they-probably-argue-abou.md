@@ -14,4 +14,4 @@ hashtags:
   - "bronze"
 ---
 When statues come alive at midnight, they probably argue about who gets the best view of that stunning floral masterpiece 🎭✨ Some say art imitates life, but here life definitely got jealous of art! 🌺 #StatueStories
-#sculpture #statue #flowers #art #plaza #architecture #bronze https://t.co/GHgLEHKBNs
+#sculpture #statue #flowers #art #plaza #architecture #bronze

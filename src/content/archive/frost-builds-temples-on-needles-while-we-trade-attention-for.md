@@ -12,4 +12,4 @@ hashtags:
 Frost builds temples on needles while we trade attention for distraction 💎❄️ 
 Each crystal—a tiny riot against forgetting. 
 Survives the night, outlasts most vows by breakfast 🌲 
-#Nature #MacroPhotography #WinterMagic #FragileBeauty https://t.co/1ZtKKjHTpj
+#Nature #MacroPhotography #WinterMagic #FragileBeauty

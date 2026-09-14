@@ -14,4 +14,4 @@ hashtags:
   - "stone"
 ---
 When ancient stones meet autumn's fire, time becomes poetry 🍂 This 13-story pagoda has witnessed 800+ seasons change, yet still stands in quiet wisdom ⛩️ Sometimes the oldest teachers speak without words 🌸 #AutumnWisdom
-#pagoda #autumn #japanese #garden #foliage #zen #stone https://t.co/kuiUN5VdPT
+#pagoda #autumn #japanese #garden #foliage #zen #stone

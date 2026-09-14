@@ -19,4 +19,4 @@ hashtags:
   - "photography"
 ---
 Red lilies symbolize passion and energy 🔥🌺 #FlowerPower
-#lily #flower #red #garden #beauty #nature #bloom #floristry #plants #botany #flowers #photography https://t.co/hwkmIa5fdX
+#lily #flower #red #garden #beauty #nature #bloom #floristry #plants #botany #flowers #photography

@@ -20,4 +20,4 @@ hashtags:
   - "hope"
   - "rebuild"
 ---
-#disaster #earthquake #destruction #ruins #temple #collapse #devastation #history #heritage #crisis #recovery #strength #resilience #hope #rebuild https://t.co/AMBK16n9tJ
+#disaster #earthquake #destruction #ruins #temple #collapse #devastation #history #heritage #crisis #recovery #strength #resilience #hope #rebuild

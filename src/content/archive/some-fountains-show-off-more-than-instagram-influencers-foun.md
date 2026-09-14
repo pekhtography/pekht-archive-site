@@ -16,4 +16,4 @@ hashtags:
   - "grand"
 ---
 Some fountains show off more than Instagram influencers
-#fountain #night #lights #water #colorful #landmark #travel #architecture #history #grand https://t.co/FETAAEhuoB
+#fountain #night #lights #water #colorful #landmark #travel #architecture #history #grand

@@ -14,4 +14,4 @@ Flight means death.
 So this feather-piece becomes stone, slows its pulse, 
 and lets the forest look right through it. 
 The ultimate armor is absence. 🌿🗿 
-#Nature #Camouflage #WildlifePhotography #Stillness https://t.co/wyiFDizvb1
+#Nature #Camouflage #WildlifePhotography #Stillness

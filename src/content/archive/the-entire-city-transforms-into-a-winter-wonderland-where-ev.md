@@ -24,4 +24,4 @@ hashtags:
   - "Celebration"
 ---
 The entire city transforms into a winter wonderland, where every square twinkles with the magic of festive lights
-#City #Transformation #Squares #Charm #Colors #Twinkle #Lights #Ornaments #Joy #Aroma #Festive #Streets #Urban #Plazas #Illumination #Decor #Scent #Celebration https://t.co/XYAW5FrgHE
+#City #Transformation #Squares #Charm #Colors #Twinkle #Lights #Ornaments #Joy #Aroma #Festive #Streets #Urban #Plazas #Illumination #Decor #Scent #Celebration

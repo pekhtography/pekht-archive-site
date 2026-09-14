@@ -14,4 +14,4 @@ Then the geometry tightens—
 a structural surveyor would note the sightlines were calculated so each tower could watch the others👁️
 A silver dome slipped in between them,
 round and warm, completely unimpressed🏙️
-#Moscow #UrbanHistory #CityVibes #Timeless https://t.co/FWFt0iESNM
+#Moscow #UrbanHistory #CityVibes #Timeless

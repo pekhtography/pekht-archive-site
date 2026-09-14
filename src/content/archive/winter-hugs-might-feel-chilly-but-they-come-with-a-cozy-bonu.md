@@ -17,4 +17,4 @@ hashtags:
   - "Mischief"
 ---
 Winter hugs might feel chilly, but they come with a cozy bonus: more time with hot cocoa!
-#Winter #Frost #Chill #Warmth #Cozy #Wind #Body #Cold #Embrace #Magic #Mischief #Embrace https://t.co/RlwBCs000s
+#Winter #Frost #Chill #Warmth #Cozy #Wind #Body #Cold #Embrace #Magic #Mischief #Embrace

@@ -17,4 +17,4 @@ hashtags:
   - "Fresh"
   - "Life"
 ---
-#Blossoms #Spring #Nature #Bloom #Apple #Tree #Petals #Growth #Beauty #Flower #Fresh #Life https://t.co/2j5s9bDGgr
+#Blossoms #Spring #Nature #Bloom #Apple #Tree #Petals #Growth #Beauty #Flower #Fresh #Life

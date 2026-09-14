@@ -13,4 +13,4 @@ Evolution gave him a paint job that costs feathers what a Lamborghini costs mone
 She's in factory settings. 
 Both showed up. 
 Only one read the group chat. 😶🔥 
-#Relationships #DatingLife #ExpectationVsReality #Relatable https://t.co/kMPBAQEbW1
+#Relationships #DatingLife #ExpectationVsReality #Relatable

@@ -13,4 +13,4 @@ Cold mud cracks.
 Suddenly, purple spikes jailbreak the frozen lawn. 
 These tiny hackers just stole winter’s grumpiest keys, 
 igniting a violet riot. 🌸⚡
-#SpringAwakening #CrocusWatch #PurpleRebellion #PetalFever https://t.co/52gFDknpjS
+#SpringAwakening #CrocusWatch #PurpleRebellion #PetalFever

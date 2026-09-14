@@ -13,4 +13,4 @@ Lush green curtains part.
 A sudden pink swarm occupies the branch. 
 Each bell aims its sticky nectar nozzle directly at my nose. 
 They’ve hijacked the garden! 🌺🚨
-#Nature #BotanicalPhotography #SpringVibes #PinkAesthetic https://t.co/WydcClsOGU
+#Nature #BotanicalPhotography #SpringVibes #PinkAesthetic

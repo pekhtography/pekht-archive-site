@@ -12,4 +12,4 @@ hashtags:
 The most authentic thing here isn't the handmade crafts 🎄
 It's this giant plastic kid, beaming with a joy so simple it cracks the ice of adult irony ❄️🙂
 A monument to the time when wonder didn't need a filter ✨🧣
-#Christmas #Nostalgia #VintageHoliday #ChildhoodMemories https://t.co/wKIYD16sQ6
+#Christmas #Nostalgia #VintageHoliday #ChildhoodMemories

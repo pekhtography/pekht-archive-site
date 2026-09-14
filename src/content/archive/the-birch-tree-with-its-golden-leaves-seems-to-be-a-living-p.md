@@ -18,4 +18,4 @@ hashtags:
   - "serene"
 ---
 The birch tree, with its golden leaves, seems to be a living painting, capturing the essence of autumn's fleeting beauty
-#birch #leaves #tree #nature #autumn #forest #woods #outdoors #green #golden #tranquil #serene https://t.co/k19LaoeYaQ
+#birch #leaves #tree #nature #autumn #forest #woods #outdoors #green #golden #tranquil #serene

@@ -10,4 +10,4 @@ hashtags:
 ---
 The garden bows to autumn but she blooms purple and untamed 💜🍂 
 Some souls burn brightest when everything else fades 💀✨ 
-#LastDaysOfSummer #FallBlooms #Verbena https://t.co/vKdfWpAOGM
+#LastDaysOfSummer #FallBlooms #Verbena

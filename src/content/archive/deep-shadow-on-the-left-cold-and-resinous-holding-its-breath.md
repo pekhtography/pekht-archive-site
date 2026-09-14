@@ -16,4 +16,4 @@ right into the frame, loud and sugared,
 like someone crashed a funeral in sequins.
 Two trees. One sky.🌲
 Botanical warfare
-#NaturePhotography #BloomSeason #BotanicalContrast #Spring https://t.co/YKjjsLbFzm
+#NaturePhotography #BloomSeason #BotanicalContrast #Spring

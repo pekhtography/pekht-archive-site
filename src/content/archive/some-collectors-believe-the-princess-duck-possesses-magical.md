@@ -18,4 +18,4 @@ hashtags:
   - "History"
 ---
 Some collectors believe the Princess Duck possesses magical properties, bringing luck and prosperity to its owner
-#Luxury #Princess #Duck #Royalty #Collectible #Valuable #Rubber #Playful #Bath #Relaxation #PreOwned #History https://t.co/crsEfmTrLX
+#Luxury #Princess #Duck #Royalty #Collectible #Valuable #Rubber #Playful #Bath #Relaxation #PreOwned #History

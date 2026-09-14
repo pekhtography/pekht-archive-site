@@ -22,4 +22,4 @@ hashtags:
   - "beauty"
 ---
 Bathed in sunlight, the creamy daylily and the lilac phlox exchange glances, as if plotting a floral caper in the grand spectacle of the garden
-#garden #daylily #secrets #phlox #poetic #plotting #spectacle #bloom #color #story #duet #aromas #flirtation #lovers #nature #beauty https://t.co/usYC1wxzl3
+#garden #daylily #secrets #phlox #poetic #plotting #spectacle #bloom #color #story #duet #aromas #flirtation #lovers #nature #beauty

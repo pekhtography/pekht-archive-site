@@ -18,4 +18,4 @@ hashtags:
   - "summer"
 ---
 A single sunbeam is enough to chase all the shadows away, just as a single Jerusalem artichoke flower can brighten the darkest day
-#nature #flowers #yellow #bloom #garden #wildflowers #petals #sunshine #outdoors #flora #meadow #summer https://t.co/bKrP4CnQ4w
+#nature #flowers #yellow #bloom #garden #wildflowers #petals #sunshine #outdoors #flora #meadow #summer

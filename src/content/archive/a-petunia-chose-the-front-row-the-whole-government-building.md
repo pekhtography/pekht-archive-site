@@ -12,4 +12,4 @@ hashtags:
 A petunia chose the front row. 
 The whole government building got blurred into wallpaper. 🌸 
 Depth of field as political commentary. 📷
-#DepthOfField #FlowerPhotography #CityLife #StreetMoments https://t.co/KmTePCmLep
+#DepthOfField #FlowerPhotography #CityLife #StreetMoments

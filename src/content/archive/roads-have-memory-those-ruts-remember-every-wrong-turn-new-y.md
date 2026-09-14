@@ -12,4 +12,4 @@ hashtags:
 Roads have memory — those ruts remember every wrong turn ❄️ 
 New Year wishes it had Ctrl+Z for bad decisions 🛣️ 
 Nature said "just cover it with snow and pretend it never happened" ✨ 
-#WinterRoad #NewYearVibes #SnowyPath #FreshStart https://t.co/FJKe6UTqcU
+#WinterRoad #NewYearVibes #SnowyPath #FreshStart

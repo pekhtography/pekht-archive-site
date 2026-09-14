@@ -11,4 +11,4 @@ hashtags:
 ---
 Shadows crawl on scarlet walls while the golden dome captures the sun. 
 Beauty stays locked until you find the inner key 🕯️🏰 
-#UrbanSplendor #DivineVibes #Faith #OrthodoxArchitecture https://t.co/jQvWSzRNq4
+#UrbanSplendor #DivineVibes #Faith #OrthodoxArchitecture

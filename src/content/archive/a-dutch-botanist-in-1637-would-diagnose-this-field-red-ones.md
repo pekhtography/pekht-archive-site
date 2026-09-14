@@ -14,4 +14,4 @@ red ones healthy, flame-striped ones
 (technically infected by mosaic virus, technically ruined) 🌷 
 as the expensive ones. 
 The bug was the feature. 🎨
-#Tulips #FlowerPhotography #SpringVibes #PetalFever https://t.co/rGG4hVFlC0
+#Tulips #FlowerPhotography #SpringVibes #PetalFever

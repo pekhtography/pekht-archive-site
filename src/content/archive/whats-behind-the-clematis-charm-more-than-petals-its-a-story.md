@@ -19,4 +19,4 @@ hashtags:
   - "Greenery"
 ---
 What’s behind the clematis’ charm? More than petals, it’s a story of persistence. 🌺🔍 #CharmOfPersistence
-#Clematis #Flower #Bloom #Nature #Petals #Garden #Botany #Flora #Plant #Blossom #Bud #Greenery https://t.co/1oDefBDw0f
+#Clematis #Flower #Bloom #Nature #Petals #Garden #Botany #Flora #Plant #Blossom #Bud #Greenery

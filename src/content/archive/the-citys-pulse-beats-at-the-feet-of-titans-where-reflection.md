@@ -26,4 +26,4 @@ hashtags:
   - "Chaos"
 ---
 The city's pulse beats at the feet of titans, where reflections dance and life intertwines
-#Skyscrapers #Heavens #Reflect #River #Mirror #Giants #Titans #Sky #Life #Rush #City #Pulse #heartbeat #Streets #Cradles #Dreams #Sentinel #Whirlpool #Shadows #Chaos https://t.co/29K2Ooft0a
+#Skyscrapers #Heavens #Reflect #River #Mirror #Giants #Titans #Sky #Life #Rush #City #Pulse #heartbeat #Streets #Cradles #Dreams #Sentinel #Whirlpool #Shadows #Chaos

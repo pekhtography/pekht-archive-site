@@ -19,4 +19,4 @@ hashtags:
   - "Evening"
   - "Glow"
 ---
-#Pavilion #Architecture #Night #Lights #Fountain #Historic #Cultural #Heritage #Exhibition #Landmark #Iconic #Beautiful #Evening #Glow https://t.co/fGVvfmplul
+#Pavilion #Architecture #Night #Lights #Fountain #Historic #Cultural #Heritage #Exhibition #Landmark #Iconic #Beautiful #Evening #Glow

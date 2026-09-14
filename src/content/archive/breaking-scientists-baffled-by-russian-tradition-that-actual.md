@@ -19,4 +19,4 @@ hashtags:
   - "farewell"
 ---
 Breaking: Scientists baffled by Russian tradition that actually makes people happier! 🔬😂 Secret ingredient: controlled arson and carbs. #RussianScience
-#Maslenitsa #tradition #winter #festival #folk #celebration #Russian #carnival #pancakes #spring #cultural #farewell https://t.co/VvN0K29OOh
+#Maslenitsa #tradition #winter #festival #folk #celebration #Russian #carnival #pancakes #spring #cultural #farewell

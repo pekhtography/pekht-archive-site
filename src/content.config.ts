@@ -23,6 +23,7 @@ export const collections = {
       x_created_at: z.string().optional(),
       title: z.string(),
       image: z.string(),
+      gallery: z.array(z.string()).default([]),
       hashtags: z.array(z.string()).default([]),
     }),
   }),

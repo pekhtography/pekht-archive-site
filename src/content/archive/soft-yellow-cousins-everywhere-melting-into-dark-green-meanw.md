@@ -14,4 +14,4 @@ Meanwhile this one —
 bristled stem, sharp rays, sun-disk center — 
 decided the whole garden needed a protagonist. 🌼 
 Plot twist: it was right.
-#NaturePhotography #WildFlowers #MacroFlora #BotanicalMood https://t.co/vOfPHfXsmO
+#NaturePhotography #WildFlowers #MacroFlora #BotanicalMood

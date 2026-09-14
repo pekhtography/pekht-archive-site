@@ -19,4 +19,4 @@ hashtags:
   - "potential"
 ---
 Green grapes understand something we forgot 🌱 Patience is not waiting, it's growing 🍇 Every day unripe is a day becoming wine ✨ #GrowingNotWaiting
-#GreenGrapesVibes #nature #vineyard #grapes #harvest #organic #wine #photography #autumn #patience #growth #potential https://t.co/aZ4jCXZ4mk
+#GreenGrapesVibes #nature #vineyard #grapes #harvest #organic #wine #photography #autumn #patience #growth #potential

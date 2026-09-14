@@ -15,4 +15,4 @@ hashtags:
   - "City"
   - "Urban"
 ---
-The best part of the city is when it reflects the soul of its residents #Architecture #Design #House #Home #Walls #Structure #Sun #Light #City #Urban https://t.co/JmhqEg5ttY
+The best part of the city is when it reflects the soul of its residents #Architecture #Design #House #Home #Walls #Structure #Sun #Light #City #Urban

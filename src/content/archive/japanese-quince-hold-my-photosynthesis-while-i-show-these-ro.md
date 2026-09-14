@@ -24,4 +24,4 @@ hashtags:
   - "Gardening"
 ---
 Japanese Quince: "Hold my photosynthesis while I show these roses how it's really done"🌹🎤Mic drop moment! #FloralShowdown
-#Chaenomeles #Japanese #Quince #Spring #Blooms #Orange #Flowers #Blooming #Shrub #Garden #Beauty #Flowering #Bush #Nature #Photography #Botanical #Gardening https://t.co/zcbA2bGNux
+#Chaenomeles #Japanese #Quince #Spring #Blooms #Orange #Flowers #Blooming #Shrub #Garden #Beauty #Flowering #Bush #Nature #Photography #Botanical #Gardening

@@ -20,4 +20,4 @@ hashtags:
   - "Botany"
 ---
 Tulips are like sunshine 🌞💛 in the garden. Brighten up your day with a simple glance at these beauties! #TulipLove
-#Tulip #Flower #Nature #Red #Orange #Yellow #Garden #Blooming #Beauty #Flora #Petals #Spring #Botany https://t.co/9OVJ62wiTq
+#Tulip #Flower #Nature #Red #Orange #Yellow #Garden #Blooming #Beauty #Flora #Petals #Spring #Botany

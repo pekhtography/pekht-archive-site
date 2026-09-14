@@ -11,4 +11,4 @@ hashtags:
 ---
 Moscow's skyline looks like a high-budget sci-fi movie where the set designers couldn't agree on a century, so they just used everything. 
 Peak eclectic. 🎞️🏙️
-#Cityscape #GoldenHourPhotography #ArchitectureLovers #Ethereal https://t.co/3RorGq9Dqk
+#Cityscape #GoldenHourPhotography #ArchitectureLovers #Ethereal

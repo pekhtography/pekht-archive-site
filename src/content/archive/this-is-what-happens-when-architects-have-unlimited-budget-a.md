@@ -19,4 +19,4 @@ hashtags:
   - "waterfront"
 ---
 This is what happens when architects have unlimited budget and big dreams 💭 The result? Pure sculptural poetry in motion! 🎨 #ArtisticAmbition
-#monument #Moscow #peter #sculpture #river #history #landmark #architecture #bronze #heritage #tourism #waterfront https://t.co/nx8IXBZTc8
+#monument #Moscow #peter #sculpture #river #history #landmark #architecture #bronze #heritage #tourism #waterfront

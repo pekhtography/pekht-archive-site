@@ -17,4 +17,4 @@ hashtags:
   - "Ecosystem"
 ---
 When the hornet meets the bumblebee: nature’s tiny drama unfolds! 🐝⚔️🌿
-#Bumblebee #Insects #Nature #Wildlife #Pollination #Macro #Bees #Garden #Flowers #Summer #Ecosystem https://t.co/qbHms5CiXf
+#Bumblebee #Insects #Nature #Wildlife #Pollination #Macro #Bees #Garden #Flowers #Summer #Ecosystem

@@ -18,4 +18,4 @@ hashtags:
   - "Landscape"
 ---
 The garden's paparazzi—bees and butterflies—can’t get enough of the rhododendrons' glamorous display
-#Garden #Flowers #Rhododendron #Azalea #Blooms #Nature #Spring #Colorful #Outdoors #Beauty #Plants #Landscape https://t.co/6yoUqwLL6B
+#Garden #Flowers #Rhododendron #Azalea #Blooms #Nature #Spring #Colorful #Outdoors #Beauty #Plants #Landscape

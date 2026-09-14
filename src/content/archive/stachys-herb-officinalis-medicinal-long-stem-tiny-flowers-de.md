@@ -22,4 +22,4 @@ hashtags:
   - "petals"
   - "Softness"
 ---
-#Stachys #Herb #officinalis #Medicinal #long #stem #tiny #flowers #Delicate #healing #Soothing #meadow #Nature #harmony #beauty #petals #Softness https://t.co/GmzqGCynbf
+#Stachys #Herb #officinalis #Medicinal #long #stem #tiny #flowers #Delicate #healing #Soothing #meadow #Nature #harmony #beauty #petals #Softness

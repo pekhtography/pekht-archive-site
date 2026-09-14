@@ -28,4 +28,4 @@ hashtags:
   - "Wild"
   - "meals"
 ---
-#Aspenmushroom #Fungi #Delicious #Vibrant #Color #Thickstalk #Strength #Earth #Nature #Autumn #Harvest #Green #Life #Aspen #mushroom #orangered #cap #stout #stem #flesh  #forest #Wild #meals https://t.co/0eq42e5bG5
+#Aspenmushroom #Fungi #Delicious #Vibrant #Color #Thickstalk #Strength #Earth #Nature #Autumn #Harvest #Green #Life #Aspen #mushroom #orangered #cap #stout #stem #flesh  #forest #Wild #meals

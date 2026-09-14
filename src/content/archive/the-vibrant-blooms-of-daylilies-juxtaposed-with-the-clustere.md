@@ -9,4 +9,4 @@ hashtags:
   - "daylily"
   - "summer"
 ---
-The vibrant blooms of daylilies juxtaposed with the clustered phlox create a stunning visual spectacle #phlox #garden #daylily #summer https://t.co/ID6oLX0rGB
+The vibrant blooms of daylilies juxtaposed with the clustered phlox create a stunning visual spectacle #phlox #garden #daylily #summer

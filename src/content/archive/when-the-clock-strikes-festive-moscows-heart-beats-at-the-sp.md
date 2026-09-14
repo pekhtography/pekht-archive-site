@@ -19,4 +19,4 @@ hashtags:
   - "Winter"
 ---
 🔥🎉 When the clock strikes festive, Moscow's heart beats at the Spasskaya Tower ❤️‍🔥🌟 #WinterInRussia
-#Kremlin #SpasskayaTower #Moscow #Russia #ClockTower #Christmas #NewYear #Festive #Decoration #HolidaySpirit #Travel #Winter https://t.co/47rf8kVS2J
+#Kremlin #SpasskayaTower #Moscow #Russia #ClockTower #Christmas #NewYear #Festive #Decoration #HolidaySpirit #Travel #Winter

@@ -12,4 +12,4 @@ hashtags:
   - "park"
   - "wonder"
 ---
-he sun shone down, gilding the sculptures with warmth #palace #dream #sculptures #art #nature #art #park #wonder https://t.co/eg07LaAiQD
+he sun shone down, gilding the sculptures with warmth #palace #dream #sculptures #art #nature #art #park #wonder

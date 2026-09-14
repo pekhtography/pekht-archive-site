@@ -12,4 +12,4 @@ hashtags:
 The ice erased everything — shoreline, horizon, direction. 🧊 
 One warm body kept the whole frame from going blank. 
 Stillness isn't empty. It's load-bearing. 🪨
-#Solitude #WinterBirds #NaturePhotography #MainCharacterEnergy https://t.co/D3lnefNGON
+#Solitude #WinterBirds #NaturePhotography #MainCharacterEnergy

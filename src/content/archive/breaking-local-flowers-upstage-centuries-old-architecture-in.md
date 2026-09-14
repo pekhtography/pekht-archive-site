@@ -18,4 +18,4 @@ hashtags:
   - "grandeur"
 ---
 Breaking: Local flowers upstage centuries-old architecture in broad daylight 🌺🕵️‍♀️📰 #FlowerCrimeScene
-#palace #architecture #neoclassical #dome #columns #flowers #government #classical #historic #beautiful #grandeur https://t.co/8wOTlHWWeX
+#palace #architecture #neoclassical #dome #columns #flowers #government #classical #historic #beautiful #grandeur

@@ -15,4 +15,4 @@ hashtags:
   - "Illumination"
 ---
 Reflections on the ice mirror the universe's grandeur, a symphony of light and wonder
-#Night #Lights #Architecture #Cosmos #Pavilion #Reflections #Urban #Beauty #Illumination https://t.co/scXj7kdAcm
+#Night #Lights #Architecture #Cosmos #Pavilion #Reflections #Urban #Beauty #Illumination

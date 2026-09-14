@@ -19,4 +19,4 @@ hashtags:
   - "bokeh"
 ---
 Ancient Egyptians believed cats were guardians of the underworld. This little guardian seems more interested in guarding my heart! 💖🏛️ Modern mythology in the making. #HeartGuardian
-#kitten #curly #devon #rex #cute #eyes #ears #cream #fluffy #pet #adorable #bokeh https://t.co/Pu0TXgBrBB
+#kitten #curly #devon #rex #cute #eyes #ears #cream #fluffy #pet #adorable #bokeh

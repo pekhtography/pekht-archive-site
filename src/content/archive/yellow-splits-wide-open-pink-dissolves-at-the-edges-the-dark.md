@@ -14,4 +14,4 @@ Pink dissolves at the edges. 🌷
 The dark one arrives — 
 sealed tight, warmer than both, pulling all the light inward. 🖤 
 The audacity.
-#Tulips #DarkFlowers #GardenPhotography #FlowerPower https://t.co/bIJIrf3bVr
+#Tulips #DarkFlowers #GardenPhotography #FlowerPower

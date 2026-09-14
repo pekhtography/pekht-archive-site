@@ -21,4 +21,4 @@ hashtags:
   - "Love"
   - "Passion"
 ---
-#Chrysanthemum #Flowers #Blooms #Yellow #Sunshine #White #Purity #Bouquet #Arrangement #Vase #Container #Joy #Happiness #CulturalSymbolism #Love #Passion https://t.co/8db0Yt1x1U
+#Chrysanthemum #Flowers #Blooms #Yellow #Sunshine #White #Purity #Bouquet #Arrangement #Vase #Container #Joy #Happiness #CulturalSymbolism #Love #Passion

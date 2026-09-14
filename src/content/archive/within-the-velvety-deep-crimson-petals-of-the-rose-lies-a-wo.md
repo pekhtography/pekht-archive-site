@@ -29,4 +29,4 @@ hashtags:
   - "tenderness"
 ---
 Within the velvety, deep crimson petals of the rose lies a world where love eternally blooms
-#love #passion #crimson #blood #rose #beauty #petals #world #realm #bloom #growth #thorns #pain #emotions #feelings #red #flower #promise #declaration #sweet #scent #heart #tenderness https://t.co/Ve5Pe2hQeB
+#love #passion #crimson #blood #rose #beauty #petals #world #realm #bloom #growth #thorns #pain #emotions #feelings #red #flower #promise #declaration #sweet #scent #heart #tenderness

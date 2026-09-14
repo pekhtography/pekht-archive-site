@@ -13,4 +13,4 @@ A sugar fire is boiling inside this capsule.
 The dense shell lets no air or light in. 
 Only silence, the dull thud of petals, and the wait. 
 One drop of morning dew hisses as it rolls down the velvet. 🌹🔥 
-#Nature #BotanicalArt #BudMoment #DeepRed https://t.co/5jFFE74JZK
+#Nature #BotanicalArt #BudMoment #DeepRed

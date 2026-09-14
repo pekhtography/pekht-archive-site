@@ -15,4 +15,4 @@ a bowl tipped toward whatever moves. 🌺
 A doorway left open briefly. 
 The insects already knew. 🐝 
 The rest of us…
-#NaturePhotography #WildBlooms #RainDay #GoldenHour https://t.co/ZORRY59BMd
+#NaturePhotography #WildBlooms #RainDay #GoldenHour

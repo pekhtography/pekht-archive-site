@@ -12,4 +12,4 @@ hashtags:
 That vintage Christmas kid on a sled has been "almost leaving" since 1987. 
 Still gripping those handles. Still optimistic. Still going absolutely nowhere 🛷
 Legend ✨ 
-#Christmas #VintageChristmas #ChristmasDecor #Nostalgia https://t.co/ojh0pKfiYb
+#Christmas #VintageChristmas #ChristmasDecor #Nostalgia

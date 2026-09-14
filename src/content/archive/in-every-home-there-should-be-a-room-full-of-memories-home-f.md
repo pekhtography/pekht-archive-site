@@ -13,4 +13,4 @@ hashtags:
   - "room"
   - "nostalgia"
 ---
-In every home, there should be a room full of memories #home #feeling #memories #creation #childhood #beauty #room #nostalgia https://t.co/yNcyn1eSVy
+In every home, there should be a room full of memories #home #feeling #memories #creation #childhood #beauty #room #nostalgia

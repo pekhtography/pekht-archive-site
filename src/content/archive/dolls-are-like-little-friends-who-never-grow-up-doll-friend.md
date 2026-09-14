@@ -12,4 +12,4 @@ hashtags:
   - "listen"
   - "adventure"
 ---
-Dolls are like little friends who never grow up #doll #friend #journey #step #story #listen #adventure https://t.co/6iBj1GolQE
+Dolls are like little friends who never grow up #doll #friend #journey #step #story #listen #adventure

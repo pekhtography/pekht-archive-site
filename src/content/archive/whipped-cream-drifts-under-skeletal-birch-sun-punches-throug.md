@@ -15,4 +15,4 @@ Sun punches through like a stubborn friend:
 Cold gnaws your cheeks—hungry dog energy.
 You breathe out fog, white surrender flags.
 But somehow… that ray makes you stay 🐕‍🦺🏳️🌤️
-#Winter #Nature #Snow #Cold https://t.co/kBzfIfPDAm
+#Winter #Nature #Snow #Cold

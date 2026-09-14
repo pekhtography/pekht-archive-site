@@ -26,4 +26,4 @@ hashtags:
   - "encore"
 ---
 The darkest grapes are just drama queens waiting to be savored
-#sweetness #darkness #light #fruits #drama #savory #dessert #vineyard #darkest #grape #vine #sweetest #nectar #divas #secrets #flavor #wine #spotlight #berries #encore https://t.co/yXRqD8crIc
+#sweetness #darkness #light #fruits #drama #savory #dessert #vineyard #darkest #grape #vine #sweetest #nectar #divas #secrets #flavor #wine #spotlight #berries #encore

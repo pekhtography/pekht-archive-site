@@ -12,4 +12,4 @@ hashtags:
   - "peace"
   - "hope"
 ---
-The white rose embodies the spirit of peace and hope #white #rose #purity #innocence #garden #peace #hope https://t.co/9rWrI9YMSV
+The white rose embodies the spirit of peace and hope #white #rose #purity #innocence #garden #peace #hope

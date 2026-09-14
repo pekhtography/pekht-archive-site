@@ -17,4 +17,4 @@ hashtags:
   - "aesthetic"
 ---
 A rooftop sunset feels like cheating gravity. ☀️🏙️ It’s not the city you see—it’s yourself reflected in glass. Heights reveal truths. #MirrorInTheSky
-#RooftopMoodVibes #cityscape #architecture #sunset #travel #photography #urbanexploration #luxurylifestyle #nightvibes #aesthetic https://t.co/fVCCbsqMbj
+#RooftopMoodVibes #cityscape #architecture #sunset #travel #photography #urbanexploration #luxurylifestyle #nightvibes #aesthetic

@@ -21,4 +21,4 @@ hashtags:
   - "Grace"
 ---
 Helleborus, also known as the Christmas rose or Hellebore, is the whisper of spring in winter's ear—a floral rebellion against the cold!
-#Helleborus #Christmas #rose #Hellebore #Blooms #Nature #Garden #Flora #Petals #Winter #Beauty #Botany #Elegance #Serenity #Grace https://t.co/C6Yd8WAy4f
+#Helleborus #Christmas #rose #Hellebore #Blooms #Nature #Garden #Flora #Petals #Winter #Beauty #Botany #Elegance #Serenity #Grace

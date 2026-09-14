@@ -12,4 +12,4 @@ hashtags:
 Summer petals, winter spirit 🌿🎄
 White Campion teaches us that celebration lives in intention — 
 in the joy we carry, not the season we wait for ✨
-#NewYearSpirit #LifeCelebration #NatureWonder #WhiteCampion https://t.co/LyabkJjPCS
+#NewYearSpirit #LifeCelebration #NatureWonder #WhiteCampion

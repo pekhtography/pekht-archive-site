@@ -12,4 +12,4 @@ hashtags:
 White Campion blooms under the summer sun 🌿
 Its delicate petals carry the same hope and wonder we feel when anticipating the New Year 🎇
 Some miracles live in timing, some in the heart ✨
-#NewYearSpirit #NatureWonder #FestiveVibes #WhiteCampion https://t.co/nq1AGnx8b9
+#NewYearSpirit #NatureWonder #FestiveVibes #WhiteCampion

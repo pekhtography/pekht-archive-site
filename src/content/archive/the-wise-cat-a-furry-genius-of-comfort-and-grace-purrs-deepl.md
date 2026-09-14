@@ -21,4 +21,4 @@ hashtags:
   - "Grace"
 ---
 The wise cat, a furry genius of comfort and grace, purrs deeply while plotting world domination.
-#Cat #Feline #Masterpiece #Wisdom #Eyes #Comfort #Mystery #Insight #Depth #Warmth #Freedom #Majesty #King #Purr #Grace https://t.co/K96Y241U00
+#Cat #Feline #Masterpiece #Wisdom #Eyes #Comfort #Mystery #Insight #Depth #Warmth #Freedom #Majesty #King #Purr #Grace

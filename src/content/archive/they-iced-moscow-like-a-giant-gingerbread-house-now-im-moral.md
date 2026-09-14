@@ -12,4 +12,4 @@ hashtags:
 They iced Moscow like a giant gingerbread house. 
 Now I’m morally conflicted: admire or take a bite? 
 The Kremlin spire looks particularly crunchy 🧁🏰 
-#Christmas #Moscow #ArchitecturePhotography #Magic https://t.co/67Dkice8oM
+#Christmas #Moscow #ArchitecturePhotography #Magic

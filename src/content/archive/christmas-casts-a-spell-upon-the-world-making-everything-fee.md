@@ -14,4 +14,4 @@ hashtags:
   - "hope"
   - "renewal"
 ---
-Christmas casts a spell upon the world, making everything feel gentler and more enchanting #Christmas #lights #joy #decorations #magic #twinkle #tree #hope #renewal https://t.co/s7s2KCrSS4
+Christmas casts a spell upon the world, making everything feel gentler and more enchanting #Christmas #lights #joy #decorations #magic #twinkle #tree #hope #renewal

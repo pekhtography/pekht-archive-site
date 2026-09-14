@@ -18,4 +18,4 @@ hashtags:
   - "Darkness"
 ---
 Winter— isn’t it cute how the wind tries to sneak in and steal your body heat like a thief in the night?
-#Winter #Frosty #Wind #Warmth #Cozy #Snowflakes #Cold #Chill #Thief #Robbery #Night #Darkness https://t.co/kYt9rRtIaW
+#Winter #Frosty #Wind #Warmth #Cozy #Snowflakes #Cold #Chill #Thief #Robbery #Night #Darkness

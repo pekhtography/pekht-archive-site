@@ -15,4 +15,4 @@ yet here🐦
 every feather arrives loud as a chandelier in a cave.
 One composed bird. One cracked branch.
 The whole argument about beauty and camouflage, unresolved✨
-#WildlifePhotography #BirdWatching #ForestLife #Feather https://t.co/gaIj2kD9Cl
+#WildlifePhotography #BirdWatching #ForestLife #Feather

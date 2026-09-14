@@ -19,4 +19,4 @@ hashtags:
   - "Plants"
 ---
 Spring has sprung, and the rhododendrons are here to steal the show! 🌸🌿✨ #RhododendronRoyalty
-#Rhododendron #Flowers #Nature #Garden #Bloom #Pink #Botanical #Spring #Floral #Petals #Outdoor #Plants https://t.co/zUr7mQoGZJ
+#Rhododendron #Flowers #Nature #Garden #Bloom #Pink #Botanical #Spring #Floral #Petals #Outdoor #Plants

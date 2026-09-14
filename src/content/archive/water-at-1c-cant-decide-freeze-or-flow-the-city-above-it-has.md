@@ -14,4 +14,4 @@ The city above it has the same problem —
 half marble empire, half glass future, one orange sky igniting both. 
 The river picks neither. 
 It just reflects. ✨
-#CityPhotography #MoscowSunset #FrozenFire #WinterMood https://t.co/kgvOSXQjnj
+#CityPhotography #MoscowSunset #FrozenFire #WinterMood

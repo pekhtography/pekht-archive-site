@@ -19,4 +19,4 @@ hashtags:
   - "Cultural"
   - "Loss"
 ---
-#Earthquake #Bridge #Destruction #Heritage #Palace #Disaster #Ruins #History #Collapse #Tragedy #Asia #Damage #Cultural #Loss https://t.co/uH9BLXPSay
+#Earthquake #Bridge #Destruction #Heritage #Palace #Disaster #Ruins #History #Collapse #Tragedy #Asia #Damage #Cultural #Loss

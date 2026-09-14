@@ -19,4 +19,4 @@ hashtags:
   - "icon"
 ---
 A car that outlived presidents, wars, and trends—yet still turns heads 😎🔥 History doesn’t age, it cruises. #TimelessJeepsterVibes
-#classic #vintage #retro #automobile #convertible #Jeepster #heritage #legend #style #timeless #collectible #icon https://t.co/NuRlIaw4QX
+#classic #vintage #retro #automobile #convertible #Jeepster #heritage #legend #style #timeless #collectible #icon

@@ -18,4 +18,4 @@ hashtags:
   - "tolerate"
   - "food"
 ---
-If a cat had a dollar for every time they ignored you, they would be the richest beings on Earth #cat #comfort #sleep #wisdom #home #pet #attitude #dollar #richest #nap #love #tolerate #food https://t.co/2SjgFdwTnI
+If a cat had a dollar for every time they ignored you, they would be the richest beings on Earth #cat #comfort #sleep #wisdom #home #pet #attitude #dollar #richest #nap #love #tolerate #food

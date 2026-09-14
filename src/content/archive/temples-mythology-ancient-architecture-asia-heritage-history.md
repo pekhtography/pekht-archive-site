@@ -19,4 +19,4 @@ hashtags:
   - "legend"
   - "ruins"
 ---
-#temples #mythology #ancient #architecture #asia #heritage #history #earthquake #destruction #bridge #river #culture #legend #ruins https://t.co/jZxeTCaPcO
+#temples #mythology #ancient #architecture #asia #heritage #history #earthquake #destruction #bridge #river #culture #legend #ruins

@@ -19,4 +19,4 @@ hashtags:
   - "Fluffy"
   - "Camouflage"
 ---
-#FoxMoth #Moth #Caterpillar #Transformation #FuzzyBody #Protection #Clover #Nature #Nocturnal #Mystery #Cocoon #Transformation #Metamorphosis #Fluffy #Camouflage https://t.co/3aQUDNW6tu
+#FoxMoth #Moth #Caterpillar #Transformation #FuzzyBody #Protection #Clover #Nature #Nocturnal #Mystery #Cocoon #Transformation #Metamorphosis #Fluffy #Camouflage

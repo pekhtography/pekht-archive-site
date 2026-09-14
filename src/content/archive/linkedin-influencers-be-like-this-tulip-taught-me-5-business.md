@@ -17,4 +17,4 @@ hashtags:
   - "closeup"
 ---
 LinkedIn influencers be like: "This tulip taught me 5 business lessons about standing out in a competitive market" 🤡 Plot twist: it's literally just trying to get pollinated, Greg 🐝 #LinkedInLogic
-#tulip #red #flower #bloom #garden #spring #nature #petals #photography #closeup https://t.co/sTObAM0J9c
+#tulip #red #flower #bloom #garden #spring #nature #petals #photography #closeup

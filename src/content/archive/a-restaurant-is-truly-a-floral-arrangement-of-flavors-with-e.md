@@ -24,4 +24,4 @@ hashtags:
   - "romance"
 ---
 A restaurant is truly a floral arrangement of flavors, with every bite a new petal unfolding joy—but beware of wilting greens!
-#good #restaurant #bouquet #flowers #fresh #colorful #heart #joy #cuisine #masterpiece #taste #petal #delight #meal #flavors #affair #palate #romance https://t.co/M2tFef8aUW
+#good #restaurant #bouquet #flowers #fresh #colorful #heart #joy #cuisine #masterpiece #taste #petal #delight #meal #flavors #affair #palate #romance

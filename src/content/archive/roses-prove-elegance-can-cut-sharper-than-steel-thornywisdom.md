@@ -19,4 +19,4 @@ hashtags:
   - "freshness"
 ---
 Roses prove: elegance can cut sharper than steel 🌹⚔️ #ThornyWisdom
-#rose #flower #nature #garden #petals #bloom #beauty #floral #elegance #serenity #romance #freshness https://t.co/hgO2FJsEmu
+#rose #flower #nature #garden #petals #bloom #beauty #floral #elegance #serenity #romance #freshness

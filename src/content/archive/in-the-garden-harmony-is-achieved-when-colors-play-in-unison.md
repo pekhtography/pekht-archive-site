@@ -12,4 +12,4 @@ hashtags:
   - "daylily"
   - "hosta"
 ---
-In the garden, harmony is achieved when colors play in unison, like an orchestra in bloom #flowers #harmony #colors #garden #phlox #daylily #hosta https://t.co/jJ6wPjZTdr
+In the garden, harmony is achieved when colors play in unison, like an orchestra in bloom #flowers #harmony #colors #garden #phlox #daylily #hosta

@@ -19,4 +19,4 @@ hashtags:
   - "photography"
 ---
 Breaking: Local mushrooms caught running illegal underground operation 🍄🕵️ Authorities baffled by their sophisticated root network! 🤔 #MushroomMafia
-#mushrooms #forest #nature #fungi #woodland #organic #growth #decay #ecosystem #natural #wilderness #photography https://t.co/IcxTAZr1uX
+#mushrooms #forest #nature #fungi #woodland #organic #growth #decay #ecosystem #natural #wilderness #photography

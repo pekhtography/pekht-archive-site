@@ -16,4 +16,4 @@ hashtags:
   - "sightseeing"
 ---
 Sometimes the best view isn't from the top of the mountain, but from the gentle rhythm of water beneath your feet 🚢 Every river tells a thousand stories, and today I'm listening to one more ⛵ #RiverStories
-#river #boat #cable #transport #city #ferry #urban #travel #sightseeing https://t.co/gBVM0tnncq
+#river #boat #cable #transport #city #ferry #urban #travel #sightseeing

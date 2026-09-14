@@ -19,4 +19,4 @@ hashtags:
   - "renewal"
 ---
 POV: You're a bee and this is your Michelin-starred restaurant 🐝🌸 Five stars, would definitely buzz again! The nectar service is chef's kiss 👨‍🍳💋 #BeeLife
-#blossom #spring #flowers #white #cherry #nature #bloom #petals #garden #fresh #beauty #renewal https://t.co/ykOrTb1SvB
+#blossom #spring #flowers #white #cherry #nature #bloom #petals #garden #fresh #beauty #renewal

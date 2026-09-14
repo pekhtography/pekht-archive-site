@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 Clematis whimsically stretches up to 30 feet, as if it’s playfully striving to high-five the heavens! 🌱✨
-#Clematis #Flower #Garden #Nature #Bloom #Petals #Botany #Macro #Spring #Vine #Purple #Beauty https://t.co/X7uNGwgxTJ
+#Clematis #Flower #Garden #Nature #Bloom #Petals #Botany #Macro #Spring #Vine #Purple #Beauty

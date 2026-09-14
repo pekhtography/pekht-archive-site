@@ -18,4 +18,4 @@ hashtags:
   - "Blossom"
 ---
 Elecampane: when the sun forgets to rise, this flower takes over the morning shift!
-#Elecampane #Sunflower #Yellow #Bloom #Nature #Petals #Flower #Golden #Garden #Beauty #Summer #Blossom https://t.co/DcxtaI76X3
+#Elecampane #Sunflower #Yellow #Bloom #Nature #Petals #Flower #Golden #Garden #Beauty #Summer #Blossom

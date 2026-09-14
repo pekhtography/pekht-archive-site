@@ -12,4 +12,4 @@ hashtags:
 Watching this magenta fist punch through a library of stoic needles, 
 I feel its velvet heat and spicy scent defying the green silence. 
 Absolute main character energy. 🌺🔥
-#nature #botanical #bloomcore #vibrant https://t.co/vDS4d6JaKI
+#nature #botanical #bloomcore #vibrant

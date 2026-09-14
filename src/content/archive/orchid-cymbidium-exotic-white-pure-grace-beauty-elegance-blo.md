@@ -25,4 +25,4 @@ hashtags:
   - "Harmony"
   - "Growth"
 ---
-#Orchid #Cymbidium #Exotic #White #Pure #Grace #Beauty #Elegance #Bloom #Renewal #Nature #Serenity #Flower #Purity #Pink #Petals #Softness #Garden #Harmony #Growth https://t.co/Q3B0FJLus6
+#Orchid #Cymbidium #Exotic #White #Pure #Grace #Beauty #Elegance #Bloom #Renewal #Nature #Serenity #Flower #Purity #Pink #Petals #Softness #Garden #Harmony #Growth

@@ -22,4 +22,4 @@ hashtags:
   - "Floral"
 ---
 Life's layers unfold like an allium in bloom—complex yet stunning! 🌍🌸 #LayeredLife
-#Allium #Flower #Bloom #Nature #Purple #Garden #Macro #Spring #Botanical #Plant #Outdoor #Photography #Beauty #Botany #Floral https://t.co/1KCdwKaH8V
+#Allium #Flower #Bloom #Nature #Purple #Garden #Macro #Spring #Botanical #Plant #Outdoor #Photography #Beauty #Botany #Floral

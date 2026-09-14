@@ -19,4 +19,4 @@ hashtags:
   - "futuristic"
 ---
 🚀 Gravity: "Am I a joke to you?" Building: "Pretty much, yeah" 🤡🏢 #GravityWho 
-#skyscraper #architecture #modern #building #glass #curved #urban #city #design #contemporary #tower #futuristic https://t.co/xHGuN2SyLb
+#skyscraper #architecture #modern #building #glass #curved #urban #city #design #contemporary #tower #futuristic

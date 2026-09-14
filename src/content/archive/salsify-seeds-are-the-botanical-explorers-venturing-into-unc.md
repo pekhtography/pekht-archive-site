@@ -18,4 +18,4 @@ hashtags:
   - "wildflowers"
 ---
 Salsify seeds are the botanical explorers, venturing into uncharted territories with every breeze
-#salsify #tragopogon #nature #flower #plant #garden #bloom #outdoors #botany #flora #meadow #wildflowers https://t.co/s1S4oHFA5w
+#salsify #tragopogon #nature #flower #plant #garden #bloom #outdoors #botany #flora #meadow #wildflowers

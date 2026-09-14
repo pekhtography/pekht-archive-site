@@ -17,4 +17,4 @@ hashtags:
   - "blossom"
   - "floral"
 ---
-#nature #flowers #bloom #garden #spring #beauty #colorful #wildflowers #petals #vibrant #blossom #floral https://t.co/xapjv6st3Q
+#nature #flowers #bloom #garden #spring #beauty #colorful #wildflowers #petals #vibrant #blossom #floral

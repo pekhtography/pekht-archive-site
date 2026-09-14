@@ -11,4 +11,4 @@ hashtags:
 ---
 Her flame doesn't need a charger 🕯️
 In a world of pixel-perfect holidays, she's the glitch of real warmth we forgot how to feel 🔥✨
-#Christmas #VintageChristmas #ChristmasDecor #Nostalgia https://t.co/nQvOY6XI4l
+#Christmas #VintageChristmas #ChristmasDecor #Nostalgia

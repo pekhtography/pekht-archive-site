@@ -20,4 +20,4 @@ hashtags:
   - "Vivid"
 ---
 The crown imperial was such a hit with ancient royals that it’s basically the celebrity of spring blooms—always ready for its close-up!
-#CrownImperial #Majesty #Royal #Nobility #Garden #Sanctuary #Nature #Wonder #Beauty #Elegance #Spring #Renewal #Colors #Vivid https://t.co/eVhdLFu5kR
+#CrownImperial #Majesty #Royal #Nobility #Garden #Sanctuary #Nature #Wonder #Beauty #Elegance #Spring #Renewal #Colors #Vivid

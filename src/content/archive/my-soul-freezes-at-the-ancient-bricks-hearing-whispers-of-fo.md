@@ -8,4 +8,4 @@ hashtags:
   - "Moscow"
   - "Timeless"
 ---
-My soul freezes at the ancient bricks, hearing whispers of forgotten stories. My legs: "Shortcut to coffee, hurry!" 🧱☕️😅 Every city walk is a duel between wonder and routine. #UrbanFantasy #Moscow #Timeless https://t.co/GEPyFtlbU0
+My soul freezes at the ancient bricks, hearing whispers of forgotten stories. My legs: "Shortcut to coffee, hurry!" 🧱☕️😅 Every city walk is a duel between wonder and routine. #UrbanFantasy #Moscow #Timeless

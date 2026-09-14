@@ -23,4 +23,4 @@ hashtags:
   - "celebration"
   - "garden"
 ---
-#Cymbidium #Beauty #Yellow #Orchid #Nature #Petals #Warmth #Waxed #Vitality #Flowers #Sunshine #Sunlight #exotic #cheerfulness #gentleness #blooms #celebration #garden https://t.co/5xtfKcRNWo
+#Cymbidium #Beauty #Yellow #Orchid #Nature #Petals #Warmth #Waxed #Vitality #Flowers #Sunshine #Sunlight #exotic #cheerfulness #gentleness #blooms #celebration #garden

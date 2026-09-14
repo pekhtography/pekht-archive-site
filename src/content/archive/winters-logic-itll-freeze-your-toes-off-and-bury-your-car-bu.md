@@ -14,4 +14,4 @@ It'll freeze your toes off and bury your car,
 but then gift-wrap the entire world in diamond sparkles just for the 'gram. 
 Can't even be mad. 
 Just knee-deep in awe. 😂❄️✨
-#WinterWonderland #ColdWeatherFun #SunOnSnow #CrispJoy https://t.co/w6xHHpUb2A
+#WinterWonderland #ColdWeatherFun #SunOnSnow #CrispJoy

@@ -19,4 +19,4 @@ hashtags:
   - "beauty"
 ---
 This garden whispers ancient secrets: "The art of doing nothing is actually doing everything" 🌸 Confucius would totally get it 💭 #AncientSecrets
-#autumn #garden #japanese #pond #foliage #tranquil #golden #reflection #nature #peaceful #zen #beauty https://t.co/CcVO0X5cGM
+#autumn #garden #japanese #pond #foliage #tranquil #golden #reflection #nature #peaceful #zen #beauty

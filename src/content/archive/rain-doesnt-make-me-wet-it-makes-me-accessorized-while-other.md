@@ -14,4 +14,4 @@ It makes me accessorized.
 While others fold, 
 I just stand here, turning atmospheric pressure into a diamond collection. 
 Basic survival is for deciduous trees ✨💎 
-#Pine #Resilience #AfterTheRain #NatureWins https://t.co/rG2AFBmpdN
+#Pine #Resilience #AfterTheRain #NatureWins

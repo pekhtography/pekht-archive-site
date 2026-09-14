@@ -19,4 +19,4 @@ hashtags:
   - "Beauty"
 ---
 Wild blue phlox: making spring sweeter, one petal at a time 🌸😄 #PhloxMagic
-#Phlox #Divaricata #Wildflower #BlueFlower #Nature #Botany #Garden #Blooms #Petals #Floral #Spring #Beauty https://t.co/5NLK4FNV2Z
+#Phlox #Divaricata #Wildflower #BlueFlower #Nature #Botany #Garden #Blooms #Petals #Floral #Spring #Beauty

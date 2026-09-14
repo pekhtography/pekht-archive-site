@@ -13,4 +13,4 @@ Grey held the sky. 🌩️
 Then orange tore a seam — hot, horizontal, clean. 
 The storm retreated. The light stayed. 🔥 
 Controlled demolition.
-#Sunset #StormChasing #GoldenHour #SkyFire https://t.co/GJtAeCRnr5
+#Sunset #StormChasing #GoldenHour #SkyFire

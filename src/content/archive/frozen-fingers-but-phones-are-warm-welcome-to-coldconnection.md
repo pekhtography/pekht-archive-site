@@ -19,4 +19,4 @@ hashtags:
   - "dailygrind"
 ---
 🚋❄️ Frozen fingers, but phones are warm. Welcome to #ColdConnection!
-#commute #winterfashion #publictransport #citylife #furcoat #urbanstyle #waiting #friends #coldweather #streetphotography #busstop #dailygrind https://t.co/7BnZLAqDjz
+#commute #winterfashion #publictransport #citylife #furcoat #urbanstyle #waiting #friends #coldweather #streetphotography #busstop #dailygrind

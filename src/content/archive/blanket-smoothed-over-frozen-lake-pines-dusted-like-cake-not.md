@@ -14,4 +14,4 @@ Not a footprint—
 just the audacity of blank space existing in 2026 🌲 
 Nature's version of Inbox Zero. 
 Absolutely unhinged ⚡ 
-#Serenity #WinterWonderland #FreshStart #Breathe https://t.co/dJJ375zFZP
+#Serenity #WinterWonderland #FreshStart #Breathe

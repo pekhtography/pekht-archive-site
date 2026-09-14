@@ -13,4 +13,4 @@ Moon's laughing at my midnight confession 🌙
 Carving "SUN, I LOVE YOU" in swirls and thorns across this glass—
 she's sleeping but my ego shines brighter than stars. 
 Nobody witnesses greatness in real time 💎❄️ 
-#LoveLanguage #FrostArt #WinterRomance #BoldLove https://t.co/r8CehCRUa0
+#LoveLanguage #FrostArt #WinterRomance #BoldLove

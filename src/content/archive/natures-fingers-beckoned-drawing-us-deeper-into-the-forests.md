@@ -27,4 +27,4 @@ hashtags:
   - "Ecosystem"
 ---
 Nature's fingers beckoned, drawing us deeper into the forest's mystery along a narrow road
-#Road #Adventure #Woods #Green #Trees #Shade #Journey #Discovery #Mystery #Enigma #Forest #Wilderness #Path #Exploration #Nature #Growth #Secrets #Quiet #Whispers #Diversity #Ecosystem https://t.co/2sljAUoijE
+#Road #Adventure #Woods #Green #Trees #Shade #Journey #Discovery #Mystery #Enigma #Forest #Wilderness #Path #Exploration #Nature #Growth #Secrets #Quiet #Whispers #Diversity #Ecosystem

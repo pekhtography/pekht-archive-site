@@ -12,4 +12,4 @@ hashtags:
   - "Autumn"
   - "garden"
 ---
-Flowers don’t worry about how they’re going to bloom. They just open up and turn toward the light and that makes them magic #Colchicum #Flower #Gorgeous #Sun #Light #Autumn #garden https://t.co/JdLPCkaEwo
+Flowers don’t worry about how they’re going to bloom. They just open up and turn toward the light and that makes them magic #Colchicum #Flower #Gorgeous #Sun #Light #Autumn #garden

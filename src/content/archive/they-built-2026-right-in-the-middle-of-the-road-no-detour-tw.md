@@ -13,4 +13,4 @@ They built 2026 right in the middle of the road. 🚪
 No detour. 
 Two strangers walked through — and the year swallowed them whole.
 Time doesn't wait. It builds gates. ✨
-#NewYear2026 #WinterInMoscow #CityLights #GoldenHour https://t.co/FArJ73QTif
+#NewYear2026 #WinterInMoscow #CityLights #GoldenHour

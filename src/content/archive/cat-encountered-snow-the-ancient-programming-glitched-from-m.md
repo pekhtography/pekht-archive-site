@@ -12,4 +12,4 @@ Cat encountered snow.
 The ancient programming glitched. 
 From mighty hunter to a philosopher of discomfort in 0.3 seconds. 
 His entire life is a question mark now. 🤔🐾 
-#Cat #CatLogic #ExistentialCrisis https://t.co/DDNDNEGJna
+#Cat #CatLogic #ExistentialCrisis

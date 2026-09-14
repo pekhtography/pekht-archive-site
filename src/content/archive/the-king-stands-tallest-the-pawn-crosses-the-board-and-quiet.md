@@ -12,4 +12,4 @@ hashtags:
 The king stands tallest. ♟️ 
 The pawn crosses the board — and quietly takes his crown. 👑 
 Power was never the tallest piece.
-#Chess #StrategicMind #PowerPlay #MindGames https://t.co/Tnv5I9kTA5
+#Chess #StrategicMind #PowerPlay #MindGames

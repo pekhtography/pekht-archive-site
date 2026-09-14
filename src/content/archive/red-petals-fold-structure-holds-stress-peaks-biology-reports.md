@@ -13,4 +13,4 @@ Red petals fold. Structure holds. Stress peaks.
 Biology reports: 
 perfect specimen, complete burnout. 
 Blooms on a deadline, collapses into a masterpiece. 📈🥀😅 
-#Nature #BotanicalDrama #RougeVelvet #ExhaustedBeauty https://t.co/DhDESXNOww
+#Nature #BotanicalDrama #RougeVelvet #ExhaustedBeauty

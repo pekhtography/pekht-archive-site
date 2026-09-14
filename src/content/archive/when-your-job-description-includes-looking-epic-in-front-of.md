@@ -19,4 +19,4 @@ hashtags:
   - "family"
 ---
 When your job description includes 'looking epic in front of fighter jets' 😏 Some people have all the luck with career choices ✈️💫 #EpicJobDescription
-#military #women #uniforms #aircraft #parade #moscow #celebration #patriotic #history #ceremony #aviation #family https://t.co/kZfJVLbO0t
+#military #women #uniforms #aircraft #parade #moscow #celebration #patriotic #history #ceremony #aviation #family

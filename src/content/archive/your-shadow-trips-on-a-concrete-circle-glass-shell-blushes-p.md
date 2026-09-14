@@ -12,4 +12,4 @@ hashtags:
 Your shadow trips on a concrete circle. Glass shell blushes pink. 
 The Stalinist tower squints: 
 "Back in my day, Mars was red, not parked on." 🏢🔴👴
-#TwilightZone #BrutalistDreams #FakeNatureReal #GoldenHourLies https://t.co/cvVXqA7VdY
+#TwilightZone #BrutalistDreams #FakeNatureReal #GoldenHourLies

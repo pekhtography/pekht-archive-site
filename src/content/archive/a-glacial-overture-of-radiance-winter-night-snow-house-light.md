@@ -18,4 +18,4 @@ hashtags:
   - "Magic"
 ---
 A Glacial Overture of Radiance
-#Winter #Night #Snow #House #Lights #Moon #Christmas #Cold #Cozy #Glow #Holiday #Magic https://t.co/GClBWIPKMG
+#Winter #Night #Snow #House #Lights #Moon #Christmas #Cold #Cozy #Glow #Holiday #Magic

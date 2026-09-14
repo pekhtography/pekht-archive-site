@@ -15,4 +15,4 @@ hashtags:
   - "Art"
 ---
 In the glow of the setting sun, the pavilion shines as a beacon of cultural legacy 
-#Exhibition #Architecture #Sunset #History #Culture #Heritage #Landmark #GoldenHour #Art https://t.co/oa52OsXjrP
+#Exhibition #Architecture #Sunset #History #Culture #Heritage #Landmark #GoldenHour #Art

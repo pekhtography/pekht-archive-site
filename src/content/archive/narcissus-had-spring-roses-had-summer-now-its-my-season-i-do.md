@@ -14,4 +14,4 @@ Now it's my season.
 I don't do pastels. 
 I do velvet, burgundy, and flames on the tips. 
 When the curtain falls, you'll remember who closed the show 🎭🍁 
-#Chrysanthemum #FallVibes #AutumnColors #GrandFinale https://t.co/s0b8TjB7aC
+#Chrysanthemum #FallVibes #AutumnColors #GrandFinale

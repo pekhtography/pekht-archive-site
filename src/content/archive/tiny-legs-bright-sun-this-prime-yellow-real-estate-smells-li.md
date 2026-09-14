@@ -13,4 +13,4 @@ Tiny legs. Bright sun.
 This prime yellow real estate smells like nectar and fresh morning dew. 
 One spider, king of the hill. 
 Ultimate landlord. 🕷️☀️
-#NatureLovers #GardenLife #MacroMagic #SunshineVibes https://t.co/TzTlBLMkdT
+#NatureLovers #GardenLife #MacroMagic #SunshineVibes

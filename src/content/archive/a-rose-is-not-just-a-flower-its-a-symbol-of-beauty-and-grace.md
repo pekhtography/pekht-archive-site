@@ -13,4 +13,4 @@ hashtags:
   - "nature"
   - "garden"
 ---
-A rose is not just a flower; it’s a symbol of beauty and grace #rose #elegance #beauty #grace #charm#love #emotion #nature #garden https://t.co/pDupVfNFyh
+A rose is not just a flower; it’s a symbol of beauty and grace #rose #elegance #beauty #grace #charm#love #emotion #nature #garden

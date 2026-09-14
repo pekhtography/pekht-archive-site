@@ -14,4 +14,4 @@ hashtags:
   - "joy"
   - "beauty"
 ---
-In the vibrant garden, the sandy tulip stands out, a delightful burst of warmth against the green backdrop #tulip #sand #garden #breeze #whisper #warmth #sunlight #joy #beauty https://t.co/kC7vATAPh8
+In the vibrant garden, the sandy tulip stands out, a delightful burst of warmth against the green backdrop #tulip #sand #garden #breeze #whisper #warmth #sunlight #joy #beauty

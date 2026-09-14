@@ -15,4 +15,4 @@ hashtags:
   - "sunny"
   - "garden"
 ---
-The yellow iris — a bloom so bright, it draws the bees with pure delight #yellow #sunshine #iris #beauty #attract #magnetism #bee #pollination #sunny #garden https://t.co/MgGwdwhUQf
+The yellow iris — a bloom so bright, it draws the bees with pure delight #yellow #sunshine #iris #beauty #attract #magnetism #bee #pollination #sunny #garden

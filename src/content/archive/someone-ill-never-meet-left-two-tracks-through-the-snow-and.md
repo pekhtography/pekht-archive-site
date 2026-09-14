@@ -12,4 +12,4 @@ hashtags:
 Someone I'll never meet left two tracks through the snow ❄️ — 
 and now I'm following their confidence. 
 Turns out "trust the process" was always a stranger's footprints. 🌲
-#Nature #WinterForest #OffTheBeatenPath #SilenceFeels https://t.co/zoBMo5rSSy
+#Nature #WinterForest #OffTheBeatenPath #SilenceFeels

@@ -28,4 +28,4 @@ hashtags:
   - "Bird"
 ---
 Mandarin ducks form monogamous pairs, a rarity among birds
-#Beauty #Elegance #Flamboyance #Vibrancy #Color #Palette #Mandarin #Charm #Duck #Grace #Fashionista #Trendsetter #Nature #Wonder #Evolutionary #Survival #Marvel #Spectacle #Mallards #Chromatic #Spectrum #Bird https://t.co/td38lCRTGw
+#Beauty #Elegance #Flamboyance #Vibrancy #Color #Palette #Mandarin #Charm #Duck #Grace #Fashionista #Trendsetter #Nature #Wonder #Evolutionary #Survival #Marvel #Spectacle #Mallards #Chromatic #Spectrum #Bird

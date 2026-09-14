@@ -13,4 +13,4 @@ That white dot above the spire: 5,500°C of absolute indifference. 🌑
 The city below glows copper-warm, the river melts gold — 
 and we call this "cozy." 🔥 
 The most violent light, wearing the softest name.
-#Sunset #CityReflections #GoldenHour #BurningCity https://t.co/Fmr6x7YpGb
+#Sunset #CityReflections #GoldenHour #BurningCity

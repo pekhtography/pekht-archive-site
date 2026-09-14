@@ -8,4 +8,4 @@ hashtags:
   - "Contrast"
   - "Progress"
 ---
-Cities are just time made visible. Each generation builds its layer, never erasing the last—just leaning against it. 🏛️→🌆→✨ #Urban #Contrast #Progress https://t.co/Nfuhj1aAPw
+Cities are just time made visible. Each generation builds its layer, never erasing the last—just leaning against it. 🏛️→🌆→✨ #Urban #Contrast #Progress

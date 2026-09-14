@@ -11,4 +11,4 @@ hashtags:
 ---
 That stare has been clocking every creature since dinosaurs vanished. 🦅 
 Your LinkedIn confidence is a damp napkin next to this face. 💀 
-#Wildlife #VultureCulture #ApexScavenger #UnholyGaze https://t.co/xNAMMwwSKy
+#Wildlife #VultureCulture #ApexScavenger #UnholyGaze

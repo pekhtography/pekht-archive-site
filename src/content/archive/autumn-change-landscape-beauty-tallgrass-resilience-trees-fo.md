@@ -21,4 +21,4 @@ hashtags:
   - "Leaves"
   - "Reedgrass"
 ---
-#Autumn #Change #Landscape #Beauty #TallGrass #Resilience #Trees #Forest #Mystery #Color #Vibrance #Wildlife #Biodiversity #Meadow #Leaves #Reedgrass https://t.co/9CILIvKFwJ
+#Autumn #Change #Landscape #Beauty #TallGrass #Resilience #Trees #Forest #Mystery #Color #Vibrance #Wildlife #Biodiversity #Meadow #Leaves #Reedgrass

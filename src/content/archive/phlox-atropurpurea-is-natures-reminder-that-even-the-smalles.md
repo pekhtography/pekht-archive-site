@@ -18,4 +18,4 @@ hashtags:
   - "Elegance"
 ---
 Phlox Atropurpurea is nature's reminder that even the smallest blooms can be the stars of the season, a delicate showstopper
-#Phlox #Atropurpurea #Garden #Bloom #Delicate #Purple #Nature #Flower #Spring #Beauty #Grace #Elegance https://t.co/vzexu5jFPW
+#Phlox #Atropurpurea #Garden #Bloom #Delicate #Purple #Nature #Flower #Spring #Beauty #Grace #Elegance

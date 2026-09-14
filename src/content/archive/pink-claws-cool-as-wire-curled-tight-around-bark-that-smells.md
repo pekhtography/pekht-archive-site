@@ -14,4 +14,4 @@ cool as wire, curled tight around bark that smells of rain —
 grip a continent's edge 🌍, 
 because this lemon-chest, 
 fog-soft blur of feather just flew here from another world. ✨
-#NaturePhotography #Birdwatching #TinyButMighty #WildlifeMoments https://t.co/HD8ALBDSeu
+#NaturePhotography #Birdwatching #TinyButMighty #WildlifeMoments

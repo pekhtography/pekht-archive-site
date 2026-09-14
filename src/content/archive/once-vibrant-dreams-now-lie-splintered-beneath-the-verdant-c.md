@@ -18,4 +18,4 @@ hashtags:
   - "crash"
 ---
 Once vibrant dreams now lie splintered beneath the verdant canopy
-#lawn #nature #eggs #azure #nest #dreams #sorrow #fragments #mosaic #chaos #whims #crash https://t.co/fgAxmHlpNf
+#lawn #nature #eggs #azure #nest #dreams #sorrow #fragments #mosaic #chaos #whims #crash

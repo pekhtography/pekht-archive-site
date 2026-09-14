@@ -19,4 +19,4 @@ hashtags:
   - "Tragedy"
   - "Legacy"
 ---
-#Heritage #Temples #Bridges #Earthquake #Destruction #History #Culture #Asia #Disaster #Architecture #Ruins #Loss #Tragedy #Legacy https://t.co/lBRYhqSRN8
+#Heritage #Temples #Bridges #Earthquake #Destruction #History #Culture #Asia #Disaster #Architecture #Ruins #Loss #Tragedy #Legacy

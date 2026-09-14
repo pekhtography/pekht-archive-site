@@ -21,4 +21,4 @@ hashtags:
   - "Bloom"
 ---
 The Phalaenopsis Multiflora doesn’t just bloom; she produces a two-for-one sale on beauty and joy—buy one vibrant blossom and get a free smile!
-#Phalaenopsis #Orchid #Multifora #Flower #Beauty #Violet #Lavender #Purple #Petals #Softness #Blossom #Nature #Artistry #Vibrant #Bloom https://t.co/Rk2qrd9Mhr
+#Phalaenopsis #Orchid #Multifora #Flower #Beauty #Violet #Lavender #Purple #Petals #Softness #Blossom #Nature #Artistry #Vibrant #Bloom

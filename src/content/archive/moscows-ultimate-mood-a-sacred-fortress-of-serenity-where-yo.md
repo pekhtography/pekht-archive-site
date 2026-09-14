@@ -12,4 +12,4 @@ hashtags:
 Moscow's ultimate mood: a sacred fortress of serenity 🏰 
 where you queue for a miracle between taking a selfie 🤳 and buying hot honey cake. 
 The soul gets WiFi here, finally 📶
-#Christmas #Moscow #RussianArchitecture #WinterWonderland https://t.co/bse1vy5tx7
+#Christmas #Moscow #RussianArchitecture #WinterWonderland

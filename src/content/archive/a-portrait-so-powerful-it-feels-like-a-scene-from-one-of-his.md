@@ -20,4 +20,4 @@ hashtags:
   - "Masterpiece"
 ---
 A portrait so powerful, it feels like a scene from one of his films. 🎭💥 Iñárritu’s gaze says: ‘I see the story before it’s written.’ #Storyteller
-#Iñárritu #Inarritu #Cinema #Portrait #Art #Directing #Symbolism #Raven #Drama #Film #Creative #Vintage #Masterpiece https://t.co/PwlDTYc1z2
+#Iñárritu #Inarritu #Cinema #Portrait #Art #Directing #Symbolism #Raven #Drama #Film #Creative #Vintage #Masterpiece

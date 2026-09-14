@@ -16,4 +16,4 @@ hashtags:
   - "Explore"
 ---
 Beneath the towering spire, tales entwine, history's grand tapestry, a design divine
-#Exhibition #Architecture #Garden #Tourism #History #Culture #Landmark #Heritage #Visit #Explore https://t.co/pB0OcGSXhB
+#Exhibition #Architecture #Garden #Tourism #History #Culture #Landmark #Heritage #Visit #Explore

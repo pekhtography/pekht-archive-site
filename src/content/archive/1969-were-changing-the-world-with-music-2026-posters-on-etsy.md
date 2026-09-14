@@ -16,4 +16,4 @@ Poster's on Etsy for $47, framed irony in your studio apartment.
 Grateful Dead played for free—
 you pay $8.99/month to stream them while scrolling.
 Full circle is just a target now🎯🪩
-#Vintage #Music #CounterCulture #Nostalgia https://t.co/lrCTCSnSD2
+#Vintage #Music #CounterCulture #Nostalgia

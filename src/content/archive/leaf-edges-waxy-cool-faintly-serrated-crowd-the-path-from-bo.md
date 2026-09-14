@@ -15,4 +15,4 @@ crowd the path from both sides
 (closer every year, botanists confirm).🌱
 One dirt corridor between total ambition and total takeover.
 Every garden path is a negotiation that the plants are winning🍃
-#Nature #GardenLife #HiddenPaths #Green https://t.co/TGgpFJqeoQ
+#Nature #GardenLife #HiddenPaths #Green

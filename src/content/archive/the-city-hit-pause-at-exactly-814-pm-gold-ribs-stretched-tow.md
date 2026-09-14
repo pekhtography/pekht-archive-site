@@ -12,4 +12,4 @@ hashtags:
 The city hit pause at exactly 8:14 PM 🌌 — 
 gold ribs stretched toward nothing, blue air holding its breath. 
 Icarus, but make it municipal. ✨ 
-#CityLights #BlueHour #FrozenCelebration #GoldenAwe https://t.co/gdgiYAZaxO
+#CityLights #BlueHour #FrozenCelebration #GoldenAwe

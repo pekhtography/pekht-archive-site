@@ -15,4 +15,4 @@ electric,
 poisonous, 
 and pink. 
 Grief has excellent taste. 💜
-#SpringNature #MacroPhotography #WildFlowers #EarlyBloom https://t.co/pOxac4UeZs
+#SpringNature #MacroPhotography #WildFlowers #EarlyBloom

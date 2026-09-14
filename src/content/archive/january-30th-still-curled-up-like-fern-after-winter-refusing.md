@@ -14,4 +14,4 @@ Tried unfolding toward "New Year New Me"—body said "lol no"❄️
 Taking my time looking dignified while internally screaming.
 I call this "wise fern strategy."
 Delusion keeps me warm💚
-#NewYear #January #Winter https://t.co/xzwkZX3V6d
+#NewYear #January #Winter

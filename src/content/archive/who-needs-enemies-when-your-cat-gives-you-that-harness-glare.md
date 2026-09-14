@@ -19,4 +19,4 @@ hashtags:
   - "PetLife"
 ---
 Who needs enemies when your cat gives you that ‘harness’ glare? 🐱⚔️😈 #FierceFelineFeels
-#Cat #GrayCat #Feline #Pet #Harness #Cute #Animal #Whiskers #Kitty #Relaxed #Cozy #PetLife https://t.co/cSSlscmLDD
+#Cat #GrayCat #Feline #Pet #Harness #Cute #Animal #Whiskers #Kitty #Relaxed #Cozy #PetLife

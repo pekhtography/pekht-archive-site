@@ -21,4 +21,4 @@ hashtags:
   - "grit"
 ---
 That woodpecker is not just drumming on wood; it’s a one-bird band showcasing the mantra: 'If at first you don’t succeed, peck, peck again!'
-#woodpecker #bird #persistence #drum #effort #drive #triumph #outcome #resilience #endurance #success #determination #goal #victory #grit https://t.co/Ktvc6FuOQA
+#woodpecker #bird #persistence #drum #effort #drive #triumph #outcome #resilience #endurance #success #determination #goal #victory #grit

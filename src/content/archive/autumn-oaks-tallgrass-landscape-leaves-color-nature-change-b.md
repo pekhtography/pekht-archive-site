@@ -19,4 +19,4 @@ hashtags:
   - "Serene"
   - "Transformation"
 ---
-#Autumn #Oaks #TallGrass #Landscape #Leaves #Color #Nature #Change #Beauty #Foliage #Season #Light #Serene #Transformation https://t.co/5DwZ61Ehfc
+#Autumn #Oaks #TallGrass #Landscape #Leaves #Color #Nature #Change #Beauty #Foliage #Season #Light #Serene #Transformation

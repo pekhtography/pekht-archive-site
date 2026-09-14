@@ -15,4 +15,4 @@ hashtags:
   - "square"
 ---
 Standing where history echoes loudest 🇷🇺 Every cobblestone tells a story of courage, every flag waves with the memory of those who came before ✨ Some moments transcend time itself 🏛️ #RedSquareMemories
-#Moscow #Kremlin #victory #uniform #patriotic #history #performance #square https://t.co/csUN7CNmfG
+#Moscow #Kremlin #victory #uniform #patriotic #history #performance #square

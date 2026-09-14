@@ -18,4 +18,4 @@ hashtags:
   - "InnerPeace"
 ---
 Leaves fall like whispered prayers 🍂, while golden domes dome-inate the skyline 🌟—calm lives in these sacred pauses, echoing beyond time. #SacredAutumnGlow
-#Nature #Faith #Autumn #Spirituality #OrthodoxChurch #Chapel #GoldenDome #AutumnVibes #Peaceful #CalmMind #InnerPeace https://t.co/fFjc0bz3bm
+#Nature #Faith #Autumn #Spirituality #OrthodoxChurch #Chapel #GoldenDome #AutumnVibes #Peaceful #CalmMind #InnerPeace

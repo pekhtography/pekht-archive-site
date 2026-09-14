@@ -14,4 +14,4 @@ hashtags:
   - "art"
   - "garden"
 ---
-Each fringed tulip, like a work of art, flaunts its unique patterns and textures under the sun #fringed #intricate #tulip #flower #petals #serrated #beauty #art #garden https://t.co/MIWuAHe1dm
+Each fringed tulip, like a work of art, flaunts its unique patterns and textures under the sun #fringed #intricate #tulip #flower #petals #serrated #beauty #art #garden

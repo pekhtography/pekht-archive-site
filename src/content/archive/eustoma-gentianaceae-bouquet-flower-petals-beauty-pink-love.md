@@ -22,4 +22,4 @@ hashtags:
   - "Happiness"
   - "Joy"
 ---
-#Eustoma #Gentianaceae #Bouquet #Flower #Petals #Beauty #Pink #Love #White #Purity #Emotion #Feeling #Garden #Nature #Tale #Happiness #Joy https://t.co/kFatc5i5FJ
+#Eustoma #Gentianaceae #Bouquet #Flower #Petals #Beauty #Pink #Love #White #Purity #Emotion #Feeling #Garden #Nature #Tale #Happiness #Joy

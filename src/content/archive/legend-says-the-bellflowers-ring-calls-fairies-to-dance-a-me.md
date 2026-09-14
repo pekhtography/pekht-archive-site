@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 Legend says the bellflower's ring calls fairies to dance, a melody heard only by the pure of heart
-#Campanula #Bellflower #Nature #Bloom #Purple #Flower #Garden #Wildflower #Botany #Petals #Blossom #Beauty https://t.co/u65CgYsMHO
+#Campanula #Bellflower #Nature #Bloom #Purple #Flower #Garden #Wildflower #Botany #Petals #Blossom #Beauty

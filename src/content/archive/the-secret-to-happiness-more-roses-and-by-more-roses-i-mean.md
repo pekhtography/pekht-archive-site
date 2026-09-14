@@ -19,4 +19,4 @@ hashtags:
   - "Elegant"
 ---
 The secret to happiness? More roses 🌹😊. And by 'more roses', I mean more beauty and joy in life. #HappinessTip
-#Rose #Flower #Garden #Nature #Pink #Beauty #Blossom #Floral #Green #Love #Blooming #Elegant https://t.co/DR4xLUw7um
+#Rose #Flower #Garden #Nature #Pink #Beauty #Blossom #Floral #Green #Love #Blooming #Elegant

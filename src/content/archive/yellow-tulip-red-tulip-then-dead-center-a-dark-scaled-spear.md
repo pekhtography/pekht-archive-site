@@ -14,4 +14,4 @@ Then —
 dead center — 
 a dark-scaled spear in full armor, smelling faintly of dinner 🌷🥦 
 The flower show has a vegetable problem. ⚔️ 
-#SpringGarden #GardenHumor #TulipSeason #GardenLife https://t.co/vPi4RDuM9O
+#SpringGarden #GardenHumor #TulipSeason #GardenLife

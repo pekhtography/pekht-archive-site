@@ -19,4 +19,4 @@ hashtags:
   - "plants"
 ---
 Purple clematis flowers are a sight to behold 💜🌼. Their beauty is simply captivating 🌹 #FlowerPower
-#flowers #clematis #garden #purple #nature #blossom #green #beauty #botany #floral #bloom #plants https://t.co/myZjnWqB0q
+#flowers #clematis #garden #purple #nature #blossom #green #beauty #botany #floral #bloom #plants

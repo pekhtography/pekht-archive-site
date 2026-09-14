@@ -13,4 +13,4 @@ Heavy orange velvet petals smell of pollen and sun,
 while the curved stem (searching for grip) 
 argues with the wind, proving the perfect straight line doesn’t exist — 
 only the path that bends so it won’t break. 🌅🧡🌱 
-#GrowthMindset #ImperfectBeauty #MessyBloom #RawNature https://t.co/RdudQ7uyqb
+#GrowthMindset #ImperfectBeauty #MessyBloom #RawNature

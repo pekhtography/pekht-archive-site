@@ -15,4 +15,4 @@ hashtags:
   - "Celebration"
 ---
 Here, traditions meet innovations, creating a unique space for everyone 
-#Exhibition #Architecture #Night #Lights #Christmas #IceRink #Festival #Winter #Celebration https://t.co/xdvNiCBDfD
+#Exhibition #Architecture #Night #Lights #Christmas #IceRink #Festival #Winter #Celebration

@@ -11,4 +11,4 @@ hashtags:
   - "atmosphere"
   - "fairytale"
 ---
-As the lights adorn the rotunda, they remind us of the warmth and togetherness of the holiday #rotunda #lights #Christmas #joy #atmosphere #fairytale https://t.co/qw7Zgn3XAJ
+As the lights adorn the rotunda, they remind us of the warmth and togetherness of the holiday #rotunda #lights #Christmas #joy #atmosphere #fairytale

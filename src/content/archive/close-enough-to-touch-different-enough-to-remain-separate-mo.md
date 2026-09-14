@@ -15,4 +15,4 @@ Different enough to remain separate 🌿
 Moss and snow understand what humans forget: 
 proximity doesn't require sameness. 
 Bark holds both without choosing ❄️ 
-#MacroPhotography #Moss #Snow #WinterMacro #TinyWorlds https://t.co/wRa3NnuScc
+#MacroPhotography #Moss #Snow #WinterMacro #TinyWorlds

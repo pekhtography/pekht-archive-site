@@ -14,4 +14,4 @@ hashtags:
   - "dome"
 ---
 Sometimes the most profound conversations happen in silence 🏛️ Standing before centuries of faith, you realize some stories are written in stone, not words ✨ Every dome holds a thousand prayers 🙏 #OrthodoxHeritage
-#orthodox #church #architecture #russia #heritage #sacred #dome https://t.co/PrYtltGUjv
+#orthodox #church #architecture #russia #heritage #sacred #dome

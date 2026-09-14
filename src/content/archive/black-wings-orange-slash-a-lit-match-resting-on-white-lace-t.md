@@ -12,4 +12,4 @@ hashtags:
 Black wings, orange slash — 
 a lit match resting on white lace. 🔥 
 The coldest flowers get the hottest guest. 🦋
-#NatureContrast #RedAdmiral #WildMoments #MacroMagic https://t.co/v4ca27ZrVB
+#NatureContrast #RedAdmiral #WildMoments #MacroMagic

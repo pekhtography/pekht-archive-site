@@ -14,4 +14,4 @@ The carousel spins —
 red silk against grey stone — 
 and your chest does something embarrassingly planetary. 🎠 
 Centrifugal joy: the universe's oldest trick.  
-#WinterVibes #ChristmasMarket #CarouselLights #GoldenHour https://t.co/VTeTUDUpzh
+#WinterVibes #ChristmasMarket #CarouselLights #GoldenHour

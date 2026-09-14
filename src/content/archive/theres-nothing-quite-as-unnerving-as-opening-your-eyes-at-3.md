@@ -19,4 +19,4 @@ hashtags:
   - "nightmare"
 ---
 There’s nothing quite as unnerving as opening your eyes at 3 AM and seeing two glowing green eyes staring back at you. Thanks, cat, for the heart attack!
-#cat #green #eyes #judgment #watching #furry #darkness #shadows #sleep #night #silence #mystery #nightmare https://t.co/SHzjfXLnfB
+#cat #green #eyes #judgment #watching #furry #darkness #shadows #sleep #night #silence #mystery #nightmare

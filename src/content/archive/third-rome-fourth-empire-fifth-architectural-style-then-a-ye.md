@@ -14,4 +14,4 @@ Then a yellow scooter —
 leaning against a bike rack 
 (scratched, electric, absolutely unbothered) — 
 settles the whole debate. ⚡
-#UrbanLife #StreetPhotography #HiddenCities #MoodOfTheDay https://t.co/rFzFtGvgIJ
+#UrbanLife #StreetPhotography #HiddenCities #MoodOfTheDay

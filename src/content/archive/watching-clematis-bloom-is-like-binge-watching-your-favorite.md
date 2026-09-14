@@ -20,4 +20,4 @@ hashtags:
   - "Blooms"
 ---
 Watching clematis bloom is like binge-watching your favorite series; you just can't take your eyes off of it!
-#Clematis #Majesty #Aspirations #Garden #Oasis #Survive #Resilience #Winter #Gardening #Joy #Pleasure #Bliss #Beauty #Blooms https://t.co/eI4M7WtDEo
+#Clematis #Majesty #Aspirations #Garden #Oasis #Survive #Resilience #Winter #Gardening #Joy #Pleasure #Bliss #Beauty #Blooms

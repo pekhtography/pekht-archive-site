@@ -19,4 +19,4 @@ hashtags:
   - "macro"
 ---
 A garden full of lilacs is a garden full of happiness. 🌸😊 #LilacHappiness
-#lilac #flowers #spring #nature #blossom #garden #purple #beauty #floral #fragrance #botanical #macro https://t.co/84hwhmN4Do
+#lilac #flowers #spring #nature #blossom #garden #purple #beauty #floral #fragrance #botanical #macro

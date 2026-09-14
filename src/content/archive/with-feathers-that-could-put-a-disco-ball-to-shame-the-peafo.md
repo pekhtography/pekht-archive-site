@@ -21,4 +21,4 @@ hashtags:
   - "Catwalk"
 ---
 With feathers that could put a disco ball to shame, the peafowl is truly the glitterati of the animal kingdom
-#Peafowl #Beauty #Dignity #Feathers #Displays #Elegance #Nature #Grace #Color #Disco #Palette #Kingdom #Charisma #Fashionista #Catwalk https://t.co/xLRaW2WTCS
+#Peafowl #Beauty #Dignity #Feathers #Displays #Elegance #Nature #Grace #Color #Disco #Palette #Kingdom #Charisma #Fashionista #Catwalk

@@ -19,4 +19,4 @@ hashtags:
   - "companion"
 ---
 Earth's most successful undercover agents disguised as adorable fluffballs! 🕵️‍♂️ This operative has clearly compromised their human subject with weapons-grade cuteness. 💣😻 #MissionAccomplished
-#cat #pet #fluffy #orange #eyes #whiskers #home #cozy #love #furry #cute #companion https://t.co/l4qrribNRM
+#cat #pet #fluffy #orange #eyes #whiskers #home #cozy #love #furry #cute #companion

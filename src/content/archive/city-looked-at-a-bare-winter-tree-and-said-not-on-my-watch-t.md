@@ -13,4 +13,4 @@ City looked at a bare winter tree and said: not on my watch. ⚡
 Ten thousand lights later — 
 same dead branches, completely different story. 
 Nature lost the glow-up battle to an extension cord. 🌳✨
-#CityLights #WinterAesthetic #FakeNature #GoldenHour https://t.co/dl5BHLG3Yc
+#CityLights #WinterAesthetic #FakeNature #GoldenHour

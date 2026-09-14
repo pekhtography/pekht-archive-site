@@ -12,4 +12,4 @@ hashtags:
 Red flash on grey bark. 
 Twenty strikes per second — skull engineered for exactly this. 🐦 
 The rest of us buy stress balls. 🔴
-#NaturePhotography #GardenWildlife #GreatSpottedWoodpecker #InTheMoment https://t.co/62TUPL96gQ
+#NaturePhotography #GardenWildlife #GreatSpottedWoodpecker #InTheMoment

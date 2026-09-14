@@ -13,4 +13,4 @@ Wet earth smells of sleep;
 this petal-clad rebellion (a real spotlight hog) 
 insists on waking the garden. 
 Evolution forgot the mute button. ☀️🛑
-#NaturePhotography #GardenLife #RedPetals #VibrantSoul https://t.co/Fv2cwT5TWM
+#NaturePhotography #GardenLife #RedPetals #VibrantSoul

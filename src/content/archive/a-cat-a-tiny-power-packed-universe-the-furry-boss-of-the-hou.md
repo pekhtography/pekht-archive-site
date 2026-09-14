@@ -21,4 +21,4 @@ hashtags:
   - "coach"
 ---
 A cat: a tiny, power-packed universe; the furry boss of the house; the whiskered owner of the couch; and the ultimate life coach.
-#cat #feline #comfort  #universe #tiny #power #universe #furry #boss #belonging #home #house #owner #couch #life #coach https://t.co/2Yb7DSLHsP
+#cat #feline #comfort  #universe #tiny #power #universe #furry #boss #belonging #home #house #owner #couch #life #coach

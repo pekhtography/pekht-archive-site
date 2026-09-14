@@ -13,4 +13,4 @@ Bud. Then tension.
 Then the whole thing coiling inward along one tight diagonal — 🌸 
 the Victorians refused to paint it open. 
 They knew: the fist hits harder than the bloom. 😄
-#Flowers #PeonyLovers #AlmostOpen #SensoryMoment https://t.co/6D1CWkjwjG
+#Flowers #PeonyLovers #AlmostOpen #SensoryMoment

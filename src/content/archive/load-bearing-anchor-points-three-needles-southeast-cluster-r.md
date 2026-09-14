@@ -14,4 +14,4 @@ Radial symmetry within 4% tolerance. 🕸️
 The client specified: catch flies, survive wind. 
 The contractor delivered a cathedral. 😄 
 Nobody commissioned this. 
-#NaturePhotography #MacroWorld #SpiderWeb #GoldenHour https://t.co/8db3QQ3HqS
+#NaturePhotography #MacroWorld #SpiderWeb #GoldenHour

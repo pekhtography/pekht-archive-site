@@ -13,4 +13,4 @@ Standing since '87.
 Watched a thousand sparkly pines get their glory, then a ride to the dump. 
 My bulbs outlived two mayors and infinity first dates. 
 Guess who's still glowing when the confetti's swept? 💡🎄✨ 
-#NewYear #WinterVibes #JanuaryMood #MoodLighting https://t.co/IsaZZQruEx
+#NewYear #WinterVibes #JanuaryMood #MoodLighting

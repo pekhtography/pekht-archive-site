@@ -14,4 +14,4 @@ Marley still laughing through iron bars —
 like the punchline landed right now. 
 Chuck Berry's hand still mid-strum. 
 Time graffitied itself and walked away. 
-#MusicLegends #WallOfSound #RockAndRoll #StreetArtMural https://t.co/cy679id2eH
+#MusicLegends #WallOfSound #RockAndRoll #StreetArtMural

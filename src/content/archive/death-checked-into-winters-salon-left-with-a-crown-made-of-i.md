@@ -12,4 +12,4 @@ hashtags:
 Death checked into winter's salon. 
 Left with a crown made of ice ❄️✨ 
 Even decay gets a glow-up when nature's the stylist.
-#Nature #WinterPhotography #MacroPhotography #Melancholy https://t.co/rwnVeCaaM2
+#Nature #WinterPhotography #MacroPhotography #Melancholy

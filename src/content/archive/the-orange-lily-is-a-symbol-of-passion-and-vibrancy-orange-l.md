@@ -15,4 +15,4 @@ hashtags:
   - "passion"
   - "summer"
 ---
-The orange lily is a symbol of passion and vibrancy #orange #lily #plant #bright #vibrancy #garden #warmth #joy #passion #summer https://t.co/2kHvzG8w5F
+The orange lily is a symbol of passion and vibrancy #orange #lily #plant #bright #vibrancy #garden #warmth #joy #passion #summer

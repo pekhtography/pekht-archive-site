@@ -12,4 +12,4 @@ hashtags:
 Gold dome, glass blade — both dripping the same 6:47 light. 🔥 
 Centuries of argument, one sunset verdict. 
 Light doesn't read history books. 🌆✨
-#CityVibes #ArchitectureContrast #GoldenHourSkyline #BetweenTwoWorlds https://t.co/CzlP49xCpr
+#CityVibes #ArchitectureContrast #GoldenHourSkyline #BetweenTwoWorlds

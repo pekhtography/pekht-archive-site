@@ -17,4 +17,4 @@ hashtags:
   - "Russian"
 ---
 Your feed may skip masterpieces, but the horizon posts one every evening — pressless, unfiltered, truly impossible to scroll past. 🌄📵 #UnskippableSky
-#HolySunsetVibes #Sunset #Photography #Architecture #Cityscape #GoldenHour #EveningSky #PeacefulVibes #EternalBeauty #Russian https://t.co/qAYUe9IvKT
+#HolySunsetVibes #Sunset #Photography #Architecture #Cityscape #GoldenHour #EveningSky #PeacefulVibes #EternalBeauty #Russian

@@ -12,4 +12,4 @@ The city takes a breath.
 Exhales wet asphalt and golden light. 
 And in that pause, you find the universe—
 both vast and cradled in a streetlamp's glow. 🌌💡 
-#AutumnVibes #UrbanLandscape #Melancholy https://t.co/W0E9Knh5p3
+#AutumnVibes #UrbanLandscape #Melancholy

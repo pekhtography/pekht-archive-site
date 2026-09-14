@@ -14,4 +14,4 @@ catch the fading fire.
 Green blood turns gold. 
 Silence. 
 The day is walking away. 🌲🔥
-#Nature #BotanicalPhotography #BackyardMagic #GoldenHour https://t.co/gxYqpiUNfS
+#Nature #BotanicalPhotography #BackyardMagic #GoldenHour

@@ -24,4 +24,4 @@ hashtags:
   - "Kinship"
 ---
 Home is the only place where you can wear pajamas all day and still feel like a superstar
-#Home #Feeling #Compassion #Comfort #House #Walls #Love #Dreams #Family #Warmth #Care #Serenity #Shelter #Safe #Haven #Affection #Aspirations #Kinship https://t.co/hkbEzMmH8y
+#Home #Feeling #Compassion #Comfort #House #Walls #Love #Dreams #Family #Warmth #Care #Serenity #Shelter #Safe #Haven #Affection #Aspirations #Kinship

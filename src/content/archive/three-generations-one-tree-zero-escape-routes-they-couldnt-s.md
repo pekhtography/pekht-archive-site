@@ -13,4 +13,4 @@ Three generations, one tree, zero escape routes 🎄
 They couldn't swipe away boredom or fake a phone call 👁️ 
 You stayed, looked each other in the eye, survived it—that was the gift 🎁 
 Intimacy wasn't optional
-#Christmas #VintageChristmas #VictorianChristmas #Nostalgia https://t.co/Bikk9lWTSl
+#Christmas #VintageChristmas #VictorianChristmas #Nostalgia

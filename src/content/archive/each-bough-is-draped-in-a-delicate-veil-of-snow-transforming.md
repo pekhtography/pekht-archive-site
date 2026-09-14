@@ -19,4 +19,4 @@ hashtags:
   - "blanket"
 ---
 Each bough is draped in a delicate veil of snow, transforming the landscape into a serene winter wonderland where dreams quietly slumber beneath its shimmering blanket
-#Trees #Nature #Snow #Winter #Chill #Forest #Mystery #Branch #Frost #veil #landscape #wonderland #blanket https://t.co/0o585NfsLz
+#Trees #Nature #Snow #Winter #Chill #Forest #Mystery #Branch #Frost #veil #landscape #wonderland #blanket

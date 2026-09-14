@@ -18,4 +18,4 @@ hashtags:
   - "zen"
 ---
 Sometimes the best life advice comes from a meerkat: lie down, chill out, and let someone else watch for predators today 🦫😌 Life's too short to always be on guard duty! #MeerkatWisdom
-#meerkat #wildlife #nature #relaxation #animal #peace #photography #safari #mammal #cute #zen https://t.co/D4xtSY7VZ2
+#meerkat #wildlife #nature #relaxation #animal #peace #photography #safari #mammal #cute #zen

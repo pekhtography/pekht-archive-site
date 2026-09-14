@@ -17,4 +17,4 @@ hashtags:
   - "quirky"
 ---
 The street hums with the sound of gentle clicks, each photograph a testament to our desire to see ourselves anew, even in mirrors that twist our shapes into whimsical forms
-#people #photographs #memories #reflections #mirror #perception #street #laughter #joy #warped #quirky https://t.co/hziUKFrxCI
+#people #photographs #memories #reflections #mirror #perception #street #laughter #joy #warped #quirky

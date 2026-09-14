@@ -20,4 +20,4 @@ hashtags:
   - "wild"
 ---
 This flower looks like it’s mid-thought… “Should I straighten up or keep the drama?” 🌸🤔🎭 #FloralDramaQueen #GardeningTwitter
-#nature #flower #macro #focus #beauty #garden #bloom #flora #petals #closeup #spring #wild https://t.co/DQE5hQOUwf
+#nature #flower #macro #focus #beauty #garden #bloom #flora #petals #closeup #spring #wild

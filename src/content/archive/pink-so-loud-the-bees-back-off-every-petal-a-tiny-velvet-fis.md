@@ -13,4 +13,4 @@ Pink so loud the bees back off. 🌸
 Every petal a tiny velvet fist — 
 gorgeous, unreasonable, built for no one's approval. 
 The garden just gasped. 🌿✨
-#NatureUnfiltered #RhododendronSeason #WildBloom #PetalEnergy https://t.co/TKoU8v7jpl
+#NatureUnfiltered #RhododendronSeason #WildBloom #PetalEnergy

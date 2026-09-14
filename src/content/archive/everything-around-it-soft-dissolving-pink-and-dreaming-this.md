@@ -13,4 +13,4 @@ Everything around it soft, dissolving, pink and dreaming 🌸🌿 —
 this one just stayed in focus. 
 Presence isn't loudness. 
 It's refusal to blur. 🖤
-#NaturePhotography #FlowerPhotography #MindfulMoments #BotanicalWonder https://t.co/ijtOsjL9de
+#NaturePhotography #FlowerPhotography #MindfulMoments #BotanicalWonder

@@ -14,4 +14,4 @@ subject exhibits aggressive canopy infiltration. 🌿
 Star-shaped units (approx. 200+) deployed in shade zone. 
 Prognosis: full takeover. 💜 
 Diagnosis: the rave is already over — they won.
-#WildGarden #CottageCore #PhloxDivaricata #BloomingMood https://t.co/IVLe2lo9wR
+#WildGarden #CottageCore #PhloxDivaricata #BloomingMood

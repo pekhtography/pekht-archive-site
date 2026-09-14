@@ -19,4 +19,4 @@ hashtags:
   - "beauty"
 ---
 Spring cleaning? More like spring decorating! 🧹 Mother Nature just dropped her seasonal collection 🌸 Not complaining though! ✨ #SpringCollection
-#spring #backyard #blossoms #petals #garden #home #nature #blooming #sunshine #peaceful #lawn #beauty https://t.co/08IJ6lFJqD
+#spring #backyard #blossoms #petals #garden #home #nature #blooming #sunshine #peaceful #lawn #beauty

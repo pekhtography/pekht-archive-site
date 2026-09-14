@@ -12,4 +12,4 @@ hashtags:
 The whole city went quiet for a second. 🌇
 Clouds stacked like cooling lava, rooftops dark as held breath —
 and the sun slipped through the one gap it found. ✨
-#Sunset #GoldenHour #UrbanSkyline #CityEatsTheSun https://t.co/G4IiolsqD4
+#Sunset #GoldenHour #UrbanSkyline #CityEatsTheSun

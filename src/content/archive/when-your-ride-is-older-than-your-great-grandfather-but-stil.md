@@ -17,4 +17,4 @@ hashtags:
   - "automobile"
 ---
 When your ride is older than your great-grandfather but still has better style than modern cars 🚗😏 This beauty ages like fine wine while new cars age like milk 🍷 #AgingLikeFineCars
-#vintage #moscow #kremlin #flowers #classic #history #russia #luxury #celebration #automobile https://t.co/K77m6zPFDk
+#vintage #moscow #kremlin #flowers #classic #history #russia #luxury #celebration #automobile

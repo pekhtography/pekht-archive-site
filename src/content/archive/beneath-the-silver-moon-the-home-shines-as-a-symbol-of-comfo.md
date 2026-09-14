@@ -18,4 +18,4 @@ hashtags:
   - "Comfort"
 ---
 Beneath the silver moon, the home shines as a symbol of comfort and peace 
-#Winter #Home #Snow #Night #Cozy #Warm #Cold #Light #Peace #Family #Nature #Comfort https://t.co/a6NsrWOUIC
+#Winter #Home #Snow #Night #Cozy #Warm #Cold #Light #Peace #Family #Nature #Comfort

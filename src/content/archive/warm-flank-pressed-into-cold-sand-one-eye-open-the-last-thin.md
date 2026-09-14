@@ -12,4 +12,4 @@ hashtags:
 Warm flank pressed into cold sand. 🐴
 One eye open — the last thing a brave body lets go.
 The other lid: already somewhere far. 🌅
-#Horses #HorseLife #RestIsStrength #UnwindMode https://t.co/GlL6i5EuZ4
+#Horses #HorseLife #RestIsStrength #UnwindMode

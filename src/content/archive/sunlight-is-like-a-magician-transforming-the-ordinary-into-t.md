@@ -10,4 +10,4 @@ hashtags:
   - "Colors"
   - "Garden"
 ---
-Sunlight is like a magician, transforming the ordinary into the extraordinary #Sunlight #Radiance #Transformation #Colors #Garden https://t.co/1gGu1RGtSe
+Sunlight is like a magician, transforming the ordinary into the extraordinary #Sunlight #Radiance #Transformation #Colors #Garden

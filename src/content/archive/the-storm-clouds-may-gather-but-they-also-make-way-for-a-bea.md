@@ -13,4 +13,4 @@ hashtags:
   - "beautiful"
   - "clouds"
 ---
-The storm clouds may gather, but they also make way for a beautiful sunset #sky #sunset #colors #storm #fiery #dusk #beautiful #clouds https://t.co/LNJA7YV9Hx
+The storm clouds may gather, but they also make way for a beautiful sunset #sky #sunset #colors #storm #fiery #dusk #beautiful #clouds

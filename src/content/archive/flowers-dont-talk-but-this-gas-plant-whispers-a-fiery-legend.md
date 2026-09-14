@@ -23,4 +23,4 @@ hashtags:
   - "Fragrant"
 ---
 Flowers don’t talk, but this gas plant whispers 🔥🌸 — a fiery legend in every bloom! #BotanicalFlame
-#Dictamnus #GasPlant #Flower #Nature #Wildflower #Botany #Garden #Bloom #Pink #Fragrance #Perennial #Leaves #Plant #Purple #Summer #Fragrant https://t.co/AzejWPE74r
+#Dictamnus #GasPlant #Flower #Nature #Wildflower #Botany #Garden #Bloom #Pink #Fragrance #Perennial #Leaves #Plant #Purple #Summer #Fragrant

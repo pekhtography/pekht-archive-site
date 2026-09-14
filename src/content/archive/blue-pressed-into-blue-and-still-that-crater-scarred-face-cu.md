@@ -13,4 +13,4 @@ Blue pressed into blue —
 and still that crater-scarred face cut through. 🌙 
 Nobody sent an invitation. Nobody checked the schedule. ✨ 
 Some things carry enough gravity to bend the light, noon or never.
-#Moon #DaytimeMoon #UnexpectedBeauty #BlueSky https://t.co/jzIMc8b3zJ
+#Moon #DaytimeMoon #UnexpectedBeauty #BlueSky

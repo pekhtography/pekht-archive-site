@@ -18,4 +18,4 @@ hashtags:
   - "Serenity"
 ---
 Trees burning 🍂 their brightest before going dark. Nature's last flex is always the loudest goodbye. #SeasonalFlex
-#Nature #Autumn #Photography #Beautiful #FallVibes #AutumnLeaves #LandscapePhotography #Peaceful #NatureLovers #GoldenHour #Serenity https://t.co/Kw0AZYTHmh
+#Nature #Autumn #Photography #Beautiful #FallVibes #AutumnLeaves #LandscapePhotography #Peaceful #NatureLovers #GoldenHour #Serenity

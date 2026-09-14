@@ -10,4 +10,4 @@ hashtags:
   - "magic"
   - "Christmas"
 ---
-In the heart of the city, the magic of Christmas unfolds  #peace #joy #season #magic #Christmas https://t.co/66MLS9yHWh
+In the heart of the city, the magic of Christmas unfolds  #peace #joy #season #magic #Christmas

@@ -14,4 +14,4 @@ Roman numerals climbing the facade.
 Floor XVII. Floor XVIII. 
 Time here isn't counted in minutes. 
 It's stacked. ✨
-#Skyscraper #UrbanPhotography #WormEyeView #CityFeels https://t.co/qRkejdGOxc
+#Skyscraper #UrbanPhotography #WormEyeView #CityFeels

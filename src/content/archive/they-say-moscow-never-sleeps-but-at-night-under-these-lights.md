@@ -18,4 +18,4 @@ hashtags:
   - "Dream"
 ---
 They say Moscow never sleeps. But at night, under these lights, it dreams—of empires, poets, and the quiet hum of history. 🏛️💤 #NightCityVibes
-#CityNightsForever #Moscow #Russia #UrbanLife #Travel #Architecture #FountainVibes #CityLights #NightPhotography #RomanticVibes #Dream https://t.co/WSfgysxcdz
+#CityNightsForever #Moscow #Russia #UrbanLife #Travel #Architecture #FountainVibes #CityLights #NightPhotography #RomanticVibes #Dream

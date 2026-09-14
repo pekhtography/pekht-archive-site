@@ -14,4 +14,4 @@ optical glitch (purple eye) watches the pink.
 They call it a portal. 
 A portal that only opens to blink. 
 Once. 🌺🌲✨
-#NaturePhotography #LensFlare #GardenMagic #Serendipity https://t.co/P2rU2CwKWB
+#NaturePhotography #LensFlare #GardenMagic #Serendipity

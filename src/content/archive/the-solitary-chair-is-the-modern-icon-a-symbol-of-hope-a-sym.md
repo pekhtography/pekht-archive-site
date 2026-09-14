@@ -11,4 +11,4 @@ hashtags:
   - "Cityscape"
   - "Modern"
 ---
-The solitary chair is the modern icon, a symbol of hope, a symbol of  remembrance, a symbol of waiting. It can represent anything, from the  simple need for rest to the vastness of human emotion #LoneChair #Solitude #UrbanComposition #Contrast #Cityscape #Modern https://t.co/gu3o4bK0HU
+The solitary chair is the modern icon, a symbol of hope, a symbol of  remembrance, a symbol of waiting. It can represent anything, from the  simple need for rest to the vastness of human emotion #LoneChair #Solitude #UrbanComposition #Contrast #Cityscape #Modern

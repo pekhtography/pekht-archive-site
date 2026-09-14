@@ -11,4 +11,4 @@ hashtags:
   - "Hearts"
   - "Celebrate"
 ---
-The spirit of Christmas is the spirit of love and of generosity and of goodness #Christmas #Home #Spirit #Love #Hearts #Celebrate https://t.co/WH1HkVk2cL
+The spirit of Christmas is the spirit of love and of generosity and of goodness #Christmas #Home #Spirit #Love #Hearts #Celebrate

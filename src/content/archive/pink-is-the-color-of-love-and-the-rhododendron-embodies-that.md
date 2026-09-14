@@ -10,4 +10,4 @@ hashtags:
   - "rhododendron"
   - "bloom"
 ---
-Pink is the color of love, and the rhododendron embodies that sentiment beautifully #garden #pink #blush #rhododendron #bloom https://t.co/KKdJPp982Q
+Pink is the color of love, and the rhododendron embodies that sentiment beautifully #garden #pink #blush #rhododendron #bloom

@@ -45,12 +45,24 @@ const next =
             </a>
         </div>
 
-        <div class="border border-border overflow-hidden">
-            <img
-                src={item.data.image}
-                alt={item.data.title}
-                class="block w-full h-auto"
-            />
+        <div>
+            <div class="border border-border overflow-hidden">
+                <img
+                    src={item.data.image}
+                    alt={item.data.title}
+                    class="block w-full h-auto"
+                />
+            </div>
+
+            {item.data.gallery.map((image, index) => (
+                <div class="mt-8 border border-border overflow-hidden">
+                    <img
+                        src={image}
+                        alt={`${item.data.title} — photo ${index + 2}`}
+                        class="block w-full h-auto"
+                    />
+                </div>
+            ))}
         </div>
 
         <div class="mt-8 border border-border p-6">

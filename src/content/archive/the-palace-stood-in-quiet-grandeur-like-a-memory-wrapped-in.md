@@ -12,4 +12,4 @@ hashtags:
   - "grandeur"
   - "history"
 ---
-The palace stood in quiet grandeur, like a memory wrapped in sunshine #palace #majesty #park #sun #brightness #grandeur #history https://t.co/rijuIhW42u
+The palace stood in quiet grandeur, like a memory wrapped in sunshine #palace #majesty #park #sun #brightness #grandeur #history

@@ -13,4 +13,4 @@ They see a poisonous flower.
 I see a five-star buffet with a strict dress code. 
 Lucky for me, red is always in season. 
 Bon appétit, losers 🍽️🔴 
-#Vibes #Unbothered #LilyBeetle #LilyOfTheValley https://t.co/dKDgyVdtEt
+#Vibes #Unbothered #LilyBeetle #LilyOfTheValley

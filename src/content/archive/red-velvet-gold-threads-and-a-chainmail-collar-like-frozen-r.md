@@ -12,4 +12,4 @@ hashtags:
 Red velvet, gold threads, and a chainmail collar like frozen rain. 
 They’ve been elegant for centuries. 
 I’ve been in these sweatpants for three days. 👑🍕 
-#HistoryLovers #MuseumLife #TimelessBeauty #MiniatureWorld https://t.co/s9AIYeqg5y
+#HistoryLovers #MuseumLife #TimelessBeauty #MiniatureWorld

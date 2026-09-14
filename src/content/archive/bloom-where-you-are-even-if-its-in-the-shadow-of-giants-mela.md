@@ -23,4 +23,4 @@ hashtags:
   - "Outdoors"
 ---
 Bloom where you are, even if it's in the shadow of giants
-#Melampyrum #WoodCowWheat #Nature #Flower #Wildflower #Botany #Ecosystem #Biodiversity #Photography #Wildlife #Garden #Meadow #Bloom #Plant #Ecology #NatureLovers #Outdoors https://t.co/xEBD0BZdC0
+#Melampyrum #WoodCowWheat #Nature #Flower #Wildflower #Botany #Ecosystem #Biodiversity #Photography #Wildlife #Garden #Meadow #Bloom #Plant #Ecology #NatureLovers #Outdoors

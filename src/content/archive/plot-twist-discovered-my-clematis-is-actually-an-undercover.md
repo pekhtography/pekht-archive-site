@@ -16,4 +16,4 @@ hashtags:
   - "bloom"
 ---
 Plot twist: discovered my clematis is actually an undercover happiness distributor💜 One look at these petals and suddenly Monday doesn't feel so Monday-ish🌸 Nature's original mood booster! #PurpleMagic
-#clematis #purple #flowers #garden #blooming #petals #nature #vibrant #bloom https://t.co/pibZUyQOJR
+#clematis #purple #flowers #garden #blooming #petals #nature #vibrant #bloom

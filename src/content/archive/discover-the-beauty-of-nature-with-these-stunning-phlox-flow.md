@@ -19,4 +19,4 @@ hashtags:
   - "Beauty"
 ---
 Discover the beauty of nature with these stunning Phlox flowers! 🌸🌼 #PhloxBeauty
-#Phlox #Flower #Nature #Garden #Bloom #Botany #Spring #Petals #Macro #Wildflowers #Purple #Beauty https://t.co/mpk1ib6rbs
+#Phlox #Flower #Nature #Garden #Bloom #Botany #Spring #Petals #Macro #Wildflowers #Purple #Beauty

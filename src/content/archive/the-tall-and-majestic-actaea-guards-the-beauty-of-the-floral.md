@@ -14,4 +14,4 @@ hashtags:
   - "garden"
   - "protection"
 ---
-The tall and majestic Actaea guards the beauty of the floral kingdom #Actaea #guardian #flower #majesty #beauty #vibrancy #elegance #garden #protection https://t.co/Z63QPnK3X4
+The tall and majestic Actaea guards the beauty of the floral kingdom #Actaea #guardian #flower #majesty #beauty #vibrancy #elegance #garden #protection

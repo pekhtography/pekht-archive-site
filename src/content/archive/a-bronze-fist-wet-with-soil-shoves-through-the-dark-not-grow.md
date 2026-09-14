@@ -12,4 +12,4 @@ hashtags:
 A bronze fist, wet with soil, shoves through the dark 🌿 — 
 not growing, getting expelled. 
 Every April, the ground deports everything it kept all winter. 🔴 
-#SpringVibes #GardenPhotography #EmergingBeauty #EarthEnergy https://t.co/jTYSJ1gBEr
+#SpringVibes #GardenPhotography #EmergingBeauty #EarthEnergy

@@ -21,4 +21,4 @@ hashtags:
   - "Soil"
 ---
 Some say talking to plants makes them grow better. But really, they just need sunlight and a little TLC!
-#Foliage #Nature #Plant #Garden #Green #Leaves #Outdoor #Botany #Spring #Growth #Beauty #Tree #Flora #Life #Soil https://t.co/ZTLkz1ILUl
+#Foliage #Nature #Plant #Garden #Green #Leaves #Outdoor #Botany #Spring #Growth #Beauty #Tree #Flora #Life #Soil

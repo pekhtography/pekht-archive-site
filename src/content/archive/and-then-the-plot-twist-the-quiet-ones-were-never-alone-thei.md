@@ -13,4 +13,4 @@ And then — the plot twist!  🎭
 The quiet ones were never alone. 
 Their sunny accomplices arrive, turning a solo into a chorus 🌼🌸
 This is how resolutions should bloom: together, unapologetically, turning a promise into a party  🎉
-#NewYear #NewBeginnings #SpringFlowers #Hope https://t.co/J2UEbOwLh1
+#NewYear #NewBeginnings #SpringFlowers #Hope

@@ -19,4 +19,4 @@ hashtags:
   - "timeless"
 ---
 Not just a car, but a revolution on wheels ⚡️ Steering felt like holding a piece of tomorrow in your hands. 🕹️🚗 #DesignThatDefiedTime
-#classic #vintage #retro #design #style #luxury #drive #icon #legend #automotive #heritage #timeless https://t.co/GTK15okQUi
+#classic #vintage #retro #design #style #luxury #drive #icon #legend #automotive #heritage #timeless

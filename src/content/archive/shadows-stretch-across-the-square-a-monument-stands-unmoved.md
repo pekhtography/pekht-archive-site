@@ -11,4 +11,4 @@ hashtags:
 Shadows stretch across the square 🌇; 
 a monument stands, unmoved, watching fleeting lives pass ⏳.
 Silence speaks louder than crowds.
-#UrbanArt #MonumentLife #TimelessMoments https://t.co/wohnpFqSmr
+#UrbanArt #MonumentLife #TimelessMoments

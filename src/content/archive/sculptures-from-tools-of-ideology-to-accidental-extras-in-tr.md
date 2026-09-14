@@ -15,4 +15,4 @@ hashtags:
   - "illumination"
 ---
 Sculptures: from tools of ideology to accidental extras in travel vlogs
-#architecture #monument #columns #night #heritage #history #symbolism #drama #illumination https://t.co/9VOafkR89w
+#architecture #monument #columns #night #heritage #history #symbolism #drama #illumination

@@ -19,4 +19,4 @@ hashtags:
   - "vibrant"
 ---
 🌷 Ancient myths forgot to mention daffodils don’t just symbolize hope—they excel at photobombing purple flowers too! 💜📸 #MythBustingBlooms
-#daffodil #hyacinth #flowers #spring #garden #yellow #purple #green #nature #bloom #fresh #vibrant https://t.co/bsRXhJseJD
+#daffodil #hyacinth #flowers #spring #garden #yellow #purple #green #nature #bloom #fresh #vibrant

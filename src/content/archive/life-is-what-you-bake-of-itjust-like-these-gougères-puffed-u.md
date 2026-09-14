@@ -19,4 +19,4 @@ hashtags:
   - "Bakery"
 ---
 Life is what you bake of it—just like these gougères, puffed up with cheesy happiness! 🧀😄 #CheesePuffJoy
-#Gougères #CheesePuffs #FrenchBaking #ChouxPastry #SavoryBites #BakedDelight #SnackTime #Homemade #Crusty #Cheesy #Yummy #Bakery https://t.co/V9zDrtDPCh
+#Gougères #CheesePuffs #FrenchBaking #ChouxPastry #SavoryBites #BakedDelight #SnackTime #Homemade #Crusty #Cheesy #Yummy #Bakery

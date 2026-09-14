@@ -13,4 +13,4 @@ Prometheus stole the fire.
 These people just took the subway. 🔥 
 Two skylines — one medieval, one glass — 
 biting into the same burning sky like teeth from different centuries. 🌇
-#Sunset #Cityscape #GoldenHour #OnFire https://t.co/LnMOwhxI2K
+#Sunset #Cityscape #GoldenHour #OnFire

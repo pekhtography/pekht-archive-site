@@ -14,4 +14,4 @@ They just…wait🗿❄️
 Standing there while the river forgets how to move, while cities exhale smoke into pastel skies.
 That's not victory.
 That's just stubbornness with better lighting
-#Architecture #Urban #Winter https://t.co/pjG8xWKEqB
+#Architecture #Urban #Winter

@@ -12,4 +12,4 @@ hashtags:
   - "bright"
   - "spring"
 ---
-The bear broke the snow, with his great paws, for the warmth of spring #whitebear #arctic #wintersleep #hibernate #sunnyday #bright #spring https://t.co/GEdslzYpfn
+The bear broke the snow, with his great paws, for the warmth of spring #whitebear #arctic #wintersleep #hibernate #sunnyday #bright #spring

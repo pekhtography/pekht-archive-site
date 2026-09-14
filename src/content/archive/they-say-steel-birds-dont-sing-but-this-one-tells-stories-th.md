@@ -19,4 +19,4 @@ hashtags:
   - "commemoration"
 ---
 They say steel birds don't sing, but this one tells stories that echo through generations 🎵 Every rivet holds a memory ⚡ #WingsOfHistory
-#aircraft #history #moscow #russia #military #aviation #kremlin #square #monument #heritage #victory #commemoration https://t.co/dhUqH0RZGf
+#aircraft #history #moscow #russia #military #aviation #kremlin #square #monument #heritage #victory #commemoration

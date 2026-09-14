@@ -13,4 +13,4 @@ The West spills like raspberry jam over grey rooftops.
 Sky negotiates with ground:
 you give purple, I give gold — nobody asked the people.
 Beauty without permission is the rudest form of politeness. 🌅🤝
-#NatureTakesOver #PlantRevenge #MoscowBloomChaos #GoldenHourTakeover https://t.co/A6nrhuQIQS
+#NatureTakesOver #PlantRevenge #MoscowBloomChaos #GoldenHourTakeover

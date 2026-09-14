@@ -18,4 +18,4 @@ hashtags:
   - "Sightseeing"
 ---
 Plot twist: The river has seen more drama than any Netflix series 🎭 Czars, revolutions, and now tourists with selfie sticks 📱 Still flowing, still stunning 💫 #HistoryFlows
-#Moscow #Kremlin #River #Boat #Architecture #History #Tourism #Russia #Cathedral #Skyline #Sightseeing https://t.co/HlP4RVKklr
+#Moscow #Kremlin #River #Boat #Architecture #History #Tourism #Russia #Cathedral #Skyline #Sightseeing

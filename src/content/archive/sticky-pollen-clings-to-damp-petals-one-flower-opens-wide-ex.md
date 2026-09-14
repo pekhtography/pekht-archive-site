@@ -13,4 +13,4 @@ Sticky pollen clings to damp petals.
 One flower opens wide, exposing its heart to the storm, 
 while the rest stay tightly zipped. 
 Vulnerability is a choice. 🌸⛈️ 
-#SpringAesthetic #GardenLovers #TulipSeason #FloralMagic https://t.co/vRdORpjFdV
+#SpringAesthetic #GardenLovers #TulipSeason #FloralMagic

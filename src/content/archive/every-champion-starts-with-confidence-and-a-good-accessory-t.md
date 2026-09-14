@@ -19,4 +19,4 @@ hashtags:
   - "canine"
 ---
 Every champion starts with confidence and a good accessory 🏆 This little star knows that style is half the battle at any dog show ✨🐕 #ShowStopper
-#dog #show #exhibition #bandana #cute #pet #display #competition #groomed #adorable #event #canine https://t.co/GAZ5eAKC8M
+#dog #show #exhibition #bandana #cute #pet #display #competition #groomed #adorable #event #canine

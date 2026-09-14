@@ -13,4 +13,4 @@ Within this velvet cup,
 which feels like a royal rug and smells of fresh rain, 
 golden snacks await the bravest bees. 
 A living ruby brooch — nature's forgotten jewel. 🌺✨
-#Nature #GardeningLife #RarePlants #BotanicalMagic https://t.co/hWAqUnlbOU
+#Nature #GardeningLife #RarePlants #BotanicalMagic

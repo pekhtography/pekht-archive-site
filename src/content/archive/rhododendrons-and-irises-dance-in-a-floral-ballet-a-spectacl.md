@@ -18,4 +18,4 @@ hashtags:
   - "Blossoms"
 ---
 Rhododendrons and irises dance in a floral ballet, a spectacle so enchanting that even the wind pauses to watch the performance
-#Rhododendron #Iris #Blooms #Garden #Nature #Flora #Petals #Vibrant #Spring #Lush #Green #Blossoms https://t.co/ONtUEm9NlT
+#Rhododendron #Iris #Blooms #Garden #Nature #Flora #Petals #Vibrant #Spring #Lush #Green #Blossoms

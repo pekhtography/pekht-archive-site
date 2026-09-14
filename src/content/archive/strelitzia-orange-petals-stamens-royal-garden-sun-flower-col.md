@@ -26,4 +26,4 @@ hashtags:
   - "Paradise"
   - "Flamboyant"
 ---
-#Strelitzia #Orange #Petals #Stamens #Royal #Garden #Sun #Flower #Color #Beauty #Nature #Majesty #Light #BirdofParadise #Exotic #Strelitziareginae #Orangepetals #Vibrance #Tropical #Paradise #Flamboyant https://t.co/QA5EKVyDtQ
+#Strelitzia #Orange #Petals #Stamens #Royal #Garden #Sun #Flower #Color #Beauty #Nature #Majesty #Light #BirdofParadise #Exotic #Strelitziareginae #Orangepetals #Vibrance #Tropical #Paradise #Flamboyant

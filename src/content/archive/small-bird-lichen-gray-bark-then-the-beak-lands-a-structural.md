@@ -15,4 +15,4 @@ Then the beak lands —
 (repeated 12,000 times daily) — 
 and the Aztecs called it a rain god's drum. 
 Same bird. 🌧️
-#Wildlife #NaturePerfection #WoodpeckerVibes #WildAwe https://t.co/w8lu9PdRF2
+#Wildlife #NaturePerfection #WoodpeckerVibes #WildAwe

@@ -13,4 +13,4 @@ Shadows stretch — quietly — across the current.
 Windows watch a petunia dance. 
 The city pulse beats in small stems. 
 Summer heartbeat... 🌸🏙️
-#UrbanVibes #RiverCruise #MoscowMonuments #SummerBreeze https://t.co/N1UZy1bYqe
+#UrbanVibes #RiverCruise #MoscowMonuments #SummerBreeze

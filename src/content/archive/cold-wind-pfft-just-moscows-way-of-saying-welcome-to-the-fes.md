@@ -19,4 +19,4 @@ hashtags:
   - "Travel"
 ---
 Cold wind? Pfft. Just Moscow’s way of saying 'Welcome to the festive freeze-fest!' 🥶🎉 #FestiveFreezeMode
-#GUM #Moscow #Market #Fair #Christmas #Festival #Russia #Holiday #Architecture #Kremlin #Winter #Travel https://t.co/NKt7NLc90z
+#GUM #Moscow #Market #Fair #Christmas #Festival #Russia #Holiday #Architecture #Kremlin #Winter #Travel

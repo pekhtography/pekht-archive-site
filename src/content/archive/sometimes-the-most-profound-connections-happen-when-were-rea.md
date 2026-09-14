@@ -19,4 +19,4 @@ hashtags:
   - "collection"
 ---
 Sometimes the most profound connections happen when we're reaching across the void 🤖✨ Like mechanical souls finding humanity in the music #WishYouWereHere
-#vinyl #pinkfloyd #music #record #album #classic #progressive #rock #vintage #nostalgia #artwork #collection https://t.co/OLikysIpt3
+#vinyl #pinkfloyd #music #record #album #classic #progressive #rock #vintage #nostalgia #artwork #collection

@@ -24,4 +24,4 @@ hashtags:
   - "fears"
 ---
 In the aftermath of nature's fury, homes become nothing but memories adrift on a sea of despair
-#Residents #Floods #Storm #Homes #Rain #Wind #tide #lives #existence #water #ocean #wave #current #nature #wild #chaos #hopes #fears https://t.co/R035onaahF
+#Residents #Floods #Storm #Homes #Rain #Wind #tide #lives #existence #water #ocean #wave #current #nature #wild #chaos #hopes #fears

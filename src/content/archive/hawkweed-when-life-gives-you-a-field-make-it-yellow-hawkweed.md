@@ -18,4 +18,4 @@ hashtags:
   - "Garden"
 ---
 Hawkweed: when life gives you a field, make it yellow
-#Hawkweed #Hieracium #Yellow #Blooms #Nature #Wildflowers #Meadow #Flora #Botany #Petals #Sunshine #Garden https://t.co/pWOGFGrvoc
+#Hawkweed #Hieracium #Yellow #Blooms #Nature #Wildflowers #Meadow #Flora #Botany #Petals #Sunshine #Garden

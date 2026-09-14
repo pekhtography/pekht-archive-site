@@ -3,6 +3,10 @@ title: "My soul seeks golden domes. My phone seeks caramel macchiato. We have re
 x_id: "1985016299316240410"
 x_created_at: "2025-11-02T16:09:00Z"
 image: "/images/archive/my-soul-seeks-golden-domes-my-phone-seeks-caramel-macchiato.jpg"
+gallery:
+  - "/images/archive/my-soul-seeks-golden-domes-my-phone-seeks-caramel-macchiato-2.jpg"
+  - "/images/archive/my-soul-seeks-golden-domes-my-phone-seeks-caramel-macchiato-3.jpg"
+  - "/images/archive/my-soul-seeks-golden-domes-my-phone-seeks-caramel-macchiato-4.jpg"
 hashtags:
   - "CenturyTruce"
   - "Moscow"
@@ -14,4 +18,4 @@ hashtags:
   - "CityLife"
 ---
 My soul seeks golden domes. My phone seeks caramel macchiato. We have reached a silent agreement somewhere between the 17th and 21st centuries. ☕️🕊️ #CenturyTruce
-#Moscow #Russia #Travel #Architecture #Urban #Spirituality #CityLife https://t.co/Oob8ukSTAH
+#Moscow #Russia #Travel #Architecture #Urban #Spirituality #CityLife

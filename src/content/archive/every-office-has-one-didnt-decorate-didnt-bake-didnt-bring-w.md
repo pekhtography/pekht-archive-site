@@ -12,4 +12,4 @@ hashtags:
 Every office has one. 🎄
 Didn't decorate. Didn't bake. Didn't bring wine.
 Showed up with a drum and a face that says I have been preparing for this moment since 1987. 🥁
-#Christmas #ChristmasDecor #TinyDrummer #HolidayVibes https://t.co/kV7I0KMSod
+#Christmas #ChristmasDecor #TinyDrummer #HolidayVibes

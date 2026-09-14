@@ -10,4 +10,4 @@ hashtags:
   - "grace"
   - "park"
 ---
-The statue in the park invites contemplation #statue #art #time #grace #park https://t.co/Gn8aiTQJ3g
+The statue in the park invites contemplation #statue #art #time #grace #park

@@ -14,4 +14,4 @@ hashtags:
   - "day"
   - "breeze"
 ---
-Duck couples enjoy the simple things: a gentle breeze, a quiet pond #duck #family #river #memories #quiet #nature #sunset #day #breeze https://t.co/PH4lzjGvGn
+Duck couples enjoy the simple things: a gentle breeze, a quiet pond #duck #family #river #memories #quiet #nature #sunset #day #breeze

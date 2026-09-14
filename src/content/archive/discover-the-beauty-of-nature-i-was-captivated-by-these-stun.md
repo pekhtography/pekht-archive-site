@@ -18,4 +18,4 @@ hashtags:
   - "Gardening"
 ---
 Discover the beauty of nature 🌿💛! I was captivated by these stunning pink Dianthus and blue Muscari flowers. Their vibrant colors and delicate petals are a true marvel 🌸 #FlowerPower
-#Flowers #Garden #Nature #Pink #Blue #Dianthus #Muscari #Blooming #Floral #Beauty #Gardening https://t.co/QjcqmWgv16
+#Flowers #Garden #Nature #Pink #Blue #Dianthus #Muscari #Blooming #Floral #Beauty #Gardening

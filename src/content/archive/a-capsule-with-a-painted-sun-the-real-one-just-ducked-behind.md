@@ -12,4 +12,4 @@ hashtags:
 A capsule with a painted sun. 
 The real one just ducked behind a grey wall. 
 We ride to find the rainbow, even if it's not on our side. 🚌🌈💨 
-#Tourism #TravelHumor #CitySightseeing #UnexpectedStorms https://t.co/NTM8JPqqIi
+#Tourism #TravelHumor #CitySightseeing #UnexpectedStorms

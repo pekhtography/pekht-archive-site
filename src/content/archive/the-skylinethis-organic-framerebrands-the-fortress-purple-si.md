@@ -12,4 +12,4 @@ hashtags:
 The skyline—this organic frame—rebrands the fortress. 
 Purple silk meets river silt. Ancient stone walls vs. one summer. 
 Eternity in a flower pot. 🏺🌷
-#Moscow #RiverCruise #UrbanGardening #SummerVibes https://t.co/MsNbwLUtKL
+#Moscow #RiverCruise #UrbanGardening #SummerVibes

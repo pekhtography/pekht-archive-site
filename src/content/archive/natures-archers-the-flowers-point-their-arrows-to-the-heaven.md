@@ -11,4 +11,4 @@ hashtags:
   - "garden"
   - "vertical"
 ---
-Nature's archers, the flowers point their arrows to the heavens, celebrating the day #Flowers #Bloom #Sky #Arrows #garden #vertical https://t.co/SaVHvXYfAZ
+Nature's archers, the flowers point their arrows to the heavens, celebrating the day #Flowers #Bloom #Sky #Arrows #garden #vertical

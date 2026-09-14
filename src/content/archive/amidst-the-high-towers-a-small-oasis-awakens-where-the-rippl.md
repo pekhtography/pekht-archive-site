@@ -19,4 +19,4 @@ hashtags:
   - "urban"
 ---
 Amidst the high towers, a small oasis awakens, where the ripples tell stories of resilience and rebirth
-#ducks #quack #quacking #city #nature #spring #renewal #resilience #pond #oasis #tranquility #cityscape #urban https://t.co/UCLsjVfLcO
+#ducks #quack #quacking #city #nature #spring #renewal #resilience #pond #oasis #tranquility #cityscape #urban

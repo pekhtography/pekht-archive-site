@@ -17,4 +17,4 @@ hashtags:
   - "LifeInThePark"
 ---
 Timeless beauty lies in the simple moments – like the smile of an old friend and the wag of a dog’s tail. 🐕😊 #PeacefulMoments #Generations
-#Lifestyle #Dogs #ParkVibes #ItalianGreyhound #SeniorStyle #UrbanNature #DogLovers #FamilyTime #LifeInThePark https://t.co/EEVQbWqsHb
+#Lifestyle #Dogs #ParkVibes #ItalianGreyhound #SeniorStyle #UrbanNature #DogLovers #FamilyTime #LifeInThePark

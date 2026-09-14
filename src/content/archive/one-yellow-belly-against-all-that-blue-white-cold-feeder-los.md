@@ -13,4 +13,4 @@ One yellow belly against all that blue-white cold. 🌨️
 Feeder lost a fight with a hammer. 
 He checks the menu anyway — head sideways, very professional. 🐦 
 Some standards survive any architecture. 
-#NaturePhotography #BirdFeeder #BlueTit #WinterVibes https://t.co/NxympKDE1g
+#NaturePhotography #BirdFeeder #BlueTit #WinterVibes

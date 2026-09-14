@@ -27,4 +27,4 @@ hashtags:
   - "celebration"
 ---
 Mandarin ducks: Nature's flamboyant fashionistas, turning every pond into a runway!
-#mandarinduck #vibrant #colorful #rainbow #beauty #grace #poise #joy #loyalty #faithfulness #fashion #style #runway #show #elegance #sophistication #art #sunlight #brightness #parade #celebration https://t.co/mFu1mYzoWj
+#mandarinduck #vibrant #colorful #rainbow #beauty #grace #poise #joy #loyalty #faithfulness #fashion #style #runway #show #elegance #sophistication #art #sunlight #brightness #parade #celebration

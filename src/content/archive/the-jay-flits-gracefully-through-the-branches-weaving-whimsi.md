@@ -21,4 +21,4 @@ hashtags:
   - "Trees"
 ---
 The Jay flits gracefully through the branches, weaving whimsical melodies that dance on the whispers of the wind
-#Jay #bird #trickster #tunes #life #fun #poetry #sounds #nature #music #forest #wild #Wind #Branches #Trees https://t.co/2iw4SiiJa2
+#Jay #bird #trickster #tunes #life #fun #poetry #sounds #nature #music #forest #wild #Wind #Branches #Trees

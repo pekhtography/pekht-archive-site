@@ -20,4 +20,4 @@ hashtags:
   - "crisis"
   - "tragedy"
 ---
-#temple #disaster #earthquake #destruction #fire #smoke #ruins #devastation #historical #collapse #despair #aftermath #heritage #crisis #tragedy https://t.co/twh9BRxn6C
+#temple #disaster #earthquake #destruction #fire #smoke #ruins #devastation #historical #collapse #despair #aftermath #heritage #crisis #tragedy

@@ -17,4 +17,4 @@ hashtags:
   - "ecosystem"
   - "environment"
 ---
-#nature #water #log #reflection #tranquility #outdoors #wildlife #pond #serenity #landscape #ecosystem #environment https://t.co/Af20eXd6Vi
+#nature #water #log #reflection #tranquility #outdoors #wildlife #pond #serenity #landscape #ecosystem #environment

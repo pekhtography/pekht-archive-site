@@ -18,4 +18,4 @@ hashtags:
   - "landscape"
 ---
 The blades of grass in the meadow glowed with the warmth of the sun filtering through the leaves of the trees 
-#nature #grass #sunset #field #golden #serene #outdoors #meadow #wilderness #tranquil #sunlight #landscape https://t.co/0fg3cYrGaJ
+#nature #grass #sunset #field #golden #serene #outdoors #meadow #wilderness #tranquil #sunlight #landscape

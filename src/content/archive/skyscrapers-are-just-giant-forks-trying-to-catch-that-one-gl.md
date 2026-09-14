@@ -12,4 +12,4 @@ hashtags:
 Skyscrapers are just giant forks trying to catch that one glowing tomato. 
 Too late. 
 The cosmic chef dropped the ketchup on the lens. 🍅🏢
-#Sunset #CityPhotography #GoldenHour #Vibes https://t.co/8vga07pWuU
+#Sunset #CityPhotography #GoldenHour #Vibes

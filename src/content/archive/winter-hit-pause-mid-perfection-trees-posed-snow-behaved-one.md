@@ -13,4 +13,4 @@ Winter hit pause mid-perfection.
 Trees posed. Snow behaved. One trail forgot the script.
 Sky's buffering between optimistic and dramatic.
 The whole scene just waits — beautiful, frozen, unfinished 🎬❄️☁️
-#NatureIsArt #WinterWonderland #SnowTrails #PeacefulMoments https://t.co/igfQWrDXP0
+#NatureIsArt #WinterWonderland #SnowTrails #PeacefulMoments

@@ -11,4 +11,4 @@ hashtags:
 Heavy, bruised clouds hang low above the jagged teeth of a red wall, breathing slow,
 while the sun carves out sharp, ink-black pine silhouettes across the brick—
 making history feel like a living, sweating skin with pores you can almost touch…🌥️
-#History #UrbanTales #QuietDrama https://t.co/i0eFR1b6fh
+#History #UrbanTales #QuietDrama

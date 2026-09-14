@@ -18,4 +18,4 @@ hashtags:
   - "lights"
 ---
 When cities dress up like jewelry boxes, magic happens ✨ Every cobblestone whispers tales of Christmas past 🎄 #ChristmasStreetMagic
-#Christmas #decorations #street #golden #baubles #winter #evening #cobblestone #historic #festive #lights https://t.co/PFBGs74ALy
+#Christmas #decorations #street #golden #baubles #winter #evening #cobblestone #historic #festive #lights

@@ -14,4 +14,4 @@ Zeno proved it with an arrow: every frozen frame is the speed.
 April is one such frame. ✨
 The most alive thing looks stopped. 
 You walk past it as it changes.🌱
-#SpringVibes #SlowCity #BetweenSeasons #GoldenHour https://t.co/tXPGx8LZQe
+#SpringVibes #SlowCity #BetweenSeasons #GoldenHour

@@ -11,4 +11,4 @@ hashtags:
 Concrete trees and wooden skyscrapers finally made peace. 
 Their treaty is written in light and shadow, their only argument: 
 who frames whom better. ✨🏗️🌳 
-#UrbanPhotography #UrbanNature #Contrast https://t.co/Pq3Y4VUz4B
+#UrbanPhotography #UrbanNature #Contrast

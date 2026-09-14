@@ -12,4 +12,4 @@ hashtags:
 Sky wrote the script for apocalypse, then reconsidered. 
 Charcoal billows, molten horizon, towers shrink to teeth. 
 That's the moment smartphones overheat trying to capture divinity. 📱⚡
-#Sunset #StormChasing #DramaticSky #NaturePower https://t.co/9IRaOHsv2X
+#Sunset #StormChasing #DramaticSky #NaturePower

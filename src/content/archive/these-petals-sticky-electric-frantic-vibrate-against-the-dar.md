@@ -14,4 +14,4 @@ sticky, electric, frantic—
 vibrate against the dark green silence. 
 Sun-drunk clusters demand total focus. 
 If this bush spoke, it would only chant "Me." 🌸🔥
-#Nature #GardeningLife #BotanicalRiot #ElectricVibes https://t.co/MvCdLhcOtY
+#Nature #GardeningLife #BotanicalRiot #ElectricVibes

@@ -13,4 +13,4 @@ Looks like the villain.
 Sounds like gravel scraping stone in the dark. 
 Sits completely still while everything else panics. 👁️ 
 Nature's most essential employee has the worst PR team. 🦅
-#NatureIsUnfiltered #WildlifeMacro #UglyBeautiful #ThisFaceJudgesYou https://t.co/i3aBLDFtIh
+#NatureIsUnfiltered #WildlifeMacro #UglyBeautiful #ThisFaceJudgesYou

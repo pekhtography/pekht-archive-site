@@ -18,4 +18,4 @@ hashtags:
   - "stealth"
 ---
 On a frosty winter night, the cat’s out under the moon, blending into the shadows like a furry ninja, stealthily stalking snowflakes like they're its next big snack!
-#snow #cat #shadow #moon #winter #night #frost #cold #darkness #glow #snowflakes #stealth https://t.co/LDlMNrljYV
+#snow #cat #shadow #moon #winter #night #frost #cold #darkness #glow #snowflakes #stealth

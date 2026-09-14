@@ -19,4 +19,4 @@ hashtags:
   - "Autumn"
 ---
 Spotted this wild treasure 🌲🍄 Morel magic in the forest! #ForagingFun
-#Morel #Mushroom #Fungi #Nature #Foraging #Wildlife #Forest #Fungus #Edible #Mycology #Organic #Autumn https://t.co/WttVH2OgvP
+#Morel #Mushroom #Fungi #Nature #Foraging #Wildlife #Forest #Fungus #Edible #Mycology #Organic #Autumn

@@ -18,4 +18,4 @@ hashtags:
   - "Outdoors"
 ---
 Like a determined adventurer, the scilla conquers the cold, proving that even in harsh conditions, beauty prevails
-#Scilla #Flower #Blue #Nature #Bloom #Spring #Petals #Delicate #Wildflower #Blossom #Grass #Outdoors https://t.co/ajwvr8UVJQ
+#Scilla #Flower #Blue #Nature #Bloom #Spring #Petals #Delicate #Wildflower #Blossom #Grass #Outdoors

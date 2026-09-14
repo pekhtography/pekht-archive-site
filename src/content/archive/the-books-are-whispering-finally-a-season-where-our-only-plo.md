@@ -14,4 +14,4 @@ The books are whispering:
 No tragic heroes, just LEDs." 
 Even Tolstoy's volumes are taking a break from being heavy. 
 Light mode: activated. 💡😂 
-#HolidaySpirit #BookTwitter #WinterVibes #WeirdlyWonderful https://t.co/prpIkmL2C4
+#HolidaySpirit #BookTwitter #WinterVibes #WeirdlyWonderful

@@ -26,4 +26,4 @@ hashtags:
   - "garden"
 ---
 Like a heart wrapped in velvet, the burgundy rose encapsulates both tenderness and strength
-#rose #dreams #passion #petal #secret #beauty #sorrow #battle #love #thorns #reality #heart #tenderness #strength #narrative #desire #longing #scent #life #garden https://t.co/rXdD1NGY2k
+#rose #dreams #passion #petal #secret #beauty #sorrow #battle #love #thorns #reality #heart #tenderness #strength #narrative #desire #longing #scent #life #garden

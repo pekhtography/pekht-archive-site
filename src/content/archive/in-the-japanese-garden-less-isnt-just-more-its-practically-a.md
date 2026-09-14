@@ -23,4 +23,4 @@ hashtags:
   - "Life"
 ---
 In the Japanese garden, less isn’t just more; it’s practically a lifestyle choice. Welcome to Nature's Minimalist Retreat!
-#Japanese #Garden #Tranquility #Nature #Harmony #Aesthetic #Beauty #Philosophy #Wisdom #Landscape #Scenery #Calm #Simplicity #Elegance #Stone #Plants #Life https://t.co/kK1b40hE5f
+#Japanese #Garden #Tranquility #Nature #Harmony #Aesthetic #Beauty #Philosophy #Wisdom #Landscape #Scenery #Calm #Simplicity #Elegance #Stone #Plants #Life

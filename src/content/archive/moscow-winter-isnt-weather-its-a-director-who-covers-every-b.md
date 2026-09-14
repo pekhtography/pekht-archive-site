@@ -14,4 +14,4 @@ It's a director who covers every bench, bin,
 and stray cat in thick, storybook snow. 
 Resistance is futile. 
 You will feel festive. ☃️📖 
-#Winter #UrbanLife #AbsurdHumor #Magic https://t.co/puzkvEHJB2
+#Winter #UrbanLife #AbsurdHumor #Magic

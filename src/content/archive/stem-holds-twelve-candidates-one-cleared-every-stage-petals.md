@@ -15,4 +15,4 @@ petals spread, stamens out, veins declared.
 The rest wait in sealed review. 
 Whole panel assembled. Unanimous. 
 Nobody told the bud it already won. 🌸
-#NaturePhotography #WildFlowers #MacroWorld #BloomSeason https://t.co/SH4GSrCEfN
+#NaturePhotography #WildFlowers #MacroWorld #BloomSeason

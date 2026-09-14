@@ -18,4 +18,4 @@ hashtags:
   - "travel"
 ---
 If architecture is frozen music, then this building should be headlining a major festival!
-#architecture #building #history #night #light #design #landmark #culture #city #art #beauty #travel https://t.co/Xvp9EB9H3u
+#architecture #building #history #night #light #design #landmark #culture #city #art #beauty #travel

@@ -29,4 +29,4 @@ hashtags:
   - "Slide"
   - "Glide"
 ---
-#Nature #Wildlife #Grace #Elegance #Trail #Path #Footprint #Snow #Winter #Frost #Chill #Slope #Uphill #Mountain #Glistens #Shimmer #Sparkle #Twinkle #Pale #Light #Slippery #Danger #Slide #Glide https://t.co/Nsr3ZlNl4v
+#Nature #Wildlife #Grace #Elegance #Trail #Path #Footprint #Snow #Winter #Frost #Chill #Slope #Uphill #Mountain #Glistens #Shimmer #Sparkle #Twinkle #Pale #Light #Slippery #Danger #Slide #Glide

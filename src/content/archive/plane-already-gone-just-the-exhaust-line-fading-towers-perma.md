@@ -14,4 +14,4 @@ Towers: permanent. Bus: three minutes late, unbothered.
 The glass caught the whole city mid-exhale 
 and held it still for exactly one second. 
 That second was this. 🏙️✨
-#Skyscraper #MoscowCity #GlassReflection #CityGlow https://t.co/4QFvy4YYJr
+#Skyscraper #MoscowCity #GlassReflection #CityGlow

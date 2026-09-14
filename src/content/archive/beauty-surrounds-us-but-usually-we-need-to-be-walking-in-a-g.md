@@ -10,4 +10,4 @@ hashtags:
   - "garden"
   - "sunny"
 ---
-Beauty surrounds us, but usually we need to be walking in a garden to notice it #house #dreams #park #garden #sunny https://t.co/5DTikV9qNW
+Beauty surrounds us, but usually we need to be walking in a garden to notice it #house #dreams #park #garden #sunny

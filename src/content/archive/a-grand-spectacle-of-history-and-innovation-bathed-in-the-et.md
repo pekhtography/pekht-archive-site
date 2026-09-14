@@ -16,4 +16,4 @@ hashtags:
   - "Illumination"
 ---
 A grand spectacle of history and innovation, bathed in the ethereal glow of a thousand lights
-#Pavilion #Architecture #Night #Lights #Grandeur #History #Cultural #Heritage #Monument #Illumination https://t.co/vSjxIQuSKL
+#Pavilion #Architecture #Night #Lights #Grandeur #History #Cultural #Heritage #Monument #Illumination

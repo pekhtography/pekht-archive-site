@@ -16,4 +16,4 @@ hashtags:
   - "Radiance"
 ---
 A whimsical fusion of time and light, creating a mesmerizing spectacle for the senses
-#Pavilion #Architecture #Night #Lights #Historic #Glow #Urban #Elegance #Heritage #Radiance https://t.co/Ytm6EDUzmq
+#Pavilion #Architecture #Night #Lights #Historic #Glow #Urban #Elegance #Heritage #Radiance

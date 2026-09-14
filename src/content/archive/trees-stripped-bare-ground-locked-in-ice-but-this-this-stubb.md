@@ -14,4 +14,4 @@ But this—🌊
 this stubborn vein carries molten light like it owes the forest money.
 You crouch down💫 Hands numb. Heart loud.
 The cold stops mattering when alchemy happens in real time❄️
-#NatureMagic #WinterVibes #LiquidGold #Mesmerizing https://t.co/4B9Qa05lib
+#NatureMagic #WinterVibes #LiquidGold #Mesmerizing

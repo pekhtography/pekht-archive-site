@@ -13,4 +13,4 @@ In the quiet shade of green,
 where lines intersect at sharp angles, 
 these orange rebels burst forth, 
 revealing they've just stolen the sun. ☀️🌿✨
-#Nature #GardenLife #BotanicalRevolt #VibrantJoy https://t.co/DRBgEUouN3
+#Nature #GardenLife #BotanicalRevolt #VibrantJoy

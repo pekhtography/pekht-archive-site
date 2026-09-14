@@ -13,4 +13,4 @@ Witnessed decades:
 first words, last fights, kisses under mistletoe that ended marriages.
 You touch them, they touch back 🌟
 Tenderness you inherit, not purchase 🕊️
-#VintageChristmas #HandmadeOrnaments https://t.co/RnZbyMGTFv
+#VintageChristmas #HandmadeOrnaments

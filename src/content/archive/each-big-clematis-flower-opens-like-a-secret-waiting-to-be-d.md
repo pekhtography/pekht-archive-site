@@ -11,4 +11,4 @@ hashtags:
   - "garden"
   - "beauty"
 ---
-Each big clematis flower opens like a secret waiting to be discovered #clematis #flower #purple #sunshine #garden #beauty https://t.co/6mm3hw6VmA
+Each big clematis flower opens like a secret waiting to be discovered #clematis #flower #purple #sunshine #garden #beauty

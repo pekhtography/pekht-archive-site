@@ -11,4 +11,4 @@ hashtags:
   - "nature"
   - "survival"
 ---
-In the eyes of a vulture, one can see the beauty of survival #vulture #beauty #wings #renewal #nature #survival https://t.co/6iLPGmwgUq
+In the eyes of a vulture, one can see the beauty of survival #vulture #beauty #wings #renewal #nature #survival

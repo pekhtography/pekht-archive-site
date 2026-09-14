@@ -21,4 +21,4 @@ hashtags:
   - "joyful"
 ---
 Like a soft sigh of spring, the azalea beckons with its fragrant promise of renewal
-#azalea #beauty #blooms #petals #delicate #spring #garden #elegance #nature #whisper #love #nostalgia #grace #sunlight #joyful https://t.co/wE63cSBPcZ
+#azalea #beauty #blooms #petals #delicate #spring #garden #elegance #nature #whisper #love #nostalgia #grace #sunlight #joyful

@@ -16,4 +16,4 @@ hashtags:
   - "lake"
 ---
 Under the willow's gentle embrace, I watched the leaves dance in the autumn breeze. The world transformed, awash in a golden glow, as if I floated on a lake of shimmering light, cradled by radiant waves
-#willow #tree #leaves #dance #autumn #breeze #world #golden #glow #lake https://t.co/SJiw2W7Yjh
+#willow #tree #leaves #dance #autumn #breeze #world #golden #glow #lake

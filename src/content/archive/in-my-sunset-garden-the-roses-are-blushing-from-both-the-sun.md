@@ -24,4 +24,4 @@ hashtags:
   - "patch"
 ---
 In my sunset garden, the roses are blushing from both the sunlight and gossip about the latest goings-on in the vegetable patch
-#garden #oasis #pink #blush #rose #bloom #sun #solstice #sunset #dusk #embrace #cuddle #warmth #comfort #glow #radiance #vegetable #patch https://t.co/ikspRwPEi8
+#garden #oasis #pink #blush #rose #bloom #sun #solstice #sunset #dusk #embrace #cuddle #warmth #comfort #glow #radiance #vegetable #patch

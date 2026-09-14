@@ -17,4 +17,4 @@ hashtags:
   - "Garden"
 ---
 Where water dances and light sings, a spectacle of beauty unfolds in the night
-#Exhibition #Architecture #Night #Lights #Fountain #Colorful #Grand #Historic #Landmark #Palace #Garden https://t.co/MMhb78DoS7
+#Exhibition #Architecture #Night #Lights #Fountain #Colorful #Grand #Historic #Landmark #Palace #Garden

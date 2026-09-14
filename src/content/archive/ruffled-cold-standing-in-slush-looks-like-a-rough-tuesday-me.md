@@ -14,4 +14,4 @@ Meanwhile the eyes are calculating wind,
 distance, 
 and exactly who's watching.
 The disheveled phase is the most dangerous one. 🦅
-#Wildlife #RaptorPhotography #JuvenileEagle #BornForThis https://t.co/VsFmSmb20O
+#Wildlife #RaptorPhotography #JuvenileEagle #BornForThis

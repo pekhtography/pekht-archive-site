@@ -19,4 +19,4 @@ hashtags:
   - "photography"
 ---
 Roses out here living their best life without a LinkedIn profile or morning routine 🌹 No 5am workouts, no protein shakes, just vibes and photosynthesis ☀️😎 #EffortlessExcellence
-#roses #pink #garden #bloom #petals #nature #flowers #beauty #romantic #sunlight #green #photography https://t.co/6lvcTfGRel
+#roses #pink #garden #bloom #petals #nature #flowers #beauty #romantic #sunlight #green #photography

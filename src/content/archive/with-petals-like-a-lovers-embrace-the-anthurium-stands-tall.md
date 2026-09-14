@@ -15,4 +15,4 @@ hashtags:
   - "Nature"
 ---
 With petals like a lover's embrace, the anthurium stands tall and proud, offering its vibrant reds and soft greens as symbols of hope, passion, and the sweet moments of life woven into the fabric of love
-#Anthurium #Laceleaf #Red #Passion #Green #Flower #Flame #Beauty #Nature https://t.co/h3xAaL04XW
+#Anthurium #Laceleaf #Red #Passion #Green #Flower #Flame #Beauty #Nature

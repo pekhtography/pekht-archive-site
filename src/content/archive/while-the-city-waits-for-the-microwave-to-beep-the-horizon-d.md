@@ -13,4 +13,4 @@ While the city waits for the microwave to beep,
 the horizon dissolves into a sticky, 
 neon marmalade that smells like ozone and looks like copper. 
 Sunset strike. 🌆💥
-#Sunset #CloudWatching #SkyOnFire #GoldenHourMagic https://t.co/zaOfTKyhYB
+#Sunset #CloudWatching #SkyOnFire #GoldenHourMagic

@@ -21,4 +21,4 @@ hashtags:
   - "architecture"
 ---
 Who needs a DeLorean when this tram already bends time? 🚋⚡ The real time machine runs on steel tracks. #BackToTheRails #TimeMachineOnTracks #SteelMemoryRide
-#tram #retro #city #urban #history #vintage #street #travel #nostalgia #transport #classic #architecture https://t.co/prb7JLIlea
+#tram #retro #city #urban #history #vintage #street #travel #nostalgia #transport #classic #architecture

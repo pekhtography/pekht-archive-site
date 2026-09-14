@@ -9,4 +9,4 @@ hashtags:
   - "fragrance"
   - "garden"
 ---
-Flowers are not just beautiful; they are the joy of the earth #Colchicum #flowers #fragrance #garden https://t.co/LshL39Elnv
+Flowers are not just beautiful; they are the joy of the earth #Colchicum #flowers #fragrance #garden

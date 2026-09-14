@@ -22,4 +22,4 @@ hashtags:
   - "choices"
 ---
 From Polynesian 'tatau' to ‘What was I thinking?!’—tattooing through the ages is like a game of telephone gone wrong!
-#Calves #tattoo #stories #Polynesian #mark #personality #creativity #telephone #transformation #body #masterpieces #ancient #status #symbols #regret #choices https://t.co/DvjJOBoomK
+#Calves #tattoo #stories #Polynesian #mark #personality #creativity #telephone #transformation #body #masterpieces #ancient #status #symbols #regret #choices

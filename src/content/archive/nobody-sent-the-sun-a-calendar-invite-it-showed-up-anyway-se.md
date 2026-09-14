@@ -13,4 +13,4 @@ Nobody sent the sun a calendar invite.
 It showed up anyway, set the clouds' edges on fire 🔥, 
 and the city below just... squinted. ☁️ 
 Some guests rearrange the whole room by existing.
-#SkyPhotography #GoldenHour #CloudDrama #DarkAndLight https://t.co/VYPVQaXI61
+#SkyPhotography #GoldenHour #CloudDrama #DarkAndLight

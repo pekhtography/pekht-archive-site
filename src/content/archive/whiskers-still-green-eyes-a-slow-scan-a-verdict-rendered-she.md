@@ -13,4 +13,4 @@ Whiskers still.
 Green eyes — a slow scan, a verdict rendered. 😶 
 She looked through you, not at you. 
 The warm fur under your palm — a privilege, not a given. 🌿 
-#CatsOfTwitter #SoftPower #SundayMood #CatTax https://t.co/yDp2ir00e4
+#CatsOfTwitter #SoftPower #SundayMood #CatTax

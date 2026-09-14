@@ -11,4 +11,4 @@ hashtags:
   - "Day"
   - "Sunshine"
 ---
-For a horse to become great, it must first choose to rest #Proud #Noble #Horse #Rest #Day #Sunshine https://t.co/HpFveqFrRS
+For a horse to become great, it must first choose to rest #Proud #Noble #Horse #Rest #Day #Sunshine

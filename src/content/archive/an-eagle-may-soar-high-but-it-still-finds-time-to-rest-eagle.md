@@ -11,4 +11,4 @@ hashtags:
   - "freedom"
   - "king"
 ---
-An eagle may soar high, but it still finds time to rest #eagle #soar #rest #sun #freedom #king https://t.co/OnUeOWWXpW
+An eagle may soar high, but it still finds time to rest #eagle #soar #rest #sun #freedom #king

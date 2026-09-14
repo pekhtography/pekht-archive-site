@@ -12,4 +12,4 @@ hashtags:
 He doesn't ask which tradition is correct. 
 Just walks past red lanterns and Christmas trees, collecting wonder like stamps. 
 Your inner child never learned geography of joy 🏮💭 
-#NewYear #CulturalFusion #ChineseLanterns #InnerChild https://t.co/9vLVOXejup
+#NewYear #CulturalFusion #ChineseLanterns #InnerChild

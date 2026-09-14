@@ -20,4 +20,4 @@ hashtags:
   - "Red"
   - "Gold"
 ---
-#Leaves #Nature #VirginiaCreeper #Vines #Colors #Palette #Autumn #Seasons #Change #Transformation #Beauty #Charm #Nature #Crimson #Red #Gold https://t.co/rxcL82tak0
+#Leaves #Nature #VirginiaCreeper #Vines #Colors #Palette #Autumn #Seasons #Change #Transformation #Beauty #Charm #Nature #Crimson #Red #Gold

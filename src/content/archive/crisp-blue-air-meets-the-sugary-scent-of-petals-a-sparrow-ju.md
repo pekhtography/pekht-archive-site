@@ -12,4 +12,4 @@ hashtags:
 Crisp blue air meets the sugary scent of petals. 
 A sparrow just flipped this flowery penthouse for a trillion seeds. 🏠 
 Market madness. 🐦
-#Nature #GardenLife #BirdHouse #Joy https://t.co/Ov9hRXP7Mw
+#Nature #GardenLife #BirdHouse #Joy

@@ -19,4 +19,4 @@ hashtags:
   - "maple"
 ---
 Walking on this leaf carpet feels like stepping into a Wes Anderson movie 🍁 Perfectly imperfect chaos that makes your soul do a little happy dance 💃🌟 #NatureIsArt
-#autumn #leaves #fall #colorful #nature #season #foliage #carpet #vibrant #beauty #october #maple https://t.co/MEYhNWQmJ8
+#autumn #leaves #fall #colorful #nature #season #foliage #carpet #vibrant #beauty #october #maple

@@ -12,4 +12,4 @@ hashtags:
 Snow falls on 300 bridges connecting what was to what is 🏛️ 
 yellow walls holding empire memories while cars honk ❄️ 
 Time doesn't pass here — it accumulates like frost on iron ✨ 
-#StPetersburg #WinterCity #ArchitectureLovers #LayeredHistory https://t.co/8PPQY29b86
+#StPetersburg #WinterCity #ArchitectureLovers #LayeredHistory

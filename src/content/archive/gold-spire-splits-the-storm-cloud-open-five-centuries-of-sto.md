@@ -12,4 +12,4 @@ hashtags:
 Gold spire splits the storm cloud open ⚡ — 
 five centuries of stone just winked at the rain. 
 Moscow doesn't negotiate with weather. 🏛️☁️
-#Moscow #StormChasing #CityMystery #GoldenHour https://t.co/5WuPSbbGiH
+#Moscow #StormChasing #CityMystery #GoldenHour

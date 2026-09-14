@@ -13,4 +13,4 @@ Beak touches mud. Reads pressure. Adjusts. Pulls up breakfast. 🎯
 Engineers spent decades on robotic tactile sensors. 
 This bird had the patent first. 🐦 
 Absurd design. Flawless execution.
-#NatureIsWeird #Shorebirds #CurlewLife #WildAndStill https://t.co/m0ZcrqSUDf
+#NatureIsWeird #Shorebirds #CurlewLife #WildAndStill

@@ -14,4 +14,4 @@ Now cold seeps through fabric, pride soaks into pavement,
 and your mouth hangs open—
 not asking why, just holding space for the shock. 
 We all sit there eventually. 🌨️✨
-#LifeHappens #WinterFails #GravityWins #ThatMoment https://t.co/7rjpTR8Lcu
+#LifeHappens #WinterFails #GravityWins #ThatMoment

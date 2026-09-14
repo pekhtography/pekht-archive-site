@@ -17,4 +17,4 @@ hashtags:
   - "dream"
 ---
 The rocket, like time's arrow, pierces the sky, unlocking the doors to infinity 
-#rocket #space #cosmos #launch #history #exploration #science #engineering #museum #sky #dream https://t.co/HJj9QQ5KVA
+#rocket #space #cosmos #launch #history #exploration #science #engineering #museum #sky #dream

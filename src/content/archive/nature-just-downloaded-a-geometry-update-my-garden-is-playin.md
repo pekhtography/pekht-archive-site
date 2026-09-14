@@ -12,4 +12,4 @@ hashtags:
 Nature just downloaded a geometry update. 
 My garden is playing Tetris 
 while I’m still trying to find my socks ❄️🧱 
-#Winter #OddlySatisfying #NatureArt #WinterMood https://t.co/MrhhXtikqA
+#Winter #OddlySatisfying #NatureArt #WinterMood

@@ -18,4 +18,4 @@ hashtags:
   - "botanical"
 ---
 Anemones mastered the art of being noticed without being needy 🎭 Standing tall, looking cute, minding their own photosynthesis business 🌱 Peak introvert energy achieved 😎 #IntrovertGoals
-#anemone #flowers #autumn #nature #pink #garden #bloom #petals #macro #beauty #botanical https://t.co/V805zFzfuW
+#anemone #flowers #autumn #nature #pink #garden #bloom #petals #macro #beauty #botanical

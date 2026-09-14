@@ -16,4 +16,4 @@ hashtags:
   - "danger"
 ---
 Love in the garden, where whispers turn to hisses
-#snake #tulip #nature #wildlife #garden #flower #reptile #yellow #spring #danger https://t.co/rP5b8sALD4
+#snake #tulip #nature #wildlife #garden #flower #reptile #yellow #spring #danger

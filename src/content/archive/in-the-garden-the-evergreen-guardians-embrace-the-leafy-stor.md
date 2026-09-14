@@ -22,4 +22,4 @@ hashtags:
   - "sunlight"
 ---
 In the garden, the evergreen guardians embrace the leafy storytellers, creating a symphony of shades where sunlight dances like a playful child
-#Conifers #Evergreen #Deciduous #Change #Canopy #Shade #Garden #Nature #Union #Harmony #Symphony #Stories #Tales #tree #dance #sunlight https://t.co/vdE0Ss6mV4
+#Conifers #Evergreen #Deciduous #Change #Canopy #Shade #Garden #Nature #Union #Harmony #Symphony #Stories #Tales #tree #dance #sunlight

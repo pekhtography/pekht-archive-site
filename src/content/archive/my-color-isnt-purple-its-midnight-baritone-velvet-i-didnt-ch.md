@@ -14,4 +14,4 @@ My color isn't "purple".
 It's "midnight baritone velvet". 
 I didn't choose the thronely life, the thronely life chose my stem. 
 Now pass the sunlight, peasant 😎☀️ 
-#Vibes #BotanicalHumor #MaleEnergy #UnapologeticBeauty #Iris https://t.co/lZHgqypmTJ
+#Vibes #BotanicalHumor #MaleEnergy #UnapologeticBeauty #Iris

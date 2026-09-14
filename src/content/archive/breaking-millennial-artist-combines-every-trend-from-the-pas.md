@@ -18,4 +18,4 @@ hashtags:
   - "streetart"
 ---
 Breaking: Millennial artist combines every trend from the past decade and calls it "authentic expression"🤡📱Authenticity has never been more manufactured #TrendyRebellion
-#art #mystical #graffiti #symbols #spiritual #urban #contemporary #rebellious #colorful #esoteric #streetart https://t.co/cb94vNHWj6
+#art #mystical #graffiti #symbols #spiritual #urban #contemporary #rebellious #colorful #esoteric #streetart

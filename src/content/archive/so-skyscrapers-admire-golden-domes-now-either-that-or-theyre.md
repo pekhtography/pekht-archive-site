@@ -23,4 +23,4 @@ hashtags:
   - "Harmony"
 ---
 So, skyscrapers admire golden domes now? Either that, or they’re just shiny mirrors reflecting timeless charm! 😎⛪ #BlingInTheCity
-#Modern #City #Skyscrapers #Urban #Contrast #Church #Architecture #Cityscape #Glass #Tower #Golden #Dome #Life #View #Style #Harmony https://t.co/YvBeHNXCtC
+#Modern #City #Skyscrapers #Urban #Contrast #Church #Architecture #Cityscape #Glass #Tower #Golden #Dome #Life #View #Style #Harmony

@@ -19,4 +19,4 @@ hashtags:
   - "Bromeliads"
   - "Exotic"
 ---
-#Guzmania #Color #Tropical #Rainforest #Flowers #Beauty #Mountains #Resilience #Bracts #Personality #Leaves #Chalice #Bromeliads #Exotic https://t.co/jLhp07TMFs
+#Guzmania #Color #Tropical #Rainforest #Flowers #Beauty #Mountains #Resilience #Bracts #Personality #Leaves #Chalice #Bromeliads #Exotic

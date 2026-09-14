@@ -18,4 +18,4 @@ hashtags:
   - "Golden"
 ---
 Heliopsis, the golden echo, reflecting the sun's glory with a touch of its own charm
-#Heliopsis #FalseSunflower #Oxeye #EasternSunflower #Wildflower #YellowBloom #Nature #Garden #Summer #Meadow #Floral #Golden https://t.co/YghqOcNSth
+#Heliopsis #FalseSunflower #Oxeye #EasternSunflower #Wildflower #YellowBloom #Nature #Garden #Summer #Meadow #Floral #Golden

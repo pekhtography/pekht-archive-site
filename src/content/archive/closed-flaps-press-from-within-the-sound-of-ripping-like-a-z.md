@@ -14,4 +14,4 @@ The sound of ripping —
 like a zipper on too-tight jeans, 
 only instead of a waist, there's an entire universe. 
 Silence bursts open brighter than any scream. 💥🗝️🌸 
-#Transformation #BloomingSeason #HiddenBeauty #WildAwakening https://t.co/L0DfTknzCf
+#Transformation #BloomingSeason #HiddenBeauty #WildAwakening

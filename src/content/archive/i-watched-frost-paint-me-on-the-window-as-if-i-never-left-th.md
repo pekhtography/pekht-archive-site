@@ -12,4 +12,4 @@ hashtags:
 I watched Frost paint me on the window ❄️
 as if I never left the sky ☀️
 He draws love best when it’s already slipping away ✨
-#WinterMood #FrostArt #WindowPatterns #QuietLove https://t.co/AXfK6eud7D
+#WinterMood #FrostArt #WindowPatterns #QuietLove

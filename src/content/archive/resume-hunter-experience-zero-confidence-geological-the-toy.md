@@ -12,4 +12,4 @@ hashtags:
 Resume: hunter. Experience: zero. Confidence: geological. 😼📋 
 The toy tail on the floor is just a formality — 
 the real prey is already calculated. 
-#TinyBigEnergy #KittenVibes #CatsOfTwitter #SoftAndSerious https://t.co/Fvq0OwOSXY
+#TinyBigEnergy #KittenVibes #CatsOfTwitter #SoftAndSerious

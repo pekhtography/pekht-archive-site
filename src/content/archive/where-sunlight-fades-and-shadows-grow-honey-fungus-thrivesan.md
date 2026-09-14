@@ -23,4 +23,4 @@ hashtags:
   - "Nature"
 ---
 Where sunlight fades and shadows grow, honey fungus thrives—an uninvited guest at nature's banquet
-#HoneyFungus #Sweet #Clandestine #Flourish #Bark #Fungi #Stealthy #Woodland #Tree #Sugary #Sunlight #Shadows #Guest #Banquet #Forest #Mushroom #Nature https://t.co/HYiS7jqClp
+#HoneyFungus #Sweet #Clandestine #Flourish #Bark #Fungi #Stealthy #Woodland #Tree #Sugary #Sunlight #Shadows #Guest #Banquet #Forest #Mushroom #Nature

@@ -27,4 +27,4 @@ hashtags:
   - "Soak"
 ---
 She's seen it all. Deals, divorces, and maybe a few spilled martinis. This duck has the experience
-#Rubber #Duck #Luxury #Princess #Royalty #PreOwned #Used #Joy #Delight #Comfort #Luxurious #Grand #Toy #Plaything #Relaxation #Smile #Happiness #Silliness #Antics #Bath #Soak https://t.co/jjVjooecP7
+#Rubber #Duck #Luxury #Princess #Royalty #PreOwned #Used #Joy #Delight #Comfort #Luxurious #Grand #Toy #Plaything #Relaxation #Smile #Happiness #Silliness #Antics #Bath #Soak

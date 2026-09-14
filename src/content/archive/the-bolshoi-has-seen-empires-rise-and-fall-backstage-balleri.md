@@ -8,4 +8,4 @@ hashtags:
   - "Ballet"
   - "EternalArt"
 ---
-The Bolshoi has seen empires rise and fall. Backstage, ballerinas tie ribbons like it’s 1825, whispering secrets the walls already know. Eternity is a rehearsal… but Instagram insists on a close-up. 🩰🏛️✨ #Culture #Ballet #EternalArt https://t.co/AxswsFJaER
+The Bolshoi has seen empires rise and fall. Backstage, ballerinas tie ribbons like it’s 1825, whispering secrets the walls already know. Eternity is a rehearsal… but Instagram insists on a close-up. 🩰🏛️✨ #Culture #Ballet #EternalArt

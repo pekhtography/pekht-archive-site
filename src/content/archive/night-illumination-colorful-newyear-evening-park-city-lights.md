@@ -15,4 +15,4 @@ hashtags:
   - "hope"
   - "dreams"
 ---
-#night #illumination #colorful #NewYear  #evening #park #city #lights #hope #dreams https://t.co/LLvyJKAy2q
+#night #illumination #colorful #NewYear  #evening #park #city #lights #hope #dreams

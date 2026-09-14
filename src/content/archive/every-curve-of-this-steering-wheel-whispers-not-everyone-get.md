@@ -19,4 +19,4 @@ hashtags:
   - "Elegance"
 ---
 Every curve of this steering wheel whispers: ‘Not everyone gets to hold me.’ 😎🔥 #RollsRoyceDream
-#Luxury #Car #Interior #RollsRoyce #Wood #Leather #Design #Classic #Automotive #Detail #Prestige #Elegance https://t.co/dEjr78OvHQ
+#Luxury #Car #Interior #RollsRoyce #Wood #Leather #Design #Classic #Automotive #Detail #Prestige #Elegance

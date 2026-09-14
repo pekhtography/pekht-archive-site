@@ -9,4 +9,4 @@ hashtags:
   - "life"
   - "garden"
 ---
-With keen eyes and a watchful heart, the Flycatcher - a tiny guardian of blossoming life #Flycatcher #guardian #life #garden https://t.co/swVSfJq2cC
+With keen eyes and a watchful heart, the Flycatcher - a tiny guardian of blossoming life #Flycatcher #guardian #life #garden

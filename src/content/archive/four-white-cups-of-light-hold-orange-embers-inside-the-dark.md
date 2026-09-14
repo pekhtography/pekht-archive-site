@@ -13,4 +13,4 @@ Four white cups of light 🌸
 hold orange embers inside — 
 the dark behind them isn't background. 
 It's the whole point. 🌿✨
-#NaturePhotography #FloralMoments #MacroWorld #GoldenHour https://t.co/x3Pdl0T3bm
+#NaturePhotography #FloralMoments #MacroWorld #GoldenHour

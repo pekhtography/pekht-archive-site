@@ -14,4 +14,4 @@ hashtags:
   - "Wonder"
   - "City"
 ---
-It’s the most wonderful time of the year ! #NewYear #Celebration #Decoration #Joy #Illumination #Snow #Magic #Wonder #City https://t.co/8834bkIFje
+It’s the most wonderful time of the year ! #NewYear #Celebration #Decoration #Joy #Illumination #Snow #Magic #Wonder #City

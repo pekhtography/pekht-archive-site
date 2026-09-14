@@ -13,4 +13,4 @@ A kaleidoscope of petunias guards the river.
 A boat drifts by. 
 The sky bruises into plum. 
 Suddenly, the architecture feels like a giant, expensive Lego set. 🌸🚢
-#Travel #Cityscape #GoldenHour #Serenity https://t.co/jtGfmqtRnF
+#Travel #Cityscape #GoldenHour #Serenity

@@ -15,4 +15,4 @@ hashtags:
   - "Travel"
 ---
 When Google Maps says "turn right at the place where world history happened" 📍 Just another Tuesday in Moscow where your backdrop is literally priceless 💎 GPS coordinates: Legendary ⭐ #MoscowTuesday
-#Moscow #RedSquare #Russia #Kremlin #Architecture #Sunset #History #Travel https://t.co/3Ii5GwPrmd
+#Moscow #RedSquare #Russia #Kremlin #Architecture #Sunset #History #Travel

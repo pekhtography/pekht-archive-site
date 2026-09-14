@@ -19,4 +19,4 @@ hashtags:
   - "NewYear"
 ---
 Like a tightly wound spring, the streets await the joyous explosion of togetherness that is about to unfold at the midnight hour, welcoming the New Year
-#Streets #Celebration #Night #Laughter #Revelry #Explosion #Cheers #await #anticipation #togetherness #unity #midnight #NewYear https://t.co/8VUIeyCtsn
+#Streets #Celebration #Night #Laughter #Revelry #Explosion #Cheers #await #anticipation #togetherness #unity #midnight #NewYear

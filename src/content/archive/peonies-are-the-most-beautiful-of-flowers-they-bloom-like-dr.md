@@ -11,4 +11,4 @@ hashtags:
   - "elegance"
   - "garden"
 ---
-Peonies are the most beautiful of flowers; they bloom like dreams in the light of the sun #flower #beauty #passion #peony #elegance #garden https://t.co/OQGtX8VZyA
+Peonies are the most beautiful of flowers; they bloom like dreams in the light of the sun #flower #beauty #passion #peony #elegance #garden

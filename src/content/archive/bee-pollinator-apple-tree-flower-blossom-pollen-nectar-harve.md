@@ -21,4 +21,4 @@ hashtags:
   - "Life"
   - "Cycle"
 ---
-#Bee #Pollinator #Apple #Tree #Flower #Blossom #Pollen #Nectar #Harvest #Bounty #Orchard #Nature #Spring #Renewal #Life #Cycle https://t.co/AzqwhuojWI
+#Bee #Pollinator #Apple #Tree #Flower #Blossom #Pollen #Nectar #Harvest #Bounty #Orchard #Nature #Spring #Renewal #Life #Cycle

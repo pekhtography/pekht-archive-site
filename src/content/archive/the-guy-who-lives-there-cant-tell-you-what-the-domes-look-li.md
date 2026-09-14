@@ -11,4 +11,4 @@ hashtags:
 ---
 The guy who lives there can't tell you what the domes look like at sunset. 🤷 
 Your Pinterest feed knows his street better than he does. 🪞🌅 
-#Moscow #UrbanSoul #GoldenDomes #FrozenLight https://t.co/EulqXzy1DP
+#Moscow #UrbanSoul #GoldenDomes #FrozenLight

@@ -28,4 +28,4 @@ hashtags:
   - "landscape"
   - "crimson"
 ---
-#Protea #Cynaroides #Royal #Resilience #Strength #Blooms #Beauty #South #Africa #Home #Survival #Endurance #Majestic #Grand #Vibrant #Color #Longlasting #Timeless #flower #kingdom #sunshine #landscape #crimson https://t.co/OMGFRxlbYv
+#Protea #Cynaroides #Royal #Resilience #Strength #Blooms #Beauty #South #Africa #Home #Survival #Endurance #Majestic #Grand #Vibrant #Color #Longlasting #Timeless #flower #kingdom #sunshine #landscape #crimson

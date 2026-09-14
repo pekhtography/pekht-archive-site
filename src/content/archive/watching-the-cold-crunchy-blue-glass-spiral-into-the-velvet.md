@@ -11,4 +11,4 @@ hashtags:
 ---
 Watching the cold, crunchy blue glass spiral into the velvet sky makes you realize architects play Tetris with steel beams until gravity gives up. 
 Physics retired. 🏙️🌀
-#Architecture #Skyscrapers #Cityscape #Futuristic https://t.co/1R3zkfGlTJ
+#Architecture #Skyscrapers #Cityscape #Futuristic

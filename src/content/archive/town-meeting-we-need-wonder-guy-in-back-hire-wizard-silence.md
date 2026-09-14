@@ -15,4 +15,4 @@ Silence.
 "Or… giant soap?" 
 Committee nods. 
 Now everyone photographs sphere pretending this was the plan. 🧙‍♂️🫧📸
-#WinterWonderland #PublicArt #Surreal #PureMagic https://t.co/YDYRnS4diE
+#WinterWonderland #PublicArt #Surreal #PureMagic

@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 The hellebores huddled together, gossiping about the latest happenings in the garden, their leaves rustling with laughter 
-#Helleborus #Bloom #Nature #Garden #Spring #Flower #Green #Purple #Petals #Leaves #Growth #Beauty https://t.co/ILmQ10wiJD
+#Helleborus #Bloom #Nature #Garden #Spring #Flower #Green #Purple #Petals #Leaves #Growth #Beauty

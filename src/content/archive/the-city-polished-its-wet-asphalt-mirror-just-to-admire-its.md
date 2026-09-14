@@ -12,4 +12,4 @@ hashtags:
 The city polished its wet asphalt mirror, 
 just to admire its own glowing costume. 
 Even the lampposts traded hats for champagne flutes tonight 🥂✨ 
-#UrbanMagic #CityLights #WinterCityscape #FestiveGlow https://t.co/q9qtXjIddS
+#UrbanMagic #CityLights #WinterCityscape #FestiveGlow

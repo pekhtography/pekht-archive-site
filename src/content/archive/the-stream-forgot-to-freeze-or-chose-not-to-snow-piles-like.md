@@ -14,4 +14,4 @@ Snow piles like unread letters,
 trees bow under their own weight—
 but water remembers the direction of alive.
 Mirror-deep, relentless, it carries light the sky already gave up
-#NaturePhotography #Reflections #WinterVibes #Serenity https://t.co/frwsCSfuUe
+#NaturePhotography #Reflections #WinterVibes #Serenity

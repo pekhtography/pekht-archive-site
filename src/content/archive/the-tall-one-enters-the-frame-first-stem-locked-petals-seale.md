@@ -14,4 +14,4 @@ stem locked, petals sealed, angle deliberate.🌷
 Every other flower gets assessed (distance, color temperature, lean).
 Final ruling:
 the pink one on the left is the only credible witness.🕵️
-#Spring #TulipGarden #FlowerPhotography #NatureVibes https://t.co/jVdKVSm6jd
+#Spring #TulipGarden #FlowerPhotography #NatureVibes

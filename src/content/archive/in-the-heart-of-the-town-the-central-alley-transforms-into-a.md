@@ -18,4 +18,4 @@ hashtags:
   - "Togetherness"
 ---
 In the heart of the town, the central alley transforms into a magical winter wonderland, echoing with laughter and the soft glide of skates against frozen dreams
-#IceRink #ChristmasTree #Decorations #Skaters #Memories #Laughter #Warmth #Unity #Winter #Sparkle #Dance #Togetherness https://t.co/6vtsA04mJR
+#IceRink #ChristmasTree #Decorations #Skaters #Memories #Laughter #Warmth #Unity #Winter #Sparkle #Dance #Togetherness

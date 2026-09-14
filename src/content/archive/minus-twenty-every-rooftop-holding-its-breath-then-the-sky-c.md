@@ -13,4 +13,4 @@ Minus twenty. Every rooftop holding its breath.
 Then the sky cracked open — orange, absolutely unhinged 🔥 
 Lungs burn. Brain short-circuits. 
 You're standing in a freezer watching a bonfire. ❄️
-#Sunset #MoscowWinter #KremlinViews #GoldenHour https://t.co/wxr94qKfs1
+#Sunset #MoscowWinter #KremlinViews #GoldenHour

@@ -10,4 +10,4 @@ hashtags:
   - "river"
 ---
 Standing here at sunset, watching the golden hour paint Moscow's Northern River Terminal 🌅 Sometimes the most magical moments happen when Soviet grandeur meets nature's daily masterpiece ✨ Time stops, but the river keeps flowing🛥️ #MoscowSunsetMagic
-#moscow #architecture #river https://t.co/mhWAEDBhWL
+#moscow #architecture #river

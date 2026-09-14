@@ -19,4 +19,4 @@ hashtags:
   - "creation"
 ---
 Who needs a real cat when you've got one that won't judge your life choices or knock things off tables? 😸🙌 Peak pet ownership achieved! #ZeroMaintenance
-#kitten #handmade #fabric #craft #toy #basket #market #floral #blue #artisan #textile #creation https://t.co/FeE7AgKxQB
+#kitten #handmade #fabric #craft #toy #basket #market #floral #blue #artisan #textile #creation

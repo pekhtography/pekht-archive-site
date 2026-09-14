@@ -13,4 +13,4 @@ Stone railing, warm as a grandmother's hand. 🏙️
 Behind it — twin towers cutting purple sky like new teeth. 
 Two centuries share one embankment, neither blinking. 
 The railing holds both worlds. 🌅
-#TimelessCity #ArchitectureLovers #SkylineViews #CityDuality https://t.co/ScnUejuynt
+#TimelessCity #ArchitectureLovers #SkylineViews #CityDuality

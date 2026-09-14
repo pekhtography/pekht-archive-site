@@ -19,4 +19,4 @@ hashtags:
   - "world"
 ---
 Yellow cab: 1 minute late. Blue bus: 5 minutes late. Pigeon: always on schedule. ⏳🕊️ #PerfectTiming
-#pigeon #city #street #urban #bus #traffic #life #birds #moment #travel #daily #world https://t.co/JUwOsDrXq8
+#pigeon #city #street #urban #bus #traffic #life #birds #moment #travel #daily #world

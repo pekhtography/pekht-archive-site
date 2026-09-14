@@ -19,4 +19,4 @@ hashtags:
   - "growth"
 ---
 🌳 Fact: Apple blossoms only last a week — so enjoy the show! Myth says: if you sniff enough, you get apple powers! 🍏✨ #BlossomPowers
-#apple #blossom #flower #spring #nature #branch #tree #white #petals #bloom #garden #growth https://t.co/FtgNEU20gk
+#apple #blossom #flower #spring #nature #branch #tree #white #petals #bloom #garden #growth

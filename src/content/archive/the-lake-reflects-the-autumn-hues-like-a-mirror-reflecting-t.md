@@ -16,4 +16,4 @@ hashtags:
   - "colors"
   - "palette"
 ---
-The lake reflects the autumn hues like a mirror reflecting the soul #lake #water #reflection #mirror #autumn #change #park #nature #trees #colors #palette https://t.co/ZQCtNzBamT
+The lake reflects the autumn hues like a mirror reflecting the soul #lake #water #reflection #mirror #autumn #change #park #nature #trees #colors #palette

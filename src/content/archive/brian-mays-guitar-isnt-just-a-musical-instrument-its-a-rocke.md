@@ -19,4 +19,4 @@ hashtags:
   - "Acoustic"
 ---
 Brian May’s guitar isn’t just a musical instrument; it’s a rocket ship blasting us into the sonic stratosphere!
-#Brian #May #guitar #harmonies #cosmos #voyage #brilliance #sonic #Icon #Universe #Journey #Radiance #Acoustic https://t.co/2xwiX2XVrb
+#Brian #May #guitar #harmonies #cosmos #voyage #brilliance #sonic #Icon #Universe #Journey #Radiance #Acoustic

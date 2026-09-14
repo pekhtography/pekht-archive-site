@@ -15,4 +15,4 @@ tucked into the downpour's armpit —
 tiny violet cups collecting the whole storm 🌧️ 
 as medicine. 🌿 
 Medieval herbalists were right. ✨ 
-#WildflowerMagic #StormLight #RainPhotography #PetalPower https://t.co/ayOLTyQRHJ
+#WildflowerMagic #StormLight #RainPhotography #PetalPower

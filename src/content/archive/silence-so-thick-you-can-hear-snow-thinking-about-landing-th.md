@@ -13,4 +13,4 @@ Silence so thick you can hear snow thinking about landing.
 This is what hope looks like wearing frost —
 when nature writes "new chapter" in ice script and invites you to read🌨️
 January waits at the end, but December lives here🎁
-#MagicMoments #WinterWonderland #SnowyRoad #NewYear https://t.co/pdVEofawa7
+#MagicMoments #WinterWonderland #SnowyRoad #NewYear

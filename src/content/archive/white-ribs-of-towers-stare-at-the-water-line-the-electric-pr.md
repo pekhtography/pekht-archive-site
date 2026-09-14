@@ -14,4 +14,4 @@ The electric prow cuts the reflection—
 jagged concrete smiles crumble into waves. 
 Heavy architecture thinks it owns the river. 
 The vessel disagrees. 🏗️💧 
-#FutureCities #ElectricBoats #UrbanSilence #Tension https://t.co/SeqFR4zDrH
+#FutureCities #ElectricBoats #UrbanSilence #Tension

@@ -6,4 +6,4 @@ image: "/images/archive/the-most-beautiful-thing-about-travel-isnt-the-destinati
 hashtags:
   []
 ---
-The most beautiful thing about travel isn't the destination — it's the moments like this, when you realize the journey begins at a palace 👑 Those glowing arches? They're not just lights, they're invitations ✨ Every great adventure starts with a single step toward the unknown 🚀 https://t.co/JQdrubzAvR
+The most beautiful thing about travel isn't the destination — it's the moments like this, when you realize the journey begins at a palace 👑 Those glowing arches? They're not just lights, they're invitations ✨ Every great adventure starts with a single step toward the unknown 🚀

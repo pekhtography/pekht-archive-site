@@ -13,4 +13,4 @@ Looked closer. 🔬
 Every tiny bead is a future — packed tight, breathing, waiting. 
 The whole head: one argument for patience. 🌿 
 Fibonacci didn't invent this, he just noticed.
-#SmallThingsBigMeaning #MacroPhotography #ScienceOfNature #PatternEverywhere https://t.co/zGSS1XAoxN
+#SmallThingsBigMeaning #MacroPhotography #ScienceOfNature #PatternEverywhere

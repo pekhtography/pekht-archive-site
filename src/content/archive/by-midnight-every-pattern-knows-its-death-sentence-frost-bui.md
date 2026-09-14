@@ -14,4 +14,4 @@ Frost built a cathedral that will weep into nothing when sun remembers its jobâœ
 This is the deal:
 some things get to be perfect only because they're mortal.
 Morning is both ending and mercy
-#Winter #FrostArt #IceArt #Fleeting https://t.co/BZk1SSjFnT
+#Winter #FrostArt #IceArt #Fleeting

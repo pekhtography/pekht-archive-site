@@ -19,4 +19,4 @@ hashtags:
   - "couch"
 ---
 A cat lounges blissfully on the couch, pondering life while maintaining the appearance of a deity.
-#cat #feline #serenity #satisfaction #love #rest #contentment #whiskers #fun #praise #food #chubby #couch https://t.co/Tg03nRCs1s
+#cat #feline #serenity #satisfaction #love #rest #contentment #whiskers #fun #praise #food #chubby #couch

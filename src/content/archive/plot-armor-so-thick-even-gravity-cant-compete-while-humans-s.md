@@ -17,4 +17,4 @@ hashtags:
   - "friend"
 ---
 Plot armor so thick, even gravity can't compete 🛡️ While humans swing back and forth, this Shiba swings straight into our hearts 💘 Clearly studied at the University of Effortless Cool 🎓 #GravityDefyingCuteness
-#dog #shiba #park #swing #urban #happy #pet #outdoors #city #friend https://t.co/GFyrgXQfbu
+#dog #shiba #park #swing #urban #happy #pet #outdoors #city #friend

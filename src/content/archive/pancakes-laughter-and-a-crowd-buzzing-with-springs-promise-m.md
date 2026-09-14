@@ -19,4 +19,4 @@ hashtags:
   - "Culture"
 ---
 Pancakes, laughter, and a crowd buzzing with spring’s promise 🌸🥞✨ — Maslenitsa magic is alive and kicking! 🎊🌿 #MaslenitsaVibes
-#Maslenitsa #Springtime #Festival #Sunshine #Tradition #Celebration #Folkart #Joyful #Colors #Winter #Crowd #Culture https://t.co/ytB38kB2m5
+#Maslenitsa #Springtime #Festival #Sunshine #Tradition #Celebration #Folkart #Joyful #Colors #Winter #Crowd #Culture

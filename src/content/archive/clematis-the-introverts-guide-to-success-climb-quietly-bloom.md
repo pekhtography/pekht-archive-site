@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 Clematis: the introvert’s guide to success — climb quietly, bloom loudly
-#Clematis #Flower #Bloom #Nature #Garden #Petals #Vine #Colorful #Spring #Bud #Botany #Beauty https://t.co/vaGyJXGXuu
+#Clematis #Flower #Bloom #Nature #Garden #Petals #Vine #Colorful #Spring #Bud #Botany #Beauty

@@ -19,4 +19,4 @@ hashtags:
   - "Plant"
 ---
 🌿✨ Nature’s elegant secret: Solomon’s Seal hides its porcelain bells beneath graceful leaves. Ever noticed its quiet charm? #SolomonsSeal #NatureMagic 🌱🔔
-#Polygonatum #Wildflower #Perennial #Botany #Nature #Floral #Greenery #Leaves #Forest #Bloom #Plant https://t.co/NGyuevtJXH
+#Polygonatum #Wildflower #Perennial #Botany #Nature #Floral #Greenery #Leaves #Forest #Bloom #Plant

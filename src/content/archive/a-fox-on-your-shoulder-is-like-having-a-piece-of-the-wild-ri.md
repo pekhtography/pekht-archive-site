@@ -19,4 +19,4 @@ hashtags:
   - "Moment"
 ---
 A fox on your shoulder is like having a piece of the wild right next to your heart. 🌿🦊 #WildAtHeart
-#Fox #Woman #Animal #Friendship #Nature #Wildlife #Pet #Cute #Adventure #Photography #Unique #Moment https://t.co/EY0HjQPMpv
+#Fox #Woman #Animal #Friendship #Nature #Wildlife #Pet #Cute #Adventure #Photography #Unique #Moment

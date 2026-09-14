@@ -8,4 +8,4 @@ hashtags:
   - "FallReflections"
   - "AutumnVibes"
 ---
-Trees hold their final breath above glass water — autumn proving every ending is just practice for the real goodbye 🍂💀✨ #Melancholy #FallReflections #AutumnVibes https://t.co/Z30PkGph0M
+Trees hold their final breath above glass water — autumn proving every ending is just practice for the real goodbye 🍂💀✨ #Melancholy #FallReflections #AutumnVibes

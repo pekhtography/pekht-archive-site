@@ -17,4 +17,4 @@ hashtags:
   - "dramatic"
 ---
 When your ancestors designed street furniture with more personality than most modern buildings. 🏗️ This lamppost said "I'm not just functional, I'm fabulous." ✨ #DesignGoals
-#streetlight #heritage #silhouette #sky #vintage #ironwork #architecture #lamppost #clouds #dramatic https://t.co/ZHcTpiXLrS
+#streetlight #heritage #silhouette #sky #vintage #ironwork #architecture #lamppost #clouds #dramatic

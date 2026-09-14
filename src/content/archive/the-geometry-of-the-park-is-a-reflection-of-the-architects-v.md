@@ -12,4 +12,4 @@ hashtags:
   - "masterpiece"
   - "symmetry"
 ---
-The geometry of the park is a reflection of the architects' vision, creating harmony with nature #geometry #park #sunlight #dance #nature #masterpiece #symmetry https://t.co/Ly0CaNInll
+The geometry of the park is a reflection of the architects' vision, creating harmony with nature #geometry #park #sunlight #dance #nature #masterpiece #symmetry

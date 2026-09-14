@@ -19,4 +19,4 @@ hashtags:
   - "water"
 ---
 A bridge to yesterday, mirrored in today 🕰️🌊 The water doesn’t forget. It just whispers history in reverse. #WhispersOfWater
-#MirrorPortalVibes #architecture #cityscape #travel #history #urbanexploration #riverside #reflection #aesthetic #serenity #timeless #water https://t.co/9gcyfEaxN9
+#MirrorPortalVibes #architecture #cityscape #travel #history #urbanexploration #riverside #reflection #aesthetic #serenity #timeless #water

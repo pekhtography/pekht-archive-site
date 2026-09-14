@@ -12,4 +12,4 @@ hashtags:
   - "resilience"
   - "elegance"
 ---
-The clematis climbs with grace, bringing beauty to every garden it embraces #clematis #flower #garden #sun #joy #resilience #elegance https://t.co/9wLEArYeTq
+The clematis climbs with grace, bringing beauty to every garden it embraces #clematis #flower #garden #sun #joy #resilience #elegance

@@ -9,4 +9,4 @@ hashtags:
 That teal is crunchy and cold and tastes like copper wire 🦚 — 
 feathers like wet silk over stone, 
 two filaments tilting as if tuning into a frequency only the vain can hear, 
-and somehow that one sidelong eye carries the full weight of every unanswered love letter ever sent. 💙 https://t.co/izgYBY89T2
+and somehow that one sidelong eye carries the full weight of every unanswered love letter ever sent. 💙

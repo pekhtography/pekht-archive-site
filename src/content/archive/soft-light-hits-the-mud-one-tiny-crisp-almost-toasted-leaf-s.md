@@ -13,4 +13,4 @@ Soft light hits the mud.
 One tiny, crisp (almost toasted) leaf stretches out. 
 A microscopic explosion of life. 
 One bud—a giant middle finger to winter. 🖕🔥
-#Nature #SpringVibes #GardenLife #FreshStart https://t.co/FE7NMZibHX
+#Nature #SpringVibes #GardenLife #FreshStart

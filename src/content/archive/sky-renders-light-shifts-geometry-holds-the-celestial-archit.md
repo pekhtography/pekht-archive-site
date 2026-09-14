@@ -13,4 +13,4 @@ Sky renders.
 Light shifts. 
 Geometry holds. 
 The celestial architect just applied the dark-mode filter because the brickwork was getting too loud for the stars. 🧱✨
-#Sunset #MoscowLife #GoldenHour #Vibrant https://t.co/hBvPrrBbmM
+#Sunset #MoscowLife #GoldenHour #Vibrant

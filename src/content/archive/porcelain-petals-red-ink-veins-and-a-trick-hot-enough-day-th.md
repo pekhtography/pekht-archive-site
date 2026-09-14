@@ -12,4 +12,4 @@ hashtags:
 Porcelain petals, red-ink veins — and a trick: 🌸 
 hot enough day, this bloom lights its own fuse. 🔥 
 Delicate is just danger with better posture.
-#Dictamnus #FlameFlower #MacroPhotography #NatureWild https://t.co/nJdfizDMSE
+#Dictamnus #FlameFlower #MacroPhotography #NatureWild

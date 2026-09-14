@@ -14,4 +14,4 @@ Red exclamation marks in a library of white.
 Forest whispers "bad idea," legs whisper "very bad idea," 
 ego screams "CONTENT!" 
 Cold bites. Pride bites harder. 🌲🔥💀
-#Adventure #Backcountry #SoloTravel #Silence https://t.co/68odf3sxdu
+#Adventure #Backcountry #SoloTravel #Silence

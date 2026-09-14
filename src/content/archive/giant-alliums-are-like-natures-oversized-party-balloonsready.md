@@ -18,4 +18,4 @@ hashtags:
   - "Nature"
 ---
 Giant Alliums are like nature's oversized party balloons—ready to pop with joy and fill the garden with floral fanfare!
-#GiantAllium #Celebration #Fireworks #Garden #Whimsical #Joy #Party #Floral #Regal #Crown #Flamboyance #Nature https://t.co/9Fe9DZMSOB
+#GiantAllium #Celebration #Fireworks #Garden #Whimsical #Joy #Party #Floral #Regal #Crown #Flamboyance #Nature

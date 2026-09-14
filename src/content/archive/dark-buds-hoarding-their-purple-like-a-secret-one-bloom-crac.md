@@ -12,4 +12,4 @@ hashtags:
 Dark buds hoarding their purple like a secret. 🌸 
 One bloom cracks open — gold freckles spill across the throat. 
 Restraint and riot, same stem. 💜
-#Rhododendron #SlowBloom #NatureMacro #PurpleAesthetic https://t.co/odFh2B6YiW
+#Rhododendron #SlowBloom #NatureMacro #PurpleAesthetic

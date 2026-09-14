@@ -18,4 +18,4 @@ hashtags:
   - "Bouquet"
 ---
 Amidst the garden's tranquility, hydrangeas loudly proclaim their vivid hues 
-#Hydrangea #Flowers #Blooms #Colorful #Nature #Beauty #Garden #Petals #Vibrant #Blossoms #Floral #Bouquet https://t.co/xbEutEcCcr
+#Hydrangea #Flowers #Blooms #Colorful #Nature #Beauty #Garden #Petals #Vibrant #Blossoms #Floral #Bouquet

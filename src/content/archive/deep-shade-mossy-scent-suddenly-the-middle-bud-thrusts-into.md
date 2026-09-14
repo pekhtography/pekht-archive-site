@@ -13,4 +13,4 @@ Deep shade. Mossy scent.
 Suddenly, the middle bud thrusts into main character energy, 
 shredding its green jacket for a loud yellow stage debut. 
 Diva 💅🔥🌼
-#Nature #GardenLife #BotanicalGlow #FreshVibes https://t.co/d8i7RfiroD
+#Nature #GardenLife #BotanicalGlow #FreshVibes

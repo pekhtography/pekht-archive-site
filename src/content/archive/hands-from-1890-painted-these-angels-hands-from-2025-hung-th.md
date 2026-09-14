@@ -15,4 +15,4 @@ Between them — wars, electricity, internet —
 but the same desperate need to make December glow 🎁 
 You don't collect vintage ornaments. 
 You adopt ancestors ✨
-#Christmas #VintageXmas #XmasDecor #Nostalgia https://t.co/k2jwaEjFfM
+#Christmas #VintageXmas #XmasDecor #Nostalgia

@@ -12,4 +12,4 @@ hashtags:
 The gold blur in the back — louder, bigger, warmer — filed its candidacy first 🌼. 
 The violet bells (rough, cool, faintly green-smelling) just stood there. 💜 
 The frame chose the bells. The gold got the footnote.
-#NaturePhotography #WildflowerMagic #CampanulaVibes #QuietPower https://t.co/LyGm5wHxqD
+#NaturePhotography #WildflowerMagic #CampanulaVibes #QuietPower

@@ -14,4 +14,4 @@ The pastry? 🥐
 Whatever was nearest — held like a Grammy. 👑 
 Elegance isn't the absence of hunger. 
 It's refusing to apologize for it. 🖤 
-#FashionIcon #BlackDressEnergy #GlamourAndCroissant #PearlsAndHunger https://t.co/RED3xBLsmJ
+#FashionIcon #BlackDressEnergy #GlamourAndCroissant #PearlsAndHunger

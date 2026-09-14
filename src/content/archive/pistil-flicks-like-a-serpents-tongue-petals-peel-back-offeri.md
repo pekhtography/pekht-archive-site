@@ -13,4 +13,4 @@ Pistil flicks like a serpent's tongue. Petals peel back, offering honey.
 You reach. 
 And somewhere, a biologist whispers: 
 "that's the last time he trusted yellow." 🐍💛👋
-#NatureIsMetal #ToxicBeauty #SpringTrap #HoneyLies https://t.co/HSaNZd7UiE
+#NatureIsMetal #ToxicBeauty #SpringTrap #HoneyLies

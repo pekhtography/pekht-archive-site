@@ -14,4 +14,4 @@ hashtags:
   - "Attraction"
   - "Harmony"
 ---
-The brilliance of neon red phlox draws the eye and cheers the heart #Phlox #Neon #Red #Vibrancy #Brightness #Fragrance #Garden #Attraction #Harmony https://t.co/GZjY1ALnUI
+The brilliance of neon red phlox draws the eye and cheers the heart #Phlox #Neon #Red #Vibrancy #Brightness #Fragrance #Garden #Attraction #Harmony

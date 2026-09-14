@@ -14,4 +14,4 @@ but you’re actually just eyeing the buffet?🎭
 This forest hermit, dressed in its finest,
 is having exactly that crisis by my feeder.🐦
 A masterpiece of awkward elegance
-#Winter #BirdFeeding #GardenVisitors #QuietJoy https://t.co/VplBD6bWdu
+#Winter #BirdFeeding #GardenVisitors #QuietJoy

@@ -15,4 +15,4 @@ Sky bleeds pewter into pearl.
 River locked tighter than your ex's Instagram—but this view? 
 No paywall, no algorithm. 
 Just winter flexing 🎬✨ 
-#WinterVibes #UrbanPhotography #FrozenRiver #MagicMoments https://t.co/toGPBzKNGR
+#WinterVibes #UrbanPhotography #FrozenRiver #MagicMoments

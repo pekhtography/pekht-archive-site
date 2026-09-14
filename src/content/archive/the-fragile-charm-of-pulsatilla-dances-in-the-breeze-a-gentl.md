@@ -11,4 +11,4 @@ hashtags:
   - "spring"
   - "flowers"
 ---
-The fragile charm of Pulsatilla dances in the breeze, a gentle reminder of life's fleeting beauty #Pulsatilla #wildflower #garden #growth #spring #flowers https://t.co/7eUMHtUCD3
+The fragile charm of Pulsatilla dances in the breeze, a gentle reminder of life's fleeting beauty #Pulsatilla #wildflower #garden #growth #spring #flowers

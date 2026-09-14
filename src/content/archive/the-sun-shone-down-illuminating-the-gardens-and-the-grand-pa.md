@@ -13,4 +13,4 @@ hashtags:
   - "sunshine"
   - "flowers"
 ---
-The sun shone down, illuminating the gardens and the grand palace, where every flower seemed to dance in the light #palace #grandeur #garden #tranquility #greenhouse #warmth #sunshine #flowers https://t.co/KVUcCU1Tzl
+The sun shone down, illuminating the gardens and the grand palace, where every flower seemed to dance in the light #palace #grandeur #garden #tranquility #greenhouse #warmth #sunshine #flowers

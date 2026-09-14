@@ -19,4 +19,4 @@ hashtags:
   - "Devastation"
   - "Tragedy"
 ---
-#Temple #Earthquake #Destruction #Historic #Damage #Bridge #Collapse #Heritage #Disaster #Ruins #Cultural #Loss #Devastation #Tragedy https://t.co/eFHQXUF1cC
+#Temple #Earthquake #Destruction #Historic #Damage #Bridge #Collapse #Heritage #Disaster #Ruins #Cultural #Loss #Devastation #Tragedy

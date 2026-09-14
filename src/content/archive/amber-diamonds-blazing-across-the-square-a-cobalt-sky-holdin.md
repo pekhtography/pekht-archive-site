@@ -14,4 +14,4 @@ and the stone column up here,
 having had the best seat every night for sixty years,
 still clapping for no one.🏛️🌙✨
 Best seat. Eternal audience.
-#CityAtNight #Moscow https://t.co/Y3umVsJZEy
+#CityAtNight #Moscow

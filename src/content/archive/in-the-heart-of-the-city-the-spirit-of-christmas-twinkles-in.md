@@ -12,4 +12,4 @@ hashtags:
   - "Sunlight"
   - "Colors"
 ---
-In the heart of the city, the spirit of Christmas twinkles in the sunlight #Winter #Stars #Christmas #Decorations #City #Sunlight #Colors https://t.co/eTsVYBGtd2
+In the heart of the city, the spirit of Christmas twinkles in the sunlight #Winter #Stars #Christmas #Decorations #City #Sunlight #Colors

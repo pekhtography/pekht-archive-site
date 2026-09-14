@@ -8,4 +8,4 @@ hashtags:
   - "UrbanMelancholy"
   - "AmusementPark"
 ---
-The carnival is closed, but my soul bought a ticket anyway. Riding the Ferris wheel of memory, where every creak is a childhood laugh trapped in the autumn wind. 🎡🍁 #Fall #UrbanMelancholy #AmusementPark https://t.co/BUYteK2wOA
+The carnival is closed, but my soul bought a ticket anyway. Riding the Ferris wheel of memory, where every creak is a childhood laugh trapped in the autumn wind. 🎡🍁 #Fall #UrbanMelancholy #AmusementPark

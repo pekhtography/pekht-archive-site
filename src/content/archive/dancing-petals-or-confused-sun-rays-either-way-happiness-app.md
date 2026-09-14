@@ -18,4 +18,4 @@ hashtags:
   - "Green"
 ---
 🌞💛 Dancing petals or confused sun rays? Either way, happiness approved. #ConfettiPetals
-#Flower #Yellow #Petals #Nature #Garden #Bloom #Fresh #Drops #Summer #Beautiful #Green https://t.co/hKSyECNsUg
+#Flower #Yellow #Petals #Nature #Garden #Bloom #Fresh #Drops #Summer #Beautiful #Green

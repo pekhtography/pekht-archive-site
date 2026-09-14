@@ -19,4 +19,4 @@ hashtags:
   - "family"
 ---
 Who needs a fancy dining room when a giant tree stump can be the feast altar? 🍴🌳 Winter gatherings are the best kinds of wild 🍁😂! #RusticFoodieRevolution
-#food #winter #festival #market #nature #celebration #community #cozy #table #outdoor #people #family https://t.co/nGIDj5dFbD
+#food #winter #festival #market #nature #celebration #community #cozy #table #outdoor #people #family

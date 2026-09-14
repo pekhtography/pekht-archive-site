@@ -12,4 +12,4 @@ hashtags:
 Sharp wind. Silver lichens. Old wood. 
 I trace the vertical grain and horizontal perch. 
 This rustic sanctuary offers zero Wi-Fi but premium cat surveillance. 🏡😼
-#Nature #Birdwatching #TinyHome #Cozy https://t.co/oGkRyLBa2X
+#Nature #Birdwatching #TinyHome #Cozy

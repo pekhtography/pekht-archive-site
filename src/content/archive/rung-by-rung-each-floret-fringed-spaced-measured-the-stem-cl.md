@@ -15,4 +15,4 @@ The stem climbs like it has somewhere to be —
 deeper shade, thicker silence, zero sun. 
 A ladder going the wrong direction. 🌿 
 Arrived anyway.
-#NaturalBeauty #WildBotany #HiddenBloom #Enchanted https://t.co/zPpqtJNUeX
+#NaturalBeauty #WildBotany #HiddenBloom #Enchanted

@@ -13,4 +13,4 @@ In the emerald backyard, a dark silhouette looms.
 Sharp eyes, ragged fuzz, and a beak stained with dirt. 
 He’s an eagle... trapped in a pom-pom. 🦅 
 Identity crisis. ✨
-#Wildlife #BirdWatching #Fledgling #Awkward https://t.co/qatznN8hqG
+#Wildlife #BirdWatching #Fledgling #Awkward

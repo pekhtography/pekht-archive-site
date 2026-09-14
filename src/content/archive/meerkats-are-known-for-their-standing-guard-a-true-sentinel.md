@@ -11,4 +11,4 @@ hashtags:
   - "family"
   - "wild"
 ---
-Meerkats are known for their standing guard, a true sentinel of the savanna #meerkat #mystique #creature #charm #family #wild https://t.co/mf2NbHb39h
+Meerkats are known for their standing guard, a true sentinel of the savanna #meerkat #mystique #creature #charm #family #wild

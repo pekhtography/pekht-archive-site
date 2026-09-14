@@ -11,4 +11,4 @@ hashtags:
   - "Gold"
   - "Panorama"
 ---
-Autumn is a second spring when every leaf is a flower #Autumn #Spring #Leaves #Trees #Gold #Panorama https://t.co/mZkDvIamLF
+Autumn is a second spring when every leaf is a flower #Autumn #Spring #Leaves #Trees #Gold #Panorama

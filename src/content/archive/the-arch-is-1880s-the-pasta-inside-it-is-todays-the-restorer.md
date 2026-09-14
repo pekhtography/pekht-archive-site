@@ -14,4 +14,4 @@ The pasta inside it is today's.
 The restorer documented seventeen layers of plaster and found, 
 at the very bottom, 
 a reservation for two — still valid. 🍝
-#CityLife #UrbanExploration #StreetPhotography #MoscowVibes https://t.co/aniDaZw3ua
+#CityLife #UrbanExploration #StreetPhotography #MoscowVibes

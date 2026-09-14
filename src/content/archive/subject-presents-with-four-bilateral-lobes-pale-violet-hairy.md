@@ -13,4 +13,4 @@ Subject presents with four bilateral lobes, pale violet,
 hairy calyx (hydration beads intact), stem resistance notable — 🔬
 prognosis excellent, no pain reported, zero interest in your opinion.
 Wildflowers never consult. 🌸
-#NaturePhotography #WildFlowers #MacroWorld #QuietBeauty https://t.co/gfAmI7zRCJ
+#NaturePhotography #WildFlowers #MacroWorld #QuietBeauty

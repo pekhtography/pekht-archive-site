@@ -12,4 +12,4 @@ hashtags:
 This pink exists for eleven minutes a day. 🌸 
 After that — just flowers. 🌿 
 The light doesn't stay. The stem does.
-#GoldenHour #NaturePhotography #FlowerMoments #GardenAesthetic https://t.co/Tf4E6901G5
+#GoldenHour #NaturePhotography #FlowerMoments #GardenAesthetic

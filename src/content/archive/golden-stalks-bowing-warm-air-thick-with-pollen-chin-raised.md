@@ -13,4 +13,4 @@ Golden stalks bowing, warm air thick with pollen —
 chin raised, like he's been here since the first sunrise. 🔆
 Somewhere a pharaoh drew this exact silhouette
 and called it sacred. 🐱
-#CatLife #GoldenHour #CatWisdom #SunWarmed https://t.co/eEvbHY3kDQ
+#CatLife #GoldenHour #CatWisdom #SunWarmed

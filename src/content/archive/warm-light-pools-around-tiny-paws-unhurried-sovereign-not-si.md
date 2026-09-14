@@ -12,4 +12,4 @@ hashtags:
 Warm light pools around tiny paws — unhurried, sovereign. ☀️ 
 Not sitting in the sun. The sun adjusted. 🐾 
 Some small things don't seek warmth — they become it. 🌿
-#CatsOfTwitter #TinyBoss #KittenVibes #GoldenHour https://t.co/zPSz5KcENy
+#CatsOfTwitter #TinyBoss #KittenVibes #GoldenHour

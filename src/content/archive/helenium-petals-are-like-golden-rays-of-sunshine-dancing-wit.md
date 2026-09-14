@@ -18,4 +18,4 @@ hashtags:
   - "Outdoors"
 ---
 Helenium petals are like golden rays of sunshine dancing with nature 
-#Helenium #Flowers #Nature #Bloom #Yellow #Petals #Garden #Sunshine #Beauty #Wildflowers #Summer #Outdoors https://t.co/ByFTjhEwxL
+#Helenium #Flowers #Nature #Bloom #Yellow #Petals #Garden #Sunshine #Beauty #Wildflowers #Summer #Outdoors

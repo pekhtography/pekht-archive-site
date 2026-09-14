@@ -21,4 +21,4 @@ hashtags:
   - "Nature"
   - "Harmony"
 ---
-#Autumn #Change #Landscape #Beauty #Birches #Grass #Softness #Leaves #Freedom #Nostalgia #Transformation #Freshness #Golden #Warmth #Nature #Harmony https://t.co/z4O9e1X4Y1
+#Autumn #Change #Landscape #Beauty #Birches #Grass #Softness #Leaves #Freedom #Nostalgia #Transformation #Freshness #Golden #Warmth #Nature #Harmony

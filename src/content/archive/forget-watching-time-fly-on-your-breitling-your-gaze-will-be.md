@@ -20,4 +20,4 @@ hashtags:
 ---
 Forget watching time fly on your Breitling — your gaze will be glued to Novikov’s menu instead 😂.
 #MenuOverTime 
-#Novikov #Restaurant #Bar #Breitling #Watches #Luxury #Architecture #City #Street #Glass #Facade #Entrance https://t.co/IP9dKEyAo2
+#Novikov #Restaurant #Bar #Breitling #Watches #Luxury #Architecture #City #Street #Glass #Facade #Entrance

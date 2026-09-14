@@ -21,4 +21,4 @@ hashtags:
   - "Color"
   - "Woods"
 ---
-#AmanitaMuscarai #Brightness #Forest #Danger #Caution #Toadstool #Nature #Mushroom #Vibrant #FlyAgaric #Red #Orange #Cap #Toxic #Color #Woods https://t.co/ObLgBSHbVq
+#AmanitaMuscarai #Brightness #Forest #Danger #Caution #Toadstool #Nature #Mushroom #Vibrant #FlyAgaric #Red #Orange #Cap #Toxic #Color #Woods

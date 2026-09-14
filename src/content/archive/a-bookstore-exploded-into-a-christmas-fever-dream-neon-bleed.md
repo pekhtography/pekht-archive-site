@@ -14,4 +14,4 @@ Somewhere inside,
 a bookseller is re-shelving War and Peace under the disco ball.
 Nobody stopped him.
 Nobody will 🎄
-#WinterVibes #MoscowNights https://t.co/rKS1jT1EjZ
+#WinterVibes #MoscowNights

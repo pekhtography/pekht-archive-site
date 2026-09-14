@@ -27,4 +27,4 @@ hashtags:
   - "quack"
 ---
 Hope floats, much like a fleet of yellow duckies, defying the depth of despair in flooded halls
-#Storm #Chaos #Hope #Light #Flood #House #Home #Duck #Joy #Dreams #Future #Hopeless #Sunshine #Duckie #Expectation #Despair #Rubber #yellow #floats #buoyancy #quack https://t.co/oHVlclyCrj
+#Storm #Chaos #Hope #Light #Flood #House #Home #Duck #Joy #Dreams #Future #Hopeless #Sunshine #Duckie #Expectation #Despair #Rubber #yellow #floats #buoyancy #quack

@@ -19,4 +19,4 @@ hashtags:
   - "serene"
 ---
 In the quiet of the morning, the peonies stood as silent poets, singing odes to the dawn
-#peonies #Peony #blooms #nature #garden #pink #flowers #petals #greenery #spring #beauty #vibrant #serene https://t.co/FtX5UkItoq
+#peonies #Peony #blooms #nature #garden #pink #flowers #petals #greenery #spring #beauty #vibrant #serene

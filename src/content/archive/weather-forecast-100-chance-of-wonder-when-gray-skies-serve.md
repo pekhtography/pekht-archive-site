@@ -18,4 +18,4 @@ hashtags:
   - "dramatic"
 ---
 Weather forecast: 100% chance of wonder ☁️ When gray skies serve you a full spectrum reminder that beauty exists everywhere 🌈 Plot twist: the best views come free! 💰 #SkyCanvas
-#rainbow #sky #nature #cityscape #weather #photography #moment #beauty #urban #colorful #dramatic https://t.co/PNaFtb8KUm
+#rainbow #sky #nature #cityscape #weather #photography #moment #beauty #urban #colorful #dramatic

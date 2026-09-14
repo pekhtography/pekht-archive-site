@@ -19,4 +19,4 @@ hashtags:
   - "silhouette"
 ---
 Some evenings feel like a film: long shadows, soft focus, and the hero is public transport. 🎬🌆🚊😌 #CinematicCommute
-#tram #cityscape #sunset #urban #street #transport #rails #architecture #traffic #twilight #metropolis #silhouette https://t.co/cNtgOsxYLQ
+#tram #cityscape #sunset #urban #street #transport #rails #architecture #traffic #twilight #metropolis #silhouette

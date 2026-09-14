@@ -15,4 +15,4 @@ The light lands.
 The chest rises.
 A paw twitches once, then stills🐾
 Ten kilograms of ancient trust, quiet in the sun✨
-#Cats #CatNap #SOLAR https://t.co/ZZSQISRR9o
+#Cats #CatNap #SOLAR

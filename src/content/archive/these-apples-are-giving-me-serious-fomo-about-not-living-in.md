@@ -19,4 +19,4 @@ hashtags:
   - "bokeh"
 ---
 These apples are giving me serious FOMO about not living in an orchard 🌳😍 Who needs city life when you can have this view every morning? #OrchardEnvy
-#apple #harvest #organic #fresh #nature #orchard #healthy #fruit #spring #rustic #natural #bokeh https://t.co/5XTdSoT0n4
+#apple #harvest #organic #fresh #nature #orchard #healthy #fruit #spring #rustic #natural #bokeh

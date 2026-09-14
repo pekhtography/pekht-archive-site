@@ -19,4 +19,4 @@ hashtags:
   - "culture"
 ---
 Even the clouds seem to watch as past meets present in the heart of Moscow. A fighter, a fortress, a story etched in every rivet. ⏳🛩️✨ #TimeFliesForward
-#fighter #aircraft #aviation #history #Moscow #RedSquare #Soviet #warplane #vintage #monument #architecture #culture https://t.co/RZHLvRWSpi
+#fighter #aircraft #aviation #history #Moscow #RedSquare #Soviet #warplane #vintage #monument #architecture #culture

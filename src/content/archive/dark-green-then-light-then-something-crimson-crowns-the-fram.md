@@ -15,4 +15,4 @@ each petal (logged, mapped, spiraled)
 seated exactly where an empire 🌿 once decided glory should live. 
 Shortest reign. 
 Loudest throne. 👑
-#Nature #Flowers #PeonyLovers #GoldenHour https://t.co/9LcPN3XcBy
+#Nature #Flowers #PeonyLovers #GoldenHour

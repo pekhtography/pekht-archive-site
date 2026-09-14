@@ -14,4 +14,4 @@ and genuinely not looking out🫖
 Out here:
 deep snow, bare trees, the whole red-and-blue skyline going absolutely unhinged for an empty park.
 That's just how cities are at 2am✨
-#CityLights #NeonWinter #ColdAndGlowing #Night https://t.co/TxTIhJuSuC
+#CityLights #NeonWinter #ColdAndGlowing #Night

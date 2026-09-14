@@ -21,4 +21,4 @@ hashtags:
   - "Tiny"
   - "blooms"
 ---
-#BidensPilosa #Dry #Flowers #Stems #Field #Meadow #Nature #Simplicity #Bidens #pilosa #Resilience #Blackjack #Plant #Growth #Tiny #blooms https://t.co/cZXU9DyeHU
+#BidensPilosa #Dry #Flowers #Stems #Field #Meadow #Nature #Simplicity #Bidens #pilosa #Resilience #Blackjack #Plant #Growth #Tiny #blooms

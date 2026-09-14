@@ -15,4 +15,4 @@ Sometimes you're up, sometimes you're down.
 But if you're not moving, 
 you're just a cold piece of metal in the snow. 
 Keep spinning. ❄️⚙️ 
-#LifeLessons #MoscowNights #UrbanWisdom #NostalgicLight https://t.co/NNzZieLTsW
+#LifeLessons #MoscowNights #UrbanWisdom #NostalgicLight

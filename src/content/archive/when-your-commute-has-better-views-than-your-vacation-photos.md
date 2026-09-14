@@ -19,4 +19,4 @@ hashtags:
   - "architecture"
 ---
 When your commute has better views than your vacation photos 📸😏 Peak urban flex happening at track level #CommuteBrag
-#train #city #urban #skyscrapers #commuter #railway #infrastructure #sunset #metropolitan #transportation #modern #architecture https://t.co/7CmQesAn83
+#train #city #urban #skyscrapers #commuter #railway #infrastructure #sunset #metropolitan #transportation #modern #architecture

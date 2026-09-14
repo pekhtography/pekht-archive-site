@@ -28,4 +28,4 @@ hashtags:
   - "beauty"
 ---
 As nature dons its golden cloak, a serene reverie unfolds by the waterside
-#autumn #leaves #magic #water #story #ripple #nature #golden #cloak #serene #reverie #dreams #frolic #city #vibrance #ponds #reflection #fairytale #wonder #captivating #enchantment #beauty https://t.co/XGUzgH3Cng
+#autumn #leaves #magic #water #story #ripple #nature #golden #cloak #serene #reverie #dreams #frolic #city #vibrance #ponds #reflection #fairytale #wonder #captivating #enchantment #beauty

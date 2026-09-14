@@ -22,4 +22,4 @@ hashtags:
   - "Wildlife"
 ---
 Fact: Horse chestnut trees are great for shade. Myth: They grow magic horseshoes 🐴🛠️ #ShadeNotShoes
-#HorseChestnut #Tree #Flowers #Nature #Spring #Leaves #Bloom #Botany #Garden #Outdoor #Green #Sunlight #Blossom #Plant #Wildlife https://t.co/3IGRFtL7wj
+#HorseChestnut #Tree #Flowers #Nature #Spring #Leaves #Bloom #Botany #Garden #Outdoor #Green #Sunlight #Blossom #Plant #Wildlife

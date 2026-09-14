@@ -18,4 +18,4 @@ hashtags:
   - "display"
 ---
 Each drop of water in the fountain is a note in the melody of life, echoing through the city's heart
-#fountain #lights #night #colorful #water #architecture #beautiful #urban #vibrant #magical #city #display https://t.co/XhWF4OnOrD
+#fountain #lights #night #colorful #water #architecture #beautiful #urban #vibrant #magical #city #display

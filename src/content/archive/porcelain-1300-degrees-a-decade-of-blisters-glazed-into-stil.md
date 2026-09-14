@@ -15,4 +15,4 @@ She sits on a sphere —
 the one object on earth guaranteed to roll — 
 and thinks. Forever. 
 Hard white. Soft world. 🌿
-#Art #BalletLife #SculptureGarden #QuietMoment https://t.co/iD9sIsbsW0
+#Art #BalletLife #SculptureGarden #QuietMoment

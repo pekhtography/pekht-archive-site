@@ -19,4 +19,4 @@ hashtags:
   - "pet"
 ---
 Turns out, luxury isn’t in the garage—it’s wagging its tail outside 🐕🚘😉. #LuxuryOnPaws
-#dog #greyhound #style #luxury #vintage #car #elegance #collar #animal #fashion #classic #pet https://t.co/Qoqy11oflT
+#dog #greyhound #style #luxury #vintage #car #elegance #collar #animal #fashion #classic #pet

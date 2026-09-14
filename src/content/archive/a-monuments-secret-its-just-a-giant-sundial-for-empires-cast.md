@@ -12,4 +12,4 @@ hashtags:
 A monument's secret: it's just a giant sundial for empires. 
 Casts a long, cold shadow all day, 
 then melts completely in one liquid-gold minute. ⏳🔥
-#Architecture #UrbanPhotography #SovietArchitecture #GoldenHour https://t.co/9ODzAhxOy0
+#Architecture #UrbanPhotography #SovietArchitecture #GoldenHour

@@ -17,4 +17,4 @@ hashtags:
   - "celebration"
 ---
 As night falls, the boulevards glow like rivers of stars, with New Year trees standing tall as guardians of the season's wonder, casting a magical light over the festive streets
-#Boulevard #Glow #Stars #NewYearTrees #Guardians #Magic #Festive #Street #city #wonder #celebration https://t.co/h40Z6fuoCu
+#Boulevard #Glow #Stars #NewYearTrees #Guardians #Magic #Festive #Street #city #wonder #celebration

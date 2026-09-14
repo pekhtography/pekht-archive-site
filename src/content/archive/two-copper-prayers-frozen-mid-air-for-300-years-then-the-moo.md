@@ -13,4 +13,4 @@ Two copper prayers frozen mid-air for 300 years. 🕯️
 Then the moon showed up uninvited — third dome, softer, free.
 Stone keeps the vow. 
 Sky improvises. 🌙✨
-#Architecture #OrthodoxChurch #GoldenHourShot #LightAndShadow https://t.co/SUqJKi6kV4
+#Architecture #OrthodoxChurch #GoldenHourShot #LightAndShadow

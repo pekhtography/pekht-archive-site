@@ -13,4 +13,4 @@ They built me to shout "Glory!" for centuries 🏛️
 Now I just enjoy the silent winter feasts: 
 sky - cranberry sauce, clouds - whipped cream, the river - a long, cold shot of vodka. 
 Aesthetic digestion is perfect 🍽️✨
-#Moscow #StalinistArchitecture #WinterWonderland #WinterVibes https://t.co/nUqM59VKRz
+#Moscow #StalinistArchitecture #WinterWonderland #WinterVibes

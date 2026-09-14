@@ -19,4 +19,4 @@ hashtags:
   - "Flood"
 ---
 When Mother Nature throws a fit, it’s not just a sprinkle—it’s a frantic water park ride gone rogue, with torrents of rain and wind that whirl around like a wild roller coaster
-#Tornado #Lightning #Storm #Rain #Wind #Tantrum #Drenching #Nature #Frenzy #Zap #Gust #Power #Flood https://t.co/IYm6qd5zdo
+#Tornado #Lightning #Storm #Rain #Wind #Tantrum #Drenching #Nature #Frenzy #Zap #Gust #Power #Flood

@@ -19,4 +19,4 @@ hashtags:
   - "Leisure"
 ---
 Savoring the moment as the city glides by 🍃🛥️😌. A river cruise is a must for every traveler #RiverCruiseExperience
-#River #Cruise #Ship #Tourism #Travel #Summer #Water #Riverboat #City #Landscape #Adventure #Leisure https://t.co/xQpOoJPjOD
+#River #Cruise #Ship #Tourism #Travel #Summer #Water #Riverboat #City #Landscape #Adventure #Leisure

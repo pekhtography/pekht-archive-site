@@ -18,4 +18,4 @@ hashtags:
   - "season"
 ---
 The apple tree, bursting with blossoms, seemed to rival the most extravagant wedding cake! 
-#blossoms #spring #nature #bloom #apple #tree #petals #white #beauty #growth #flower #season https://t.co/0NcStlNv6u
+#blossoms #spring #nature #bloom #apple #tree #petals #white #beauty #growth #flower #season

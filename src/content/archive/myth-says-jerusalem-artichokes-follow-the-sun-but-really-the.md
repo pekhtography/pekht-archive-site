@@ -19,4 +19,4 @@ hashtags:
   - "Beauty"
 ---
 Myth says Jerusalem artichokes follow the sun, but really they just love a good tan
-#Jerusalem #Artichoke #Yellow #Flower #Nature #Bloom #Petals #Stem #Garden #Wildflower #Summer #Bright #Beauty https://t.co/7op3oYPEgz
+#Jerusalem #Artichoke #Yellow #Flower #Nature #Bloom #Petals #Stem #Garden #Wildflower #Summer #Bright #Beauty

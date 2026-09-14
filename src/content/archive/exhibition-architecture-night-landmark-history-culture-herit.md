@@ -14,4 +14,4 @@ hashtags:
   - "Illumination"
   - "Grandeur"
 ---
-#Exhibition #Architecture #Night #Landmark #History #Culture #Heritage #Illumination #Grandeur https://t.co/L9C0Mwooee
+#Exhibition #Architecture #Night #Landmark #History #Culture #Heritage #Illumination #Grandeur

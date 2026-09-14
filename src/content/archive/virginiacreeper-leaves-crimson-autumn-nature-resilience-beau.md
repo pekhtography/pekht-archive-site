@@ -18,4 +18,4 @@ hashtags:
   - "Wildlife"
   - "Charm"
 ---
-#VirginiaCreeper #Leaves #Crimson #Autumn #Nature #Resilience #Beauty #Seasons #Vine #Foliage #Scarlet #Wildlife #Charm https://t.co/6f3RoElGSh
+#VirginiaCreeper #Leaves #Crimson #Autumn #Nature #Resilience #Beauty #Seasons #Vine #Foliage #Scarlet #Wildlife #Charm

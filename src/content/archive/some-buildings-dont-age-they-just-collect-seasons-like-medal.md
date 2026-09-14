@@ -18,4 +18,4 @@ hashtags:
   - "timeless"
 ---
 Some buildings don’t age. They just collect seasons like medals. 🍁❄️🌸☀️ #EternalSeason
-#architecture #travel #history #art #moscow #sovietarchitecture #urbanexploration #autumnvibes #monumental #aesthetic #timeless https://t.co/iyZ8CJWG4R
+#architecture #travel #history #art #moscow #sovietarchitecture #urbanexploration #autumnvibes #monumental #aesthetic #timeless

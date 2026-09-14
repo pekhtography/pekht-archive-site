@@ -41,4 +41,4 @@ hashtags:
   - "Beauty"
   - "Grace"
 ---
-#Snow #Winter #Cold #Frost #Chill #Breeze #Slope #Incline #Uphill #Struggle #Mountain #Giant #Glistens #Shine #Shimmer #Glow #Sparkle #Twinkle #Star #Pale #Soft #Light #Bright #Slippery #Hazard #Danger #Slide #Fun #Glide #Smooth #Nature #Wild #Scenic #Wildlife #Beauty #Grace https://t.co/EpIp9R1LWL
+#Snow #Winter #Cold #Frost #Chill #Breeze #Slope #Incline #Uphill #Struggle #Mountain #Giant #Glistens #Shine #Shimmer #Glow #Sparkle #Twinkle #Star #Pale #Soft #Light #Bright #Slippery #Hazard #Danger #Slide #Fun #Glide #Smooth #Nature #Wild #Scenic #Wildlife #Beauty #Grace

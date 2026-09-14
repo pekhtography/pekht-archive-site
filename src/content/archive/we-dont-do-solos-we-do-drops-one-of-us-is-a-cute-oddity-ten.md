@@ -14,4 +14,4 @@ We do "drops".
 One of us is a cute oddity. 
 Ten thousand of us is a landscape revolution. 
 Individuality is overrated; impact is everything 🔵🔵🔵 
-#Muscari #SpringBulbs #GardenCarpet #BlueBloom https://t.co/Jt0rrXGZlt
+#Muscari #SpringBulbs #GardenCarpet #BlueBloom

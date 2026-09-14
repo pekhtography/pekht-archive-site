@@ -14,4 +14,4 @@ The wind screams "retreat" 🌬️
 The duck, paddling in the dark water, has only one reply: 
 a serene, feathery middle finger to the season 🦆 
 Iconic.
-#Winter #BirdPhotography #Ducks #Resilience https://t.co/szGcfwFcmk
+#Winter #BirdPhotography #Ducks #Resilience

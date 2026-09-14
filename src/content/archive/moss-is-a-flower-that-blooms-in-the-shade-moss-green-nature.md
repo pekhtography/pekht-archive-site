@@ -12,4 +12,4 @@ hashtags:
   - "Forest"
   - "garden"
 ---
-Moss is a flower that blooms in the shade #Moss #Green #Nature #Shade #Beauty #Forest #garden https://t.co/mKvWkXkgZo
+Moss is a flower that blooms in the shade #Moss #Green #Nature #Shade #Beauty #Forest #garden

@@ -21,4 +21,4 @@ hashtags:
   - "heart"
 ---
 The handmade doll isn’t merely stuffed fabric; it’s an all-access pass to the amusement park of your mind!
-#handmade #doll #hopes #universe #tales #laughter #dreams #adventure #guardian #whimsy #essence #life #passion #creator #heart https://t.co/vyk7rrs3sY
+#handmade #doll #hopes #universe #tales #laughter #dreams #adventure #guardian #whimsy #essence #life #passion #creator #heart

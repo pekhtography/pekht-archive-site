@@ -16,4 +16,4 @@ hashtags:
   - "Winter"
 ---
 With all these lights, Santa might think he's already at the North Pole! 
-#Christmas #Tree #Lights #Sunset #Holiday #Shopping #Architecture #Festive #Decorations #Winter https://t.co/a3hRvoJ5BX
+#Christmas #Tree #Lights #Sunset #Holiday #Shopping #Architecture #Festive #Decorations #Winter

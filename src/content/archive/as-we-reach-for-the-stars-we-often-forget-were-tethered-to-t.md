@@ -18,4 +18,4 @@ hashtags:
   - "Stability"
 ---
 As we reach for the stars, we often forget we’re tethered to the earth—our dreams soaring while our feet remain firmly planted
-#Stars #Galaxies #Tethered #Connection #Earth #Home #Dreams #Aspirations #Soaring #Flight #Feet #Stability https://t.co/i4n0Nv4UI3
+#Stars #Galaxies #Tethered #Connection #Earth #Home #Dreams #Aspirations #Soaring #Flight #Feet #Stability

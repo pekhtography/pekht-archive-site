@@ -18,4 +18,4 @@ hashtags:
   - "flora"
 ---
 Healing powers and hay perfume—Melilotus is the total package
-#melilotus #wildflower #nature #yellow #herb #summer #bloom #meadow #plant #healing #botany #flora https://t.co/gJUtaMpSnC
+#melilotus #wildflower #nature #yellow #herb #summer #bloom #meadow #plant #healing #botany #flora

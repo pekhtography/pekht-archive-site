@@ -15,4 +15,4 @@ finds the pink bud
 and carves it into ridges of deep magenta and white-hot silk. 🌹 
 The bud holds. ✨ 
 Peak tension.
-#NaturePhotography #MacroWorld #GoldenHourGarden #UnexpectedBeauty https://t.co/00w6JmoiKI
+#NaturePhotography #MacroWorld #GoldenHourGarden #UnexpectedBeauty

@@ -17,4 +17,4 @@ hashtags:
   - "TimelessBeauty"
 ---
 Columns hold centuries 🏛️ Leaves hold moments 🍂 Both fall eventually, but first – they make you stop scrolling and breathe deeper ✨ #FallingSoftly
-#Architecture #Travel #Autumn #Photography #Nature #HistoricHomes #FallVibes #ClassicalArchitecture #Nostalgia #TimelessBeauty https://t.co/9L5ljvJ5bU
+#Architecture #Travel #Autumn #Photography #Nature #HistoricHomes #FallVibes #ClassicalArchitecture #Nostalgia #TimelessBeauty

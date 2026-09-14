@@ -14,4 +14,4 @@ Stream found the exit 💧
 Snow built walls, water said "thanks for the tunnel." 
 Dark, narrow, unstoppable. 
 When the world stops, be the thing that flows ❄️✨ 
-#WinterLandscape #ForestStream #WinterWater #KeepMoving https://t.co/GPW3nmXmlI
+#WinterLandscape #ForestStream #WinterWater #KeepMoving

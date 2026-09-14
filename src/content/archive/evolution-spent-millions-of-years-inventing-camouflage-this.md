@@ -14,4 +14,4 @@ This one said "nah, I'll be a sunset."
 Cobalt blue fading into liquid gold, 
 swimming through Tuesday like it's the Met Gala. 
 Zero survival instinct, maximum drip. 💎🐟
-#NatureIsArt #AquariumLife #ColorOverload #PureJoy https://t.co/36jSWI1PSi
+#NatureIsArt #AquariumLife #ColorOverload #PureJoy

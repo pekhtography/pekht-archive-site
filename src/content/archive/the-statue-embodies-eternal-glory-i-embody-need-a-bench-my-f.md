@@ -8,4 +8,4 @@ hashtags:
   - "Philosophy"
   - "Eternal"
 ---
-The statue embodies 'Eternal Glory.' I embody 'Need a bench, my feet are screaming.' 🍂 Leaves fall, people rush, hierarchies remain ✨😅🧘 #Life #Philosophy #Eternal https://t.co/HNuEoUo3Fa
+The statue embodies 'Eternal Glory.' I embody 'Need a bench, my feet are screaming.' 🍂 Leaves fall, people rush, hierarchies remain ✨😅🧘 #Life #Philosophy #Eternal

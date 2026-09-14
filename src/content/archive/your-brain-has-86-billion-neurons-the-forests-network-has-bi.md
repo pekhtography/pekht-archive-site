@@ -16,4 +16,3 @@ hashtags:
 ---
 Your brain has 86 billion neurons. The forest's network has billions more 🧠🌲. We're just late to the intelligence party. #NeuroBota
 #Nature #Science #PlantScience #Botany #Mindfulness #Awe #Consciousness #PlantScience #MindBlowing
-https://t.co/F3rYqZ6xKm https://t.co/ZEiAeENLhP

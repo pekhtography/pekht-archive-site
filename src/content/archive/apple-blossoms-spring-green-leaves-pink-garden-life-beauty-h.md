@@ -19,4 +19,4 @@ hashtags:
   - "fragrance"
   - "joy"
 ---
-#apple #blossoms #spring #green #leaves #pink #garden #life #beauty #hope #renewal #nature #fragrance #joy https://t.co/yKqGwLL3HG
+#apple #blossoms #spring #green #leaves #pink #garden #life #beauty #hope #renewal #nature #fragrance #joy

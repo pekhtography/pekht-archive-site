@@ -14,4 +14,4 @@ subject displays classic mosaic-virus streaking
 (see: crimson diagonal, 14–18mm width). 🌷 
 Prognosis — extremely contagious. 
 Last outbreak lasted 400 years and counting. 😅
-#Spring #TulipSeason #BreakingPattern #FlowerMood https://t.co/NGQl6wG36k
+#Spring #TulipSeason #BreakingPattern #FlowerMood

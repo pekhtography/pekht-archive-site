@@ -13,4 +13,4 @@ Mother Nature installed a glass knife collection outside
 and called it "ambiance." ✨ 
 The closer you look, the sharper it gets. 
 That's how all the best threats work, really. 💎
-#NatureIsArt #WinterMagic #DangerousBeauty #FrozenInTime https://t.co/d2ytPTGIRm
+#NatureIsArt #WinterMagic #DangerousBeauty #FrozenInTime

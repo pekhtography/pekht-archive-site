@@ -13,4 +13,4 @@ A botanist walks past, clipboard out —
 stops (pencil mid-air), 
 squints at 800 simultaneous blooms on one shrub 🌸 
 and quietly reclassifies it under 'evolutionary showing off.'
-#NaturePhotography #GardenLife #Azalea #BloomSeason https://t.co/Jye169f6NW
+#NaturePhotography #GardenLife #Azalea #BloomSeason

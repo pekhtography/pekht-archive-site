@@ -13,4 +13,4 @@ Mid-pirouette. Mid-breath. 🩰
 Stone caught the exact second muscle forgets it's supposed to hurt —
 and kept it forever. 🌿 
 Marble remembers what flesh refuses to. ✨
-#ArtThatBreathes #SculptureGarden #FrozenMotion #EternalGrace https://t.co/BefkZjTeWF
+#ArtThatBreathes #SculptureGarden #FrozenMotion #EternalGrace

@@ -14,4 +14,4 @@ Columns.
 The hydrangeas still warm from afternoon. 
 Then: cold silk smoothness, piano-white, faintly humming — 🎭 
 one gesture held so long it forgot it was ever a body. ✨
-#Ballet #StreetArt #BolshoiTheatre #FrozenInMotion https://t.co/JOFxPf1wvr
+#Ballet #StreetArt #BolshoiTheatre #FrozenInMotion

@@ -13,4 +13,4 @@ Earth cracks. Fingers rise. Velvety purple watchers wait.
 Up, through the mulch, across the light. 
 Gardening is warfare. 
 The aliens are here. 👽✨
-#Spring #GardenersLife #PlantPower #Alive https://t.co/YvFuHOHBUu
+#Spring #GardenersLife #PlantPower #Alive

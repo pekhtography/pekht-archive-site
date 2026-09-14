@@ -13,4 +13,4 @@ Rain-torn silk, copper center still warm 🌹 —
 the garden is cold and dark, 
 she is the only lit window. 🍂 
 Ruin and radiance are the same address. ✨
-#RoseGarden #FlowerMacro #GoldenHour #NaturePhotography https://t.co/VRfrM0W0Ix
+#RoseGarden #FlowerMacro #GoldenHour #NaturePhotography

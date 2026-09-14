@@ -13,4 +13,4 @@ The puddle held the whole arch —
 gold loops, chandeliers upside down. 🌙 
 Two shadows stepped over it carefully. ✨ 
 The most baroque thing in the city was underfoot. 🕯️
-#WinterNights #CityLights #LightArchitecture #GoldenGlow https://t.co/M5WKMhIHsh
+#WinterNights #CityLights #LightArchitecture #GoldenGlow

@@ -17,4 +17,4 @@ hashtags:
   - "elegant"
 ---
 When life gets messy, be like this fountain - turn pressure into art! 💫 Some days you're the golden centerpiece, other days you're just trying not to make a splash 🌊 #FountainPhilosophy
-#fountain #golden #water #park #garden #architecture #heritage #luxury #classical #elegant https://t.co/qdbTEhfKCU
+#fountain #golden #water #park #garden #architecture #heritage #luxury #classical #elegant

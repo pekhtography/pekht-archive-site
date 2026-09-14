@@ -19,4 +19,4 @@ hashtags:
   - "fresh"
 ---
 Purple and yellow: the ultimate power couple 💜💛 Making other color combos jealous since forever 😎 #ColorCouplePower
-#hyacinths #buttercups #flowers #spring #purple #yellow #garden #blooming #nature #petals #colorful #fresh https://t.co/CkQhIzMf5Y
+#hyacinths #buttercups #flowers #spring #purple #yellow #garden #blooming #nature #petals #colorful #fresh

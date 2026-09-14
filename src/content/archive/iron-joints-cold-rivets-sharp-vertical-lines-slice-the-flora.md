@@ -13,4 +13,4 @@ Iron joints. Cold rivets.
 Sharp vertical lines slice the floral scent.
 Heavy towers balance on needles, cranes stitching steel into the sky.
 Gravity negotiates. The city cheats physics. 🏗️🌸
-#Architecture #UrbanDesign #CityViews #SummerVibes https://t.co/MLpdoQ4RbV
+#Architecture #UrbanDesign #CityViews #SummerVibes

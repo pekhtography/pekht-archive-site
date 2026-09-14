@@ -11,4 +11,4 @@ hashtags:
   - "Russia"
 ---
 When Gothic spires meet Soviet dreams 🏗️✨ This is not just a building—it’s a time capsule of Moscow’s soul. The Ministry of Foreign Affairs stands tall, whispering stories of diplomacy, power, and architectural audacity. #MoscowSecrets
-#Architecture #Moscow #History #Russia https://t.co/BBmHG5MGow
+#Architecture #Moscow #History #Russia

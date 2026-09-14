@@ -18,4 +18,4 @@ hashtags:
   - "greenery"
 ---
 Thistles might be prickly customers, but they're the life of the party for pollinators, proving that life is too short to be a boring flower—be a thistle instead!
-#thistle #nature #bloom #purple #wildflower #meadow #flora #botany #outdoors #petals #blossom #greenery https://t.co/JvWwPXrjm7
+#thistle #nature #bloom #purple #wildflower #meadow #flora #botany #outdoors #petals #blossom #greenery

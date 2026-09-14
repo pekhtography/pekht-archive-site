@@ -18,4 +18,4 @@ hashtags:
   - "Plants"
 ---
 If roses are the divas of the garden, mallow is the humble backup singer that steals the show
-#Mallow #Flowers #Pink #Bloom #Nature #Petals #Garden #Blossom #Flora #Beauty #Summer #Plants https://t.co/ff26j0wYd4
+#Mallow #Flowers #Pink #Bloom #Nature #Petals #Garden #Blossom #Flora #Beauty #Summer #Plants

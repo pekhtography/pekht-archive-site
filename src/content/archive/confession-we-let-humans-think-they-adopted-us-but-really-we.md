@@ -19,4 +19,4 @@ hashtags:
   - "friends"
 ---
 Confession: We let humans think they adopted us, but really we're the ones who chose our staff 👑💼 Job requirements: unlimited treats and belly rubs #ChoseOurStaff
-#frenchbulldog #dogs #pets #walking #city #street #bulldogs #companions #urban #lifestyle #adorable #friends https://t.co/gebSdmeCUR
+#frenchbulldog #dogs #pets #walking #city #street #bulldogs #companions #urban #lifestyle #adorable #friends

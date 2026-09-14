@@ -20,4 +20,4 @@ hashtags:
   - "Bouquet"
   - "Harmony"
 ---
-#Amaranth #Everlasting #Calendula #Joy #Zinnia #Resilience #Anemone #Hope #Floral #Arrangement #Beauty #Color #Vibrancy #Bouquet #Harmony https://t.co/rV80kkupvF
+#Amaranth #Everlasting #Calendula #Joy #Zinnia #Resilience #Anemone #Hope #Floral #Arrangement #Beauty #Color #Vibrancy #Bouquet #Harmony

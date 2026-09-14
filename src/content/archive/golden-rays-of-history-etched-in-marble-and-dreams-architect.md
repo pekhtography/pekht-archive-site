@@ -19,4 +19,4 @@ hashtags:
   - "art"
 ---
 Golden rays of history, etched in marble and dreams
-#Architecture #Golden #Pavilion #Grandeur #History #Monument #Heritage #Glory #Symbol #grand #decor #sculpture #art https://t.co/59xSBrofZI
+#Architecture #Golden #Pavilion #Grandeur #History #Monument #Heritage #Glory #Symbol #grand #decor #sculpture #art

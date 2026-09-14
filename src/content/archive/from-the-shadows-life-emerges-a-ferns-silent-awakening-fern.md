@@ -18,4 +18,4 @@ hashtags:
   - "earth"
 ---
 From the shadows, life emerges, a fern's silent awakening
-#fern #nature #green #growth #forest #unfurling #life #botany #spring #flora #renewal #earth https://t.co/3XwA3N29J0
+#fern #nature #green #growth #forest #unfurling #life #botany #spring #flora #renewal #earth

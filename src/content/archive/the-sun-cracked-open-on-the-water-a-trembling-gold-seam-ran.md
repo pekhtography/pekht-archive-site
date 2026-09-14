@@ -12,4 +12,4 @@ hashtags:
 The sun cracked open on the water 🌊🔥 — 
 a trembling gold seam ran bank to bank, warm enough to touch. 
 Every bridge, every spire, every era shook inside it and held. 
-#Sunset #MoscowSkyline #GoldenHour #CityOnFire https://t.co/rdW8s2IsN4
+#Sunset #MoscowSkyline #GoldenHour #CityOnFire

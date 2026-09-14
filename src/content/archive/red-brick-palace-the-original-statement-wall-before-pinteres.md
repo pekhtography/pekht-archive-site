@@ -19,4 +19,4 @@ hashtags:
   - "baroque"
 ---
 Red brick palace: the original "statement wall" before Pinterest made it trendy 🧱 Sometimes being 250 years ahead of design trends pays off! 🎯 #TimelessTrends
-#palace #architecture #gothic #royal #moscow #russia #historical #imperial #gardens #majestic #heritage #baroque https://t.co/72MCMvfWE3
+#palace #architecture #gothic #royal #moscow #russia #historical #imperial #gardens #majestic #heritage #baroque

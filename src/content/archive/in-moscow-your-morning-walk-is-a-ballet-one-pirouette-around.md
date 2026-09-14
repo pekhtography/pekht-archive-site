@@ -8,4 +8,4 @@ hashtags:
   - "Moscow"
   - "CityVibes"
 ---
-In Moscow, your morning walk is a ballet: one pirouette around State History, a grand jeté over Personal Ambition, and a final bow at the coffee shop. 🩰🏛️☕ #UrbanLife #Moscow #CityVibes https://t.co/g55ijyjqNI
+In Moscow, your morning walk is a ballet: one pirouette around State History, a grand jeté over Personal Ambition, and a final bow at the coffee shop. 🩰🏛️☕ #UrbanLife #Moscow #CityVibes

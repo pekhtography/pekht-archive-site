@@ -16,4 +16,4 @@ hashtags:
   - "legacy"
 ---
 Born in revolution, reborn in LED
-#pavilion #nightview #style #architecture #mosaic #culture #illumination #history #monument #legacy https://t.co/mrbiBw4UsN
+#pavilion #nightview #style #architecture #mosaic #culture #illumination #history #monument #legacy

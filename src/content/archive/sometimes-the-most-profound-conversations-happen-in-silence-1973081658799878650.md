@@ -15,4 +15,4 @@ hashtags:
   - "seasonal"
 ---
 Sometimes the most profound conversations happen in silence 🍂 Just you, falling leaves, and the gentle whisper of water over stones ✨ Nature's therapy session is always in session 🌊 #AutumnMeditation
-#autumn #garden #japanese #landscape #foliage #tranquil #nature #seasonal https://t.co/JczEmtOUkt
+#autumn #garden #japanese #landscape #foliage #tranquil #nature #seasonal

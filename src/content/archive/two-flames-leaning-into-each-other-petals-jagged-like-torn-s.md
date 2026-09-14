@@ -13,4 +13,4 @@ Two flames leaning into each other —
 petals jagged like torn silk, yellow bleeding into red 🔥 
 Spring didn't bloom. 
 It detonated. 🌷
-#TulipSeason #FlowerPhotography #SpringVibes #NatureAesthetic https://t.co/plpTXZaD5J
+#TulipSeason #FlowerPhotography #SpringVibes #NatureAesthetic

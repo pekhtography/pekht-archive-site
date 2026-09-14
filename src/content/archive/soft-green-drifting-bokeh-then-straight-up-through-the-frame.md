@@ -14,4 +14,4 @@ Then — straight up through the frame —
 magenta tears the scene in half. 🌺 
 Keats wrote 'beauty is truth.' 
 He left out the part where it shows up looking like a controlled explosion… 🌿
-#FlowerPhotography #GardenLife #BotanicalArt #NatureVibes https://t.co/hO30nHYjpp
+#FlowerPhotography #GardenLife #BotanicalArt #NatureVibes

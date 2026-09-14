@@ -12,4 +12,4 @@ the leaf practically pulls your hand🌿
 Then the small print: contact dermatitis.
 The most touchable thing in the garden keeps a straight face while biting.
 Spring has always been a little dishonest🌸
-#NatureHeals #PrimroseEffect https://t.co/MZzBeC89bv
+#NatureHeals #PrimroseEffect

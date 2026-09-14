@@ -18,4 +18,4 @@ hashtags:
   - "innergrowth"
 ---
 You can feel it — the universe holding its breath 🌸 Every petal a heartbeat waiting to be seen. #TimeToBloom
-#love #nature #flowers #beauty #rose #gardening #flowerphotography #bloom #aesthetic #calm #innergrowth https://t.co/yASMr6F4u8
+#love #nature #flowers #beauty #rose #gardening #flowerphotography #bloom #aesthetic #calm #innergrowth

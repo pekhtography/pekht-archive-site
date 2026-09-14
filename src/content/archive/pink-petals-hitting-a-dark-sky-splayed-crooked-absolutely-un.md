@@ -13,4 +13,4 @@ Pink petals hitting a dark sky —
 splayed, crooked, absolutely unasked. 🌸 
 Every blossom opens like it's auditioning for something nobody scheduled. 
 The tree said: show first, explain later. 🖤
-#Spring #BlossomSeason #DarkFloral #WildAndRaw https://t.co/QoZMLDByvj
+#Spring #BlossomSeason #DarkFloral #WildAndRaw

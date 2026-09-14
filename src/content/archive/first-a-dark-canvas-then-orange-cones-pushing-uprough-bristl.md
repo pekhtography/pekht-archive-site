@@ -13,4 +13,4 @@ Then, orange cones pushing up—rough, bristly, awake.
 Over that, a pink firework frozen mid-blast. 
 And above all, a purple tear in the air. 
 This isn't a garden—this is a solar storm landing gently. ⚡🌸🟠 
-#NaturePhotography #LensFlare #GardenSurrealism https://t.co/jZRAiEGvaD
+#NaturePhotography #LensFlare #GardenSurrealism

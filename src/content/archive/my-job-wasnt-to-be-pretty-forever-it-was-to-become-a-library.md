@@ -14,4 +14,4 @@ It was to become a library.
 Each seed is a book titled "What I Learned While Being Golden." 
 Check me out. 
 I'm done with the fluff; I'm all substance now 📚✨
-#PlantWisdom #CycleComplete #SeedStage #Legacy https://t.co/6pYOni9pfF
+#PlantWisdom #CycleComplete #SeedStage #Legacy

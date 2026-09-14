@@ -11,4 +11,4 @@ hashtags:
   - "vintage"
 ---
 When your hobby budget accidentally creates more authentic historical accuracy than a Netflix series with a $50M budget 💸 Turns out attention to detail doesn't scale with dollar signs 📺 David vs Goliath, but make it fabric 🪡 #IndieVsNetflix
-#puppets #dolls #miniature #vintage https://t.co/ZvIsnyDxxm
+#puppets #dolls #miniature #vintage

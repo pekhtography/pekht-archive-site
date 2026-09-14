@@ -13,4 +13,4 @@ hashtags:
   - "River"
 ---
 Breaking: Local flowers upstage 176-meter skyscraper by simply existing 🌺 Building reportedly "not even mad, just impressed" by petunias' audacity 📰 Nature: 1, Soviet Architecture: Also 1 (it's a tie) 🤝 #FlowerPower
-#Moscow #Architecture #Skyscraper #Stalinist #Flowers #River https://t.co/k1P4NOuCMy
+#Moscow #Architecture #Skyscraper #Stalinist #Flowers #River

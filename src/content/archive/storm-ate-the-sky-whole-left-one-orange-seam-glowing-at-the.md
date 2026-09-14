@@ -13,4 +13,4 @@ Storm ate the sky whole —
 left one orange seam glowing at the throat. 🌩️ 
 The tower punctures it. The road below inhales. 
 Pressure makes light visible. 🔥
-#CityPhotography #UrbanLandscape #StormySkies #DramaticLight https://t.co/9XDvpGAfZH
+#CityPhotography #UrbanLandscape #StormySkies #DramaticLight

@@ -13,4 +13,4 @@ warm yellow plastic, cold cobalt glass, hot pink rubber edge—
 pixel by pixel until the whole wall hums at a frequency your eyes can't unhear.🟨🟩
 One 1920s building.
 Every childhood crayon ever made.🎨
-#Architecture #StreetPhotography https://t.co/mzGe8UPqPC
+#Architecture #StreetPhotography

@@ -12,4 +12,4 @@ hashtags:
 Concrete giants inhale amber heat. 
 Pedestrians accidentally march into a Renaissance painting while checking grocery lists. 
 Modern rushing meets static halos. 🏛️✨
-#Architecture #CityPhotography #GoldenHour #Serenity https://t.co/inYDhi66lm
+#Architecture #CityPhotography #GoldenHour #Serenity

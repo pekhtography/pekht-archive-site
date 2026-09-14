@@ -23,4 +23,4 @@ hashtags:
   - "nature"
 ---
 Each bloom of Lucile's glory-of-the-snow is a tiny star in the garden, twinkling with laughter as they greet the warmth of the sun
-#Luciles #gloryofthesnow #purple #flower #petals #snow #spring #beauty #resilience #garden #bloom #vibrant #delicate #frost #season #elegance #nature https://t.co/RVMXpg6qqP
+#Luciles #gloryofthesnow #purple #flower #petals #snow #spring #beauty #resilience #garden #bloom #vibrant #delicate #frost #season #elegance #nature

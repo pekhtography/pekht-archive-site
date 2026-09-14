@@ -14,4 +14,4 @@ Then the rooftops turn the color of old bread left too close to the stove 🍞 �
 that thick, specific amber you can almost taste on your tongue. 
 One city. One minute. 
 Whole geology of light. 🌇
-#Sunset #MoscowSky #GoldenHour #CityVibes https://t.co/REgwJBTmt0
+#Sunset #MoscowSky #GoldenHour #CityVibes

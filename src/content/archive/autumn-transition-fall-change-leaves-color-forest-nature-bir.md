@@ -19,4 +19,4 @@ hashtags:
   - "Coolness"
   - "Contemplation"
 ---
-#Autumn #Transition #Fall #Change #Leaves #Color #Forest #Nature #Birch #Elegance #Change #Growth #Temperature #Coolness #Contemplation https://t.co/fkDRn3kkJZ
+#Autumn #Transition #Fall #Change #Leaves #Color #Forest #Nature #Birch #Elegance #Change #Growth #Temperature #Coolness #Contemplation

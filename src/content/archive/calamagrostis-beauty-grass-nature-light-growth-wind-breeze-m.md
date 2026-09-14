@@ -18,4 +18,4 @@ hashtags:
   - "biodiversity"
   - "uniqueness"
 ---
-#Calamagrostis #Beauty #Grass #Nature #Light #Growth #Wind #Breeze #meadow #movement #vitality #biodiversity #uniqueness https://t.co/GTKAQ9ZBI2
+#Calamagrostis #Beauty #Grass #Nature #Light #Growth #Wind #Breeze #meadow #movement #vitality #biodiversity #uniqueness

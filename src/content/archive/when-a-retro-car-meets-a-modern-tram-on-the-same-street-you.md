@@ -19,4 +19,4 @@ hashtags:
   - "daily"
 ---
 When a retro car meets a modern tram on the same street, you know you’re in a city where time travels in parallel. 🚋✨ #TimeTravelTraffic
-#tram #urban #vintage #citylife #transport #retro #street #movement #nostalgia #modern #traffic #daily https://t.co/cD2yHYGjn7
+#tram #urban #vintage #citylife #transport #retro #street #movement #nostalgia #modern #traffic #daily

@@ -14,4 +14,4 @@ Nuthatch: "I'm gonna walk down this tree face-first
 like a tiny feathered Spider-Man with commitment issues."
 Been doing parkour since before it was cool.
 Gravity who? 🕷️🐦
-#NaturePhotography #BirdWatching #Wildlife #NatureLover https://t.co/c1SGgNkmKU
+#NaturePhotography #BirdWatching #Wildlife #NatureLover

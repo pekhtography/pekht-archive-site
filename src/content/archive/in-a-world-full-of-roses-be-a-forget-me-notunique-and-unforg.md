@@ -18,4 +18,4 @@ hashtags:
   - "Botany"
 ---
 In a world full of roses, be a forget-me-not—unique and unforgettable
-#ForgetMeNot #Blooms #Nature #Blue #Spring #Blossom #Garden #Wildflowers #Delicate #Meadow #Flora #Botany https://t.co/KaYBMHCyIO
+#ForgetMeNot #Blooms #Nature #Blue #Spring #Blossom #Garden #Wildflowers #Delicate #Meadow #Flora #Botany

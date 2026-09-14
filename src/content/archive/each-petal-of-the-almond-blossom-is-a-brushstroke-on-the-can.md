@@ -18,4 +18,4 @@ hashtags:
   - "serene"
 ---
 Each petal of the almond blossom is a brushstroke on the canvas of the season 
-#almond #blossom #flower #nature #spring #blooming #beauty #pink #garden #petals #delicate #serene https://t.co/QOMN5ie2tm
+#almond #blossom #flower #nature #spring #blooming #beauty #pink #garden #petals #delicate #serene

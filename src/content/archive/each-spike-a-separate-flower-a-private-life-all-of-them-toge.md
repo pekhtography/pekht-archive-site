@@ -12,4 +12,4 @@ hashtags:
 Each spike: a separate flower, a private life 🌸 
 All of them together: one breathing violet globe. 
 Crowded and alone. 💜
-#Allium #FlowerPhilosophy #NatureMindfulness #BotanicalArt https://t.co/cou28wCiLT
+#Allium #FlowerPhilosophy #NatureMindfulness #BotanicalArt

@@ -24,4 +24,4 @@ hashtags:
   - "Wishes"
   - "Happiness"
 ---
-#ChineseLunarNewYear #Celebration #Snake #Wisdom #Zodiac #Signs #Transformation #Change #Intuition #Insight #NewBeginnings #Opportunities #Fireworks #Joy #Lanterns #Light #Renewal #Wishes #Happiness https://t.co/A1N0LXWYhz
+#ChineseLunarNewYear #Celebration #Snake #Wisdom #Zodiac #Signs #Transformation #Change #Intuition #Insight #NewBeginnings #Opportunities #Fireworks #Joy #Lanterns #Light #Renewal #Wishes #Happiness

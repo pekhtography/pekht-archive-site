@@ -13,4 +13,4 @@ Sunset presses its whole weight into purple petals 🔆 —
 two silhouettes walk through, 
 unaware they're inside a painting that erases itself by morning. 
 Some doors are only open once. 🌿
-#GoldenHourMagic #SpringAwakening #MoscowVibes #EphemeralBeauty https://t.co/wVGL5hxRln
+#GoldenHourMagic #SpringAwakening #MoscowVibes #EphemeralBeauty

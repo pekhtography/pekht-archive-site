@@ -15,4 +15,4 @@ hashtags:
   - "autumn"
 ---
 Found this hidden gem where time forgot to hurry 🌿 Ancient stones teaching moss the art of patience while water writes poetry in motion✨ Sometimes the best architects are centuries and rain💧 #TimelessBeauty
-#moss #stones #waterfall #nature #ancient #forest #reflections #autumn https://t.co/K59GekHjcI
+#moss #stones #waterfall #nature #ancient #forest #reflections #autumn

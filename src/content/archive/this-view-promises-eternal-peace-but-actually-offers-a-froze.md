@@ -12,4 +12,4 @@ hashtags:
 This view promises eternal peace 
 but actually offers a frozen nose and wet socks. 
 Nature’s clickbait is getting too sophisticated these days ❄️✨ 
-#Winter #GoldenHour #WinterRiver #InnerPeace https://t.co/lSuOI84UXE
+#Winter #GoldenHour #WinterRiver #InnerPeace

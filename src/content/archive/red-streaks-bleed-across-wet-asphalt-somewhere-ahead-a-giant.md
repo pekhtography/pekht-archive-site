@@ -12,4 +12,4 @@ hashtags:
 Red streaks bleed across wet asphalt. 
 Somewhere ahead, a giant building cosplays as a disco ball to guide my frozen taxi home. 
 Expensive nightlight. 🚕💡
-#CityLights #UrbanPhotography #NightStreet #Glow https://t.co/wjh9oYnTIc
+#CityLights #UrbanPhotography #NightStreet #Glow

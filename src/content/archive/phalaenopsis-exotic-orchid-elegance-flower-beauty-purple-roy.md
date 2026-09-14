@@ -29,4 +29,4 @@ hashtags:
   - "Cultivate"
   - "Patience"
 ---
-#Phalaenopsis #Exotic #Orchid #Elegance #Flower #Beauty #Purple #Royalty #Bloom #Flourish #Leaves #Lush #Habitats #Nature #Care #Luxury #Timeless #Moth #Growth #SoutheastAsia #Nurturing #Cultivation #Cultivate #Patience https://t.co/0PuVvZbFRR
+#Phalaenopsis #Exotic #Orchid #Elegance #Flower #Beauty #Purple #Royalty #Bloom #Flourish #Leaves #Lush #Habitats #Nature #Care #Luxury #Timeless #Moth #Growth #SoutheastAsia #Nurturing #Cultivation #Cultivate #Patience

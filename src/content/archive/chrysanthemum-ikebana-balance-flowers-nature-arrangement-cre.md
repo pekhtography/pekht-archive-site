@@ -22,4 +22,4 @@ hashtags:
   - "Sunshine"
   - "Beauty"
 ---
-#Chrysanthemum #Ikebana #Balance #Flowers #Nature #Arrangement #Creativity #Elegance #Artistry #Culture #Tradition #Symbolism #Meaning #Art #Yellow #Sunshine #Beauty https://t.co/tKB7DXw6u5
+#Chrysanthemum #Ikebana #Balance #Flowers #Nature #Arrangement #Creativity #Elegance #Artistry #Culture #Tradition #Symbolism #Meaning #Art #Yellow #Sunshine #Beauty

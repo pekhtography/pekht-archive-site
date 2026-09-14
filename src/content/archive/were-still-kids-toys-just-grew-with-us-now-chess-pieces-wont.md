@@ -13,4 +13,4 @@ We're still kids — toys just grew with us.
 Now chess pieces won't hide behind your back. 
 Play for real. 
 Every move's an adventure ♟️✨ 
-#WinterVibes #StreetChess #GiantChess #InnerChild https://t.co/YAOovkrZO2
+#WinterVibes #StreetChess #GiantChess #InnerChild

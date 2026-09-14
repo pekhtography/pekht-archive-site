@@ -19,4 +19,4 @@ hashtags:
   - "photography"
 ---
 Ancient myths claimed flowers were divine messengers. This one's clearly texting: "You've got mail… and pollen allergies!" 📧😤🏺 #DivineDMs
-#daylily #flower #hoverfly #pollination #yellow #nature #macro #garden #bloom #insect #nectar #photography https://t.co/SWIfzcn78j
+#daylily #flower #hoverfly #pollination #yellow #nature #macro #garden #bloom #insect #nectar #photography

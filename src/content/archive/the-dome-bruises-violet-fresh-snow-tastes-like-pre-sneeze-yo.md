@@ -14,4 +14,4 @@ Fresh snow tastes like pre-sneeze.
 You try capturing light, but light pins you first — 
 throat tight, toes forgotten. 
 Beauty's a professional pickpocket. 💜❄️🫧 
-#WinterMagic #BlueHour #ChristmasLights #WinterWonderland https://t.co/X8LJXnQQiv
+#WinterMagic #BlueHour #ChristmasLights #WinterWonderland

@@ -14,4 +14,4 @@ while a red candle burns without melting.
 It’s not a storefront—
 it’s a sugar-coated treaty declaring war on adulting. 
 The lights just voted unanimously ✨🗳️. 
-#HolidayMagic #GingerbreadArmy #SweetSurrender #CozyChaos https://t.co/1GAD1BUu2p
+#HolidayMagic #GingerbreadArmy #SweetSurrender #CozyChaos

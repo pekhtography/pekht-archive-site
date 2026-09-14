@@ -13,4 +13,4 @@ Waxy petals, faintly cool to the touch,
 flushed deep crimson at the center where the eye keeps falling — 🌸 
 behind them the whole forest dissolves into green thread and black air, 
 and the flower just… 🌿
-#NaturePhotography #CottageCore #WildFlowers #ColorTheory https://t.co/3GGAXcnl5t
+#NaturePhotography #CottageCore #WildFlowers #ColorTheory

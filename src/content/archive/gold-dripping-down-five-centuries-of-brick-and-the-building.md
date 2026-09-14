@@ -14,4 +14,4 @@ and the building just stood there, bored,
 like it's seen a million sunsets better than yours. 
 It has. 🏛️ 
 You drove three hours for a photo it forgot in 1612.
-#Moscow #GoldenHour #SilentCity #Awe https://t.co/qH1Di7gnlY
+#Moscow #GoldenHour #SilentCity #Awe

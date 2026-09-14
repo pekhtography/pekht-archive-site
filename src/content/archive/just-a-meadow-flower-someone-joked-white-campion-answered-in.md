@@ -13,4 +13,4 @@ hashtags:
 White Campion answered in petals and fragrance 🎨
 reminding us: even the smallest joys can spark a festive spirit 🎄
 Magic doesn’t wait for snow ✨
-#NewYearSpirit #NatureJoy #FestiveSurprise #WhiteCampion https://t.co/YqGrfSuSCo
+#NewYearSpirit #NatureJoy #FestiveSurprise #WhiteCampion

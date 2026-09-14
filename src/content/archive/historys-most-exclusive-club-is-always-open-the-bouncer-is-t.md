@@ -18,4 +18,4 @@ hashtags:
   - "Wonder"
 ---
 History's most exclusive club 🏛️✨ is always open. The bouncer is Time, the guests are forever, and your ticket is a heartbeat. See you inside. #EternalRSVP
-#Art #History #Architecture #Culture #Moscow #ClassicalArt #MuseumLover #PushkinMuseum #Neoclassical #Timeless #Wonder https://t.co/HlenfO2Sdp
+#Art #History #Architecture #Culture #Moscow #ClassicalArt #MuseumLover #PushkinMuseum #Neoclassical #Timeless #Wonder

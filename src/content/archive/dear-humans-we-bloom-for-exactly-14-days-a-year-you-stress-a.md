@@ -19,4 +19,4 @@ hashtags:
   - "delicate"
 ---
 Dear humans, we bloom for exactly 14 days a year. You stress about Monday morning for 52 weeks. Who's really living? 🌸 Signed, Your Friendly Neighborhood Blossom 😏🌿 #BlossomWisdom
-#blossom #spring #flowers #nature #white #petals #bloom #garden #tree #fresh #peaceful #delicate https://t.co/mKF05TtXfs
+#blossom #spring #flowers #nature #white #petals #bloom #garden #tree #fresh #peaceful #delicate

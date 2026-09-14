@@ -10,4 +10,4 @@ hashtags:
   - "golden"
 ---
 Golden hour hits different when you're walking through centuries of history 🌅 Every building tells a story, every street corner whispers secrets of the past ✨ Sometimes the best therapy is just wandering through timeless streets 🚶‍♀️ #GoldenHourMagic
-#city #architecture #golden https://t.co/YcEZ4dRMj8
+#city #architecture #golden

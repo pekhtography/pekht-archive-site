@@ -16,4 +16,4 @@ like a fur coat on a snowman.
 Still, light pools warm on frozen paths.
 The absurdity sticks.
 That's winter's real gift❄️✨
-#Winter #Urban #PublicArt https://t.co/oILtOTm1f3
+#Winter #Urban #PublicArt

@@ -15,4 +15,4 @@ round white disc floating above dark glass,
 the whole river suddenly a different era.🌊
 One commute.
 Three centuries🚢
-#UrbanFuture #SlowTravel #RiverCity #Weird https://t.co/oG42MZRTGz
+#UrbanFuture #SlowTravel #RiverCity #Weird

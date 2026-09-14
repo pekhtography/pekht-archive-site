@@ -16,4 +16,4 @@ hashtags:
   - "hug"
 ---
 The winter forest stands wrapped in a silken white blanket, every branch etching its own delicate design against the crisp blue sky
-#winter #blanket #snowdrifts #paradise #stillness #masterpiece #cold #trees #snow #hug https://t.co/nCkhwWNvVU
+#winter #blanket #snowdrifts #paradise #stillness #masterpiece #cold #trees #snow #hug

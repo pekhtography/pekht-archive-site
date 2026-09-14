@@ -20,4 +20,4 @@ hashtags:
   - "feathers"
 ---
 A chirpy virtuoso in the theater of the treetops
-#bird #branch #nature #sky #tree #white #wagtail #perch #blue #outdoors #wildlife #spring #branch #sky #songbird #feathers https://t.co/t85lyGY1qw
+#bird #branch #nature #sky #tree #white #wagtail #perch #blue #outdoors #wildlife #spring #branch #sky #songbird #feathers

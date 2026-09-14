@@ -24,4 +24,4 @@ hashtags:
   - "fall"
   - "woods"
 ---
-#Autumn #Change #Forest #Whispers #Trees #Growth #Yellow #Sunshine #Red #Leaves #Change #Nature #Beauty #Change #Transformation #Walking #Journey #golden #crimson #fall #woods https://t.co/VGDFwgfY4A
+#Autumn #Change #Forest #Whispers #Trees #Growth #Yellow #Sunshine #Red #Leaves #Change #Nature #Beauty #Change #Transformation #Walking #Journey #golden #crimson #fall #woods

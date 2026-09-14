@@ -22,4 +22,4 @@ hashtags:
   - "nature"
 ---
 As the sun cranks up the heat, the Phlox bursts into bloom, letting out a fragrant tune that makes even the bees do a little jig
-#summer #heat #sun #warmth #earth #soil #Phlox #bloom #petals #colors #fragrant #scents #melody #music #garden #nature https://t.co/U0k8tLAOJ1
+#summer #heat #sun #warmth #earth #soil #Phlox #bloom #petals #colors #fragrant #scents #melody #music #garden #nature

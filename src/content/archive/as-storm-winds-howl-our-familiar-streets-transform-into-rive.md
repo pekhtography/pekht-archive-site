@@ -21,4 +21,4 @@ hashtags:
   - "flow"
 ---
 As storm winds howl, our familiar streets transform into rivers, inviting fish to swim where children once played
-#Floods #Tsunami #Residents #Home #Haven #Lawn #Garden #Storm #Chaos #Rain #Wind #tempest #streets #rivers #flow https://t.co/Zsr6y8py9Y
+#Floods #Tsunami #Residents #Home #Haven #Lawn #Garden #Storm #Chaos #Rain #Wind #tempest #streets #rivers #flow

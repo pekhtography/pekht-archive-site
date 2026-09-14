@@ -18,4 +18,4 @@ hashtags:
   - "TimelessBeauty"
 ---
 Imagine setting this table and still ordering pizza. 🍕👑 #MajesticMistakes
-#Luxury #Art #InteriorDesign #History #PalaceLife #Neoclassicism #RoyalDining #BanquetHall #CrystalChandelier #GrandElegance #TimelessBeauty https://t.co/ot2aCnAMP3
+#Luxury #Art #InteriorDesign #History #PalaceLife #Neoclassicism #RoyalDining #BanquetHall #CrystalChandelier #GrandElegance #TimelessBeauty

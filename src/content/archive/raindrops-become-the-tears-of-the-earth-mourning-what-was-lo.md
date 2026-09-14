@@ -25,4 +25,4 @@ hashtags:
   - "Rain"
 ---
 Raindrops become the tears of the earth, mourning what was lost to unforgiving floods
-#Raindrops #water #Tears #sorrow #Earth #home #Floods #chaos #Mourning #loss #Nature #wild #Dreams #aspiration #Elegy #remembrance #Deluge #Winds #Rain https://t.co/FIOk7yoS8Q
+#Raindrops #water #Tears #sorrow #Earth #home #Floods #chaos #Mourning #loss #Nature #wild #Dreams #aspiration #Elegy #remembrance #Deluge #Winds #Rain

@@ -13,4 +13,4 @@ hashtags:
   - "meow"
   - "owner"
 ---
-A cat’s love is not unconditional; you must earn it with treats #cat #cheezburger #home #treat #love #comfort #meow #owner https://t.co/Dws3x36DB8
+A cat’s love is not unconditional; you must earn it with treats #cat #cheezburger #home #treat #love #comfort #meow #owner

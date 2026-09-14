@@ -1,0 +1,30 @@
+---
+title: "City folks, don’t worry — we’ve sandwiched a beach into your concrete jungle! Who needs oceans? 🌆🏖️ #FakeItTillYouBeac"
+x_id: "1944068232677404683"
+x_created_at: "2025-07-12T16:16:00Z"
+image: "/images/archive/city-folks-dont-worry-weve-sandwiched-a-beach-into-your-conc.jpg"
+hashtags:
+  - "FakeItTillYouBeachIt"
+  - "Urban"
+  - "Beach"
+  - "City"
+  - "Pond"
+  - "Artificial"
+  - "Lake"
+  - "Park"
+  - "View"
+  - "Architecture"
+  - "scape"
+  - "Water"
+  - "Reflection"
+  - "Nature"
+  - "Relaxation"
+  - "Spot"
+  - "Sunny"
+  - "Day"
+  - "Green"
+  - "Space"
+  - "Oasis"
+---
+City folks, don’t worry — we’ve sandwiched a beach into your concrete jungle! Who needs oceans? 🌆🏖️ #FakeItTillYouBeachIt
+#Urban #Beach #City #Pond #Artificial #Lake #Park #View #Architecture #scape #Water #Reflection #Nature #Relaxation #Spot #Sunny #Day #Green #Space #Oasis https://t.co/z0Ek3fwQjv

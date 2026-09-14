@@ -19,4 +19,4 @@ hashtags:
   - "outdoor"
 ---
 Breaking: Local flower refuses mediocrity! 📺🌸 In a world of basic blooms, one clematis dared to be different - documentary at 11! #FlowerNews
-#clematis #flowers #purple #garden #blooming #petals #nature #climbing #vine #botanical #perennial #outdoor https://t.co/2xOEzWdI7o
+#clematis #flowers #purple #garden #blooming #petals #nature #climbing #vine #botanical #perennial #outdoor

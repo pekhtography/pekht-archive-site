@@ -19,4 +19,4 @@ hashtags:
   - "daylight"
 ---
 🌙💼 Moon's pulling a Karen and demanding to speak to the universe's manager ☀️ "I specifically requested night shifts only!" #MoonKaren
-#moon #daytime #crescent #sky #trees #nature #astronomy #celestial #peaceful #blue #silhouette #daylight https://t.co/YNbvSd4ObM
+#moon #daytime #crescent #sky #trees #nature #astronomy #celestial #peaceful #blue #silhouette #daylight

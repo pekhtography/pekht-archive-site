@@ -11,4 +11,4 @@ hashtags:
   - "beauty"
   - "sparkle"
 ---
-In the garden of life, every raindrop adds a sparkle to the flowers #rain #water #glisten #forest #beauty #sparkle https://t.co/l8XuVjHz5f
+In the garden of life, every raindrop adds a sparkle to the flowers #rain #water #glisten #forest #beauty #sparkle

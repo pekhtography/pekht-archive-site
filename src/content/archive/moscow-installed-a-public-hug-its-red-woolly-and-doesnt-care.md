@@ -14,4 +14,4 @@ It’s red, woolly, and doesn’t care about baroque facades.
 You walk in for a matryoshka, 
 walk out remembering how to be seven years old in a snowdrift. 
 Pure, unarchitected delight. 🧣🔥 
-#Moscow #UrbanDesign #WinterWonderland #Giggle https://t.co/z1IowM3Jh5
+#Moscow #UrbanDesign #WinterWonderland #Giggle

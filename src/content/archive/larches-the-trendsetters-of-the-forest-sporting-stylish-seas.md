@@ -18,4 +18,4 @@ hashtags:
   - "Outdoor"
 ---
 Larches: the trendsetters of the forest, sporting stylish seasonal makeovers!
-#Larch #Tree #Spring #Nature #Green #Growth #Cones #Botany #Forest #Wildlife #Plant #Outdoor https://t.co/SO87RitPsw
+#Larch #Tree #Spring #Nature #Green #Growth #Cones #Botany #Forest #Wildlife #Plant #Outdoor

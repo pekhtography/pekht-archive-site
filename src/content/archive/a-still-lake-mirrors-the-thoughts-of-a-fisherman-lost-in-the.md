@@ -25,4 +25,4 @@ hashtags:
   - "bait"
 ---
 A still lake mirrors the thoughts of a fisherman, lost in the depths of his dreams before casting his line into nature’s tapestry
-#Fisherman #Hook #Lake #Reflection #Thoughts #Mind #Dreams #Wish #Patience #Wait #Ripple #Wave #Catch #Bite #line #nature #serenity #catch #bait https://t.co/qWthNpWMkb
+#Fisherman #Hook #Lake #Reflection #Thoughts #Mind #Dreams #Wish #Patience #Wait #Ripple #Wave #Catch #Bite #line #nature #serenity #catch #bait

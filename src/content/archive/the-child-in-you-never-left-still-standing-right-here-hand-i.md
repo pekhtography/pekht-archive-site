@@ -12,4 +12,4 @@ hashtags:
 The child in you never left. 
 Still standing right here, hand in yours, laughing at candy canes, believing in magic wrapped in frosting. 
 Let them stay ❄️💫 
-#NewYear #WinterVibes #GingerbreadHouse #InnerChild https://t.co/oOUW4Nwykf
+#NewYear #WinterVibes #GingerbreadHouse #InnerChild

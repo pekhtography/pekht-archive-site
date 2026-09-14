@@ -10,4 +10,4 @@ hashtags:
   - "gaze"
   - "nature"
 ---
-Through the birch trunks, a focused gaze meets the wild #birch #crosshairs #birch #focus #gaze #nature https://t.co/0uaEgJC3o8
+Through the birch trunks, a focused gaze meets the wild #birch #crosshairs #birch #focus #gaze #nature

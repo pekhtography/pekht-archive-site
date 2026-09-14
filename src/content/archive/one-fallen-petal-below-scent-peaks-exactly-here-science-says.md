@@ -13,4 +13,4 @@ One fallen petal below.
 Scent peaks exactly here — 
 science says roses perfume hardest at the edge of decay 🍂🌹 
 Peak and ending: same breath, same second.
-#Roses #Impermanence #FlowerLovers #NaturePoetry https://t.co/SRyvK2BOp7
+#Roses #Impermanence #FlowerLovers #NaturePoetry

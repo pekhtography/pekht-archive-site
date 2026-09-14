@@ -21,4 +21,4 @@ hashtags:
   - "Light"
   - "Memories"
 ---
-#Autumn #Change #Birch #Beauty #Landscape #Nature #Grass #Life #Freshness #Resilience #Strength #Renewal #Hope #Grove #Light #Memories https://t.co/4GobwOGnd0
+#Autumn #Change #Birch #Beauty #Landscape #Nature #Grass #Life #Freshness #Resilience #Strength #Renewal #Hope #Grove #Light #Memories

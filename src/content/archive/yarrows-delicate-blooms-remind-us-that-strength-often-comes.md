@@ -18,4 +18,4 @@ hashtags:
   - "White"
 ---
 Yarrow's delicate blooms remind us that strength often comes in small packages, much like how one tiny mosquito can ruin an entire camping trip
-#Yarrow #Achillea #Wildflower #Nature #Botanical #Flora #Medicinal #Garden #Bloom #Summer #Herbal #White https://t.co/5k7TDTpoJ3
+#Yarrow #Achillea #Wildflower #Nature #Botanical #Flora #Medicinal #Garden #Bloom #Summer #Herbal #White

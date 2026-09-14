@@ -13,4 +13,4 @@ Someone's procrastination became outdoor art 🎄
 This tree wears hope like jewelry — 
 year-round, unbothered, sparkling. 
 Maybe we're the ones who stopped celebrating too soon ✨❄️ 
-#WinterVibes #ChristmasDecor #ForgotToTakeDown #UnexpectedJoy https://t.co/uvcr1DknUj
+#WinterVibes #ChristmasDecor #ForgotToTakeDown #UnexpectedJoy

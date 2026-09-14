@@ -16,4 +16,4 @@ hashtags:
   - "twilight"
   - "magic"
 ---
-Sunsets are proof that no matter what happens, every day can end beautifully #sunset #promise #sky #water #fire #river #colors #clouds #city #twilight #magic https://t.co/J8BYMI8oeg
+Sunsets are proof that no matter what happens, every day can end beautifully #sunset #promise #sky #water #fire #river #colors #clouds #city #twilight #magic

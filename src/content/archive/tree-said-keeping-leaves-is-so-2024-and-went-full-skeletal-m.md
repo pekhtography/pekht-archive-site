@@ -14,4 +14,4 @@ Now it's out here catching moons in its wireframe,
 looking like nature's Bauhaus project.
 Zero fluff, maximum architecture.
 Death never looked this composed🌙🌿
-#SimpleBeauty #WinterMinimalism #MoonCatcher https://t.co/2w3v7Zwyxf
+#SimpleBeauty #WinterMinimalism #MoonCatcher

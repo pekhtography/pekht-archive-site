@@ -14,4 +14,4 @@ the façade clocked both directions since 1902.
 Romans put a two-faced god here. 
 We poured asphalt and called it progress. 🏛️ 
 The corner remembers everything. 
-#Architecture #NightPhotography #UrbanHeritage #MoonlitCity https://t.co/69uO7YAsnb
+#Architecture #NightPhotography #UrbanHeritage #MoonlitCity

@@ -11,4 +11,4 @@ hashtags:
 The universe left its fingerprints on a frozen puddle. ✨❄️ 
 Cold hands, warm light. 
 A masterpiece with a noon expiration date. 
-#Nature #AbstractArt #WinterWonderland https://t.co/x8VocGHTvk
+#Nature #AbstractArt #WinterWonderland

@@ -17,4 +17,4 @@ hashtags:
   - "Melody"
   - "Harmony"
 ---
-A symphony of colors reflected in the deep, serene waters #Lake #Water #Still #Calm #Surface #Reflection #Nature #Beauty #Tranquil #Peace #Melody #Harmony https://t.co/uguFdwhB93
+A symphony of colors reflected in the deep, serene waters #Lake #Water #Still #Calm #Surface #Reflection #Nature #Beauty #Tranquil #Peace #Melody #Harmony

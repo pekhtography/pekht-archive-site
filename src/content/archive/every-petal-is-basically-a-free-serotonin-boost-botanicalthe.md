@@ -21,4 +21,4 @@ hashtags:
   - "purple"
 ---
 Every petal is basically a free serotonin boost 🌸🤯☀️ #BotanicalTherapy
-#flower #campanula #bellflower #nature #garden #blossom #summer #petals #green #wildflower #beauty #flora #bloom #purple https://t.co/g6reldGQMo
+#flower #campanula #bellflower #nature #garden #blossom #summer #petals #green #wildflower #beauty #flora #bloom #purple

@@ -13,4 +13,4 @@ Concrete. Glass. Boredom.
 Then, a sudden, hot red pulse interrupts the grey architecture. 
 The skyscraper (usually so tall) 
 feels tiny next to this velvet scream 🎈🏗️.
-#UrbanGardening #StreetPhotography #VibrantLife #NatureWins https://t.co/LwI9PTJTOw
+#UrbanGardening #StreetPhotography #VibrantLife #NatureWins

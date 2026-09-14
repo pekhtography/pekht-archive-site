@@ -11,4 +11,4 @@ hashtags:
 ---
 I’m like a guy holding the last bottle of sunshine in a blizzard 🍺☀️❄️
 Stiff back, golden head, waiting for my personal January to start 🎄
-#NewYearSurvival #MensLogic #NatureWhisper #GoldenVibe https://t.co/e2BSNEtBKG
+#NewYearSurvival #MensLogic #NatureWhisper #GoldenVibe

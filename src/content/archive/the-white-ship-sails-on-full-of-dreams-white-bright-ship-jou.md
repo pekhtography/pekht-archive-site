@@ -14,4 +14,4 @@ hashtags:
   - "City"
   - "Dreams"
 ---
-The white ship sails on, full of dreams #White #Bright #Ship #Journey #Hope #Future #River #City #Dreams https://t.co/4VtYloRF2K
+The white ship sails on, full of dreams #White #Bright #Ship #Journey #Hope #Future #River #City #Dreams

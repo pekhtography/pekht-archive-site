@@ -22,4 +22,4 @@ hashtags:
   - "Memories"
 ---
 Fallen leaves: nature's elegant farewell, shedding its summer garb and inviting the pond to don a cloak of wistful memories!
-#Fallen #Leaves #Remembrance #Melancholy #Nature #Serenity #Pond #Season #Autumn #Transformation #Nostalgia #Echoes #Release #Water #Tree #Memories https://t.co/J0ayqMqJmA
+#Fallen #Leaves #Remembrance #Melancholy #Nature #Serenity #Pond #Season #Autumn #Transformation #Nostalgia #Echoes #Release #Water #Tree #Memories

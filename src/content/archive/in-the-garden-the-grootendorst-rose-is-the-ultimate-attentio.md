@@ -20,4 +20,4 @@ hashtags:
   - "carnation"
 ---
 In the garden, the 'Grootendorst rose is the ultimate attention seeker, declaring, “I’m here, I’m blooming, and yes, I do have an award for best floral diva!”
-#garden #rose #beauty #Grootendorst #blooms #vivid #fragrance #color #petals #foliage #allure #charm #blossoms #carnation https://t.co/NxtPiHhPgd
+#garden #rose #beauty #Grootendorst #blooms #vivid #fragrance #color #petals #foliage #allure #charm #blossoms #carnation

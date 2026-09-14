@@ -19,4 +19,4 @@ hashtags:
   - "Landmark"
 ---
 When you realize this tower has seen more drama than all reality TV shows combined 📺🍿 History &gt; Netflix! 🎭 #HistoryOverNetflix
-#Moscow #Kremlin #Tower #Clock #Russia #Architecture #History #Red #Star #Mausoleum #Sky #Landmark https://t.co/aKKkZ9to8r
+#Moscow #Kremlin #Tower #Clock #Russia #Architecture #History #Red #Star #Mausoleum #Sky #Landmark

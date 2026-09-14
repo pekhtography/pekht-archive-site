@@ -12,4 +12,4 @@ hashtags:
   - "trees"
   - "beauty"
 ---
-The sculptures in the park reflect the voice of nature, whispering stories of the past #harmony #balance #sculpture #art #nature #trees #beauty https://t.co/7WzGcbNX67
+The sculptures in the park reflect the voice of nature, whispering stories of the past #harmony #balance #sculpture #art #nature #trees #beauty

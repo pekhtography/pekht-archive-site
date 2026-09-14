@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 Irises and rhododendrons are the garden's dynamic duo, one bringing drama with its vibrant colors, the other adding a touch of calm with its steady presence
-#Irises #Rhododendron #Flowers #Blooms #Purple #Pink #Nature #Garden #Spring #Petals #Leaves #Beauty https://t.co/DyCI3og6N1
+#Irises #Rhododendron #Flowers #Blooms #Purple #Pink #Nature #Garden #Spring #Petals #Leaves #Beauty

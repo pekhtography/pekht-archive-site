@@ -24,4 +24,4 @@ hashtags:
   - "Fluffy"
 ---
 Nature's frosty jewels, snowflakes, cling to limbs, turning the trees into enchanted sculptures beneath the winter sky
-#Snowflakes #Flakes #Branches #Limbs #Crystal #Sparkle #Winter #Chill #Nature #Wonder #Beauty #Elegance #Transformation #Magic #Frosty #Chilly #Clouds #Fluffy https://t.co/46RdrayBUS
+#Snowflakes #Flakes #Branches #Limbs #Crystal #Sparkle #Winter #Chill #Nature #Wonder #Beauty #Elegance #Transformation #Magic #Frosty #Chilly #Clouds #Fluffy

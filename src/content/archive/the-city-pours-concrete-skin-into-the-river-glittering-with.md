@@ -13,4 +13,4 @@ The city pours concrete skin into the river, glittering with cold eyes,
 but the man folds like paper, his screen a warm sun. 
 The tallest tower waves at him. 
 He misses it. ✨📱 
-#UrbanLife #CityContrast #DigitalNomad #UrbanEscape https://t.co/dCe3h1aGv1
+#UrbanLife #CityContrast #DigitalNomad #UrbanEscape

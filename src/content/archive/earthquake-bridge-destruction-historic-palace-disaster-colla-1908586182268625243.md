@@ -19,4 +19,4 @@ hashtags:
   - "Tragedy"
   - "Loss"
 ---
-#Earthquake #Bridge #Destruction #Historic #Palace #Disaster #Collapse #Ruins #Devastation #Crisis #Heritage #Damage #Tragedy #Loss https://t.co/1XzmOSccQM
+#Earthquake #Bridge #Destruction #Historic #Palace #Disaster #Collapse #Ruins #Devastation #Crisis #Heritage #Damage #Tragedy #Loss

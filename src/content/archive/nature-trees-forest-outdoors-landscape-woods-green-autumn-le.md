@@ -20,4 +20,4 @@ hashtags:
   - "scenic"
   - "golden"
 ---
-#nature #trees #forest #outdoors #landscape #woods #green #autumn #leaves #oak #birch #sunset #wilderness #scenic #golden https://t.co/nWNK3s33jc
+#nature #trees #forest #outdoors #landscape #woods #green #autumn #leaves #oak #birch #sunset #wilderness #scenic #golden

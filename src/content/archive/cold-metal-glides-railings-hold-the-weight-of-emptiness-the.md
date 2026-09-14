@@ -15,4 +15,4 @@ The sky gets heavier.
 The arch waits. It doesn't need rain. 
 It needs that specific thunder that wakes up sleeping concrete. 
 Listen. 🌉 🤲 
-#UrbanSilence #HeavySky #ConcretePoetry #BeforeTheStorm https://t.co/oJIYizLxXH
+#UrbanSilence #HeavySky #ConcretePoetry #BeforeTheStorm

@@ -8,4 +8,4 @@ hashtags:
   - "AutumnWinter"
   - "GoldenHour"
 ---
-Autumn's final negotiation: amber glow, golden grass, trees undressing slowly. November stalling winter's arrival. Beauty doesn't surrender fast—it fades with dignity 🍂🕯️ #FallVibes #AutumnWinter #GoldenHour https://t.co/sIflAjmpaO
+Autumn's final negotiation: amber glow, golden grass, trees undressing slowly. November stalling winter's arrival. Beauty doesn't surrender fast—it fades with dignity 🍂🕯️ #FallVibes #AutumnWinter #GoldenHour

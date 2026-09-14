@@ -12,4 +12,4 @@ hashtags:
   - "Park"
   - "History"
 ---
-The figure is the perfect embodiment of the beauty of the human form #Greek #Sculpture #Beauty #Culture #Art #Park #History https://t.co/eX4eCCt5vo
+The figure is the perfect embodiment of the beauty of the human form #Greek #Sculpture #Beauty #Culture #Art #Park #History

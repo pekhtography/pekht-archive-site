@@ -17,4 +17,4 @@ hashtags:
   - "city"
 ---
 Breaking: Local glass building still trying to impress the neighborhood's established resident💎 Classic beauty remains unbothered 👑 Confidence levels: historical monument 📿 #ArchitecturalDrama
-#architecture #contrast #modern #classical #urban #glass #facade #dome #square #city https://t.co/awsfuyQyuK
+#architecture #contrast #modern #classical #urban #glass #facade #dome #square #city

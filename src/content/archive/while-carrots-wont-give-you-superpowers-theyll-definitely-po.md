@@ -21,4 +21,4 @@ hashtags:
   - "joy"
 ---
 While carrots won't give you superpowers, they'll definitely power up your health with their beta-carotene magic!
-#carrot #smile #fun #food #healthy #creative #veggie #art #design #playful #yummy #fresh #whimsical #kitchen #joy https://t.co/AjEJGv25ke
+#carrot #smile #fun #food #healthy #creative #veggie #art #design #playful #yummy #fresh #whimsical #kitchen #joy

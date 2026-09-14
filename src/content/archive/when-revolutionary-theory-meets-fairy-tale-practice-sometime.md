@@ -18,4 +18,4 @@ hashtags:
   - "collage"
 ---
 When revolutionary theory meets fairy tale practice 🍸🏰 Sometimes the most unexpected alliances form in the most historic places. History has layers, comrade. #RevolutionaryLayers
-#surreal #Lenin #Shrek #Moscow #RedSquare #Zhukov #history #animation #cocktail #politics #collage https://t.co/sVM8xCTmGl
+#surreal #Lenin #Shrek #Moscow #RedSquare #Zhukov #history #animation #cocktail #politics #collage

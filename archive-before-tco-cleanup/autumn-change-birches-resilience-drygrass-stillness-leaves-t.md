@@ -1,0 +1,26 @@
+---
+title: "#Autumn #Change #Birches #Resilience #DryGrass #Stillness #Leaves #Transience #CrispAir #Freshness #Golden #Warmth #Seas"
+x_id: "1897869064376377733"
+x_created_at: "2025-03-07T04:37:00Z"
+image: "/images/archive/autumn-change-birches-resilience-drygrass-stillness-leaves-t.jpg"
+hashtags:
+  - "Autumn"
+  - "Change"
+  - "Birches"
+  - "Resilience"
+  - "DryGrass"
+  - "Stillness"
+  - "Leaves"
+  - "Transience"
+  - "CrispAir"
+  - "Freshness"
+  - "Golden"
+  - "Warmth"
+  - "Season"
+  - "Cycle"
+  - "Breeze"
+  - "Movement"
+  - "Landscape"
+  - "Scenery"
+---
+#Autumn #Change #Birches #Resilience #DryGrass #Stillness #Leaves #Transience #CrispAir #Freshness #Golden #Warmth #Season #Cycle #Breeze #Movement #Landscape #Scenery https://t.co/u3K7OcJSQW

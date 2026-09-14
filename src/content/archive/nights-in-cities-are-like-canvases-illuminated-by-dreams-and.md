@@ -11,4 +11,4 @@ hashtags:
   - "River"
   - "Life"
 ---
-Nights in cities are like canvases, illuminated by dreams and lights #City #Sky #Art #Illumination #River #Life https://t.co/SmpndT6LVy
+Nights in cities are like canvases, illuminated by dreams and lights #City #Sky #Art #Illumination #River #Life

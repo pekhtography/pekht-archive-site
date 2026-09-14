@@ -19,4 +19,4 @@ hashtags:
   - "summer"
 ---
 Dear Universe, if you're taking requests, I'd like the confidence of this flower rocking purple in broad daylight 💜✨ No filter needed! 📸 #FlowerConfidence
-#flowers #purple #garden #bloom #nature #petals #delicate #botanical #beauty #serene #macro #summer https://t.co/fg6Zo4f99I
+#flowers #purple #garden #bloom #nature #petals #delicate #botanical #beauty #serene #macro #summer

@@ -26,4 +26,4 @@ hashtags:
   - "Adventure"
   - "Curiosity"
 ---
-#Mushroom #Fungi #Red #Vibrant #Amanita #Mystery #Toxic #Danger #Hallucinations #Mind #Beauty #Nature #Forest #Wild #Caution #Wisdom #Medicine #Nature #Safety #Care #Adventure #Curiosity https://t.co/E5Mzg72ojs
+#Mushroom #Fungi #Red #Vibrant #Amanita #Mystery #Toxic #Danger #Hallucinations #Mind #Beauty #Nature #Forest #Wild #Caution #Wisdom #Medicine #Nature #Safety #Care #Adventure #Curiosity

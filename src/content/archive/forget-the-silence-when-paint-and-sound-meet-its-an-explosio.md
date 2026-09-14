@@ -23,4 +23,4 @@ hashtags:
   - "vibrancy"
 ---
 Forget the silence; when paint and sound meet, it’s an explosion of creativity that makes even the walls dance!
-#Graffiti #vividness #music #rhythm #urbanity #defiance #dreams #expression #creativity #tales #rebellion #explosion #trouble #beauty #performance #streets #vibrancy https://t.co/Vo5iC31OQm
+#Graffiti #vividness #music #rhythm #urbanity #defiance #dreams #expression #creativity #tales #rebellion #explosion #trouble #beauty #performance #streets #vibrancy

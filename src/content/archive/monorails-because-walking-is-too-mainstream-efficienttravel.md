@@ -16,4 +16,4 @@ hashtags:
   - "Travel"
 ---
 Monorails: because walking is too mainstream ⏳🚈 #EfficientTravel
-#Monorail #Sculpture #Cityscape #Architecture #Skyscraper #Urban #Transport #Sunset #Travel https://t.co/O9lhdXhq0X
+#Monorail #Sculpture #Cityscape #Architecture #Skyscraper #Urban #Transport #Sunset #Travel

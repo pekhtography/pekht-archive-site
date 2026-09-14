@@ -27,4 +27,4 @@ hashtags:
   - "Gather"
 ---
 As winter’s chill envelops us, the wind becomes a crafty thief, eager to collect the warmth from our fingertips 
-#Winter #Frost #Wind #BodyHeat #Warmth #Thief #Night #Darkness #Cozy #Comfort #Breath #Air #Ghost #Spirit #Fingers #Grip #Villain #Chill #Cold #Collect #Gather https://t.co/jKo3CnJxWY
+#Winter #Frost #Wind #BodyHeat #Warmth #Thief #Night #Darkness #Cozy #Comfort #Breath #Air #Ghost #Spirit #Fingers #Grip #Villain #Chill #Cold #Collect #Gather

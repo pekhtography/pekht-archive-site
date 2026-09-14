@@ -21,4 +21,4 @@ hashtags:
   - "snow"
 ---
 While snow draped over trees like grandma's old quilt, the river acted like a stubborn toddler, refusing to freeze and insisting on splashing around
-#river #serpent #playful #frosted #canopy #winter #chill #meandered #stillness #snake #wilderness #defied #freeze #giggling #snow https://t.co/3Ke6gJRgTC
+#river #serpent #playful #frosted #canopy #winter #chill #meandered #stillness #snake #wilderness #defied #freeze #giggling #snow

@@ -13,4 +13,4 @@ The river stole both Kremlin's gold and City's glass —
 now it refuses to choose. 
 Somewhere below, a couple gets engaged. 
 The water just keeps reflecting. 😶‍🌫️📸💍 
-#TimelessClash #GoldenHourGlow #RiverReflections https://t.co/bzzGLwwYN0
+#TimelessClash #GoldenHourGlow #RiverReflections

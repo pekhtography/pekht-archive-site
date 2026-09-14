@@ -13,4 +13,4 @@ Winter said "grey only."
 This 12-gram rebel 💛 said "read the room — I wrote the room." 
 Branches bare, sky dead — 
 one tiny chest puffed like the bill just came due. 🐦
-#NaturePhotography #BirdWatching #BlueTit #MainCharacterEnergy https://t.co/fiElC7L266
+#NaturePhotography #BirdWatching #BlueTit #MainCharacterEnergy

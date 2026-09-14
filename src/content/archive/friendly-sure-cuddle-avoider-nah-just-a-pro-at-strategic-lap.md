@@ -19,4 +19,4 @@ hashtags:
   - "Companion"
 ---
 Friendly? Sure. Cuddle avoider? Nah, just a pro at strategic lap invasions! 🐾🎯 #LapAttack
-#Cat #BritishShorthair #Kitten #Feline #Pet #Cute #Fluffy #Whiskers #Animal #Paws #Cozy #Companion https://t.co/NuiCiX4mFh
+#Cat #BritishShorthair #Kitten #Feline #Pet #Cute #Fluffy #Whiskers #Animal #Paws #Cozy #Companion

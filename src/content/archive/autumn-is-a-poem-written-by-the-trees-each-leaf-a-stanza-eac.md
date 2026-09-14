@@ -26,4 +26,4 @@ hashtags:
   - "Imagination"
 ---
 Autumn is a poem written by the trees, each leaf a stanza, each breeze an inspiration
-#Autumn #Park #Serenity #Change #Transformation #Chill #Trees #Growth #Leaves #Falling #Freedom #Pond #Water #Reflection #Nature #Wisdom #Beauty #Harmony #Dreams #Imagination https://t.co/nBcqLLnZ3B
+#Autumn #Park #Serenity #Change #Transformation #Chill #Trees #Growth #Leaves #Falling #Freedom #Pond #Water #Reflection #Nature #Wisdom #Beauty #Harmony #Dreams #Imagination

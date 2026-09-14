@@ -13,4 +13,4 @@ petals thin enough to let the light through like a lamp shade—🌸
 and the whole cluster smells faintly of vanilla nobody ordered.
 Every spring the same declaration.💜
 Boot-height, universe-loud.
-#Flowers #WildFlowers #PrimroseSeason https://t.co/1kKowO414R
+#Flowers #WildFlowers #PrimroseSeason

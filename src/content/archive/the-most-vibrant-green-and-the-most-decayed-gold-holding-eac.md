@@ -8,4 +8,4 @@ hashtags:
   - "AutumnAesthetic"
   - "Duality"
 ---
-The most vibrant green and the most decayed gold, holding each other in a single reflection. Life and death aren't fighting; they're dancing. And the dance is the only truth. 💃🍂🪞 #Mindfulness #AutumnAesthetic #Duality https://t.co/6weRGZl8Wi
+The most vibrant green and the most decayed gold, holding each other in a single reflection. Life and death aren't fighting; they're dancing. And the dance is the only truth. 💃🍂🪞 #Mindfulness #AutumnAesthetic #Duality

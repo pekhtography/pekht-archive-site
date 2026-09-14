@@ -8,4 +8,4 @@ hashtags:
   - "UrbanNature"
   - "MelancholicBeauty"
 ---
-Leaves drift like suspended thoughts; a bridge hums with quiet secrets — time bends, and you feel it slipping through your fingers. 🍁🌉 #AutumnVibes #UrbanNature #MelancholicBeauty https://t.co/4ptUTO9Snf
+Leaves drift like suspended thoughts; a bridge hums with quiet secrets — time bends, and you feel it slipping through your fingers. 🍁🌉 #AutumnVibes #UrbanNature #MelancholicBeauty

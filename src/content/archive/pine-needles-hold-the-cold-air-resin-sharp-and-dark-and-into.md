@@ -15,4 +15,4 @@ one a wide silk face with a burnt-ink eye🌼,
 one a layered rosette, waxy-warm, almost edible🍋
 One garden.
 Two theories of paradise.
-#Flowers #TulipSeason #GardenHumor #YellowVibes https://t.co/3dWXzLit85
+#Flowers #TulipSeason #GardenHumor #YellowVibes

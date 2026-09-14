@@ -21,4 +21,4 @@ hashtags:
   - "Cradle"
 ---
 Frost-kissed branches reach out like frosty fingers, cradling the pristine glade below
-#Glade #Snow #Tree #Frosty #Chill #Winter #Narnia #Meadow #Nature #Wonder #Branches #Frost #Ice #Fingers #Cradle https://t.co/5F2bt0mUxX
+#Glade #Snow #Tree #Frosty #Chill #Winter #Narnia #Meadow #Nature #Wonder #Branches #Frost #Ice #Fingers #Cradle

@@ -15,4 +15,4 @@ swings wide open —
 velvety, faintly warm, faintly honeyed —
 its only day. 🌿
 One door. One morning. Everything.
-#NaturePhotography #FlowerLovers #GoldenHour #Bloom https://t.co/8XAqUSL1RJ
+#NaturePhotography #FlowerLovers #GoldenHour #Bloom

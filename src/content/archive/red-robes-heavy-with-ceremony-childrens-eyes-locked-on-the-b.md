@@ -12,4 +12,4 @@ hashtags:
 Red robes heavy with ceremony 🎅 
 children's eyes locked on the basket like it holds the entire winter's worth of hope 🎄 
 This is what generosity looked like before it became a notification ✨ 
-#VintageChristmas #SaintNicholas #RetroHoliday #Nostalgia https://t.co/iWyFubhXrA
+#VintageChristmas #SaintNicholas #RetroHoliday #Nostalgia

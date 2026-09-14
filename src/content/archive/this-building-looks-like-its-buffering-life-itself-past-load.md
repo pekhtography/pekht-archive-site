@@ -18,4 +18,4 @@ hashtags:
   - "skylinevibes"
 ---
 This building looks like it’s buffering life itself. Past loaded, future still downloading. ⏳🔮 #FutureStuckInConcrete
-#FutureVsPast #architecture #cityscape #urbanexploration #brutalism #concretejungle #buildingdesign #aestheticvibes #melancholy #nostalgia #skylinevibes https://t.co/0SU30dI7d9
+#FutureVsPast #architecture #cityscape #urbanexploration #brutalism #concretejungle #buildingdesign #aestheticvibes #melancholy #nostalgia #skylinevibes

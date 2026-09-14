@@ -12,4 +12,4 @@ hashtags:
   - "love"
   - "garden"
 ---
-With petals like heart, the clematis conveys, messages of love in nature's intricate ways #clematis #elegance #petals #messages #heart #love #garden https://t.co/iN8YXeUHj3
+With petals like heart, the clematis conveys, messages of love in nature's intricate ways #clematis #elegance #petals #messages #heart #love #garden

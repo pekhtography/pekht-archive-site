@@ -14,4 +14,4 @@ amber eyes locked on something above the lamp 🔍
 The case? Wide open. 
 The suspect? Somewhere past the ceiling. 🐾 
 Purr. Pending.
-#CatsOfTwitter #MaineCoon #DetectiveCat #CozySeason https://t.co/f4HF61Ukqc
+#CatsOfTwitter #MaineCoon #DetectiveCat #CozySeason

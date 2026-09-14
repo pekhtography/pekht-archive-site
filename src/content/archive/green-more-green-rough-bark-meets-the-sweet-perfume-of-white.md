@@ -14,4 +14,4 @@ Rough bark meets the sweet perfume of white peonies.
 Jagged leaves stand guard, quietly expanding their territory.
 The garden was never ours. 
 We were only its guests. 🌿
-#Nature #GardeningLife #FloralDesign #LushLife https://t.co/py1QHQ2klB
+#Nature #GardeningLife #FloralDesign #LushLife

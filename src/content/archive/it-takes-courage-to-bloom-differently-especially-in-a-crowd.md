@@ -26,4 +26,4 @@ hashtags:
   - "beauty"
 ---
 It takes courage to bloom differently, especially in a crowd that copies the sun
-#Paeonia #tenuifolia #Fernleaf #Peony #Trollius #europaeus #Globe #Flower #flowers #contrast #nature #spring #uniqueness #bold #yellow #red #blooms #garden #vibrant #beauty https://t.co/j6CBvHv3UN
+#Paeonia #tenuifolia #Fernleaf #Peony #Trollius #europaeus #Globe #Flower #flowers #contrast #nature #spring #uniqueness #bold #yellow #red #blooms #garden #vibrant #beauty

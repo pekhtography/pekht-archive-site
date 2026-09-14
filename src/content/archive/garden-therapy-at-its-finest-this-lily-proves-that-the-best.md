@@ -19,4 +19,4 @@ hashtags:
   - "backyard"
 ---
 Garden therapy at its finest 🌸 This lily proves that the best moments happen right in your backyard 🏡 Sometimes paradise is just outside your door ✨ #BackyardBliss
-#lily #purple #garden #flower #bloom #petals #spotted #cultivated #botanical #summer #stamens #backyard https://t.co/jjkbjujoLD
+#lily #purple #garden #flower #bloom #petals #spotted #cultivated #botanical #summer #stamens #backyard

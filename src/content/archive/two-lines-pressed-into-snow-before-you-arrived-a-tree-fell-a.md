@@ -13,4 +13,4 @@ Two lines pressed into snow before you arrived. 🌲
 A tree fell across — the lines went under. 
 The forest rearranged the furniture. 
 Someone just ducked and kept going. ❄️ 
-#Winter #CrossCountrySkiing #KeepGoing #WinterForest https://t.co/st2qyt4cdz
+#Winter #CrossCountrySkiing #KeepGoing #WinterForest

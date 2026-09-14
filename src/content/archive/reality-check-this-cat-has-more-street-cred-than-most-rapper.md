@@ -19,4 +19,4 @@ hashtags:
   - "cobblestone"
 ---
 Reality check: This cat has more street cred than most rappers 🎤 And better posture too! 💪🖤 #StreetCred
-#blackcat #cat #street #pavement #yelloweyes #feline #outdoor #stray #urban #nature #greenery #cobblestone https://t.co/a9xF2LrxQS
+#blackcat #cat #street #pavement #yelloweyes #feline #outdoor #stray #urban #nature #greenery #cobblestone

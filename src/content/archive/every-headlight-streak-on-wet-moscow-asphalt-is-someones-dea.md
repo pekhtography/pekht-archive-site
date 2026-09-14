@@ -13,4 +13,4 @@ Every headlight streak on wet Moscow asphalt is someone's deadline,
 someone's shortcut, someone's last chance 🚗💨 — 
 and the Stalinist spire overhead just keeps glowing, 
 collecting evidence 🏛️🔥
-#MoscowNights #NightDrive #CityLife #RussianArchitecture https://t.co/2mR436lemt
+#MoscowNights #NightDrive #CityLife #RussianArchitecture

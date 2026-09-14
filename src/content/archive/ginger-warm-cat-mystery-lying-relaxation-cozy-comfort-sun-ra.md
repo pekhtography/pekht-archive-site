@@ -15,4 +15,4 @@ hashtags:
   - "Sun"
   - "Radiance"
 ---
-#Ginger #Warm #Cat #Mystery #Lying #Relaxation #Cozy #Comfort #Sun #Radiance https://t.co/EF2LpGtxBM
+#Ginger #Warm #Cat #Mystery #Lying #Relaxation #Cozy #Comfort #Sun #Radiance

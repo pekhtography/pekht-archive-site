@@ -14,4 +14,4 @@ that amber weight pressing upward,
 waxy and dense as a held breath, smelling faintly of cold soil. 🌿
 Every old sun-god looked exactly like this: 🔆
 enormous, round, and never quite touching you.
-#NaturePhotography #WildFlowers #GoldenHour #Mood https://t.co/RLXibosSEa
+#NaturePhotography #WildFlowers #GoldenHour #Mood

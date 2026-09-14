@@ -25,4 +25,4 @@ hashtags:
   - "Treasure"
 ---
 Even royalty enjoys a relaxing bath, and this Princess Duck brings a touch of elegance to any water-filled adventure
-#Duck #Princess #Royalty #Rubber #Fun #Bath #Relax #Serenity #PreOwned #History #Rare #Unique #Luxury #Opulence #Hotel #Comfort #Glamour #Collectible #Treasure https://t.co/ysWensrWyd
+#Duck #Princess #Royalty #Rubber #Fun #Bath #Relax #Serenity #PreOwned #History #Rare #Unique #Luxury #Opulence #Hotel #Comfort #Glamour #Collectible #Treasure

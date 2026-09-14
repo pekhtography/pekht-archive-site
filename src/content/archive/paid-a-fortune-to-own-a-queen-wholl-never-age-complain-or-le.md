@@ -12,4 +12,4 @@ hashtags:
 Paid a fortune to own a queen who'll never age, complain, or leave. 
 My therapist says it's not a relationship. 
 My display case begs to differ. 👸💰 
-#ArtDoll #DarkFantasy #EtherealBeauty #LonelyRoyalty https://t.co/rZeQ1AkrOi
+#ArtDoll #DarkFantasy #EtherealBeauty #LonelyRoyalty

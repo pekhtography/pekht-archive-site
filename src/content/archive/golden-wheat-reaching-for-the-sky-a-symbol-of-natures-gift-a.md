@@ -19,4 +19,4 @@ hashtags:
   - "Landmark"
 ---
 Golden wheat reaching for the sky 🌾✨ — a symbol of nature’s gift and human effort combined. 💧🌍 #GoldenHarvestMagic
-#Fountain #Golden #Wheat #Agriculture #VDNH #Moscow #Water #Sculpture #Park #Summer #Travel #Landmark https://t.co/Un5uiQkQbG
+#Fountain #Golden #Wheat #Agriculture #VDNH #Moscow #Water #Sculpture #Park #Summer #Travel #Landmark

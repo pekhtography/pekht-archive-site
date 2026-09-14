@@ -19,4 +19,4 @@ hashtags:
   - "predator"
 ---
 Sometimes the most powerful thing you can do is simply rest 🐅 Even apex predators know when to pause and recharge ⚡ #TigerWisdom
-#tiger #wildlife #nature #stripes #big #cat #zoo #orange #black #peaceful #majestic #predator https://t.co/PaRZ5Lw62p
+#tiger #wildlife #nature #stripes #big #cat #zoo #orange #black #peaceful #majestic #predator

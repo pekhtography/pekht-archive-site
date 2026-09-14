@@ -12,4 +12,4 @@ hashtags:
   - "mirror"
   - "clarity"
 ---
-A pond is a mirror of the sky, holding dreams and secrets within #lake #reflection #beauty #water #secrets #mirror #clarity https://t.co/0QPUX7yi6c
+A pond is a mirror of the sky, holding dreams and secrets within #lake #reflection #beauty #water #secrets #mirror #clarity

@@ -13,4 +13,4 @@ The panda spotted the tree. Assessed the situation. Committed fully. 🐼
 The tree had been standing there for weeks, decorated and alone. 
 Somebody had to do something. 
 The panda did something. 🎄✨
-#Panda #LunarNewYear #PandaDiplomacy #GiantHug https://t.co/jvrTqR3nlX
+#Panda #LunarNewYear #PandaDiplomacy #GiantHug

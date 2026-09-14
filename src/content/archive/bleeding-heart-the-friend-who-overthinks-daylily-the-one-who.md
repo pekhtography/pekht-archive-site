@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 Bleeding Heart: the friend who overthinks. Daylily: the one who posts a selfie mid-crisis
-#Daylily #Dicentra #Flowers #Garden #Blooming #Nature #Colorful #Heart #Petals #Spring #Perennial #Beauty https://t.co/Pbi5yWlim7
+#Daylily #Dicentra #Flowers #Garden #Blooming #Nature #Colorful #Heart #Petals #Spring #Perennial #Beauty

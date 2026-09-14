@@ -18,4 +18,4 @@ hashtags:
   - "Botany"
 ---
 The daylily's bloom is a fleeting kiss from nature, a moment of tenderness in the garden's embrace
-#Hemerocallis #Daylily #Blooms #Garden #Nature #Flora #Petals #Beauty #Summer #Blossoms #Elegance #Botany https://t.co/10Afsy6cmh
+#Hemerocallis #Daylily #Blooms #Garden #Nature #Flora #Petals #Beauty #Summer #Blossoms #Elegance #Botany

@@ -12,4 +12,4 @@ hashtags:
   - "dreams"
 ---
 In the heart of a blizzard's embrace, two paths unfold: one leads deeper into the frost-kissed tales of yore, while the other pirouettes beneath a canopy of powdered dreams, guiding souls to the kingdom of snowflakes
-#winter #kingdom #snowflakes #adventure #wonderland #dreams https://t.co/23MAkCed5f
+#winter #kingdom #snowflakes #adventure #wonderland #dreams

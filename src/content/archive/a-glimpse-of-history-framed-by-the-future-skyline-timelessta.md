@@ -27,4 +27,4 @@ hashtags:
   - "Art"
 ---
 🏛️⭐ A glimpse of history framed by the future skyline. 🌆🕰️🔮 #TimelessTales #HeroCityVibes 🏙️✨
-#Obelisk #Moscow #Hero #Monument #Victory #Memorial #City #Russia #War #Honor #Skyscraper #History #Statue #Woman #Monument #WarLegacy #Sculpture #Heritage #Worker #Art https://t.co/WbWWMGD1AB
+#Obelisk #Moscow #Hero #Monument #Victory #Memorial #City #Russia #War #Honor #Skyscraper #History #Statue #Woman #Monument #WarLegacy #Sculpture #Heritage #Worker #Art

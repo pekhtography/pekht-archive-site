@@ -14,4 +14,4 @@ Red light bleeds upward through snow —
 like something swallowed a disco ball whole. 
 The grey towers just watch. 🌟 
 They're used to losing. 😏
-#WinterVibes #ChristmasMarket #OverdecoratedAndProud #GlowUpSeason https://t.co/KioXbV308n
+#WinterVibes #ChristmasMarket #OverdecoratedAndProud #GlowUpSeason

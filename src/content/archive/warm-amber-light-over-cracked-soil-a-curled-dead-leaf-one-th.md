@@ -12,4 +12,4 @@ and then, at the center, warm-brown and mottled,
 smelling faintly of nest and earth🌿,
 this half-feathered thing standing still
 as every unfinished creature that ever bet on itself🐦
-#Wildlife https://t.co/pSIX0ZvGd5
+#Wildlife

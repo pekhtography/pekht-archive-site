@@ -10,4 +10,4 @@ hashtags:
   - "balcony"
 ---
 When Soviet architects decided to jazz up housing blocks with geometric magic ✨ Sometimes the most unexpected patterns create the most memorable neighborhoods! 🏢 Who says residential buildings can't be art galleries? 🎨 #GeometricArchitecture
-#architecture #building #balcony https://t.co/uwlUdl2FeJ
+#architecture #building #balcony

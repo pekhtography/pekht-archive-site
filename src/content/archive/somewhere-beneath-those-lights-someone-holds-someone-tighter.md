@@ -13,4 +13,4 @@ Somewhere beneath those lights, someone holds someone tighter.
 Snow falls soft. Stores glow loud. 
 And for a breath—just one—you forget which world is real. 🌨️✨ 
 The expensive one or the warm one.
-#ChristmasVibes #LuxuryLifestyle #WinterWonderland #MagicMoments https://t.co/UVaBpYtPKs
+#ChristmasVibes #LuxuryLifestyle #WinterWonderland #MagicMoments

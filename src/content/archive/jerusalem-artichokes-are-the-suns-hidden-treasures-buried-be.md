@@ -19,4 +19,4 @@ hashtags:
   - "Family"
 ---
 Jerusalem artichokes are the sun's hidden treasures, buried beneath the earth, waiting to be discovered and savored
-#Jerusalem #Artichoke #Helianthus #Sunchoke #Garden #Nature #Yellow #Bloom #Harvest #Vegetable #Healthy #Sunflower #Family https://t.co/ZCp5q1ZWM6
+#Jerusalem #Artichoke #Helianthus #Sunchoke #Garden #Nature #Yellow #Bloom #Harvest #Vegetable #Healthy #Sunflower #Family

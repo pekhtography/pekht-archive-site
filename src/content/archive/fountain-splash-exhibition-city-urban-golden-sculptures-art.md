@@ -19,4 +19,4 @@ hashtags:
   - "Dreams"
   - "Aspirations"
 ---
-#Fountain #Splash #Exhibition #City #Urban #Golden #Sculptures #Art #Streams #Water #Beauty #Aesthetics #Dreams #Aspirations https://t.co/sDZ0bSx9Nd
+#Fountain #Splash #Exhibition #City #Urban #Golden #Sculptures #Art #Streams #Water #Beauty #Aesthetics #Dreams #Aspirations

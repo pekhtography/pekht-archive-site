@@ -19,4 +19,4 @@ hashtags:
   - "Architecture"
 ---
 🧣 Warm scarves, warm smiles—this winter, the spirit of Maslenitsa warms more than just bodies! ❤️🥰 #WinterSpiritCelebration
-#Moscow #Kremlin #RedSquare #Maslenitsa #Festival #Tradition #Winter #Russia #Culture #Holiday #Tourism #Architecture https://t.co/LOZvqFZkj5
+#Moscow #Kremlin #RedSquare #Maslenitsa #Festival #Tradition #Winter #Russia #Culture #Holiday #Tourism #Architecture

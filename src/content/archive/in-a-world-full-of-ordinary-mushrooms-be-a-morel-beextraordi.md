@@ -19,4 +19,4 @@ hashtags:
   - "spores"
 ---
 In a world full of ordinary mushrooms, be a Morel! 🌟🍄 #BeExtraordinary
-#mushroom #nature #fungi #wildlife #forest #macrophotography #morel #biodiversity #mycology #outdoors #earth #spores https://t.co/YpX3DWo3lR
+#mushroom #nature #fungi #wildlife #forest #macrophotography #morel #biodiversity #mycology #outdoors #earth #spores

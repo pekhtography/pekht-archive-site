@@ -14,4 +14,4 @@ Then louder.
 Then the specimen presents peak turgor, 
 optimal petal-layer overlap — 🌸 
 the botanist's clipboard shaking because this rose has clearly never heard the word 'subtle.' 😂
-#Flowers #RoseGarden #MagentaMood #PetalDeep https://t.co/OtiH0NWrUA
+#Flowers #RoseGarden #MagentaMood #PetalDeep

@@ -14,4 +14,4 @@ hashtags:
   - "Season"
   - "Sparkle"
 ---
-Walking through a Christmas market is like stepping into a winter wonderland #Christmas #Lights #Market #Joy #Home #Aroma #Twinkle #Season #Sparkle https://t.co/96HZ99espw
+Walking through a Christmas market is like stepping into a winter wonderland #Christmas #Lights #Market #Joy #Home #Aroma #Twinkle #Season #Sparkle

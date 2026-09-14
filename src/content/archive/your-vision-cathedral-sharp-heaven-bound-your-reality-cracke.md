@@ -15,4 +15,4 @@ Your reality:
 cracked tiles, borrowed Wi-Fi, birds nesting in ventilation. 
 But that light — brother, that light turns survival into mythology. 
 Alchemy for the broke. 🕊️✨🔥
-#Perspective #UrbanLife #ExpectationVsReality #MondayMood https://t.co/KzEwm4bTPO
+#Perspective #UrbanLife #ExpectationVsReality #MondayMood

@@ -11,4 +11,4 @@ hashtags:
   - "nature"
   - "artistry"
 ---
-The wings of the monarch are like stained glass, a beautiful reflection of artistry #butterfly #grace #flowers #garden #nature #artistry https://t.co/lIA35A8rre
+The wings of the monarch are like stained glass, a beautiful reflection of artistry #butterfly #grace #flowers #garden #nature #artistry

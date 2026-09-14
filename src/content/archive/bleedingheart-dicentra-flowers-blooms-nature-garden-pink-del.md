@@ -20,4 +20,4 @@ hashtags:
   - "Spectabilis"
   - "Petals"
 ---
-#BleedingHeart #Dicentra #Flowers #Blooms #Nature #Garden #Pink #Delicate #Spring #Blossom #Botany #Plant #Lamprocapnos #Spectabilis #Petals https://t.co/EMGU83uHPa
+#BleedingHeart #Dicentra #Flowers #Blooms #Nature #Garden #Pink #Delicate #Spring #Blossom #Botany #Plant #Lamprocapnos #Spectabilis #Petals

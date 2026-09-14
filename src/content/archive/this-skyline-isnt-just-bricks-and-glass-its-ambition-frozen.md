@@ -18,4 +18,4 @@ hashtags:
   - "nostalgia"
 ---
 This skyline isn’t just bricks and glass — it’s ambition frozen in stone 🏙️🔥 Yesterday’s power, today’s poetry. #FrozenDreams
-#architecture #Moscow #cityscape #travel #Soviet #landmark #urbanphotography #cityvibes #aesthetic #skyline #nostalgia https://t.co/J9SLWzDosA
+#architecture #Moscow #cityscape #travel #Soviet #landmark #urbanphotography #cityvibes #aesthetic #skyline #nostalgia

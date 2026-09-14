@@ -10,4 +10,4 @@ hashtags:
   - "GoldenHour"
 ---
 Sky at 6 PM hits different when the atmosphere literally uses Rayleigh scattering as a personality trait 🌇😤
-#Sunset #SkyFire #Photography #GoldenHour https://t.co/fl2bNi3rT7
+#Sunset #SkyFire #Photography #GoldenHour

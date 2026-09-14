@@ -14,4 +14,4 @@ Two figures, small as punctuation marks, stand mid-sentence —
 the city holding its breath. ⚡ 
 The bridge doesn't cross the river. 
 It argues with it. 🌊
-#UrbanArchitecture #CityMoments #BridgeLife #MoscowVibes https://t.co/86gqaaDNAx
+#UrbanArchitecture #CityMoments #BridgeLife #MoscowVibes

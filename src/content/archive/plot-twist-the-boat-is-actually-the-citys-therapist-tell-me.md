@@ -12,4 +12,4 @@ hashtags:
   - "travel"
 ---
 Plot twist: The boat is actually the city's therapist 🛋️💭 "Tell me about your infrastructure problems," it whispers to stressed skyscrapers while offering gentle rocking motion therapy 🌊😌 Hourly rate: one scenic cruise #FloatingTherapist
-#boat #river #cruise #Moscow #travel https://t.co/bWTwm0WUjd
+#boat #river #cruise #Moscow #travel

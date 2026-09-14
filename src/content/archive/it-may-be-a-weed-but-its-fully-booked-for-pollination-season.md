@@ -20,4 +20,4 @@ hashtags:
   - "flora"
 ---
 It may be a weed, but it’s fully booked for pollination season
-#brown #ray #knapweed #centaurea #wild #flower #purple #nature #meadow #bloom #beauty #botany #petals #flora https://t.co/ZytMssfwXk
+#brown #ray #knapweed #centaurea #wild #flower #purple #nature #meadow #bloom #beauty #botany #petals #flora

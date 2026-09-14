@@ -13,4 +13,4 @@ She took the lavender penthouse. 🌸
 He kept the ground floor warm, peach-soft, petals folded inward. 
 Same garden. Different sky. 
 That's the deal. 🌿💛
-#FlowerPhotography #GardenLife #NatureMoment #Botanica https://t.co/kP5zWj5Wna
+#FlowerPhotography #GardenLife #NatureMoment #Botanica

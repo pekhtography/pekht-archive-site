@@ -17,4 +17,4 @@ hashtags:
   - "history"
 ---
 🚢 Sometimes the best classroom has no walls - just endless horizons and stories written in stone 📚 Floating past centuries of history while the future unfolds ahead ✨ #RiverClassroom
-#Moscow #cruise #river #architecture #tourism #boat #university #skyline #travel #history https://t.co/O6sAni5mZ7
+#Moscow #cruise #river #architecture #tourism #boat #university #skyline #travel #history

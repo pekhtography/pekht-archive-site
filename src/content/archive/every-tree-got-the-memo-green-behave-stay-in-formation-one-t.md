@@ -13,4 +13,4 @@ Every tree got the memo. 🌿
 Green. Behave. Stay in formation. 
 One tree read it, nodded — then detonated pink anyway. 🌸 
 Absolute main character. 
-#Nature #GardenLife #BloomingSeason #ColorPop https://t.co/OwA7D0OgfV
+#Nature #GardenLife #BloomingSeason #ColorPop

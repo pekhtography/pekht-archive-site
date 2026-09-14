@@ -21,4 +21,4 @@ hashtags:
   - "Frost"
 ---
 Winter’s chill turns the landscape into a wonderland where each snowflake tells a magical story
-#Winter #Chill #Snowflake #Unique #Wonderland #Magic #Diamonds #Sparkle #Mystery #Secrets #Inspiration #Landscape #Story #Tales #Frost https://t.co/3DZVglHlTc
+#Winter #Chill #Snowflake #Unique #Wonderland #Magic #Diamonds #Sparkle #Mystery #Secrets #Inspiration #Landscape #Story #Tales #Frost

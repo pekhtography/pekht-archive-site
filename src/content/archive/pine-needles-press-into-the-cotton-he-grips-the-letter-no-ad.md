@@ -13,4 +13,4 @@ Pine needles press into the cotton.
 He grips the letter — 
 no address, no stamp, just intention in a stuffed fist. 🧸 
 Fifty years, still en route. ✉️ 
-#Christmas #VintageOrnaments #CostumeParty #Nostalgia https://t.co/vWeJxDfDRX
+#Christmas #VintageOrnaments #CostumeParty #Nostalgia

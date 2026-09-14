@@ -18,4 +18,4 @@ hashtags:
   - "Beautiful"
 ---
 Walking past GUM at golden hour feels like stepping into a Russian fairy tale 🏰✨ The way this architectural masterpiece catches the evening light is pure magic! #GUMGoldenHour
-#Moscow #GUM #Russia #Architecture #Shopping #Evening #Historic #Luxury #Tourism #Culture #Beautiful https://t.co/Y4ZW2SPpG6
+#Moscow #GUM #Russia #Architecture #Shopping #Evening #Historic #Luxury #Tourism #Culture #Beautiful

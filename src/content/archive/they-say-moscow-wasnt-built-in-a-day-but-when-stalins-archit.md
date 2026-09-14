@@ -10,4 +10,4 @@ hashtags:
   - "Skyscraper"
 ---
 They say Moscow wasn't built in a day, but when Stalin's architects dreamed big, they built monuments that kiss the clouds☁️ Seven sisters standing tall, proving that sometimes the best fairy tales are made of steel and stone🏰✨ #StalinistGothic
-#Moscow #Architecture #Skyscraper https://t.co/zknUUY9etD
+#Moscow #Architecture #Skyscraper

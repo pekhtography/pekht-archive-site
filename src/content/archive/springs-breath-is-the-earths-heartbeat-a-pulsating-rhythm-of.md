@@ -18,4 +18,4 @@ hashtags:
   - "renewal"
 ---
 Spring's breath is the earth's heartbeat, a pulsating rhythm of renewal and growth
-#growth #nature #spring #bloom #life #green #rebirth #earth #plants #awakening #vitality #renewal https://t.co/XdBIwa8o3e
+#growth #nature #spring #bloom #life #green #rebirth #earth #plants #awakening #vitality #renewal

@@ -17,4 +17,4 @@ hashtags:
   - "Sunset"
 ---
 Architecture that inspires existential ponderings… and an immediate craving for a strong coffee
-#Triumphal #Arch #Architecture #Landmark #Evening #Illumination #Tourism #Heritage #Historical #Site #Sunset https://t.co/ovO0LP2cMP
+#Triumphal #Arch #Architecture #Landmark #Evening #Illumination #Tourism #Heritage #Historical #Site #Sunset

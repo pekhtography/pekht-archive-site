@@ -19,4 +19,4 @@ hashtags:
   - "japanese"
   - "green"
 ---
-#quince #chaenomeles #japonica #fruit #garden #bloom #spring #nature #botany #flora #ecology #growth #japanese #green https://t.co/P5lMdgZpdg
+#quince #chaenomeles #japonica #fruit #garden #bloom #spring #nature #botany #flora #ecology #growth #japanese #green

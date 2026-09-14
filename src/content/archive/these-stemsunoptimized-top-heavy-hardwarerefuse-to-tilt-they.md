@@ -13,4 +13,4 @@ These stems—unoptimized, top-heavy hardware—refuse to tilt.
 They absorb photons, 
 converting heat into pure, unadulterated arrogance. 
 Red silk vibrating in the silent, green heat... 🌡️🌷
-#SolarRebellion #GardenInspiration #SpringVibes #DopamineDecor https://t.co/5ksCfOvWli
+#SolarRebellion #GardenInspiration #SpringVibes #DopamineDecor

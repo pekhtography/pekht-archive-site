@@ -13,4 +13,4 @@ Winter turned a hiking trail into a wedding venue nobody booked ❄️
 Snow arches, dramatic lighting, zero guests, infinite elegance.
 Nature's out here creating ceremonies for squirrels 
 and absolutely nailing it ✨🌲
-#WinterWonderland #SnowArchitecture #WinterTrail #NaturalBeauty https://t.co/QOiwlKNXsK
+#WinterWonderland #SnowArchitecture #WinterTrail #NaturalBeauty

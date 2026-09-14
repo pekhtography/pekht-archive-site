@@ -12,4 +12,4 @@ hashtags:
 Light. Dense clouds. 
 A massive, velvety shadow (sharp as a razor) divides the world. 
 This brief moment contains the entire history of duality. 🌌🎭
-#Sunset #SkyPorn #OpticalIllusion #Awe https://t.co/t8thXEPJZC
+#Sunset #SkyPorn #OpticalIllusion #Awe

@@ -11,4 +11,4 @@ hashtags:
   - "Beauty"
   - "Life"
 ---
-In autumn, the trees are dressed in their finest attire #Autumn #Leaves #Color #Nature #Beauty #Life https://t.co/yx8BzPJtTL
+In autumn, the trees are dressed in their finest attire #Autumn #Leaves #Color #Nature #Beauty #Life

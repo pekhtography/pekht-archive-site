@@ -18,4 +18,4 @@ hashtags:
   - "grandeur"
 ---
 Weather forecast: 100% chance of architectural awe with scattered pedestrians 🌤️ Side effects may include neck strain from looking up 😵 Proceed with wonder! 🏛️ #ArchitecturalWeather
-#architecture #classical #building #plaza #people #urban #stone #columns #glass #winter #grandeur https://t.co/qBdlJr3mqj
+#architecture #classical #building #plaza #people #urban #stone #columns #glass #winter #grandeur

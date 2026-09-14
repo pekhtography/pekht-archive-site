@@ -18,4 +18,4 @@ hashtags:
   - "Philosophy"
 ---
 Silent, scarlet, and utterly unbothered. 🌹 This rose rewrote the rules: not waiting to be picked, but painting the whole garden red from its lonely corner. #CrimsonAlchemy
-#Nature #Photography #Rose #Aesthetic #Mindfulness #SelfLove #Poetry #Solitude #Beauty #Red #Philosophy https://t.co/AhiNliTwwO
+#Nature #Photography #Rose #Aesthetic #Mindfulness #SelfLove #Poetry #Solitude #Beauty #Red #Philosophy

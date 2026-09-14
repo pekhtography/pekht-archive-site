@@ -27,4 +27,4 @@ hashtags:
   - "Oasis"
 ---
 City folks, don’t worry — we’ve sandwiched a beach into your concrete jungle! Who needs oceans? 🌆🏖️ #FakeItTillYouBeachIt
-#Urban #Beach #City #Pond #Artificial #Lake #Park #View #Architecture #scape #Water #Reflection #Nature #Relaxation #Spot #Sunny #Day #Green #Space #Oasis https://t.co/z0Ek3fwQjv
+#Urban #Beach #City #Pond #Artificial #Lake #Park #View #Architecture #scape #Water #Reflection #Nature #Relaxation #Spot #Sunny #Day #Green #Space #Oasis

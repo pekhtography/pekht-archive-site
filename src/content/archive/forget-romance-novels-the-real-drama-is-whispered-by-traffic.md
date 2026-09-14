@@ -19,4 +19,4 @@ hashtags:
   - "sky"
 ---
 Forget romance novels — the real drama is whispered by traffic lights and honking horns 🚦📖😂. #UrbanSoapOpera
-#city #street #traffic #architecture #urban #buildings #cars #modern #classic #downtown #metropolis #sky https://t.co/HHY1308pto
+#city #street #traffic #architecture #urban #buildings #cars #modern #classic #downtown #metropolis #sky

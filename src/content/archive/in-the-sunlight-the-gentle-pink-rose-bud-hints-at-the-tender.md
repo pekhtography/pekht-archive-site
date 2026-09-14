@@ -9,4 +9,4 @@ hashtags:
   - "petal"
   - "garden"
 ---
-In the sunlight, the gentle pink rose bud hints at the tenderness that awaits, a ballet of petals eager to dance  #rose #love #petal #garden https://t.co/OpMxcqwDVR
+In the sunlight, the gentle pink rose bud hints at the tenderness that awaits, a ballet of petals eager to dance  #rose #love #petal #garden

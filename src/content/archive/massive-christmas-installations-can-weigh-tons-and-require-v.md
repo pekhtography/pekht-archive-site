@@ -21,4 +21,4 @@ hashtags:
   - "presents"
 ---
 Massive Christmas installations can weigh tons and require vast amounts of electricity, often lighting up skies brighter than small towns
-#Christmas #Festival #Holiday #Decorations #City #Joy #Electricity #Tradition #Selfies #Light #installations #Art #Brightness #sky #presents https://t.co/wPUYA9VjKY
+#Christmas #Festival #Holiday #Decorations #City #Joy #Electricity #Tradition #Selfies #Light #installations #Art #Brightness #sky #presents

@@ -16,4 +16,4 @@ hashtags:
   - "colors"
   - "garden"
 ---
-Pulsatilla vulgaris is often considered a harbinger of spring, showcasing stunning colors, including deep reds #Pulsatilla #vulgaris #winter #bloom #beauty #elegance #flowers #nature #spring #colors #garden https://t.co/O5vMImVywj
+Pulsatilla vulgaris is often considered a harbinger of spring, showcasing stunning colors, including deep reds #Pulsatilla #vulgaris #winter #bloom #beauty #elegance #flowers #nature #spring #colors #garden

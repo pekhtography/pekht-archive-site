@@ -17,4 +17,4 @@ hashtags:
   - "Garden"
   - "Foliage"
 ---
-#LilyOfTheValley #Convallaria #Majalis #Blooms #Nature #Spring #Flowers #Greenery #Petals #Blossoms #Garden #Foliage https://t.co/eB43eJvxzY
+#LilyOfTheValley #Convallaria #Majalis #Blooms #Nature #Spring #Flowers #Greenery #Petals #Blossoms #Garden #Foliage

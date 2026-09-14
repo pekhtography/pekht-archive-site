@@ -13,4 +13,4 @@ Claws locked in frozen bark, beak aimed straight down. 🌲
 Every other bird tilts up, hungry and obvious. 
 This one flipped the map — found what others missed. ❄️ 
 The best angle was always underneath.
-#NaturePhotography #BirdBehavior #NuthatchLife #WinterWild https://t.co/X3KmEGtSLy
+#NaturePhotography #BirdBehavior #NuthatchLife #WinterWild

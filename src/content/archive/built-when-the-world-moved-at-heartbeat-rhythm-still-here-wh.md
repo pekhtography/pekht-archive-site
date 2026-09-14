@@ -8,4 +8,4 @@ hashtags:
   - "HistoricPlaces"
   - "Timeless"
 ---
-Built when the world moved at heartbeat rhythm 🐎💓 Still here while apps die in forgotten passwords 💀 Stone doesn't refresh—it holds what speed erases ⏳🏛️ #Moscow #HistoricPlaces #Timeless https://t.co/gAjvzvm1sR
+Built when the world moved at heartbeat rhythm 🐎💓 Still here while apps die in forgotten passwords 💀 Stone doesn't refresh—it holds what speed erases ⏳🏛️ #Moscow #HistoricPlaces #Timeless

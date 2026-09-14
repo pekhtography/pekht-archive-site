@@ -14,4 +14,4 @@ you find the petals before you find the flower,
 curled back hard against the dark,
 centuries of careful breeding producing exactly this:
 something that looks completely untamed🔥
-#GardenPhotography #TigerLily #FlowerPortrait #Beauty https://t.co/y2arcM03cZ
+#GardenPhotography #TigerLily #FlowerPortrait #Beauty

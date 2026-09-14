@@ -10,4 +10,4 @@ hashtags:
   - "innocence"
   - "grace"
 ---
-The garden blooms with white roses, painting a picture of purity and tranquility #rose #garden #purity #innocence #grace https://t.co/pHdVc5gD7l
+The garden blooms with white roses, painting a picture of purity and tranquility #rose #garden #purity #innocence #grace

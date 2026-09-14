@@ -12,4 +12,4 @@ hashtags:
   - "Celebration"
   - "Wonder"
 ---
-The magic of Christmas never ends; it just transforms into a shining light #NewYear #Illumination #City #Evening #Magic #Celebration #Wonder https://t.co/4M5fQTQlPL
+The magic of Christmas never ends; it just transforms into a shining light #NewYear #Illumination #City #Evening #Magic #Celebration #Wonder

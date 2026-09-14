@@ -13,4 +13,4 @@ Under velvet leaves,
 a row of creamy porcelain teeth bites the crisp morning air, 
 smelling of cold rain and wet soil. 
 Botanical dentistry. 🦷🌱
-#Nature #BotanicalGarden #MacroMagic #QuietVibes https://t.co/SNxHIrCWwZ
+#Nature #BotanicalGarden #MacroMagic #QuietVibes

@@ -14,4 +14,4 @@ Light landed here and couldn't commit to a color,
 so it left this exact apricot as a compromise. 
 Four stems curve away mid-sentence. 
 The one that opened is still talking…
-#Flowers #RoseGarden #BudToBloom #GoldenHour https://t.co/eD1UoeeDRy
+#Flowers #RoseGarden #BudToBloom #GoldenHour

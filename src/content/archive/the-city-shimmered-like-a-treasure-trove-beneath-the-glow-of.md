@@ -23,4 +23,4 @@ hashtags:
   - "party"
 ---
 The city shimmered like a treasure trove beneath the glow of festive lights, casting a spell of wonder upon the evening
-#city #jewel #treasure #streets #journey #magic #wonder #illumination #brilliance #sparkling #twinkle #festive #celebration #fantasy #twilight #dusk #party https://t.co/MxMnt7ZLyw
+#city #jewel #treasure #streets #journey #magic #wonder #illumination #brilliance #sparkling #twinkle #festive #celebration #fantasy #twilight #dusk #party

@@ -14,4 +14,4 @@ hashtags:
   - "Mystery"
   - "Corners"
 ---
-Light dances upon the walls of a labyrinth, casting shadows that tell stories #Labyrinth #Unique #Original #Pattern #Design #Light #Illumination #Mystery #Corners https://t.co/iGGcxTbpdn
+Light dances upon the walls of a labyrinth, casting shadows that tell stories #Labyrinth #Unique #Original #Pattern #Design #Light #Illumination #Mystery #Corners

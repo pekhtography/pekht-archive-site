@@ -12,4 +12,4 @@ hashtags:
 Petals fold shut when thunder whispers. 🌧 
 Not fear — the golden core just needs silence to recharge. 
 Even flowers take a pause to become the sun again. ☀️
-#SpringAwakening #StrangeBeauty #FluffyPlants #VelvetVibes https://t.co/6D485kKuO2
+#SpringAwakening #StrangeBeauty #FluffyPlants #VelvetVibes

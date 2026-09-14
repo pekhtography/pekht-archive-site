@@ -14,4 +14,4 @@ Power lines caught it mid-escape 🌕⚡
 Universe playing catch with itself — 
 we just looked up at the exact right heartbeat. 
 Ugly infrastructure, accidental masterpiece. 
-#Photography #UrbanPhotography #MoonPhotography #Serendipity https://t.co/ZUns9ooGMC
+#Photography #UrbanPhotography #MoonPhotography #Serendipity

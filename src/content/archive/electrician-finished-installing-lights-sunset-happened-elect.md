@@ -15,4 +15,4 @@ Electrician looked at sky.
 Looked at lights. 
 Whispered: "We need more." 
 Engineer mentality never sleeps ⚡✨ 
-#Christmas #ChristmasLights #GoldenHour #ChristmasVibes https://t.co/q2vi8RE1r9
+#Christmas #ChristmasLights #GoldenHour #ChristmasVibes

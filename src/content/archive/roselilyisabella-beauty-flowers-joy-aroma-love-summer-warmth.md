@@ -22,4 +22,4 @@ hashtags:
   - "Life"
   - "Bulbs"
 ---
-#RoselilyIsabella #Beauty #Flowers #Joy #Aroma #Love #Summer #Warmth #Garden #Nurture #Colors #Vibrancy #Petals #Softness #Growth #Life #Bulbs https://t.co/9U01TfQhWG
+#RoselilyIsabella #Beauty #Flowers #Joy #Aroma #Love #Summer #Warmth #Garden #Nurture #Colors #Vibrancy #Petals #Softness #Growth #Life #Bulbs

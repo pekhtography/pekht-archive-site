@@ -13,4 +13,4 @@ Cold fingers on the lens. 🌿
 Pink warmth bleeding behind, one violet cup holding still — 
 dew not yet fallen, breath held. 💜 
 That second before everything moves. ✨
-#FlowerPhotography #MorningLight #IrisFlower #SlowMoment https://t.co/uNaylP9mF6
+#FlowerPhotography #MorningLight #IrisFlower #SlowMoment

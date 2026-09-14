@@ -13,4 +13,4 @@ Sunlight through an ear — orange capillaries, thin as prayer 🧡
 The fur soaks heat like old cathedral stone. 
 At some temperature, 
 the cat and the afternoon stop being two things. ☀️
-#cats #sunbathing #catmood #warmth https://t.co/Qpwg87yshM
+#cats #sunbathing #catmood #warmth

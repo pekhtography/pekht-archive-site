@@ -17,4 +17,4 @@ hashtags:
   - "Christmas"
   - "holiday"
 ---
-The streets are filled with a dazzling glow, as the city dresses itself in lights for the celebration #glow #radiance #light #illumination #celebration #joy #hope #wonderful #magic #city #Christmas #holiday https://t.co/Xdi3iL0Cvo
+The streets are filled with a dazzling glow, as the city dresses itself in lights for the celebration #glow #radiance #light #illumination #celebration #joy #hope #wonderful #magic #city #Christmas #holiday

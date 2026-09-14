@@ -18,4 +18,4 @@ hashtags:
   - "joy"
 ---
 When water gets its groove on, it's a splash-tacular light show!
-#fountain #lights #night #water #colorful #display #magic #dance #show #beauty #wonder #joy https://t.co/8yyqbFrbcJ
+#fountain #lights #night #water #colorful #display #magic #dance #show #beauty #wonder #joy

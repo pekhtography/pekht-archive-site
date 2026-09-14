@@ -13,4 +13,4 @@ Pink light hits the ridge. 🏔️
 Trees line up like hikers at base camp — 
 except the mountain is made of water, and it's taller than Everest. 
 The flattest country on Earth has the tallest skyline. ☁️✨ 
-#SkyPhotography #CloudWatching #FlatlandMountains #GoldenEdge https://t.co/NWYmJsosKv
+#SkyPhotography #CloudWatching #FlatlandMountains #GoldenEdge

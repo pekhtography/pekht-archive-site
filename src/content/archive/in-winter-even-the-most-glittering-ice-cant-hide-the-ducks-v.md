@@ -13,4 +13,4 @@ hashtags:
   - "Serenity"
   - "duck"
 ---
-In winter, even the most glittering ice can't hide the duck's vibrant hues #RuddyShelduck #vibrant #winter #serene #lake #Winter #Serenity #duck https://t.co/Jw2r2tLPsx
+In winter, even the most glittering ice can't hide the duck's vibrant hues #RuddyShelduck #vibrant #winter #serene #lake #Winter #Serenity #duck

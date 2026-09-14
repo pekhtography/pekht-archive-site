@@ -13,4 +13,4 @@ hashtags:
   - "Palace"
   - "Grandeur"
 ---
-The design and positioning of flowerbeds were often meticulously planned  to offer optimal viewing angles, enhancing the aesthetic experience and  directing the eye towards other features of the palace #Staircase #Ascent #Columns #Majesty #Flowerbeds #Bloom #Palace #Grandeur https://t.co/yQgKZQGcUn
+The design and positioning of flowerbeds were often meticulously planned  to offer optimal viewing angles, enhancing the aesthetic experience and  directing the eye towards other features of the palace #Staircase #Ascent #Columns #Majesty #Flowerbeds #Bloom #Palace #Grandeur

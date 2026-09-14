@@ -19,4 +19,4 @@ hashtags:
   - "paradise"
 ---
 When you're trying to channel Greek god energy but the most heroic thing you've done today is apply sunscreen 🧴 Poseidon could never handle SPF 50 💪 #ModernMythology
-#summer #beach #pool #mediterranean #vacation #swimming #relaxation #sunset #painting #art #blue #paradise https://t.co/DNe7LMZixK
+#summer #beach #pool #mediterranean #vacation #swimming #relaxation #sunset #painting #art #blue #paradise

@@ -13,4 +13,4 @@ Grey wood, grey light, grey mood.
 Until you zoom into the droplet. 
 There’s the whole sky, upside down, sitting on a crack. 
 Melancholy just needs a closer look. 🌫️🔮 
-#NatureSecrets #TexturePorn #WaterDiamonds #QuietWonder https://t.co/ameJGihCmR
+#NatureSecrets #TexturePorn #WaterDiamonds #QuietWonder

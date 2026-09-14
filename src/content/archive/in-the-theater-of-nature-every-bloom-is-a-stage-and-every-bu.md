@@ -24,4 +24,4 @@ hashtags:
   - "organic"
 ---
 In the theater of nature, every bloom is a stage, and every bug an actor in the play of life
-#dill #nature #plant #flower #insect #green #bloom #summer #wildlife #garden #herb #biodiversity #ecosystem #greenery #botany #flora #outdoors #organic https://t.co/Tmlafw31CD
+#dill #nature #plant #flower #insect #green #bloom #summer #wildlife #garden #herb #biodiversity #ecosystem #greenery #botany #flora #outdoors #organic

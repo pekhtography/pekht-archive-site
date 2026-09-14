@@ -13,4 +13,4 @@ Cities build up. 🏙️
 Clouds pile higher. 
 Sky rewrites the skyline every ten minutes—
 concrete keeps losing the edit war. ⛅✨ 
-#SkyLovers #UrbanPhotography #CloudWatching #Contemplative https://t.co/Jn6dscoBmJ
+#SkyLovers #UrbanPhotography #CloudWatching #Contemplative

@@ -21,4 +21,4 @@ hashtags:
   - "Nature"
   - "Growth"
 ---
-#Bouquet #Celebration #Rose #Love #Colorful #Diversity #Vibrant #Energy #Emotions #Connection #Beauty #Harmony #Hope #Promise #Nature #Growth https://t.co/ioxqJ5v1gS
+#Bouquet #Celebration #Rose #Love #Colorful #Diversity #Vibrant #Energy #Emotions #Connection #Beauty #Harmony #Hope #Promise #Nature #Growth

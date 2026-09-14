@@ -18,4 +18,4 @@ hashtags:
   - "Love"
   - "warmth"
 ---
-#ChristmasTree #light #Illuminated #shine #Decorations #festivity #Building #structure #togetherness #Winter #snow #Love #warmth https://t.co/phBJTNLJCr
+#ChristmasTree #light #Illuminated #shine #Decorations #festivity #Building #structure #togetherness #Winter #snow #Love #warmth

@@ -18,4 +18,4 @@ hashtags:
   - "metropolitan"
 ---
 Adult LEGO sets come with property taxes 🧱💸 Same clicking sounds, just more expensive consequences 📋 Instructions not included, anxiety is 😅🏗️ #ExpensiveLEGO
-#cityscape #skyline #urban #architecture #waterfront #tower #clouds #dramatic #modern #buildings #metropolitan https://t.co/QZdaHWHVHd
+#cityscape #skyline #urban #architecture #waterfront #tower #clouds #dramatic #modern #buildings #metropolitan

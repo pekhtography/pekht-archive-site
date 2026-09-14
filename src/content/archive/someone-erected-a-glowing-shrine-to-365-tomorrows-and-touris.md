@@ -15,4 +15,4 @@ Spoiler:
 other side still smells like street pretzels,
 still sounds like honking, still feels like Tuesday.
 Your coffee's still cold☕️✨
-#NewYear #CityLife #Selfie #Cold https://t.co/BdEk5HDxK7
+#NewYear #CityLife #Selfie #Cold

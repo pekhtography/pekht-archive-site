@@ -18,4 +18,4 @@ hashtags:
   - "rural"
 ---
 Church bells don't just mark time - they mark moments when the whole village exhales together🔔💨 Sometimes the most revolutionary act is simply being still✨ #SacredPause
-#church #village #Russia #orthodox #countryside #architecture #dome #traditional #peaceful #landscape #rural https://t.co/BGgcBNQ00u
+#church #village #Russia #orthodox #countryside #architecture #dome #traditional #peaceful #landscape #rural

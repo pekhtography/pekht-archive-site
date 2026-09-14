@@ -12,4 +12,4 @@ The dirt is cool. The fan is heavy.
 He feels the exact second his back starts to ache. 
 He holds it anyway—admitting defeat would mean acknowledging his evolution points went to this. 🌿💢
 Beauty is just the silence before the back spasm. 
-#TheStruggle #ShowingOff #RitualBehavior https://t.co/jLjgfyOmJT
+#TheStruggle #ShowingOff #RitualBehavior

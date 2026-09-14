@@ -13,4 +13,4 @@ Teeth of the pavement grit together,
 yet this bright yellow rebel performs a slow-motion heist, 
 cracking the urban ego with quiet hydraulic joy 🌼💪. 
 Concrete surrender.
-#Nature #UrbanGardening #SidewalkLife #Relentless https://t.co/5WVFlPvJpY
+#Nature #UrbanGardening #SidewalkLife #Relentless

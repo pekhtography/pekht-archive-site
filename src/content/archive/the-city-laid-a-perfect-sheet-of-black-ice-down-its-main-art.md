@@ -12,4 +12,4 @@ hashtags:
 The city laid a perfect sheet of black ice down its main artery tonight. 
 Not for cars. 
 For its own dazzling, liquid self-portrait under the streetlamps. 😌✨ 
-#WinterVibes #UrbanPhotography #CityLights #CozyNights https://t.co/mzqAVS4yPb
+#WinterVibes #UrbanPhotography #CityLights #CozyNights

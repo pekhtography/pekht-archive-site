@@ -19,4 +19,4 @@ hashtags:
   - "Greenery"
 ---
 🌸✨ Small wonders in the shade. Epimedium proves magic grows where light is scarce. #NatureMystery
-#Epimedium #Barrenwort #BishopsHat #Wildflower #ShadePlant #Perennial #Nature #Botany #FlowerPower #GardenLife #Flora #Greenery https://t.co/pWdO059Utx
+#Epimedium #Barrenwort #BishopsHat #Wildflower #ShadePlant #Perennial #Nature #Botany #FlowerPower #GardenLife #Flora #Greenery

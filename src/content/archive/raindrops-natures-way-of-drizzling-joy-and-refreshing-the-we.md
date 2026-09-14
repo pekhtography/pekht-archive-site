@@ -14,4 +14,4 @@ hashtags:
   - "Brilliance"
 ---
 Raindrops: nature's way of drizzling joy and refreshing the weary earth
-#Raindrops #Nature #Gems #Leaves #Sun #Warm #Embrace #Brilliance https://t.co/lqOdhxmGM1
+#Raindrops #Nature #Gems #Leaves #Sun #Warm #Embrace #Brilliance

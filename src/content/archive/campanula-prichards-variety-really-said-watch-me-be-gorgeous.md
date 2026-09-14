@@ -14,4 +14,4 @@ hashtags:
   - "gardening"
 ---
 Campanula 'Prichard's Variety' really said "watch me be gorgeous for months while you stress about watering" 💅 Peak plant privilege right here 👑 Some flowers just hit the genetic lottery 🎰 #PlantPrivilege
-#campanula #bellflower #garden #flowers #blooming #summer #gardening https://t.co/XHdbElbCSc
+#campanula #bellflower #garden #flowers #blooming #summer #gardening

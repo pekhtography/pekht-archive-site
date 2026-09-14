@@ -12,4 +12,4 @@ hashtags:
 This Gift Factory looks like a greenhouse for growing smiles. 
 Hard metal, soft lights. 
 Even the grumpiest welder starts humming jingle bells here. 🛠️✨ 
-#HolidaySpirit #GiftFactory #IndustrialChristmas #GlowingNight https://t.co/O26a4rTkKO
+#HolidaySpirit #GiftFactory #IndustrialChristmas #GlowingNight

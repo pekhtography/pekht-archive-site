@@ -16,4 +16,4 @@ hashtags:
   - "patriotic"
 ---
 When history comes alive through passionate storytelling 📚 Every uniform tells a story, every gesture carries the weight of memory ⚔️ The past speaks through those who honor it🎭 #LivingHistory
-#history #military #reenactment #uniform #soldiers #vintage #war #memorial #patriotic https://t.co/cHupETWyeU
+#history #military #reenactment #uniform #soldiers #vintage #war #memorial #patriotic

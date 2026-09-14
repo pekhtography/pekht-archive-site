@@ -13,4 +13,4 @@ The air bites your cheeks, but the golden light warms your soul.
 This is peak Winter Magic: 
 freezing outside to feel the inner fire. 
 Stay for the echo. ❄️🧡 
-#Christmas #HolidaySeason #Moscow #WinterMagic https://t.co/8XPP0uAcLh
+#Christmas #HolidaySeason #Moscow #WinterMagic

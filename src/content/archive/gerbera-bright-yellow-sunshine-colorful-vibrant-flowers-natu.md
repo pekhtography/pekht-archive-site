@@ -27,4 +27,4 @@ hashtags:
   - "Cheerfulness"
   - "Positivity"
 ---
-#Gerbera #Bright #Yellow #Sunshine #Colorful #Vibrant #Flowers #Nature #Large #Native #Africa #Luck #Happiness #Beauty #Simplicity #Petals #Softness #Freshness #Garden #Serenity #Cheerfulness #Positivity https://t.co/fi7Hj0omxb
+#Gerbera #Bright #Yellow #Sunshine #Colorful #Vibrant #Flowers #Nature #Large #Native #Africa #Luck #Happiness #Beauty #Simplicity #Petals #Softness #Freshness #Garden #Serenity #Cheerfulness #Positivity

@@ -13,4 +13,4 @@ The pink crowd already forgot her.
 She dried up above them, rattling — 
 a handful of seeds, 
 the weight of a whole summer pressed into one papery whisper 🌿🤍🌸
-#Peonies #GardenLife #SeedSaving #SlowGarden https://t.co/p3qCqgLQNm
+#Peonies #GardenLife #SeedSaving #SlowGarden

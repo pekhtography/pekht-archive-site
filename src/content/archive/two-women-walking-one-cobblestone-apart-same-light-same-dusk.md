@@ -13,4 +13,4 @@ Two women walking, one cobblestone apart 🌆
 Same light. Same dusk. 
 Each carrying a shadow the other can't see — 
 that's the whole city, really 🌿
-#CityPoetry #UrbanMysticism #GoldenHour #CityMoments https://t.co/mQfuRPF8tS
+#CityPoetry #UrbanMysticism #GoldenHour #CityMoments

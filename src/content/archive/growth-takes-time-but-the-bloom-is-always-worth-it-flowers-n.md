@@ -18,4 +18,4 @@ hashtags:
   - "greenery"
 ---
 Growth takes time — but the bloom is always worth it
-#flowers #nature #garden #bloom #summer #pink #hollyhock #beauty #petals #botany #floral #greenery https://t.co/YhieF9xHqS
+#flowers #nature #garden #bloom #summer #pink #hollyhock #beauty #petals #botany #floral #greenery

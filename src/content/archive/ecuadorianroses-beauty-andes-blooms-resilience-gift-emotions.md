@@ -28,4 +28,4 @@ hashtags:
   - "Surprises"
   - "Nature"
 ---
-#EcuadorianRoses #Beauty #Andes #Blooms #Resilience #Gift #Emotions #Occasions #Colors #Freshness #Ecuadorian #Roses #Party #Bouquet #Scent #Spotlight #Life #Andean #Sun #Grandeur #Fragrance #Surprises #Nature https://t.co/6JNdrLwQhk
+#EcuadorianRoses #Beauty #Andes #Blooms #Resilience #Gift #Emotions #Occasions #Colors #Freshness #Ecuadorian #Roses #Party #Bouquet #Scent #Spotlight #Life #Andean #Sun #Grandeur #Fragrance #Surprises #Nature

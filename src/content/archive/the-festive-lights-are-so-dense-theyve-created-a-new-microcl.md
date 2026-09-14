@@ -13,4 +13,4 @@ Time slows down.
 Your breath becomes part of the special effects.
 Even the snowflakes look focus-grouped for maximum whimsy.
 We are all inside a snow globe now 🌌✨
-#City #Winter https://t.co/7xf7bJz6j4
+#City #Winter

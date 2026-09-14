@@ -24,4 +24,4 @@ hashtags:
   - "Life"
 ---
 Nature's colors dance around the serene silhouette of the pagoda
-#Pagoda #Guardian #Peace #Harmony #Flowers #Joy #Beauty #Wonder #Garden #Oasis #Trees #Wisdom #Nature #Vibes #Colors #Celebration #Vibrancy #Life https://t.co/GvEu4OWgjp
+#Pagoda #Guardian #Peace #Harmony #Flowers #Joy #Beauty #Wonder #Garden #Oasis #Trees #Wisdom #Nature #Vibes #Colors #Celebration #Vibrancy #Life

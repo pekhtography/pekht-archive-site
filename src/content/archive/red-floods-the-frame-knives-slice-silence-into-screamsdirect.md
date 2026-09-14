@@ -13,4 +13,4 @@ hashtags:
   - "MoviePoster"
 ---
 Red floods the frame, knives slice silence into screams—director's portrait pulses alive. Irony: he directs doom, yet sparks joy in every frenzy. Life's reel spins wild, untamed. 🔥🗡️🎬 #FrenzyReelWhirl
-#TarantinoTwist #Movies #Cinema #PopCulture #QuentinTarantino #MoviePoster https://t.co/tV86ugo7HI
+#TarantinoTwist #Movies #Cinema #PopCulture #QuentinTarantino #MoviePoster

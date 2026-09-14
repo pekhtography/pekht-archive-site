@@ -24,4 +24,4 @@ hashtags:
   - "wilderness"
 ---
 Beneath a white quilt of snow, the trees bow, creating enchanting tunnels that invite the wanderer into a winter wonderland
-#snow #wonderland #branch #tunnel #winter #arch #frosty #magic #fluffy #nature #flurries #adventure #weight #chill #gateway #sparkle #whimsy #wilderness https://t.co/AB3uvMOmHn
+#snow #wonderland #branch #tunnel #winter #arch #frosty #magic #fluffy #nature #flurries #adventure #weight #chill #gateway #sparkle #whimsy #wilderness

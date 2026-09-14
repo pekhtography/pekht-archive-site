@@ -16,4 +16,4 @@ hashtags:
   - "sport"
 ---
 Two guys, one boat, infinite possibilities 🚤 This is what weekends were invented for! Sometimes the best conversations happen at 40 knots 💨 Who needs therapy when you have horsepower? 😎 #WeekendWarriors
-#boat #speed #water #russia #summer #racing #adventure #freedom #sport https://t.co/fF0pSdcepa
+#boat #speed #water #russia #summer #racing #adventure #freedom #sport

@@ -19,4 +19,4 @@ hashtags:
   - "plant"
 ---
 🦎🧐 This gecko has seen your browser history and is… concerned #JudgmentalReptile
-#gecko #lizard #reptile #cute #nature #wildlife #tropical #exotic #scales #eyes #pink #plant https://t.co/NfVGuSOLnk
+#gecko #lizard #reptile #cute #nature #wildlife #tropical #exotic #scales #eyes #pink #plant

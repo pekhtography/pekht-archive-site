@@ -10,4 +10,4 @@ hashtags:
   - "Colors"
   - "Trees"
 ---
-In the entire circle of the seasons, autumn holds the brightest colors #Autumn #Harvest #Leaves #Colors #Trees https://t.co/Rzu2rlwsCj
+In the entire circle of the seasons, autumn holds the brightest colors #Autumn #Harvest #Leaves #Colors #Trees

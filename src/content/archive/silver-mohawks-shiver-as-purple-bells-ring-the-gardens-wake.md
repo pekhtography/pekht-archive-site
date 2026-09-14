@@ -12,4 +12,4 @@ hashtags:
 Silver mohawks shiver as purple bells ring the garden’s wake-up call.
 Evolution skipped the comb, 
 choosing this shaggy botanical rebellion against boring lawns instead. 🤘💜
-#Nature #GardeningLife #BotanicalPunk #WildAndFree https://t.co/SZgvCRQBuk
+#Nature #GardeningLife #BotanicalPunk #WildAndFree

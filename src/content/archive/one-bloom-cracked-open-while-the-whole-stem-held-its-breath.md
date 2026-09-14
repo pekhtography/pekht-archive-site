@@ -12,4 +12,4 @@ hashtags:
 One bloom cracked open while the whole stem held its breath. 🌸 
 Pink veins mapped a secret the buds are still memorizing. 
 The loudest thing in the garden was the one that said least. ✨
-#Wildflowers #MacroNature #BloomMoment #QuietBeauty https://t.co/zmdkVXqimV
+#Wildflowers #MacroNature #BloomMoment #QuietBeauty

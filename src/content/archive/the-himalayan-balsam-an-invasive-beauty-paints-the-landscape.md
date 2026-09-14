@@ -18,4 +18,4 @@ hashtags:
   - "Botany"
 ---
 The Himalayan Balsam, an invasive beauty, paints the landscape with hues that make the local flowers whisper, 'Show-off!'
-#Himalayan #Balsam #Nature #Bloom #Purple #Wildflower #Garden #Flora #Petals #Beauty #Blossom #Botany https://t.co/Pt1unT8mPv
+#Himalayan #Balsam #Nature #Bloom #Purple #Wildflower #Garden #Flora #Petals #Beauty #Blossom #Botany

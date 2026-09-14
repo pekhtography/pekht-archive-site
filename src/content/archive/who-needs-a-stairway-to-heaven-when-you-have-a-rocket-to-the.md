@@ -15,4 +15,4 @@ hashtags:
   - "Heritage"
 ---
 Who needs a stairway to heaven when you have a rocket to the stars?
-#Space #Rocket #History #Exploration #Science #Innovation #Night #Light #Heritage https://t.co/gTHacrE0Jq
+#Space #Rocket #History #Exploration #Science #Innovation #Night #Light #Heritage

@@ -13,4 +13,4 @@ The city dressed its trees in tiny suns to fight the winter blues.
 Now they stand there, overqualified and glowing, 
 while the actual sun is on a tropical vacation. 
 The buildings are just jealous background actors. 🌟🌳 
-#CityLife #UrbanMood #LiminalSpace #FestiveLoneliness https://t.co/fpRth5fkrF
+#CityLife #UrbanMood #LiminalSpace #FestiveLoneliness

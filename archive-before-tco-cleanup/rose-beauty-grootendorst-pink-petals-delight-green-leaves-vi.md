@@ -1,0 +1,28 @@
+---
+title: "#Rose #Beauty #Grootendorst #Pink #Petals #Delight #Green #Leaves #Vitality #ParkRose #Nature #Hybrid #Diversity #RosaRu"
+x_id: "1901274503885586546"
+x_created_at: "2025-03-16T14:09:00Z"
+image: "/images/archive/rose-beauty-grootendorst-pink-petals-delight-green-leaves-vi.jpg"
+hashtags:
+  - "Rose"
+  - "Beauty"
+  - "Grootendorst"
+  - "Pink"
+  - "Petals"
+  - "Delight"
+  - "Green"
+  - "Leaves"
+  - "Vitality"
+  - "ParkRose"
+  - "Nature"
+  - "Hybrid"
+  - "Diversity"
+  - "RosaRugosa"
+  - "Resilience"
+  - "Blooms"
+  - "RaspberryRed"
+  - "Vibrancy"
+  - "CloveLikeShape"
+  - "Uniqueness"
+---
+#Rose #Beauty #Grootendorst #Pink #Petals #Delight #Green #Leaves #Vitality #ParkRose #Nature #Hybrid #Diversity #RosaRugosa #Resilience #Blooms #RaspberryRed #Vibrancy #CloveLikeShape #Uniqueness https://t.co/0lNDOwagKp

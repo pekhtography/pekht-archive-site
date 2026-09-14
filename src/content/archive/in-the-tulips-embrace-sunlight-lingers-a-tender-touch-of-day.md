@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 In the tulip's embrace, sunlight lingers, a tender touch of day
-#tulip #flower #yellow #bloom #nature #spring #petals #garden #vibrant #blossom #growth #beauty https://t.co/FoOnEHhqY1
+#tulip #flower #yellow #bloom #nature #spring #petals #garden #vibrant #blossom #growth #beauty

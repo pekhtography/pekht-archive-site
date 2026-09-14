@@ -18,4 +18,4 @@ hashtags:
   - "heritage"
 ---
 When Google Maps leads you to enlightenment but you were just looking for coffee ☕ GPS glitch or divine intervention? Plot twist: both work! 📍😇 Best wrong turn ever? ✨ #DivineMaps
-#church #orthodox #architecture #russian #dome #cross #red #golden #sacred #spiritual #heritage https://t.co/cQhGgoPtB0
+#church #orthodox #architecture #russian #dome #cross #red #golden #sacred #spiritual #heritage

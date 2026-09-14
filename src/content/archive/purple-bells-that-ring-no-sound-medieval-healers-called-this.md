@@ -12,4 +12,4 @@ hashtags:
 Purple bells that ring no sound 🔔💜 — 
 medieval healers called this the threshold flower. 
 You cross it just by standing still. 🌿
-#NaturePhotography #Wildflowers #BotanicalBeauty #FlowerPhotography https://t.co/2l0xIZsknV
+#NaturePhotography #Wildflowers #BotanicalBeauty #FlowerPhotography

@@ -13,4 +13,4 @@ Soft purple haze behind. 🌸
 Sharp green legs still kicking in the beak. 
 The universe framed its brutality in lavender — 
 and called it Tuesday. 🐦
-#NatureIsBeautiful #WildlifePhoto #BirdsOfPrey #EarthCaptures https://t.co/1F1GvjZXSH
+#NatureIsBeautiful #WildlifePhoto #BirdsOfPrey #EarthCaptures

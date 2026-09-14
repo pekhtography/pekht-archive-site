@@ -18,4 +18,4 @@ hashtags:
   - "botanical"
 ---
 The iris aimed to outdo the sun's brilliance but happily became the garden's star attraction instead
-#iris #flower #yellow #bloom #nature #garden #petals #spring #vibrant #beauty #flora #botanical https://t.co/QvoHTw5JDl
+#iris #flower #yellow #bloom #nature #garden #petals #spring #vibrant #beauty #flora #botanical

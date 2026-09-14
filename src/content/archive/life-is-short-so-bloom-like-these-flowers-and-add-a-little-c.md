@@ -19,4 +19,4 @@ hashtags:
   - "botanical"
 ---
 🌼 Life is short, so bloom like these flowers 🌺 and add a little color to the world! #LiveBrightly
-#flowers #nature #azalea #bloom #garden #spring #colorful #blossom #beauty #floral #purple #botanical https://t.co/CgiBHjPtwg
+#flowers #nature #azalea #bloom #garden #spring #colorful #blossom #beauty #floral #purple #botanical

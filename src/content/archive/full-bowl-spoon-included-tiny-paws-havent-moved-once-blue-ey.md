@@ -13,4 +13,4 @@ Full bowl. Spoon included. 😐
 Tiny paws haven't moved once — 
 blue eyes already filed the verdict three minutes ago.
 Proximity was never about hunger. 🐾
-#CatsOfTwitter #KittenJudge #UnimpressedCat #MorningMood https://t.co/UBJ0Tzmqs0
+#CatsOfTwitter #KittenJudge #UnimpressedCat #MorningMood

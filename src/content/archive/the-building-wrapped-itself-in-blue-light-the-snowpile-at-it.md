@@ -12,4 +12,4 @@ hashtags:
 The building wrapped itself in blue light. 🔵
 The snowpile at its feet: still there, grey, unbothered.
 Glamour is a coat you wear over the cold, not instead of it. 🧊
-#CityAtNight #NeonAndSnow #WinterUrban #ColdGlow https://t.co/9RTNmPtdsT
+#CityAtNight #NeonAndSnow #WinterUrban #ColdGlow

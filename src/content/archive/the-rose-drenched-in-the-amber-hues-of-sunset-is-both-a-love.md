@@ -21,4 +21,4 @@ hashtags:
   - "relaxation"
 ---
 The rose, drenched in the amber hues of sunset, is both a lover's sigh and a fleeting echo of longing in a world of impermanence
-#rose #flower #twilight #sunset #beauty #love #ephemeral #elegance #garden #blooming #bloom #passion #transience #tranquility #relaxation https://t.co/PUeyIreAZo
+#rose #flower #twilight #sunset #beauty #love #ephemeral #elegance #garden #blooming #bloom #passion #transience #tranquility #relaxation

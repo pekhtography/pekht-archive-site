@@ -19,4 +19,4 @@ hashtags:
   - "observation"
 ---
 Nothing says "trust issues" quite like an architect who thinks transparent floors are a good idea😏🔍 At least now I know what ants feel like! #TransparencyIssues
-#architecture #cityscape #glass #viewpoint #modern #urban #sky #perspective #design #height #transparent #observation https://t.co/uqsAwytymG
+#architecture #cityscape #glass #viewpoint #modern #urban #sky #perspective #design #height #transparent #observation

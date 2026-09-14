@@ -18,4 +18,4 @@ hashtags:
   - "Summer"
 ---
 With a wink and a smile, hollyhocks say, 'We're the garden's style, no need for a trial!'
-#Alcea #Rosea #Hollyhock #Mallow #Bloom #Flower #Nature #Pink #Petals #Garden #Beauty #Summer https://t.co/2XdIiP2C97
+#Alcea #Rosea #Hollyhock #Mallow #Bloom #Flower #Nature #Pink #Petals #Garden #Beauty #Summer

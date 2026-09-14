@@ -13,4 +13,4 @@ Didn't chase. Didn't compete. Didn't update his LinkedIn. 🦅
 Perched on a rusty pole above the ruins — 
 and somehow, everything came to him. 🪨
 The oldest business model on Earth still has a 100% success rate.
-#Wildlife #VultureKing #BirdsOfPrey #Patience https://t.co/HsZ1CousAB
+#Wildlife #VultureKing #BirdsOfPrey #Patience

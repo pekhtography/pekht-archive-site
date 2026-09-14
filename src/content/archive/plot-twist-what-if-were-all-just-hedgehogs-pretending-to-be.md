@@ -17,4 +17,4 @@ hashtags:
   - "care"
 ---
 Plot twist: What if we're all just hedgehogs pretending to be humans? 🦔🤔 Same energy - spiky on the outside, soft on the inside, and desperately hoping someone will hold us gently 💕 #HedgehogEnergyOnly
-#hedgehog #pet #baby #tiny #adorable #hands #gentle #wildlife #mammal #care https://t.co/mNVxGg9m1K
+#hedgehog #pet #baby #tiny #adorable #hands #gentle #wildlife #mammal #care

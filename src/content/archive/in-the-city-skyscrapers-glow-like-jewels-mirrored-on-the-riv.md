@@ -12,4 +12,4 @@ hashtags:
   - "skyline"
   - "water"
 ---
-In the city, skyscrapers glow like jewels mirrored on the river’s surface #skyscrapers #glow #reflections #river #lights #skyline #water https://t.co/zXe6Sm2GOZ
+In the city, skyscrapers glow like jewels mirrored on the river’s surface #skyscrapers #glow #reflections #river #lights #skyline #water

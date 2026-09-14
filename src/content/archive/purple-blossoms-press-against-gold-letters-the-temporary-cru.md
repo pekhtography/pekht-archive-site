@@ -14,4 +14,4 @@ the temporary crushing the permanent 🌸
 Fresh water beads on the stone, carrying the weight of both. 
 The shop sells flowers. 
 The flowers outlast the shop. 💜
-#FlowerAesthetic #FlowerMarket #CityBeauty #MomentsThatMatter https://t.co/vnJfTPJAQs
+#FlowerAesthetic #FlowerMarket #CityBeauty #MomentsThatMatter

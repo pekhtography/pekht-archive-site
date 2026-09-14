@@ -19,4 +19,4 @@ hashtags:
   - "seasonal"
 ---
 🍂 The sweet scent of autumn lingers in these ripe persimmons, tales of harvest and quiet moments woven with nature’s secrets. 🍁🌿 #HarvestSecrets
-#persimmons #branches #autumn #outdoors #nature #fruit #garden #rustic #harvest #calm #leaves #seasonal https://t.co/eggLyNsi2s
+#persimmons #branches #autumn #outdoors #nature #fruit #garden #rustic #harvest #calm #leaves #seasonal

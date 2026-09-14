@@ -19,4 +19,4 @@ hashtags:
   - "flora"
 ---
 With a flourish of green and a twinkle of white, the leucojum declares, "Spring is here, and I'm the life of the party!" 
-#snowflake #leucojum #spring #flowers #bloom #nature #garden #white #blossom #petals #greenery #botany #flora https://t.co/aFLCIkD7N2
+#snowflake #leucojum #spring #flowers #bloom #nature #garden #white #blossom #petals #greenery #botany #flora

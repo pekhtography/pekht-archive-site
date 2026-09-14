@@ -15,4 +15,4 @@ hashtags:
   - "Garden"
   - "Nature"
 ---
-The predator's shadow looms over the nest, leaving traces of crime in the garden #Predator #Hunter #Nest #Home #Traces #Evidence #Crime #Wrongdoing #Garden #Nature https://t.co/zcAAmZRGfP
+The predator's shadow looms over the nest, leaving traces of crime in the garden #Predator #Hunter #Nest #Home #Traces #Evidence #Crime #Wrongdoing #Garden #Nature

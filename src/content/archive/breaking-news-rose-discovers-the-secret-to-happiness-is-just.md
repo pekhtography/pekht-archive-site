@@ -19,4 +19,4 @@ hashtags:
   - "photography"
 ---
 Breaking news: Rose discovers the secret to happiness is just existing beautifully while everyone else overthinks it 🌹 Scientists hate this one simple trick 🔬😂 #SimpleHappiness
-#rose #pink #bloom #petals #buds #garden #flower #nature #beauty #romance #elegance #photography https://t.co/MGGDEnwVsH
+#rose #pink #bloom #petals #buds #garden #flower #nature #beauty #romance #elegance #photography

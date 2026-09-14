@@ -11,4 +11,4 @@ hashtags:
   - "Youth"
   - "Flower"
 ---
-Primroses symbolize the joy of youth #Primrose #Spring #Colors #Garden #Youth #Flower https://t.co/xXPg9geufP
+Primroses symbolize the joy of youth #Primrose #Spring #Colors #Garden #Youth #Flower

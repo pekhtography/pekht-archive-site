@@ -29,4 +29,4 @@ hashtags:
   - "Path"
   - "Footprint"
 ---
-#Snow #Winter #Frost #Chill #Slope #Uphill #Mountain #Glistens #Shimmer #Sparkle #Twinkle #Pale #Light #Slippery #Danger #Slide #Glide #Nature #Wildlife #Grace #Elegance #Trail #Path #Footprint https://t.co/dAPh5FlL8s
+#Snow #Winter #Frost #Chill #Slope #Uphill #Mountain #Glistens #Shimmer #Sparkle #Twinkle #Pale #Light #Slippery #Danger #Slide #Glide #Nature #Wildlife #Grace #Elegance #Trail #Path #Footprint

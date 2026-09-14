@@ -14,4 +14,4 @@ hashtags:
   - "vibrant"
   - "sacred"
 ---
-As the leaves cascaded down, the light danced upon the church's facade like a blessing #church #faith #autumn #sunlight #leaves #nature #majesty #vibrant #sacred https://t.co/MJ3Edv8UMV
+As the leaves cascaded down, the light danced upon the church's facade like a blessing #church #faith #autumn #sunlight #leaves #nature #majesty #vibrant #sacred

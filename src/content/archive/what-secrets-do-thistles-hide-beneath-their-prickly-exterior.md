@@ -20,4 +20,4 @@ hashtags:
   - "thorns"
 ---
 What secrets do thistles hide beneath their prickly exterior?
-#Thistle #Nature #Bloom #Purple #Wildflowers #Meadow #Flora #Botany #Ecosystem #Biodiversity #Photography #Outdoors #petals #thorns https://t.co/PBvlcdEgYm
+#Thistle #Nature #Bloom #Purple #Wildflowers #Meadow #Flora #Botany #Ecosystem #Biodiversity #Photography #Outdoors #petals #thorns

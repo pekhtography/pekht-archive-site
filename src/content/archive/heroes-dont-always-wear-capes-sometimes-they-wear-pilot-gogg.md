@@ -15,4 +15,4 @@ hashtags:
   - "heritage"
 ---
 Heroes don't always wear capes - sometimes they wear pilot goggles and carry the future in their arms 👨‍✈️ Every great journey begins with courage to remember and wisdom to dream 💭✨ #HeroesAmongUs
-#aviation #history #family #military #aircraft #commemoration #pilot #heritage https://t.co/fhg96v6YR1
+#aviation #history #family #military #aircraft #commemoration #pilot #heritage

@@ -25,4 +25,4 @@ hashtags:
   - "softness"
   - "Buttercup"
 ---
-#Ranunculus #orange #coral #petals #Calendula #yellow #beauty #nature #garden #warmth #resilience #vibrant #golden #sunbeam #fabulous #mood #marigold #sunshine #softness #Buttercup https://t.co/9Ejm5Kbhk1
+#Ranunculus #orange #coral #petals #Calendula #yellow #beauty #nature #garden #warmth #resilience #vibrant #golden #sunbeam #fabulous #mood #marigold #sunshine #softness #Buttercup

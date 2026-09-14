@@ -11,4 +11,4 @@ hashtags:
   - "garden"
   - "nature"
 ---
-In the stillness of the morning, the wagtail perched like a sentinel on high #wagtail #bird #antenna #communication #garden #nature https://t.co/1JTjK7SSl3
+In the stillness of the morning, the wagtail perched like a sentinel on high #wagtail #bird #antenna #communication #garden #nature

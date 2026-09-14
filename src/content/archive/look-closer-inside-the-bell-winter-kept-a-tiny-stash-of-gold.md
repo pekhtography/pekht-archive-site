@@ -13,4 +13,4 @@ Look closer.
 Inside the bell, winter kept a tiny stash of gold confetti ✨🔔
 Even the most serious promise needs a hidden sparkle. 
 It’s saying: "The plan is bold, but let’s keep it elegant, with a wink" 😉
-#NewYear #NewBeginnings #SpringFlowers #Hope https://t.co/beu7hEpkHu
+#NewYear #NewBeginnings #SpringFlowers #Hope

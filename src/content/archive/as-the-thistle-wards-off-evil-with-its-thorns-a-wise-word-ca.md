@@ -18,4 +18,4 @@ hashtags:
   - "landscape"
 ---
 As the thistle wards off evil with its thorns, a wise word can shield the soul from life's sharp edges
-#thistle #nature #wildflower #bloom #purple #meadow #flora #botany #outdoors #ecology #biodiversity #landscape https://t.co/rShwdSK36u
+#thistle #nature #wildflower #bloom #purple #meadow #flora #botany #outdoors #ecology #biodiversity #landscape

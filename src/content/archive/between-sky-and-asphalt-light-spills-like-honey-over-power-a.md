@@ -8,4 +8,4 @@ hashtags:
   - "MoscowLandmarks"
   - "UrbanMajesty"
 ---
-Between sky and asphalt, light spills like honey over power and purpose — Pavletskaya Plaza doesn’t just stand, it commands. 🌅🏛️ #Architecture #MoscowLandmarks #UrbanMajesty https://t.co/p5Qcd9ajXx
+Between sky and asphalt, light spills like honey over power and purpose — Pavletskaya Plaza doesn’t just stand, it commands. 🌅🏛️ #Architecture #MoscowLandmarks #UrbanMajesty

@@ -14,4 +14,4 @@ Every rooftop antenna suddenly a lightning rod for ancient Greek drama🌅
 Aristotle called it catharsis.
 Meteorologists call it particulate scatter.
 Both are correct
-#Sunset #UrbanSky #GoldenHourCity https://t.co/gTM0uA0iHQ
+#Sunset #UrbanSky #GoldenHourCity

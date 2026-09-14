@@ -18,4 +18,4 @@ hashtags:
   - "Blossom"
 ---
 Nature's poetry unfolds as the daylily and bleeding heart intertwine, their colors a symphony of emotions, echoing the rhythm of the earth
-#Daylily #Dicentra #BleedingHeart #Flowers #Nature #Bloom #Garden #Beauty #Petals #Vibrant #Serenity #Blossom https://t.co/tdFxBIsnkh
+#Daylily #Dicentra #BleedingHeart #Flowers #Nature #Bloom #Garden #Beauty #Petals #Vibrant #Serenity #Blossom

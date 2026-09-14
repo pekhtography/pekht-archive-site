@@ -14,4 +14,4 @@ Venue: the snow floor. Menu: sunflower seeds.
 The forest's chief percussion engineer — 
 tonight performing live as a sparrow 🐦 
 Formal feathers. Budget dinner.
-#WildlifePhotography #WoodpeckerLife #UnexpectedlyRelatable #SnowForaging https://t.co/bCPvqw3xmq
+#WildlifePhotography #WoodpeckerLife #UnexpectedlyRelatable #SnowForaging

@@ -22,4 +22,4 @@ hashtags:
   - "Chill"
 ---
 The branches wear a delicate coat of snow, as if winter has knitted them warm mittens for the frosty days
-#Branches #Nature #Snow #Mittens #Winter #Forest #Frozen #Tree #Wood  #Flake #Unique #Coat #Attire #Magic #Glove #Chill https://t.co/M8NymXmWM6
+#Branches #Nature #Snow #Mittens #Winter #Forest #Frozen #Tree #Wood  #Flake #Unique #Coat #Attire #Magic #Glove #Chill

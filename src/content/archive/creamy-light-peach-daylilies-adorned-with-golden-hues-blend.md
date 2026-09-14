@@ -13,4 +13,4 @@ hashtags:
   - "warmth"
   - "joy"
 ---
-Creamy light-peach daylilies, adorned with golden hues, blend seamlessly with other flowers in the garden, creating a vibrant tapestry of color #garden #wildflowers #yellow #Creamy #peach #daylily #warmth #joy https://t.co/KO7wMTddht
+Creamy light-peach daylilies, adorned with golden hues, blend seamlessly with other flowers in the garden, creating a vibrant tapestry of color #garden #wildflowers #yellow #Creamy #peach #daylily #warmth #joy

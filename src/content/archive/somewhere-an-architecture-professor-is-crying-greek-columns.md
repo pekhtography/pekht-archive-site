@@ -13,4 +13,4 @@ Somewhere, an architecture professor is crying.
 Greek columns babysitting Christmas ornaments the size of cars. 🏛️🎊 
 Pink glow screaming "we have a budget and zero chill." 
 Tourists freeze. Locals shrug. Perfection. 😂
-#ChristmasVibes #TravelGoals #ArchitectureLovers #ExtraAF https://t.co/n9tvyf27Me
+#ChristmasVibes #TravelGoals #ArchitectureLovers #ExtraAF

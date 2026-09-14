@@ -19,4 +19,4 @@ hashtags:
   - "Heritage"
 ---
 Amidst the grandeur, hearts beat as one
-#Exhibition #Crowd #Landmark #Architecture #Event #Fountain #Gathering #Monument #Sky #Evening #People #History #Heritage https://t.co/UNVtmxxdDM
+#Exhibition #Crowd #Landmark #Architecture #Event #Fountain #Gathering #Monument #Sky #Evening #People #History #Heritage

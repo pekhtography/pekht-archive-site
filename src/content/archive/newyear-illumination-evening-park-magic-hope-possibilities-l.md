@@ -15,4 +15,4 @@ hashtags:
   - "Joy"
   - "Celebration"
 ---
-#NewYear #Illumination #Evening #Park #Magic #Hope #Possibilities #Light #Joy #Celebration https://t.co/jfDToMlMc1
+#NewYear #Illumination #Evening #Park #Magic #Hope #Possibilities #Light #Joy #Celebration

@@ -12,4 +12,4 @@ hashtags:
 Gaze at gold. Touch pollen. 
 Notice throats open, swallowing sky before moon wakes, 
 claiming the entire universe for a single day... 🌙🍯🌼
-#Nature #GardenDesign #SummerVibes #GoldenHour https://t.co/GCJfOufzKd
+#Nature #GardenDesign #SummerVibes #GoldenHour

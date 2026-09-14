@@ -15,4 +15,4 @@ hashtags:
   - "Colors"
   - "Vibrancy"
 ---
-Among the flowers, the pagoda stands like a guardian of peace #Pagoda #Harmony #Flowers #Beauty #Garden #Paradise #Trees #Nature #Colors #Vibrancy https://t.co/SxcxDeYR4S
+Among the flowers, the pagoda stands like a guardian of peace #Pagoda #Harmony #Flowers #Beauty #Garden #Paradise #Trees #Nature #Colors #Vibrancy

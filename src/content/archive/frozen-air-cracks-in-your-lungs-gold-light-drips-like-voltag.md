@@ -12,4 +12,4 @@ Frozen air cracks in your lungs❄️
 Gold light drips like voltage honey. 
 You walk through a cathedral from 100,000 bulbs—no prayers required, just an electrical grid⚡
 Moscow in winter: when the city glows harder than it ever smiled💛
-#Christmas #ChristmasLights #WinterWonderland https://t.co/PbjFZcUyni
+#Christmas #ChristmasLights #WinterWonderland

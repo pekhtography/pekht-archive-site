@@ -13,4 +13,4 @@ hashtags:
   - "skyline"
 ---
 Breaking: Local ducks refuse to pay property taxes despite prime real estate location 🦆 City council baffled by their "we were here first" argument 😂 Meanwhile, humans pay millions for the same view 🏢 #DuckEconomics
-#cityscape #architecture #reflection #pond #ducks #skyline https://t.co/W1BI8lLXog
+#cityscape #architecture #reflection #pond #ducks #skyline

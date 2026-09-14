@@ -19,4 +19,4 @@ hashtags:
   - "garden"
 ---
 In the heart of spring, the tit sings a symphony of life, awakening the garden with its melodious chirps 
-#bird #nature #spring #tree #branch #wildlife #outdoors #green #bloom #perch #chirp #feathers #garden https://t.co/IV9cEqPDLY
+#bird #nature #spring #tree #branch #wildlife #outdoors #green #bloom #perch #chirp #feathers #garden

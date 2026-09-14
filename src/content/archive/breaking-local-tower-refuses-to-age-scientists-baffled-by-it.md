@@ -16,4 +16,4 @@ hashtags:
   - "beauty"
 ---
 Breaking: Local tower refuses to age, scientists baffled by its eternal youth secrets 🏗️🔬 Rumor has it, the answer lies in daily doses of tourist admiration and flower therapy #EternalArchitecture
-#architecture #tower #park #flowers #history #tourism #garden #city #beauty https://t.co/n4uRrqA2dh
+#architecture #tower #park #flowers #history #tourism #garden #city #beauty

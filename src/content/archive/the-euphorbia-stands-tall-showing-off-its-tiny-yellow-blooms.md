@@ -18,4 +18,4 @@ hashtags:
   - "Garden"
 ---
 The euphorbia stands tall, showing off its tiny yellow blooms like nature’s little fireworks
-#Euphorbia #Plant #Yellow #Flower #Wildflower #Nature #Green #Meadow #Botany #Growth #Spring #Garden https://t.co/5RDonbQTJA
+#Euphorbia #Plant #Yellow #Flower #Wildflower #Nature #Green #Meadow #Botany #Growth #Spring #Garden

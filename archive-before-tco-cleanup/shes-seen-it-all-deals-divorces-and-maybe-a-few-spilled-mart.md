@@ -1,0 +1,30 @@
+---
+title: "She's seen it all. Deals, divorces, and maybe a few spilled martinis. This duck has the experience"
+x_id: "1900760366050574487"
+x_created_at: "2025-03-15T04:06:00Z"
+image: "/images/archive/shes-seen-it-all-deals-divorces-and-maybe-a-few-spilled-mart.jpg"
+hashtags:
+  - "Rubber"
+  - "Duck"
+  - "Luxury"
+  - "Princess"
+  - "Royalty"
+  - "PreOwned"
+  - "Used"
+  - "Joy"
+  - "Delight"
+  - "Comfort"
+  - "Luxurious"
+  - "Grand"
+  - "Toy"
+  - "Plaything"
+  - "Relaxation"
+  - "Smile"
+  - "Happiness"
+  - "Silliness"
+  - "Antics"
+  - "Bath"
+  - "Soak"
+---
+She's seen it all. Deals, divorces, and maybe a few spilled martinis. This duck has the experience
+#Rubber #Duck #Luxury #Princess #Royalty #PreOwned #Used #Joy #Delight #Comfort #Luxurious #Grand #Toy #Plaything #Relaxation #Smile #Happiness #Silliness #Antics #Bath #Soak https://t.co/jjVjooecP7

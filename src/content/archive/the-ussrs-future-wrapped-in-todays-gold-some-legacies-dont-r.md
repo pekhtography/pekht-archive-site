@@ -18,4 +18,4 @@ hashtags:
   - "UrbanBeauty"
 ---
 The USSR’s future, wrapped in today’s gold. Some legacies don’t rust—they just glow. 🌟🏗️ #GildedEchoes
-#Moscow #Architecture #AutumnVibes #Travel #History #Culture #SovietEra #Cityscape #GoldenHour #Inspiration #UrbanBeauty https://t.co/xKIA2p6OmB
+#Moscow #Architecture #AutumnVibes #Travel #History #Culture #SovietEra #Cityscape #GoldenHour #Inspiration #UrbanBeauty

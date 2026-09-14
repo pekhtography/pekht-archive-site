@@ -11,4 +11,4 @@ hashtags:
 ---
 Botanists call those silver hairs 'trichomes for frost protection' 🔬 
 Nature invented the puffer jacket 60 million years before Canada Goose did 😂
-#Science #BotanyHumor #Pulsatilla #SpringVibes https://t.co/FfYL4ke4WT
+#Science #BotanyHumor #Pulsatilla #SpringVibes

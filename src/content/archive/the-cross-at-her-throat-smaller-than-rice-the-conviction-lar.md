@@ -15,4 +15,4 @@ Someone stitched faith into gold thread — then left.
 She stayed. 
 No blinking. 
 Forever. 🌹 
-#Miniature #ArtDoll #UncannyValley #RenaissanceCosplay https://t.co/mUIzOO1bX9
+#Miniature #ArtDoll #UncannyValley #RenaissanceCosplay

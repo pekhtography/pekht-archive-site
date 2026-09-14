@@ -18,4 +18,4 @@ hashtags:
   - "urban"
 ---
 Plot twist: The city's most exclusive restaurant doesn't have an address—it has coordinates 📍 Floating fine dining hits different when your table moves with the current 🍷 #FloatingFeast
-#cruise #river #skyline #boat #city #tourism #luxury #water #architecture #travel #urban https://t.co/8gj2Ek8p8o
+#cruise #river #skyline #boat #city #tourism #luxury #water #architecture #travel #urban

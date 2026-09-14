@@ -16,4 +16,4 @@ hashtags:
   - "WarmMoments"
   - "Yummy"
 ---
-Nothing beats fresh carrot buns and a glass of milk on a cozy winter evening! 🥕🍞🥛✨ #CozyVibes  #Homemade #BakingTime #ComfortFood #MilkDrink #ChristmasSpirit #FreshlyBaked #HolidayTreats #SnackTime #WarmMoments #Yummy https://t.co/zRUBSdwaOM
+Nothing beats fresh carrot buns and a glass of milk on a cozy winter evening! 🥕🍞🥛✨ #CozyVibes  #Homemade #BakingTime #ComfortFood #MilkDrink #ChristmasSpirit #FreshlyBaked #HolidayTreats #SnackTime #WarmMoments #Yummy

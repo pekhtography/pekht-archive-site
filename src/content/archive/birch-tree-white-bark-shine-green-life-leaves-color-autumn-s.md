@@ -19,4 +19,4 @@ hashtags:
   - "change"
   - "transition"
 ---
-#birch #tree #white #bark #shine #green #life #leaves #color #autumn #season #beauty #change #transition https://t.co/DX6fy7Lq5P
+#birch #tree #white #bark #shine #green #life #leaves #color #autumn #season #beauty #change #transition

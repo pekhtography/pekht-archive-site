@@ -13,4 +13,4 @@ Evil spirits: blocked. Minimalists: blocked.
 Your beige aesthetic: especially blocked. 🔴 
 When tradition grabs the design brief and says 
 "red is not a color — it's a policy." 🐎✨
-#ChineseNewYear #LunarNewYear #RedAesthetic #FestiveMood https://t.co/nlA6U64Z2i
+#ChineseNewYear #LunarNewYear #RedAesthetic #FestiveMood

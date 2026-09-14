@@ -14,4 +14,4 @@ My fingers go numb just from imagining.
 She won’t touch you. 
 You’ll beg to stroke her wavy white hem. 😌🌺 
 The deadliest poison asks for a caress first. 
-#NatureSecrets #PoisonBeauty #FuzzyDanger #ForbiddenTouch https://t.co/3Lwoh8AA8j
+#NatureSecrets #PoisonBeauty #FuzzyDanger #ForbiddenTouch

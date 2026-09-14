@@ -14,4 +14,4 @@ Dress code: Living gradient tutorial, red crown to sunset belly.
 This woodpecker's LinkedIn says "Demolition"
 but his aesthetic screams "Color Theory PhD."
 Proof you can break wood beautifully🎨🪵
-#Photography #Bird #Winter #Nature https://t.co/vgBCS0rxP9
+#Photography #Bird #Winter #Nature

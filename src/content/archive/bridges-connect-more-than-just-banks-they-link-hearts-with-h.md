@@ -17,4 +17,4 @@ hashtags:
   - "Travel"
 ---
 🌉 Bridges connect more than just banks — they link hearts with history and nature. #Bridge 
-#River #Theater #Flowers #Cityscape #Architecture #Summer #Nature #Urban #Sky #Travel https://t.co/8FKZusEKJM
+#River #Theater #Flowers #Cityscape #Architecture #Summer #Nature #Urban #Sky #Travel

@@ -22,4 +22,4 @@ hashtags:
   - "Serenity"
   - "Calm"
 ---
-#Autumn #Change #Birches #Elegance #GoldenGrass #Warmth #Landscape #Beauty #Fields #Freedom #Nature #Tranquility #Wealth #Leaves #Transformation #Serenity #Calm https://t.co/TfnBq4Kkag
+#Autumn #Change #Birches #Elegance #GoldenGrass #Warmth #Landscape #Beauty #Fields #Freedom #Nature #Tranquility #Wealth #Leaves #Transformation #Serenity #Calm

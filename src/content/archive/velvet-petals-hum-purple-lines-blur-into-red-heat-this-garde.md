@@ -13,4 +13,4 @@ Velvet petals hum.
 Purple lines blur into red heat. 
 This garden mosh pit ignores every rule of still life. 
 Botanical anarchy. 🤘🌷
-#NatureRebellion #GardenRave #MotionBlurArt #VibrantChaos https://t.co/DI0jVDun4B
+#NatureRebellion #GardenRave #MotionBlurArt #VibrantChaos

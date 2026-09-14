@@ -18,4 +18,4 @@ hashtags:
   - "floral"
 ---
 A tulip in bloom is a sunbeam that decided to take root and dance with the breeze
-#tulip #flower #yellow #bloom #spring #nature #garden #petals #vibrant #blossom #beauty #floral https://t.co/rSOItRCFZx
+#tulip #flower #yellow #bloom #spring #nature #garden #petals #vibrant #blossom #beauty #floral

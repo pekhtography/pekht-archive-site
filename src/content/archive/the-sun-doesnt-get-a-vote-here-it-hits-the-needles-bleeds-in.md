@@ -14,4 +14,4 @@ it hits the needles, bleeds into bokeh,
 and gets swallowed by a weird purple puff (dense, heavy, like wet velvet). 
 It steals the light and just… keeps it. 
 Unfair. ☁️🟣😶‍🌫️ 
-#Nature #GardenPhotography #PurpleFlower #QuietMagic https://t.co/8fgVsFaXvV
+#Nature #GardenPhotography #PurpleFlower #QuietMagic

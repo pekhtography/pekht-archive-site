@@ -13,4 +13,4 @@ hashtags:
   - "psychedelic"
 ---
 Ancient myths whispered that gold could transform souls, but they never mentioned it could shatter perception itself 💫 What if enlightenment isn't about seeing clearly, but seeing differently? 👁️ #GoldenTransformation
-#surreal #digital #golden #optical #illusion #psychedelic https://t.co/ZjiXonXbyS
+#surreal #digital #golden #optical #illusion #psychedelic

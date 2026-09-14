@@ -18,4 +18,4 @@ hashtags:
   - "Botany"
 ---
 Corydalis cava, a delicate spring bloomer, is said to have been used in ancient rituals to ward off evil spirits
-#Corydalis #Cava #HollowRoot #SpringBloom #Woodland #Delicate #Purple #Pink #Nature #Wildflower #ForestFloor #Botany https://t.co/fLwvIX7KK8
+#Corydalis #Cava #HollowRoot #SpringBloom #Woodland #Delicate #Purple #Pink #Nature #Wildflower #ForestFloor #Botany

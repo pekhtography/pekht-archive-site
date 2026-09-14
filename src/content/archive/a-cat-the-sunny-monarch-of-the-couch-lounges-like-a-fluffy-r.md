@@ -22,4 +22,4 @@ hashtags:
   - "sanctuary"
 ---
 A cat, the sunny monarch of the couch, lounges like a fluffy ruler of the indoor jungle.
-#cat #whiskers #couch #comfort #sunlight #plants #growth #tranquility #peace #comfort #softness #warmth #coziness #nature #bloom #home #sanctuary https://t.co/Q3fXGUhQSe
+#cat #whiskers #couch #comfort #sunlight #plants #growth #tranquility #peace #comfort #softness #warmth #coziness #nature #bloom #home #sanctuary

@@ -25,4 +25,4 @@ hashtags:
   - "footprint"
 ---
 The snow-covered slope glistens under the pale sun, a slippery dance floor for nature’s frosty ballet
-#Snow #Frost #Slope #Incline #Glistens #Sparkle #Pale #Slippery #Slide #Dance #Rhythm #Nature #Wild #Ballet #Grace #trail #disco #branches #footprint https://t.co/nhgDRPd0HB
+#Snow #Frost #Slope #Incline #Glistens #Sparkle #Pale #Slippery #Slide #Dance #Rhythm #Nature #Wild #Ballet #Grace #trail #disco #branches #footprint

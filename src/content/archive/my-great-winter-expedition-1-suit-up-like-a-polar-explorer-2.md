@@ -15,4 +15,4 @@ My great winter expedition:
 3. Realize I left the thermos at home. 
 4. Return a legend in my own mind. 
 The birches saw it all. ✅ 
-#Mindset #WinterAdventure #MalePsychology #FrostyThoughts https://t.co/uxQochuSn1
+#Mindset #WinterAdventure #MalePsychology #FrostyThoughts

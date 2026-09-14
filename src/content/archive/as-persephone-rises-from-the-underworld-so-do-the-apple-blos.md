@@ -18,4 +18,4 @@ hashtags:
   - "blossoming"
 ---
 As Persephone rises from the underworld, so do the apple blossoms ascend, painting the earth with the colors of rebirth and renewal
-#appleblossoms #blooming #spring #nature #blossom #petals #flowering #tree #growth #beauty #serenity #blossoming https://t.co/n1LxBO6ugc
+#appleblossoms #blooming #spring #nature #blossom #petals #flowering #tree #growth #beauty #serenity #blossoming

@@ -19,4 +19,4 @@ hashtags:
   - "symbolic"
 ---
 Plot twist: What if the real treasure isn't gold, but the warmth of being held? 💭 Sometimes the most profound mysteries hide in plain sight 🎪 #TreasureOfWarmth
-#art #surreal #motherhood #spiritual #colorful #flowers #dolls #protection #love #creative #contemporary #symbolic https://t.co/MginkN7qPe
+#art #surreal #motherhood #spiritual #colorful #flowers #dolls #protection #love #creative #contemporary #symbolic

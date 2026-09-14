@@ -18,4 +18,4 @@ hashtags:
   - "Vibrant"
 ---
 Phlox: evidence that tiny blooms can leave a lasting impression
-#Phlox #Flowers #Garden #Blooms #Nature #Spring #Purple #Beauty #Petals #Grow #Blossom #Vibrant https://t.co/KI6nXGigtB
+#Phlox #Flowers #Garden #Blooms #Nature #Spring #Purple #Beauty #Petals #Grow #Blossom #Vibrant

@@ -15,4 +15,4 @@ hashtags:
   - "Moscow"
 ---
 Modern problems: Church has been standing for centuries, survived wars and revolutions 💪 Me: Can't keep a houseplant alive for two weeks🪴 Clearly someone needs to share their maintenance secrets☠️ #LifeGoals
-#church #orthodox #architecture #golden #domes #autumn #sunset #Moscow https://t.co/M0uTKJXELW
+#church #orthodox #architecture #golden #domes #autumn #sunset #Moscow

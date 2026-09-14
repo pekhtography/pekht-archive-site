@@ -15,4 +15,4 @@ Steel frame above, cranes leaning east,
 the Stalinist spire somewhere further back, watching — 
 as it has always watched — 
 the city finish itself 🏗️
-#CityLife #UrbanGarden #MoscowRiver #BloomingCity https://t.co/NyCifGE1H1
+#CityLife #UrbanGarden #MoscowRiver #BloomingCity

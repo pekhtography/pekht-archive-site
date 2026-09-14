@@ -18,4 +18,4 @@ hashtags:
   - "Collapse"
   - "Bridge"
 ---
-#Palace #Earthquake #Destruction #Heritage #History #Disaster #Ruins #Devastation #Cultural #Loss #Tragedy #Collapse #Bridge https://t.co/sh0etqHYBf
+#Palace #Earthquake #Destruction #Heritage #History #Disaster #Ruins #Devastation #Cultural #Loss #Tragedy #Collapse #Bridge

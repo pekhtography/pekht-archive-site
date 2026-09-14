@@ -12,4 +12,4 @@ hashtags:
 Some garage door is now the loudest speaker in the city. 
 Brian May's smile, bleeding through red spray paint, 
 just dropped a solo that never ends. 🎸✨ 
-#Art #StreetArt #RockLegend #Vibrant https://t.co/yh82TnAxjb
+#Art #StreetArt #RockLegend #Vibrant

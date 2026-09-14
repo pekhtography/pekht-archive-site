@@ -19,4 +19,4 @@ hashtags:
   - "fall"
 ---
 Plot twist: The tree isn't losing its leaves, it's teaching them to fly 🍂🕊️ Maybe what looks like loss is actually liberation #NaturalPhilosophy
-#autumn #leaf #maple #nature #golden #light #seasonal #botanical #photography #natural #beauty #fall https://t.co/cP00W1OdXM
+#autumn #leaf #maple #nature #golden #light #seasonal #botanical #photography #natural #beauty #fall

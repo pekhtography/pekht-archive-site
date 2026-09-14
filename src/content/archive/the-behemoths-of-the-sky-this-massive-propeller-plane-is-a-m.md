@@ -19,4 +19,4 @@ hashtags:
   - "AviationHistory"
 ---
 The behemoths of the sky! 🌠✈️ This massive propeller plane is a marvel of engineering and a reminder of aviation's rich heritage. #AircraftLegends
-#Airplane #Aviation #Plane #Aircraft #Memorial #Exhibit #Propeller #History #Transport #Military #Monument #AviationHistory https://t.co/qvd7n8v6fC
+#Airplane #Aviation #Plane #Aircraft #Memorial #Exhibit #Propeller #History #Transport #Military #Monument #AviationHistory

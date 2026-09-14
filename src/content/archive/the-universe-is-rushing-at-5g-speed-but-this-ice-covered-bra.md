@@ -12,4 +12,4 @@ The universe is rushing at 5G speed, but this ice-covered branch runs on a dial-
 That’s the exact energy I need. 
 Let the world rush. 
 I’m taking the scenic, frozen route. ❄️ धीमी (Slow)
-#Nature #Stillness #DeepThoughts https://t.co/d8A6m9yyrS
+#Nature #Stillness #DeepThoughts

@@ -10,4 +10,4 @@ Purple blooms, warm asphalt,
 the faint green smell of cut grass drifting up—
 and then, rising from all of it, four silver cylinders🌿
 faceted like a jeweler cut them from the same cold stone as the sky.
-Every civilization eventually builds its colossus next to a flower bed🏛️ https://t.co/dQmCNe6itF
+Every civilization eventually builds its colossus next to a flower bed🏛️

@@ -14,4 +14,4 @@ A nine-story Soviet block stands behind them —
 blurred, heavy, forgotten. 
 The flowers took the shot. 🏛️ 
 Ruthless bloom.
-#CityLife #UrbanNature #MoscowMoments #FlowerPower https://t.co/EqA7eh83FQ
+#CityLife #UrbanNature #MoscowMoments #FlowerPower

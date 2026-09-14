@@ -20,4 +20,4 @@ hashtags:
   - "Flower"
 ---
 Why settle for the ordinary when you can have extraordinary purple flowers? Watch out; jealousy may blossom!
-#Campanula #Flowers #Nature #Purple #Botany #Bloom #Plants #Garden #Floral #Petals #Wildflowers #Beauty #Spring #Flower https://t.co/IWOvwMOnal
+#Campanula #Flowers #Nature #Purple #Botany #Bloom #Plants #Garden #Floral #Petals #Wildflowers #Beauty #Spring #Flower

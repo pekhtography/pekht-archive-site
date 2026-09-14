@@ -20,4 +20,4 @@ hashtags:
   - "Ornament"
 ---
 The sun goddess smiles down, lovingly wrapped in celebration ribbons by ancient legends.🌞✨ Her sunshine brings joy and warmth amid winter’s chill! #MythicalHolidayGlow
-#Christmas #Tree #Decorations #Sun #Dolls #Ribbons #Handmade #Holiday #Culture #Folk #art #Tradition #Ornament https://t.co/L0L2AiAGlb
+#Christmas #Tree #Decorations #Sun #Dolls #Ribbons #Handmade #Holiday #Culture #Folk #art #Tradition #Ornament

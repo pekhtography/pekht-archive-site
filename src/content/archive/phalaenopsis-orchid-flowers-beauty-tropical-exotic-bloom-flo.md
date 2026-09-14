@@ -21,4 +21,4 @@ hashtags:
   - "Petals"
   - "Nature"
 ---
-#Phalaenopsis #Orchid #Flowers #Beauty #Tropical #Exotic #Bloom #Flourish #Species #Diversity #Gift #Elegance #Purple #Royalty #Petals #Nature https://t.co/fWYTtWo3hG
+#Phalaenopsis #Orchid #Flowers #Beauty #Tropical #Exotic #Bloom #Flourish #Species #Diversity #Gift #Elegance #Purple #Royalty #Petals #Nature

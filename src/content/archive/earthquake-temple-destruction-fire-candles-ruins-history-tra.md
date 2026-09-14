@@ -19,4 +19,4 @@ hashtags:
   - "rebuild"
   - "hope"
 ---
-#earthquake #temple #destruction #fire #candles #ruins #history #tragedy #heritage #loss #devastation #memorial #rebuild #hope https://t.co/sENExNT1uZ
+#earthquake #temple #destruction #fire #candles #ruins #history #tragedy #heritage #loss #devastation #memorial #rebuild #hope

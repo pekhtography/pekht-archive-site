@@ -19,4 +19,4 @@ hashtags:
   - "spiritual"
 ---
 Stumbled upon a birch with an email address 📧🌳. Either the future is very eco-friendly, or we just unlocked forest Wi-Fi. 😂 #emailfromnature
-#tree #nature #autumn #forest #mystery #park #sign #oracle #magic #outdoors #leaves #spiritual https://t.co/93XpgGRxrh
+#tree #nature #autumn #forest #mystery #park #sign #oracle #magic #outdoors #leaves #spiritual

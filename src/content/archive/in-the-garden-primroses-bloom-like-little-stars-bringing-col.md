@@ -13,4 +13,4 @@ hashtags:
   - "Sunlight"
   - "Garden"
 ---
-In the garden, primroses bloom like little stars, bringing color and joy to every corner #Primrose #Flower #Spring #Beauty #Nature #Love #Sunlight #Garden https://t.co/d67u6rXWSP
+In the garden, primroses bloom like little stars, bringing color and joy to every corner #Primrose #Flower #Spring #Beauty #Nature #Love #Sunlight #Garden

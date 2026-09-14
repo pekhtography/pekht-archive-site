@@ -17,4 +17,4 @@ hashtags:
   - "summer"
 ---
 Caught these purple rebels having a secret meeting 🕵️ Apparently, they're planning to overthrow the roses as garden royalty 👑 The revolution starts with style! 💜 #FlowerRevolution
-#flowers #purple #nature #bellflower #garden #wildflowers #botanical #blooms #petals #summer https://t.co/0DnIpwW6n0
+#flowers #purple #nature #bellflower #garden #wildflowers #botanical #blooms #petals #summer

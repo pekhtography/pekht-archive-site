@@ -19,4 +19,4 @@ hashtags:
   - "outdoor"
 ---
 Hydrangeas don’t just bloom, they throw a pink-and-white party in your garden. 🎉🌸 #FloralFiesta
-#hydrangea #flowers #garden #nature #pink #bloom #blossom #floral #beauty #flora #summer #outdoor https://t.co/jGGEaLCGRj
+#hydrangea #flowers #garden #nature #pink #bloom #blossom #floral #beauty #flora #summer #outdoor

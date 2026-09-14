@@ -18,4 +18,4 @@ hashtags:
   - "timeless"
 ---
 Back when cars were built by artists, not accountants 🎨💰 Today's "luxury" is yesterday's standard Tuesday! #ArtistNotAccountant
-#vintage #classic #chrome #automobile #retro #luxury #nostalgia #craftsmanship #elegance #heritage #timeless https://t.co/rv1W2S4KEt
+#vintage #classic #chrome #automobile #retro #luxury #nostalgia #craftsmanship #elegance #heritage #timeless

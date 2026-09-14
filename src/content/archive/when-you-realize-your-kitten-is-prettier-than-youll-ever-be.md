@@ -21,4 +21,4 @@ hashtags:
   - "portrait"
 ---
 When you realize your kitten is prettier than you'll ever be 💅😿 #BeautyStandards
-#black #cat #kitten #yellow #eyes #adorable #cute #feline #baby #pet #mysterious #beautiful #whiskers #portrait https://t.co/dnxhIQAYWW
+#black #cat #kitten #yellow #eyes #adorable #cute #feline #baby #pet #mysterious #beautiful #whiskers #portrait

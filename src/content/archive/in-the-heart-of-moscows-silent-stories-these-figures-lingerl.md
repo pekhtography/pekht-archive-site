@@ -7,4 +7,4 @@ hashtags:
   - "HeroesOfTheMotherland"
   - "WhispersOfUnity"
 ---
-In the heart of Moscow’s silent stories, these figures linger—like echoes stitched together by invisible threads. Sometimes, the fiercest power grows not from might alone, but from the delicate weave of unity and trust. 🗡️🏰✨ #HeroesOfTheMotherland #WhispersOfUnity https://t.co/VH9FbkYhGm
+In the heart of Moscow’s silent stories, these figures linger—like echoes stitched together by invisible threads. Sometimes, the fiercest power grows not from might alone, but from the delicate weave of unity and trust. 🗡️🏰✨ #HeroesOfTheMotherland #WhispersOfUnity

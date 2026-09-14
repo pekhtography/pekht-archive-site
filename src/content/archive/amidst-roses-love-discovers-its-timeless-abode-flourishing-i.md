@@ -19,4 +19,4 @@ hashtags:
   - "floral"
 ---
 Amidst roses, love discovers its timeless abode, flourishing in radiant colors 
-#Rose #roses #flowers #beauty #nature #bloom #garden #love #romance #petals #colorful #elegance #floral https://t.co/WUlcEgyXHB
+#Rose #roses #flowers #beauty #nature #bloom #garden #love #romance #petals #colorful #elegance #floral

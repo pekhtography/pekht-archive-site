@@ -20,4 +20,4 @@ hashtags:
   - "Ceremony"
   - "Devastation"
 ---
-#Bridge #Destruction #Earthquake #Ritual #Candles #River #Collapse #Tragedy #History #Loss #Community #Resilience #Heritage #Ceremony #Devastation https://t.co/GdRs2ay7oG
+#Bridge #Destruction #Earthquake #Ritual #Candles #River #Collapse #Tragedy #History #Loss #Community #Resilience #Heritage #Ceremony #Devastation

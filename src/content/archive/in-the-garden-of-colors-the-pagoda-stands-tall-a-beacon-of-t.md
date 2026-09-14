@@ -15,4 +15,4 @@ hashtags:
   - "Serenity"
   - "Flowers"
 ---
-In the garden of colors, the pagoda stands tall, a beacon of tranquility #Japanese #Temple #Dreams #Colorful #Garden #Sunshine #Nature #Beauty #Serenity #Flowers https://t.co/E8OGoAna9q
+In the garden of colors, the pagoda stands tall, a beacon of tranquility #Japanese #Temple #Dreams #Colorful #Garden #Sunshine #Nature #Beauty #Serenity #Flowers

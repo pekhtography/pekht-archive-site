@@ -12,4 +12,4 @@ Deep green hum of grass, shadow pooling between stems,
 a white spark floating at the edge of focus🌿—
 and then the pink one, shredded-silk-warm-and-clove-sharp all at once,
 the thing medieval hands crushed into paper to calm a shaking century🌸
-#WildFlowers #Dianthus #MacroNature https://t.co/VYsHG13ZcU
+#WildFlowers #Dianthus #MacroNature

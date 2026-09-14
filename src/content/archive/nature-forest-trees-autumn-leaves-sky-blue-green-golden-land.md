@@ -25,4 +25,4 @@ hashtags:
   - "peaceful"
   - "scenic"
 ---
-#nature #forest #trees #autumn #leaves #sky #blue #green #golden #landscape #outdoors #woods #birch #shadow #grass #meadow #wilderness #serene #peaceful #scenic https://t.co/UfjhdzLpWZ
+#nature #forest #trees #autumn #leaves #sky #blue #green #golden #landscape #outdoors #woods #birch #shadow #grass #meadow #wilderness #serene #peaceful #scenic

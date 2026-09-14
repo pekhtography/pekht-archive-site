@@ -13,4 +13,4 @@ Nature just dropped the ultimate flashbang ⚡❄️
 One look and you forget your password, your debt, 
 and where you parked your shovel. 
 Bliss. 
-#Winter #LandscapePhotography #SnowDay #Vibes https://t.co/nOOK9WycTT
+#Winter #LandscapePhotography #SnowDay #Vibes

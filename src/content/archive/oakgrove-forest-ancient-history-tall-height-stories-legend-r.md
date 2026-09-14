@@ -25,4 +25,4 @@ hashtags:
   - "nature"
   - "wilderness"
 ---
-#oakgrove #forest #ancient #history #tall #height #stories #legend #resilience #strength #sanctuary #haven #shelter #comfort #secrets #mystery #wisdom #insight #nature #wilderness https://t.co/W6NGj0LpnB
+#oakgrove #forest #ancient #history #tall #height #stories #legend #resilience #strength #sanctuary #haven #shelter #comfort #secrets #mystery #wisdom #insight #nature #wilderness

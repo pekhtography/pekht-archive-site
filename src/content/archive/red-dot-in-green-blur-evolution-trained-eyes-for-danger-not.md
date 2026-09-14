@@ -14,4 +14,4 @@ Evolution trained eyes for danger, not dessert.
 Brain misfired. 
 Now you eat the warning label. 
 And it tastes like survival. 🧠🍓 
-#Wilderness #ForagingLife #ForestSnacks #WildSweetness https://t.co/i89Ey9Ny0y
+#Wilderness #ForagingLife #ForestSnacks #WildSweetness

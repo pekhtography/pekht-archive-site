@@ -17,4 +17,4 @@ hashtags:
   - "Blooming"
 ---
 Mallows, ancient healers of throats, now bloom so brightly they might charm fairies into granting wishes and even convince bees to throw a flower party—if they're not too busy blooming, that is.
-#Mallow #Pink #Flower #Garden #Bloom #Nature #Floral #Petals #Green #Escape #Blooming https://t.co/U9hZZi8uMU
+#Mallow #Pink #Flower #Garden #Bloom #Nature #Floral #Petals #Green #Escape #Blooming

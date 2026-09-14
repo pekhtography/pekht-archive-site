@@ -8,4 +8,4 @@ hashtags:
   - "garden"
 ---
 Legend says bellflowers ring at dawn to wake the forest spirits 🔔 Each bloom chimes a silent melody only butterflies can hear 🦋 Last summer I caught them mid-concert and the memory still makes my heart sing ✨ Nature's orchestra never disappoints! 🎵 #BellflowerSerenade
-#garden https://t.co/gx6n9oR5A9
+#garden

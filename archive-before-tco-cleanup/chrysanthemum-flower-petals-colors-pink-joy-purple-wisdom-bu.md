@@ -1,0 +1,28 @@
+---
+title: "#Chrysanthemum #Flower #Petals #Colors #Pink #Joy #Purple #Wisdom #Burgundy #Passion #Green #Renewal #Garden #Beauty #Dr"
+x_id: "1903367545526358483"
+x_created_at: "2025-03-22T08:46:00Z"
+image: "/images/archive/chrysanthemum-flower-petals-colors-pink-joy-purple-wisdom-bu.jpg"
+hashtags:
+  - "Chrysanthemum"
+  - "Flower"
+  - "Petals"
+  - "Colors"
+  - "Pink"
+  - "Joy"
+  - "Purple"
+  - "Wisdom"
+  - "Burgundy"
+  - "Passion"
+  - "Green"
+  - "Renewal"
+  - "Garden"
+  - "Beauty"
+  - "Dreams"
+  - "Palette"
+  - "Art"
+  - "Bouquet"
+  - "Harmony"
+  - "Diversity"
+---
+#Chrysanthemum #Flower #Petals #Colors #Pink #Joy #Purple #Wisdom #Burgundy #Passion #Green #Renewal #Garden #Beauty #Dreams #Palette #Art #Bouquet #Harmony #Diversity https://t.co/G1Yoh3cO0a

@@ -13,4 +13,4 @@ hashtags:
   - "garden"
   - "dance"
 ---
-Nature's dancers, the hummingbird moths, perform their ballet among the phlox in gardens #moth #whisper #nectar #sweet #flower #bloom #garden #dance https://t.co/LFk3WrtY34
+Nature's dancers, the hummingbird moths, perform their ballet among the phlox in gardens #moth #whisper #nectar #sweet #flower #bloom #garden #dance

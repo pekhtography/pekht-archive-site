@@ -16,4 +16,4 @@ hashtags:
   - "Heritage"
 ---
 The fountain's water joyfully leaps, celebrating the friendship between nations 
-#Friendship #Nations #Fountain #Water #Art #Gold #Sculpture #Beauty #Culture #Heritage https://t.co/PE6e7SES3J
+#Friendship #Nations #Fountain #Water #Art #Gold #Sculpture #Beauty #Culture #Heritage

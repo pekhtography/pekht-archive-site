@@ -18,4 +18,4 @@ hashtags:
   - "darkness"
 ---
 If individuality were an art form, zebras would be the curators, showcasing their unique stripes in a wild exhibition
-#zebra #contrast #stripes #beauty #uniqueness #individuality #wild #resilience #diversity #nature #light #darkness https://t.co/Jw6MFXhQZh
+#zebra #contrast #stripes #beauty #uniqueness #individuality #wild #resilience #diversity #nature #light #darkness

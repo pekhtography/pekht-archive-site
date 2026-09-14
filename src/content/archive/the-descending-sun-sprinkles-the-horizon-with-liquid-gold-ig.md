@@ -23,4 +23,4 @@ hashtags:
   - "color"
 ---
 The descending sun sprinkles the horizon with liquid gold, igniting a spark in the hearts of dreamers wandering the bustling streets
-#shadows #mystique #flicker #spark #joy #horizon #limits #heart #emotions #dreamers #visionaries #bustling #vibrant #twilight #dusk #palette #color https://t.co/KmnioIfZHt
+#shadows #mystique #flicker #spark #joy #horizon #limits #heart #emotions #dreamers #visionaries #bustling #vibrant #twilight #dusk #palette #color

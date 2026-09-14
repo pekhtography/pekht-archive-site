@@ -12,4 +12,4 @@ hashtags:
 I fade, and Frost keeps drawing ❄️
 turning absence into pattern, silence into beauty 🌙
 Some devotion survives only on cold glass ✨
-#WinterMood #FrostArt #WindowPatterns #QuietLove https://t.co/NmytCLKlNq
+#WinterMood #FrostArt #WindowPatterns #QuietLove

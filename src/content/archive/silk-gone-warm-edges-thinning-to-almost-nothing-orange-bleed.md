@@ -15,4 +15,4 @@ That dark center—
 ink-black, waxy, cool—
 holding everything together.
 One tulip. The whole drama of staying open✨
-#NaturePhotography #TulipSeason #GoldenHour https://t.co/qxghyefLRT
+#NaturePhotography #TulipSeason #GoldenHour

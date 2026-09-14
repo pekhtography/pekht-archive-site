@@ -14,4 +14,4 @@ hashtags:
   - "urban"
 ---
 Beneath the big blue ceiling, those glass giants are on a first-name basis with the sun!
-#skyscrapers #giants #reflection #sunshine #dreams #mosaic #architecture #urban https://t.co/Ef42uni8Hp
+#skyscrapers #giants #reflection #sunshine #dreams #mosaic #architecture #urban

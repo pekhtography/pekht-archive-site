@@ -19,4 +19,4 @@ hashtags:
   - "nightmare"
 ---
 Those green eyes peeking from the shadows say it all: ‘You call me a pet, but I’m really the one who owns you.’
-#cat #green #eyes #judgment #watching #furry #darkness #shadows #sleep #night #silence #mystery #nightmare https://t.co/39SAVpt2AM
+#cat #green #eyes #judgment #watching #furry #darkness #shadows #sleep #night #silence #mystery #nightmare

@@ -23,4 +23,4 @@ hashtags:
   - "Dreams"
   - "China"
 ---
-#Chinese #Tradition #Lunar #Joy #New #Luck #Year #Wisdom #Snake #Growth #Celebrate #Strength #Fortune #Wealth #Renewal #Aspirations #Dreams #China https://t.co/jn7mmER3ML
+#Chinese #Tradition #Lunar #Joy #New #Luck #Year #Wisdom #Snake #Growth #Celebrate #Strength #Fortune #Wealth #Renewal #Aspirations #Dreams #China

@@ -17,4 +17,4 @@ hashtags:
   - "bloom"
 ---
 Like the lotus that rises from muddy waters to bloom in pure beauty, we too can transform our struggles into strength 🌸 Every challenge is just preparation for our moment to shine ✨ #LotusWisdom
-#lotus #waterlily #flower #nature #zen #peaceful #meditation #beauty #pond #bloom https://t.co/Yrrz5F5dkh
+#lotus #waterlily #flower #nature #zen #peaceful #meditation #beauty #pond #bloom

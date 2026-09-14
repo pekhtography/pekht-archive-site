@@ -13,4 +13,4 @@ My bones are concrete, standing knee-deep in a liquid mirror.
 Flower beds try to seduce me, but I'm too heavy for tenderness. 
 I'm not built on dirt. 
 I'm built on the fact that it didn't break me. 🪞🌷 
-#Masculinity #UrbanReflection #ConcretePoetry #HeavyHeart https://t.co/neAkX4kImW
+#Masculinity #UrbanReflection #ConcretePoetry #HeavyHeart

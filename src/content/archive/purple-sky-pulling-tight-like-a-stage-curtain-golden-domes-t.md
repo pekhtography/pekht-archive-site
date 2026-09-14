@@ -13,4 +13,4 @@ Purple sky pulling tight like a stage curtain. ❄️
 Golden domes trembling in the frost. 
 The snow globe — you're not looking at it. 
 You're standing inside it. 🌐
-#Russia #WinterInMoscow #GoldenLight #SovietArchitecture https://t.co/Kms5ypiI6f
+#Russia #WinterInMoscow #GoldenLight #SovietArchitecture

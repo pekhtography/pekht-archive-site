@@ -18,4 +18,4 @@ hashtags:
   - "Nostalgia"
 ---
 Golden echoes rise 🌾 beneath autumn’s watchful eye 🍂 — a fleeting symphony of earth, art, and time. #HarvestWhispers
-#Autumn #Nature #Architecture #Art #Wheat #FountainArt #Sculpture #GoldenWheat #AutumnVibes #PeacefulMoments #Nostalgia https://t.co/hhsby5sJTs
+#Autumn #Nature #Architecture #Art #Wheat #FountainArt #Sculpture #GoldenWheat #AutumnVibes #PeacefulMoments #Nostalgia

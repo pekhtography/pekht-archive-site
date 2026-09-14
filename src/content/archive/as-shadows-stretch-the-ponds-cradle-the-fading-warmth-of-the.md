@@ -26,4 +26,4 @@ hashtags:
   - "cyclic"
 ---
 As shadows stretch, the ponds cradle the fading warmth of the sky
-#autumn #transition #leaves #change #fall #release #city #life #pond #stillness #mirrors #reflection #sky #expanse #vibrant #energy #hues #palette #season #cyclic https://t.co/wnSWhyGw7c
+#autumn #transition #leaves #change #fall #release #city #life #pond #stillness #mirrors #reflection #sky #expanse #vibrant #energy #hues #palette #season #cyclic

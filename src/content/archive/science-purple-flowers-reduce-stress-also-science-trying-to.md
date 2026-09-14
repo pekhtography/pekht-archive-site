@@ -8,4 +8,4 @@ hashtags:
   - "phlox"
 ---
 Science: Purple flowers reduce stress. Also science: Trying to photograph them perfectly will give you carpal tunnel 📸😤 The irony is not lost on me as I crouch in my garden at 6am chasing the perfect light like some sort of botanical paparazzi 🌅📷 #BotanicalPaparazzi
-#phlox https://t.co/uiT5Gc1crc
+#phlox

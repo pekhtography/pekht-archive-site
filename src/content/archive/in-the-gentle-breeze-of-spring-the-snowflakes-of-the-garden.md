@@ -18,4 +18,4 @@ hashtags:
   - "growth"
 ---
 In the gentle breeze of spring, the snowflakes of the garden, Leucojum vernum, bloom to announce winter's retreat
-#leucojum #spring #snowflake #flowers #bloom #white #nature #garden #beauty #season #blossom #growth https://t.co/uVejNk1BNY
+#leucojum #spring #snowflake #flowers #bloom #white #nature #garden #beauty #season #blossom #growth

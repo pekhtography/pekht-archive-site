@@ -22,4 +22,4 @@ hashtags:
   - "growing"
 ---
 Like the first blush of dawn, the light pink rose hints at new beginnings, awakening hope in the heart
-#rose #beauty #thorns #pain #memories #hope #beginnings #love #flowers #romance #gardening #fragrance #garden #heart #sweetness #growing https://t.co/lqwqRkwq4E
+#rose #beauty #thorns #pain #memories #hope #beginnings #love #flowers #romance #gardening #fragrance #garden #heart #sweetness #growing

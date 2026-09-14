@@ -41,4 +41,4 @@ hashtags:
   - "Nature"
   - "Serenity"
 ---
-#Snow #Fun #Winter #Cold #Frost #Ice #Chill #Breeze #Slope #Adventure #Uphill #Challenge #Mountain #Peak #Glistens #Beauty #Shimmer #Glow #Sparkle #Joy #Twinkle #Dream #Pale #Pastel #Light #Hope #Slippery #Risk #Danger #Excitement #Slide #Slick #Glide #Smooth #Nature #Serenity https://t.co/2VbaWaH4kF
+#Snow #Fun #Winter #Cold #Frost #Ice #Chill #Breeze #Slope #Adventure #Uphill #Challenge #Mountain #Peak #Glistens #Beauty #Shimmer #Glow #Sparkle #Joy #Twinkle #Dream #Pale #Pastel #Light #Hope #Slippery #Risk #Danger #Excitement #Slide #Slick #Glide #Smooth #Nature #Serenity

@@ -18,4 +18,4 @@ hashtags:
   - "Mystery"
   - "Person"
 ---
-#Autumn #Change #Landscape #Beauty #Walking #Journey #Field #Freedom #Trees #Strength #Forest #Mystery #Person https://t.co/MuNVP3wT2o
+#Autumn #Change #Landscape #Beauty #Walking #Journey #Field #Freedom #Trees #Strength #Forest #Mystery #Person

@@ -22,4 +22,4 @@ hashtags:
   - "Elevation"
 ---
 Like the clouds kissing the mountaintops, hydrangeas bloom with unrestrained vibrancy, painting gardens in shades of joy
-#Hydrangea #height #beauty #garden #color #mountain #majesty #peaks #Floral #Nature #Brightness #Paradise #Summit #Palette #Grandeur #Elevation https://t.co/jH3C9CQCly
+#Hydrangea #height #beauty #garden #color #mountain #majesty #peaks #Floral #Nature #Brightness #Paradise #Summit #Palette #Grandeur #Elevation

@@ -18,4 +18,4 @@ hashtags:
   - "Outdoors"
 ---
 Chicory blooms as if it's trying to outdo the sky, a floral show-off in the meadow's eye
-#Chicory #Flower #Nature #Bloom #Blue #Petals #Wildflower #Garden #Botany #Meadow #Summer #Outdoors https://t.co/okup8oMSQm
+#Chicory #Flower #Nature #Bloom #Blue #Petals #Wildflower #Garden #Botany #Meadow #Summer #Outdoors

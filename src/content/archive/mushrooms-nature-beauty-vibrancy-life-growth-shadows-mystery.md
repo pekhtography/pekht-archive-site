@@ -22,4 +22,4 @@ hashtags:
   - "Umbrella"
   - "Forest"
 ---
-#Mushrooms #nature #Beauty #vibrancy #Life #growth #Shadows #mystery #Unity #connection #Resilience #strength #Quiet #Fungi #diversity #Umbrella #Forest https://t.co/NPsbNiJTv1
+#Mushrooms #nature #Beauty #vibrancy #Life #growth #Shadows #mystery #Unity #connection #Resilience #strength #Quiet #Fungi #diversity #Umbrella #Forest

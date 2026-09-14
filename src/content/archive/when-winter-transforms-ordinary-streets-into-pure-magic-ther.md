@@ -19,4 +19,4 @@ hashtags:
   - "atmosphere"
 ---
 When winter transforms ordinary streets into pure magic ✨ There's something about golden hour that makes every step feel like a movie scene 🎬 #WinterWonderland
-#winter #architecture #square #snow #sunset #people #historic #european #cobblestone #golden #evening #atmosphere https://t.co/hgramBMv39
+#winter #architecture #square #snow #sunset #people #historic #european #cobblestone #golden #evening #atmosphere

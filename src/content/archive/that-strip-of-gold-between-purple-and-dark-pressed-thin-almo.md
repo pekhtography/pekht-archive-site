@@ -14,4 +14,4 @@ pressed thin, almost gone. 🌇
 Not a sunset. 
 The universe closing a chapter you forgot you were reading. ✨ 
 Some pages burn without warning.
-#Sunset #GoldenHour #UrbanSilhouette #SkyFire https://t.co/1MTGz7iHtK
+#Sunset #GoldenHour #UrbanSilhouette #SkyFire

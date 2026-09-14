@@ -12,4 +12,4 @@ Three yellow taxis blur past a medieval murder hole.
 The guard tower that once stopped the Mongols now just watches someone argue with their GPS near the DPS car. 
 History’s flex: “I survived sieges.” 
 Modern flex: “I survived rush hour.” 👑🚕 
-#History #CityArchitecture #Night https://t.co/R4uW7EtlKJ
+#History #CityArchitecture #Night

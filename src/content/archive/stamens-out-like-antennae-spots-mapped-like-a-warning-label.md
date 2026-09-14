@@ -13,4 +13,4 @@ Stamens out like antennae,
 spots mapped like a warning label 🧡 — 
 evolution spent millennia designing this trap, 
 and here we are, leaning in closer 🌺😅
-#TigerLily #NatureDesign #WildFlowers #BeautyTrap https://t.co/6yi2Un7tCL
+#TigerLily #NatureDesign #WildFlowers #BeautyTrap

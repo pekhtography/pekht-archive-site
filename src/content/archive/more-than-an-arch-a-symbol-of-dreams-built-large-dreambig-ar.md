@@ -16,4 +16,4 @@ hashtags:
   - "Art"
 ---
 More than an arch — a symbol of dreams built large. 🌍✨ #DreamBig 
-#Architecture #Archway #Landmark #Monument #Exhibition #Culture #Travel #History #Art https://t.co/cSvV7kEiV1
+#Architecture #Archway #Landmark #Monument #Exhibition #Culture #Travel #History #Art

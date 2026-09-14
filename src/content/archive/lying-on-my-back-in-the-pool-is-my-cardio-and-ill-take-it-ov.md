@@ -20,4 +20,4 @@ hashtags:
   - "Man"
 ---
 Lying on my back in the pool is my cardio... and I’ll take it over running any day! I’m a BUOY-MAN!
-#BuoyMan #water #float #pool #garden #nature #sun #warmth #freedom #relax #easy #indulgence #Buoy #Man https://t.co/X6CdUFNAp9
+#BuoyMan #water #float #pool #garden #nature #sun #warmth #freedom #relax #easy #indulgence #Buoy #Man

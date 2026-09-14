@@ -16,4 +16,4 @@ hashtags:
   - "History"
 ---
 Who needs a DeLorean when you can ride Moscow’s Route 26 tram? 🚋⏳ The clatter of wheels, the scent of history, and a direct line to the USSR. Next stop: your childhood. All aboard for #SovietTimeTravel!
-#Retro #Tram #Moscow #Nostalgia #Vintage #Urban #Soviet #Transport #History https://t.co/mN40IThaRK
+#Retro #Tram #Moscow #Nostalgia #Vintage #Urban #Soviet #Transport #History

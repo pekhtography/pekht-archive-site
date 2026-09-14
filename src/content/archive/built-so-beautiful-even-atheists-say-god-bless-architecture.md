@@ -19,4 +19,4 @@ hashtags:
   - "Heritage"
 ---
 Built so beautiful, even atheists say 'God bless architecture' 🏗️😇🙏 #ArchitecturalFaith
-#Moscow #Kremlin #Russia #Orthodox #Cathedral #Domes #Architecture #Historical #Golden #Towers #Church #Heritage https://t.co/vNKv5tSBzu
+#Moscow #Kremlin #Russia #Orthodox #Cathedral #Domes #Architecture #Historical #Golden #Towers #Church #Heritage

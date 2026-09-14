@@ -17,4 +17,4 @@ hashtags:
   - "Year"
 ---
 Demonstrating my signature "panicked windmill arms" skating move, now in glorious high-definition thanks to the massive exhibition complex's countless millions of judgment-casting LEDs
-#Winter #Wonderland #Skating #Illumination #Night #Architecture #Holidays #Ice #Rink #New #Year https://t.co/iqNmp1UPhH
+#Winter #Wonderland #Skating #Illumination #Night #Architecture #Holidays #Ice #Rink #New #Year

@@ -12,4 +12,4 @@ hashtags:
 The Bolshoi Theatre is giving major "I host tsars" energy. 
 The gingerbread stalls are screaming "WE HAVE GLAZED NUTS!" 
 My soul, choosing a side, while my ears just freeze. ❄️👑🥜
-#MagicRealism #UrbanQuirk #SovietGlam #WinterWonder https://t.co/IygcyoZs9T
+#MagicRealism #UrbanQuirk #SovietGlam #WinterWonder

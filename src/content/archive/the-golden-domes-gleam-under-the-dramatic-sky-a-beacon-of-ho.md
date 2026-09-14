@@ -19,4 +19,4 @@ hashtags:
   - "Faith"
 ---
 The golden domes gleam under the dramatic sky, a beacon of hope and faith. ✨☁️ #GoldenBeacons
-#Church #City #Sky #Architecture #Tradition #Modern #Green #Urban #Landscape #Dramatic #Contrast #Faith https://t.co/1QW6BcxGNA
+#Church #City #Sky #Architecture #Tradition #Modern #Green #Urban #Landscape #Dramatic #Contrast #Faith

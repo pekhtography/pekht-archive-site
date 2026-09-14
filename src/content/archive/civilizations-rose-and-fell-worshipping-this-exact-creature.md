@@ -14,4 +14,4 @@ Nothing changed.
 Warm light through a window, eyes closed, paws tucked — 
 the throne was always just a sunbeam. 🌅 
 Divinity doesn't need to prove itself.
-#CatsOfTwitter #ChaosVsCalm #SundayMorningVibes #GoldenHour https://t.co/gE0sEUpVO8
+#CatsOfTwitter #ChaosVsCalm #SundayMorningVibes #GoldenHour

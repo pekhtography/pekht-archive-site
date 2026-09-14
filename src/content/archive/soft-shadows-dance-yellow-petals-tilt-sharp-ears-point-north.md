@@ -13,4 +13,4 @@ Soft shadows dance. Yellow petals tilt.
 Sharp ears point north. 
 This ginger botanist calculates the exact nectar-to-nap ratio before realizing he is actually just a very fluffy carrot. 
 Surprise lunch. 🥕🐾✨
-#CatsOfTwitter #MaineCoonLife #GoldenHourVibes #CozyAesthetics https://t.co/ZojFupAvVp
+#CatsOfTwitter #MaineCoonLife #GoldenHourVibes #CozyAesthetics

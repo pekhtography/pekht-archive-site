@@ -13,4 +13,4 @@ Cold wax. Dark bells.
 Flip one to trigger a sudden electric yellow explosion. 
 Velvet outside, sun-hot gold inside. 
 Nature’s grumpiest disco ball. 💜🌞
-#Nature #GardenLife #DarkAcademia #Mood https://t.co/FsUkKW44aC
+#Nature #GardenLife #DarkAcademia #Mood

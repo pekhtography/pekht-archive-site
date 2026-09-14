@@ -13,4 +13,4 @@ You walk toward the glass towers like they're the destination. 🏙️
 Then the arch frame closes behind you — 
 and suddenly the old brick waterfront is the postcard. 🌉 
 The city flipped. You just didn't notice.
-#Architecture #UrbanExploration #CityLife #Cityscape https://t.co/PjqipyPOZv
+#Architecture #UrbanExploration #CityLife #Cityscape

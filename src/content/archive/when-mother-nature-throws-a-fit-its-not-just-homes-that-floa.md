@@ -17,4 +17,4 @@ hashtags:
   - "rain"
 ---
 When Mother Nature throws a fit, it’s not just homes that float away—dreams take a dive too! It's like a splash party gone wrong, and the only thing getting "evacuated" is our sense of humor!
-#storm #homes #dreams #devastation #humor #nature #tantrum #party #life #hopes #rain https://t.co/wR3dsY8aSb
+#storm #homes #dreams #devastation #humor #nature #tantrum #party #life #hopes #rain

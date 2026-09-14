@@ -15,4 +15,4 @@ hashtags:
   - "flora"
 ---
 Tiger lily just dropped the hottest mixtape: "Spots &amp; Curves" 🎵 Critics say it's too extra with all that bending, but honey, mediocrity is extinct 🦖 When you're this gorgeous, physics becomes optional 💫 #FlexingOnRoses
-#lily #tiger #flower #nature #orange #bloom #garden #flora https://t.co/rwpi6BQBKc
+#lily #tiger #flower #nature #orange #bloom #garden #flora

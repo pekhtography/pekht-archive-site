@@ -10,4 +10,4 @@ hashtags:
   - "garden"
   - "sunshine"
 ---
-The rich hue of the rose is like a sunset, vibrant and unforgettable #rose #crimson #bloom #garden #sunshine https://t.co/KxwbrLTXRH
+The rich hue of the rose is like a sunset, vibrant and unforgettable #rose #crimson #bloom #garden #sunshine

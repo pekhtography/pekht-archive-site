@@ -19,4 +19,4 @@ hashtags:
   - "artwork"
 ---
 Four perspectives, one dream: breaking through barriers like light through a prism 🌈⚡ The geometry of ambition never looked so bold #SkywardBound
-#aircraft #military #geometric #retro #popart #aviation #sunburst #panels #graphic #colorful #design #artwork https://t.co/vzvbyWFI9y
+#aircraft #military #geometric #retro #popart #aviation #sunburst #panels #graphic #colorful #design #artwork

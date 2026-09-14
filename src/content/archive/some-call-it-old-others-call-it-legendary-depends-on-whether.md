@@ -20,4 +20,4 @@ hashtags:
 ---
 Some call it old, others call it legendary 🔥🚍. Depends on whether you see rust or resilience. 💡
 #LegendsOnWheels
-#bus #retro #vintage #history #classic #transport #heritage #exhibit #museum #travel #nostalgia #street https://t.co/Xqq1CFVmzH
+#bus #retro #vintage #history #classic #transport #heritage #exhibit #museum #travel #nostalgia #street

@@ -19,4 +19,4 @@ hashtags:
   - "exotic"
 ---
 Hairless but flawless. 🌟🐱 Who needs fur when you’ve got charm? #SphynxVibes
-#sphynx #cat #hairless #pet #feline #unique #elegant #wrinkles #adorable #mystical #companion #exotic https://t.co/LtBILQoC8p
+#sphynx #cat #hairless #pet #feline #unique #elegant #wrinkles #adorable #mystical #companion #exotic

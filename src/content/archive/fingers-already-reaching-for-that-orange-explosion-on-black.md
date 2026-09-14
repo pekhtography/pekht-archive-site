@@ -15,4 +15,4 @@ Xenophon’s soldiers dropped and didn’t get up.
 Your craving for the forbidden is ancient.
 You’ll survive it.
 Maybe🌿
-#NatureIsMetal #PoisonGarden #ForbiddenBloom #DeadlyPretty https://t.co/KvyTkzMSti
+#NatureIsMetal #PoisonGarden #ForbiddenBloom #DeadlyPretty

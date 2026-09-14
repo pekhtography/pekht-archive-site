@@ -10,4 +10,4 @@ hashtags:
   - "mandarinduck"
   - "duck"
 ---
-In the light of summer, the brilliant plumage of the mandarin duck dazzles the eye #plumage #colors #elegance #mandarinduck #duck https://t.co/ZpKit9MOq8
+In the light of summer, the brilliant plumage of the mandarin duck dazzles the eye #plumage #colors #elegance #mandarinduck #duck

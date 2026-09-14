@@ -15,4 +15,4 @@ hashtags:
   - "SoftAesthetic"
 ---
 They say "stop and smell the roses" 🌹 but a begonia's bloom is a fleeting masterpiece. Look closer. Time is beautiful. #FleetingBeauty
-#Nature #Beautiful #Photography #FlowerLovers #GardenLife #GardenGoals #Begonia #SoftAesthetic https://t.co/WRVdJMLEh0
+#Nature #Beautiful #Photography #FlowerLovers #GardenLife #GardenGoals #Begonia #SoftAesthetic

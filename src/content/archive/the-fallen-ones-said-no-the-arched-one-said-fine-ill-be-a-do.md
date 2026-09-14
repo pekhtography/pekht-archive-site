@@ -13,4 +13,4 @@ The fallen ones said no.
 The arched one said: fine, I'll be a doorway. 🚪❄️ 
 That's snow's whole negotiation — no threats, no noise, just weight. 
 Everyone kneels eventually.
-#Winter #WinterForest #SnowBent #SilentPower https://t.co/DGJVL6BLXg
+#Winter #WinterForest #SnowBent #SilentPower

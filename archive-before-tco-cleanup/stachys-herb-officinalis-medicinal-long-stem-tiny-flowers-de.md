@@ -1,0 +1,25 @@
+---
+title: "#Stachys #Herb #officinalis #Medicinal #long #stem #tiny #flowers #Delicate #healing #Soothing #meadow #Nature #harmony "
+x_id: "1913269039272526292"
+x_created_at: "2025-04-18T16:31:00Z"
+image: "/images/archive/stachys-herb-officinalis-medicinal-long-stem-tiny-flowers-de.jpg"
+hashtags:
+  - "Stachys"
+  - "Herb"
+  - "officinalis"
+  - "Medicinal"
+  - "long"
+  - "stem"
+  - "tiny"
+  - "flowers"
+  - "Delicate"
+  - "healing"
+  - "Soothing"
+  - "meadow"
+  - "Nature"
+  - "harmony"
+  - "beauty"
+  - "petals"
+  - "Softness"
+---
+#Stachys #Herb #officinalis #Medicinal #long #stem #tiny #flowers #Delicate #healing #Soothing #meadow #Nature #harmony #beauty #petals #Softness https://t.co/GmzqGCynbf

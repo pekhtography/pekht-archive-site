@@ -14,4 +14,4 @@ Every predator reads: danger.
 Every flower feels: chosen. 
 Same wings — 
 two completely opposite truths pressing against each other. 🦋
-#MacroPhotography #Butterflies #NatureLovers #Beautiful https://t.co/2YI84MkhCM
+#MacroPhotography #Butterflies #NatureLovers #Beautiful

@@ -18,4 +18,4 @@ hashtags:
   - "Grace"
 ---
 Mallow's blush is the blush of dawn, a quiet promise of a new day's grace
-#Mallow #Bloom #Nature #Pink #Flower #Petals #Garden #Blossom #Delicate #Beauty #Soft #Grace https://t.co/ccsDJgNVtU
+#Mallow #Bloom #Nature #Pink #Flower #Petals #Garden #Blossom #Delicate #Beauty #Soft #Grace

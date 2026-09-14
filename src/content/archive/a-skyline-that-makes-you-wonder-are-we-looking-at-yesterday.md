@@ -19,4 +19,4 @@ hashtags:
   - "History"
 ---
 A skyline that makes you wonder: are we looking at yesterday, today, or tomorrow? ⏳🌆🌸 #TimeTravelView
-#Moscow #Russia #Cityscape #Architecture #Skyline #Urban #Flowers #Heritage #Modernity #Travel #Culture #History https://t.co/MSsTMFkobM
+#Moscow #Russia #Cityscape #Architecture #Skyline #Urban #Flowers #Heritage #Modernity #Travel #Culture #History

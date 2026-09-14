@@ -23,4 +23,4 @@ hashtags:
   - "Petals"
   - "Delight"
 ---
-#Indochinese #Exotic #Banana #Tropical #Flower #Beauty #Heliconia #Vibrant #Red #Passion #Green #Life #Bouquet #Joy #Colors #Harmony #Petals #Delight https://t.co/mD3IJiu93u
+#Indochinese #Exotic #Banana #Tropical #Flower #Beauty #Heliconia #Vibrant #Red #Passion #Green #Life #Bouquet #Joy #Colors #Harmony #Petals #Delight

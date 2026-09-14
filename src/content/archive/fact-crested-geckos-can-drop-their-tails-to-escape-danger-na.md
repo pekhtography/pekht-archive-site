@@ -20,4 +20,4 @@ hashtags:
   - "Camouflage"
 ---
 Fact: Crested Geckos can drop their tails to escape danger – nature’s ultimate plot twist! 🦎💥 #NatureFacts #SurvivalSkills
-#CrestedGecko #Reptile #Lizard #Gecko #ExoticPets #Nature #Wildlife #Herpetology #Animals #PetLovers #Tropical #Camouflage https://t.co/icRFNuY4R4
+#CrestedGecko #Reptile #Lizard #Gecko #ExoticPets #Nature #Wildlife #Herpetology #Animals #PetLovers #Tropical #Camouflage

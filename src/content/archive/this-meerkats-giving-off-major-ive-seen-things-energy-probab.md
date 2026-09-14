@@ -11,4 +11,4 @@ hashtags:
   - "animal"
 ---
 This meerkat's giving off major "I've seen things" energy 👀 Probably witnessed more neighborhood drama than a suburban mom with Ring doorbell notifications🏠 The original gossip network, but with actual life-or-death stakes📺 #NeighborhoodWatch
-#meerkat #wildlife #nature #animal https://t.co/Wd24P9a8bO
+#meerkat #wildlife #nature #animal

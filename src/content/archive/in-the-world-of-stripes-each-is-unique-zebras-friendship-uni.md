@@ -11,4 +11,4 @@ hashtags:
   - "beauty"
   - "together"
 ---
-In the world of stripes, each is unique #zebras #friendship #unique #diversity #beauty #together https://t.co/DuEOLG7lh1
+In the world of stripes, each is unique #zebras #friendship #unique #diversity #beauty #together

@@ -17,4 +17,4 @@ hashtags:
   - "tranquil"
 ---
 Pagoda's Amazon reviews: ⭐⭐⭐⭐⭐ "Been using for 500 years, still works perfectly. No assembly required. Earthquake-tested. Would recommend to a friend if I had friends"📦 #AmazonReview
-#pagoda #autumn #reflection #zen #japanese #foliage #serenity #meditation #nature #tranquil https://t.co/35oJoNK5hd
+#pagoda #autumn #reflection #zen #japanese #foliage #serenity #meditation #nature #tranquil
