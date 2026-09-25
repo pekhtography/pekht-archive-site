@@ -1,5 +1,6 @@
 ---
 import { RiArrowLeftLine, RiArrowLeftSLine, RiArrowLeftUpLine, RiArrowRightLine, RiArrowRightSLine, RiArrowRightUpLine } from "@remixicon/react";
+import { sitePath } from "@/lib/site-url";
 
 interface PostNav {
     id: string;
@@ -15,7 +16,7 @@ const { type, prev, next } = Astro.props as { type: "blog" | "portfolio" | "arch
     prev || next ? (
         <nav class="flex items-center justify-center gap-6">
             {prev ? (
-                <a href={`/${type}/${prev.id}`} class="group flex flex-col items-start justify-center gap-1 w-full bg-muted border border-border px-6 py-3 hover:border-secondary-foreground/30 hover:bg-background hover:scale-103 active:hover:scale-100 animation">
+                <a href={sitePath(`/${type}/${prev.id}`)} class="group flex flex-col items-start justify-center gap-1 w-full bg-muted border border-border px-6 py-3 hover:border-secondary-foreground/30 hover:bg-background hover:scale-103 active:hover:scale-100 animation">
                     <div class="flex items-center justify-start gap-1.5">
                         <RiArrowLeftUpLine className="scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 size-4 animation" />
                         <span class="text-sm text-muted-foreground -translate-x-5.5 group-hover:translate-x-0 animation">previous</span>
@@ -27,7 +28,7 @@ const { type, prev, next } = Astro.props as { type: "blog" | "portfolio" | "arch
             )}
 
             {next ? (
-                <a href={`/${type}/${next.id}`} class="group flex flex-col items-end justify-center gap-1 w-full bg-muted border border-border px-6 py-3 hover:border-secondary-foreground/30 hover:bg-background hover:scale-103 active:scale-100 animation text-right">
+                <a href={sitePath(`/${type}/${next.id}`)} class="group flex flex-col items-end justify-center gap-1 w-full bg-muted border border-border px-6 py-3 hover:border-secondary-foreground/30 hover:bg-background hover:scale-103 active:scale-100 animation text-right">
                     <div class="flex items-center justify-end gap-1">
                         <span class="text-sm text-muted-foreground translate-x-5 group-hover:translate-x-0 animation">next</span>
                         <RiArrowRightUpLine className="scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 size-4 animation" />
