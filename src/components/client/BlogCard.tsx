@@ -3,7 +3,6 @@ import type { blogConfig } from "@/lib/types";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import { format, parse } from "date-fns";
 import { sitePath } from "@/lib/site-url";
-import { sitePath } from "@/lib/site-url";
 
 export function BlogCard({ item }: { item: blogConfig }) {
   const parsedDate = parse(item.data.date, "dd-MM-yyyy", new Date());
