@@ -66,7 +66,16 @@ const next =
             ))}
         </div>
 
-        <div class="mt-8 border border-border p-6">
+        <div class="relative mt-8 border-x border-b border-border p-6">
+            <span
+                class="pointer-events-none absolute left-0 top-0 h-px w-28 bg-border"
+                aria-hidden="true"
+            ></span>
+            <span
+                class="pointer-events-none absolute right-0 top-0 h-px w-28 bg-border"
+                aria-hidden="true"
+            ></span>
+
             <div class="whitespace-pre-line text-base leading-relaxed text-center px-20">
                 <Content />
             </div>
