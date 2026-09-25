@@ -5,6 +5,7 @@ import { getCollection } from "astro:content";
 import { parse } from "date-fns";
 import { RiArrowRightUpLine } from "@remixicon/react";
 import { sitePath } from "@/lib/site-url";
+import { sitePath } from "@/lib/site-url";
 
 const blogs = (await getCollection("blog"))
     .filter((blog) => !blog.data.draft)
