@@ -1,16 +1,17 @@
 import type { CollectionEntry } from "astro:content";
+import { sitePath } from "@/lib/site-url";
 
 type ArchiveItem = CollectionEntry<"archive">;
 
 export function ArchiveCard({ item }: { item: ArchiveItem }) {
   return (
     <a
-      href={`/archive/${item.id}`}
+      href={sitePath(`/archive/${item.id}`)}
       className="group block overflow-hidden border border-border bg-background"
     >
       <div className="relative aspect-square overflow-hidden">
         <img
-          src={item.data.image}
+          src={sitePath(item.data.image)}
           alt={item.data.title}
           loading="lazy"
           className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
