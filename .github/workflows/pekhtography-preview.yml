@@ -1,11 +1,12 @@
 name: PEKHTOGRAPHY Preview
 
-# Preview deployment for visual verification of main-clean.
+# Preview/deployment workflow for the visually verified site.
 
 on:
   push:
     branches:
       - main-clean
+      - main
   workflow_dispatch:
 
 permissions:
