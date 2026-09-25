@@ -4,6 +4,7 @@ import { FeaturedBlogCard } from "../client/FeaturedBlogCard";
 import { getCollection } from "astro:content";
 import { parse } from "date-fns";
 import { RiArrowRightUpLine } from "@remixicon/react";
+import { sitePath } from "@/lib/site-url";
 
 const blogs = (await getCollection("blog"))
     .filter((blog) => !blog.data.draft)
@@ -17,7 +18,7 @@ const blogs = (await getCollection("blog"))
 {
     site_config.featured.blog.visible && blogs.length > 0 && (
         <section class="bg-background border border-border p-6 mt-10">
-            <a href="/blog" class="flex items-center justify-start group w-fit gap-2 select-none">
+            <a href={sitePath("/blog")} class="flex items-center justify-start group w-fit gap-2 select-none">
                 <span class="text-muted-foreground group-hover:text-secondary-foreground animation">thoughts, tutorials and engineering insights</span>
                 <RiArrowRightUpLine className="size-0 group-hover:size-4 scale-0 group-hover:scale-100 opacity-0 group-hover:opacity-100 animation" />
             </a>
