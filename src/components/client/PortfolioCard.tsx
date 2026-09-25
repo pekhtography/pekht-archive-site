@@ -2,7 +2,6 @@
 
 import type { portfolioConfig } from "@/lib/types";
 import { sitePath } from "@/lib/site-url";
-import { sitePath } from "@/lib/site-url";
 
 interface PortfolioCardProps {
   item: portfolioConfig & { images?: string[] };
