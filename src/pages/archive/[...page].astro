@@ -4,6 +4,7 @@ import { sortArchiveItems } from "@/lib/archive-sort";
 import IndexHeader from "@/components/static/IndexHeader.astro";
 import IndexLayout from "@/layouts/IndexLayout.astro";
 import { ArchiveCard } from "@/components/client/ArchiveCard";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 
 export async function getStaticPaths({ paginate }) {
     const items = sortArchiveItems(await getCollection("archive"));
@@ -45,12 +46,13 @@ const archiveCount = allItems.length;
                 page.url.prev ? (
                     <a
                         href={page.url.prev}
-                        class="text-sm text-muted-foreground hover:text-foreground animation"
+                        aria-label="Previous archive page"
+                        class="inline-flex size-8 shrink-0 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background shadow-xs hover:bg-muted hover:text-foreground transition-all active:scale-95"
                     >
-                        ← previous
+                        <RiArrowLeftSLine className="size-5 fill-muted-foreground" />
                     </a>
                 ) : (
-                    <span />
+                    <span class="size-8" />
                 )
             }
 
@@ -62,12 +64,13 @@ const archiveCount = allItems.length;
                 page.url.next ? (
                     <a
                         href={page.url.next}
-                        class="text-sm text-muted-foreground hover:text-foreground animation"
+                        aria-label="Next archive page"
+                        class="inline-flex size-8 shrink-0 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background shadow-xs hover:bg-muted hover:text-foreground transition-all active:scale-95"
                     >
-                        next →
+                        <RiArrowRightSLine className="size-5 fill-muted-foreground" />
                     </a>
                 ) : (
-                    <span />
+                    <span class="size-8" />
                 )
             }
         </nav>
