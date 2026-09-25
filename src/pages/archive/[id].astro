@@ -83,14 +83,20 @@ const next =
             {item.data.x_id && (
                 <div class="mt-[clamp(1.5rem,4vw,2rem)] px-[clamp(1.25rem,8%,5rem)] pt-[clamp(1rem,3vw,1.5rem)] text-center">
                     <div class="border-t border-border pt-[clamp(1rem,3vw,1.5rem)]">
-                        <a
-                            href={`https://x.com/PEKHTography/status/${item.data.x_id}`}
-                            target="_blank"
-                            rel="nofollow noopener noreferrer"
-                            class="text-sm text-muted-foreground transition-colors hover:text-foreground"
-                        >
-                            Original publication
-                        </a>
+                        <div class="relative group/original">
+                            <div
+                                class="pointer-events-none absolute inset-x-0 -top-[clamp(1rem,3vw,1.5rem)] bottom-0 bg-gradient-to-b from-foreground/15 via-foreground/5 to-transparent opacity-100 transition-opacity duration-300 group-hover/original:opacity-0"
+                                aria-hidden="true"
+                            ></div>
+                            <a
+                                href={`https://x.com/PEKHTography/status/${item.data.x_id}`}
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
+                                class="relative text-sm text-muted-foreground transition-colors hover:text-foreground"
+                            >
+                                Original publication
+                            </a>
+                        </div>
                     </div>
                 </div>
             )}
