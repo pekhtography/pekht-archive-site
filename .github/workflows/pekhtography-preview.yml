@@ -1,5 +1,7 @@
 name: PEKHTOGRAPHY Preview
 
+# Preview deployment for visual verification of main-clean.
+
 on:
   push:
     branches:
