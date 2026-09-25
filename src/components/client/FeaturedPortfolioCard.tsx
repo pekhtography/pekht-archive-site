@@ -2,7 +2,6 @@
 
 import type { portfolioConfig } from "@/lib/types";
 import { sitePath } from "@/lib/site-url";
-import { sitePath } from "@/lib/site-url";
 
 export function FeaturedPortfolioCard({ items }: { items: (portfolioConfig & { heroImage?: string })[] }) {
   const recentProjects = items.slice(0, 3);
