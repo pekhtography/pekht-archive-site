@@ -1,6 +1,7 @@
 "use client";
 
 import type { portfolioConfig } from "@/lib/types";
+import { sitePath } from "@/lib/site-url";
 
 export function FeaturedPortfolioCard({ items }: { items: (portfolioConfig & { heroImage?: string })[] }) {
   const recentProjects = items.slice(0, 3);
@@ -11,7 +12,7 @@ export function FeaturedPortfolioCard({ items }: { items: (portfolioConfig & { h
         const firstImage = item.heroImage || null;
 
         return (
-          <a key={item.id} href={`/portfolio/${item.id}`} className="group block bg-muted border border-border overflow-hidden hover:border-secondary-foreground/30 relative hover:bg-background active:scale-100 hover:scale-102 animation">
+          <a key={item.id} href={sitePath(`/portfolio/${item.id}`)} className="group block bg-muted border border-border overflow-hidden hover:border-secondary-foreground/30 relative hover:bg-background active:scale-100 hover:scale-102 animation">
             {firstImage && (
               <div className="aspect-4/3 overflow-hidden">
                 <img loading="lazy" width={1200} src={firstImage} alt={item.data.title} className="w-full h-full object-cover grayscale-100 group-hover:grayscale-0 animation" />
