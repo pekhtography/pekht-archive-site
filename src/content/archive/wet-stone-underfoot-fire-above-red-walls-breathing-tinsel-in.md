@@ -13,4 +13,4 @@ Wet stone underfoot, fire above,
 red walls breathing tinsel into the freeze — ✨ 
 somewhere between the cold and the glow, 
 the city forgot it wasn't a dream.
-#WinterVibes #GoldenHour #CityAtSunset #ChristmasCity https://t.co/avjNphl5H6
+#WinterVibes #GoldenHour #CityAtSunset #ChristmasCity

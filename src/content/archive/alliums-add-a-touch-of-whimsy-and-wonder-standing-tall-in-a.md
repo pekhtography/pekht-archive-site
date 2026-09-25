@@ -12,4 +12,4 @@ hashtags:
   - "Masterpiece"
   - "Beauty"
 ---
-Alliums add a touch of whimsy and wonder, standing tall in a sea of green #Allium #Blue #Flower #Sunshine #Garden #Masterpiece #Beauty https://t.co/ybzE2XElnL
+Alliums add a touch of whimsy and wonder, standing tall in a sea of green #Allium #Blue #Flower #Sunshine #Garden #Masterpiece #Beauty

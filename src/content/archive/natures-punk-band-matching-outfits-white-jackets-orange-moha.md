@@ -14,4 +14,4 @@ Matching outfits: white jackets, orange mohawks 🔥
 Every shrub said "we're not doing neutral" and committed. 
 Winter tried bleaching everything. 
 The tips refused ❄️✨ 
-#WinterNature #WinterShrubs #ColorfulWinter #StayVibrant https://t.co/5zfFL2CE6D
+#WinterNature #WinterShrubs #ColorfulWinter #StayVibrant

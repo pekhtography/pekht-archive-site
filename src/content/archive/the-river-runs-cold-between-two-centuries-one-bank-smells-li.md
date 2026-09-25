@@ -13,4 +13,4 @@ The river runs cold between two centuries. 🌊
 One bank smells like boiled cabbage and radiators. 
 The other — like ambition and wet glass. 🏙️ 
 Same water.
-#Moscow #CityPoetry #UrbanDuality #RiverLife https://t.co/Znxt34F7hn
+#Moscow #CityPoetry #UrbanDuality #RiverLife

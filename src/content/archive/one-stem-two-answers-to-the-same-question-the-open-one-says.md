@@ -14,4 +14,4 @@ Two answers to the same question 🌸 —
 the open one says "now", 
 the bud says "wait". 
 Rilke would've stared here for an hour. 🌿
-#Botany #SlowDown #FlowerPhotography #GardenTherapy https://t.co/AUY56cSJrT
+#Botany #SlowDown #FlowerPhotography #GardenTherapy

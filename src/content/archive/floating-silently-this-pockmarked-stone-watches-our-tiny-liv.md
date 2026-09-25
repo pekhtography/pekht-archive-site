@@ -13,4 +13,4 @@ Floating silently, this pockmarked stone watches our tiny lives.
 We see a romantic beacon, 
 but it’s actually just a massive, 
 unwashed nightlight for giants. 🔦🌌👽
-#NightSky #Astrophotography #MoonLovers #Stargazing https://t.co/FQclqNLLhS
+#NightSky #Astrophotography #MoonLovers #Stargazing

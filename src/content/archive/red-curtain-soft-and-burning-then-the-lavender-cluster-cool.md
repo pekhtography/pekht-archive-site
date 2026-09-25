@@ -13,4 +13,4 @@ Red curtain, soft and burning 🔴 —
 then the lavender cluster, cool as powder, faintly sweet on the air 
 (the kind of sweet that once put ten thousand soldiers to sleep). 😶 
 A whole army, one flower.
-#Flowers #RhododendronSeason #BloomChaos #PetalFever https://t.co/x7nZd48cA6
+#Flowers #RhododendronSeason #BloomChaos #PetalFever

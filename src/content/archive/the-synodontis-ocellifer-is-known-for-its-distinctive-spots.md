@@ -12,4 +12,4 @@ hashtags:
   - "Aquarium"
   - "Congo"
 ---
-The Synodontis ocellifer is known for its distinctive spots and is a popular freshwater aquarium fish #Synodontis #Fish #Catfish #Water #Nature #Aquarium #Congo https://t.co/q3fbYGIlSX
+The Synodontis ocellifer is known for its distinctive spots and is a popular freshwater aquarium fish #Synodontis #Fish #Catfish #Water #Nature #Aquarium #Congo

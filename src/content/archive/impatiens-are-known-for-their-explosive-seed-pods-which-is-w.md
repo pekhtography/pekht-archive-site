@@ -18,4 +18,4 @@ hashtags:
   - "Blossom"
 ---
 Impatiens are known for their explosive seed pods, which is why they're called 'touch-me-nots.' Maybe they just want some personal space!
-#Impatiens #Balsam #Bloom #Nature #Garden #Flower #Petals #Pink #Beauty #Grow #Wild #Blossom https://t.co/4z1dwjNHla
+#Impatiens #Balsam #Bloom #Nature #Garden #Flower #Petals #Pink #Beauty #Grow #Wild #Blossom

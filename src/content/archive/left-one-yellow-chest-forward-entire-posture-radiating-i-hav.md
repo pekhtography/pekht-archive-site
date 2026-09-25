@@ -15,4 +15,4 @@ Right one: became a sphere.
 Feathers locked tight against the cold — that's the whole strategy. 
 Same bark. 
 Nature said: both valid. 🐦
-#Nature #BirdPhotography #WinterBirds #MoodOfTheDay https://t.co/UGZd6S4Tum
+#Nature #BirdPhotography #WinterBirds #MoodOfTheDay

@@ -19,4 +19,4 @@ hashtags:
   - "Metro"
 ---
 Chasing horizons, one stop at a time — life’s a train journey. Ready for the next chapter? 🌅🚉 #ChasingRailwayDreams
-#Train #Electric #Suburban #Railway #Platform #Transport #Passenger #Locomotive #Travel #Commuter #Station #Metro https://t.co/qIuAo4HRKj
+#Train #Electric #Suburban #Railway #Platform #Transport #Passenger #Locomotive #Travel #Commuter #Station #Metro

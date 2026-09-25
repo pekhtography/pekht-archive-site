@@ -12,4 +12,4 @@ hashtags:
 Brain: "Portal! Enter!" 🧠 
 Body: "-18°C, no café." 🥶 
 Soul: "Shh… It's THE ticket. To that New Year's we dreamed of but lost the invite for. ❄️ Go!" 
-#WinterWonderland #MagicHour #SnowyRoad #ForestBathing https://t.co/6Ng523U74t
+#WinterWonderland #MagicHour #SnowyRoad #ForestBathing

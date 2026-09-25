@@ -19,4 +19,4 @@ hashtags:
   - "bloom"
 ---
 Warning: This lawn may cause spontaneous poetry writing and uncontrollable urges to hug trees🍎🤗Side effects include chronic appreciation of simple beauty!🌸✨ #AppleBlossomTherapy
-#home #garden #lawn #petals #apple #blossom #spring #peaceful #suburban #nature #relaxation #bloom https://t.co/KDRXeIfdNw
+#home #garden #lawn #petals #apple #blossom #spring #peaceful #suburban #nature #relaxation #bloom

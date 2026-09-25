@@ -17,4 +17,4 @@ hashtags:
   - "glow"
 ---
 When lights hit history just right, you get timeless awe
-#architecture #pavilion #night #scape #history #heritage #monument #design #culture #travel #glow https://t.co/bNZcdvN2st
+#architecture #pavilion #night #scape #history #heritage #monument #design #culture #travel #glow

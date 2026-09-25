@@ -21,4 +21,4 @@ hashtags:
   - "Outdoor"
 ---
 Built-in defense, uninvited presence—Leafy Spurge: the bouncer of the plant world
-#Euphorbia #esula #Wildflower #Leafy #Spurge #Nature #Yellow #Plants #Spring #Greenery #Blooming #Flora #Garden #Meadow #Outdoor https://t.co/usRh3Rpyj1
+#Euphorbia #esula #Wildflower #Leafy #Spurge #Nature #Yellow #Plants #Spring #Greenery #Blooming #Flora #Garden #Meadow #Outdoor

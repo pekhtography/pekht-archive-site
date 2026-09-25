@@ -13,4 +13,4 @@ Golden chandeliers hang from green spears,
 demanding royal silence. 
 Then the wind shifts, bringing a sharp garlic punch to the nostrils. 
 Even emperors skip showers. 👑🧄
-#Nature #GardenLife #FloralDesign #Vibrant https://t.co/nNdIjurTSw
+#Nature #GardenLife #FloralDesign #Vibrant

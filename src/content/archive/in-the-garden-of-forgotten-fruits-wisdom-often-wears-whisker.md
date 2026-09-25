@@ -15,4 +15,4 @@ hashtags:
   - "garden"
   - "time"
 ---
-In the garden of forgotten fruits, wisdom often wears whiskers #wise #cat #withered #mandarins #mysteries #contemplation #wisdom #whiskers #garden #time https://t.co/uAXQMZP8xJ
+In the garden of forgotten fruits, wisdom often wears whiskers #wise #cat #withered #mandarins #mysteries #contemplation #wisdom #whiskers #garden #time

@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 In the myth of eternal bloom, the iris whispers secrets to the vase, turning shadows into stories
-#flowers #vase #decor #purple #iris #greenery #light #shadow #elegance #grace #nature #beauty https://t.co/3iDd0v6Sqw
+#flowers #vase #decor #purple #iris #greenery #light #shadow #elegance #grace #nature #beauty

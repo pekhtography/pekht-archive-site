@@ -19,4 +19,4 @@ hashtags:
   - "Colors"
   - "Emotions"
 ---
-#Anthurium #Beauty #Red #Passion #Green #Tranquility #Blooms #Resilience #Stem #Growth #Native #Exotic #Colors #Emotions https://t.co/DGzavtgSZ6
+#Anthurium #Beauty #Red #Passion #Green #Tranquility #Blooms #Resilience #Stem #Growth #Native #Exotic #Colors #Emotions

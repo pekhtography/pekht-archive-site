@@ -13,4 +13,4 @@ White arch curves like a whale's spine over the crowd.
 Grey hoodies merge into one moving blob beneath it. 
 You're not crossing the bridge. 
 You're swimming through the creature's breath. 🐋🌉👥 
-#UrbanLife #CityWalkers #ConcreteJungle #UrbanDetox https://t.co/jmmdgdyTIV
+#UrbanLife #CityWalkers #ConcreteJungle #UrbanDetox

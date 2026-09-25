@@ -17,4 +17,4 @@ hashtags:
   - "clouds"
 ---
 Double rainbows don't lie - this is what happens when the universe decides your city deserves a standing ovation! 🌟🏟️ Moscow's getting some serious cosmic applause today. #CosmicApplause
-#rainbow #stadium #storm #Moscow #nature #architecture #weather #cityscape #dramatic #clouds https://t.co/xZhQ71iNnT
+#rainbow #stadium #storm #Moscow #nature #architecture #weather #cityscape #dramatic #clouds

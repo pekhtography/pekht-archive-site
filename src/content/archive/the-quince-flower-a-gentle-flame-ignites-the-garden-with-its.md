@@ -12,4 +12,4 @@ hashtags:
   - "blossom"
   - "orange"
 ---
-The quince flower, a gentle flame, ignites the garden with its light hue #fruit #flowers #green #garden #quince #blossom #orange https://t.co/CsBLOm7SrH
+The quince flower, a gentle flame, ignites the garden with its light hue #fruit #flowers #green #garden #quince #blossom #orange

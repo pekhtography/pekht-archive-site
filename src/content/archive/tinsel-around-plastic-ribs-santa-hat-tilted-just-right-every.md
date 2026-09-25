@@ -13,4 +13,4 @@ Tinsel around plastic ribs, Santa hat tilted just right. 🎅
 Everyone else dressed up for Christmas — he dressed into it. 
 Comes off January 2nd. 
 His doesn't. 🎄
-#Christmas #StreetArt #MannequinChallenge #WeirdAndWonderful https://t.co/uGoAnT7AZW
+#Christmas #StreetArt #MannequinChallenge #WeirdAndWonderful

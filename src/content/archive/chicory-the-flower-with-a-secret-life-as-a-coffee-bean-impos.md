@@ -18,4 +18,4 @@ hashtags:
   - "Garden"
 ---
 Chicory: The flower with a secret life as a coffee bean imposter
-#Chicory #Nature #Bloom #Wildflower #Purple #Meadow #Botany #Flora #Photography #Outdoors #Petals #Garden https://t.co/aBBjJRgSe8
+#Chicory #Nature #Bloom #Wildflower #Purple #Meadow #Botany #Flora #Photography #Outdoors #Petals #Garden

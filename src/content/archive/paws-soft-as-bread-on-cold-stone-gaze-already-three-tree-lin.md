@@ -13,4 +13,4 @@ Paws soft as bread on cold stone 🍞 —
 gaze already three tree lines past the horizon. 🧡 
 The body stayed. 
 The rest of him left an hour ago. ✨
-#CatTax #GoldenHourFeels #SunbaskerSociety #CottageCoreLiving https://t.co/DCOWzFroDT
+#CatTax #GoldenHourFeels #SunbaskerSociety #CottageCoreLiving

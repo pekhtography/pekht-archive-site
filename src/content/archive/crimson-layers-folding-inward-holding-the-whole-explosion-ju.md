@@ -13,4 +13,4 @@ Crimson layers folding inward,
 holding the whole explosion just one breath away 🌺 — 
 and a beetle on the leaf, completely unimpressed. 
 That tracks. 🖤
-#FlowerPhotography #PeonySeason #SlowBloom #NatureHumor https://t.co/j401dgjHZS
+#FlowerPhotography #PeonySeason #SlowBloom #NatureHumor

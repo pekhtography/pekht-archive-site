@@ -21,4 +21,4 @@ hashtags:
   - "flora"
   - "plantlife"
 ---
-#grass #nature #outdoors #green #field #meadow #wild #plant #growth #sunlight #seeds #wildlife #botany #ecology #flora #plantlife https://t.co/F3QCPDXoVe
+#grass #nature #outdoors #green #field #meadow #wild #plant #growth #sunlight #seeds #wildlife #botany #ecology #flora #plantlife

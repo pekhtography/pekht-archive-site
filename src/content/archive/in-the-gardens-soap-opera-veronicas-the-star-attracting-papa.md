@@ -24,4 +24,4 @@ hashtags:
   - "Eco"
 ---
 In the garden’s soap opera, Veronica’s the star attracting paparazzi bees with every bloom
-#Veronica #Speedwell #Wild #Purple #Bloom #Pollination #Bee #Friendly #Nature #Lovers #Garden #Beauty #Flower #Power #Spring #Vibes #Botany #Eco https://t.co/JyBhtQeJIJ
+#Veronica #Speedwell #Wild #Purple #Bloom #Pollination #Bee #Friendly #Nature #Lovers #Garden #Beauty #Flower #Power #Spring #Vibes #Botany #Eco

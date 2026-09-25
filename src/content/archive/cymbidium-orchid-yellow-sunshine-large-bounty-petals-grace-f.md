@@ -25,4 +25,4 @@ hashtags:
   - "Simplicity"
   - "Epiphytic"
 ---
-#Cymbidium #Orchid #Yellow #Sunshine #Large #Bounty #Petals #Grace #Flowers #Beauty #Resilience #Strength #Nature #Elegance #Bloom #Waxy #Glossy #Matte #Simplicity #Epiphytic https://t.co/nnTjU6F9kf
+#Cymbidium #Orchid #Yellow #Sunshine #Large #Bounty #Petals #Grace #Flowers #Beauty #Resilience #Strength #Nature #Elegance #Bloom #Waxy #Glossy #Matte #Simplicity #Epiphytic

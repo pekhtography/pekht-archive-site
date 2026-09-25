@@ -11,4 +11,4 @@ hashtags:
   - "structure"
   - "art"
 ---
-Garden's geometry is the purest form of art #geometry #design #harmony #garden #structure #art https://t.co/V5TfZkFUJw
+Garden's geometry is the purest form of art #geometry #design #harmony #garden #structure #art

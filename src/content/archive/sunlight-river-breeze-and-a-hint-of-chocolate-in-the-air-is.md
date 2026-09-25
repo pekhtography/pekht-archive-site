@@ -21,4 +21,4 @@ hashtags:
   - "Urban"
 ---
 Sunlight, river breeze, and a hint of chocolate in the air… is this paradise or just Moscow being Moscow? 🌞🍃🍬 #SweetUrbanDream
-#Moscow #Chocolate #Factory #River #Skyline #Flowers #Travel #Cityscape #Monument #Architecture #History #Sunlight #Culture #Urban https://t.co/gN1XmdOzbl
+#Moscow #Chocolate #Factory #River #Skyline #Flowers #Travel #Cityscape #Monument #Architecture #History #Sunlight #Culture #Urban

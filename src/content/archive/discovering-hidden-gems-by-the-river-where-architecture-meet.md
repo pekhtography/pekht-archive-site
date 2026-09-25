@@ -19,4 +19,4 @@ hashtags:
   - "Historical"
 ---
 Discovering hidden gems by the river 🌊💦🏞️, where architecture meets nature. #RiverCityTreasures
-#Bridge #River #Water #Architecture #Nature #Cityscape #Riverbank #Waterfront #Scenic #Landscape #Urban #Historical https://t.co/HqWseqY82N
+#Bridge #River #Water #Architecture #Nature #Cityscape #Riverbank #Waterfront #Scenic #Landscape #Urban #Historical

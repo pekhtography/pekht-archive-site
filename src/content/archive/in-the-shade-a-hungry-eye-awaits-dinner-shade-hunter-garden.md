@@ -12,4 +12,4 @@ hashtags:
   - "Hunt"
   - "waiting"
 ---
-In the shade, a hungry eye awaits dinner #shade #hunter #garden #patience #Wagtail #Hunt #waiting https://t.co/qpZbW5UrA9
+In the shade, a hungry eye awaits dinner #shade #hunter #garden #patience #Wagtail #Hunt #waiting

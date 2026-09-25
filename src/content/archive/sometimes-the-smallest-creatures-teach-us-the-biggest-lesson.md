@@ -16,4 +16,4 @@ hashtags:
   - "peaceful"
 ---
 Sometimes the smallest creatures teach us the biggest lessons about trust 🦔✨ This little one knows that safety isn't about having armor - it's about finding the right hands to hold you 💕 #TinyTeacher
-#hedgehog #baby #tiny #trust #sleepy #gentle #wildlife #comfort #peaceful https://t.co/jeZdiKJB8S
+#hedgehog #baby #tiny #trust #sleepy #gentle #wildlife #comfort #peaceful

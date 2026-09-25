@@ -14,4 +14,4 @@ and only then look up at the burst of amber stamens,
 warm as something just pulled from a fire🔥,
 spinning outward against black air that smells of wet soil
 and early dark🌿
-#Wildflowers #BotanicalBeauty #GoldenHour https://t.co/RL2Os81vQm
+#Wildflowers #BotanicalBeauty #GoldenHour

@@ -13,4 +13,4 @@ Moon climbs the clouds like a stage technician.
 Towers instantly straighten their glowing ties. 
 The frozen river watches quietly — 
 every big city loves a surprise spotlight 🌕🏙️❄️
-#CityLights #UrbanNightscape #MoonlitArchitecture #MidnightMood https://t.co/tWMgBWLOCy
+#CityLights #UrbanNightscape #MoonlitArchitecture #MidnightMood

@@ -19,4 +19,4 @@ hashtags:
   - "development"
 ---
 Millennial building: 'I'm so minimalist!' Boomer building: 'Sweetie, I had character before you had WiFi' 📱🎩 #GenerationalRoast
-#architecture #contrast #modern #historic #building #cityscape #urban #design #facade #glass #classical #development https://t.co/2J2RGWBr0o
+#architecture #contrast #modern #historic #building #cityscape #urban #design #facade #glass #classical #development

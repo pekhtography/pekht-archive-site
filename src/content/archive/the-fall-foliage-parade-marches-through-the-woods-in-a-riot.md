@@ -21,4 +21,4 @@ hashtags:
   - "outdoors"
 ---
 The fall foliage parade marches through the woods in a riot of colors
-#autumn #leaves #maple #nature #fall #colors #tree #season #forest #orange #red #yellow #vibrant #foliage #outdoors https://t.co/sqVoRxqRCe
+#autumn #leaves #maple #nature #fall #colors #tree #season #forest #orange #red #yellow #vibrant #foliage #outdoors

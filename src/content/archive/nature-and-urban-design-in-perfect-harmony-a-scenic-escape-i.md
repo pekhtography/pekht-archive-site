@@ -19,4 +19,4 @@ hashtags:
   - "Design"
 ---
 Nature and urban design in perfect harmony 🌿🏢. A scenic escape in the heart of the city. #UrbanOasis
-#Architecture #Modern #River #City #Landscape #Buildings #Trees #Clouds #Sky #Nature #Urban #Design https://t.co/Fg6M1uNoB5
+#Architecture #Modern #River #City #Landscape #Buildings #Trees #Clouds #Sky #Nature #Urban #Design

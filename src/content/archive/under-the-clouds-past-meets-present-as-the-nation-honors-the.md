@@ -19,4 +19,4 @@ hashtags:
   - "Commemoration"
 ---
 Under the clouds, past meets present as the nation honors the triumph that shaped the future.🏛️🎉 Tanks never forget, and neither should we.💥 #TimelessVictory
-#Victory #Anniversary #Military #History #Tank #Celebration #Crowd #Monument #Russia #Heritage #Tradition #Commemoration https://t.co/zNX6BgQUbS
+#Victory #Anniversary #Military #History #Tank #Celebration #Crowd #Monument #Russia #Heritage #Tradition #Commemoration

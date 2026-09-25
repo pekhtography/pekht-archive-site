@@ -13,4 +13,4 @@ Grey clouds loom. Cold wind bites.
 A thick, sticky scent of violet jam explodes, 
 while windows reflect the traffic like giant, unblinking glass eyes. 
 Watching. 🏙️👁️
-#UrbanLife #StreetAesthetics #CityVibes #UnexpectedBeauty https://t.co/5H4B4Y8ihj
+#UrbanLife #StreetAesthetics #CityVibes #UnexpectedBeauty

@@ -22,4 +22,4 @@ hashtags:
   - "Petals"
 ---
 Rhododendrons and azaleas are nature's fireworks, exploding in a dazzling display of color and life
-#Garden #Flowers #Rhododendron #Azalea #Nature #Blooms #Spring #Colorful #Outdoors #Lush #Vibrant #Growth #Landscape #Blossoms #Flora #Petals https://t.co/DLCg4MsALX
+#Garden #Flowers #Rhododendron #Azalea #Nature #Blooms #Spring #Colorful #Outdoors #Lush #Vibrant #Growth #Landscape #Blossoms #Flora #Petals

@@ -19,4 +19,4 @@ hashtags:
   - "Ornamental"
 ---
 Orange you glad this flower wears a crown? 🍊👑 Nature’s quirky royalty never goes out of style! #FunFlorals 🌿🤣
-#Fritillaria #Imperialis #CrownImperial #Flower #Bloom #Spring #Garden #Botany #Nature #Plants #Floral #Ornamental https://t.co/rftiwYSQLz
+#Fritillaria #Imperialis #CrownImperial #Flower #Bloom #Spring #Garden #Botany #Nature #Plants #Floral #Ornamental

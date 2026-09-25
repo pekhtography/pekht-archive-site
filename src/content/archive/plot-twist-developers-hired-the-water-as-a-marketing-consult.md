@@ -15,4 +15,4 @@ hashtags:
   - "luxury"
 ---
 Plot twist: Developers hired the water as a marketing consultant because nothing sells overpriced apartments quite like free therapy sessions with reflective surfaces 🕵️‍♂️💭💸 #ConspiracyReflection
-#tower #urban #modern #architecture #skyline #development #lifestyle #luxury https://t.co/agce0mhrUx
+#tower #urban #modern #architecture #skyline #development #lifestyle #luxury

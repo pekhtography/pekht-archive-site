@@ -12,4 +12,4 @@ The leaf didn't surrender—it became a chandelier.
 Each ice crystal: a tiny prism refracting yesterday's chlorophyll dreams. 
 Nature's most passive-aggressive flex: "Death? 
 I'll just turn into jewelry." ✨🍂❄️ 
-#NatureLovers #WinterWonderland #FrozenBeauty https://t.co/WJFC6jIv71
+#NatureLovers #WinterWonderland #FrozenBeauty

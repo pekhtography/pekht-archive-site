@@ -19,4 +19,4 @@ hashtags:
   - "Green"
 ---
 Who needs a bell when you have campanula ringing in the beauty? 🌸🔔 #BellflowerBliss
-#Campanula #Bellflower #Purple #Garden #Nature #Blooming #Beautiful #Flora #Botanical #Colorful #Blossom #Green https://t.co/gwryoQ0dns
+#Campanula #Bellflower #Purple #Garden #Nature #Blooming #Beautiful #Flora #Botanical #Colorful #Blossom #Green

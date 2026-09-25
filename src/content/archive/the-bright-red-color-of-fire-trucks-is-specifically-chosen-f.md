@@ -10,4 +10,4 @@ hashtags:
   - "Wonderland"
   - "Red"
 ---
-The bright red color of fire trucks is specifically chosen for maximum visibility, even in smoke or low-light conditions #FireTruck #Rescue #ToySupermarket #Wonderland #Red https://t.co/p9annEnNTl
+The bright red color of fire trucks is specifically chosen for maximum visibility, even in smoke or low-light conditions #FireTruck #Rescue #ToySupermarket #Wonderland #Red

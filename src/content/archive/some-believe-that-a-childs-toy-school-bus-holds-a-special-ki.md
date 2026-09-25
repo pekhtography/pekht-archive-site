@@ -14,4 +14,4 @@ hashtags:
   - "Exploration"
   - "Childhood"
 ---
-Some believe that a child's toy school bus holds a special kind of  magic. It can transport them not just to a school, but to worlds of  imagination and possibility #SchoolBus #Journey #Bright #Radiant #ToyStore #Wonderland #Adventure #Exploration #Childhood https://t.co/FcEKEsZVhH
+Some believe that a child's toy school bus holds a special kind of  magic. It can transport them not just to a school, but to worlds of  imagination and possibility #SchoolBus #Journey #Bright #Radiant #ToyStore #Wonderland #Adventure #Exploration #Childhood

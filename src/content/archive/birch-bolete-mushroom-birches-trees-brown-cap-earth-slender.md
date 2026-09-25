@@ -26,4 +26,4 @@ hashtags:
   - "change"
   - "Woodland"
 ---
-#birch #bolete #mushroom #Birches #trees #Brown #cap #earth #Slender #stem #grace #White #flesh #nourishment #Forest #nature #Forager #adventurer #Seasons #change #Woodland https://t.co/Sv1YKOjlBe
+#birch #bolete #mushroom #Birches #trees #Brown #cap #earth #Slender #stem #grace #White #flesh #nourishment #Forest #nature #Forager #adventurer #Seasons #change #Woodland

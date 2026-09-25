@@ -14,4 +14,4 @@ hashtags:
   - "city"
   - "buildings"
 ---
-Every sunset brings the promise of a new dawn in the city, where colors dance upon the water #sunset #reflection #river #colors #twilight #stillness #sky #city #buildings https://t.co/0d9jak0DqQ
+Every sunset brings the promise of a new dawn in the city, where colors dance upon the water #sunset #reflection #river #colors #twilight #stillness #sky #city #buildings

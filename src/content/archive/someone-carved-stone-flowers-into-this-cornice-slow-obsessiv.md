@@ -15,4 +15,4 @@ Three streets over,
 a tower scraped the sky to prove something louder. 
 Dusk lands on both equally. 
 The chisel wins every time. 🌅
-#GoldenHour #Moscow #ArchitectureLovers #Timeless https://t.co/FNfOAjkbLQ
+#GoldenHour #Moscow #ArchitectureLovers #Timeless

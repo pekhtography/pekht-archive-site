@@ -15,4 +15,4 @@ to blue-black water,
 to wind that strips everything. 
 Here — he just walks. 
 The whole world shrunk to one slow breath. 🐻‍❄️ 
-#NatureIsEverything #PolarBear #BornTooLarge #QuietPower https://t.co/1wQtiEQErA
+#NatureIsEverything #PolarBear #BornTooLarge #QuietPower

@@ -16,4 +16,4 @@ hashtags:
   - "Travel"
 ---
 Museum: exists dramatically 🎭 Tourists: "This is why we have trust issues with regular buildings now" 😩 Once you go baroque-revival, you never go back to boring 🏢➡️🏰 #ArchitecturalStandards
-#Moscow #RedSquare #Museum #Architecture #History #Russia #Heritage #Culture #Travel https://t.co/VXBEbBUbMK
+#Moscow #RedSquare #Museum #Architecture #History #Russia #Heritage #Culture #Travel

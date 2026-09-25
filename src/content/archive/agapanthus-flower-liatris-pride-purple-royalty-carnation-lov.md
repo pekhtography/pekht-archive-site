@@ -22,4 +22,4 @@ hashtags:
   - "Softness"
   - "Stems"
 ---
-#Agapanthus #Flower #Liatris #Pride #Purple #Royalty #Carnation #Love #Blue #Fuzzy #Bouquet #Arrangement #Violet #Majesty #Petals #Softness #Stems https://t.co/Hr6a1enGnf
+#Agapanthus #Flower #Liatris #Pride #Purple #Royalty #Carnation #Love #Blue #Fuzzy #Bouquet #Arrangement #Violet #Majesty #Petals #Softness #Stems

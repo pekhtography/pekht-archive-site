@@ -12,4 +12,4 @@ hashtags:
 Petals are messy now, like my tie after a corporate toast 🥂
 Still standing, though 💪
 A bit frayed, but the core is still 100% 24-carat 💛🧔
-#NewYearSurvival #MensLogic #NatureWhisper #GoldenVibe https://t.co/ieEv5Fji9D
+#NewYearSurvival #MensLogic #NatureWhisper #GoldenVibe

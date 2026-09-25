@@ -14,4 +14,4 @@ branches, cold, the whole complicated world🌿
 And then one small warm thing looked back, steady as a held note🐦
 You came to see the bird.
 The bird was already watching you✨
-#NaturePhotography #BirdsOfTwitter #LongTailedTit #FindQuiet https://t.co/ZuRYTikOn8
+#NaturePhotography #BirdsOfTwitter #LongTailedTit #FindQuiet

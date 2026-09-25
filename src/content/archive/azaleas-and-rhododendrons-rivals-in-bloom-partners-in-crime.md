@@ -18,4 +18,4 @@ hashtags:
   - "Lush"
 ---
 Azaleas and rhododendrons: rivals in bloom, partners in crime
-#Azalea #Rhododendron #Blooms #Garden #Nature #Colorful #Spring #Flora #Vibrant #Blossoms #Petals #Lush https://t.co/CXJcWNC6sZ
+#Azalea #Rhododendron #Blooms #Garden #Nature #Colorful #Spring #Flora #Vibrant #Blossoms #Petals #Lush

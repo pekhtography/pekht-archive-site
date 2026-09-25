@@ -21,4 +21,4 @@ hashtags:
   - "Home"
 ---
 In the garden of life, sometimes it’s the shadow that leads the way… but unfortunately, it’s usually to dinner
-#Predator #Hunter #Instinct #Survival #Shadow #Mystery #Crime #Mischief #Snack #Treat #Garden #Oasis #Survival #Thriving #Nest #Home https://t.co/dO5xjqjHut
+#Predator #Hunter #Instinct #Survival #Shadow #Mystery #Crime #Mischief #Snack #Treat #Garden #Oasis #Survival #Thriving #Nest #Home

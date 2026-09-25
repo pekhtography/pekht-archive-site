@@ -13,4 +13,4 @@ hashtags:
   - "Life"
   - "Color"
 ---
-In the garden of dreams, the chrysanthemum shines like the sun #Chrysanthemum #Beauty #Garden #Bloom #Autumn #Elegance #Life #Color https://t.co/FF9PQClw2u
+In the garden of dreams, the chrysanthemum shines like the sun #Chrysanthemum #Beauty #Garden #Bloom #Autumn #Elegance #Life #Color

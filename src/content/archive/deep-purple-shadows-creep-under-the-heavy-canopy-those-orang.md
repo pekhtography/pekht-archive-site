@@ -14,4 +14,4 @@ Under the heavy canopy —
 those orange bells — they just hang there. 
 Static. Copper. 
 Ringing without a single sound... 🔔🕯️
-#NaturePhotography #GardenDesign #FloralDrama #VibrantSoul https://t.co/wlDn4GxCoM
+#NaturePhotography #GardenDesign #FloralDrama #VibrantSoul

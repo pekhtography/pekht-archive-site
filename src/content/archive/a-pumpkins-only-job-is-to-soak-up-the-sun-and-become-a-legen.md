@@ -18,4 +18,4 @@ hashtags:
   - "Pumpkin"
 ---
 A pumpkin's only job is to soak up the sun and become a legend. No hustle, just harvest. 🌞🎃 #PumpkinCore
-#Fall #Autumn #Nature #Photography #PumpkinSeason #HarvestTime #AutumnMagic #GoldenHour #Countryside #CozyVibes #Pumpkin https://t.co/Iq0y2moBAK
+#Fall #Autumn #Nature #Photography #PumpkinSeason #HarvestTime #AutumnMagic #GoldenHour #Countryside #CozyVibes #Pumpkin

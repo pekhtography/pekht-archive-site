@@ -13,4 +13,4 @@ The gold-lit spire doesn't glow — it demands 👑.
 Below, a thousand brake lights answer in red. 
 Some cities whisper. 
 This one never learned how. 🚗🌃
-#MoscowNights #CityVibes #ArchitecturePorn #NightPhotography https://t.co/79wemiefeQ
+#MoscowNights #CityVibes #ArchitecturePorn #NightPhotography

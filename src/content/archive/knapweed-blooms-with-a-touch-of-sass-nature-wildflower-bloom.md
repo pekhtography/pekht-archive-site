@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 Knapweed blooms with a touch of sass
-#Nature #Wildflower #Bloom #Meadow #Purple #Flora #Botany #Ecosystem #Biodiversity #Photography #Outdoors #Beauty https://t.co/jYVmb4McUA
+#Nature #Wildflower #Bloom #Meadow #Purple #Flora #Botany #Ecosystem #Biodiversity #Photography #Outdoors #Beauty

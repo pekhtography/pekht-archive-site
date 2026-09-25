@@ -23,4 +23,4 @@ hashtags:
   - "renewal"
 ---
 The fragrance of the lily of the valley is a soft sonnet, a reminder that sweetness can be found even in the modest corners of life
-#lily #valley #beauty #gem #innocence #fragrance #sonnet #sweetness #modesty #flowers #romantic #gardener #sweet #bees #garden #spring #renewal https://t.co/E7KuYA8OUF
+#lily #valley #beauty #gem #innocence #fragrance #sonnet #sweetness #modesty #flowers #romantic #gardener #sweet #bees #garden #spring #renewal

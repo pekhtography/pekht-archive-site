@@ -11,4 +11,4 @@ hashtags:
 ---
 Moscow in winter: where the fairytale domes whisper “dream” and the Kremlin walls whisper “on your way, comrade.” 
 Choose your soundtrack. 🏰👂 
-#Russia #Moscow #RedSquare #WinterVibes https://t.co/jgAN3Pr1sc
+#Russia #Moscow #RedSquare #WinterVibes

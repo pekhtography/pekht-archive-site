@@ -19,4 +19,4 @@ hashtags:
   - "beautiful"
 ---
 Rhododendron said 'Hold my chlorophyll' and proceeded to steal the show 🍃🎪 Drama queen energy #PlantDiva
-#rhododendron #flowers #blooming #purple #nature #garden #spring #botanical #petals #leaves #photography #beautiful https://t.co/cBhyM0vO0I
+#rhododendron #flowers #blooming #purple #nature #garden #spring #botanical #petals #leaves #photography #beautiful

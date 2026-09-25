@@ -25,4 +25,4 @@ hashtags:
   - "Snow"
 ---
 Winter's frosty breath spirals in the air, playfully teasing the unprepared as it nips and bites with its sharp chill
-#Winter #Season #Breath #Whisper #Chill #Shiver #Frost #Air #Flow #Tease #Play #Unprepared #Surprise #Sharp #Bite #Nip #Cold #Mischief #Snow https://t.co/1sfocSrxpl
+#Winter #Season #Breath #Whisper #Chill #Shiver #Frost #Air #Flow #Tease #Play #Unprepared #Surprise #Sharp #Bite #Nip #Cold #Mischief #Snow

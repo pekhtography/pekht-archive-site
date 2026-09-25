@@ -13,4 +13,4 @@ Every tourist photographs the cathedral.
 The cathedral photographs back — 
 amber light pressed into its tiles like a slow, deliberate wink 😏🏛️ 
 History has excellent timing.
-#StBasils #MoscowMagic #UrbanSoul #SunsetVibes https://t.co/ap9TYSO9Go
+#StBasils #MoscowMagic #UrbanSoul #SunsetVibes

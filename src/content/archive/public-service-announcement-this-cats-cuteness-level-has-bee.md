@@ -19,4 +19,4 @@ hashtags:
   - "breed"
 ---
 Public service announcement: This cat's cuteness level has been classified as a biological weapon! 🔫💕 Side effects include uncontrollable cooing. #WeaponizedCuteness
-#cat #kitten #curly #fluffy #adorable #pet #feline #whiskers #eyes #furry #cute #breed https://t.co/dAMAnBftWb
+#cat #kitten #curly #fluffy #adorable #pet #feline #whiskers #eyes #furry #cute #breed

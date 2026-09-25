@@ -14,4 +14,4 @@ hashtags:
   - "beauty"
   - "discovery"
 ---
-From the sky, the earth looks like a beautiful painting #height #view #perspective #city #mystery #universe #exploration #beauty #discovery https://t.co/OtXydHY6C9
+From the sky, the earth looks like a beautiful painting #height #view #perspective #city #mystery #universe #exploration #beauty #discovery

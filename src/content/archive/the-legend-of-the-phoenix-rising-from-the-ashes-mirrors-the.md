@@ -16,4 +16,4 @@ hashtags:
   - "Dome"
 ---
 The legend of the Phoenix rising from the ashes mirrors the poetic notion that 'the stars are the streetlights of eternity, guiding us through the darkest nights.'
-#Cosmos #Pavilion #Space #Exhibition #Architecture #Night #Lighting #Crowd #Rocket #Dome https://t.co/PYhtEpRwkv
+#Cosmos #Pavilion #Space #Exhibition #Architecture #Night #Lighting #Crowd #Rocket #Dome

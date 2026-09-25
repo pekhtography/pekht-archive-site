@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 The moss phlox moved gracefully with the breeze, dancing to the tune of spring 
-#nature #flower #bloom #pink #petals #green #leaf #growth #earth #garden #spring #beauty https://t.co/6Mg2JtVBKg
+#nature #flower #bloom #pink #petals #green #leaf #growth #earth #garden #spring #beauty

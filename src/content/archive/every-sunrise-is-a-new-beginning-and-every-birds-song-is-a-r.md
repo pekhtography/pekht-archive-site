@@ -22,4 +22,4 @@ hashtags:
   - "Sunlight"
 ---
 Every sunrise is a new beginning, and every bird’s song is a reminder to seize the day, or at least seize a croissant
-#Pied #Flycatcher #Bird #Ficedula #hypoleuca #Nature #Branch #Wildlife #Outdoors #Tree #Songbird #Spring #Twitter #Chirp #Foliage #Sunlight https://t.co/jnWYV2SutP
+#Pied #Flycatcher #Bird #Ficedula #hypoleuca #Nature #Branch #Wildlife #Outdoors #Tree #Songbird #Spring #Twitter #Chirp #Foliage #Sunlight

@@ -12,4 +12,4 @@ hashtags:
 Black void. 
 Pink petals peeled wide like a mouth shouting at nothing. 
 Silence is the only one who knows how to listen to flowers. 🏴‍☠️🤫 
-#Nature #MacroPhotography #DarkBloom #SilentExplosion https://t.co/NiLN8kQrEW
+#Nature #MacroPhotography #DarkBloom #SilentExplosion

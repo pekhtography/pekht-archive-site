@@ -25,4 +25,4 @@ hashtags:
   - "wonder"
 ---
 With a heart as bold as its colors, the Blue Tit flits among the branches, a dazzling acrobat of the woodland realm
-#Eurasian #Adventurer #Blue #Vibrant #Tit #Daredevil #dare #feathers #Fluff #trees #plumage #Beauty #aerial #Performance #joy #Delight #freedom #Wings #wonder https://t.co/lXxw6nYhZq
+#Eurasian #Adventurer #Blue #Vibrant #Tit #Daredevil #dare #feathers #Fluff #trees #plumage #Beauty #aerial #Performance #joy #Delight #freedom #Wings #wonder

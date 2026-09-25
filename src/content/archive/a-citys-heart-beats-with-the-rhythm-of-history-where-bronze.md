@@ -14,4 +14,4 @@ hashtags:
   - "Landmark"
 ---
 A city's heart beats with the rhythm of history, where bronze and iron tell stories of glory and grit
-#History #Architecture #Monument #Heritage #Iconic #Statue #Tower #Landmark https://t.co/PEAmYp2UUJ
+#History #Architecture #Monument #Heritage #Iconic #Statue #Tower #Landmark

@@ -14,4 +14,4 @@ Screaming yellow. 🌷
 One garden, zero editorial meeting — 
 and somehow the result tastes like argument-winning silence. 🖤 
 Pure audacity.
-#tulips #gardenhumor #colorcontrast #flowerpower https://t.co/BuzNxr1uVU
+#tulips #gardenhumor #colorcontrast #flowerpower

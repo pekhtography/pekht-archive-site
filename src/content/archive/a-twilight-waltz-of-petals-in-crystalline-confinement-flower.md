@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 A twilight waltz of petals in crystalline confinement
-#Flowers #Vase #Sunset #Blooms #Petals #Dusk #Cityscape #Elegance #Nature #Urban #Serenity #Beauty https://t.co/st79wQys4q
+#Flowers #Vase #Sunset #Blooms #Petals #Dusk #Cityscape #Elegance #Nature #Urban #Serenity #Beauty

@@ -29,4 +29,4 @@ hashtags:
   - "CulinaryDelight"
   - "Taste"
 ---
-#LeccinumScabrum #Mushroom #BirchBolete #Fungi #Forest #Woodland #Brown #Earthy #Cap #Crown #Grass #Green #Mycorrhizal #Symbiosis #SymbioticRelationship #Delicious #Flavor #Birch #Tree #Nature #BrownCap #PaleStem #CulinaryDelight #Taste https://t.co/Hfm8gOwDue
+#LeccinumScabrum #Mushroom #BirchBolete #Fungi #Forest #Woodland #Brown #Earthy #Cap #Crown #Grass #Green #Mycorrhizal #Symbiosis #SymbioticRelationship #Delicious #Flavor #Birch #Tree #Nature #BrownCap #PaleStem #CulinaryDelight #Taste

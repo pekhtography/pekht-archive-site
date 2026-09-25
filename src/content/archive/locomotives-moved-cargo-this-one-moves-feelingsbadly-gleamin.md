@@ -13,4 +13,4 @@ This one moves feelings—badly 🚂✨
 Gleaming brass, frozen wheels, price tag hidden in wonder-dust.
 We orbit like moths, drawn to the gap between magic believed and the photo op we're in.
 Still damn pretty, though.
-#Nostalgia #PublicArt #ChildhoodMemories https://t.co/aeHjRIvNKr
+#Nostalgia #PublicArt #ChildhoodMemories

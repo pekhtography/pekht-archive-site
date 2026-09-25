@@ -12,4 +12,4 @@ hashtags:
 Cold grey. Glass teeth. 
 Between steel lines, a green ghost flickers. 
 I reached to touch a leaf, but found only a 10% discount sticker. 🏢🤡
-#UrbanLife #GlassArchitecture #CityReflections #VerticalVibes https://t.co/F2uiCgqWXJ
+#UrbanLife #GlassArchitecture #CityReflections #VerticalVibes

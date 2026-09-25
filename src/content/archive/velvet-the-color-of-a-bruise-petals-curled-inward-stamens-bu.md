@@ -13,4 +13,4 @@ Velvet the color of a bruise. 🌿
 Petals curled inward, stamens burning gold inside. Frost on the stem. 
 Every garden center sells it labeled 'ornamental.' ☠️ 
 Cardiac glycosides disagree. 🖤
-#WildBeauty #HelleboreGarden #DarkFloral #WinterBloom https://t.co/iuUlO4KXaq
+#WildBeauty #HelleboreGarden #DarkFloral #WinterBloom

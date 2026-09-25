@@ -8,4 +8,4 @@ hashtags:
   - "SovietNostalgia"
   - "UrbanDecay"
 ---
-If Hogwarts and a Soviet ministry had a baby, it’d look like this. 🏰✨ #ArchitectureLovers #SovietNostalgia #UrbanDecay https://t.co/pkvaYtYRBz
+If Hogwarts and a Soviet ministry had a baby, it’d look like this. 🏰✨ #ArchitectureLovers #SovietNostalgia #UrbanDecay

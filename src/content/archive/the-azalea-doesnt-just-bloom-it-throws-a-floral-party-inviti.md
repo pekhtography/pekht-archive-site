@@ -27,4 +27,4 @@ hashtags:
   - "dreams"
 ---
 The Azalea doesn’t just bloom; it throws a floral party, inviting the bees and birds to dance along!
-#Azalea #Blossom #Bloom #Revelry #Floral #Elegance #Party #Celebration #Bees #Pollinators #Birds #Melody #Dance #Joy #fragrance #garden #exclusivity #diva #nature #colors #dreams https://t.co/G0sppT2F0A
+#Azalea #Blossom #Bloom #Revelry #Floral #Elegance #Party #Celebration #Bees #Pollinators #Birds #Melody #Dance #Joy #fragrance #garden #exclusivity #diva #nature #colors #dreams

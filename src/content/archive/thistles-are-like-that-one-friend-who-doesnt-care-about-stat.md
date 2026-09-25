@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 Thistles are like that one friend who doesn’t care about status; they just bloom wherever!
-#Thistle #Flowers #Nature #Botanical #Plant #Bloom #Wildflower #Floral #Greenery #Garden #Petals #Beauty https://t.co/cR5sU4LDrA
+#Thistle #Flowers #Nature #Botanical #Plant #Bloom #Wildflower #Floral #Greenery #Garden #Petals #Beauty

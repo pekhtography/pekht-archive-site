@@ -15,4 +15,4 @@ hashtags:
   - "timeless"
 ---
 Breaking: Local carpenter discovers that if you carve enough scrollwork, people will still be photographing your house 150 years later 📸🎯 Marketing genius or happy accident? #AccidentalViral
-#architecture #heritage #wooden #historic #traditional #vintage #cultural #timeless https://t.co/E5RbJMMxul
+#architecture #heritage #wooden #historic #traditional #vintage #cultural #timeless

@@ -18,4 +18,4 @@ hashtags:
   - "Botany"
 ---
 Legend says mallow was a favorite of the gods, and indeed, its bloom is a divine sight in any garden
-#Mallow #Flower #Bloom #Nature #Petals #Garden #Summer #White #Blossom #Outdoors #Beauty #Botany https://t.co/vvHlQJvqKm
+#Mallow #Flower #Bloom #Nature #Petals #Garden #Summer #White #Blossom #Outdoors #Beauty #Botany

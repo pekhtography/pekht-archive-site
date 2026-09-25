@@ -18,4 +18,4 @@ hashtags:
   - "magical"
 ---
 In Scottish lore, the thistle is a symbol of resilience and bravery, a plant that stands tall against adversity
-#thistle #creeping #nature #wildflowers #purple #bloom #meadow #sunlight #delicate #whimsical #ethereal #magical https://t.co/QiJJTHJQ9M
+#thistle #creeping #nature #wildflowers #purple #bloom #meadow #sunlight #delicate #whimsical #ethereal #magical

@@ -11,4 +11,4 @@ hashtags:
 The first snow whispers to the autumn sand, "Your time is up." 
 The sand, still warm with golden memories, replies, "I know." 
 And for one breathtaking moment, they dance. ❄️🌞
-#NaturePhotography #WinterWonderland #LiminalSpace https://t.co/DjIEgSjcNV
+#NaturePhotography #WinterWonderland #LiminalSpace

@@ -14,4 +14,4 @@ Trees remember, stay quiet ❄️
 Winter's lesson: proof matters less than presence. 
 You were here. 
 That's the whole poem 🤍✨ 
-#WinterVibes #NaturePhotography #SnowScape #QuietMoments https://t.co/FrxGvljvA1
+#WinterVibes #NaturePhotography #SnowScape #QuietMoments

@@ -13,4 +13,4 @@ hashtags:
   - "grove"
   - "wind"
 ---
-And the grass shall be your blanket #grass #blanket #meadow #wildflowers #sunshine #dream #grove #wind https://t.co/rjjqQJpJw5
+And the grass shall be your blanket #grass #blanket #meadow #wildflowers #sunshine #dream #grove #wind

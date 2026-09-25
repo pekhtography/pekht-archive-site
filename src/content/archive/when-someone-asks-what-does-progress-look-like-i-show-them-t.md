@@ -16,4 +16,4 @@ hashtags:
   - "steel"
 ---
 When someone asks "What does progress look like?" I show them this 🚀 Smooth transitions, bold curves, sky-high ambitions 🌤️ The only way is up, even when you're going sideways 🎢 #ProgressDesign
-#architecture #modern #urban #design #contemporary #city #structure #curve #steel https://t.co/N6e2h1Xerf
+#architecture #modern #urban #design #contemporary #city #structure #curve #steel

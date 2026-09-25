@@ -14,4 +14,4 @@ Stand here 130 Januaries watching crowds freeze for photos under my arches ❄�
 My lights warm nothing.
 My presence warms everything.
 Different physics 💫
-#NewYearMoscow #WinterLights #JanuaryVibes #FestiveMood https://t.co/MV39OAkmbW
+#NewYearMoscow #WinterLights #JanuaryVibes #FestiveMood

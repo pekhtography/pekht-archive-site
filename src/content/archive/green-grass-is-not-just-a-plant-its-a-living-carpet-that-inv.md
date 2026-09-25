@@ -14,4 +14,4 @@ hashtags:
   - "paradise"
   - "home"
 ---
-Green grass is not just a plant; it’s a living carpet that invites joy #fresh #vibrant #green #nature #lawn #sanctuary #garden #paradise #home https://t.co/xUAMb930Ro
+Green grass is not just a plant; it’s a living carpet that invites joy #fresh #vibrant #green #nature #lawn #sanctuary #garden #paradise #home

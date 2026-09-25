@@ -20,4 +20,4 @@ hashtags:
   - "Wildlife"
   - "Fungi"
 ---
-#FlyAgaric #Mushroom #Toxic #Danger #Psychoactive #Nature #Beauty #Forest #Mystery #Seasons #Change #LethalDose #Poisonous #Wildlife #Fungi https://t.co/2KaEBoQLEp
+#FlyAgaric #Mushroom #Toxic #Danger #Psychoactive #Nature #Beauty #Forest #Mystery #Seasons #Change #LethalDose #Poisonous #Wildlife #Fungi

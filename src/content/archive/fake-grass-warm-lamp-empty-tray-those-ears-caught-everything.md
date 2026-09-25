@@ -13,4 +13,4 @@ Fake grass, warm lamp, empty tray — those ears caught everything. 👂
 Crowd turned away. He locked eyes with the lens. 🐾 
 Bred to hunt foxes. 
 Ended up the one being hunted by every camera. 
-#DogsOfTwitter #JackRussellTerrier #CityDog #MainCharacterEnergy https://t.co/flqrngnIzQ
+#DogsOfTwitter #JackRussellTerrier #CityDog #MainCharacterEnergy

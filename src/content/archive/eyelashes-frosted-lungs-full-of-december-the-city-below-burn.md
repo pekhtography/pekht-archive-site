@@ -12,4 +12,4 @@ hashtags:
 Eyelashes frosted, lungs full of December 🌬️ — 
 the city below burning like it swallowed the sun and forgot to exhale. 
 Old fire. New cold. ❄️🌃
-#NightPhotography #WinterCityscape #GoldenDomes #FrozenLight https://t.co/A70RAthM3b
+#NightPhotography #WinterCityscape #GoldenDomes #FrozenLight

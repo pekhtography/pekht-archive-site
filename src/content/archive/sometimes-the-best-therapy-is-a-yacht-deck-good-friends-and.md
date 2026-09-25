@@ -19,4 +19,4 @@ hashtags:
   - "sunshine"
 ---
 Sometimes the best therapy is a yacht deck, good friends, and endless summer vibes ⛵️✨ Nothing beats those moments when time stands still #YachtLifeGoals
-#yacht #luxury #summer #friends #boating #lifestyle #relaxation #waterfront #leisure #cityscape #elegance #sunshine https://t.co/XcN1mnYErz
+#yacht #luxury #summer #friends #boating #lifestyle #relaxation #waterfront #leisure #cityscape #elegance #sunshine

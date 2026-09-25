@@ -18,4 +18,4 @@ hashtags:
   - "Scenery"
 ---
 Did you know that the Moscow University is not just a school but a piece of art? Standing tall against the lush greenery, it reminds us of the beauty of education!🌳📚 #KnowledgeIsPower
-#Moscow #University #River #Nature #Sky #Building #Park #Cityscape #Landscape #Travel #Scenery https://t.co/udNlDMR0v7
+#Moscow #University #River #Nature #Sky #Building #Park #Cityscape #Landscape #Travel #Scenery

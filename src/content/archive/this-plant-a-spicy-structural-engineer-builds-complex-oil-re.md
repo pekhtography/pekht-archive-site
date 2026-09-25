@@ -13,4 +13,4 @@ This plant —
 a spicy structural engineer — builds complex oil reservoirs. 
 Skin reacts. Sunlight activates the volatile chemistry. 
 A burning touch remains... 🌿☀️
-#NatureIsMetal #PlantParent #BotanicalCuriosity #Electrifying https://t.co/kkacT5Dfj7
+#NatureIsMetal #PlantParent #BotanicalCuriosity #Electrifying

@@ -21,4 +21,4 @@ hashtags:
   - "simplicity"
 ---
 Nurtured by the caress of the morning light, pink roses embody the tender blush of dawn, adeptly coloring the world with the enchanting promise of a fresh awakening
-#rose #love #pink #garden #life #hope #affection #sun #dawn #promise #melody #memories #sigh #beauty #simplicity https://t.co/f8CQIM5oza
+#rose #love #pink #garden #life #hope #affection #sun #dawn #promise #melody #memories #sigh #beauty #simplicity

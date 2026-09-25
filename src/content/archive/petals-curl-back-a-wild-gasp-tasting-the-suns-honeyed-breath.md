@@ -14,4 +14,4 @@ Freckles -
 dark, velvet scarabs - 
 dodge the jealous hum of pink petals. 
 And this scorching scent drifts...
-#Nature #GardenDesign #BoldBeauty #WildSpirit https://t.co/1sDHObxI5x
+#Nature #GardenDesign #BoldBeauty #WildSpirit

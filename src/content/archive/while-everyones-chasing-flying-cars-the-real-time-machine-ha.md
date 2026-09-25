@@ -12,4 +12,4 @@ hashtags:
   - "retro"
 ---
 While everyone's chasing flying cars, the real time machine has been running on tracks all along 🕰️ This beauty doesn't need WiFi to connect people - just 600 volts and a dream 🔌 Welcome aboard the nostalgia express! 🎪 #RetroFuturism
-#tram #vintage #transport #city #retro https://t.co/DYBTjLDGvg
+#tram #vintage #transport #city #retro

@@ -21,4 +21,4 @@ hashtags:
   - "River"
   - "Green"
 ---
-#Wetland #Nature #Reeds #Delta #Confluence #Water #Life #Grass #Growth #Wildlife #Diversity #Tranquility #Bulrush #Resilience #River #Green https://t.co/HWYxtImWyb
+#Wetland #Nature #Reeds #Delta #Confluence #Water #Life #Grass #Growth #Wildlife #Diversity #Tranquility #Bulrush #Resilience #River #Green

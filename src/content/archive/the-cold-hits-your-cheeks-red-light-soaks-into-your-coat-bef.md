@@ -14,4 +14,4 @@ Red light soaks into your coat before your eyes catch up.
 Two steps in, the street disappears. ✨🔴 
 You didn't visit the decoration. 
 You became it.
-#Christmas #WinterFestival #ChristmasDecor #HolidayVibes https://t.co/OdNteCNq0g
+#Christmas #WinterFestival #ChristmasDecor #HolidayVibes

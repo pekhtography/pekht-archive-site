@@ -15,4 +15,4 @@ hashtags:
   - "Beauty"
 ---
 Under the enchanting glow, reality and fantasy dance together, painting a canvas of wonder that stirs the soul 
-#Exhibition #Night #Lights #Garden #Flowers #Architecture #Culture #Heritage #Beauty https://t.co/tEOZkP1XjH
+#Exhibition #Night #Lights #Garden #Flowers #Architecture #Culture #Heritage #Beauty

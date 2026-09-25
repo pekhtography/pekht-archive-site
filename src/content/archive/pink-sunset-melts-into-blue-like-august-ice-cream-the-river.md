@@ -14,4 +14,4 @@ The river hoards stolen colors — greedy as all beauty. 🌊
 Twilight: 
 sky teaches water to disappear, water teaches sky patience. 
 Moscow watches. 
-#GoldenHour #UrbanSilhouettes #MoscowContrast #TwilightMood https://t.co/G0lzkqduDv
+#GoldenHour #UrbanSilhouettes #MoscowContrast #TwilightMood

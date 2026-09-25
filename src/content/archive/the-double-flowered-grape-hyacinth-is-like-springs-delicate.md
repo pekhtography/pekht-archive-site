@@ -12,4 +12,4 @@ hashtags:
   - "flora"
 ---
 The double-flowered grape hyacinth is like spring’s delicate symphony 🌸🎶 — each tiny floret playing its part in a purple masterpiece. Even as it fades, its beauty lingers in the memory of May’s gentle breeze🌬️💜. #SpringSymphonyInPurple
-#muscari #garden #flower #nature #flora https://t.co/51fuftoNXW
+#muscari #garden #flower #nature #flora

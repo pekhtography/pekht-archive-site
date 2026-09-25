@@ -16,4 +16,4 @@ hashtags:
   - "Discover"
 ---
 Like a time machine, this arch transports you to eras of grandeur and stories untold
-#Architecture #History #Culture #Travel #Explore #Heritage #Landmark #Journey #Adventure #Discover https://t.co/53TNq29btN
+#Architecture #History #Culture #Travel #Explore #Heritage #Landmark #Journey #Adventure #Discover

@@ -17,4 +17,4 @@ hashtags:
   - "Allure"
 ---
 A cat's mismatched eyes are colorful galaxies, shining with quirky charm and delightful mystery.
-#Eyes #Cat #Colorful #Mystery #Gaze #Charm #Feline #Diversity #Enigma #Stare #Allure https://t.co/BBb0eGNav5
+#Eyes #Cat #Colorful #Mystery #Gaze #Charm #Feline #Diversity #Enigma #Stare #Allure

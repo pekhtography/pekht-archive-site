@@ -18,4 +18,4 @@ hashtags:
   - "Fresh"
 ---
 Every protea bloom is a work of art, created by nature's brush, showcasing wild beauty 
-#Protea #Nature #Flower #Bloom #Botanical #Garden #Wildlife #Elegance #Petals #Exotic #Green #Fresh https://t.co/a2G2RrZkyX
+#Protea #Nature #Flower #Bloom #Botanical #Garden #Wildlife #Elegance #Petals #Exotic #Green #Fresh

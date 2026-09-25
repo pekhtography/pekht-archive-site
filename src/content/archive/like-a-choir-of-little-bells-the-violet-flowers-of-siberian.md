@@ -18,4 +18,4 @@ hashtags:
   - "happiness"
 ---
 Like a choir of little bells, the violet flowers of Siberian squill dance in the breeze, celebrating life's simple joys and enchanting hearts with every bloom
-#siberiansquill #bellshaped #tinkle #violet #purple #spring #renewal #bloom #flourish #resilience #beauty #happiness https://t.co/fkw3hNflJn
+#siberiansquill #bellshaped #tinkle #violet #purple #spring #renewal #bloom #flourish #resilience #beauty #happiness

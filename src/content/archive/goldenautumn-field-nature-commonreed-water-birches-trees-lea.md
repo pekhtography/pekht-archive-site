@@ -27,4 +27,4 @@ hashtags:
   - "Growth"
   - "Season"
 ---
-#GoldenAutumn #Field #Nature #CommonReed #Water #Birches #Trees #Leaves #Change #Colors #Beauty #Serenity #Swaying #Movement #Autumn #Golden #Wealth #Landscape #Vibrancy #Transformation #Growth #Season https://t.co/L7gBpRMXxE
+#GoldenAutumn #Field #Nature #CommonReed #Water #Birches #Trees #Leaves #Change #Colors #Beauty #Serenity #Swaying #Movement #Autumn #Golden #Wealth #Landscape #Vibrancy #Transformation #Growth #Season

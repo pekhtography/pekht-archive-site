@@ -22,4 +22,4 @@ hashtags:
   - "shenanigans"
 ---
 After the storm, the streets were transformed into gleaming waterways, inviting adventure and mischief
-#Storm #Adventure #Streets #Flood #Ocean #Residents #Homes #Rain #Wind #Whirlwind #tempest #pavement #waterways #river #mischief #shenanigans https://t.co/g2sDs4N4Da
+#Storm #Adventure #Streets #Flood #Ocean #Residents #Homes #Rain #Wind #Whirlwind #tempest #pavement #waterways #river #mischief #shenanigans

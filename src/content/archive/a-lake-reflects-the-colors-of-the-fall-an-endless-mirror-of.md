@@ -12,4 +12,4 @@ hashtags:
   - "water"
   - "colors"
 ---
-A lake reflects the colors of the fall, an endless mirror of life's palette #forest #tranquility #lake #reflection #autumn #water #colors https://t.co/jjuYGCs7qA
+A lake reflects the colors of the fall, an endless mirror of life's palette #forest #tranquility #lake #reflection #autumn #water #colors

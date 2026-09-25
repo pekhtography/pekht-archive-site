@@ -18,4 +18,4 @@ hashtags:
   - "Nook"
 ---
 As light flirts with the walls, the labyrinth unveils its opulent mysteries
-#Labyrinth #Journey #Light #Glow #Shadows #Mystery #Stories #Tales #Dance #Movement #Corners #Nook https://t.co/wN0Op0vNn1
+#Labyrinth #Journey #Light #Glow #Shadows #Mystery #Stories #Tales #Dance #Movement #Corners #Nook

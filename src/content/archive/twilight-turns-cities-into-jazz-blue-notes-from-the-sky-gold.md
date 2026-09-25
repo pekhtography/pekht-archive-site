@@ -8,4 +8,4 @@ hashtags:
   - "BlueHour"
   - "CityVibes"
 ---
-Twilight turns cities into jazz 🎷 — blue notes from the sky, golden riffs off stone, and footsteps you'll never catch in the same rhythm twice 🌃✨ #Architecture #BlueHour #CityVibes https://t.co/ehD15RAZn1
+Twilight turns cities into jazz 🎷 — blue notes from the sky, golden riffs off stone, and footsteps you'll never catch in the same rhythm twice 🌃✨ #Architecture #BlueHour #CityVibes

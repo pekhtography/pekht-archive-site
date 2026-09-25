@@ -14,4 +14,4 @@ Saw the red — recognised his own — showed up.
 In Russian, "красный" means both red and beautiful. 
 The dragon knew this. 
 The dragon always knew. 🐉✨
-#ChineseNewYear #RedSquare #DragonYear #FestiveChaos https://t.co/ODOg1tVYKF
+#ChineseNewYear #RedSquare #DragonYear #FestiveChaos

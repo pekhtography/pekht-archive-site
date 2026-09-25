@@ -14,4 +14,4 @@ Red star above a snow-covered roof. 😂
 Someone left the thermostat of history stuck between -15°C 
 and the 16th century. 
 This city cannot decide — and it's perfect. 🔥
-#WinterVibes #MoscowSunset #RooftopMoscow #FireAndIce https://t.co/NXzggKGQUD
+#WinterVibes #MoscowSunset #RooftopMoscow #FireAndIce

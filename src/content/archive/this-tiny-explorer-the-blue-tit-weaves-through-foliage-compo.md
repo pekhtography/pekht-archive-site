@@ -16,4 +16,4 @@ hashtags:
   - "sky"
 ---
 This tiny explorer, the blue tit, weaves through foliage, composing a treasure map of adventure and wonder
-#bluetit #blue #tit #garden #adventure #colors #joy #treasure #mischief #sky https://t.co/6MLguqtkbW
+#bluetit #blue #tit #garden #adventure #colors #joy #treasure #mischief #sky

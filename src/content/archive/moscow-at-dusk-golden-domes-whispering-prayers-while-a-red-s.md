@@ -12,4 +12,4 @@ hashtags:
 Moscow at dusk: 
 golden domes whispering prayers while a red star watches from above 🔥 
 History never sleeps here, it just changes its hat 🏛️
-#Moscow #Russia #GoldenDomes #CityVibes https://t.co/LFNRW1vawE
+#Moscow #Russia #GoldenDomes #CityVibes

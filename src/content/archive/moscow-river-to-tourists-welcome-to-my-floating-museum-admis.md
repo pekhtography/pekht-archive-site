@@ -14,4 +14,4 @@ hashtags:
   - "travel"
 ---
 Moscow river to tourists: "Welcome to my floating museum, admission includes mild seasickness and existential clarity" 🎪 Best deal in town, honestly 🎫 Side effects may include sudden urge to buy postcards 📮 #FloatingMuseum
-#river #boat #Moscow #tourism #summer #cruise #travel https://t.co/sUHZv2nLtz
+#river #boat #Moscow #tourism #summer #cruise #travel

@@ -22,4 +22,4 @@ hashtags:
   - "Wealth"
 ---
 A miniature monarch, the duck symbolizes luxury, elegance, and the enduring magic of a comforting experience, a safe space in a chaotic world
-#Luxury #Duck #Quack #Princess #Royalty #PreOwned #Secondhand #Joy #Happiness #Dreams #Bath #Shower #Pleasure #Enjoyment #Opulent #Wealth https://t.co/t1A1LlOQTQ
+#Luxury #Duck #Quack #Princess #Royalty #PreOwned #Secondhand #Joy #Happiness #Dreams #Bath #Shower #Pleasure #Enjoyment #Opulent #Wealth

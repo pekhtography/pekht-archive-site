@@ -11,4 +11,4 @@ hashtags:
 ---
 Floating through stone history, this metallic whale swallows crowds while velvet purple petals watch from the balcony, smelling of salty spray and cheap gin. 
 Aquatic banquet. 🥂🌊
-#CityLife #RiverCruise #FloatingParty #SummerVibes https://t.co/HkgbcLicSp
+#CityLife #RiverCruise #FloatingParty #SummerVibes

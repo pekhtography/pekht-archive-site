@@ -28,4 +28,4 @@ hashtags:
   - "calm"
 ---
 The lake was smooth like my excuses, reflecting the chaos of autumn without a ripple
-#autumn #lake #smooth #mirror #stillness #nature #hues #colors #palette #trees #leaves #floaters #wind #reflection #feelings #depths #gold #crimson #chaos #tranquility #ripple #calm https://t.co/ee62VqMMEQ
+#autumn #lake #smooth #mirror #stillness #nature #hues #colors #palette #trees #leaves #floaters #wind #reflection #feelings #depths #gold #crimson #chaos #tranquility #ripple #calm

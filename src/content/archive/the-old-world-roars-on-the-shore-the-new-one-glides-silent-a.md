@@ -14,4 +14,4 @@ the new one glides silent across the river.
 One leaves a wake of noise, 
 the other — a shimmer of pure light. 
 Progress is a cat, not a lion 🐱✨ 
-#FutureOfTransport #ElectricBoats #SilentRevolution #UrbanSerenity https://t.co/aRj6soXwGY
+#FutureOfTransport #ElectricBoats #SilentRevolution #UrbanSerenity

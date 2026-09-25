@@ -22,4 +22,4 @@ hashtags:
   - "plant"
 ---
 Leopard’s Bane: a plant that not only makes your garden pop but also doubles as a bouncer for pesky negative energies!
-#LeopardsBane #Garden #Golden #Resilience #Guardians #Strength #Beauty #Hues #Specters #Bouncer #NegativeEnergies #Vibes #Sanctuary #Fortress #Joy #plant https://t.co/w1wFJORzeC
+#LeopardsBane #Garden #Golden #Resilience #Guardians #Strength #Beauty #Hues #Specters #Bouncer #NegativeEnergies #Vibes #Sanctuary #Fortress #Joy #plant

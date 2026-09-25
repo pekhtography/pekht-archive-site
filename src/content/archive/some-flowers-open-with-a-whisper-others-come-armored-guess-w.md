@@ -18,4 +18,4 @@ hashtags:
   - "flora"
 ---
 Some flowers open with a whisper, others come armored. Guess which one wins more battles
-#thistle #wildflower #nature #purple #meadow #fluffy #plant #summer #botany #bloom #weeds #flora https://t.co/7PqHBvXW73
+#thistle #wildflower #nature #purple #meadow #fluffy #plant #summer #botany #bloom #weeds #flora

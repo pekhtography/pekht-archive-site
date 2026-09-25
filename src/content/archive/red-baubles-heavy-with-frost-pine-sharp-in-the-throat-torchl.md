@@ -12,4 +12,4 @@ torchlight traded for ten thousand LEDs—
 and still two figures pass through the gate the same way Romans did,
 chin down, breath white, carrying last year like a coat.❄️🎄
 Two thousand years of the same walk
-#NewYear #Winter https://t.co/bNJdNwKV64
+#NewYear #Winter

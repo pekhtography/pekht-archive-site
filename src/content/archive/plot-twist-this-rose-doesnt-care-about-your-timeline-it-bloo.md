@@ -19,4 +19,4 @@ hashtags:
   - "magenta"
 ---
 Plot twist: This rose doesn't care about your timeline 🕐 It bloomed when it was ready, not when you expected it to 🌹 Patience pays off beautifully 💎 #DivineTiming
-#rose #pink #bloom #garden #petals #nature #flower #beauty #vibrant #photography #botanical #magenta https://t.co/16raDGO65b
+#rose #pink #bloom #garden #petals #nature #flower #beauty #vibrant #photography #botanical #magenta

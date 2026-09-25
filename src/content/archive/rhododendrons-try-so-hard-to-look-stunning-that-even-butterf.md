@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 Rhododendrons try so hard to look stunning that even butterflies envy their outfits! 
-#Rhododendron #Blooms #Nature #Garden #Spring #Flora #Petals #Green #Purple #Growth #Leaves #Beauty https://t.co/QlLoaQxkvz
+#Rhododendron #Blooms #Nature #Garden #Spring #Flora #Petals #Green #Purple #Growth #Leaves #Beauty

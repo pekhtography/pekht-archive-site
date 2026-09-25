@@ -14,4 +14,4 @@ all that orange heat pressing against cold blue,
 zero agreement, full contact. ☁️ 
 Thermodynamics disagrees with aesthetics. 
 Every. Single. Evening. 🌆
-#GoldenHour #SkyFire #NatureUnfiltered #Wanderlust https://t.co/7M1vztryq0
+#GoldenHour #SkyFire #NatureUnfiltered #Wanderlust

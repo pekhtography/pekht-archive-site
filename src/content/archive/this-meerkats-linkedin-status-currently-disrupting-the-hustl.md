@@ -19,4 +19,4 @@ hashtags:
   - "conservation"
 ---
 This meerkat's LinkedIn status: "Currently disrupting the hustle culture industry" 💻🔥 His revolutionary approach? Actually resting when tired! 🛌⚡ #DisruptiveResting
-#meerkat #wildlife #nature #animals #photography #safari #desert #cute #mammals #africa #behavior #conservation https://t.co/C2Yl3msGYq
+#meerkat #wildlife #nature #animals #photography #safari #desert #cute #mammals #africa #behavior #conservation

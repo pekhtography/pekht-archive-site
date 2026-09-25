@@ -13,4 +13,4 @@ Orange sail-wings catching cold sun ☀️ —
 meanwhile his entire crew arrived in beige. 
 One of them is clearly a Renaissance ceiling. 
 The branch held its breath. 🦆
-#NaturePhotography #MandarinDuck #OverdressedForThis #MainCharacterEnergy https://t.co/Ljrhizkmjq
+#NaturePhotography #MandarinDuck #OverdressedForThis #MainCharacterEnergy

@@ -19,4 +19,4 @@ hashtags:
   - "faith"
 ---
 Dear skyscrapers: Meet your landlord 👑🏢 Been here longer, staying forever 💎 Plot twist: Size doesn't matter when you've got soul 🔥 #DivineRealEstate
-#church #architecture #orthodox #domes #contrast #modern #traditional #golden #skyscrapers #urban #history #faith https://t.co/IcbRuuloQp
+#church #architecture #orthodox #domes #contrast #modern #traditional #golden #skyscrapers #urban #history #faith

@@ -16,4 +16,4 @@ hashtags:
   - "Landmark"
 ---
 Under the watchful gaze of statues, the Exhibition Palace tells stories of triumph and progress, serving as a beacon of inspiration for generations
-#Exhibition #Crowd #Stage #Event #Architecture #History #Culture #Gathering #Public #Landmark https://t.co/mrnQcx58qR
+#Exhibition #Crowd #Stage #Event #Architecture #History #Culture #Gathering #Public #Landmark

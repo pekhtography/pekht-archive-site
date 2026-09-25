@@ -14,4 +14,4 @@ Petals disagree.
 Five days of existence and they choose hot magenta — 
 the loudest color a shadow has ever had to tolerate. 
 Botanical defiance. 🖤
-#SpringBlossom #MacroPhotography #FloralArt #PetalMood https://t.co/tzHVMEjsK6
+#SpringBlossom #MacroPhotography #FloralArt #PetalMood

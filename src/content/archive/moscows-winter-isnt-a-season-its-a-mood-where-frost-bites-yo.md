@@ -8,4 +8,4 @@ hashtags:
   - "MagicMoscow"
   - "UrbanMagic"
 ---
-Moscow's winter isn't a season, it's a mood. Where frost bites your cheeks while golden lights kiss ancient stones. A glamorous, frozen revolution. ❄️⭐️🏛️ #WinterWonderland #MagicMoscow #UrbanMagic https://t.co/Xo52hoos8V
+Moscow's winter isn't a season, it's a mood. Where frost bites your cheeks while golden lights kiss ancient stones. A glamorous, frozen revolution. ❄️⭐️🏛️ #WinterWonderland #MagicMoscow #UrbanMagic

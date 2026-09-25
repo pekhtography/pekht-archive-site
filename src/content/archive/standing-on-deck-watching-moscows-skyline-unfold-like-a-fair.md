@@ -12,4 +12,4 @@ hashtags:
   - "ship"
 ---
 Standing on deck watching Moscow's skyline unfold like a fairytale 🌅 The Severny Terminal's spire piercing through cotton candy clouds reminds me why river cruises are pure magic ✨ Sometimes the journey IS the destination🚢 #RiverCruiseMagic
-#cruise #river #moscow #russia #ship https://t.co/M1YWhdTj2X
+#cruise #river #moscow #russia #ship

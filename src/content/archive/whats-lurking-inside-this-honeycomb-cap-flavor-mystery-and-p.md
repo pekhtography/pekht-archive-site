@@ -18,4 +18,4 @@ hashtags:
   - "earthy"
 ---
 What’s lurking inside this honeycomb cap? Flavor, mystery, and possibly a tiny elf
-#morel #mushroom #fungi #forest #edible #wild #nature #spring #gourmet #foraging #organic #earthy https://t.co/CZyW6ZwVKd
+#morel #mushroom #fungi #forest #edible #wild #nature #spring #gourmet #foraging #organic #earthy

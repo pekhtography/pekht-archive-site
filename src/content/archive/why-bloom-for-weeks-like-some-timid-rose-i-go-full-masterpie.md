@@ -14,4 +14,4 @@ I go full masterpiece mode for one epic day.
 It's not a short life—it's a concentrated one. 
 Maximum impact, minimum maintenance. 
 Daylily energy 💥🎯
-#Vibe #GardeningMemes #CarpeDiem #OneDayGlory https://t.co/gVaGBhTyGC
+#Vibe #GardeningMemes #CarpeDiem #OneDayGlory

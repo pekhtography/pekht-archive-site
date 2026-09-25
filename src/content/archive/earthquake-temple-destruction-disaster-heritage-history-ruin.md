@@ -20,4 +20,4 @@ hashtags:
   - "Loss"
   - "Prayers"
 ---
-#Earthquake #Temple #Destruction #Disaster #Heritage #History #Ruins #Tragedy #Asia #Buddhist #Collapse #Cultural #Devastation #Loss #Prayers https://t.co/JXdzgUZj4x
+#Earthquake #Temple #Destruction #Disaster #Heritage #History #Ruins #Tragedy #Asia #Buddhist #Collapse #Cultural #Devastation #Loss #Prayers

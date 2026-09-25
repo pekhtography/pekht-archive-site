@@ -20,4 +20,4 @@ hashtags:
   - "Chill"
 ---
 In winter's icy grasp, meadows and forests lay dormant, dreaming in a silken white shroud
-#Meadows #Fields #Forests #Trees #Snow #Blanket #Dormant #Sleeping #Seeds #Hope #Tracks #Stories #Winter #Chill https://t.co/RJmbKF02FJ
+#Meadows #Fields #Forests #Trees #Snow #Blanket #Dormant #Sleeping #Seeds #Hope #Tracks #Stories #Winter #Chill

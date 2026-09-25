@@ -14,4 +14,4 @@ Violet petals — the smoke around them. 🌸
 You think you're looking at a flower. 
 You're actually watching a slow explosion that started three weeks ago 
 and hasn't stopped. 💜
-#FlowerMacro #ClematisBloom #GardenMoments #NatureLovers https://t.co/6cc3VZOe3L
+#FlowerMacro #ClematisBloom #GardenMoments #NatureLovers

@@ -10,4 +10,4 @@ hashtags:
 ---
 This street is gaslighting me into thinking freezing to death is romantic. 🕯️🥶 
 The aesthetic says “19th-century poetry,” but the temperature says “survival mode.” 
-#UrbanWinter #NightVibes #LonelyBeautiful https://t.co/RUqR7Pjr0W
+#UrbanWinter #NightVibes #LonelyBeautiful

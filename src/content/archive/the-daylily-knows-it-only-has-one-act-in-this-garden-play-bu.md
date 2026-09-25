@@ -28,4 +28,4 @@ hashtags:
   - "power"
 ---
 The daylily knows it only has one act in this garden play, but what a show it puts on!
-#daylily #flower #blooms #day #shines #radiance #lifetime #beauty #slight #magic #garden #enchantment #ephemeral #nature #theater #treasure #moment #show #quality #spotlight #wonder #power https://t.co/SChmRFJbE3
+#daylily #flower #blooms #day #shines #radiance #lifetime #beauty #slight #magic #garden #enchantment #ephemeral #nature #theater #treasure #moment #show #quality #spotlight #wonder #power

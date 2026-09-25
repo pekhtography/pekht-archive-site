@@ -27,4 +27,4 @@ hashtags:
   - "Life"
 ---
 A canopy of twinkling baubles hangs above, like a starry sky come down to celebrate the joy of New Year's magic
-#Baubles #Glitter #Icicles #Chill #Lights #Glow #Gifts #Surprise #Joy #Cheer #NewYear #Celebration #Magic #Wonder #Stars #Dreams #Ornaments #Wishes #Hope #Colors #Life https://t.co/ftnftLIOxl
+#Baubles #Glitter #Icicles #Chill #Lights #Glow #Gifts #Surprise #Joy #Cheer #NewYear #Celebration #Magic #Wonder #Stars #Dreams #Ornaments #Wishes #Hope #Colors #Life

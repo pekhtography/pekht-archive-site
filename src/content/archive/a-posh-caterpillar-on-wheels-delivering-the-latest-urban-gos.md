@@ -22,4 +22,4 @@ hashtags:
   - "train"
 ---
 A posh caterpillar on wheels, delivering the latest urban gossip at 100 miles per hour!
-#Caterpillar #Luxury #Wheels #Gossip #Urban #Speed #Scandal #Juicy #Tidbits #Secrets #posh #motion #cityscape #intrigue #haste #train https://t.co/INRjyMEhyh
+#Caterpillar #Luxury #Wheels #Gossip #Urban #Speed #Scandal #Juicy #Tidbits #Secrets #posh #motion #cityscape #intrigue #haste #train

@@ -19,4 +19,4 @@ hashtags:
   - "romantic"
 ---
 Nature's confetti after the apple trees' grand finale 🌸✨ My yard looks like it hosted the most elegant garden party ever 🎉💕 #AppleBlossomMagic
-#petals #apple #blossoms #spring #yard #white #beautiful #nature #falling #flowers #garden #romantic https://t.co/iGgmXRhACW
+#petals #apple #blossoms #spring #yard #white #beautiful #nature #falling #flowers #garden #romantic

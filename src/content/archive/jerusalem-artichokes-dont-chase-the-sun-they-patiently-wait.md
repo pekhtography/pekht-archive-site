@@ -20,4 +20,4 @@ hashtags:
   - "Family"
 ---
 Jerusalem artichokes don't chase the sun; they patiently wait for their moment to shine
-#Jerusalem #Artichoke #Nature #Yellow #Bloom #Petals #Garden #Wildflower #Flower #Beauty #Outdoors #Golden #Sunflower #Family https://t.co/BEIqrIzvLm
+#Jerusalem #Artichoke #Nature #Yellow #Bloom #Petals #Garden #Wildflower #Flower #Beauty #Outdoors #Golden #Sunflower #Family

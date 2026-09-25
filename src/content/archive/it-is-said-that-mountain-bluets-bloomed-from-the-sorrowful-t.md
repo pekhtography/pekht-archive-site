@@ -18,4 +18,4 @@ hashtags:
   - "Botany"
 ---
 It is said that Mountain bluets bloomed from the sorrowful tears of nymphs longing for love 
-#Centaurea #Montana #Bloom #Purple #Nature #Flower #Wildflower #Petals #Garden #Meadow #Blossom #Botany https://t.co/F2VabK29Jl
+#Centaurea #Montana #Bloom #Purple #Nature #Flower #Wildflower #Petals #Garden #Meadow #Blossom #Botany

@@ -13,4 +13,4 @@ One stem remembers summer by refusing to lie down 🖤
 Snow erases everything except what stays upright 🗿 
 Dignity isn't blooming anymore — 
 it's the angle you hold when there's nothing left. 
-#Solitude #WinterMinimalism #StandingAlone #QuietResilience https://t.co/0gu8MdAlsr
+#Solitude #WinterMinimalism #StandingAlone #QuietResilience

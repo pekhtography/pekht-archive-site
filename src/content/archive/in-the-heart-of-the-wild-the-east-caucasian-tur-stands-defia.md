@@ -16,4 +16,4 @@ hashtags:
   - "biodiversity"
 ---
 In the heart of the wild, the East Caucasian Tur stands defiantly against the winds of time
-#EastCaucasianTur #wild #resilience #strength #mountains #heights #nature #wilderness #wildlife #biodiversity https://t.co/jeLy2oKhGN
+#EastCaucasianTur #wild #resilience #strength #mountains #heights #nature #wilderness #wildlife #biodiversity

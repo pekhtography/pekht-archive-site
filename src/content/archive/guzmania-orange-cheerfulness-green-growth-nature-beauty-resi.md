@@ -24,4 +24,4 @@ hashtags:
   - "Light"
   - "Warmth"
 ---
-#Guzmania #Orange #Cheerfulness #Green #Growth #Nature #Beauty #Resilience #Bloom #GuzmaniaOstara #Plant #Color #Vibrance #Leaves #Petals #Garden #Sunshine #Light #Warmth https://t.co/Ay8Xe8z1uR
+#Guzmania #Orange #Cheerfulness #Green #Growth #Nature #Beauty #Resilience #Bloom #GuzmaniaOstara #Plant #Color #Vibrance #Leaves #Petals #Garden #Sunshine #Light #Warmth

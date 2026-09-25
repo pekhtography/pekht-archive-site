@@ -25,4 +25,4 @@ hashtags:
   - "CloveLikeShape"
   - "Uniqueness"
 ---
-#Rose #Beauty #Grootendorst #Pink #Petals #Delight #Green #Leaves #Vitality #ParkRose #Nature #Hybrid #Diversity #RosaRugosa #Resilience #Blooms #RaspberryRed #Vibrancy #CloveLikeShape #Uniqueness https://t.co/0lNDOwagKp
+#Rose #Beauty #Grootendorst #Pink #Petals #Delight #Green #Leaves #Vitality #ParkRose #Nature #Hybrid #Diversity #RosaRugosa #Resilience #Blooms #RaspberryRed #Vibrancy #CloveLikeShape #Uniqueness

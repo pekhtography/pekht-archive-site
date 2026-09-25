@@ -22,4 +22,4 @@ hashtags:
   - "Force"
 ---
 Evacuated from our abodes, we become temporary nomads in a sea of uncertainty, each raindrop a reminder of nature's power
-#Floods #Homes #Shelter #Storm #Tempest #Rain #Wind #Evacuated #Emergency #Aquatic #Uncertainty #Raindrop #Nature #Wild #Power #Force https://t.co/yQUgsA7ssh
+#Floods #Homes #Shelter #Storm #Tempest #Rain #Wind #Evacuated #Emergency #Aquatic #Uncertainty #Raindrop #Nature #Wild #Power #Force

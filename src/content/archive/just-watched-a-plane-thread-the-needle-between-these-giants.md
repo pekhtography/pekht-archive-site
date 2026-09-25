@@ -12,4 +12,4 @@ hashtags:
   - "flight"
 ---
 Just watched a plane thread the needle between these giants 🏢 Sometimes the best views come from looking up instead of straight ahead ✈️ Urban canyons remind us we're all just passengers in this concrete jungle 🌆 #UrbanAviation
-#skyscraper #airplane #urban #architecture #flight https://t.co/TyQKtAoj6P
+#skyscraper #airplane #urban #architecture #flight

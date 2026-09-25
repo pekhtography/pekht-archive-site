@@ -12,4 +12,4 @@ hashtags:
 Warm fur in a sun patch ☀️ nose lifted, eyes closed.
 The room stays cold.
 One small body just took all the heat. 🐱
-#LifeMoments #CatBehavior #SunBathing #PureBliss https://t.co/yKkl3nOlUA
+#LifeMoments #CatBehavior #SunBathing #PureBliss

@@ -27,4 +27,4 @@ hashtags:
   - "Nature"
 ---
 Touched by winter's breath crowns of trees weave a lacework pattern on the azure canvas of the sky
-#Frost #Chill #Trees #Lacework #Delicate #Azure #Sky #Canvas #Art #Pattern #Design #Winter #Cold #Tapestry #Weave #Crystal #Sparkle #Branches #Ice #Crowns #Nature #Azure https://t.co/NrS3vTRiD3
+#Frost #Chill #Trees #Lacework #Delicate #Azure #Sky #Canvas #Art #Pattern #Design #Winter #Cold #Tapestry #Weave #Crystal #Sparkle #Branches #Ice #Crowns #Nature #Azure

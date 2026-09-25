@@ -13,4 +13,4 @@ Nose tilted up, whiskers catching light 🔬
 — a full body experiment in thermal surrender.
 The sofa: lab bench. The sun: co-investigator.
 Findings: warmth distributes best when horizontal. 😸
-#CatLovers #SunshineVibes #CatNap #GoldenHour https://t.co/rn2JqVqdFD
+#CatLovers #SunshineVibes #CatNap #GoldenHour

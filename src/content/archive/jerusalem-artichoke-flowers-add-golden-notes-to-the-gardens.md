@@ -19,4 +19,4 @@ hashtags:
   - "beautiful"
 ---
 Jerusalem artichoke flowers add golden notes to the garden's harmony 
-#sunchoke #jerusalemartichoke #nature #yellow #bloom #sky #petals #growth #outdoors #flora #bright #vibrant #beautiful https://t.co/TBhfQ6KK0X
+#sunchoke #jerusalemartichoke #nature #yellow #bloom #sky #petals #growth #outdoors #flora #bright #vibrant #beautiful

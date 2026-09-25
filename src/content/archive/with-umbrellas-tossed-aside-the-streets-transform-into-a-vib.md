@@ -22,4 +22,4 @@ hashtags:
   - "playground"
 ---
 With umbrellas tossed aside, the streets transform into a vibrant playground where the rain's melody is drowned out by joyful shrieks
-#downpour #rain #children #joy #frolic #play #streets #adventure #flooded #ocean #laughter #happiness #puddles #splash #umbrellas #playground https://t.co/6M8j8zkQaI
+#downpour #rain #children #joy #frolic #play #streets #adventure #flooded #ocean #laughter #happiness #puddles #splash #umbrellas #playground

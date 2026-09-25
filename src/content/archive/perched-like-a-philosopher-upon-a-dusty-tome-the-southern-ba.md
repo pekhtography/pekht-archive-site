@@ -24,4 +24,4 @@ hashtags:
   - "Roost"
 ---
 Perched like a philosopher upon a dusty tome, the Southern Bald Eagle contemplates the mysteries of flight and fate
-#SouthernBaldEagle #Eagle #Majesty #Observation #Branch #Reigns #Sky #Feathers #Beauty #Philosopher #Enigma #Clouds #Dreams #Serenity #Calm #Wings #Wisdom #Roost https://t.co/bpUD2ua3ar
+#SouthernBaldEagle #Eagle #Majesty #Observation #Branch #Reigns #Sky #Feathers #Beauty #Philosopher #Enigma #Clouds #Dreams #Serenity #Calm #Wings #Wisdom #Roost

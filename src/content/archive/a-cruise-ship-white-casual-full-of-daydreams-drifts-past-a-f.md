@@ -13,4 +13,4 @@ drifts past a fortress that has seen empires fall—
 and the flowers in the foreground don't care at all.
 The water ties them together.🌺🚢
 This river carries centuries like a single morning.
-#TimelessWaters #Kremlin #CityStories https://t.co/DpgavaFpJ5
+#TimelessWaters #Kremlin #CityStories

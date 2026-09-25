@@ -19,4 +19,4 @@ hashtags:
   - "Beauty"
 ---
 If flowers had Tinder profiles, hyacinths would be the mysterious blue charmers. Swipe right for spring! 😉🌸 #FloralFlirts
-#Hyacinth #Spring #Flowers #Bloom #Garden #Nature #Floral #Blue #Yellow #Flora #Season #Beauty https://t.co/WDN2lAVjTG
+#Hyacinth #Spring #Flowers #Bloom #Garden #Nature #Floral #Blue #Yellow #Flora #Season #Beauty

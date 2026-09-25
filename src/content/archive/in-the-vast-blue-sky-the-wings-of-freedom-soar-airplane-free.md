@@ -12,4 +12,4 @@ hashtags:
   - "wings"
   - "flight"
 ---
-In the vast blue sky, the wings of freedom soar #airplane #freedom #flies #soars #sky #wings #flight https://t.co/uSWrXf7S5h
+In the vast blue sky, the wings of freedom soar #airplane #freedom #flies #soars #sky #wings #flight

@@ -19,4 +19,4 @@ hashtags:
   - "couplevibes"
 ---
 Funny how ducks look like philosophers at sunset 🤔🦆 They say nothing, yet you hear eternity. #DuckWisdom
-#DuckDuoVibes #love #nature #animals #birdwatching #wildlife #ducks #serenity #aesthetic #relationshipgoals #peacefulmoments #couplevibes https://t.co/bqj215XidF
+#DuckDuoVibes #love #nature #animals #birdwatching #wildlife #ducks #serenity #aesthetic #relationshipgoals #peacefulmoments #couplevibes

@@ -19,4 +19,4 @@ hashtags:
   - "Emblem"
 ---
 Every brick whispers stories of ambition, unity, and dreams carved in stone 🧱✨🌍 #MonumentOfHope 
-#Moscow #University #Soviet #Architecture #Landmark #Russia #History #Stalinist #Skyscraper #Heritage #Education #Emblem https://t.co/tHBETALgnM
+#Moscow #University #Soviet #Architecture #Landmark #Russia #History #Stalinist #Skyscraper #Heritage #Education #Emblem

@@ -11,4 +11,4 @@ hashtags:
   - "mystery"
 ---
 The melancholy cat drifts through shadows, wrapped in a cloak of forgotten dreams and poetic sadness.
-#cat #sorrow #puzzle #comfort #mystery https://t.co/82qAyEiabY
+#cat #sorrow #puzzle #comfort #mystery

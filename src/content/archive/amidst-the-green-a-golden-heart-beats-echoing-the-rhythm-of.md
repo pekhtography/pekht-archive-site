@@ -21,4 +21,4 @@ hashtags:
   - "Plants"
 ---
 Amidst the green, a golden heart beats, echoing the rhythm of nature's song
-#Jerusalem #artichoke #Helianthus #tuberosus #Nature #Bloom #Yellow #Garden #Flower #Sunny #Wildflower #Petals #Outdoors #Golden #Plants https://t.co/kvTJJ4QdgO
+#Jerusalem #artichoke #Helianthus #tuberosus #Nature #Bloom #Yellow #Garden #Flower #Sunny #Wildflower #Petals #Outdoors #Golden #Plants

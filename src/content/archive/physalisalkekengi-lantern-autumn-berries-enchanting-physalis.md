@@ -17,4 +17,4 @@ hashtags:
   - "Orange"
   - "Vibrant"
 ---
-#PhysalisAlkekengi #Lantern #Autumn #Berries #Enchanting #Physalis #Summer #Garden #Growth #Nature #Orange #Vibrant https://t.co/lsxlJNTOS9
+#PhysalisAlkekengi #Lantern #Autumn #Berries #Enchanting #Physalis #Summer #Garden #Growth #Nature #Orange #Vibrant

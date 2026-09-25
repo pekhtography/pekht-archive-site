@@ -22,4 +22,4 @@ hashtags:
   - "Flowers"
   - "Nature"
 ---
-#Bouquet #Celebration #Gerbera #Transvaal #daisy #Joy #Chrysanthemum #Friendship #Gypsophila #Babysbreath #Whimsy #Colors #Diversity #Beauty #Harmony #Flowers #Nature https://t.co/1CcSdX08Qf
+#Bouquet #Celebration #Gerbera #Transvaal #daisy #Joy #Chrysanthemum #Friendship #Gypsophila #Babysbreath #Whimsy #Colors #Diversity #Beauty #Harmony #Flowers #Nature

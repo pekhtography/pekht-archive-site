@@ -19,4 +19,4 @@ hashtags:
   - "Fennec"
 ---
 Who needs a throne when you have this much fluff? Royalty has never looked so fuzzy 🦊👑😂 #FuzzyRoyalty
-#Arctic #Fox #Wildlife #Nature #Fur #Animal #Cute #Predator #Snow #Mammal #Wilderness #Fennec https://t.co/pEDbkvbNCN
+#Arctic #Fox #Wildlife #Nature #Fur #Animal #Cute #Predator #Snow #Mammal #Wilderness #Fennec

@@ -26,4 +26,4 @@ hashtags:
   - "Serenity"
   - "Calm"
 ---
-#Red #Gerbera #Bold #White #Gypsophila #Delicate #LargePetals #Grand #SmallPetals #Tiny #Bouquet #Arrangement #Beauty #Contrast #Emotions #Feelings #Vibrancy #Passion #Fire #Serenity #Calm https://t.co/vOJJcXAHzh
+#Red #Gerbera #Bold #White #Gypsophila #Delicate #LargePetals #Grand #SmallPetals #Tiny #Bouquet #Arrangement #Beauty #Contrast #Emotions #Feelings #Vibrancy #Passion #Fire #Serenity #Calm

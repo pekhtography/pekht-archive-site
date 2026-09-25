@@ -46,5 +46,7 @@ export default defineConfig({
     defaultStrategy: "hover",
   },
 
-  site: "https://ryze.pages.dev",
+  site: "https://pekhtography.github.io/pekht-archive-site/",
+  base: "/pekht-archive-site",
+  trailingSlash: "always",
 });

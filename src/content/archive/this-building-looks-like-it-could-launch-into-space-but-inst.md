@@ -19,4 +19,4 @@ hashtags:
   - "cityscape"
 ---
 This building looks like it could launch into space 🚀✨ — but instead, it’s just serving crispy chicken downstairs 🍗. #FuturisticCityLife
-#architecture #building #design #modern #urban #geometry #facade #structure #skyline #perspective #symmetry #cityscape https://t.co/DWeku5vvpP
+#architecture #building #design #modern #urban #geometry #facade #structure #skyline #perspective #symmetry #cityscape

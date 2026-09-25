@@ -18,4 +18,4 @@ hashtags:
   - "Serene"
 ---
 Each petal unfurls like a secret, revealing the delicate dance of life in every hue
-#Rhododendron #Blooms #Nature #Garden #Flora #Purple #Beauty #Spring #Outdoors #Vibrant #Lush #Serene https://t.co/PzQrlcjJSq
+#Rhododendron #Blooms #Nature #Garden #Flora #Purple #Beauty #Spring #Outdoors #Vibrant #Lush #Serene

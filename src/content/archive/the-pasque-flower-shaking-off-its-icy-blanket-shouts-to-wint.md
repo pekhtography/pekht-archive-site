@@ -24,4 +24,4 @@ hashtags:
   - "spring"
 ---
 The Pasque Flower, shaking off its icy blanket, shouts to winter, "Time’s up! I’ve got a date with spring and a sunshine cocktail!"
-#bud #sprout #awakening #icy #freeze #slumber #snooze #blooming #flourish #joyous #delight #Pasque #blossom #Flower #chill #winter #renewal #spring https://t.co/EerUCS6pQa
+#bud #sprout #awakening #icy #freeze #slumber #snooze #blooming #flourish #joyous #delight #Pasque #blossom #Flower #chill #winter #renewal #spring

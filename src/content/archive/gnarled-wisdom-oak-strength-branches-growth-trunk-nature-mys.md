@@ -18,4 +18,4 @@ hashtags:
   - "Witch"
   - "Secret"
 ---
-#Gnarled #Wisdom #Oak #Strength #Branches #Growth #Trunk #Nature #Mystery #Canopy #Shelter #Witch #Secret https://t.co/p1Z5BkVH9I
+#Gnarled #Wisdom #Oak #Strength #Branches #Growth #Trunk #Nature #Mystery #Canopy #Shelter #Witch #Secret

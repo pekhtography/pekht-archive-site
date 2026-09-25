@@ -14,4 +14,4 @@ hashtags:
   - "shining"
   - "garden"
 ---
-A single red rose can convey feelings that words may never express #red #passion #rose #elegance #love #romance #beauty #shining #garden https://t.co/6kHTVDw6JR
+A single red rose can convey feelings that words may never express #red #passion #rose #elegance #love #romance #beauty #shining #garden

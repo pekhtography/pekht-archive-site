@@ -18,4 +18,4 @@ hashtags:
   - "Nature"
 ---
 As the first rays of sunlight grace the horizon,the Doronicum awakens, showcasing its vibrant yellow blossoms, a beacon of optimism in a world that often forgets to bloom
-#Doronicum #Flower #Leopardsbanes #Plant #Yellow #Brightness #Petals #Beauty #Spring #Renewal #Meadow #Nature https://t.co/mMyXN3FX2S
+#Doronicum #Flower #Leopardsbanes #Plant #Yellow #Brightness #Petals #Beauty #Spring #Renewal #Meadow #Nature

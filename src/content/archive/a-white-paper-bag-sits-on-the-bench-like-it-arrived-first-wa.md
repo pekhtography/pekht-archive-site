@@ -13,4 +13,4 @@ A white paper bag sits on the bench like it arrived first. 🛍️
 Warm pavement, long shadows, 
 someone's knee touching someone else's. 
 Evening made of amber. 🌆
-#GoldenHour #StreetPhotography #UrbanMoments #EveningMood https://t.co/s3VWrH1bU4
+#GoldenHour #StreetPhotography #UrbanMoments #EveningMood

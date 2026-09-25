@@ -12,4 +12,4 @@ hashtags:
   - "wings"
   - "dreams"
 ---
-To ride a horse is to fly without wings #horse #friend #young #ride #freedom #wings #dreams https://t.co/9pwmxU4Rt7
+To ride a horse is to fly without wings #horse #friend #young #ride #freedom #wings #dreams

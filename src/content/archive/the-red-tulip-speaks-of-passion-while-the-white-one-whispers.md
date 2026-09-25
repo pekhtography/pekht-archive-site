@@ -14,4 +14,4 @@ hashtags:
   - "Heart"
   - "tulip"
 ---
-The red tulip speaks of passion, while the white one whispers of purity #Garden #Nature #Flowers #Bloom #Beauty #Elegance #Love #Heart #tulip https://t.co/HsAb9F5dRv
+The red tulip speaks of passion, while the white one whispers of purity #Garden #Nature #Flowers #Bloom #Beauty #Elegance #Love #Heart #tulip

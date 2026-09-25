@@ -13,4 +13,4 @@ The throne glows red, a thousand lights explode above 🎉 —
 and the king just… crunches his snack. 
 Sitting on the fortune. Literally. 
 Jaw moves. World spins. 🐼✨
-#LunarNewYear #PandaVibes #ChillWhileTheWorldBurns #RedAndAlive https://t.co/WFCNFs8Dz8
+#LunarNewYear #PandaVibes #ChillWhileTheWorldBurns #RedAndAlive

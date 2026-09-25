@@ -12,4 +12,4 @@ hashtags:
   - "garden"
 ---
 We're all seeking meaning in a chaotic universe 🌌 Meanwhile, this bumblebee found hers in what's basically nature's stress ball 🐝💙😅 Sometimes enlightenment is overrated – just find your blue sphere and chill! 🧘‍♀️✨ #ExistentialBuzz
-#allium #flowers #blue #bumblebee #garden https://t.co/5KeKCq2luR
+#allium #flowers #blue #bumblebee #garden

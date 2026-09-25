@@ -11,4 +11,4 @@ hashtags:
   - "dream"
   - "serenity"
 ---
-The essence of the garden is to feel the calmness of the mind amidst the bustling world #castle #pond #garden #nature #dream #serenity https://t.co/WbofOgmWhT
+The essence of the garden is to feel the calmness of the mind amidst the bustling world #castle #pond #garden #nature #dream #serenity

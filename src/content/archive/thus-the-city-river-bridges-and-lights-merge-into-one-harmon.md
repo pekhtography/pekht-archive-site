@@ -11,4 +11,4 @@ hashtags:
   - "reflections"
   - "night"
 ---
-Thus, the city, river, bridges, and lights merge into one harmonious  flow, filled with sensations of life, connection, and an eternal journey #city #river #bridge  #lights #reflections #night https://t.co/MvE2cXHPtb
+Thus, the city, river, bridges, and lights merge into one harmonious  flow, filled with sensations of life, connection, and an eternal journey #city #river #bridge  #lights #reflections #night

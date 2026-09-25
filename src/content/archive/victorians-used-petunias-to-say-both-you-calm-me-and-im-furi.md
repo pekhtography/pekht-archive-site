@@ -13,4 +13,4 @@ Victorians used petunias to say both
 "you calm me" and "I'm furious" 🌸🔥 — 
 one flower, two opposite truths. 
 Maybe softness and rage were always the same thing.
-#FlowerLanguage #Petunias #EmotionalDepth #NatureLover https://t.co/ba462XeZac
+#FlowerLanguage #Petunias #EmotionalDepth #NatureLover

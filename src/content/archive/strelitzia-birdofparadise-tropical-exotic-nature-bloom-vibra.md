@@ -19,4 +19,4 @@ hashtags:
   - "flower"
   - "Plant"
 ---
-#Strelitzia #BirdOfParadise #Tropical #Exotic #Nature #Bloom #Vibrant #Orange #Purple #Elegance #Botanical #Flora #flower #Plant https://t.co/10OruLzz95
+#Strelitzia #BirdOfParadise #Tropical #Exotic #Nature #Bloom #Vibrant #Orange #Purple #Elegance #Botanical #Flora #flower #Plant

@@ -12,4 +12,4 @@ hashtags:
 The light is gone ❄️
 Only the patterns remain, flawless, cold, complete 🌌
 Art survives. The color never does ✨
-#WinterMood #EphemeralArt #FrostPatterns #VanishingLight https://t.co/V5Y9c8iyCQ
+#WinterMood #EphemeralArt #FrostPatterns #VanishingLight

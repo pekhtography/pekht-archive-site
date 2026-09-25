@@ -11,4 +11,4 @@ hashtags:
 The ground is on fire, but it's a frostbite fire. 
 Earth's final blush before the deep freeze. 
 A blazing lie told in ice and light. ❄️🔥🧊 
-#NaturePhotography #IcePatterns #WinterBeauty https://t.co/6UaJS4fWNv
+#NaturePhotography #IcePatterns #WinterBeauty

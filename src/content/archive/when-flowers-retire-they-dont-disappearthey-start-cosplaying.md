@@ -19,4 +19,4 @@ hashtags:
   - "aesthetic"
 ---
 When flowers retire, they don’t disappear—they start cosplaying as tiny shurikens 🌟🥷🍂 #NinjaBotany
-#nature #plants #botany #wildlife #flowers #forest #flora #macro #seeds #natural #organic #aesthetic https://t.co/RDWtoLzpiJ
+#nature #plants #botany #wildlife #flowers #forest #flora #macro #seeds #natural #organic #aesthetic

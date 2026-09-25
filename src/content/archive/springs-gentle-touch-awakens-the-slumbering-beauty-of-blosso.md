@@ -18,4 +18,4 @@ hashtags:
   - "Buds"
 ---
 Spring's gentle touch awakens the slumbering beauty of blossoms, whispering tales of love and renewal
-#Blossoms #Spring #Nature #Blooming #Tree #Growth #Beauty #Flower #Renewal #Life #Green #Buds https://t.co/BxdCg8QAzb
+#Blossoms #Spring #Nature #Blooming #Tree #Growth #Beauty #Flower #Renewal #Life #Green #Buds

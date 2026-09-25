@@ -8,4 +8,4 @@ hashtags:
   - "RussianHeritage"
   - "GoldenDomes"
 ---
-Modern Moscow hustles below, but above, golden domes whisper the secrets of centuries. Pause. Breathe. Reflect 🕊️🏛️ #Culture #RussianHeritage #GoldenDomes https://t.co/XufahPnfMB
+Modern Moscow hustles below, but above, golden domes whisper the secrets of centuries. Pause. Breathe. Reflect 🕊️🏛️ #Culture #RussianHeritage #GoldenDomes

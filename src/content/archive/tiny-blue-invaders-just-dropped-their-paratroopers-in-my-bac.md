@@ -12,4 +12,4 @@ hashtags:
 Tiny blue invaders just dropped their paratroopers in my backyard. 
 Looking fragile but strictly toxic, 
 they’ve officially evicted winter without a single refund. 🪂🌿
-#Nature #SpringVibes #Wildflowers #ElectricBlue https://t.co/fn8G2vFej2
+#Nature #SpringVibes #Wildflowers #ElectricBlue

@@ -15,4 +15,4 @@ Someone coded this landscape and forgot to fix the lighting bug.
 Perfection is boring. 
 Give me the glitch 
 where day and night share custody of the same sky 🌗✨
-#Nature #WinterScape #Solitude #Peace https://t.co/U9Asb3YiUV
+#Nature #WinterScape #Solitude #Peace

@@ -15,4 +15,4 @@ hashtags:
   - "comfort"
 ---
 A cat, a furry enigma, tiptoes through life with mischief in its eyes and magic in its paws.
-#cat #eyes #mystery #mischief #satisfaction #grace #cunning #curiosity #comfort https://t.co/6uN098GkZk
+#cat #eyes #mystery #mischief #satisfaction #grace #cunning #curiosity #comfort

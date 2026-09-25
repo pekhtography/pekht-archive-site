@@ -17,4 +17,4 @@ hashtags:
   - "Legacy"
 ---
 The sky is not the limit; it's just the beginning. As the rocket soars, it echoes the timeless words of dreams that transcend the boundaries of our world
-#Monument #Space #Rocket #History #Exploration #Cosmos #Science #Achievement #Heritage #Innovation #Legacy https://t.co/rpANtu5ruA
+#Monument #Space #Rocket #History #Exploration #Cosmos #Science #Achievement #Heritage #Innovation #Legacy

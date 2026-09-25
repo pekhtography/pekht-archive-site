@@ -20,4 +20,4 @@ hashtags:
   - "Life"
 ---
 Chives are like the garden's cheerleaders, shouting joy while waving their pale-purple pom-poms!
-#Chives #Joy #Freshness #Garden #Oasis #Nature #Wonder #Beauty #Radiance #Sunshine #Warmth #Herb #Flavor #Life https://t.co/MpPyMkCNIt
+#Chives #Joy #Freshness #Garden #Oasis #Nature #Wonder #Beauty #Radiance #Sunshine #Warmth #Herb #Flavor #Life

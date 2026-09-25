@@ -19,4 +19,4 @@ hashtags:
   - "LivingMemory"
 ---
 A hotel that saw empires fall, revolutions rise, and Teslas park 🚗⚡ Time is the only VIP guest. #HistoryInLuxuryMode
-#TimeTravelVibes #Architecture #Travel #Luxury #History #ArtNouveau #Moscow #Heritage #GoldenHour #Elegance #UrbanPoetry #LivingMemory https://t.co/pvOVN0PFbO
+#TimeTravelVibes #Architecture #Travel #Luxury #History #ArtNouveau #Moscow #Heritage #GoldenHour #Elegance #UrbanPoetry #LivingMemory

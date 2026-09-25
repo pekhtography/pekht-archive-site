@@ -14,4 +14,4 @@ and then the center:
 green stem, dusty anthers, 
 a room you were never meant to see lit from inside. 
 Full send. 🔥
-#Flowers #TulipSeason #OpenWide #SpringMood https://t.co/kuwpzgGszv
+#Flowers #TulipSeason #OpenWide #SpringMood

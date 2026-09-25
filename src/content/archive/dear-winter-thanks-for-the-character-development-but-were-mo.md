@@ -19,4 +19,4 @@ hashtags:
   - "renewal"
 ---
 Dear Winter, Thanks for the character development, but we're moving on 🌸💅 Spring has entered the chat 💕 #WinterBreakup
-#spring #blossoms #pink #flowers #bloom #nature #photography #branch #petals #garden #beauty #renewal https://t.co/bbcZRPLH9R
+#spring #blossoms #pink #flowers #bloom #nature #photography #branch #petals #garden #beauty #renewal

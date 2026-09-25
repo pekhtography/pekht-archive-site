@@ -20,4 +20,4 @@ hashtags:
   - "Memorial"
   - "Loss"
 ---
-#Earthquake #Destruction #Historic #Palace #Ruins #Sunset #Candles #Devastation #Heritage #Collapse #Tragedy #Aftermath #Disaster #Memorial #Loss https://t.co/fzwXE0NOKl
+#Earthquake #Destruction #Historic #Palace #Ruins #Sunset #Candles #Devastation #Heritage #Collapse #Tragedy #Aftermath #Disaster #Memorial #Loss

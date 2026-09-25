@@ -14,4 +14,4 @@ hashtags:
   - "Flippers"
   - "Quacking"
 ---
-The female mandarin duck quips to the male, 'Stand guard! And don't you dare creak your flippers while you're switching legs until I get enough sleep. Remember—no quacking until I'm ready to wake up!' #Mandarin #Duck #nature #Female #Sleep #Male #Balance #Flippers #Quacking https://t.co/BF6EOupJpC
+The female mandarin duck quips to the male, 'Stand guard! And don't you dare creak your flippers while you're switching legs until I get enough sleep. Remember—no quacking until I'm ready to wake up!' #Mandarin #Duck #nature #Female #Sleep #Male #Balance #Flippers #Quacking

@@ -19,4 +19,4 @@ hashtags:
   - "art"
 ---
 When history comes alive through music! 🎶 These guys are rocking the Soviet vibes like it's 1945 all over again. #TimeTravelTunes
-#history #music #retro #soviet #uniform #train #performance #nostalgia #patriotism #vintage #culture #art https://t.co/FmfXlwUDhC
+#history #music #retro #soviet #uniform #train #performance #nostalgia #patriotism #vintage #culture #art

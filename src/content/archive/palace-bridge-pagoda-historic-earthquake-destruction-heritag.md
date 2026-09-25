@@ -26,4 +26,4 @@ hashtags:
   - "Support"
   - "Unity"
 ---
-#Palace #Bridge #Pagoda #Historic #Earthquake #Destruction #Heritage #Asia #Tragedy #Temple #Ruins #Disaster #Cultural #History #Resilience #Hope #Strength #Community #Rebuild #Support #Unity https://t.co/H1EmngedES
+#Palace #Bridge #Pagoda #Historic #Earthquake #Destruction #Heritage #Asia #Tragedy #Temple #Ruins #Disaster #Cultural #History #Resilience #Hope #Strength #Community #Rebuild #Support #Unity

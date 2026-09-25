@@ -14,4 +14,4 @@ Warm gold on overcast gray. 🌼
 Each petal curled back like a trumpet mid-note — 
 and the whole branch (technically still dead) 
 converting cold light into something that smells like mad honey. 🍯
-#Flowers #Azalea #GardenPhotography #BloomSeason https://t.co/95i5Zrh4Hk
+#Flowers #Azalea #GardenPhotography #BloomSeason

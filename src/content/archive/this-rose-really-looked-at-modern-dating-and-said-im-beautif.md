@@ -20,4 +20,4 @@ hashtags:
   - "photography"
 ---
 This rose really looked at modern dating and said "I'm beautiful but I come with very clear warning signs" 🌹 Emotional intelligence queen 👑🚩 #DatingAdvice
-#rose #pale #pink #thorns #buds #petals #garden #bloom #nature #stems #beauty #wild #photography https://t.co/x0Qiojl9WY
+#rose #pale #pink #thorns #buds #petals #garden #bloom #nature #stems #beauty #wild #photography

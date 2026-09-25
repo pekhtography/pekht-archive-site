@@ -14,4 +14,4 @@ the shadow stretches long and cold—
 and somewhere in that shadow, the century blinks.🌇
 One slow blink per hundred years.✨
 The whole boulevard, a single breath.
-#CityLife #UrbanPhotography #GoldenHour #Wanderlust https://t.co/35cP7KrgrY
+#CityLife #UrbanPhotography #GoldenHour #Wanderlust

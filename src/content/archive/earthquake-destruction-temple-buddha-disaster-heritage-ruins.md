@@ -20,4 +20,4 @@ hashtags:
   - "Asia"
   - "Buddhism"
 ---
-#Earthquake #Destruction #Temple #Buddha #Disaster #Heritage #Ruins #History #Tragedy #Cultural #Loss #Devastation #Collapse #Asia #Buddhism https://t.co/2wdr96cytP
+#Earthquake #Destruction #Temple #Buddha #Disaster #Heritage #Ruins #History #Tragedy #Cultural #Loss #Devastation #Collapse #Asia #Buddhism

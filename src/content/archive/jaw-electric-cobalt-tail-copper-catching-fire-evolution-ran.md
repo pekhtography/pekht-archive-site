@@ -12,4 +12,4 @@ hashtags:
 Jaw — electric cobalt. Tail — copper catching fire. 🔥 
 Evolution ran two experiments on one body at once. 
 The body didn't flinch. 🐟
-#NaturePhotography #CichlidTank #OceanBlue #AquariumFish https://t.co/t6cYWXfxI6
+#NaturePhotography #CichlidTank #OceanBlue #AquariumFish

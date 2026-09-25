@@ -12,4 +12,4 @@ hashtags:
   - "strength"
   - "dignity"
 ---
-In a world of endless horizons, the black-headed gull fiercely upholds its territory, a proud sentinel of its rightful space #blackheadedgull #protection #domain #faithfulness #wildlife #strength #dignity https://t.co/nf6niQdWpg
+In a world of endless horizons, the black-headed gull fiercely upholds its territory, a proud sentinel of its rightful space #blackheadedgull #protection #domain #faithfulness #wildlife #strength #dignity

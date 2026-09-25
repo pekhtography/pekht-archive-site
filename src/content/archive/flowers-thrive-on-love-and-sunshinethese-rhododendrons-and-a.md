@@ -18,4 +18,4 @@ hashtags:
   - "spring"
 ---
 Flowers thrive on love and sunshine—these rhododendrons and azaleas are among the most adored!
-#flowers #rhododendron #azalea #garden #nature #colorful #blooms #landscape #flora #plants #beauty #spring https://t.co/6IcrgcikLg
+#flowers #rhododendron #azalea #garden #nature #colorful #blooms #landscape #flora #plants #beauty #spring

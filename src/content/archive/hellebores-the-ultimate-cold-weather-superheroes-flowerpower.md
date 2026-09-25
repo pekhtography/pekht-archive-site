@@ -18,4 +18,4 @@ hashtags:
   - "Petals"
 ---
 Hellebores: the ultimate cold-weather superheroes 🌟❄️🌸 #FlowerPowerHour
-#Hellebore #Flower #Pink #Garden #Nature #Blooming #Floral #Botany #Gardening #Green #Petals https://t.co/ifw0ntzHtJ
+#Hellebore #Flower #Pink #Garden #Nature #Blooming #Floral #Botany #Gardening #Green #Petals

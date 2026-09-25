@@ -18,4 +18,4 @@ hashtags:
   - "journey"
 ---
 Journey begins where the platform ends. The gentle hum of wheels, whispered tales of faraway cities… all under a sky promising night 🌃🚉. #WhispersOfTheTracks
-#trainstation #platform #timetable #travel #waiting #architecture #evening #commute #passengers #transport #journey https://t.co/zuR7PRvxtz
+#trainstation #platform #timetable #travel #waiting #architecture #evening #commute #passengers #transport #journey

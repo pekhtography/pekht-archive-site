@@ -19,4 +19,4 @@ hashtags:
   - "nectar"
 ---
 The humble hoverfly 🪰🌸, nature’s clever mimic, steals the spotlight by quietly pollinating in a bee’s disguise. Spring’s little actor on a pink stage! #MimicryInBloom
-#hoverfly #flower #pollination #spring #nature #insect #pink #blossom #garden #wildlife #macro #nectar https://t.co/wkkCj9XGNL
+#hoverfly #flower #pollination #spring #nature #insect #pink #blossom #garden #wildlife #macro #nectar

@@ -13,4 +13,4 @@ A petal. Cold dew.
 Silky ridges (smelling of honey) under a summer sky. 
 This tiny pink kingdom makes that glass empire look like a miniature toy box 🌸. 
 Infinite garden 🌿
-#UrbanNature #CityGardening #MetropolisVibes #UnexpectedBeauty https://t.co/PyX2dA0Vk6
+#UrbanNature #CityGardening #MetropolisVibes #UnexpectedBeauty

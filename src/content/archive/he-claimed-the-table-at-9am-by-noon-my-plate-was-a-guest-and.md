@@ -14,4 +14,4 @@ By noon, my plate was a guest. And I moved it. 😶
 The sun shifted. He didn't. 
 I brought him water. 🐾
 But lease still in his name. ☀️
-#CatTax #TabbyLife #SunbeamSovereignty #SoftPower https://t.co/VxNG4kuQDu
+#CatTax #TabbyLife #SunbeamSovereignty #SoftPower

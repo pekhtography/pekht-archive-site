@@ -12,4 +12,4 @@ hashtags:
   - "blooming"
   - "shade"
 ---
-In the shade, the rose blooms softly, a gentle reminder that rose doesn’t always shout #rose #love #flower #heart #garden #blooming #shade https://t.co/hRCTxRnfXZ
+In the shade, the rose blooms softly, a gentle reminder that rose doesn’t always shout #rose #love #flower #heart #garden #blooming #shade

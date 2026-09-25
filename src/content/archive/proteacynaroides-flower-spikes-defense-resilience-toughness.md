@@ -17,4 +17,4 @@ hashtags:
   - "Cynaroides"
   - "Thorns"
 ---
-#ProteaCynaroides #Flower #Spikes #Defense #Resilience #Toughness #Beauty #Charm #Nature #Protea #Cynaroides #Thorns https://t.co/458JkGrg6l
+#ProteaCynaroides #Flower #Spikes #Defense #Resilience #Toughness #Beauty #Charm #Nature #Protea #Cynaroides #Thorns

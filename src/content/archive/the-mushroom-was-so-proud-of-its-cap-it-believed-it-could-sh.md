@@ -20,4 +20,4 @@ hashtags:
   - "boletus"
 ---
 The mushroom was so proud of its cap, it believed it could shelter the entire forest 
-#mushroom #nature #forest #wild #fungi #outdoors #ecology #mycology #woodland #organic #foraging #Brown #cap #boletus https://t.co/BeR4lAyD5v
+#mushroom #nature #forest #wild #fungi #outdoors #ecology #mycology #woodland #organic #foraging #Brown #cap #boletus

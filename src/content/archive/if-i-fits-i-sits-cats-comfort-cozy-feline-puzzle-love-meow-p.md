@@ -16,4 +16,4 @@ hashtags:
   - "Devotion"
   - "indifference"
 ---
-If I fits, I sits #Cats #Comfort #Cozy #Feline #Puzzle #Love #Meow #purring #Worship #Devotion #indifference https://t.co/mXuDH9VA1T
+If I fits, I sits #Cats #Comfort #Cozy #Feline #Puzzle #Love #Meow #purring #Worship #Devotion #indifference

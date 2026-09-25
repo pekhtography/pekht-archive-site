@@ -18,4 +18,4 @@ hashtags:
   - "metropolitan"
 ---
 Architecture meeting: "Let's mix Soviet brutalism with classical elegance" Result: This beautiful urban chaos 🏛️🏢 When eras collide, magic happens #ArchitecturalFusion
-#traffic #city #urban #architecture #street #cars #buildings #downtown #rush #boulevard #metropolitan https://t.co/fb3z8eWy90
+#traffic #city #urban #architecture #street #cars #buildings #downtown #rush #boulevard #metropolitan

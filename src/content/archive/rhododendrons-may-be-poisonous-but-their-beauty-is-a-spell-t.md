@@ -19,4 +19,4 @@ hashtags:
   - "Vibrant"
 ---
 Rhododendrons may be poisonous, but their beauty is a spell that captivates the heart
-#Rhododendron #Azalea #Blooms #Nature #Garden #Flowers #Yellow #Purple #Petals #Beauty #Spring #Blossoms #Vibrant https://t.co/PLLcZRZhmm
+#Rhododendron #Azalea #Blooms #Nature #Garden #Flowers #Yellow #Purple #Petals #Beauty #Spring #Blossoms #Vibrant

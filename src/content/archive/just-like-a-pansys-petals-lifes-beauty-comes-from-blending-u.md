@@ -15,4 +15,4 @@ hashtags:
   - "beauty"
 ---
 Just like a pansy’s petals, life’s beauty comes from blending unexpected colors and shades🌸🌞. ‘In diversity there is beauty and strength,’ as the old saying goes. Embrace your vibrant self! 💛❤️💜 #ColorfulLifeJourney
-#pansy #flower #garden #nature #bloom #spring #green #beauty https://t.co/t9K8yMmj8y
+#pansy #flower #garden #nature #bloom #spring #green #beauty

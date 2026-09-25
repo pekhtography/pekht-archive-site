@@ -18,4 +18,4 @@ hashtags:
   - "Pink"
 ---
 Under the apple blossom's spell, time stands still
-#AppleBlossom #Spring #Blooming #Nature #Blossoms #Petals #Garden #Fresh #Beauty #Flowering #White #Pink https://t.co/nplj26C2c1
+#AppleBlossom #Spring #Blooming #Nature #Blossoms #Petals #Garden #Fresh #Beauty #Flowering #White #Pink

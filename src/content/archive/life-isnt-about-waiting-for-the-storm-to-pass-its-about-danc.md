@@ -19,4 +19,4 @@ hashtags:
   - "decorative"
 ---
 Life isn't about waiting for the storm to pass… it's about dancing in ruffles like petunias! 💃🌸✨ #RuffleLife
-#petunias #ruffled #purple #flowers #striped #garden #blooms #frilly #ornamental #summer #colorful #decorative https://t.co/r6zIYzmdes
+#petunias #ruffled #purple #flowers #striped #garden #blooms #frilly #ornamental #summer #colorful #decorative

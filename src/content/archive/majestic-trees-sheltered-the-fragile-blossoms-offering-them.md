@@ -18,4 +18,4 @@ hashtags:
   - "harmony"
 ---
 Majestic trees sheltered the fragile blossoms, offering them a safe haven 
-#garden #nature #trees #flowers #greenery #landscape #outdoors #blooms #botanical #serenity #ecosystem #harmony https://t.co/IIEamnunGS
+#garden #nature #trees #flowers #greenery #landscape #outdoors #blooms #botanical #serenity #ecosystem #harmony

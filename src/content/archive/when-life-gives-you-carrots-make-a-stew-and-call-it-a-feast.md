@@ -18,4 +18,4 @@ hashtags:
   - "rootvegetable"
 ---
 When life gives you carrots, make a stew and call it a feast
-#carrot #vegetable #healthy #cooking #fresh #organic #nutritious #dinner #yummy #crunchy #sliced #rootvegetable https://t.co/EQFGxbaIEj
+#carrot #vegetable #healthy #cooking #fresh #organic #nutritious #dinner #yummy #crunchy #sliced #rootvegetable

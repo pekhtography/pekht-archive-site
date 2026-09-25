@@ -9,4 +9,4 @@ hashtags:
   - "Serenity"
 ---
 My soul is a quiet street where an ancient lamp of melancholy chats with a golden tower of hope. They never agree, but they're best friends. 🤝💡🏰
-#UrbanPhotography #GoldenHour #Serenity https://t.co/cZtkw6a2Ev
+#UrbanPhotography #GoldenHour #Serenity

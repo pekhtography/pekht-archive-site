@@ -18,4 +18,4 @@ hashtags:
   - "desert"
 ---
 This meerkat's out here doing the most while I can't even commit to a Netflix series 📺 Living proof that some of us were born for greatness, others for snacks 🍿 #CommitmentIssues
-#meerkat #wildlife #sentinel #africa #nature #alert #savanna #photography #wild #animals #desert https://t.co/fc3WWlYK4k
+#meerkat #wildlife #sentinel #africa #nature #alert #savanna #photography #wild #animals #desert

@@ -12,4 +12,4 @@ hashtags:
 Water mirrors the domes, domes mirror the eyes. 
 Eternity stares into the river, seeing only the ferry's gentle wake. 🌊⛪ 
 Old and new—two ripples on the same stream of time. 
-#Travel #Moscow #UrbanOasis #Serendipity https://t.co/wfxsRLa5Xw
+#Travel #Moscow #UrbanOasis #Serendipity

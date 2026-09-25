@@ -16,4 +16,4 @@ hashtags:
   - "garden"
 ---
 Scientists say trees communicate through underground networks. Looking at this reflection, I think they're also sending messages through water 💧 What if that ripple just said "nice jacket"? 🌊🤔 #TreeTexting
-#autumn #park #gazebo #pond #reflection #trees #foliage #nature #garden https://t.co/xQ4d523gFc
+#autumn #park #gazebo #pond #reflection #trees #foliage #nature #garden

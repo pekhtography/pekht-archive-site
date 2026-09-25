@@ -8,4 +8,4 @@ hashtags:
   - "LuxuryLifestyle"
   - "UrbanPhotography"
 ---
-Versailles energy, Amazon delivery. History built the stage. Capitalism sold the tickets. We're all extras now. 🎭👑🚗 #Architecture #LuxuryLifestyle #UrbanPhotography https://t.co/YFhiFoDWtd
+Versailles energy, Amazon delivery. History built the stage. Capitalism sold the tickets. We're all extras now. 🎭👑🚗 #Architecture #LuxuryLifestyle #UrbanPhotography

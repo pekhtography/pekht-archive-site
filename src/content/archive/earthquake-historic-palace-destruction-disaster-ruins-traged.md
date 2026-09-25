@@ -20,4 +20,4 @@ hashtags:
   - "Loss"
   - "Catastrophe"
 ---
-#Earthquake #Historic #Palace #Destruction #Disaster #Ruins #Tragedy #Heritage #Collapse #Devastation #Crisis #Aftermath #Damage #Loss #Catastrophe https://t.co/8xTX8bYMI6
+#Earthquake #Historic #Palace #Destruction #Disaster #Ruins #Tragedy #Heritage #Collapse #Devastation #Crisis #Aftermath #Damage #Loss #Catastrophe

@@ -13,4 +13,4 @@ Sunset pours colors through my ice veins on glass 🌇
 Flexing frost patterns like armor—trying to impress her warmth. 
 She's already looking away but my game stays obvious and bold. 
 Winter's peacocking ❄️💪 
-#LoveLanguage #FrostArt #WinterRomance #BoldLove https://t.co/YFVOYZ0o55
+#LoveLanguage #FrostArt #WinterRomance #BoldLove

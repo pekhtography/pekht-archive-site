@@ -17,4 +17,4 @@ hashtags:
   - "Building"
 ---
 When giants walked the earth, they left behind stone dreams reaching for the sky 🏗️ Moscow's Seven Sisters stand as proof that ambition can touch the clouds ☁️✨ #StalinistGothic
-#Moscow #Architecture #Skyscraper #Soviet #Gothic #River #Clouds #Historic #Stalinist #Building https://t.co/EYXYKZeYIb
+#Moscow #Architecture #Skyscraper #Soviet #Gothic #River #Clouds #Historic #Stalinist #Building

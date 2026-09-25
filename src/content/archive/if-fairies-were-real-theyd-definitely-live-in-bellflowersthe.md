@@ -19,4 +19,4 @@ hashtags:
   - "Botanical"
 ---
 If fairies were real, they'd definitely live in bellflowers—the original tiny bell tents!
-#Bellflower #Plant #Campanula #Purple #Blooms #Nature #Garden #Flora #Petals #Delicate #Elegance #Blossoms #Botanical https://t.co/Dw6zf7KZYj
+#Bellflower #Plant #Campanula #Purple #Blooms #Nature #Garden #Flora #Petals #Delicate #Elegance #Blossoms #Botanical

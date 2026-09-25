@@ -19,4 +19,4 @@ hashtags:
   - "technology"
 ---
 Public transport or oversized vacuum cleaner? 🚋🌀 Either way, tickets, please! 🎟️ #TramOrRoomba
-#tram #train #transport #railway #streetcar #cleaning #machine #urban #city #retro #vintage #technology https://t.co/YcQ2Tx6yTo
+#tram #train #transport #railway #streetcar #cleaning #machine #urban #city #retro #vintage #technology

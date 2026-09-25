@@ -13,4 +13,4 @@ Warm stone holds the sun six minutes longer than the street below. 🌇
 Eight lanes of asphalt cut through — 
 and the facade doesn't even flinch. ✨ 
 Permanence isn't stubbornness. It's memory with good posture.
-#Architecture #Moscow #UrbanPhotography #GoldenHour https://t.co/7gwNTGLVRh
+#Architecture #Moscow #UrbanPhotography #GoldenHour

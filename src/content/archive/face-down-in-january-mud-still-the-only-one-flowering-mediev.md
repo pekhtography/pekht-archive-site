@@ -15,4 +15,4 @@ They tripped.
 Poison. 
 Christmas rose. 
 Unkillable. 🖤 
-#Nature #Hellebore #WinterBlooms #DarkBeauty https://t.co/UcahXHCBf4
+#Nature #Hellebore #WinterBlooms #DarkBeauty

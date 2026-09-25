@@ -19,4 +19,4 @@ hashtags:
   - "lazy"
 ---
 If there’s one thing my cat has taught me, it’s that the best part of the day is napping in a sunbeam
-#cat #comfort #feline #affection #window #sun #sunshine #sunbeam #nap #master #servant #ignore #lazy https://t.co/RwrFqMO83O
+#cat #comfort #feline #affection #window #sun #sunshine #sunbeam #nap #master #servant #ignore #lazy

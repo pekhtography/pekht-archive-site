@@ -11,4 +11,4 @@ hashtags:
 ---
 Moscow’s Arch of Light isn't just decoration, it's the official high-score gate for Christmas vibes. 
 The gold arch opens the way, but the true prize is the monumental peace waiting beyond. 👑✨ 
-#Travel #CathedralOfChristTheSavior #MoscowWinter #FairytaleAesthetic https://t.co/CAwrpAbjg7
+#Travel #CathedralOfChristTheSavior #MoscowWinter #FairytaleAesthetic

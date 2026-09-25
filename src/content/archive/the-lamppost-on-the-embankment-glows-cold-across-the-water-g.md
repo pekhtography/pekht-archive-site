@@ -13,4 +13,4 @@ The lamppost on the embankment glows cold. 🕯️
 Across the water — gold domes warm as bread, 
 glass towers cold as ambition. 
 You walk between both, belonging to neither.
-#Moscow #EveningWalk #CityScape #GoldenHour https://t.co/xNZsqkfG3Z
+#Moscow #EveningWalk #CityScape #GoldenHour

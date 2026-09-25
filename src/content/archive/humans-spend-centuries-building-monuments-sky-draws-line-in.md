@@ -18,4 +18,4 @@ hashtags:
   - "cityscape"
 ---
 Humans spend centuries building monuments, sky draws line in 30 seconds and wins 🏆⚡ Efficiency goals #SkyTrolling
-#flags #lamppost #contrail #sky #silhouette #architecture #evening #dramatic #urban #atmospheric #cityscape https://t.co/m4MOexE3NH
+#flags #lamppost #contrail #sky #silhouette #architecture #evening #dramatic #urban #atmospheric #cityscape

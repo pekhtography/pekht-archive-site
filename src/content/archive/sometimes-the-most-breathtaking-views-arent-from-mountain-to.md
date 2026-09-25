@@ -16,4 +16,4 @@ hashtags:
   - "sunset"
 ---
 Sometimes the most breathtaking views aren't from mountain tops – they're right in your own city waiting to be noticed 🌅 Every sunset reminds us that endings can be beautiful too ✨🏛️ #UrbanBeauty
-#architecture #tower #clock #building #flowers #purple #golden #landscape #sunset https://t.co/thPpzqcwvI
+#architecture #tower #clock #building #flowers #purple #golden #landscape #sunset

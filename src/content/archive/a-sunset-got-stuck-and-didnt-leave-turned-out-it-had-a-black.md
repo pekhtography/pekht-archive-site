@@ -12,4 +12,4 @@ hashtags:
 A sunset got stuck and didn't leave 🔥 — 
 turned out it had a black bill and total indifference to photographers. 
 Some fires don't die. They just look the other way 🍂
-#NaturePhotography #Waterfowl #WildlifePortrait #CopperFeathers https://t.co/9HlsixYOyI
+#NaturePhotography #Waterfowl #WildlifePortrait #CopperFeathers

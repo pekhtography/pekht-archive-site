@@ -11,4 +11,4 @@ hashtags:
   - "garden"
   - "sword"
 ---
-In the garden of the heart, love is the bow, and each moment is an arrow aimed at joy #arrow #target #bow #musketeer #garden #sword https://t.co/55T5uMYfMy
+In the garden of the heart, love is the bow, and each moment is an arrow aimed at joy #arrow #target #bow #musketeer #garden #sword

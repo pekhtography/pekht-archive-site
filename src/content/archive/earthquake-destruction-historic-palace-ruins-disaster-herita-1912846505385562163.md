@@ -20,4 +20,4 @@ hashtags:
   - "Loss"
   - "Ruined"
 ---
-#Earthquake #Destruction #Historic #Palace #Ruins #Disaster #Heritage #Collapse #Tragedy #Damage #Crisis #Devastation #Aftermath #Loss #Ruined https://t.co/lXeP7VUTpw
+#Earthquake #Destruction #Historic #Palace #Ruins #Disaster #Heritage #Collapse #Tragedy #Damage #Crisis #Devastation #Aftermath #Loss #Ruined

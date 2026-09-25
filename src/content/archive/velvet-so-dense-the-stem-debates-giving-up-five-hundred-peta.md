@@ -13,4 +13,4 @@ Velvet so dense the stem debates giving up 🌺 —
 five hundred petals folded inward, 
 smelling like warm sugar and something older, 
 the kind of red that makes the whole garden recalibrate its ambitions. 🌿
-#Flowers #Peonyseason #GardenMaximalism #CrimsonBloom https://t.co/FzO3r9o17E
+#Flowers #Peonyseason #GardenMaximalism #CrimsonBloom

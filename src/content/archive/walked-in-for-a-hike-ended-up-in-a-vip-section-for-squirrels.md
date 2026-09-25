@@ -12,4 +12,4 @@ hashtags:
 Walked in for a hike. 
 Ended up in a VIP section for squirrels. 
 Nature's way of saying: "Dress to impress, or stay home." ❄️🍸 
-#Winter #MainCharacterEnergy #Masquerade #Surrealism https://t.co/lVE7Uthz8l
+#Winter #MainCharacterEnergy #Masquerade #Surrealism

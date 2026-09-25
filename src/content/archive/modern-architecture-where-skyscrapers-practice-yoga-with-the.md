@@ -22,4 +22,4 @@ hashtags:
   - "Foliage"
 ---
 Modern architecture: where skyscrapers practice yoga with the trees, achieving the ultimate zen city aesthetic!
-#Modern #Innovation #architecture #Structure #nature #Organic #dynamic #Energy #urban #City #spaces #Area #buildings #Edifice #greenery #Foliage https://t.co/rObXYQn4Mi
+#Modern #Innovation #architecture #Structure #nature #Organic #dynamic #Energy #urban #City #spaces #Area #buildings #Edifice #greenery #Foliage

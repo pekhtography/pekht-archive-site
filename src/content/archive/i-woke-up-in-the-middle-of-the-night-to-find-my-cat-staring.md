@@ -19,4 +19,4 @@ hashtags:
   - "nightmare"
 ---
 I woke up in the middle of the night to find my cat staring at me with those green eyes. I’m not sure if he was judging my life choices or plotting world domination.
-#cat #green #eyes #judgment #watching #furry #darkness #shadows #sleep #night #silence #mystery #nightmare https://t.co/x1DSBIx2YB
+#cat #green #eyes #judgment #watching #furry #darkness #shadows #sleep #night #silence #mystery #nightmare

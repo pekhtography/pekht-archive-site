@@ -23,4 +23,4 @@ hashtags:
   - "beauty"
   - "serenity"
 ---
-#fireweed #seeds #nature #fluffy #wind #delicate #light #floating #whimsical #ethereal #botany #plantlife #outdoors #garden #summer #growth #beauty #serenity https://t.co/itgXTiyGEZ
+#fireweed #seeds #nature #fluffy #wind #delicate #light #floating #whimsical #ethereal #botany #plantlife #outdoors #garden #summer #growth #beauty #serenity

@@ -18,4 +18,4 @@ hashtags:
   - "Blossom"
 ---
 Agapanthus thinks it's the star, but callas know true beauty lies in simplicity 
-#Calla #Agapanthus #Blooms #Nature #Floral #Beauty #Garden #Petals #Vibrant #Elegance #Serenity #Blossom https://t.co/bTKX8Cdngd
+#Calla #Agapanthus #Blooms #Nature #Floral #Beauty #Garden #Petals #Vibrant #Elegance #Serenity #Blossom

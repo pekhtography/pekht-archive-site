@@ -13,4 +13,4 @@ He doesn't know he'll grow bigger than a full bag of cat food.
 Right now he just needs the sun to know he exists. 🍂✨ 
 That's not a meow. 
 That's a prayer.
-#TinyButMighty #MainecoonKitten #ScreamingBaby #GoldenHour https://t.co/27rgiZ6kSF
+#TinyButMighty #MainecoonKitten #ScreamingBaby #GoldenHour

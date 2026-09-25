@@ -13,4 +13,4 @@ Red velvet chassis. Needle-thin cooling fins.
 The yellow circuitry of gold-dust particles is leaking everywhere. 
 This bio-engine is overheating. 
 Just a very dramatic peony. ⚙️🥀
-#Nature #BotanicalGardens #FloralDesign #MainCharacterEnergy https://t.co/kzyqJr0GCY
+#Nature #BotanicalGardens #FloralDesign #MainCharacterEnergy

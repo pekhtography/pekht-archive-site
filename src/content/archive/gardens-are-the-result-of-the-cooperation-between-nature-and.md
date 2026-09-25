@@ -13,4 +13,4 @@ hashtags:
   - "cooperation"
   - "soul"
 ---
-Gardens are the result of the cooperation between nature and human efforts #garden #nature #art #restoration #senses #friend #cooperation #soul https://t.co/pG5Jkj0taP
+Gardens are the result of the cooperation between nature and human efforts #garden #nature #art #restoration #senses #friend #cooperation #soul

@@ -12,4 +12,4 @@ hashtags:
   - "Symbol"
   - "City"
 ---
-The panda, with its slow, deliberate movements, exuded a sense of calm. The rabbit, bouncing with boundless energy, brought an infectious happiness to the urban landscape #Panda #Gentle #Rabbit #Playful #Mascot #Symbol #City https://t.co/t6w1JK6FM9
+The panda, with its slow, deliberate movements, exuded a sense of calm. The rabbit, bouncing with boundless energy, brought an infectious happiness to the urban landscape #Panda #Gentle #Rabbit #Playful #Mascot #Symbol #City

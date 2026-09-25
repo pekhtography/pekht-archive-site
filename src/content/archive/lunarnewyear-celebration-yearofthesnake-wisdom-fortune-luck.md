@@ -21,4 +21,4 @@ hashtags:
   - "Joy"
   - "China"
 ---
-#LunarNewYear #Celebration #YearOfTheSnake #Wisdom #Fortune #Luck #Dances #Festivity #FamilyFeasts #Togetherness #Chinese #Zodiac #Snake #Wisdom #Change #Celebration #Joy #China https://t.co/v5qi0v1RNS
+#LunarNewYear #Celebration #YearOfTheSnake #Wisdom #Fortune #Luck #Dances #Festivity #FamilyFeasts #Togetherness #Chinese #Zodiac #Snake #Wisdom #Change #Celebration #Joy #China

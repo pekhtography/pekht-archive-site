@@ -8,4 +8,4 @@ hashtags:
   - "PublicSpaceMagic"
   - "ArchitecturalWhispers"
 ---
-The lampposts here don’t just light the square—they hold up the sky. And the people? They’re just passing through, like shadows in a museum of time. 🏛️✨ #UrbanNostalgia #PublicSpaceMagic #ArchitecturalWhispers https://t.co/ivXXqWHsxY
+The lampposts here don’t just light the square—they hold up the sky. And the people? They’re just passing through, like shadows in a museum of time. 🏛️✨ #UrbanNostalgia #PublicSpaceMagic #ArchitecturalWhispers

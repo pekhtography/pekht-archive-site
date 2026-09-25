@@ -18,4 +18,4 @@ hashtags:
   - "chirp"
 ---
 The feeder is the trendiest café, and the bullfinch is its most esteemed patron 
-#bird #feeder #nature #wildlife #outdoors #spring #tree #feathers #perch #songbird #bullfinch #chirp https://t.co/kVl0gfVff4
+#bird #feeder #nature #wildlife #outdoors #spring #tree #feathers #perch #songbird #bullfinch #chirp

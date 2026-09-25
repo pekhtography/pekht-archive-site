@@ -10,4 +10,4 @@ hashtags:
   - "Nature"
   - "Beauty"
 ---
-The golden light of autumn is a reminder of the fleeting colorful of nature #Autumn #Leaves #Color #Nature #Beauty https://t.co/7HOunjJLZx
+The golden light of autumn is a reminder of the fleeting colorful of nature #Autumn #Leaves #Color #Nature #Beauty

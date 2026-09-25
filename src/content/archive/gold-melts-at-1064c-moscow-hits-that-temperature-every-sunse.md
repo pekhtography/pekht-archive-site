@@ -14,4 +14,4 @@ Moscow hits that temperature every sunset —
 and the domes just stand there, already liquid, already perfect. 🔥 
 Some things weren't built to survive fire. 
 They were built from it.
-#Architecture #GoldenHour #MoscowSkyline #BurningCold https://t.co/tOfbc5vEI8
+#Architecture #GoldenHour #MoscowSkyline #BurningCold

@@ -20,4 +20,4 @@ hashtags:
   - "nesting"
 ---
 With a zest for life rivaling that of a caffeinated squirrel, the nuthatch prepares its tree abode for the winter chill
-#nuthatch #feathered #tree #bark #winter #frost #abode #shelter #survival #endurance #comfort #twig #branch #nesting https://t.co/VoJGcfdg5N
+#nuthatch #feathered #tree #bark #winter #frost #abode #shelter #survival #endurance #comfort #twig #branch #nesting

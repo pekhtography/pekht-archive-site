@@ -14,4 +14,4 @@ hashtags:
   - "Reality"
   - "Portal"
 ---
-The mirror is a portal. Cats can see through it. Some cats even believe  that the world in the mirror is just as real as this one, and contains  their "twin" #Cat #Feline #Reflection #Mirror #Fear #Anxiety #Wisdom #Reality  #Portal https://t.co/5slr2zqDxF
+The mirror is a portal. Cats can see through it. Some cats even believe  that the world in the mirror is just as real as this one, and contains  their "twin" #Cat #Feline #Reflection #Mirror #Fear #Anxiety #Wisdom #Reality  #Portal

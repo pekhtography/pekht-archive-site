@@ -19,4 +19,4 @@ hashtags:
   - "songbird"
 ---
 Why join the bird choir when you can be the solo star? This linnet’s got stage fright solved! 😂🎤🐦 #LonelyStarBird
-#bird #linnet #nature #wildlife #branches #sky #feathers #perch #spring #outdoors #photography #songbird https://t.co/ckOlfdkH5U
+#bird #linnet #nature #wildlife #branches #sky #feathers #perch #spring #outdoors #photography #songbird

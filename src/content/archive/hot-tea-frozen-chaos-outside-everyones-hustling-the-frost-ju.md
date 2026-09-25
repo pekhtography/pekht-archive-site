@@ -14,4 +14,4 @@ Everyone's hustling.
 The frost? 
 Just vibing. 
 Maybe it cracked the code we're all chasing. ❄️☕✨ 
-#Mindfulness #SlowLiving #CozyMood https://t.co/CvKZ3uPXYp
+#Mindfulness #SlowLiving #CozyMood

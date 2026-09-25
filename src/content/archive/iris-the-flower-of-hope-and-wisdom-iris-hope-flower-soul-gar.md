@@ -13,4 +13,4 @@ hashtags:
   - "Beauty"
   - "Yellow"
 ---
-Iris, the flower of hope and wisdom #Iris #Hope #Flower #Soul #Garden #Nature #Beauty #Yellow https://t.co/yeqZSz8PcF
+Iris, the flower of hope and wisdom #Iris #Hope #Flower #Soul #Garden #Nature #Beauty #Yellow

@@ -13,4 +13,4 @@ Red Square, my winter residency.
 Drop it to minus fifteen, GUM glowing, crowd freezing — 
 still smiling for cameras ❄️ 
 Frostbite is my signature 🔥 
-#WinterVibes #MoscowWinter #RedSquare #EpicMoments https://t.co/byiRoagziR
+#WinterVibes #MoscowWinter #RedSquare #EpicMoments

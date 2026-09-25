@@ -22,4 +22,4 @@ hashtags:
   - "Mobility"
 ---
 Trains don’t run late, they just practice patience. Passengers? Not so much! 🚆😂 #WaitingGameExpress
-#Suburban #Train #Electric #Rail #Transport #Station #Modern #Commuter #City #Public #Travel #Railway #Platform #Urban #Mobility https://t.co/sYXFFcuoQk
+#Suburban #Train #Electric #Rail #Transport #Station #Modern #Commuter #City #Public #Travel #Railway #Platform #Urban #Mobility

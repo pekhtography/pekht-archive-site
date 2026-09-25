@@ -13,4 +13,4 @@ Crimson velvet vibrates under the sun.
 Three red microphones wait for the wind's bass drop. 
 Botanical boy bands maintain tours. 
 Just water. 🎤🌷 
-#SpringVibes #PlantParent #TulipSeason #VibrantLife https://t.co/6MfpqzLRsY
+#SpringVibes #PlantParent #TulipSeason #VibrantLife

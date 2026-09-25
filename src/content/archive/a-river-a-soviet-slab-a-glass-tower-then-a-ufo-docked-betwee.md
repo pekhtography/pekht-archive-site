@@ -13,4 +13,4 @@ A river. A Soviet slab. A glass tower.
 Then — 
 a UFO docked between them like it's been there since Tuesday 🛸 
 Moscow didn't choose an era. It stacked them. 
-#CityLife #UrbanExploration #MoscowCity #Wanderlust https://t.co/WfULlJ0r8J
+#CityLife #UrbanExploration #MoscowCity #Wanderlust

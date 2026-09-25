@@ -25,4 +25,4 @@ hashtags:
   - "selfie"
 ---
 A radiant maze of city streets where every turn is a selfie opportunity – welcome to the glow-up!
-#city #metropolis #labyrinth #mystery #lights #glow #night #illuminate #shine #cityscape #perspective #urban #life #exploration #journey #dreams #adventure #excursion #selfie https://t.co/yNUrM1Yjq4
+#city #metropolis #labyrinth #mystery #lights #glow #night #illuminate #shine #cityscape #perspective #urban #life #exploration #journey #dreams #adventure #excursion #selfie

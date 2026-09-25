@@ -12,4 +12,4 @@ hashtags:
 Gravity forgot this golden needle. 
 It points at Mars while fountains spit liquid sun at tourists. 
 Pack your bags, the palace launches at midnight 🚀✨
-#Architecture #RetroFuturism #GoldenHour #Grandeur https://t.co/K1G7X7ZLYw
+#Architecture #RetroFuturism #GoldenHour #Grandeur

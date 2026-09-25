@@ -15,4 +15,4 @@ hashtags:
   - "Garden"
   - "Paradise"
 ---
-The height and number of columns in a colonnade could reflect the  perceived importance and power of the ruler or the building it fronted #Palace #Majesty #Colonnade #Grandeur #Architecture #Design #Royal #Elegance #Garden #Paradise https://t.co/qRQs6YB0xI
+The height and number of columns in a colonnade could reflect the  perceived importance and power of the ruler or the building it fronted #Palace #Majesty #Colonnade #Grandeur #Architecture #Design #Royal #Elegance #Garden #Paradise

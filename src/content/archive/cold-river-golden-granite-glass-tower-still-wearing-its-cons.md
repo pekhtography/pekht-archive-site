@@ -13,4 +13,4 @@ Cold river, golden granite,
 glass tower still wearing its construction crane —
 the city posted the sunset before finishing the caption. 🏙️❄️✨
 Unfinished hits different.
-#CityVibes #UrbanContrast #SovietAndGlass #GoldenHour https://t.co/640fcCia2r
+#CityVibes #UrbanContrast #SovietAndGlass #GoldenHour

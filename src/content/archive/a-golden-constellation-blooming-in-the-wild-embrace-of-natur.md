@@ -18,4 +18,4 @@ hashtags:
   - "Wildflowers"
 ---
 A golden constellation blooming in the wild embrace of nature
-#JerusalemArtichoke #Sunchoke #YellowBlossoms #Nature #Garden #Flora #Blooms #Sunny #Outdoors #Botanical #Golden #Wildflowers https://t.co/kkyYcWgvip
+#JerusalemArtichoke #Sunchoke #YellowBlossoms #Nature #Garden #Flora #Blooms #Sunny #Outdoors #Botanical #Golden #Wildflowers

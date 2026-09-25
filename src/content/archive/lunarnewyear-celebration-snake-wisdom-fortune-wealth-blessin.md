@@ -17,4 +17,4 @@ hashtags:
   - "Dreams"
   - "Hope"
 ---
-#LunarNewYear #Celebration #Snake #Wisdom #Fortune #Wealth #Blessing #Joy #Fireworks #Light #Dreams #Hope https://t.co/bVvL6li9Ow
+#LunarNewYear #Celebration #Snake #Wisdom #Fortune #Wealth #Blessing #Joy #Fireworks #Light #Dreams #Hope

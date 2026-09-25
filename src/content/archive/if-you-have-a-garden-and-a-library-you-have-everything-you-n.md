@@ -11,4 +11,4 @@ hashtags:
   - "beauty"
   - "sunshine"
 ---
-If you have a garden and a library, you have everything you need #garden #blossom #pathways #journey #beauty #sunshine https://t.co/6l3RfRJAT6
+If you have a garden and a library, you have everything you need #garden #blossom #pathways #journey #beauty #sunshine

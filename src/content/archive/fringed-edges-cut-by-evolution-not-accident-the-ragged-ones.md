@@ -12,4 +12,4 @@ hashtags:
 Fringed edges cut by evolution, not accident 🌸 — 
 the ragged ones get chosen first. 
 Torn is the strategy. 🌿🔥
-#Dianthus #WildDesign #NatureStrategy #FloralScience https://t.co/VZV3426d6N
+#Dianthus #WildDesign #NatureStrategy #FloralScience

@@ -15,4 +15,4 @@ hashtags:
   - "Night"
 ---
 The ice reflects not just the lights above but the dreams of those who glide upon its surface
-#IceRink #NewYear #Lights #Winter #Festive #Holiday #Magic #Skating #Night https://t.co/F4rudGNHSn
+#IceRink #NewYear #Lights #Winter #Festive #Holiday #Magic #Skating #Night

@@ -19,4 +19,4 @@ hashtags:
   - "engineering"
 ---
 This bridge is so extra, it demanded its own sunset photoshoot 📸 Even the river stopped to pose for this drama 🌊✨ #ExtraBridge
-#bridge #sunset #river #architecture #golden #reflection #evening #water #sky #peaceful #dramatic #engineering https://t.co/AAJMb91xdv
+#bridge #sunset #river #architecture #golden #reflection #evening #water #sky #peaceful #dramatic #engineering

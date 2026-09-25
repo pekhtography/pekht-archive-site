@@ -12,4 +12,4 @@ hashtags:
 The gold spire burns at the end of the street. 
 The sidewalk tells your boots what the monument forgot to mention. 🏙️❄️ 
 Monument sells the dream. Ice collects the fee.
-#CityNights #SovietAesthetics #WinterCity #GoldenSpire https://t.co/IZSQUf7mlW
+#CityNights #SovietAesthetics #WinterCity #GoldenSpire

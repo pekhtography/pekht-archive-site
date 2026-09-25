@@ -19,4 +19,4 @@ hashtags:
   - "travel"
 ---
 When vintage cars meet modern trams, history and humor collide 🚋🚗 "Need a lift, grandpa?"😉 Urban evolution in full swing—because old school never goes out of style!🔥 #TimeTravel #TramShade #RetroVibes
-#tram #car #vintage #city #transport #street #urban #classic #retro #travel https://t.co/1OIbBMVBd6
+#tram #car #vintage #city #transport #street #urban #classic #retro #travel

@@ -26,4 +26,4 @@ hashtags:
   - "landing"
 ---
 With every step, I felt like an unwitting character in an autumn drama, waiting for the plot twist to be a slippery acorn
-#autumn #leaves #secrets #story #air #aroma #park #twist #breeze #moments #step #drama #plot #twist #acorn #surprise #leaf #footfall #season #wind #landing https://t.co/lNRLxSGWWf
+#autumn #leaves #secrets #story #air #aroma #park #twist #breeze #moments #step #drama #plot #twist #acorn #surprise #leaf #footfall #season #wind #landing

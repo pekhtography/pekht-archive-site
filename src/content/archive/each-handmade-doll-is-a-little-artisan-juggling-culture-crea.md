@@ -14,4 +14,4 @@ hashtags:
   - "Craftsmanship"
 ---
 Each handmade doll is a little artisan, juggling culture, creativity, and a sprinkle of whimsy like a clown at a craft fair
-#Handmade #Doll #Artistry #Creativity #Unique #Story #Culture #Craftsmanship https://t.co/fqMTrjE7AK
+#Handmade #Doll #Artistry #Creativity #Unique #Story #Culture #Craftsmanship

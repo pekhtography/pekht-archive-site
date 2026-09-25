@@ -13,4 +13,4 @@ Chin on the table. Eyes locked on yours. 👁️
 The warmth of afternoon pooling around his paws — 
 and somehow you're the one being interviewed. 🐾 
 Blink first. I dare you.
-#CatLovers #CatBehavior #LazyRoyalty #GoldenHourVibes https://t.co/XclmrtF2FK
+#CatLovers #CatBehavior #LazyRoyalty #GoldenHourVibes

@@ -13,4 +13,4 @@ The sky just detonated in orange 🔥
 and everyone's still walking the same pace, same direction — 
 except one hand, slowly rising, screen glowing upward. 
 Even autopilot knows. 📱✨
-#Sunset #MoscowVibes #GoldenHour #CityOnFire https://t.co/pYb6i3OJDD
+#Sunset #MoscowVibes #GoldenHour #CityOnFire

@@ -15,4 +15,4 @@ hashtags:
   - "Heritage"
 ---
 The architecture is so majestic it seems to reach for the stars 
-#Architecture #Night #Lights #Exhibition #History #Culture #Landmark #Beauty #Heritage https://t.co/8WSX2PrwCP
+#Architecture #Night #Lights #Exhibition #History #Culture #Landmark #Beauty #Heritage

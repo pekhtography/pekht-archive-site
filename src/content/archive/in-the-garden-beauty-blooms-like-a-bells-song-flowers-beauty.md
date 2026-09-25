@@ -13,4 +13,4 @@ hashtags:
   - "Bloom"
   - "blue"
 ---
-In the garden, beauty blooms like a bell's song #Flowers #Beauty #Garden #Nature #Sun #Light #Bloom #blue https://t.co/VHLYJDPeoD
+In the garden, beauty blooms like a bell's song #Flowers #Beauty #Garden #Nature #Sun #Light #Bloom #blue

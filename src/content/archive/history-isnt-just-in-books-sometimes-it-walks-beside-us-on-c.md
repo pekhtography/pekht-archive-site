@@ -19,4 +19,4 @@ hashtags:
   - "Pride"
 ---
 History isn't just in books; sometimes, it walks beside us on cobblestone streets. 🕰️ #LivingHistoryMoment
-#History #Reenactment #Moscow #Victory #Tradition #Culture #Heritage #Uniform #Russia #Celebration #Event #Pride https://t.co/Gy8NJlPBDM
+#History #Reenactment #Moscow #Victory #Tradition #Culture #Heritage #Uniform #Russia #Celebration #Event #Pride

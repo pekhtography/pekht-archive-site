@@ -11,4 +11,4 @@ hashtags:
   - "spring"
   - "garden"
 ---
-The Globeflower (Trollius) is known for its brilliant yellow blooms in late spring to early summer #Globeflower #yellow #flowe #bloom #spring #garden https://t.co/Eo1xYdWJtj
+The Globeflower (Trollius) is known for its brilliant yellow blooms in late spring to early summer #Globeflower #yellow #flowe #bloom #spring #garden

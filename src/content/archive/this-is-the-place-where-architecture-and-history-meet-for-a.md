@@ -15,4 +15,4 @@ hashtags:
   - "Travel"
 ---
 This is the place where architecture and history meet for a cup of tea and a chat about important achievements
-#Architecture #History #Exhibition #Culture #Heritage #Landmark #Grandeur #Sunset #Travel https://t.co/8iPmKRwEi6
+#Architecture #History #Exhibition #Culture #Heritage #Landmark #Grandeur #Sunset #Travel

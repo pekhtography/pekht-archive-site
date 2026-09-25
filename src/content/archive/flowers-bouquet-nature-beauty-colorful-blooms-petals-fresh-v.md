@@ -17,4 +17,4 @@ hashtags:
   - "Blossoms"
   - "Floral"
 ---
-#Flowers #Bouquet #Nature #Beauty #Colorful #Blooms #Petals #Fresh #Vibrant #Garden #Blossoms #Floral https://t.co/W8SwIcPByq
+#Flowers #Bouquet #Nature #Beauty #Colorful #Blooms #Petals #Fresh #Vibrant #Garden #Blossoms #Floral

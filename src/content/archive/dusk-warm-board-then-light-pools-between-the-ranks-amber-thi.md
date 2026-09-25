@@ -14,4 +14,4 @@ Then light pools between the ranks —
 amber-thick, almost edible — 
 and the gap between white and black becomes the one moment in any game where both sides are still equal. 🌅 
 Every war starts here.
-#Chess #StreetChess #ThinkingGames #CheckmateFeeling https://t.co/oHom69CmJ0
+#Chess #StreetChess #ThinkingGames #CheckmateFeeling

@@ -14,4 +14,4 @@ hashtags:
   - "Understanding"
 ---
 Inquisitive cat roams the library of life, whiskers twitching, hunting for delicious morsels of wisdom.
-#Cat #Knowledge #Mysteries #Curiosity #Whiskers #Wisdom #Sunlight #Understanding https://t.co/iXaGPovo1i
+#Cat #Knowledge #Mysteries #Curiosity #Whiskers #Wisdom #Sunlight #Understanding

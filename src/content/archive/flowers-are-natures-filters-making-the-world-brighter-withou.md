@@ -18,4 +18,4 @@ hashtags:
   - "spring"
 ---
 Flowers are nature's filters, making the world brighter without Photoshop 
-#flowers #blooms #nature #colorful #garden #vibrant #petals #floral #beauty #blossoms #bouquet #spring https://t.co/eYedit4YSs
+#flowers #blooms #nature #colorful #garden #vibrant #petals #floral #beauty #blossoms #bouquet #spring

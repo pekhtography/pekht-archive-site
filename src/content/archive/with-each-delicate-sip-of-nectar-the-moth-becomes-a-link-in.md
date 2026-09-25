@@ -12,4 +12,4 @@ hashtags:
   - "dance"
   - "garden"
 ---
-With each delicate sip of nectar, the moth becomes a link in the beautiful chain of life #nectar #collection #proboscis #blossoms #sustenance #dance #garden https://t.co/vOSFZxE4DS
+With each delicate sip of nectar, the moth becomes a link in the beautiful chain of life #nectar #collection #proboscis #blossoms #sustenance #dance #garden

@@ -19,4 +19,4 @@ hashtags:
   - "Instagram"
 ---
 In a garden full of blooms, the Red Admiral butterfly is both the artist and the art, ensuring that every sip of nectar is Instagram-worthy
-#Butterfly #RedAdmiral #Garden #Nectar #Sip #Beauty #Dance #Seasons #Joy #Flutters #Blooms #Art #Instagram https://t.co/8HusIwElaE
+#Butterfly #RedAdmiral #Garden #Nectar #Sip #Beauty #Dance #Seasons #Joy #Flutters #Blooms #Art #Instagram

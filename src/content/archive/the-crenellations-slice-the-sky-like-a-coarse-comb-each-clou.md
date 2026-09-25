@@ -12,4 +12,4 @@ hashtags:
 The crenellations slice the sky like a coarse comb. 
 Each cloud gets detangled before passing. 
 Time combs its own hair with stone. ☁️🪥 
-#Architecture #Perspective #MoscowKremlin #Verticality https://t.co/2Ns3CvKzaT
+#Architecture #Perspective #MoscowKremlin #Verticality

@@ -13,4 +13,4 @@ Stand here blazing as thousands walk through my glow—
 each hoping a little of it follows them home 🎄 
 Honestly, I run on electricity and collective delusion ✨ 
 But lights don't lie when they're this bright 💎 
-#NewYearVibes #WinterWonderland #HolidayLights #FestiveEnergy https://t.co/REbRJUnK7j
+#NewYearVibes #WinterWonderland #HolidayLights #FestiveEnergy

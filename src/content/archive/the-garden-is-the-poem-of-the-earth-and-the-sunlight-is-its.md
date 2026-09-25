@@ -12,4 +12,4 @@ hashtags:
   - "freedom"
   - "inspiration"
 ---
-The garden is the poem of the earth, and the sunlight is its inspiration #sunshine #light #shadow #mystery #garden #freedom #inspiration https://t.co/UzOky0xdBu
+The garden is the poem of the earth, and the sunlight is its inspiration #sunshine #light #shadow #mystery #garden #freedom #inspiration

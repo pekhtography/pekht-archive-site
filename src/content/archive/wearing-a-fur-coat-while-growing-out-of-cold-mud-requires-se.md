@@ -11,4 +11,4 @@ hashtags:
 ---
 Wearing a fur coat while growing out of cold mud requires serious audacity. 
 This strawberry-colored rebel proves that being slightly unkempt is actually the highest luxury 🍓🧥🔥
-#NatureLovers #BotanicalArt #GardenVibes #StayWild https://t.co/onNTyzlMix
+#NatureLovers #BotanicalArt #GardenVibes #StayWild

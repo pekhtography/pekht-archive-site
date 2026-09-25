@@ -14,4 +14,4 @@ Chimneys exhale. Clouds bruise orange, violet, ash.
 Moscow working — not performing.
 And somehow that's the most violent sunset I've ever stood inside. ❄️
 Industry is just beauty on a deadline.
-#SunsetVibes #UrbanSunset #IndustrialSky #FireAndIce https://t.co/OpY1BH9HJr
+#SunsetVibes #UrbanSunset #IndustrialSky #FireAndIce

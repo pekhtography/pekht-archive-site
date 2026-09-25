@@ -14,4 +14,4 @@ hashtags:
   - "Scale"
 ---
 Behind the scenes: Even miniature Moscow requires urban planning!🗺️ Every streetlight positioned, every dome polished to perfection ✨ Turns out God really is in the details... and the tiny trees 🌲 #MiniatureMoscow
-#Model #Miniature #Architecture #Kremlin #Diorama #Moscow #Scale https://t.co/zlr5ICFhDb
+#Model #Miniature #Architecture #Kremlin #Diorama #Moscow #Scale

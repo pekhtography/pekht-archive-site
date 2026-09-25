@@ -11,4 +11,4 @@ hashtags:
   - "Aromatic"
   - "Flowers"
 ---
-Dill’s umbrella-like flowers are both a feast for the eyes and an attraction for pollinators #Dill #Herb #Garden #Fronds #Aromatic #Flowers https://t.co/kMFzhIXU5t
+Dill’s umbrella-like flowers are both a feast for the eyes and an attraction for pollinators #Dill #Herb #Garden #Fronds #Aromatic #Flowers

@@ -14,4 +14,4 @@ Hit something better.
 The blur spread like a bruise made of neon — 
 red spots floating, violet beams splitting dark air. 🔴 
 That's when the mistake became the only correct answer. 💜 
-#LightPhotography #BokehArt #LensFlareVibes #ExplosiveBeauty https://t.co/nGMsD1mQzA
+#LightPhotography #BokehArt #LensFlareVibes #ExplosiveBeauty

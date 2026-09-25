@@ -13,4 +13,4 @@ The city stands gold and eternal.
 You stand for approximately 3 seconds. 🏛️ 
 Blades hit ice, arms go full seagull mode, dignity exits left. ❄️ 
 Gravity doesn't care about your aesthetic. 
-#WinterVibes #IceSkating #CityNights #WinterMagic https://t.co/itxd65XlNN
+#WinterVibes #IceSkating #CityNights #WinterMagic

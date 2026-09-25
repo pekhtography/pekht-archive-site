@@ -14,4 +14,4 @@ You're standing in emptiness that feels… loud.
 Like the sky just whispered something important 
 but you missed the punchline ☁️
 Stillness hits different when it's theatrical.
-#WinterLight #NatureTherapy #SilentMoments #GoldenHourMagic https://t.co/wxOD6KlUa1
+#WinterLight #NatureTherapy #SilentMoments #GoldenHourMagic

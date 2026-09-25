@@ -11,4 +11,4 @@ hashtags:
   - "artwork"
   - "canvas"
 ---
-With stripes like melodies, the zebra harmonizes with its environment #zebra #stripes #patterns #landscape #artwork #canvas https://t.co/DLo2wBbnhS
+With stripes like melodies, the zebra harmonizes with its environment #zebra #stripes #patterns #landscape #artwork #canvas

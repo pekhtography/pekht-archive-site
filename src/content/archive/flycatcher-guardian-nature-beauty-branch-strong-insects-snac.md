@@ -15,4 +15,4 @@ hashtags:
   - "Vigilance"
   - "Watchful"
 ---
-#Flycatcher #Guardian #Nature #Beauty #Branch #Strong #Insects #Snack #Vigilance #Watchful https://t.co/GexARE4E12
+#Flycatcher #Guardian #Nature #Beauty #Branch #Strong #Insects #Snack #Vigilance #Watchful

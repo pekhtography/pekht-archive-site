@@ -14,4 +14,4 @@ She arrived, fit through a gap that should be impossible,
 and didn't acknowledge the effort once. 💙 
 Five stars. 
 Would not tip. ❄️ 
-#Wildlife #EurasianJay #BirdFeeder #WildAndFabulous https://t.co/Of60r6iZIC
+#Wildlife #EurasianJay #BirdFeeder #WildAndFabulous

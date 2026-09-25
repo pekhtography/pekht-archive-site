@@ -12,4 +12,4 @@ cheeks still blushing beneath cracked lacquer.
 Blue branches hold what hands can't—
 the weight of being touched by people who aren't here anymore.
 Fragile things last longest when they matter most 🦊💙
-#Christmas #Vintage https://t.co/bgrONIoHBV
+#Christmas #Vintage

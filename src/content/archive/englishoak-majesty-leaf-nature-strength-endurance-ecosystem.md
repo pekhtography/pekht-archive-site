@@ -23,4 +23,4 @@ hashtags:
   - "Habitat"
   - "Longevity"
 ---
-#EnglishOak #Majesty #Leaf #Nature #Strength #Endurance #Ecosystem #Balance #Acorn #Resilience #Growth #Autumn #Transition #Oak #Tall #Forest #Habitat #Longevity https://t.co/gE58FzFbar
+#EnglishOak #Majesty #Leaf #Nature #Strength #Endurance #Ecosystem #Balance #Acorn #Resilience #Growth #Autumn #Transition #Oak #Tall #Forest #Habitat #Longevity

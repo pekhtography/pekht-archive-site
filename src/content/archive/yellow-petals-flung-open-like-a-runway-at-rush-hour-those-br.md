@@ -14,4 +14,4 @@ those brown-veined eyes have been clocking every bee since 6am.
 Efficient. 
 Ruthless. 
 Gorgeous. 🌿
-#Nature #IrisGarden #MacroFlora #WildAndBeautiful https://t.co/sD0a8zl1UH
+#Nature #IrisGarden #MacroFlora #WildAndBeautiful

@@ -12,4 +12,4 @@ hashtags:
 Someone glued nostalgia to a rotunda 🎠 
 now every adult walks past like they're seven again ✨ 
 Plot twist: the lights don't move but your heart does 💙 
-#ChristmasLights #WinterWonderland #HolidayDecor #MagicMoments https://t.co/MatrzGsQff
+#ChristmasLights #WinterWonderland #HolidayDecor #MagicMoments

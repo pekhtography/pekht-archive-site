@@ -23,4 +23,4 @@ hashtags:
   - "Choice"
 ---
 Once a baby bird leaves the nest, the only limit is the sky
-#BabyBird #Nestling #LeaveTheNest #Nest #Freedom #Limit #Possibilities #Sky #Endless #Soar #Elevate #Horizon #Future #Dreams #Aspirations #Liberty #Choice https://t.co/6jo70ehvcX
+#BabyBird #Nestling #LeaveTheNest #Nest #Freedom #Limit #Possibilities #Sky #Endless #Soar #Elevate #Horizon #Future #Dreams #Aspirations #Liberty #Choice

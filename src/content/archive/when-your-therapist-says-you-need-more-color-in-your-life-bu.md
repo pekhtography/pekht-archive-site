@@ -15,4 +15,4 @@ hashtags:
   - "housing"
 ---
 When your therapist says you need more color in your life, but you're an architect with commitment issues 🎨🏗️ Solution: Make everyone else live in your rainbow breakdown! 🌈 #TherapyThroughArchitecture
-#architecture #colorful #modern #building #design #urban #creative #housing https://t.co/0kxfzlj4NQ
+#architecture #colorful #modern #building #design #urban #creative #housing

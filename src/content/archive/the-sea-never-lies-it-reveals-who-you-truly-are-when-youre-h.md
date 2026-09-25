@@ -19,4 +19,4 @@ hashtags:
   - "seafaring"
 ---
 The sea never lies - it reveals who you truly are when you're holding the wheel 🌊⚓ Every captain knows the ocean's ancient wisdom speaks louder than any GPS #TrueNavigation
-#boat #captain #navigation #maritime #sailing #helm #ocean #steering #vessel #harbor #nautical #seafaring https://t.co/li3Bt5KAkF
+#boat #captain #navigation #maritime #sailing #helm #ocean #steering #vessel #harbor #nautical #seafaring

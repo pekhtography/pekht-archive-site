@@ -15,4 +15,4 @@ The cone catches the light, refracts it into a raspy sound—
 dry, scratchy, organic. 
 This isn't sight. 
 This is hearing the sun. 🧡🔊🌼 
-#Nature #FlowerPhotography #LightPlay #SunnyVibes https://t.co/IZGAs4L7Ok
+#Nature #FlowerPhotography #LightPlay #SunnyVibes

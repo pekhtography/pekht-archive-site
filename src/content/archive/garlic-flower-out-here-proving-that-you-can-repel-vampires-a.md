@@ -16,4 +16,4 @@ hashtags:
   - "elegant"
 ---
 Garlic flower out here proving that you can repel vampires AND attract photographers 📸🧄 Talk about having range! From kitchen warrior to Instagram star - the ultimate glow-up story 💫📱 #VersatileIcon
-#garlic #flower #bloom #nature #garden #macro #botanical #culinary #elegant https://t.co/5xhI7UzZqc
+#garlic #flower #bloom #nature #garden #macro #botanical #culinary #elegant

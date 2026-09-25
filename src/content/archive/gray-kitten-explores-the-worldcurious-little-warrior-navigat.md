@@ -19,4 +19,4 @@ hashtags:
   - "enchantment"
 ---
 Gray kitten explores the world—curious little warrior, navigating life's puzzles with a twinkle in his eye
-#gray #kitten #cat #whiskers #curiosity #adventure #eye #discovery #home #exploration #puzzle #enigma #enchantment https://t.co/HWJtVrqmbD
+#gray #kitten #cat #whiskers #curiosity #adventure #eye #discovery #home #exploration #puzzle #enigma #enchantment

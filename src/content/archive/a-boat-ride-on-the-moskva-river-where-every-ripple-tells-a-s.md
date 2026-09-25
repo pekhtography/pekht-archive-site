@@ -19,4 +19,4 @@ hashtags:
   - "History"
 ---
 A boat ride on the Moskva River — where every ripple tells a story 🚤🌊 #RiverStories
-#Moscow #Cathedral #ChristTheSaviour #KrymskyBridge #River #Architecture #Russia #Cityscape #GoldenDomes #Travel #Landmark #History https://t.co/s2OMq3jmGC
+#Moscow #Cathedral #ChristTheSaviour #KrymskyBridge #River #Architecture #Russia #Cityscape #GoldenDomes #Travel #Landmark #History

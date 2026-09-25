@@ -19,4 +19,4 @@ hashtags:
   - "botanical"
 ---
 Me: Expects actual bell sounds Nature: Best I can do is visual poetry and bee attraction 🐝📝 Deal? 🤝🌺 #NatureNegotiation
-#bellflower #campanula #pink #wildflower #nature #garden #delicate #spring #bloom #petals #woodland #botanical https://t.co/R734vu3W6R
+#bellflower #campanula #pink #wildflower #nature #garden #delicate #spring #bloom #petals #woodland #botanical

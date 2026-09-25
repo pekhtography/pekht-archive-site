@@ -22,4 +22,4 @@ hashtags:
   - "abundance"
 ---
 The glimmering ornaments on the New Year tree shine like the warmth of tangerine dreams, promising a year filled with joy and love
-#NewYear #Hope #Joy #Love #Ornaments #Dreams #Tree #Laughter #tangerines #baubles #happiness #sweetness #aspirations #optimism #kindness #abundance https://t.co/FZMtJFJgq5
+#NewYear #Hope #Joy #Love #Ornaments #Dreams #Tree #Laughter #tangerines #baubles #happiness #sweetness #aspirations #optimism #kindness #abundance

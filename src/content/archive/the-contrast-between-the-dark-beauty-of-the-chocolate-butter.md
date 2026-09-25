@@ -8,4 +8,4 @@ hashtags:
   - "Flower"
   - "ChocolateButterfly"
 ---
-The contrast between the dark beauty of the chocolate butterfly and the  vivid colours of the flower creates a captivating sight within the  verdant paradise of the garden #Garden #Flower #ChocolateButterfly https://t.co/isgHyoWo19
+The contrast between the dark beauty of the chocolate butterfly and the  vivid colours of the flower creates a captivating sight within the  verdant paradise of the garden #Garden #Flower #ChocolateButterfly

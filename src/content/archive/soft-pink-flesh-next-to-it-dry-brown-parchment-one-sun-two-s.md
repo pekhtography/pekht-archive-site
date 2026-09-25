@@ -13,4 +13,4 @@ Soft pink flesh.
 Next to it, dry brown parchment. 
 One sun, two stories. 
 The bloom takes the stage knowing its echo is already hanging there. 🎭🌺🕯️ 
-#LifeAndDeath #GardenPhilosophy #Impermanence #WabiSabi https://t.co/967P5kypqL
+#LifeAndDeath #GardenPhilosophy #Impermanence #WabiSabi

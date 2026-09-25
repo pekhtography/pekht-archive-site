@@ -13,4 +13,4 @@ The notifications are screaming,
 but the snow is louder. 
 If you find my sanity in these birch shadows, 
 please don't return it ❄️🏃‍♂️ 
-#Winter #BirchForest #SnowTherapy #SoulFreedom https://t.co/MEftaJVBru
+#Winter #BirchForest #SnowTherapy #SoulFreedom

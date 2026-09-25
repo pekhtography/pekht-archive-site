@@ -8,4 +8,4 @@ hashtags:
   - "WinterPhotography"
   - "Solitude"
 ---
-I've stood here for 100 winters. That flashy white line in the sky? It's already gone. 😌 Some flex longevity, others just speed. 🏆 #Life #WinterPhotography #Solitude https://t.co/2xopvx2G9S
+I've stood here for 100 winters. That flashy white line in the sky? It's already gone. 😌 Some flex longevity, others just speed. 🏆 #Life #WinterPhotography #Solitude

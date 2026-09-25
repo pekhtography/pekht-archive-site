@@ -12,4 +12,4 @@ hashtags:
 Wax melting like years you can't reclaim 🕯️ 
 but the flame's still yours to blow when ready 🎂 
 Twenty-five isn't ending — it's the pause before deciding what's next ✨ 
-#BirthdayVibes #QuarterCentury #MakeAWish #Milestone https://t.co/GGce3lztVD
+#BirthdayVibes #QuarterCentury #MakeAWish #Milestone

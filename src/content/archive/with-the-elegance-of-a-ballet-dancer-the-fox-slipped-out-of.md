@@ -18,4 +18,4 @@ hashtags:
   - "predator"
 ---
 With the elegance of a ballet dancer, the fox slipped out of her warm scarf, her ears perked and agile body ready to pounce on the unfortunate critter lurking just below the surface of the snow
-#fox #clever #snow #cold #attack #warm #critters #scarf #ears #body #winter #predator https://t.co/SjO8kARP5K
+#fox #clever #snow #cold #attack #warm #critters #scarf #ears #body #winter #predator

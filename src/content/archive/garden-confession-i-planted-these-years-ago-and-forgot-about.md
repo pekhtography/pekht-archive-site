@@ -17,4 +17,4 @@ hashtags:
   - "elegant"
 ---
 Garden confession: I planted these years ago and forgot about them 😅 Now they're back like "Surprise! We've been perfecting our performance!" Best gardening investment ever 💜🌱 #GardenSurprises
-#flowers #garden #lilies #purple #bloom #petals #shade #cultivated #summer #elegant https://t.co/4gMAoG2Ak5
+#flowers #garden #lilies #purple #bloom #petals #shade #cultivated #summer #elegant

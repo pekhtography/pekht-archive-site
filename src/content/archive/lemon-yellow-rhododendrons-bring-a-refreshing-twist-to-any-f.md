@@ -15,4 +15,4 @@ hashtags:
   - "flowers"
   - "beauty"
 ---
-Lemon-yellow rhododendrons bring a refreshing twist to any floral arrangement #rhododendron #flower #lemon #citrus #plant #nature #garden #paradise #flowers #beauty #plant https://t.co/nyA399d0Tt
+Lemon-yellow rhododendrons bring a refreshing twist to any floral arrangement #rhododendron #flower #lemon #citrus #plant #nature #garden #paradise #flowers #beauty #plant

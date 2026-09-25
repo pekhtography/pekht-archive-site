@@ -12,4 +12,4 @@ hashtags:
 A hand reaches to claim the crimson tier. 
 The edges bite back with silent heat. 
 Possession is a wound only beauty understands 🖐️🔥🩹 
-#Nature #FlowerPhotography #BeautyInChaos #SensoryOverload https://t.co/w98NHRd7lm
+#Nature #FlowerPhotography #BeautyInChaos #SensoryOverload

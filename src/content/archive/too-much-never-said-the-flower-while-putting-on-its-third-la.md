@@ -18,4 +18,4 @@ hashtags:
   - "blossom"
 ---
 Too much? Never! Said the flower while putting on its third layer of petals
-#daylily #flower #bloom #petals #garden #nature #beauty #summer #plant #colorful #flora #blossom https://t.co/z2DM3tb7vh
+#daylily #flower #bloom #petals #garden #nature #beauty #summer #plant #colorful #flora #blossom

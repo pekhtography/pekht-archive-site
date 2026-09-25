@@ -13,4 +13,4 @@ Green lace edges into view,
 revealing a rich, pulsing burgundy heart filled with golden treasure 
 (biological wealth, really). 
 This tiny bloom holds the galaxy’s ego. 💅✨
-#NaturePhotography #Wildflowers #MacroMagic #OddlySatisfying https://t.co/DZz29oVkvE
+#NaturePhotography #Wildflowers #MacroMagic #OddlySatisfying

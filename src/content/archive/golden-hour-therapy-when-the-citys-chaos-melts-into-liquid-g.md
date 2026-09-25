@@ -14,4 +14,4 @@ hashtags:
   - "architecture"
 ---
 Golden hour therapy: when the city's chaos melts into liquid gold and even the busiest downtown whispers "slow down" 🌅 Sometimes you need a river to remind you to flow, not rush 💫 #GoldenHourTherapy
-#skyline #cityscape #riverboat #downtown #reflection #sunset #architecture https://t.co/umV6DfOvru
+#skyline #cityscape #riverboat #downtown #reflection #sunset #architecture

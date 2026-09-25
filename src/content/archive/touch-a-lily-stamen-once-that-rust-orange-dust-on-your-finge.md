@@ -13,4 +13,4 @@ Touch a lily stamen once. 🌼
 That rust-orange dust on your fingertip? Stays three days. 
 Some gardens mark you — 
 long after you've forgotten you even stopped. 🌸✨
-#GardenTherapy #SlowLiving #FlowerMagic #NaturalBeauty https://t.co/wX9T38mpXd
+#GardenTherapy #SlowLiving #FlowerMagic #NaturalBeauty

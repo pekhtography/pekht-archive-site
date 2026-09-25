@@ -14,4 +14,4 @@ Smaller than a thumbprint.
 Stem furred like a peach, five petals the shade of taxi-cab yellow — 
 and somehow (still not sure how) 
 every huge red bloom behind it is just set dressing. 🌼
-#Nature #MacroPhotography #WildflowerMagic #GoldenMoment https://t.co/1dwNgVvsLa
+#Nature #MacroPhotography #WildflowerMagic #GoldenMoment

@@ -18,4 +18,4 @@ hashtags:
   - "grace"
 ---
 According to myth, irises were the brushes of the gods, sweeping colors across the heavens to inspire mortal hearts
-#iris #flower #yellow #bloom #nature #garden #petals #spring #vibrant #beauty #elegance #grace https://t.co/okEEoVM1ry
+#iris #flower #yellow #bloom #nature #garden #petals #spring #vibrant #beauty #elegance #grace

@@ -13,4 +13,4 @@ Buds still clenched tight at the top.
 Petals already falling loose at the bottom. 🌿 
 Same stem, two different speeds — 
 turns out blooming and dying are the same conversation. 💜
-#FlowerPhilosophy #NaturePoetry #GardenMoments #SlowBotany https://t.co/oqX4LbWAxo
+#FlowerPhilosophy #NaturePoetry #GardenMoments #SlowBotany

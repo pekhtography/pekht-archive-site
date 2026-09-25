@@ -13,4 +13,4 @@ hashtags:
   - "nature"
   - "tranquility"
 ---
-And the sun took a step back, the leaves lulled themselves to sleep, and Autumn was awakened #autumn #beauty #leaves #change #lake #landscape #nature #tranquility https://t.co/5WTk4TguzD
+And the sun took a step back, the leaves lulled themselves to sleep, and Autumn was awakened #autumn #beauty #leaves #change #lake #landscape #nature #tranquility

@@ -17,4 +17,4 @@ hashtags:
   - "Joy"
   - "Togetherness"
 ---
-#NewYear #Illumination #Evening #City #Lights #Dreams #Hope #Possibilities #Glow #Celebration #Joy #Togetherness https://t.co/lEDJS7ssU9
+#NewYear #Illumination #Evening #City #Lights #Dreams #Hope #Possibilities #Glow #Celebration #Joy #Togetherness

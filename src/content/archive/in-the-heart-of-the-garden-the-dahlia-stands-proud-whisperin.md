@@ -19,4 +19,4 @@ hashtags:
   - "colorful"
 ---
 🌼 In the heart of the garden, the dahlia stands proud, whispering secrets of summer days past. #GardenWhispers
-#flower #nature #beauty #pink #garden #dahlia #floral #bloom #petals #flora #outdoors #colorful https://t.co/K9az3w7Avr
+#flower #nature #beauty #pink #garden #dahlia #floral #bloom #petals #flora #outdoors #colorful

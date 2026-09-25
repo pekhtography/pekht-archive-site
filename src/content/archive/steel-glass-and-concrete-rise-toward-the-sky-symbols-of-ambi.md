@@ -12,4 +12,4 @@ hashtags:
   - "Glass"
   - "Sky"
 ---
-Steel, glass, and concrete rise toward the sky, symbols of ambition #Skyscraper #Lines #Clarity #Buildings #Steel #Glass #Sky https://t.co/VHWKddhyqZ
+Steel, glass, and concrete rise toward the sky, symbols of ambition #Skyscraper #Lines #Clarity #Buildings #Steel #Glass #Sky

@@ -14,4 +14,4 @@ the street dressed itself in palace ceilings
 and forgot to send the dress code. ✨ 
 Everyone in puffer jackets, 
 walking like kings who misplaced their crowns. 👑
-#CityLights #UrbanMagic #LightTunnel #GoldenGlow https://t.co/yc77kWCKa9
+#CityLights #UrbanMagic #LightTunnel #GoldenGlow

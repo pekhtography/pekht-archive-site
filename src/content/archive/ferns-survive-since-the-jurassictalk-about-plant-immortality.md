@@ -19,4 +19,4 @@ hashtags:
   - "Growth"
 ---
 🌱 Ferns survive since the Jurassic—talk about plant immortality! #TimelessNature
-#Fern #Frond #Plant #Nature #Green #Leaves #Botany #Wildlife #Garden #Leaf #Flora #Growth https://t.co/FzkOUw6HUU
+#Fern #Frond #Plant #Nature #Green #Leaves #Botany #Wildlife #Garden #Leaf #Flora #Growth

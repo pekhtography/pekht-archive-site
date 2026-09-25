@@ -15,4 +15,4 @@ hashtags:
   - "Landmark"
 ---
 A place where history and modernity meet in a dance of light and water 
-#Exhibition #Night #Lights #Fountain #Architecture #History #Culture #Heritage #Landmark https://t.co/R8DXA7nCOP
+#Exhibition #Night #Lights #Fountain #Architecture #History #Culture #Heritage #Landmark

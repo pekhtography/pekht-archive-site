@@ -13,4 +13,4 @@ Palm-sized. Admiral posture.
 Eyes locked on something three miles out. 🔭
 Atlas held the sky on his shoulders.
 This one does it with a stare — and weighs less than your phone. 📱
-#Wildlife #Meerkats #SentinelVibes #TinyButSerious https://t.co/aOJKu6qgE4
+#Wildlife #Meerkats #SentinelVibes #TinyButSerious

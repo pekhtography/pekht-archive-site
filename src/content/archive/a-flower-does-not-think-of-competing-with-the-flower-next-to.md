@@ -10,4 +10,4 @@ hashtags:
   - "bright"
   - "garden"
 ---
-A flower does not think of competing with the flower next to it. It just blooms #squill #nature #growth #bright #garden https://t.co/cLG37OSKH7
+A flower does not think of competing with the flower next to it. It just blooms #squill #nature #growth #bright #garden

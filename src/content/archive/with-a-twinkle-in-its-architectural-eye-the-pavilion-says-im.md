@@ -15,4 +15,4 @@ hashtags:
   - "Night"
 ---
 With a twinkle in its architectural eye, the pavilion says, 'I'm not just bricks and mortar; I'm the echo of a thousand tales.'
-#Pavilion #Architecture #Exhibition #Culture #History #Design #Art #Heritage #Night https://t.co/akOL7vyjaA
+#Pavilion #Architecture #Exhibition #Culture #History #Design #Art #Heritage #Night

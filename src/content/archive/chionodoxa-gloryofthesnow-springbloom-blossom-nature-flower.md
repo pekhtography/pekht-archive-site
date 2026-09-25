@@ -17,4 +17,4 @@ hashtags:
   - "Growth"
   - "Earth"
 ---
-#Chionodoxa #Gloryofthesnow #Springbloom #Blossom #Nature #Flower #Garden #Blooming #Petals #Beauty #Growth #Earth https://t.co/FwRB8Ht0jB
+#Chionodoxa #Gloryofthesnow #Springbloom #Blossom #Nature #Flower #Garden #Blooming #Petals #Beauty #Growth #Earth

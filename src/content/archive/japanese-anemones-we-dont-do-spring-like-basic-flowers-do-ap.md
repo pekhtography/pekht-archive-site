@@ -15,4 +15,4 @@ hashtags:
   - "autumn"
 ---
 Japanese anemones: "We don't do spring like basic flowers do" 💁‍♀️ Apparently September is the new May and nobody told the rest of the garden 🌸 The audacity is almost as beautiful as the petals 😏 #MainCharacterEnergy
-#flowers #anemone #garden #nature #pink #white #blooms #autumn https://t.co/jGrzRnhbBs
+#flowers #anemone #garden #nature #pink #white #blooms #autumn

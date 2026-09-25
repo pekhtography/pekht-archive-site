@@ -16,4 +16,4 @@ holding weight it was never asked to carry —
 breath visible 🫁, 
 pulse slow, 
 something in your chest going oh. 🌲 
-#WinterWonderland #ForestBathing #SnowCorridor #WildQuiet https://t.co/l7avbLyCtM
+#WinterWonderland #ForestBathing #SnowCorridor #WildQuiet

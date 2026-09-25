@@ -18,4 +18,4 @@ hashtags:
   - "Petals"
 ---
 In the whimsical garden, the bleeding heart and daylily debate colors, but both agree on the beauty of diversity
-#Daylily #BleedingHeart #RedFlower #Yellow #Pink #Garden #Nature #Bloom #Spring #Beauty #Flora #Petals https://t.co/cL35NoJeCa
+#Daylily #BleedingHeart #RedFlower #Yellow #Pink #Garden #Nature #Bloom #Spring #Beauty #Flora #Petals

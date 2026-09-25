@@ -13,4 +13,4 @@ Shadows stretching like they're late for something 🌨️
 Snow waves rolling but nobody's surfing. 
 Cold draws shapes nobody asked for — 
 and somehow it's the best art I've seen all week 🎭 
-#NatureArt #WinterWonderland #Minimalism #Serenity https://t.co/o6WGvVWPiA
+#NatureArt #WinterWonderland #Minimalism #Serenity

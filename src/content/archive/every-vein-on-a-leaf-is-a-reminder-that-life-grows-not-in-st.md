@@ -19,4 +19,4 @@ hashtags:
   - "ecology"
 ---
 Every vein on a leaf is a reminder that life grows not in straight lines, but in patterns of resilience 🌱✨ #WisdomInGreen
-#plant #leaves #nature #green #garden #flora #growth #botany #outdoor #fresh #wild #ecology https://t.co/a10esDQMFw
+#plant #leaves #nature #green #garden #flora #growth #botany #outdoor #fresh #wild #ecology

@@ -18,4 +18,4 @@ hashtags:
   - "landscape"
 ---
 When thistles bloom, it's like a purple punk rock concert in the meadow
-#thistle #nature #bloom #wildflowers #purple #meadow #flora #botany #petals #ecology #biodiversity #landscape https://t.co/h1n8MlupKT
+#thistle #nature #bloom #wildflowers #purple #meadow #flora #botany #petals #ecology #biodiversity #landscape

@@ -15,4 +15,4 @@ hashtags:
   - "Politics"
 ---
 🚤 Tour guide whispers: "Don't make eye contact with the building" 📢 When your cruise ship suddenly feels very, very small! #DavidMeetsGoliath
-#Defense #Ministry #Government #Architecture #Building #River #Military #Politics https://t.co/SatrcLqzPh
+#Defense #Ministry #Government #Architecture #Building #River #Military #Politics

@@ -16,4 +16,4 @@ hashtags:
   - "Culture"
 ---
 Through the arch's grandeur, the city's heart beats with pride, each stone a testament to the unyielding spirit of its people
-#Triumphal #Arch #Night #Light #History #Architecture #Monument #Celebration #Heritage #Culture https://t.co/GUqFnLmiQa
+#Triumphal #Arch #Night #Light #History #Architecture #Monument #Celebration #Heritage #Culture

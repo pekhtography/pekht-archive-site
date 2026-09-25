@@ -17,4 +17,4 @@ hashtags:
   - "Optimism"
 ---
 Behind each of the New Year's masks lies the warmth of generosity, the glow of prosperity, and the tender embrace of love, all eager to cast their spells on the coming year
-#Kindness #Compassion #Prosperity #Wealth #Love #NewYear #Celebration #Masks #Aspirations #Hope #Optimism https://t.co/tdxya2I4Jg
+#Kindness #Compassion #Prosperity #Wealth #Love #NewYear #Celebration #Masks #Aspirations #Hope #Optimism

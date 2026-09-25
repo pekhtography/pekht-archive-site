@@ -25,4 +25,4 @@ hashtags:
   - "rose"
 ---
 My garden is my therapy, and the roses are my psychiatrists
-#roses #garden #sanctuary #paradise #blooming #love #beauty #elegance #therapy #relaxation #talking #life #thorns #challenges #passion #emotion #delight #happiness #rose https://t.co/ARlCADJROn
+#roses #garden #sanctuary #paradise #blooming #love #beauty #elegance #therapy #relaxation #talking #life #thorns #challenges #passion #emotion #delight #happiness #rose

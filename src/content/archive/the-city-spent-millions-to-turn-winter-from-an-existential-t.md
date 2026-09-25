@@ -13,4 +13,4 @@ The city spent millions
 to turn winter from an existential threat into a themed photoshoot. 
 Worth every ruble. 
 Say cheese! 🧀✨ 
-#WinterMagic #MoscowByNight #UrbanFairytale #FrozenJoy https://t.co/4QU7YwOnhk
+#WinterMagic #MoscowByNight #UrbanFairytale #FrozenJoy

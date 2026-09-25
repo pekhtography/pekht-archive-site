@@ -12,4 +12,4 @@ hashtags:
 Five days wide open, then gone. 🌹 
 The red so deep your eyes fall in — 
 blooming is just beautiful collapse in slow motion. 🌿
-#PeonySeason #FlowerPhotography #GardenTherapy #NatureMoments https://t.co/N50PKoosLY
+#PeonySeason #FlowerPhotography #GardenTherapy #NatureMoments

@@ -23,4 +23,4 @@ hashtags:
   - "Foliage"
   - "Art"
 ---
-#Orchid #Nature #Blooms #Vibrant #Garden #Flora #Botanical #Tropical #Lush #Green #Beauty #Pumpkin #Unique #Creative #Whimsical #Gourd #Foliage #Art https://t.co/b3aTmuYx0d
+#Orchid #Nature #Blooms #Vibrant #Garden #Flora #Botanical #Tropical #Lush #Green #Beauty #Pumpkin #Unique #Creative #Whimsical #Gourd #Foliage #Art

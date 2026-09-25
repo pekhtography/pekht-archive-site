@@ -19,4 +19,4 @@ hashtags:
   - "intersection"
 ---
 When you're so iconic that Google Earth tourists zoom in just to see you 🛰️📸 Sorry, skyscrapers, you're just background 😅🏢 #TouristMagnet
-#church #architecture #city #contrast #modern #traditional #golden #domes #urban #skyline #evening #intersection https://t.co/nsfoZqGyAB
+#church #architecture #city #contrast #modern #traditional #golden #domes #urban #skyline #evening #intersection

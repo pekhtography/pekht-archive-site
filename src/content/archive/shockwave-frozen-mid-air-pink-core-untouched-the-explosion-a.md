@@ -12,4 +12,4 @@ hashtags:
 Shockwave frozen mid-air, pink core untouched. 🌸 
 The explosion already happened — 
 this is just the last frame. ✨
-#SlowBoom #FlowerPhotography #PeonyVibes #NaturePause https://t.co/9e20PAsmv0
+#SlowBoom #FlowerPhotography #PeonyVibes #NaturePause

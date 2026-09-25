@@ -18,4 +18,4 @@ hashtags:
   - "party"
 ---
 In the spring garden, flashy Double Daffodils (Narcissus) flaunt their golden glory while the shy Pasque Flower whispers, “I’m here too!” Together, they create a wild party of bloom
-#Narcissus #Daffodil #Pasque #Flower #Spring #Garden #Nature #Bloom #growth #glory #golden #party https://t.co/2MwyUhaeCW
+#Narcissus #Daffodil #Pasque #Flower #Spring #Garden #Nature #Bloom #growth #glory #golden #party

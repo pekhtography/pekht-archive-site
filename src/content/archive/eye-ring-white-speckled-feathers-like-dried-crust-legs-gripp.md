@@ -13,4 +13,4 @@ Eye-ring white. Speckled feathers like dried crust.
 Legs gripping bark with three talons. 
 The black bead pierces your lens—👀
 weighing the cost of a single wing-flap against the silence you just broke. 🪨💨
-#Nature #BirdPhotography #Camouflage #Stillness https://t.co/yvjD8rsWaD
+#Nature #BirdPhotography #Camouflage #Stillness

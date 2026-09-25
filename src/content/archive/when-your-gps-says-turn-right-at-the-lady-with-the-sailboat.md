@@ -18,4 +18,4 @@ hashtags:
   - "navigation"
 ---
 When your GPS says "turn right at the lady with the sailboat" and you know exactly where that is 🧭⛵ Moscow's most reliable landmark since forever! 📍✨ #MoscowNavigation
-#moscow #sailboat #sculpture #waterway #canal #river #station #soviet #transport #monument #navigation https://t.co/mZKXQ5Ok5u
+#moscow #sailboat #sculpture #waterway #canal #river #station #soviet #transport #monument #navigation

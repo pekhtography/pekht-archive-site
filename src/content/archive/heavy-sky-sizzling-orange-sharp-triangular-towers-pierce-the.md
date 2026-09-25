@@ -13,4 +13,4 @@ Heavy sky. Sizzling orange.
 Sharp triangular towers pierce the velvet. 
 It looks like the sun tripped and spilled the marmalade everywhere. 
 Oops. 🍦✨
-#Sunset #CityscapePhotography #GoldenHourMagic #BurningSky https://t.co/8GBDtMJjni
+#Sunset #CityscapePhotography #GoldenHourMagic #BurningSky

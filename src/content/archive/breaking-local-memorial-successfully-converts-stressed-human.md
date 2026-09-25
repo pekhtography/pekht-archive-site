@@ -12,4 +12,4 @@ hashtags:
   - "history"
 ---
 Breaking: Local memorial successfully converts stressed humans into contemplative philosophers with 99% success rate 🧠⚡ Side effects include: deeper breathing, slower walking, and sudden urge to call grandma 📞 #PhilosophyByOsmosis
-#monument #memorial #park #fountain #history https://t.co/Ve5nT4jvTJ
+#monument #memorial #park #fountain #history

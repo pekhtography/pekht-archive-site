@@ -15,4 +15,4 @@ hashtags:
   - "beauty"
 ---
 Roses are basically nature's influencers - they've been getting people to stop, stare, and take photos for centuries without even trying 📸 Original content creators! 🌹✨ No algorithm needed 😎 #OriginalInfluencer
-#rose #pink #bloom #garden #flowers #nature #romantic #beauty https://t.co/LESUjPXppt
+#rose #pink #bloom #garden #flowers #nature #romantic #beauty

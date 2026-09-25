@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 The forest breathes with the quiet majesty of birch trees, their presence a gentle reminder of the enduring beauty of the natural world
-#birch #trees #forest #nature #autumn #landscape #wilderness #outdoors #serenity #golden #tranquility #beauty https://t.co/PQ19gPoS7s
+#birch #trees #forest #nature #autumn #landscape #wilderness #outdoors #serenity #golden #tranquility #beauty

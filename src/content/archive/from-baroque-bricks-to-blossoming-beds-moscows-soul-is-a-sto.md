@@ -15,4 +15,4 @@ hashtags:
   - "Nature"
 ---
 From baroque bricks to blossoming beds 🌺🏰, Moscow’s soul is a story stitched in colors and stone. Even the lamppost whispers secrets of centuries past 🌒💡. Flag raised, hearts open! #ColorsOfHeritage
-#Flowers #Russia #Moscow #RedSquare #Flags #Architecture #Kremlin #Nature https://t.co/3WRwYN5Uha
+#Flowers #Russia #Moscow #RedSquare #Flags #Architecture #Kremlin #Nature

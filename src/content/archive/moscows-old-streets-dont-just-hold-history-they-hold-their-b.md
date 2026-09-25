@@ -13,4 +13,4 @@ Moscow's old streets don't just hold history.
 They hold their breath. 
 And for a second, under that frozen blue light, you're not a tourist. 
 You're the only thing moving in a museum of silence. 👣❄️ 
-#Winter #UrbanExploration #CityLights #Silence https://t.co/HrJWhhHzck
+#Winter #UrbanExploration #CityLights #Silence

@@ -17,4 +17,4 @@ hashtags:
   - "silhouette"
   - "landscape"
 ---
-#tree #sky #nature #branches #blue #outdoors #wood #bare #clear #growth #silhouette #landscape https://t.co/wu8S5kh3gM
+#tree #sky #nature #branches #blue #outdoors #wood #bare #clear #growth #silhouette #landscape

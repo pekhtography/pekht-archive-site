@@ -18,4 +18,4 @@ hashtags:
   - "Grace"
 ---
 Nature's 'You're welcome' is basically a sunset with a flower bouquet
-#Flowers #Sunset #Vase #Beauty #Nature #Serenity #Bloom #Elegance #Dusk #Glow #Tranquility #Grace https://t.co/9FHzDbkiI7
+#Flowers #Sunset #Vase #Beauty #Nature #Serenity #Bloom #Elegance #Dusk #Glow #Tranquility #Grace

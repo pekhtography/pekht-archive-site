@@ -18,4 +18,4 @@ hashtags:
   - "Festivity"
   - "Feasts"
 ---
-#LunarNewYear #Celebration #Snake #Wisdom #Fortune #Luck #Traditions #Heritage #Family #Togetherness #Fireworks #Festivity #Feasts https://t.co/4jRS3NdJ5w
+#LunarNewYear #Celebration #Snake #Wisdom #Fortune #Luck #Traditions #Heritage #Family #Togetherness #Fireworks #Festivity #Feasts

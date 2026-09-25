@@ -17,4 +17,4 @@ hashtags:
   - "victory"
 ---
 Standing beside history, we remember that courage isn't the absence of fear—it's moving forward despite it 🌸⚔️ The steel may rust, but the spirit endures forever 💪 #VictoryRemembers
-#military #tank #memorial #history #ceremony #uniform #flowers #commemoration #parade #victory https://t.co/4EcS27Rq4O
+#military #tank #memorial #history #ceremony #uniform #flowers #commemoration #parade #victory

@@ -18,4 +18,4 @@ hashtags:
   - "blossoms"
 ---
 Thistles ward off evil, but a hearty laugh is the best armor against life's troubles
-#thistle #nature #wildflowers #blooms #purple #outdoors #meadow #flora #botany #petals #field #blossoms https://t.co/z54x2w0qj4
+#thistle #nature #wildflowers #blooms #purple #outdoors #meadow #flora #botany #petals #field #blossoms

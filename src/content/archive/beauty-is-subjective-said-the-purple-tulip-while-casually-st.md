@@ -19,4 +19,4 @@ hashtags:
   - "photography"
 ---
 "Beauty is subjective," said the purple tulip while casually stealing the spotlight from its basic pink siblings 🌷😎💜 #MainCharacterEnergy
-#tulips #flowers #spring #garden #purple #pink #bloom #nature #petals #botanical #colorful #photography https://t.co/U9AYd3wCSR
+#tulips #flowers #spring #garden #purple #pink #bloom #nature #petals #botanical #colorful #photography

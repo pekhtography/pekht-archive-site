@@ -20,4 +20,4 @@ hashtags:
   - "fieldfare"
 ---
 With sunlight on its feathers, the baby Blackbird sings and dances on the garden bed, as if auditioning for 'So You Think You Can Fly!'—nature's own talent show
-#Blackbird #Sunlight #Feathers #Plume #Sings #Garden #Nature #Talent #Show #Chirping #Life #bird #wilderness #fieldfare https://t.co/WeiMe7RqAA
+#Blackbird #Sunlight #Feathers #Plume #Sings #Garden #Nature #Talent #Show #Chirping #Life #bird #wilderness #fieldfare

@@ -14,4 +14,4 @@ nothing—
 then glass shooting straight up.🏗️
 The city stacked its whole argument vertically while the bridge just kept going horizontal, calm, unbothered,
 through the middle of the disagreement…🌆
-#CityLife #UrbanExploration #Architecture #Moscow https://t.co/tBlnloGXBJ
+#CityLife #UrbanExploration #Architecture #Moscow

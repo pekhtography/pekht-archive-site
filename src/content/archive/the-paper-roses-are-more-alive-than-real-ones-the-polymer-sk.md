@@ -13,4 +13,4 @@ The paper roses are more alive than real ones.
 The polymer skin has pores. 😇 
 Wings won't fly — but something behind your ribs will. 
 Fake heaven. Real ache. 🌸 
-#HolyAesthetics #Handmade #ArtDolls #UncanneyValley https://t.co/isp7SVzyms
+#HolyAesthetics #Handmade #ArtDolls #UncanneyValley

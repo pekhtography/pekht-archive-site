@@ -18,4 +18,4 @@ hashtags:
   - "Green"
 ---
 Purple petals whisper secrets to the bees, 'We're the forest's gossip columnists, you see.'
-#Melampyrum #Nemorosum #Bloom #Nature #Purple #Yellow #Flower #Forest #Vibrant #Petals #Leaves #Green https://t.co/VnDUjdKCaz
+#Melampyrum #Nemorosum #Bloom #Nature #Purple #Yellow #Flower #Forest #Vibrant #Petals #Leaves #Green

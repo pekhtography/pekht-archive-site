@@ -13,4 +13,4 @@ POV: You told everyone you'd "handle it" but forgot what "it" was.
 Now you're staring at the sky like answers grow on clouds. 
 Whiskers twitching. Dignity intact. Panic internal. 
 CEO of looking busy. 🎭🤡😂
-#Life #MentalHealth #ImposterSyndrome #Anxiety https://t.co/qDU5gYiZ4H
+#Life #MentalHealth #ImposterSyndrome #Anxiety

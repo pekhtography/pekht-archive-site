@@ -16,4 +16,4 @@ teal sparks at the tips — 🌸
 and down the same stem, the finished flowers fold into bruised silk. 
 One match. 🔥 
 Both ends lit.
-#NaturePhotography #WildFlowers #MacroWorld #BotanicalBeauty #BurningBush #GasPlant https://t.co/jHzxgo9XkZ
+#NaturePhotography #WildFlowers #MacroWorld #BotanicalBeauty #BurningBush #GasPlant

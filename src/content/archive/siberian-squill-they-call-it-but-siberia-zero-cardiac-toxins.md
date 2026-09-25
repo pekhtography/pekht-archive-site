@@ -13,4 +13,4 @@ hashtags:
 But Siberia? Zero. 
 Cardiac toxins? Full house. 🃏 
 Imagine naming a bomb "Safe Cuddle".
-#NatureLies #ToxicBeauty #SpringDeception #PrettyPoison https://t.co/mmwKGiNZmz
+#NatureLies #ToxicBeauty #SpringDeception #PrettyPoison

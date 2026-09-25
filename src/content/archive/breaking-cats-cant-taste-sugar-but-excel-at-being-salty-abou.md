@@ -19,4 +19,4 @@ hashtags:
   - "event"
 ---
 Breaking: Cats can't taste sugar but excel at being salty about losing 🧂😾 Science vs. attitude! 🔬💅 #SaltyScience
-#catshow #cats #exhibition #judging #orange #feline #breed #competition #pets #animals #indoor #event https://t.co/DQMSgXuVAY
+#catshow #cats #exhibition #judging #orange #feline #breed #competition #pets #animals #indoor #event

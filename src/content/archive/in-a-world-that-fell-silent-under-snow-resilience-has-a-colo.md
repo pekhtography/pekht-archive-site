@@ -12,4 +12,4 @@ hashtags:
 In a world that fell silent under snow, resilience has a color. 
 It's a warm, speckled blot stubbornly making a bold period on the white. 
 And scattering husks of its arguments all around. 🖋️▪️ 
-#Mindfulness #WinterWildlife #TinyVictories #QuietResilience https://t.co/NjEpwR0lqW
+#Mindfulness #WinterWildlife #TinyVictories #QuietResilience

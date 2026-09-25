@@ -15,4 +15,4 @@ hashtags:
   - "Fin"
 ---
 These Blue Cichlids, the aquatic beauties of the aquarium world, aren’t just fish; they’re the underwater equivalent of a Broadway show!
-#BlueCichlid #Vibrant #Colors #Aquarium #Cichlid #Water #Jewels #Life #Fin https://t.co/L3FJdkVnyh
+#BlueCichlid #Vibrant #Colors #Aquarium #Cichlid #Water #Jewels #Life #Fin

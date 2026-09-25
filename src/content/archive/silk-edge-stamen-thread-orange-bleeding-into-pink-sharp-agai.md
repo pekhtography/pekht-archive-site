@@ -13,4 +13,4 @@ Silk edge. Stamen thread.
 Orange bleeding into pink, sharp against shadow. 
 O'Keeffe was right — you walk past this every day. 🌺🌿 
 Until you don't…
-#Spring #Azalea #FlowerPhotography #Bloom https://t.co/CcUPY0G2Vd
+#Spring #Azalea #FlowerPhotography #Bloom

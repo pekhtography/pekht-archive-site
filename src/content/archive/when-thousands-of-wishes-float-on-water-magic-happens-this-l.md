@@ -19,4 +19,4 @@ hashtags:
   - "beautiful"
 ---
 When thousands of wishes float on water, magic happens ✨ This lantern festival reminds us that some traditions light up both hearts and skylines 🏙️💫 #LanternMagic
-#lanterns #festival #night #reflection #city #celebration #lights #water #magical #tradition #ceremony #beautiful https://t.co/kMshDJIV3O
+#lanterns #festival #night #reflection #city #celebration #lights #water #magical #tradition #ceremony #beautiful

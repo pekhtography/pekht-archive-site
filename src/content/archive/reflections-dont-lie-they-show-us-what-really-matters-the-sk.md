@@ -19,4 +19,4 @@ hashtags:
   - "sky"
 ---
 Reflections don't lie - they show us what really matters 💧✨ The sky above, the earth below, and dreams reaching between them 🌤️ #ReflectionsOfLife
-#architecture #Moscow #university #spring #reflection #nature #tower #landmark #building #water #trees #sky https://t.co/Tf5q5nCvj1
+#architecture #Moscow #university #spring #reflection #nature #tower #landmark #building #water #trees #sky

@@ -15,4 +15,4 @@ and somewhere below,
 amber streetlight licks the asphalt while the city holds both centuries in one unblinking stare.
 Two eras.
 One jaw 🌆
-#CityLife #UrbanPhotography #MoscowSky #GoldenHour https://t.co/uzWPgjCwIW
+#CityLife #UrbanPhotography #MoscowSky #GoldenHour

@@ -11,4 +11,4 @@ hashtags:
   - "Fragrance"
   - "Garden"
 ---
-Like a flame held in a flower's embrace, the Dictamnus albus brightens the garden #DictamnusAlbus #Enchantment #Bloom   #Sunlight  #Fragrance  #Garden https://t.co/iWMsoDlEAQ
+Like a flame held in a flower's embrace, the Dictamnus albus brightens the garden #DictamnusAlbus #Enchantment #Bloom   #Sunlight  #Fragrance  #Garden

@@ -20,4 +20,4 @@ hashtags:
   - "depths"
 ---
 The angler lounges on the shore of the glacial inlet, his cognitive processes meander through cerebral fluidity, pondering the enigmatic phenomena of the abyss
-#Fisherman #Fjord #Thoughts #Dreams #Water #angler #shore #glacial #inlet #cove #cognitive #processes #abyss #depths https://t.co/mpowvnQdRM
+#Fisherman #Fjord #Thoughts #Dreams #Water #angler #shore #glacial #inlet #cove #cognitive #processes #abyss #depths

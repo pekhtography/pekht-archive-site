@@ -11,4 +11,4 @@ hashtags:
 It spent its whole life reaching for the sky. 
 Now, in death, the sky comes to it as a icy crown. 
 The universe's ultimate "gotcha" moment. ❄️👑 
-#WinterWonderland #WinterMood #WinterBeauty https://t.co/L1EOclmJRB
+#WinterWonderland #WinterMood #WinterBeauty

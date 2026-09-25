@@ -17,4 +17,4 @@ hashtags:
   - "Culture"
 ---
 When the sun faces winter, this tree shows its best carnival costume — and nobody’s going home early! 🎭☃️ #WinterCarnival
-#Tree #Festival #Decorations #Tradition #FolkArt #Celebration #Winter #Holiday #Colors #Culture https://t.co/jJc0ZuJrgx
+#Tree #Festival #Decorations #Tradition #FolkArt #Celebration #Winter #Holiday #Colors #Culture

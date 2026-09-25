@@ -12,4 +12,4 @@ hashtags:
 Cupid’s production line is hiring. 🏹 
 Each petal is a perfectly packaged emotional crisis ready for export. 📦 
 Buy one, get zero closure at once.
-#Nature #Cottagecore #BotanicalArt #Heartbrea https://t.co/lvV8g7vFIh
+#Nature #Cottagecore #BotanicalArt #Heartbrea

@@ -13,4 +13,4 @@ Me: takes a deep breath of that crisp, peaceful forest air😌
 The forest: holding 500kg of snow on one branch, ready to drop it down the back of your neck the second you pass under 🌲💀
 Trust issues with fir trees.
 New fear unlocked
-#WinterVibes #ForestBathing #Snowfall #ColdStart https://t.co/94wN2SwDRD
+#WinterVibes #ForestBathing #Snowfall #ColdStart

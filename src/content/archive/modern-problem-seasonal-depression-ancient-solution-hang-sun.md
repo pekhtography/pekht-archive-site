@@ -19,4 +19,4 @@ hashtags:
   - "festival"
 ---
 Modern problem: Seasonal depression ❄️ Ancient solution: Hang sunshine on trees 🌞🌲 Who needs therapy? 💡😂 #AncientTherapy
-#folkart #dolls #sun #traditions #slavic #charms #ribbons #handmade #cultural #protective #evergreen #festival https://t.co/jSMh5CVJMn
+#folkart #dolls #sun #traditions #slavic #charms #ribbons #handmade #cultural #protective #evergreen #festival

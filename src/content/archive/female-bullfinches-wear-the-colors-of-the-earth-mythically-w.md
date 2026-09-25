@@ -20,4 +20,4 @@ hashtags:
   - "Winged"
 ---
 Female bullfinches wear the colors of the earth, mythically weaving tales of nature's subtle beauty into reality
-#Bird #Nature #Wildlife #Outdoors #Feathers #Grass #Spring #Chirp #Freedom #FemaleBullfinch #Sunlight #Meadow #Bullfinch #Winged https://t.co/VtOWG3zz2U
+#Bird #Nature #Wildlife #Outdoors #Feathers #Grass #Spring #Chirp #Freedom #FemaleBullfinch #Sunlight #Meadow #Bullfinch #Winged

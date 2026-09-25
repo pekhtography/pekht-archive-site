@@ -18,4 +18,4 @@ hashtags:
   - "Elegance"
 ---
 The first Snowflake flower bloomed to announce spring's arrival, much like how my alarm announces the start of a new day—repeatedly
-#Spring #Snowflake #Leucojum #Bloom #Nature #Flower #Garden #White #Beauty #Season #Growth #Elegance https://t.co/hTY1ZEdKW5
+#Spring #Snowflake #Leucojum #Bloom #Nature #Flower #Garden #White #Beauty #Season #Growth #Elegance

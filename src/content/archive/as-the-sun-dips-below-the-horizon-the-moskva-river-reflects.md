@@ -19,4 +19,4 @@ hashtags:
   - "views"
 ---
 As the sun dips below the horizon, the Moskva River reflects a world of tranquility. Just look at these seagulls, taking a breather on their little island! 🌅🌊 #MoscowMoments
-#river #Moscow #architecture #nature #sky #clouds #seagulls #island #landscape #cityscape #travel #views https://t.co/Lar4SfD2tH
+#river #Moscow #architecture #nature #sky #clouds #seagulls #island #landscape #cityscape #travel #views

@@ -12,4 +12,4 @@ hashtags:
 Three warm bodies pressed into one answer. 
 The world kept moving. 
 They reviewed the offer — and declined. 🌾🐇✨
-#MindfulLiving #BunnyLife #CozySeason #SoftLife https://t.co/jU3aOGyJjW
+#MindfulLiving #BunnyLife #CozySeason #SoftLife

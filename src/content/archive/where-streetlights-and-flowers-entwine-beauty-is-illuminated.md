@@ -19,4 +19,4 @@ hashtags:
   - "Serenity"
 ---
 Where streetlights and flowers entwine 💡🌺🌿, beauty is illuminated. #StreetlightSerenade
-#Flowers #Bridge #Streetlights #Clouds #Sky #Garden #Nature #Decor #Architecture #Plants #Beauty #Serenity https://t.co/4s5toesUrE
+#Flowers #Bridge #Streetlights #Clouds #Sky #Garden #Nature #Decor #Architecture #Plants #Beauty #Serenity

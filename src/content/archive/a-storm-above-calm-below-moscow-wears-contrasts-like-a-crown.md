@@ -18,4 +18,4 @@ hashtags:
   - "cityvibes"
 ---
 A storm above, calm below 🌩️🌊 — Moscow wears contrasts like a crown. Fierce, serene, eternal. 👑 #CrownOfContrasts
-#travel #cityscape #architecture #photography #moscow #russianculture #riverside #urbanphotography #aesthetic #serenity #cityvibes https://t.co/1mPva0FjjZ
+#travel #cityscape #architecture #photography #moscow #russianculture #riverside #urbanphotography #aesthetic #serenity #cityvibes

@@ -1,0 +1,25 @@
+---
+title: "#Birch #Forest #Canopy #Leaves #Autumn #Palette #Trees #Nature #Wonder #Silence #Peace #Tree #Grove #Fall #Leaves #Folia"
+x_id: "1895705810124321223"
+x_created_at: "2025-03-01T05:21:00Z"
+image: "/images/archive/birch-forest-canopy-leaves-autumn-palette-trees-nature-wonde.jpg"
+hashtags:
+  - "Birch"
+  - "Forest"
+  - "Canopy"
+  - "Leaves"
+  - "Autumn"
+  - "Palette"
+  - "Trees"
+  - "Nature"
+  - "Wonder"
+  - "Silence"
+  - "Peace"
+  - "Tree"
+  - "Grove"
+  - "Fall"
+  - "Foliage"
+  - "Beauty"
+  - "Wild"
+---
+#Birch #Forest #Canopy #Leaves #Autumn #Palette #Trees #Nature #Wonder #Silence #Peace #Tree #Grove #Fall #Leaves #Foliage #Beauty #Wild https://t.co/1ARw8tvat0

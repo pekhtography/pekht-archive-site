@@ -14,4 +14,4 @@ hashtags:
   - "wild"
 ---
 Breaking: Local meerkat discovers standing up straight actually makes you look important 📈 Humans have been slouching wrong this entire time! 🙄 Corporate world taking notes from savanna consultants now 📝 #PostureCoaching
-#meerkat #wildlife #desert #nature #animal #africa #wild https://t.co/UD1VSDChgb
+#meerkat #wildlife #desert #nature #animal #africa #wild

@@ -19,4 +19,4 @@ hashtags:
   - "spring"
 ---
 These roses really said 'Let's make the humans stop scrolling and question their life choices' 🌹😏 Mission accomplished, I'm now reconsidering my black thumb status 🌱💔 #RoseReality
-#roses #pink #garden #flowers #bloom #petals #nature #beauty #romance #floral #botanical #spring https://t.co/C1WidYjquJ
+#roses #pink #garden #flowers #bloom #petals #nature #beauty #romance #floral #botanical #spring

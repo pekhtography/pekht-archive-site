@@ -25,4 +25,4 @@ hashtags:
   - "hope"
   - "transition"
 ---
-#Birch #Tree #Grove #Harmony #Autumn #Change #High #Elevation #Trees #Nature #Green #Life #Leaves #Foliage #Yellow #Sunshine #Flowers #Beauty #hope #transition https://t.co/Zfq5YOsiDQ
+#Birch #Tree #Grove #Harmony #Autumn #Change #High #Elevation #Trees #Nature #Green #Life #Leaves #Foliage #Yellow #Sunshine #Flowers #Beauty #hope #transition

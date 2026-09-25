@@ -16,4 +16,4 @@ hashtags:
   - "Spring"
   - "Renewal"
 ---
-#Tulip #Blossom #Pink #Yellow #Sunshine #Petals #Softness #Garden #Bloom #Spring #Renewal https://t.co/qjNYopb8nK
+#Tulip #Blossom #Pink #Yellow #Sunshine #Petals #Softness #Garden #Bloom #Spring #Renewal

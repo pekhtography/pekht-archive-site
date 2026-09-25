@@ -12,4 +12,4 @@ hashtags:
   - "passion"
   - "admiration"
 ---
-In the language of flowers, red roses convey passionate love and admiration #redrose #queen #garden #love #beauty #passion #admiration https://t.co/7Lv5frEKUk
+In the language of flowers, red roses convey passionate love and admiration #redrose #queen #garden #love #beauty #passion #admiration

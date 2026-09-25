@@ -13,4 +13,4 @@ hashtags:
   - "Imagine"
   - "Dream"
 ---
-Music stores are experiencing a vinyl resurgence, and Lennon's albums  are a key part of this trend. Many stores have dedicated Lennon displays  and feature his albums in listening stations #Lennon #Legend #MusicStore #Haven #Vinyl #Resurgence #Imagine #Dream https://t.co/ri4xXBNQ4a
+Music stores are experiencing a vinyl resurgence, and Lennon's albums  are a key part of this trend. Many stores have dedicated Lennon displays  and feature his albums in listening stations #Lennon #Legend #MusicStore #Haven #Vinyl #Resurgence #Imagine #Dream

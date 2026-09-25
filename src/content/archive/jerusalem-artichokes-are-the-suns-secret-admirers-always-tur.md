@@ -18,4 +18,4 @@ hashtags:
   - "sunshine"
 ---
 Jerusalem artichokes are the sun’s secret admirers, always turning to catch its gaze 
-#jerusalemartichoke #sunchoke #nature #yellow #blooms #garden #summer #flora #petals #outdoors #vibrant #sunshine https://t.co/LxX59Vmifg
+#jerusalemartichoke #sunchoke #nature #yellow #blooms #garden #summer #flora #petals #outdoors #vibrant #sunshine

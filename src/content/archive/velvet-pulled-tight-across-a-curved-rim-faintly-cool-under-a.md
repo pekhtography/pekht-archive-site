@@ -10,4 +10,4 @@ Velvet pulled tight across a curved rim, faintly cool under a fingertip,
 threaded with lines the color of dried plum — 
 and only after all that texture does the magenta arrive,
 loud and warm and slightly furious 🌸🪄,
-like something that had been waiting a long time to be seen… https://t.co/xdnrCeGPfX
+like something that had been waiting a long time to be seen…

@@ -19,4 +19,4 @@ hashtags:
   - "Jungle"
   - "Elegance"
 ---
-#Phalaenopsis #Gigantea #Leaves #Flowers #Nature #Beauty #Resilience #Patterns #Growth #Orchid #Tall #Bloom #Jungle #Elegance https://t.co/DwgGoKb9UW
+#Phalaenopsis #Gigantea #Leaves #Flowers #Nature #Beauty #Resilience #Patterns #Growth #Orchid #Tall #Bloom #Jungle #Elegance

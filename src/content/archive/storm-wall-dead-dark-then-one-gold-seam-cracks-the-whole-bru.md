@@ -13,4 +13,4 @@ Storm wall, dead dark —
 then one gold seam cracks the whole bruise open. 🔥 
 The sky didn't break. 
 It was unzipped. ⚡
-#SkyFire #StormChaser #GoldenEdge #NatureUnfiltered https://t.co/jyQFzLIKQ5
+#SkyFire #StormChaser #GoldenEdge #NatureUnfiltered

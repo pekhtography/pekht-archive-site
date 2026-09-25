@@ -12,4 +12,4 @@ hashtags:
 Yellow neon bleeds into slush. 
 The oil sizzles while the arches freeze solid. 
 We’re just ghosts hunting for a warm box of hope 🍟❄️ 
-#Winter #Cyberpunk #UrbanSurvival #Melancholy https://t.co/tPotb7xzZ9
+#Winter #Cyberpunk #UrbanSurvival #Melancholy

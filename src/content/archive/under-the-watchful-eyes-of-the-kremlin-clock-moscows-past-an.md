@@ -15,4 +15,4 @@ hashtags:
   - "RedSquare"
 ---
 Under the watchful eyes of the Kremlin clock, Moscow's past and present dance together like a mythic tale 🌆🕰️. History whispers, but the city’s heartbeat keeps time with every step. 💃🌟 #EchoesBehindTheClock
-#Kremlin #Spasskaya #Clock #Tower #Moscow #History #Russia #RedSquare https://t.co/2XiD4shYDu
+#Kremlin #Spasskaya #Clock #Tower #Moscow #History #Russia #RedSquare

@@ -12,4 +12,4 @@ a tiny dictator on a throne of thorns.
 He’s not singing love. 
 He’s screaming “I EXIST” at a girlfriend who’s probably scrolling. 
 Every spring, somewhere, a bird loses his dignity for a date. 👑📱
-#SpringChaos #BirdWatchingHumor https://t.co/hXdbjtRKEM
+#SpringChaos #BirdWatchingHumor

@@ -19,4 +19,4 @@ hashtags:
   - "precious"
 ---
 When life gets prickly, remember even the spikiest creatures start as tiny bundles of softness 🦔✨ Sometimes our defenses develop as we grow 💭 #TinyWisdom
-#hedgehog #baby #hoglet #cute #tiny #spikes #hands #wildlife #adorable #small #nature #precious https://t.co/ywh9Qj72DM
+#hedgehog #baby #hoglet #cute #tiny #spikes #hands #wildlife #adorable #small #nature #precious

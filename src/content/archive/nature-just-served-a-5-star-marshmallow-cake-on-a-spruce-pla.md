@@ -11,4 +11,4 @@ hashtags:
 ---
 Nature just served a 5-star marshmallow cake on a spruce plate. 
 One sneeze and this masterpiece becomes a personal avalanche down your neck ❄️🍰 
-#Winter #SnowArt #NaturePhotography #Mood https://t.co/lil53dDZEz
+#Winter #SnowArt #NaturePhotography #Mood

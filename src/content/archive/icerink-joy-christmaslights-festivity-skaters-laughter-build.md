@@ -17,4 +17,4 @@ hashtags:
   - "Wonder"
   - "Fun"
 ---
-#IceRink #Joy #ChristmasLights #Festivity #Skaters #Laughter #Buildings #Tree #Magic #Winter #Wonder #Fun https://t.co/Xy443kqs7J
+#IceRink #Joy #ChristmasLights #Festivity #Skaters #Laughter #Buildings #Tree #Magic #Winter #Wonder #Fun

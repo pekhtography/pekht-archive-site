@@ -19,4 +19,4 @@ hashtags:
   - "flora"
 ---
 This flower has better work-life balance than most humans - blooms seasonally, rests gracefully! 🧘‍♀️🌺 #FlowerWisdom
-#phlox #flowers #wildflowers #spring #blooms #petals #garden #nature #purple #botanical #divaricata #flora https://t.co/CcWmPPgt3x
+#phlox #flowers #wildflowers #spring #blooms #petals #garden #nature #purple #botanical #divaricata #flora

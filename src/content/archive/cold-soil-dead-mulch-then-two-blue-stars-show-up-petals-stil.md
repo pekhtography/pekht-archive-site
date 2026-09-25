@@ -15,4 +15,4 @@ Then two blue stars 🌱 show up —
 petals still damp, yellow centres burning like tiny stoves — 
 owning the whole garden. 💙 
 First.
-#Spring #WildFlowers #ChionodoxaBloom #PetalFeels https://t.co/wv7i3TcvKR
+#Spring #WildFlowers #ChionodoxaBloom #PetalFeels

@@ -16,4 +16,4 @@ hashtags:
   - "Russia"
 ---
 When Moscow decides to dress up its streets, even buildings become fashion statements! 🏛️✨ This emerald palace on Kuznetsky Bridge proves architecture can be the ultimate runway. #MoscowFashionWeek
-#Moscow #Fashion #Architecture #Design #Culture #Street #Art #History #Russia https://t.co/ytFeG75aR2
+#Moscow #Fashion #Architecture #Design #Culture #Street #Art #History #Russia

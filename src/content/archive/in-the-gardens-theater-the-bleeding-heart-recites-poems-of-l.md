@@ -18,4 +18,4 @@ hashtags:
   - "Blossom"
 ---
 In the garden's theater, the bleeding heart recites poems of love, while the daylily silently radiates an aura of warmth
-#Lily #BleedingHeart #Flowers #Nature #Garden #Bloom #Yellow #Pink #Purple #Beauty #Spring #Blossom https://t.co/nVk5fC0Txi
+#Lily #BleedingHeart #Flowers #Nature #Garden #Bloom #Yellow #Pink #Purple #Beauty #Spring #Blossom

@@ -23,4 +23,4 @@ hashtags:
   - "bear"
 ---
 The panda, nature’s very own zen master, reminds us that serenity comes with a side of bamboo snacks
-#panda #iconic #creature #mountains #gentle #power #serene #wisdom #tranquility #balance #snack #philosopher #cuddly #nature #furry #wise #bear-y https://t.co/dJhyTvuWKc
+#panda #iconic #creature #mountains #gentle #power #serene #wisdom #tranquility #balance #snack #philosopher #cuddly #nature #furry #wise #bear-y

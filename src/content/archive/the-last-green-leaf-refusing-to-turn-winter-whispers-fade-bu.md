@@ -10,4 +10,4 @@ hashtags:
 ---
 The last green leaf, refusing to turn. 
 Winter whispers "fade," but the sun screams "GLOW!" 🌿☀️❄️ 
-#Winter #LastLeaf #Hope https://t.co/xE9auWVYeg
+#Winter #LastLeaf #Hope

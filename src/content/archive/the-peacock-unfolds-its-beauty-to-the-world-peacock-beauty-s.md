@@ -12,4 +12,4 @@ hashtags:
   - "rainbow"
   - "shimmer"
 ---
-The peacock unfolds its beauty to the world #peacock #beauty #sunlight #feathers #colors #rainbow #shimmer https://t.co/mEaKIofAFB
+The peacock unfolds its beauty to the world #peacock #beauty #sunlight #feathers #colors #rainbow #shimmer

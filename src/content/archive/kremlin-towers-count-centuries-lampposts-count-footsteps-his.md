@@ -8,4 +8,4 @@ hashtags:
   - "UrbanPhotography"
   - "GoldenHour"
 ---
-Kremlin towers count centuries, lampposts count footsteps. 🏰✨ History doesn't beg for attention—it just watches you scroll, making your crisis look adorably temporary. #Photography #UrbanPhotography #GoldenHour https://t.co/UrvrLPsGlK
+Kremlin towers count centuries, lampposts count footsteps. 🏰✨ History doesn't beg for attention—it just watches you scroll, making your crisis look adorably temporary. #Photography #UrbanPhotography #GoldenHour

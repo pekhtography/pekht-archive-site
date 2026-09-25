@@ -18,4 +18,4 @@ hashtags:
   - "Vibrant"
 ---
 Life's a garden, so don't forget to stop and smell the compost!
-#Garden #Blooms #Azalea #Rhododendron #Nature #Spring #Colors #Flora #Blossoms #Greenery #Outdoors #Vibrant https://t.co/WVHlB8NVww
+#Garden #Blooms #Azalea #Rhododendron #Nature #Spring #Colors #Flora #Blossoms #Greenery #Outdoors #Vibrant

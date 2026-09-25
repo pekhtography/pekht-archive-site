@@ -23,4 +23,4 @@ hashtags:
   - "Chives"
   - "Plant"
 ---
-#Allium #Schoenoprasum #purple #Petals #green #Leaves #garden #beauty #fragrance #salad #bloom #vitality #design #taste #aroma #Fresh #Chives #Plant https://t.co/rZUPT8aUge
+#Allium #Schoenoprasum #purple #Petals #green #Leaves #garden #beauty #fragrance #salad #bloom #vitality #design #taste #aroma #Fresh #Chives #Plant

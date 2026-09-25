@@ -15,4 +15,4 @@ little lanterns someone forgot to tell it's time to switch off.
 Winter tests for durability.
 Red on white isn't SOS.
 It's a signature🫀🌬️
-#Nature #SlowArt #WinterPhilosophy #QuietMagic https://t.co/dImy4lIgXc
+#Nature #SlowArt #WinterPhilosophy #QuietMagic

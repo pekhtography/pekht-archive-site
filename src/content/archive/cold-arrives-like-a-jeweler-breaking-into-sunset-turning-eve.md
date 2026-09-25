@@ -14,4 +14,4 @@ The window surrenders quietly—
 fire trapped in geometry, chaos signing a peace treaty with crystal✨
 You're not looking at frost.
 You're looking at time crystallizing
-#Winter #Frost #Ice #Cold https://t.co/n7vwcU2Ysw
+#Winter #Frost #Ice #Cold

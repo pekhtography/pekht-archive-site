@@ -11,4 +11,4 @@ hashtags:
 The universe's favorite plot twist: 
 it sends the coldest winds not to freeze your fire, 
 but to make everyone see how brightly it burns. 🌬️💎 
-#Hope #InnerStrength #WinterLight https://t.co/0OcxNWtb9a
+#Hope #InnerStrength #WinterLight

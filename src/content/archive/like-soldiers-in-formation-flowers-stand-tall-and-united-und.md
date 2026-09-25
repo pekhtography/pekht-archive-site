@@ -11,4 +11,4 @@ hashtags:
   - "paradise"
   - "sun"
 ---
-Like soldiers in formation, flowers stand tall and united under the sun #flowers #army #unity #garden #paradise #sun https://t.co/yrBXua04Mk
+Like soldiers in formation, flowers stand tall and united under the sun #flowers #army #unity #garden #paradise #sun

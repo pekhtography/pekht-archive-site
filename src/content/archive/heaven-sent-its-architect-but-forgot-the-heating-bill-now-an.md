@@ -11,4 +11,4 @@ hashtags:
 ---
 Heaven sent its architect but forgot the heating bill — 
 now angels queue at Starbucks between midnight mass ☕👼❄️ 
-#Christmas #GothicArchitecture #WinterWonderland #MagicalMoments https://t.co/zorhHXubdZ
+#Christmas #GothicArchitecture #WinterWonderland #MagicalMoments

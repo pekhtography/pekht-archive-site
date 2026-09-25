@@ -23,4 +23,4 @@ hashtags:
   - "beauty"
 ---
 The meadow's vibrant hues are nature's laughter, a testament to the rich tapestry of life
-#nature #sunset #wildflowers #greenery #meadow #goldenhour #botany #landscape #flora #serenity #ecology #biodiversity #outdoors #photography #tranquility #environment #beauty https://t.co/QtV6cNjQPo
+#nature #sunset #wildflowers #greenery #meadow #goldenhour #botany #landscape #flora #serenity #ecology #biodiversity #outdoors #photography #tranquility #environment #beauty

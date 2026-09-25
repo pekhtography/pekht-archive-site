@@ -13,4 +13,4 @@ hashtags:
   - "garden"
   - "nature"
 ---
-Three roses, like sisters, bloom together in fragrant harmony #roses #love #darkred #passion #fragrance #sisters #garden #nature https://t.co/ZVlAXhLBSm
+Three roses, like sisters, bloom together in fragrant harmony #roses #love #darkred #passion #fragrance #sisters #garden #nature

@@ -12,4 +12,4 @@ hashtags:
 The shadows curl across the stones, silent witnesses to the great thaw. 
 It smells like hope and cold wet earth. 
 Almost spring. 🌬️🌱
-#Nature #WinterWonderland #SnowRemoval #TheStruggleIsReal https://t.co/2UOdnbRWfq
+#Nature #WinterWonderland #SnowRemoval #TheStruggleIsReal

@@ -18,4 +18,4 @@ hashtags:
   - "spring"
 ---
 Like a soft whisper from nature’s heart, this rhododendron bloom paints spring in pink tones. 🌸💧 Legends say flowers speak to those who listen. Are you tuned in? 🍃✨ #NatureSpeaksToUs
-#flower #rhododendron #bloom #nature #garden #pink #fresh #beauty #outdoors #purple #spring https://t.co/yl6z5iqn3q
+#flower #rhododendron #bloom #nature #garden #pink #fresh #beauty #outdoors #purple #spring

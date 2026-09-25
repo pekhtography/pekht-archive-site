@@ -13,4 +13,4 @@ The loudest thing in the garden 🌼 —
 five petals screaming yellow into the green silence — 
 exists only to disappear into something edible. ⚡ 
 Peak beauty is peak expendability. 🥒
-#FlowerPhotography #NaturePhotography #GardenLife #Impermanence https://t.co/3cm5ZUxZNz
+#FlowerPhotography #NaturePhotography #GardenLife #Impermanence

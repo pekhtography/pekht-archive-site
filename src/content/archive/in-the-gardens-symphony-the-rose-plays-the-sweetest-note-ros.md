@@ -12,4 +12,4 @@ hashtags:
   - "melody"
   - "garden"
 ---
-In the garden's symphony, the rose plays the sweetest note #rose #queen #flowers #symphony #soloist #melody #garden https://t.co/fcTIunDeJN
+In the garden's symphony, the rose plays the sweetest note #rose #queen #flowers #symphony #soloist #melody #garden

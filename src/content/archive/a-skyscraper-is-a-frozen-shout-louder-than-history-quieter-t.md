@@ -19,4 +19,4 @@ hashtags:
   - "infinite"
 ---
 A skyscraper is a frozen shout 📢 louder than history, quieter than a heartbeat. #SilentRoar
-#SkyscraperThatDreams #architecture #urban #travelphotography #aesthetic #moscowcity #neostalinist #landmark #highrise #postmodern #grand #infinite https://t.co/Cl6k9sPpLB
+#SkyscraperThatDreams #architecture #urban #travelphotography #aesthetic #moscowcity #neostalinist #landmark #highrise #postmodern #grand #infinite

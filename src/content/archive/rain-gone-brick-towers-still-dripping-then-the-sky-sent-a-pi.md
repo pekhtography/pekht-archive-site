@@ -14,4 +14,4 @@ Brick towers still dripping.
 Then the sky sent a pink laser straight up — 
 no arch, no meadow, just panel-block rooftop, selected. 
 Bifrost rebooted. ✨
-#CitySkies #UrbanNature #RainbowVibes #GoldenHour https://t.co/omG7HlrLjC
+#CitySkies #UrbanNature #RainbowVibes #GoldenHour

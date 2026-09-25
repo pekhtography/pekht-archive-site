@@ -13,4 +13,4 @@ Cold wind. Orange glow.
 A tourist fights the neon-pink horizon to frame the fortress. 
 One tiny slip. 
 Phone splash. 🤳🌊
-#GoldenHour #CityscapePhotography #TwilightMagic #Glow https://t.co/Q1RISNvWaq
+#GoldenHour #CityscapePhotography #TwilightMagic #Glow

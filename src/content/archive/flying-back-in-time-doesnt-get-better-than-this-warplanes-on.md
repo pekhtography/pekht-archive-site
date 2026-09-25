@@ -19,4 +19,4 @@ hashtags:
   - "landmark"
 ---
 Flying back in time doesn’t get better than this — warplanes on Red Square, clouds above, crowds around, and history alive below 🌤️🚀 #SoaringThroughTimeWalls
-#biplane #RedSquare #Moscow #aviation #vintage #Soviet #history #architecture #sky #clouds #crowd #landmark https://t.co/ORPrdJCjqz
+#biplane #RedSquare #Moscow #aviation #vintage #Soviet #history #architecture #sky #clouds #crowd #landmark

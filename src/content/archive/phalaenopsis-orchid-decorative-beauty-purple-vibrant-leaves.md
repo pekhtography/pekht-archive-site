@@ -24,4 +24,4 @@ hashtags:
   - "Flourish"
   - "Serenity"
 ---
-#Phalaenopsis #Orchid #Decorative #Beauty #Purple #Vibrant #Leaves #Green #Roots #Growth #Jungle #Exotic #Resilience #Strength #Home #Comfort #Bloom #Flourish #Serenity https://t.co/rvlTVIC40s
+#Phalaenopsis #Orchid #Decorative #Beauty #Purple #Vibrant #Leaves #Green #Roots #Growth #Jungle #Exotic #Resilience #Strength #Home #Comfort #Bloom #Flourish #Serenity

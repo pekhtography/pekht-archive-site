@@ -11,4 +11,4 @@ hashtags:
   - "urban"
   - "tomorrows"
 ---
-In the city of dreams, where skyscrapers touch the sky, love finds its way amidst the hustle and bustle #dreams #skyscrapers #sunshine #adventure #urban #tomorrows https://t.co/mHU8t6MDBX
+In the city of dreams, where skyscrapers touch the sky, love finds its way amidst the hustle and bustle #dreams #skyscrapers #sunshine #adventure #urban #tomorrows

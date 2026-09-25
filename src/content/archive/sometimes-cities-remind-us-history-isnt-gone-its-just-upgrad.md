@@ -19,4 +19,4 @@ hashtags:
   - "sunset"
 ---
 Sometimes cities remind us: history isn’t gone — it’s just upgraded with WiFi 📶🏙️ From coal dust to Instagram shots 📸 #PastMeetsFuture
-#architecture #cityscape #industrial #landmark #waterfront #urban #building #skyline #travel #historic #evening #sunset https://t.co/qpBVpdgHSI
+#architecture #cityscape #industrial #landmark #waterfront #urban #building #skyline #travel #historic #evening #sunset

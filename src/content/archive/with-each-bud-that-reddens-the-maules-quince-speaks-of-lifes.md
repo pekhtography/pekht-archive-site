@@ -22,4 +22,4 @@ hashtags:
   - "rebirth"
 ---
 With each bud that reddens, the Maule's quince speaks of life's audacity to bloom, even when the world outside remains cold and unyielding
-#Maules #quince #blush #Chaenomeles #japonica #renewal #green #leaves #vitality #red #buds #passion #resilience #strength #spring #rebirth https://t.co/fWckxDmBCN
+#Maules #quince #blush #Chaenomeles #japonica #renewal #green #leaves #vitality #red #buds #passion #resilience #strength #spring #rebirth

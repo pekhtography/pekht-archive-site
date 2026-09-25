@@ -24,4 +24,4 @@ hashtags:
   - "Bloom"
   - "Growth"
 ---
-#Rose #Beauty #Glass #Transparency #Vase #Petals #Delicacy #Orange #Warmth #Pink #Affection #Love #Connection #Joy #Happiness #Beauty #Aesthetics #Blossom #Bloom #Growth https://t.co/oTf9eMPGa9
+#Rose #Beauty #Glass #Transparency #Vase #Petals #Delicacy #Orange #Warmth #Pink #Affection #Love #Connection #Joy #Happiness #Beauty #Aesthetics #Blossom #Bloom #Growth

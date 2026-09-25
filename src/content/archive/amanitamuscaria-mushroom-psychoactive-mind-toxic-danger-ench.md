@@ -24,4 +24,4 @@ hashtags:
   - "WhiteSpots"
   - "Caution"
 ---
-#AmanitaMuscaria #Mushroom #Psychoactive #Mind #Toxic #Danger #Enchanting #Magic #Beauty #Nature #Forest #Mystery #WhiteDots #Contrast #FlyAgaric #Mystical #Red #WhiteSpots #Caution https://t.co/IdPyLeWdXE
+#AmanitaMuscaria #Mushroom #Psychoactive #Mind #Toxic #Danger #Enchanting #Magic #Beauty #Nature #Forest #Mystery #WhiteDots #Contrast #FlyAgaric #Mystical #Red #WhiteSpots #Caution

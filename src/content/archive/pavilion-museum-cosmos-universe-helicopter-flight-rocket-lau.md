@@ -21,4 +21,4 @@ hashtags:
   - "Ingenuity"
   - "Innovation"
 ---
-#Pavilion #Museum #Cosmos #Universe #Helicopter #Flight #Rocket #Launch #Sunset #Twilight #Dreams #Aspiration #Adventure #Exploration #Ingenuity #Innovation https://t.co/smftWjkAS6
+#Pavilion #Museum #Cosmos #Universe #Helicopter #Flight #Rocket #Launch #Sunset #Twilight #Dreams #Aspiration #Adventure #Exploration #Ingenuity #Innovation

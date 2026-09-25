@@ -13,4 +13,4 @@ Green shadows shift. A pitted, honeycomb skull appears.
 It stays angled between pine needles. 
 It mimics rot until butter sizzles. 
 Look, it’s actually steak. 🍳✨
-#Nature #Foraging #MorelSeason #Earthy https://t.co/A6tfANsBJa
+#Nature #Foraging #MorelSeason #Earthy

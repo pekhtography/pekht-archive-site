@@ -13,4 +13,4 @@ Sunlight screams. Bees chant. The lawn thrives.
 Amidst the cheer, one vertical stroke of midnight stands firm. 
 This tulip thinks the sun is too mainstream. 🤘 
 Botanical goth.
-#Nature #DarkAcademia #BotanicalGothic #MoodyVibes https://t.co/FMQEctGkrJ
+#Nature #DarkAcademia #BotanicalGothic #MoodyVibes

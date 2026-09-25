@@ -19,4 +19,4 @@ hashtags:
   - "paradise"
 ---
 Life's greatest adventures begin with a single leap of faith 🌊 The ocean whispers ancient secrets to those brave enough to dive deep ⚓ #DeepDiveLife
-#diving #summer #ocean #freedom #vacation #sailing #jump #water #blue #Mediterranean #athletic #paradise https://t.co/z5WsPUgZJe
+#diving #summer #ocean #freedom #vacation #sailing #jump #water #blue #Mediterranean #athletic #paradise

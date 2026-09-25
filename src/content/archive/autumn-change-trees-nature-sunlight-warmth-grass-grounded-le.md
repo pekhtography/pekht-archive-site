@@ -22,4 +22,4 @@ hashtags:
   - "Memories"
   - "Air"
 ---
-#Autumn #Change #Trees #Nature #Sunlight #Warmth #Grass #Grounded #Leaves #Transition #Colors #Vibrance #Moments #Connection #Beauty #Memories #Air https://t.co/pF7KkzXOHi
+#Autumn #Change #Trees #Nature #Sunlight #Warmth #Grass #Grounded #Leaves #Transition #Colors #Vibrance #Moments #Connection #Beauty #Memories #Air

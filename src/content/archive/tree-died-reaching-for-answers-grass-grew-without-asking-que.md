@@ -8,4 +8,4 @@ hashtags:
   - "autumnvibes"
   - "solitude"
 ---
-Tree died reaching for answers. Grass grew without asking questions. 🌿✨ Death speaks in absolutes. Life answers in chlorophyll. The smallest voice always gets the last word. #nature #autumnvibes #solitude https://t.co/dpzFGfPdfj
+Tree died reaching for answers. Grass grew without asking questions. 🌿✨ Death speaks in absolutes. Life answers in chlorophyll. The smallest voice always gets the last word. #nature #autumnvibes #solitude

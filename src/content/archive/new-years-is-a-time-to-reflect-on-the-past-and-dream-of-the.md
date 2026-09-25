@@ -12,4 +12,4 @@ hashtags:
   - "dreaming"
   - "holiday"
 ---
-New Year’s is a time to reflect on the past and dream of the future #mannequin #dream #bicycle #celebration #freedom #dreaming #holiday https://t.co/Uh1aCX9UP7
+New Year’s is a time to reflect on the past and dream of the future #mannequin #dream #bicycle #celebration #freedom #dreaming #holiday

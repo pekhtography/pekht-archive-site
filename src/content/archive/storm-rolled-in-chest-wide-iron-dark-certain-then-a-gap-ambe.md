@@ -15,4 +15,4 @@ Then a gap —
 amber, warm, two cloud towers apart — 
 and the sun just sat there, completely unbothered. 🌅 
 Absolute audacity.
-#SkyPhotography #StormChasing #GoldenHour #Clouds https://t.co/DKfMhUEUik
+#SkyPhotography #StormChasing #GoldenHour #Clouds

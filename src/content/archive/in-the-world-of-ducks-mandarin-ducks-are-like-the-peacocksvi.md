@@ -11,4 +11,4 @@ hashtags:
   - "loyalty"
   - "grace"
 ---
-In the world of ducks, mandarin ducks are like the peacocks—vibrant, colorful, and full of grace #mandarinduck #colorful #beauty #joy #loyalty #grace https://t.co/25oXbCp4Yq
+In the world of ducks, mandarin ducks are like the peacocks—vibrant, colorful, and full of grace #mandarinduck #colorful #beauty #joy #loyalty #grace

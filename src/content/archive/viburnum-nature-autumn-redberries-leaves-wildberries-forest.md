@@ -17,4 +17,4 @@ hashtags:
   - "Foliage"
   - "Outdoors"
 ---
-#Viburnum #Nature #Autumn #Redberries #Leaves #Wildberries #Forest #Berries #Fall #Trees #Foliage #Outdoors https://t.co/4r6agyg5q9
+#Viburnum #Nature #Autumn #Redberries #Leaves #Wildberries #Forest #Berries #Fall #Trees #Foliage #Outdoors

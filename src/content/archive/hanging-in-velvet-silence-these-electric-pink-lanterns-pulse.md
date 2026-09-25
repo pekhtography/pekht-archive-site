@@ -13,4 +13,4 @@ Hanging in velvet silence,
 these electric pink lanterns pulse with sugary nectar, 
 dripping like a tragic opera’s finale against the cold, damp moss. 🏮 
 Botanical overkill. 🌸
-#NaturePhotography #GardenInspiration #BotanicalArt #ElectricPink https://t.co/pxocUXddMb
+#NaturePhotography #GardenInspiration #BotanicalArt #ElectricPink

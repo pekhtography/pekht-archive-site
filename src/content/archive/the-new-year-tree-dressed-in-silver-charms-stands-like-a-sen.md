@@ -20,4 +20,4 @@ hashtags:
   - "Celebration"
 ---
 The New Year tree, dressed in silver charms, stands like a sentinel of festive spirits, wrapping us in warmth while the frost nips at our noses
-#Silver #Glimmer #Evergreen #Snowflakes #Wishes #Midnight #Transition #Dreams #Aspirations #Tree #Symbol #Spirits #Confetti #Celebration https://t.co/7nQQrKtdHu
+#Silver #Glimmer #Evergreen #Snowflakes #Wishes #Midnight #Transition #Dreams #Aspirations #Tree #Symbol #Spirits #Confetti #Celebration

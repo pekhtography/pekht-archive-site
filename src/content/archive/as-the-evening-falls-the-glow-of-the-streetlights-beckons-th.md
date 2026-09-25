@@ -14,4 +14,4 @@ hashtags:
   - "stories"
   - "charm"
 ---
-As the evening falls, the glow of the streetlights beckons the stories hidden in the shadows #ancient #history #street #journey #evening #twilight #illumination #stories #charm https://t.co/m6Gr53GzHl
+As the evening falls, the glow of the streetlights beckons the stories hidden in the shadows #ancient #history #street #journey #evening #twilight #illumination #stories #charm

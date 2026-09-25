@@ -19,4 +19,4 @@ hashtags:
   - "ornament"
 ---
 This bird's dating profile: "I'm grounded, literally. Swipe right if you like commitment" 💕🪵 #DatingStruggles
- #bird #wooden #figurine #decorative #robin #handcrafted #colorful #folk #art #craft #vintage #ornament https://t.co/VRHpzUlHzU
+ #bird #wooden #figurine #decorative #robin #handcrafted #colorful #folk #art #craft #vintage #ornament

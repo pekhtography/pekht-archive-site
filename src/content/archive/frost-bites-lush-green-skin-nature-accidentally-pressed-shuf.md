@@ -12,4 +12,4 @@ hashtags:
 Frost bites lush green skin. 
 Nature accidentally pressed 'shuffle' on the seasons playlist while we were still dancing in t-shirts. 
 Yesterday’s picnic spot is today’s ice rink. ❄️🌿
-#Nature #SpringSnow #WeatherGlitch #Freshness https://t.co/qlmiwy56jO
+#Nature #SpringSnow #WeatherGlitch #Freshness

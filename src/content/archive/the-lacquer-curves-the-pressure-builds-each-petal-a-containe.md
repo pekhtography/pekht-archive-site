@@ -14,4 +14,4 @@ each petal a container holding something too red to stay contained,
 waxy, warm, 
 faintly humming like taut canvas before the brush lands. 🌷 
 Turns out the void did the painting. 🖤
-#RedTulips #DarkFloral #TulipMania #CrimsonLight https://t.co/oplaqfemBH
+#RedTulips #DarkFloral #TulipMania #CrimsonLight

@@ -25,4 +25,4 @@ hashtags:
   - "Beauty"
   - "Aesthetics"
 ---
-#Chrysanthemum #Flower #ZemblaLime #Variety #Colors #Palette #Green #Nature #White #Purity #Pink #Love #Burgundy #Richness #Violet #Mystery #Bouquet #Arrangement #Beauty #Aesthetics https://t.co/mdNkXFF1lH
+#Chrysanthemum #Flower #ZemblaLime #Variety #Colors #Palette #Green #Nature #White #Purity #Pink #Love #Burgundy #Richness #Violet #Mystery #Bouquet #Arrangement #Beauty #Aesthetics

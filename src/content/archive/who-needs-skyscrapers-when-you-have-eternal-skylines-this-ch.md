@@ -18,4 +18,4 @@ hashtags:
   - "Snow"
 ---
 Who needs skyscrapers when you have eternal skylines? This church proudly stands tall! 😊⛪ #TimelessFaith
-#Church #Orthodox #Architecture #Cityscape #Winter #Dome #Faith #History #Tradition #Urban #Snow https://t.co/fq2CMIFQwj
+#Church #Orthodox #Architecture #Cityscape #Winter #Dome #Faith #History #Tradition #Urban #Snow

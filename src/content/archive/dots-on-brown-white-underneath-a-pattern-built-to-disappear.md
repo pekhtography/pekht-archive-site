@@ -14,4 +14,4 @@ A pattern built to disappear —
 standing on bare wood, loud as a chandelier. 
 Two pale stitches. The whole sky above. ✨ 
 Peak camouflage. Zero camouflage.
-#WildlifePhotography #Birdwatching #NatureMoments #FeatheredWorld https://t.co/aF3ojWWruo
+#WildlifePhotography #Birdwatching #NatureMoments #FeatheredWorld

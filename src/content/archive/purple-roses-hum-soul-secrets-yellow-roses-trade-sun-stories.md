@@ -18,4 +18,4 @@ hashtags:
   - "Harmony"
 ---
 Purple roses hum soul secrets, yellow roses trade sun stories. 🌙☀️ This silent gossip in the petals is life's oldest, wisest algorithm. #FloralWisdom
-#Nature #Photography #Rose #Garden #Aesthetics #Flowers #Philosophy #Beauty #NatureLovers #ColorTheory #Harmony https://t.co/phqJOAHEyE
+#Nature #Photography #Rose #Garden #Aesthetics #Flowers #Philosophy #Beauty #NatureLovers #ColorTheory #Harmony

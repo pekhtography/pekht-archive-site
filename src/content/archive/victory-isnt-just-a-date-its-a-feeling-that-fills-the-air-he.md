@@ -19,4 +19,4 @@ hashtags:
   - "Monument"
 ---
 Victory isn't just a date; it's a feeling that fills the air here, between old walls and hopeful faces 🇷🇺🎉🕊 #VictoryLivesOn
-#RedSquare #Moscow #Architecture #History #Victory #Celebration #Crowd #Sky #Evening #Pavement #Tourists #Monument https://t.co/vBavweM9sc
+#RedSquare #Moscow #Architecture #History #Victory #Celebration #Crowd #Sky #Evening #Pavement #Tourists #Monument

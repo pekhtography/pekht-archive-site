@@ -14,4 +14,4 @@ Blue-white windows stack forty floors of borrowed warmth —
 cranes still dangling overhead like forgotten punctuation, 
 a half-moon smirking above the whole rehearsal. 🌙 
 Permanent draft.
-#CityAtNight #UrbanConstruction #NightSkyPhotography #AlmostThere https://t.co/o7eEZZCxy5
+#CityAtNight #UrbanConstruction #NightSkyPhotography #AlmostThere

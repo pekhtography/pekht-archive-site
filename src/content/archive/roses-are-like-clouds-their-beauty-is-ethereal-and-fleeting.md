@@ -14,4 +14,4 @@ hashtags:
   - "joy"
   - "love"
 ---
-Roses are like clouds; their beauty is ethereal and fleeting #rose #cloud #beauty #garden #sunshine #fragrance #delicate #joy #love https://t.co/pZmg5NVCTl
+Roses are like clouds; their beauty is ethereal and fleeting #rose #cloud #beauty #garden #sunshine #fragrance #delicate #joy #love

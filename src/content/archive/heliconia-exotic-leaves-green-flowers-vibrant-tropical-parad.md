@@ -20,4 +20,4 @@ hashtags:
   - "Color"
   - "Expression"
 ---
-#Heliconia #Exotic #Leaves #Green #Flowers #Vibrant #Tropical #Paradise #Nature #Beauty #Aesthetic #Growth #Whimsy #Color #Expression https://t.co/X04vN9UwPQ
+#Heliconia #Exotic #Leaves #Green #Flowers #Vibrant #Tropical #Paradise #Nature #Beauty #Aesthetic #Growth #Whimsy #Color #Expression

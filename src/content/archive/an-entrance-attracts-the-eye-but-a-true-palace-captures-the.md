@@ -12,4 +12,4 @@ hashtags:
   - "pillars"
   - "palace"
 ---
-An entrance attracts the eye, but a true palace captures the heart #entrance #gate #majesty #sovereignty #empire #pillars #palace #empire https://t.co/Sp8AouXckM
+An entrance attracts the eye, but a true palace captures the heart #entrance #gate #majesty #sovereignty #empire #pillars #palace #empire

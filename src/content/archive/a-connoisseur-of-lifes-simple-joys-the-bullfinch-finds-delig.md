@@ -18,4 +18,4 @@ hashtags:
   - "Spring"
 ---
 A connoisseur of life's simple joys, the bullfinch finds delight in every seed, savoring each moment
-#Bullfinch #Birdfeeder #Nature #Wildlife #Feathers #Perch #Birdwatching #Outdoors #Feeding #Garden #Birdlover #Spring https://t.co/wpZKlrmsMz
+#Bullfinch #Birdfeeder #Nature #Wildlife #Feathers #Perch #Birdwatching #Outdoors #Feeding #Garden #Birdlover #Spring

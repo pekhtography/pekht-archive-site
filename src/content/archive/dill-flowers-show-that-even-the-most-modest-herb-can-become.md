@@ -18,4 +18,4 @@ hashtags:
   - "delicate"
 ---
 Dill flowers show that even the most modest herb can become the garden's diva, blooming like tiny sunbeams splashing joy through the greenery! 
-#dill #flowers #nature #green #yellow #bloom #garden #herb #plant #summer #fresh #delicate https://t.co/woNoqXuqCM
+#dill #flowers #nature #green #yellow #bloom #garden #herb #plant #summer #fresh #delicate

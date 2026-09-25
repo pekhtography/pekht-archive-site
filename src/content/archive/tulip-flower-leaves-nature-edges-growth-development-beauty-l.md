@@ -21,4 +21,4 @@ hashtags:
   - "Chlorophyll"
   - "Vegetation"
 ---
-#tulip #flower #leaves #nature #edges #growth #development #beauty #Leaf #Green #Plant #Flora #Verdant #Foliage #Chlorophyll #Vegetation https://t.co/Uj3IGT7klz
+#tulip #flower #leaves #nature #edges #growth #development #beauty #Leaf #Green #Plant #Flora #Verdant #Foliage #Chlorophyll #Vegetation

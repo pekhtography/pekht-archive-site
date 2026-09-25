@@ -12,4 +12,4 @@ The city lights turn its cold metal into a warm,
 buttery memory of hands in clay. 
 It’s not a monument to an idea. 
 It’s a monument to the hesitation before the idea. 🖐️🔥🧊
-#PublicArt https://t.co/M556EZmBBe
+#PublicArt

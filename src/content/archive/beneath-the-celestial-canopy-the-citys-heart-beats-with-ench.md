@@ -15,4 +15,4 @@ hashtags:
   - "Holiday"
 ---
 Beneath the celestial canopy, the city's heart beats with enchantment
-#Winter #IceRink #Festival #Lights #Christmas #Architecture #Night #Celebration #Holiday https://t.co/YDJlCJmlqK
+#Winter #IceRink #Festival #Lights #Christmas #Architecture #Night #Celebration #Holiday

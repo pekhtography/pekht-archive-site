@@ -12,4 +12,4 @@ hashtags:
 Soon he’ll forget my warmth ☀️
 Frost serves winter, not me ❄️
 Still, I shine — loving doesn’t always mean staying ✨
-#WinterMood #FrostArt #WindowPatterns #QuietLove https://t.co/C4WemewYKP
+#WinterMood #FrostArt #WindowPatterns #QuietLove

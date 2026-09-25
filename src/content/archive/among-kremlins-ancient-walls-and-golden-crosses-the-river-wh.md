@@ -16,4 +16,4 @@ hashtags:
   - "Tourism"
 ---
 Among Kremlin’s ancient walls and golden crosses, the river whispers tales of centuries past 🌊✨. History cruises alongside blooming flowers — time travels beautifully here! 🌸 #HistoricRiverscapeDream
-#Kremlin #Moscow #Russia #River #Boats #History #Flowers #Summer #Tourism https://t.co/vjYlWFF9pp
+#Kremlin #Moscow #Russia #River #Boats #History #Flowers #Summer #Tourism

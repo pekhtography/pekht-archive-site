@@ -19,4 +19,4 @@ hashtags:
   - "urban"
 ---
 Pansies really woke up and chose violence… against boring landscapes 😈 Criminal how beautiful they are! 🚨 #FlowerCrime
-#pansies #flowers #park #spring #pathway #lamposts #garden #nature #blooms #peaceful #walkway #urban https://t.co/99awEbW7HJ
+#pansies #flowers #park #spring #pathway #lamposts #garden #nature #blooms #peaceful #walkway #urban

@@ -16,4 +16,4 @@ hashtags:
   - "Summer"
 ---
 Sunlight drips like honey on ancient stones 🍯🌞 Where time pauses, and the soul sips stories — a café beyond ages, a breath beyond moments. #TimelessSips
-#SummerVibes #CityLife #UrbanExplore #NatureLovers #HistoricArchitecture #CafeCulture #OutdoorDining #WaterfrontCafe #Summer https://t.co/vBlWherdv5
+#SummerVibes #CityLife #UrbanExplore #NatureLovers #HistoricArchitecture #CafeCulture #OutdoorDining #WaterfrontCafe #Summer

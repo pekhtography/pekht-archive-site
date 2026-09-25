@@ -19,4 +19,4 @@ hashtags:
   - "mammal"
 ---
 Desert survival manual: Step 1 - Grow giant ears. Step 2 - Become too cute to survive in wild. Step 3 - Profit! 🦊💰 #DesertLogic 
-#fennec #fox #desert #ears #cute #exotic #pet #wildlife #animal #adorable #small #mammal https://t.co/P950Ivi56z
+#fennec #fox #desert #ears #cute #exotic #pet #wildlife #animal #adorable #small #mammal

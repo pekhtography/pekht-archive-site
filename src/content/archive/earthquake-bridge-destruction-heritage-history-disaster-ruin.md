@@ -19,4 +19,4 @@ hashtags:
   - "Recovery"
   - "Hope"
 ---
-#Earthquake #Bridge #Destruction #Heritage #History #Disaster #Ruins #Collapse #Damage #Cultural #Loss #Tragedy #Recovery #Hope https://t.co/cMHFlKj4al
+#Earthquake #Bridge #Destruction #Heritage #History #Disaster #Ruins #Collapse #Damage #Cultural #Loss #Tragedy #Recovery #Hope

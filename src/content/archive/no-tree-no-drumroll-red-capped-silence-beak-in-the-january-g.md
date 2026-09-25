@@ -14,4 +14,4 @@ Red-capped silence, beak in the January ground 🌨️ —
 the kind of quiet only something built for noise can make. 🖤 
 Built for percussion. 
 Chose the pause. 🪵 
-#Wildlife #BirdsOfWinter #WoodpeckerLife #UnexpectedJoy https://t.co/ulLrJ8t0HQ
+#Wildlife #BirdsOfWinter #WoodpeckerLife #UnexpectedJoy

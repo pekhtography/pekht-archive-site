@@ -13,4 +13,4 @@ Soft velvet. Heavy nectar.
 Sticky purple clusters (warm and humid) 
 swell against the rough, cold bark, 
 expanding a single afternoon into an ancient, fragrant epoch. ⏳🌸
-#Spring #BotanicalArt #LilacSensation #FloralScent https://t.co/UVi9b94juM
+#Spring #BotanicalArt #LilacSensation #FloralScent

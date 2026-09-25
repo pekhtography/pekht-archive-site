@@ -13,4 +13,4 @@ Sunset squeezed between steel and glass —
 orange bleeds into the river's skin 🌅 
 while the towers stand there, absolutely unbothered, 
 like they invented the sky. 🏙️🔥
-#GoldenHour #SkylineShot #MoscowNights #ReflectionPhotography https://t.co/OvnBj6Qd8S
+#GoldenHour #SkylineShot #MoscowNights #ReflectionPhotography

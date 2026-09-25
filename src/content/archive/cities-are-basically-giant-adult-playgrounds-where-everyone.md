@@ -19,4 +19,4 @@ hashtags:
   - "hospitality"
 ---
 Cities are basically giant adult playgrounds where everyone pretends to know what they're doing 🎪🤷‍♂️ Fake it till you make it to the penthouse! #AdultPlayground
-#hotel #urban #architecture #cityscape #modern #travel #business #luxury #downtown #skyline #metropolitan #hospitality https://t.co/brqz5RlU3U
+#hotel #urban #architecture #cityscape #modern #travel #business #luxury #downtown #skyline #metropolitan #hospitality

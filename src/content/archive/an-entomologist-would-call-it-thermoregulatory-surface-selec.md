@@ -14,4 +14,4 @@ The tulip
 (warmer than ambient air by 4°C, petals curved inward for wind shelter)
 is just the best heated seat in the garden. 🌷
 The fly booked business class.
-#Nature #MacroPhotography #TulipSeason #Unexpected https://t.co/g6H0q0vMCn
+#Nature #MacroPhotography #TulipSeason #Unexpected

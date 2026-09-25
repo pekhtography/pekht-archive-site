@@ -18,4 +18,4 @@ hashtags:
   - "Landscape"
 ---
 Full moons might stir mythical creatures, but I suspect they’d just prefer a comfy blanket and Netflix
-#House #Winter #Snow #Moonlight #Nature #Cozy #Night #Garden #Peaceful #Glow #Trees #Landscape https://t.co/InVklUAYf7
+#House #Winter #Snow #Moonlight #Nature #Cozy #Night #Garden #Peaceful #Glow #Trees #Landscape

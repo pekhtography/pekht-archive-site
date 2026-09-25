@@ -21,4 +21,4 @@ hashtags:
   - "wildlife"
 ---
 Flowers are the music of the ground, but these ones seem to be belting out some funky tunes!
-#Elecampane #Inula #helenium #flowers #nature #yellow #beauty #botanical #flora #garden #plants #sunshine #vibrant #outdoors #wildlife https://t.co/NahF7elRbp
+#Elecampane #Inula #helenium #flowers #nature #yellow #beauty #botanical #flora #garden #plants #sunshine #vibrant #outdoors #wildlife

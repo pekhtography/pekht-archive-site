@@ -13,4 +13,4 @@ Three layers of sky above a city that doesn't look up. 🌆
 Cold grey at the top. Burning gold in the middle. 
 Pure red rage at the bottom —
 pressed against the rooftops like it has something to say. 🔥
-#Sunset #SkyOnFire #CitySkies #GoldenHour https://t.co/RHHhNghBhW
+#Sunset #SkyOnFire #CitySkies #GoldenHour

@@ -11,4 +11,4 @@ hashtags:
   - "Mystery"
   - "Forest"
 ---
-The road wandered through the trees, leading us deeper into nature's embrace #Road #Woods #Trees #Journey #Mystery #Forest https://t.co/Zme5fz4OkG
+The road wandered through the trees, leading us deeper into nature's embrace #Road #Woods #Trees #Journey #Mystery #Forest

@@ -19,4 +19,4 @@ hashtags:
   - "Adorable"
 ---
 Plot twist: this kitten’s stare can melt your heart faster than chocolate 🍫❤️🐾 #HeartMelter
-#ScottishFold #Kitten #Cat #Cute #Pet #Feline #Fluffy #Tabby #Paws #Whiskers #Sleepy #Adorable https://t.co/jlvBaem5aj
+#ScottishFold #Kitten #Cat #Cute #Pet #Feline #Fluffy #Tabby #Paws #Whiskers #Sleepy #Adorable

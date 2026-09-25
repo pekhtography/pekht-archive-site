@@ -18,4 +18,4 @@ hashtags:
   - "spring"
 ---
 A tulip adorned with rain is a living poem, written in the language of the morning light
-#tulip #rain #nature #petal #bloom #fresh #beauty #delicate #droplets #vibrant #serene #spring https://t.co/BodObnIjOW
+#tulip #rain #nature #petal #bloom #fresh #beauty #delicate #droplets #vibrant #serene #spring

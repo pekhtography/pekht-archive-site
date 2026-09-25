@@ -19,4 +19,4 @@ hashtags:
   - "art"
 ---
 Who needs horsepower when you have bird-power? 🦢😂🚘 #WingedHorsepower
-#luxury #classic #chrome #elegance #vintage #style #symbol #design #retro #car #shine #art https://t.co/fahX4anPBH
+#luxury #classic #chrome #elegance #vintage #style #symbol #design #retro #car #shine #art

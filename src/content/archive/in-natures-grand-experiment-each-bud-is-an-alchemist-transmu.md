@@ -18,4 +18,4 @@ hashtags:
   - "Pink"
 ---
 In nature’s grand experiment, each bud is an alchemist, transmuting sunlight into vibrant art
-#Blossoms #Spring #Nature #AppleTree #Blooming #Growth #Leaves #Branches #Foliage #Buds #Green #Pink https://t.co/crMrarX26W
+#Blossoms #Spring #Nature #AppleTree #Blooming #Growth #Leaves #Branches #Foliage #Buds #Green #Pink

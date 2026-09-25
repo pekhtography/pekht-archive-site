@@ -12,4 +12,4 @@ hashtags:
   - "history"
   - "houses"
 ---
-A ship sails through the sunshine, weaving a tapestry of history and modernity #ship #journey #river #water #sunshine #history #houses https://t.co/CcUyn1GuFC
+A ship sails through the sunshine, weaving a tapestry of history and modernity #ship #journey #river #water #sunshine #history #houses

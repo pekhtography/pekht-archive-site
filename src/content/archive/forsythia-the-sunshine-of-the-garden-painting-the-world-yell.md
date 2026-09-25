@@ -18,4 +18,4 @@ hashtags:
   - "Seasonal"
 ---
 Forsythia: the sunshine of the garden, painting the world yellow with its laughter
-#Forsythia #Blooms #Spring #Yellow #Nature #Garden #Blossoms #Outdoors #Flora #Growth #Vibrant #Seasonal https://t.co/XmMeDqgkQT
+#Forsythia #Blooms #Spring #Yellow #Nature #Garden #Blossoms #Outdoors #Flora #Growth #Vibrant #Seasonal

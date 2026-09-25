@@ -12,4 +12,4 @@ hashtags:
 Bridge frozen river cathedral — December's loading screen between old year and new ⛪ 
 You're stuck mid-transition wondering if ice will hold your resolutions 🎄 
 Spoiler: it melts but bridge stays ✨ 
-#Moscow #OrthodoxChurch #WinterMoscow #CulturalHeritage https://t.co/GEeBXLQ9WQ
+#Moscow #OrthodoxChurch #WinterMoscow #CulturalHeritage

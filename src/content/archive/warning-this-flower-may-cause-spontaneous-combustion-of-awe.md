@@ -21,4 +21,4 @@ hashtags:
   - "Life"
 ---
 😲 Warning: This flower may cause spontaneous combustion of awe and wonder. 🌸 Meet Dictamnus—nature’s lighter, no matches needed. 🔥😉 #FireStarter #FloralStory #FlameOfCuriosity
-#Dictamnus #Wildflower #Nature #Floral #Botany #Power #Garden #Purple #Petals #Bloom #Plant #Life https://t.co/X99r8DHdPH
+#Dictamnus #Wildflower #Nature #Floral #Botany #Power #Garden #Purple #Petals #Bloom #Plant #Life

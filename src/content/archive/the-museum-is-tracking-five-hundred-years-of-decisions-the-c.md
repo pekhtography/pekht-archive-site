@@ -12,4 +12,4 @@ hashtags:
 The museum is tracking five hundred years of decisions. 
 The carousel is tracking one lap at a time. 
 Somehow the carousel has the better crowd 🎠😂❄️
-#MoscowChristmas #WinterWonderland #GoldenLights #CarouselOfTime https://t.co/diLfXv87AY
+#MoscowChristmas #WinterWonderland #GoldenLights #CarouselOfTime

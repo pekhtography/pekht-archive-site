@@ -13,4 +13,4 @@ A thousand lights pressed into one sphere —
 blue buildings holding their breath around it. 🌙 
 The city became the background. The ornament became the city. ✨ 
 One warm point rearranges everything. 🎄
-#Christmas #WinterGlow #CityDecor #GiantOrnament https://t.co/HbIS1Har5j
+#Christmas #WinterGlow #CityDecor #GiantOrnament

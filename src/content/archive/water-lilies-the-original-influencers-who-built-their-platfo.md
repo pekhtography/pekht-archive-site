@@ -11,4 +11,4 @@ hashtags:
   - "flowers"
 ---
 Water lilies: the original influencers who built their platform on literally nothing but water and good lighting 💡 Zero followers needed, maximum impact achieved 🎪 Organic reach before algorithms ruined everything 📈 #OriginalInfluencers
-#waterlilies #pond #nature #flowers https://t.co/ryRTrkMiU2
+#waterlilies #pond #nature #flowers

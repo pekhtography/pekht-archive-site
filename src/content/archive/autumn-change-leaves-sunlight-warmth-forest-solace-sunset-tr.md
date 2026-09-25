@@ -18,4 +18,4 @@ hashtags:
   - "Wind"
   - "Whisper"
 ---
-#Autumn #Change #Leaves #Sunlight #Warmth #Forest #Solace #Sunset #Trees #Sunlight #Colors #Vibrance #Wind #Whisper https://t.co/lXYhJBk6yu
+#Autumn #Change #Leaves #Sunlight #Warmth #Forest #Solace #Sunset #Trees #Sunlight #Colors #Vibrance #Wind #Whisper

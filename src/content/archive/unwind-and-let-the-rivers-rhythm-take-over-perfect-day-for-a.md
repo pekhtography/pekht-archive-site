@@ -19,4 +19,4 @@ hashtags:
   - "RiverTrip"
 ---
 Unwind and let the river's rhythm take over 🌊😌. Perfect day for a cruise #RiverEscape
-#River #Boat #City #Landscape #Water #Travel #Tourism #Architecture #Bridge #Clouds #Sky #RiverTrip https://t.co/biEnxDVQdp
+#River #Boat #City #Landscape #Water #Travel #Tourism #Architecture #Bridge #Clouds #Sky #RiverTrip

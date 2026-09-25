@@ -22,4 +22,4 @@ hashtags:
   - "timeout"
 ---
 This cat prefers the sound of the ocean to the rustle of catnip… now that’s what I call 'meow-mentous' relaxation!
-#cat #relax #beach  #sea #ocean #waves #night #fullmoon #stars #philosophy #waves #sound #comfort #relaxation #rest #tranquility #timeout https://t.co/QRPXW55LCm
+#cat #relax #beach  #sea #ocean #waves #night #fullmoon #stars #philosophy #waves #sound #comfort #relaxation #rest #tranquility #timeout

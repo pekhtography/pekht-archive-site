@@ -19,4 +19,4 @@ hashtags:
   - "Artcar"
 ---
 A car that makes you double-check: is it wood or wizardry? 🪄🚙 #IllusionEngineering
-#Retro #Vintage #Classic #Custom #Woodstyle #Exotic #Unique #Luxury #Automotive #Showcase #Design #Artcar https://t.co/vOLXDY035m
+#Retro #Vintage #Classic #Custom #Woodstyle #Exotic #Unique #Luxury #Automotive #Showcase #Design #Artcar

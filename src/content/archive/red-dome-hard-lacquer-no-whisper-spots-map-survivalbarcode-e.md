@@ -13,4 +13,4 @@ Red dome. Hard lacquer. No whisper.
 Spots map survival—barcode etched in gloss. 
 Against the rough, this static gem holds. 
 Bionic armor. Dead calm. 🧬🖤🔴 
-#Nature #MacroPhotography #TinyArmor #Resilience https://t.co/QpPhQiygUi
+#Nature #MacroPhotography #TinyArmor #Resilience

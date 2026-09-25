@@ -18,4 +18,4 @@ hashtags:
   - "Masterpiece"
 ---
 A cat is a furry masterpiece, a poetic nap artist, who effortlessly blurs the line between dreams and reality.
-#Cat #Feline #Comfort #Cozy #Home #Sleep #Tranquility #Safe #Time #Moments #Dream #Masterpiece https://t.co/9rSSitkTK5
+#Cat #Feline #Comfort #Cozy #Home #Sleep #Tranquility #Safe #Time #Moments #Dream #Masterpiece

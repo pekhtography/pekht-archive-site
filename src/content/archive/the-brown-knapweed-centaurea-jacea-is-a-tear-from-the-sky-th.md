@@ -18,4 +18,4 @@ hashtags:
   - "blossom"
 ---
 The Brown Knapweed (Centaurea jacea) is a tear from the sky that has fallen to the earth 
-#nature #flower #purple #bloom #beauty #wildflower #meadow #summer #delicate #grace #serenity #blossom https://t.co/HREj5Rtfbx
+#nature #flower #purple #bloom #beauty #wildflower #meadow #summer #delicate #grace #serenity #blossom

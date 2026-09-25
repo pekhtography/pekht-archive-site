@@ -14,4 +14,4 @@ load-bearing petals peeling outward, center fully exposed,
 zero redundancy left. 
 Classic pre-failure configuration. 🌿 
 They call it peak bloom.
-#Flowers #FlowerPhotography #PeonyLover #Bloom https://t.co/mNtbn5Zf5H
+#Flowers #FlowerPhotography #PeonyLover #Bloom

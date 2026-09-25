@@ -12,4 +12,4 @@ hashtags:
 Red balls freeze on the branches 
 while we stare at a purple dream trapped in glass. 
 Magic is expensive, but shivering is free ❄️🔮
-#WinterWonderland #CityAesthetics #SnowGlobeVibes #CozyCold https://t.co/DFGryCiTuq
+#WinterWonderland #CityAesthetics #SnowGlobeVibes #CozyCold

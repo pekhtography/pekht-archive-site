@@ -19,4 +19,4 @@ hashtags:
   - "Leisure"
 ---
 Life is better by the water, except when you forget your towel! 😂🌊 #BeachyLifeVibes
-#Waterfront #Sand #UrbanPark #Shelter #Architecture #Lake #Relaxation #Outdoor #Nature #Green #Cityscape #Leisure https://t.co/qrAVnGS9zE
+#Waterfront #Sand #UrbanPark #Shelter #Architecture #Lake #Relaxation #Outdoor #Nature #Green #Cityscape #Leisure

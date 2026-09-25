@@ -19,4 +19,4 @@ hashtags:
   - "Nostalgia"
   - "Memory"
 ---
-#Autumn #Transformation #Trees #Nature #Grass #Greenery #Leaves #Colors #Change #Transition #Sunset #Dusk #Nostalgia #Memory https://t.co/EGbJsU30i9
+#Autumn #Transformation #Trees #Nature #Grass #Greenery #Leaves #Colors #Change #Transition #Sunset #Dusk #Nostalgia #Memory

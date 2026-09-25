@@ -13,4 +13,4 @@ hashtags:
   - "brick"
 ---
 Plot twist: Medieval architects were the original Instagram influencers 📸 They knew that red brick and white stone stripes would still be getting likes centuries later 😂 Some trends are truly timeless⏰ #MedievalInfluencer
-#fortress #architecture #medieval #Russia #tower #brick https://t.co/3bNxotQip6
+#fortress #architecture #medieval #Russia #tower #brick

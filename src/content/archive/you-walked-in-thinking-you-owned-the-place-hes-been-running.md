@@ -13,4 +13,4 @@ You walked in thinking you owned the place. 🐾
 He's been running quarterly reviews on your performance since 2019. 
 Current rating: tolerated. 😏 
 The golden light isn't mood — it's his office hours. ✨ 
-#CatTax #MaineCoon #RoyalFluff #GoldenHour https://t.co/c6DS9NaOqj
+#CatTax #MaineCoon #RoyalFluff #GoldenHour

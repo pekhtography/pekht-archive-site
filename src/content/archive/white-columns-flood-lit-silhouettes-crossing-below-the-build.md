@@ -13,4 +13,4 @@ White columns flood-lit, silhouettes crossing below —
 the building has seen this scene ten thousand times 🏛️ 
 and still turns the lights on. ❄️ 
 Loyalty, not stone, is the hardest material.
-#WinterVibes #UrbanNight #ColonnadeLight #FrozenMoment https://t.co/swzHjmsbhx
+#WinterVibes #UrbanNight #ColonnadeLight #FrozenMoment

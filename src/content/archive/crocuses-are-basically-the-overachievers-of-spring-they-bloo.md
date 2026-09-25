@@ -19,4 +19,4 @@ hashtags:
   - "Beauty"
 ---
 Crocuses are basically the overachievers of spring: they bloom early and expect a standing ovation. 🌸👏 #SpringOverachievers
-#Crocus #Spring #Flowers #Bloom #Nature #Purple #Garden #Petals #Sunlight #Growth #Season #Beauty https://t.co/vfUaNEXNcw
+#Crocus #Spring #Flowers #Bloom #Nature #Purple #Garden #Petals #Sunlight #Growth #Season #Beauty

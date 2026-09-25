@@ -21,4 +21,4 @@ hashtags:
   - "Beauty"
 ---
 Nature's quiet rebellion against winter's reign
-#Helleborus #Bloom #Nature #Petals #Garden #Flora #Botany #Winter #Elegance #Serenity #Grace #Blossom #Green #Purple #Beauty https://t.co/zLoqjKzoC4
+#Helleborus #Bloom #Nature #Petals #Garden #Flora #Botany #Winter #Elegance #Serenity #Grace #Blossom #Green #Purple #Beauty

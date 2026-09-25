@@ -22,4 +22,4 @@ hashtags:
   - "Freedom"
 ---
 Grass is nature's carpet—too bad it needs constant vacuuming
-#Grass #Nature #Outdoors #Green #Plant #Wild #Growth #Earth #Eco #Meadow #Flora #Botany #Blades #Field #Wind #Freedom https://t.co/XOLb0DBDHD
+#Grass #Nature #Outdoors #Green #Plant #Wild #Growth #Earth #Eco #Meadow #Flora #Botany #Blades #Field #Wind #Freedom

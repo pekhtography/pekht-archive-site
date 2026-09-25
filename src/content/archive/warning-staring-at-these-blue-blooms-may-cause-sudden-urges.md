@@ -15,4 +15,4 @@ hashtags:
   - "beauty"
 ---
 Warning: Staring at these blue blooms may cause sudden urges to quit your job and become a full-time garden whisperer🌿 Side effects include excessive flower photography and talking to plants 📷🗣️ #GardenAddiction
-#flowers #garden #blue #nature #bloom #botanical #colorful #beauty https://t.co/1JGrnW8nXS
+#flowers #garden #blue #nature #bloom #botanical #colorful #beauty

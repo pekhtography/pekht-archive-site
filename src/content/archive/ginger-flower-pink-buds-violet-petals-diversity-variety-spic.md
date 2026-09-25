@@ -17,4 +17,4 @@ hashtags:
   - "Beauty"
   - "Nature"
 ---
-#Ginger #Flower #Pink #Buds #Violet #Petals #Diversity #Variety #Spice #Purple #Beauty #Nature https://t.co/BOouxLXj4V
+#Ginger #Flower #Pink #Buds #Violet #Petals #Diversity #Variety #Spice #Purple #Beauty #Nature

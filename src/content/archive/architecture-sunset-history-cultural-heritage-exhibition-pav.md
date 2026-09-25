@@ -21,4 +21,4 @@ hashtags:
   - "Travel"
   - "Cityscape"
 ---
-#Architecture #Sunset #History #Cultural #Heritage #Exhibition #Pavilion #Skyline #Urban #Landmark #Evening #GoldenHour #Monument #Art #Travel #Cityscape https://t.co/i4iRyI4Nsr
+#Architecture #Sunset #History #Cultural #Heritage #Exhibition #Pavilion #Skyline #Urban #Landmark #Evening #GoldenHour #Monument #Art #Travel #Cityscape

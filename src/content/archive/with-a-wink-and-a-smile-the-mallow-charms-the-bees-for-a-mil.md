@@ -20,4 +20,4 @@ hashtags:
   - "outdoors"
 ---
 With a wink and a smile, the mallow charms the bees for a mile
-#Mallow #Bloom #Pink #Petals #Nature #Flower #Garden #Blossom #Summer #Beauty #Delicate #Wildflower #malva #outdoors https://t.co/n7M3CfLd7G
+#Mallow #Bloom #Pink #Petals #Nature #Flower #Garden #Blossom #Summer #Beauty #Delicate #Wildflower #malva #outdoors

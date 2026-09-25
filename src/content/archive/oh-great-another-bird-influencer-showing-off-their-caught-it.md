@@ -19,4 +19,4 @@ hashtags:
   - "bokeh"
 ---
 Oh great, another bird influencer showing off their "caught it myself" organic lifestyle 🐦 Meanwhile I'm over here ordering takeout again 📱🍕 #OrganicLifestyle
-#bird #wagtail #insect #hunting #ceramic #vessel #garden #wildlife #feeding #nature #songbird #bokeh https://t.co/i3Xp7eZei2
+#bird #wagtail #insect #hunting #ceramic #vessel #garden #wildlife #feeding #nature #songbird #bokeh

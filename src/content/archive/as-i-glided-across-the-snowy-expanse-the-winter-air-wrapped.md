@@ -20,4 +20,4 @@ hashtags:
   - "awkward"
 ---
 As I glided across the snowy expanse, the winter air wrapped around me like an overzealous hug from a distant acquaintance—both invigorating and slightly awkward
-#snow #sun #world #air #sensitivity #frost #breath #winter #snowy #white #hug #acquaintance #invigorating #awkward https://t.co/f2rWxyU82o
+#snow #sun #world #air #sensitivity #frost #breath #winter #snowy #white #hug #acquaintance #invigorating #awkward

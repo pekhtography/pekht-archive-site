@@ -12,4 +12,4 @@ hashtags:
   - "summer"
 ---
 Red clover boldly flaunts its purple glory amidst a sea of conformist green grasses, challenging botanical norms with the floral equivalent of saying 'Yes, I AM wearing purple to a green-only party, and I look fabulous, darling!'
-#clover #meadow #purple #nature #bloom #summer https://t.co/ir0Mkmw2j3
+#clover #meadow #purple #nature #bloom #summer

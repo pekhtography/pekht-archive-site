@@ -25,4 +25,4 @@ hashtags:
   - "Harmony"
   - "Diversity"
 ---
-#Chrysanthemum #Flower #Petals #Colors #Pink #Joy #Purple #Wisdom #Burgundy #Passion #Green #Renewal #Garden #Beauty #Dreams #Palette #Art #Bouquet #Harmony #Diversity https://t.co/G1Yoh3cO0a
+#Chrysanthemum #Flower #Petals #Colors #Pink #Joy #Purple #Wisdom #Burgundy #Passion #Green #Renewal #Garden #Beauty #Dreams #Palette #Art #Bouquet #Harmony #Diversity

@@ -39,4 +39,4 @@ hashtags:
   - "Wildlife"
   - "Adventure"
 ---
-#Snow #Winter #Wonder #Frost #Chill #Breeze #Slope #Fun #Uphill #Challenge #Mountain #Majesty #Glistens #Bright #Shimmer #Glow #Sparkle #Joy #Twinkle #Stars #Pale #Light #Glow #Slippery #Oops #Danger #Adrenaline #Slide #Swoon #Glide #Smooth #Nature #Beauty #Wildlife #Adventure https://t.co/nqNc4oD3Y7
+#Snow #Winter #Wonder #Frost #Chill #Breeze #Slope #Fun #Uphill #Challenge #Mountain #Majesty #Glistens #Bright #Shimmer #Glow #Sparkle #Joy #Twinkle #Stars #Pale #Light #Glow #Slippery #Oops #Danger #Adrenaline #Slide #Swoon #Glide #Smooth #Nature #Beauty #Wildlife #Adventure

@@ -19,4 +19,4 @@ hashtags:
   - "garden"
 ---
 Hawthorn: survived dinosaurs, ice ages, and human stupidity. Still not trending. 🦕❄️📱 #UnderratedSurvivor
-#hawthorn #flowers #white #blooms #petals #tree #nature #spring #fragrant #beautiful #blossoms #garden https://t.co/ITNeSdzPDX
+#hawthorn #flowers #white #blooms #petals #tree #nature #spring #fragrant #beautiful #blossoms #garden

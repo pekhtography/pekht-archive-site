@@ -18,4 +18,4 @@ hashtags:
   - "Cap"
   - "Fungi"
 ---
-#Mushroom #RedCapped #LeccinumAurantiacum #Edible #Forest #Symbiosis #Nature #Forager #Flavor #Taste #Wilderness #Cap #Fungi https://t.co/KDAWqSN3WU
+#Mushroom #RedCapped #LeccinumAurantiacum #Edible #Forest #Symbiosis #Nature #Forager #Flavor #Taste #Wilderness #Cap #Fungi

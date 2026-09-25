@@ -20,4 +20,4 @@ hashtags:
   - "Macro"
 ---
 Yellow petals like sunshine smiles—warm, bright, and hopeful 😊🌞 #SunnySideStories
-#Flower #Yellow #Daisy #Nature #Petals #Bloom #Floral #Garden #Spring #Sunshine #Closeup #Beauty #Macro https://t.co/emOqjQgnQL
+#Flower #Yellow #Daisy #Nature #Petals #Bloom #Floral #Garden #Spring #Sunshine #Closeup #Beauty #Macro

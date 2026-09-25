@@ -14,4 +14,4 @@ Then petals —
 fringed, flame-striped, layered like a baroque chandelier. 🌷 
 A botanist would call it "advanced inflorescence display." 
 The fly on the rim called it lunch. 🪰
-#Nature #FlowerPhotography #ParrotTulip #GardenHumor https://t.co/uQkjlRqXwb
+#Nature #FlowerPhotography #ParrotTulip #GardenHumor

@@ -13,4 +13,4 @@ Gold dome crowning the sneaker aisle. 👁️
 Medieval traders put markets in the church's shadow. 
 We put the dome inside the mall. 🏛️ 
 Same prayer, faster checkout. ✨
-#ConsumerCulture #SacredArchitecture #RetailParadox #GoldDomeVibes https://t.co/Y15Bwmxwck
+#ConsumerCulture #SacredArchitecture #RetailParadox #GoldDomeVibes

@@ -21,4 +21,4 @@ hashtags:
   - "Beauty"
 ---
 Winter's breath weaves around you like a playful serpent, eager to devour every last trace of warmth
-#Winter #Wind #Thief #Body #Breath #Serpent #Snowflake #Comfort #Villain #Cozy #Serene #Enchantment #Frosty #Chill #Beauty https://t.co/jr9ddYAs4H
+#Winter #Wind #Thief #Body #Breath #Serpent #Snowflake #Comfort #Villain #Cozy #Serene #Enchantment #Frosty #Chill #Beauty

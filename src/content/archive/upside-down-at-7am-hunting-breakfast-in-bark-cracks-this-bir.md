@@ -12,4 +12,4 @@ hashtags:
 Upside-down at 7am, hunting breakfast in bark cracks — 🐦
 this bird has never once asked the tree which way is up. 
 The tree just grips back. 🪵
-#NaturePhotography #Birdwatching #Nuthatch #WildMoments https://t.co/UU7l9bmSay
+#NaturePhotography #Birdwatching #Nuthatch #WildMoments

@@ -18,4 +18,4 @@ hashtags:
   - "life"
 ---
 Amidst the remnants of winter, Chionodoxa luciliae (Lucile's glory-of-the-snow) emerges as a herald of hope and renewal
-#nature #flowers #bloom #spring #garden #chionodoxa #purple #grass #outdoors #beauty #growth #life https://t.co/LLNjRvkWvY
+#nature #flowers #bloom #spring #garden #chionodoxa #purple #grass #outdoors #beauty #growth #life

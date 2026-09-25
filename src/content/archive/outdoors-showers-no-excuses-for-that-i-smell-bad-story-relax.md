@@ -18,4 +18,4 @@ hashtags:
   - "Urban"
 ---
 Outdoors + showers = no excuses for that ‘I smell bad’ story. 😆💧 #Relax 
-#Showers #Outdoor #Park #Design #Modern #Public #Green #Fresh #Wooden #Nature #Urban https://t.co/FxLiYEk9RC
+#Showers #Outdoor #Park #Design #Modern #Public #Green #Fresh #Wooden #Nature #Urban

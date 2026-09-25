@@ -24,4 +24,4 @@ hashtags:
   - "Light"
 ---
 Crowned in gold, the Crown Imperial reigns supreme in the garden’s court
-#CrownImperial #Golden #Blooms #Majestic #Attention #Stems #Royalty #Reigns #Dominance #Supreme #Excellence #Garden #Nature #Court #Nobility #Flourish #Sunbeam #Light https://t.co/kRnMJYjVbN
+#CrownImperial #Golden #Blooms #Majestic #Attention #Stems #Royalty #Reigns #Dominance #Supreme #Excellence #Garden #Nature #Court #Nobility #Flourish #Sunbeam #Light

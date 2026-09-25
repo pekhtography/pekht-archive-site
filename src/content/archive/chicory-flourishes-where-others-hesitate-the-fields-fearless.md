@@ -18,4 +18,4 @@ hashtags:
   - "Plant"
 ---
 Chicory flourishes where others hesitate, the field's fearless adventurer
-#Chicory #Nature #Blue #Flower #Wildflower #Bloom #Petals #Garden #Meadow #Herb #Botany #Plant https://t.co/6LaUxl1Zc0
+#Chicory #Nature #Blue #Flower #Wildflower #Bloom #Petals #Garden #Meadow #Herb #Botany #Plant

@@ -19,4 +19,4 @@ hashtags:
   - "herb"
 ---
 Looks innocent, bites like a dragon 🐉🌿 #FierySurprise
-#horseradish #armoracia #plant #flowers #white #green #nature #garden #botany #spicy #root #herb https://t.co/skyVU5QS2W
+#horseradish #armoracia #plant #flowers #white #green #nature #garden #botany #spicy #root #herb

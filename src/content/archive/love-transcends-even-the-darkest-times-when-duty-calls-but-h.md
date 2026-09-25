@@ -19,4 +19,4 @@ hashtags:
   - "sacrifice"
 ---
 Love transcends even the darkest times 💕 When duty calls but hearts remain connected 🌹 Some bonds are stronger than war itself ⚔️ #LoveOverWar
-#memorial #statue #soldier #love #war #bronze #flowers #tribute #remembrance #history #embrace #sacrifice https://t.co/p7zMXluUDS
+#memorial #statue #soldier #love #war #bronze #flowers #tribute #remembrance #history #embrace #sacrifice

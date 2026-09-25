@@ -12,4 +12,4 @@ hashtags:
 These birches look like a giant barcode. 
 Tried to scan them for a discount on spring, 
 but the forest just gave me cold feet ❄️🛒 
-#Winter #SnowDay #SkiingLife #FreshStart https://t.co/s35H7H8Bba
+#Winter #SnowDay #SkiingLife #FreshStart

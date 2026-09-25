@@ -8,4 +8,4 @@ hashtags:
   - "Reflections"
   - "InnerPeace"
 ---
-Sky melts into water, and somehow it still feels more organized than my life 😂🌥️ Maybe the universe flexes just to remind us we're improv. #Nature #Reflections #InnerPeace https://t.co/QH3Jik9VBs
+Sky melts into water, and somehow it still feels more organized than my life 😂🌥️ Maybe the universe flexes just to remind us we're improv. #Nature #Reflections #InnerPeace

@@ -14,4 +14,4 @@ Dropped one.
 Left it.
 Now we call it "winter landscape" and pretend it was intentional.
 Beauty is just chaos we decided to stop questioning 💭❄️
-#Nature #WinterWonderland #Minimalism #Serenity https://t.co/twuX1wCEWc
+#Nature #WinterWonderland #Minimalism #Serenity

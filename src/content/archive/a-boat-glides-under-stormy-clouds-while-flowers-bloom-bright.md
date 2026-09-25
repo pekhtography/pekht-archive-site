@@ -19,4 +19,4 @@ hashtags:
   - "urban"
 ---
 A boat glides under stormy clouds, while flowers bloom brightly in quiet defiance 🌸☔️ Life flows and blossoms — just like the city itself 🌇🛥️ #FlowAndBloom
-#cathedral #moscow #river #boat #flowers #sky #clouds #cityscape #architecture #gold #nature #urban https://t.co/pPGqgTy4Kz
+#cathedral #moscow #river #boat #flowers #sky #clouds #cityscape #architecture #gold #nature #urban

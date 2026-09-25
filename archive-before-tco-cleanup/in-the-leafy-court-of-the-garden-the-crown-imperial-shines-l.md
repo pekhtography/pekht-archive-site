@@ -1,0 +1,31 @@
+---
+title: "In the leafy court of the garden, the Crown Imperial shines like a monarch at a grand ball"
+x_id: "1880076575137292577"
+x_created_at: "2025-01-17T02:16:00Z"
+image: "/images/archive/in-the-leafy-court-of-the-garden-the-crown-imperial-shines-l.jpg"
+hashtags:
+  - "Crown"
+  - "Imperial"
+  - "Majesty"
+  - "Royal"
+  - "Shine"
+  - "Nature"
+  - "Court"
+  - "Leaf"
+  - "Glow"
+  - "Garden"
+  - "Celebrity"
+  - "Ball"
+  - "Heritage"
+  - "Entourage"
+  - "Jewel"
+  - "Throne"
+  - "Aura"
+  - "Grandeur"
+  - "Kingdom"
+  - "Foliage"
+  - "Treasure"
+  - "Reign"
+---
+In the leafy court of the garden, the Crown Imperial shines like a monarch at a grand ball
+#Crown #Imperial #Majesty #Royal #Shine #Nature #Court #Leaf #Glow #Garden #Celebrity #Ball #Heritage #Entourage #Jewel #Throne #Aura #Grandeur #Kingdom #Foliage #Treasure #Nature #Reign https://t.co/WGnVubCtdR

@@ -13,4 +13,4 @@ Crimson petals sharp as a slap 🌺 —
 the concrete giant behind them suddenly looks like it's waiting for permission to exist 🏛️ 
 Power, blurred. 
 Color, deafening. 🔥
-#UrbanNature #CityContrast #FlowerPower #MoscowVibes https://t.co/Fq1q8yGXUj
+#UrbanNature #CityContrast #FlowerPower #MoscowVibes

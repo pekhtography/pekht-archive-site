@@ -19,4 +19,4 @@ hashtags:
   - "Animal"
 ---
 Walking like it owns the city 🐦👑 — pigeons, the real urban kings! #CityWalkers
-#Pigeon #Bird #Urban #Feathers #CityLife #Wildlife #Birdwatching #Nature #Wings #Flight #Street #Animal https://t.co/oSEVmRjBN9
+#Pigeon #Bird #Urban #Feathers #CityLife #Wildlife #Birdwatching #Nature #Wings #Flight #Street #Animal

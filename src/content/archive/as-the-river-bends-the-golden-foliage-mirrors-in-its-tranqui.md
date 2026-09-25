@@ -12,4 +12,4 @@ hashtags:
   - "Curve"
   - "Autumn"
 ---
-As the river bends, the golden foliage mirrors in its tranquil waters #YellowTrees #Gold #Reflection #Mirror #River #Curve #Autumn https://t.co/NYjOL0CLmH
+As the river bends, the golden foliage mirrors in its tranquil waters #YellowTrees #Gold #Reflection #Mirror #River #Curve #Autumn

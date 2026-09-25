@@ -21,4 +21,4 @@ hashtags:
   - "Blooms"
   - "Flourish"
 ---
-#Clematis #Vine #Pink #Petals #Beauty #Garden #Oasis #Growth #Bright #Light #Life #Nature #ErnestMarkham #Brightness #Blooms #Flourish https://t.co/zkwkP3jgWB
+#Clematis #Vine #Pink #Petals #Beauty #Garden #Oasis #Growth #Bright #Light #Life #Nature #ErnestMarkham #Brightness #Blooms #Flourish

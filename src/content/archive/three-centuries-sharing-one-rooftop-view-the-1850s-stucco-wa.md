@@ -12,4 +12,4 @@ hashtags:
 Three centuries sharing one rooftop view. 🌇 
 The 1850s stucco warm, the Soviet spire cold, the neon blinking — 
 all dipped in the same peach light, equal for exactly four minutes. ✨
-#TimelessCity #MoscowMoment #UrbanHistory #SunsetMagic https://t.co/AXULOqt4NW
+#TimelessCity #MoscowMoment #UrbanHistory #SunsetMagic

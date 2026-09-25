@@ -19,4 +19,4 @@ hashtags:
   - "Festive"
 ---
 A red Christmas tree’s rage? Just holiday spirit turned spicy. 🔥🎄😆 #SassySpruceSaga
-#Christmas #Tree #Red #Ornaments #Winter #Lights #Decorations #Street #Holiday #Architecture #City #Festive https://t.co/HiAO6GKFTP
+#Christmas #Tree #Red #Ornaments #Winter #Lights #Decorations #Street #Holiday #Architecture #City #Festive

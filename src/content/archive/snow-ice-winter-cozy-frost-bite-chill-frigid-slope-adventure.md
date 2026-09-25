@@ -41,4 +41,4 @@ hashtags:
   - "Footprint"
   - "Mark"
 ---
-#Snow #Ice #Winter #Cozy #Frost #Bite #Chill #Frigid #Slope #Adventure #Uphill #Struggle #Mountain #Peak #Glistens #Slide #Risk #Danger #Watchout #Glide #Smooth #Nature #Wild #Serenity #Wildlife #Animal #Grace #Poise #Elegance #Beauty #Trail #Journey #Path #Road #Footprint #Mark https://t.co/3niVFWBFnQ
+#Snow #Ice #Winter #Cozy #Frost #Bite #Chill #Frigid #Slope #Adventure #Uphill #Struggle #Mountain #Peak #Glistens #Slide #Risk #Danger #Watchout #Glide #Smooth #Nature #Wild #Serenity #Wildlife #Animal #Grace #Poise #Elegance #Beauty #Trail #Journey #Path #Road #Footprint #Mark

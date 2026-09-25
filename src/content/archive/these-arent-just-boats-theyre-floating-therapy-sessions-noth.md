@@ -17,4 +17,4 @@ hashtags:
   - "city"
 ---
 These aren't just boats, they're floating therapy sessions🛥️ Nothing heals the soul like watching the city drift by from the water 🧘‍♀️ Moscow's best kept mental health secret💆‍♂️ #FloatingTherapy
-#river #boats #moscow #cruise #architecture #tourism #transport #urban #buildings #city https://t.co/nInXzh3MJG
+#river #boats #moscow #cruise #architecture #tourism #transport #urban #buildings #city

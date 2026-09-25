@@ -12,4 +12,4 @@ hashtags:
 Wet air presses on lungs while rays carve it into slices. 
 The sun scans space, sniffing where the air flows faster. 
 Darkness became transparent so light could drown in it. 🌫️☀️🕯️
-#Nature #GoldenHour #MistAndLight #Atmospheric https://t.co/7YcdghX6ob
+#Nature #GoldenHour #MistAndLight #Atmospheric

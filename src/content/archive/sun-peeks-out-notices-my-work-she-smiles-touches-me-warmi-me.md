@@ -13,4 +13,4 @@ Sun peeks out, notices my work ❄️
 She smiles, touches me warm—I melt but only how real frost melts 🔥 
 Love isn't hot or cold. 
 It's sharp, cuts glass without blade, leaves you exposed and still standing 🖤 
-#LoveLanguage #FrostArt #WinterRomance #BoldLove https://t.co/lI9Q5dLnyp
+#LoveLanguage #FrostArt #WinterRomance #BoldLove

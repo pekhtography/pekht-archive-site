@@ -12,4 +12,4 @@ hashtags:
 Winter's finest glass nails, polished by the storm 
 and aimed at your scalp. 
 A silent, gorgeous threat dangling from the eaves. 🧊💅😬
-#Winter #MacroPhotography #IceStorm #DarkBeauty https://t.co/o7dE9yxmu4
+#Winter #MacroPhotography #IceStorm #DarkBeauty

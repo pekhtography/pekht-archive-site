@@ -15,4 +15,4 @@ hashtags:
   - "hopes"
   - "wander"
 ---
-In the shimmering waters, the lights of the city dance, whispering secrets of dreams yet to come #river #reflects #lights #city #dreams #water #shimmering #dance #hopes #wander https://t.co/N77HNCYOuc
+In the shimmering waters, the lights of the city dance, whispering secrets of dreams yet to come #river #reflects #lights #city #dreams #water #shimmering #dance #hopes #wander

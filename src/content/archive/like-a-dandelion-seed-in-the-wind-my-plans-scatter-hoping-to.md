@@ -18,4 +18,4 @@ hashtags:
   - "outdoors"
 ---
 Like a dandelion seed in the wind, my plans scatter, hoping to land somewhere fertile
-#dandelion #nature #flower #seed #blossom #meadow #spring #bloom #petal #wildflower #grass #outdoors https://t.co/c5YVamdnuJ
+#dandelion #nature #flower #seed #blossom #meadow #spring #bloom #petal #wildflower #grass #outdoors

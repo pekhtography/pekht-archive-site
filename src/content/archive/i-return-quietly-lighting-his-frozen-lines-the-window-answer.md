@@ -12,4 +12,4 @@ hashtags:
 I return quietly, lighting his frozen lines ☀️
 The window answers with diamonds of old tears ❄️
 Not every masterpiece is meant to be held ✨
-#WinterMood #FrostArt #WindowPatterns #QuietLove https://t.co/YoCWukcFU0
+#WinterMood #FrostArt #WindowPatterns #QuietLove

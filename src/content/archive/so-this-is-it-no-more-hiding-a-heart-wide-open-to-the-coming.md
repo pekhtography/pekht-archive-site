@@ -13,4 +13,4 @@ So this is it.
 No more hiding.
 A heart wide open to the coming light, the frost, the unknown.
 This vulnerable, ridiculous, perfect act is called being alive. ❤️🔥
-#NewYear #Mindfulness #Tulip #Transformation https://t.co/GIkdzoGemu
+#NewYear #Mindfulness #Tulip #Transformation

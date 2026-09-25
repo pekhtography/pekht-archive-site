@@ -25,4 +25,4 @@ hashtags:
   - "Challenge"
 ---
 The architecture of today is a playful jigsaw puzzle, assembled by the hand of an avant-garde child
-#City #Urban #Skyline #View #Architecture #Steel #Strength #Glass #Transparency #Building #Form #Creativity #Imagination #Colors #Vibrance #Quirky #Eccentric #Puzzle #Challenge https://t.co/Bl6tk0DFP9
+#City #Urban #Skyline #View #Architecture #Steel #Strength #Glass #Transparency #Building #Form #Creativity #Imagination #Colors #Vibrance #Quirky #Eccentric #Puzzle #Challenge

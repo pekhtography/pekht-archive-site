@@ -12,4 +12,4 @@ hashtags:
 The window becomes a canvas ❄️
 Frost moves fast, stealing color from the sinking sky 🌅
 Art begins where light starts running out ✨
-#WinterMood #EphemeralArt #FrostPatterns #VanishingLight https://t.co/vduBTHFl2B
+#WinterMood #EphemeralArt #FrostPatterns #VanishingLight

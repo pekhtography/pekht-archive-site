@@ -16,4 +16,4 @@ hashtags:
   - "care"
 ---
 Eyes are the windows to the soul, and here, they also reflect our dedication 🐾✨. Veterinary ophthalmology bridges science and care to give pets a clearer, healthier world. 🕶️💙 #HealingWithPrecision
-#veterinary #dog #ophthalmology #examination #petcare #animal #vet #puppy #care https://t.co/nmGMPbBwCv
+#veterinary #dog #ophthalmology #examination #petcare #animal #vet #puppy #care

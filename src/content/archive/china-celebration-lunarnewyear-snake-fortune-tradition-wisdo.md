@@ -22,4 +22,4 @@ hashtags:
   - "Culture"
   - "Rebirth"
 ---
-#China #Celebration #LunarNewYear #Snake #Fortune #Tradition #Wisdom #Goals #Dreams #Resolutions #Red #Lights #Vibrance #Hopes #Ambitions #Culture #Rebirth https://t.co/XmtbNlscFk
+#China #Celebration #LunarNewYear #Snake #Fortune #Tradition #Wisdom #Goals #Dreams #Resolutions #Red #Lights #Vibrance #Hopes #Ambitions #Culture #Rebirth

@@ -14,4 +14,4 @@ dry, faintly sweet like old incense 🌸 —
 one pasque flower mid-sneeze, 
 scattering itself across the whole meadow, 
 across the whole spring. 🌿
-#NaturePhotography #WildflowerMagic #PulsatillaVibes https://t.co/B87XSSTgT2
+#NaturePhotography #WildflowerMagic #PulsatillaVibes

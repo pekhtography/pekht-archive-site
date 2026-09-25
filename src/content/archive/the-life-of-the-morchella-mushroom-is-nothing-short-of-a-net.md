@@ -21,4 +21,4 @@ hashtags:
   - "Savor"
 ---
 The life of the Morchella mushroom is nothing short of a Netflix drama; with twists, turns, and a tasty ending that leaves everyone hungry for more!
-#Morchella #Tasty #Mushroom #Fungi #Spores #Garden #Flavor #Zest #Mystery #Metamorphosis #Cooking #Baking #Nature #Ecosystem #Savor https://t.co/MQeMG6mkof
+#Morchella #Tasty #Mushroom #Fungi #Spores #Garden #Flavor #Zest #Mystery #Metamorphosis #Cooking #Baking #Nature #Ecosystem #Savor

@@ -22,4 +22,4 @@ hashtags:
   - "Snowflakes"
 ---
 In the chill of winter, a frosty wind prowls the streets, seeking to steal warmth from beneath the collar of a passerby, masquerading as a disheveled scarf
-#Winter #Chill #Wind #Street #Warmth #Cozy #Passerby #Coat #Cold #Frost #wander #collar #scarf #Embrace #Hug #Snowflakes https://t.co/EX6gCFZaXZ
+#Winter #Chill #Wind #Street #Warmth #Cozy #Passerby #Coat #Cold #Frost #wander #collar #scarf #Embrace #Hug #Snowflakes

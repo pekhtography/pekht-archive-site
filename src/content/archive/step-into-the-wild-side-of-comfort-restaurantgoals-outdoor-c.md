@@ -20,4 +20,4 @@ hashtags:
   - "nature"
 ---
 Step into the wild side of comfort 🦁👣 #RestaurantGoals
-#outdoor #cafe #zebra #statue #relax #yellow #wooden #blackmetal #restaurant #streetfood #summer #decor #nature https://t.co/PUTihe6JO8
+#outdoor #cafe #zebra #statue #relax #yellow #wooden #blackmetal #restaurant #streetfood #summer #decor #nature

@@ -13,4 +13,4 @@ Two green eyes lock yours. Whiskers catch the amber light.
 You blink first — always. 🔥 
 The audit was over before you sat down. 😶 
 Ancient solar god. Tiny apartment. Same jurisdiction. 🐱
-#CatLovers #GingerCat #MainCharacterEnergy #GoldenHour https://t.co/p9t7zRitFN
+#CatLovers #GingerCat #MainCharacterEnergy #GoldenHour

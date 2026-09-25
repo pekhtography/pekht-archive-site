@@ -15,4 +15,4 @@ hashtags:
   - "History"
 ---
 Beneath the golden dome, the echoes of cosmic dreams and human aspirations intertwine in the night's embrace
-#Architecture #Night #Golden #Dome #Windows #Arches #Light #Beauty #History https://t.co/Cl5qRrplKp
+#Architecture #Night #Golden #Dome #Windows #Arches #Light #Beauty #History

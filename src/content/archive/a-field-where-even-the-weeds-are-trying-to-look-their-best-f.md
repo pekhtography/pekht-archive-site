@@ -18,4 +18,4 @@ hashtags:
   - "Biodiversity"
 ---
 A field where even the weeds are trying to look their best for the bee paparazzi
-#Nature #Wildflowers #Meadow #Greenery #Outdoors #Blooms #Flora #Serenity #Landscape #Botany #Ecosystem #Biodiversity https://t.co/T5kcec43lN
+#Nature #Wildflowers #Meadow #Greenery #Outdoors #Blooms #Flora #Serenity #Landscape #Botany #Ecosystem #Biodiversity

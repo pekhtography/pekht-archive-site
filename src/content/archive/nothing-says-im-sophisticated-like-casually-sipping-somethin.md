@@ -18,4 +18,4 @@ hashtags:
   - "Capital"
 ---
 Nothing says "I'm sophisticated" like casually sipping something while floating past the Kremlin 🥤👑 Meanwhile, the tourists on land are fighting for Instagram angles 📱😤 #BoatLife
-#Moscow #Kremlin #River #Boat #Tourism #Architecture #Russia #Summer #Cruise #Travel #Capital https://t.co/pH0Gyt29OK
+#Moscow #Kremlin #River #Boat #Tourism #Architecture #Russia #Summer #Cruise #Travel #Capital

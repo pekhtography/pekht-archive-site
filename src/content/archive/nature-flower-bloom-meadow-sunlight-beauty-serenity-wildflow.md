@@ -17,4 +17,4 @@ hashtags:
   - "golden"
   - "tranquility"
 ---
-#nature #flower #bloom #meadow #sunlight #beauty #serenity #wildflower #landscape #purple #golden #tranquility https://t.co/eguKMaBnaQ
+#nature #flower #bloom #meadow #sunlight #beauty #serenity #wildflower #landscape #purple #golden #tranquility

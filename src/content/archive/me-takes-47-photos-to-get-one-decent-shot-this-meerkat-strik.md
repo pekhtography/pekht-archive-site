@@ -14,4 +14,4 @@ hashtags:
   - "Africa"
 ---
 Me: Takes 47 photos to get one decent shot 📸 This meerkat: Strikes perfect pose on first try while simultaneously running national security 🎯😎 Some of us peaked in evolution, and it wasn't humans 🤷‍♀️ #NaturalTalent
-#meerkat #wildlife #nature #animal #sentinel #watchful #Africa https://t.co/sUwzCEtxP0
+#meerkat #wildlife #nature #animal #sentinel #watchful #Africa

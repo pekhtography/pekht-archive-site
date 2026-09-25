@@ -13,4 +13,4 @@ Climb. Breathe.
 Wind bites the cheeks while air tastes of cold tin. 
 Spires pierce the orange sky, mocking tiny street-level troubles. 
 High-altitude therapy. 🌇🏙️
-#CityLife #Rooftops #UrbanExplorer #SkylineVibes https://t.co/gevD6AKC0Z
+#CityLife #Rooftops #UrbanExplorer #SkylineVibes

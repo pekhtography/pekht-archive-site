@@ -14,4 +14,4 @@ I waited. A thousand mornings. This bush just stands.
 Its “almost” is heavier than my “later.” 
 Bell swayed. Didn’t open. 
 Just reminded: patience is pride with good posture. 🌧️🤞🌺 
-#SlowLiving #GardenPorn #AlmostThere #Anticipation https://t.co/3AHGiFk4pF
+#SlowLiving #GardenPorn #AlmostThere #Anticipation

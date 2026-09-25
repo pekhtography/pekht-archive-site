@@ -16,4 +16,4 @@ hashtags:
   - "beautiful"
 ---
 "Early bird gets the worm" they said... but nobody mentioned the part about looking absolutely smug about it afterward! 🐦😏 This little diva just turned breakfast into a whole mood. ✨ #SmugBird
-#bird #flycatcher #nature #wildlife #garden #hunting #insect #natural #beautiful https://t.co/6p0ccPlrwk
+#bird #flycatcher #nature #wildlife #garden #hunting #insect #natural #beautiful

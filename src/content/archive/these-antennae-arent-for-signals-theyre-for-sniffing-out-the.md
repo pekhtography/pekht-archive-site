@@ -13,4 +13,4 @@ These antennae aren't for signals.
 They're for sniffing out the next terrible mistake you're about to make. 
 They know you'll lean closer. 
 They're counting on it. 🌸🍯
-#Nature #Botanical #Wildflower #Bold https://t.co/K9kMux8Rx3
+#Nature #Botanical #Wildflower #Bold

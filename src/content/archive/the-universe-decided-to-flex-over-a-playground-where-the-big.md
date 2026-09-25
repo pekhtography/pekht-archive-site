@@ -11,4 +11,4 @@ hashtags:
 ---
 The universe decided to flex over a playground where the biggest drama is usually "he took my swing" 🌅 
 Mammatus clouds bringing apocalypse aesthetics to rubber mat reality ☁️ 
-#SkyPhotography #CloudPorn #MammatusClouds #NatureMagic https://t.co/aC4wPfRI2E
+#SkyPhotography #CloudPorn #MammatusClouds #NatureMagic

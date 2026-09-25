@@ -14,4 +14,4 @@ thick with peach fuzz—
 abruptly turns into cold, sandpaper-blue void. 
 Sun hits the wall. Light stops. 
 Shadows win the evening... 🍑🌫️
-#Nature #SkyLovers #GlitchInTheMatrix #SunsetGlow https://t.co/FuVJcdVUVw
+#Nature #SkyLovers #GlitchInTheMatrix #SunsetGlow

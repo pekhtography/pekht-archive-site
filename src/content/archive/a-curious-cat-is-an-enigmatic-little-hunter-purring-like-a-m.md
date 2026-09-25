@@ -16,4 +16,4 @@ hashtags:
   - "charm"
 ---
 A curious cat is an enigmatic little hunter, purring like a motor while seeking affection—pure charm!
-#Cat #Curiosity #Mystery #Adventure #Affection #Innocence #Love #Comfort #Meow #charm https://t.co/N5jlnfXhhk
+#Cat #Curiosity #Mystery #Adventure #Affection #Innocence #Love #Comfort #Meow #charm

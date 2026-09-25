@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 The clover was so proud of its bloom, it insisted on a selfie with every passing bee 
-#clover #nature #flower #purple #bloom #green #meadow #petals #wildflower #growth #spring #beauty https://t.co/7GfN8CjQjF
+#clover #nature #flower #purple #bloom #green #meadow #petals #wildflower #growth #spring #beauty

@@ -18,4 +18,4 @@ hashtags:
   - "Growth"
 ---
 Muscari, the heralds of spring, ring their silent bells, announcing the return of life and the promise of warmer days ahead
-#Muscari #Flowers #Nature #Bloom #Spring #Garden #Beauty #Blossom #Vibrant #Elegance #Serenity #Growth https://t.co/p0HpRkhln2
+#Muscari #Flowers #Nature #Bloom #Spring #Garden #Beauty #Blossom #Vibrant #Elegance #Serenity #Growth

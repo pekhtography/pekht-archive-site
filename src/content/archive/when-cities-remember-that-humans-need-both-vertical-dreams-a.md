@@ -14,4 +14,4 @@ hashtags:
   - "park"
 ---
 When cities remember that humans need both vertical dreams and horizontal play spaces 🏗️✨ Sometimes the best urban planning happens when architects think like children - "What if water could dance?" 💃 #UrbanOasis
-#architecture #fountains #towers #cityscape #autumn #modern #park https://t.co/NfhDpaMw6I
+#architecture #fountains #towers #cityscape #autumn #modern #park

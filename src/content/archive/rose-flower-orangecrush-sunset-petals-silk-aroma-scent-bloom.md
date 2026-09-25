@@ -21,4 +21,4 @@ hashtags:
   - "Joy"
   - "Happiness"
 ---
-#Rose #Flower #OrangeCrush #Sunset #Petals #Silk #Aroma #Scent #Bloom #Beauty #Garden #Nature #Fragrance #Essence #Joy #Happiness https://t.co/iJV6eWIP3b
+#Rose #Flower #OrangeCrush #Sunset #Petals #Silk #Aroma #Scent #Bloom #Beauty #Garden #Nature #Fragrance #Essence #Joy #Happiness

@@ -14,4 +14,4 @@ hashtags:
   - "colorful"
 ---
 When life deals you cards, sometimes you realize you're playing with wolves in sheep's clothing 🐺🃏 Even Aesop knew - the company you keep reveals more than the hand you're dealt ✨ #WisdomInDisguise
-#modernist #expressionist #surreal #vintage #theatrical #abstract #colorful https://t.co/rwnhHHLuS8
+#modernist #expressionist #surreal #vintage #theatrical #abstract #colorful

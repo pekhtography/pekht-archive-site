@@ -19,4 +19,4 @@ hashtags:
   - "poetry"
 ---
 A rose never apologizes for being red. 🔥 Love doesn’t shout. It blossoms. 🌹💫 #SoftPower #BoldGrace
-#love #nature #flowers #beauty #rose #romance #redrose #aesthetic #emotion #bloom #poetry https://t.co/GQRr8yKgnp
+#love #nature #flowers #beauty #rose #romance #redrose #aesthetic #emotion #bloom #poetry

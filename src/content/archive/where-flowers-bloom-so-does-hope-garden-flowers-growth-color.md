@@ -10,4 +10,4 @@ hashtags:
   - "colors"
   - "hope"
 ---
-Where flowers bloom, so does hope #garden #flowers #growth #colors #hope https://t.co/uegMp4RkM2
+Where flowers bloom, so does hope #garden #flowers #growth #colors #hope

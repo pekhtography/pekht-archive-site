@@ -19,4 +19,4 @@ hashtags:
   - "Blossom"
 ---
 Life is like tulips — you have to endure the cold before you bloom. 🌷❄️ #SpringWisdom 
-#Tulips #Daffodils #Garden #Flowers #Spring #Bloom #Nature #Floral #Greenery #Plants #Colorful #Blossom https://t.co/8xqTuGVxCk
+#Tulips #Daffodils #Garden #Flowers #Spring #Bloom #Nature #Floral #Greenery #Plants #Colorful #Blossom

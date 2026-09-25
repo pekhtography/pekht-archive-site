@@ -15,4 +15,4 @@ hashtags:
   - "invite"
   - "welcome"
 ---
-Rock and roll is about a feeling #rock #heartbeat #music #emotion #restaurant #flavor #mannequin #presence #invite #welcome https://t.co/HKXVPCGJ4c
+Rock and roll is about a feeling #rock #heartbeat #music #emotion #restaurant #flavor #mannequin #presence #invite #welcome

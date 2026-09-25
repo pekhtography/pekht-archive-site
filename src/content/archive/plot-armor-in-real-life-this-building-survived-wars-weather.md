@@ -17,4 +17,4 @@ hashtags:
   - "monument"
 ---
 Plot armor in real life: This building survived wars, weather, and terrible urban planning decisions 🛡️⚔️ Meanwhile, my phone screen cracks from a gentle breeze! 💨 #SurvivorBuilding
-#architecture #tower #building #cityscape #plaza #historic #urban #clocktower #spire #monument https://t.co/z4W40cTB6w
+#architecture #tower #building #cityscape #plaza #historic #urban #clocktower #spire #monument

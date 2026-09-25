@@ -19,4 +19,4 @@ hashtags:
   - "Garden"
 ---
 When life drains you, be like the wagtail — dive in, refresh, and shake off the worries (and water)! 🌧️🛁😂 #DiveIntoLife
-#Bird #Wagtail #Nature #Water #Bathing #Grass #Wildlife #Peace #Animal #Outdoors #Fresh #Garden https://t.co/bX0aCIKral
+#Bird #Wagtail #Nature #Water #Bathing #Grass #Wildlife #Peace #Animal #Outdoors #Fresh #Garden

@@ -16,4 +16,4 @@ hashtags:
   - "UrbanMood"
 ---
 Moscow at dusk feels like a mixtape — nostalgia, ambition, silence, fire. 🎶🌆 Cities are just memories wrapped in stone. #ConcretePoetry
-#CityTetrisVibes #UrbanExploration #Cityscape #TravelPhotography #ArchitectureLovers #MoscowVibes #HistoricBuildings #SunsetCity #UrbanMood https://t.co/904QCg2KUI
+#CityTetrisVibes #UrbanExploration #Cityscape #TravelPhotography #ArchitectureLovers #MoscowVibes #HistoricBuildings #SunsetCity #UrbanMood

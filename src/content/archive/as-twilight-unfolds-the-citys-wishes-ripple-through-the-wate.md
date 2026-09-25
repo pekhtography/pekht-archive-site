@@ -25,4 +25,4 @@ hashtags:
   - "oasis"
 ---
 As twilight unfolds, the city’s wishes ripple through the water, painting the evening with shimmering tales
-#skyline #urban #dreams #hope #cityscape #view #reflection #echo #lights #spark #aspiration #goal #evening #dusk #water #liquid #flow #current #oasis https://t.co/N8NpDzuAuM
+#skyline #urban #dreams #hope #cityscape #view #reflection #echo #lights #spark #aspiration #goal #evening #dusk #water #liquid #flow #current #oasis

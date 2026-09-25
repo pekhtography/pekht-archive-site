@@ -15,4 +15,4 @@ Sun teases me knowing she'll return tomorrow.
 Real love leaves traces—even if dawn erases them. 
 I'm not chasing. 
 I'm the tradition she returns to ❄️😏 
-#LoveLanguage #FrostArt #WinterRomance #BoldLove https://t.co/Bh0JGs84Tk
+#LoveLanguage #FrostArt #WinterRomance #BoldLove

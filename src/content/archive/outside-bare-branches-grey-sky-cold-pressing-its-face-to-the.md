@@ -15,4 +15,4 @@ Inside:
 one warm tiger melted into the light like he invented it. 
 The world runs on urgency. 
 He runs on photons. 🐱
-#CatLife #SunNapCulture #SolarRecharge #WarmAndStill https://t.co/13Gc2TZawF
+#CatLife #SunNapCulture #SolarRecharge #WarmAndStill

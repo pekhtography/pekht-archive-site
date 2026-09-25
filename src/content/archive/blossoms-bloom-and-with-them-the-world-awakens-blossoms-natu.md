@@ -18,4 +18,4 @@ hashtags:
   - "Vibrant"
 ---
 Blossoms bloom, and with them, the world awakens
-#Blossoms #Nature #Spring #Blooming #Purple #Flowers #Garden #Petals #Beauty #Growth #Leaves #Vibrant https://t.co/baLvo5sYy3
+#Blossoms #Nature #Spring #Blooming #Purple #Flowers #Garden #Petals #Beauty #Growth #Leaves #Vibrant

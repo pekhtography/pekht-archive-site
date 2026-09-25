@@ -19,4 +19,4 @@ hashtags:
   - "peaceful"
 ---
 As the waves softly lap at the shore, three curious seagulls stand guard, each a sentinel of nature's calm. 🐦✨ #NatureGuardians
-#birds #seagulls #water #nature #ocean #tranquil #serene #reflection #wildlife #scenery #landscape #peaceful https://t.co/BHuK2pnRWT
+#birds #seagulls #water #nature #ocean #tranquil #serene #reflection #wildlife #scenery #landscape #peaceful

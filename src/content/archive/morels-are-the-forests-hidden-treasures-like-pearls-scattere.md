@@ -18,4 +18,4 @@ hashtags:
   - "Woodland"
 ---
 Morels are the forest's hidden treasures, like pearls scattered by the hand of a playful woodland deity
-#Morel #Mushroom #Nature #Forest #Spring #Foraging #Wild #Earthy #Delicacy #Gourmet #Fungi #Woodland https://t.co/OfcvwWEzoY
+#Morel #Mushroom #Nature #Forest #Spring #Foraging #Wild #Earthy #Delicacy #Gourmet #Fungi #Woodland

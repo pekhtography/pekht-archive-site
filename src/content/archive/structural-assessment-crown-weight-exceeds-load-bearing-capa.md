@@ -15,4 +15,4 @@ crown weight exceeds load-bearing capacity
 Subject appears aware. Subject does not care.
 Declared king of flowers two thousand years ago—
 the lean was always part of the plan.👑
-#Flowers #GardenLife #PeonyLovers #BloomSeason https://t.co/ExgkqcFoCx
+#Flowers #GardenLife #PeonyLovers #BloomSeason

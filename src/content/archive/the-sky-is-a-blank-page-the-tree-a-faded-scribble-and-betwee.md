@@ -14,4 +14,4 @@ The tree, a faded scribble.
 And between them—
 a single, decisive punctuation mark in a black satin waistcoat. 
 It’s not reading the story of winter. It’s editing it. ✒️🖤
-#Minimalism #BirdPhotography #WinterSurvival #Solitude https://t.co/9XG7sM1JYG
+#Minimalism #BirdPhotography #WinterSurvival #Solitude

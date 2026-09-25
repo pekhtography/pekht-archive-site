@@ -19,4 +19,4 @@ hashtags:
   - "beauty"
 ---
 🎭🐝🌷 In a world full of chaos, the flower and bee choreograph a delicate ballet. Spoiler: the bee steals the show! 😄 #FloralDramaBuzz
-#peony #flower #bee #pollination #nature #garden #bloom #pink #spring #flora #pollinator #beauty https://t.co/t38tKkUhYA
+#peony #flower #bee #pollination #nature #garden #bloom #pink #spring #flora #pollinator #beauty

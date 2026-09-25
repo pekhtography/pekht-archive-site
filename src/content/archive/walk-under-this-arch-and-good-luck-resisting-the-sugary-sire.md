@@ -18,4 +18,4 @@ hashtags:
   - "Event"
 ---
 Walk under this arch, and good luck resisting the sugary siren song
-#Festival #Arch #Colorful #Park #People #Fun #Celebration #Spirals #Summer #Crowd #Decoration #Event https://t.co/fsCW2r3Kpg
+#Festival #Arch #Colorful #Park #People #Fun #Celebration #Spirals #Summer #Crowd #Decoration #Event

@@ -19,4 +19,4 @@ hashtags:
   - "Serenity"
 ---
 Escape to serenity 🌳💆‍♀️✨. Find your peace by the river, where nature whispers tales of tranquility. #RiverSideBliss
-#Nature #Relax #Landscape #Park #River #Trees #Green #Peaceful #Scenic #Outdoor #Tranquility #Serenity https://t.co/w2u4dhwmoz
+#Nature #Relax #Landscape #Park #River #Trees #Green #Peaceful #Scenic #Outdoor #Tranquility #Serenity

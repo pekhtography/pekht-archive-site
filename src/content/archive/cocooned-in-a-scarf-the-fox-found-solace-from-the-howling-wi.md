@@ -18,4 +18,4 @@ hashtags:
   - "Clever"
 ---
 Cocooned in a scarf, the fox found solace from the howling winter winds, a little bundle of warmth in a frozen world
-#Fox #Scarf #Winter #Snow #Cocooned #Warmth #Cunning #Solace #Winds #Frozen #Chill #Clever https://t.co/hlUHTKBFSW
+#Fox #Scarf #Winter #Snow #Cocooned #Warmth #Cunning #Solace #Winds #Frozen #Chill #Clever

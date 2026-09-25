@@ -18,4 +18,4 @@ hashtags:
   - "field"
 ---
 If thistle seeds could speak, they'd proudly declare, 'We're not pests, we're pioneers!' 
-#thistle #nature #seeds #flora #wildflowers #meadow #botany #outdoors #ecology #biodiversity #plantlife #field https://t.co/kX3zXInKpr
+#thistle #nature #seeds #flora #wildflowers #meadow #botany #outdoors #ecology #biodiversity #plantlife #field

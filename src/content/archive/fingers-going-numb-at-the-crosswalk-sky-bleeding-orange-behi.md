@@ -13,4 +13,4 @@ Fingers going numb at the crosswalk,
 sky bleeding orange behind the old tower 🧡 — 
 beauty apparently didn't check the forecast before showing up. 
 You either freeze or you miss it. 🥶
-#Sunset #UrbanPhotography #MoscowSkyline #GoldenHour https://t.co/cJUdm7Dxzk
+#Sunset #UrbanPhotography #MoscowSkyline #GoldenHour

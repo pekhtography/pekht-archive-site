@@ -13,4 +13,4 @@ The recipe for time travel:
 ❄️ 1 part crisp winter air, 2 parts scent of mulled wine, and one giant, garish figurine of absolute childhood joy. 
 It beams you directly to the age of 7 👧
 No DeLorean required 🕰️ 
-#HolidayJoy #Christmas #ChristmasMarket #ChristmasDecor https://t.co/Gb8VsiipjB
+#HolidayJoy #Christmas #ChristmasMarket #ChristmasDecor

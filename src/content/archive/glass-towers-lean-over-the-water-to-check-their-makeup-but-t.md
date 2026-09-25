@@ -13,4 +13,4 @@ Glass towers lean over the water to check their makeup,
 but the river refuses to hold their gaze. 
 It dashes their rigid beauty into a shivering, liquid pile of trapezoids. 
 The skyline just blinked. 🏙️👁️💧 
-#UrbanLife #CityReflections #WaterfrontWalk #LiquidPerspective https://t.co/qAaWYmFEie
+#UrbanLife #CityReflections #WaterfrontWalk #LiquidPerspective

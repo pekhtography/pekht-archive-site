@@ -19,4 +19,4 @@ hashtags:
   - "Macro"
 ---
 🌼🐝 Golden blooms and tiny workers — nature’s teamwork at its best! #NatureHarmony
-#Yellow #Flower #Bee #Nature #Spring #Garden #Pollination #Bloom #Plant #Insect #Green #Macro https://t.co/xGfdQiksdY
+#Yellow #Flower #Bee #Nature #Spring #Garden #Pollination #Bloom #Plant #Insect #Green #Macro

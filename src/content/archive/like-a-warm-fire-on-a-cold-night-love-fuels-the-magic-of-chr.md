@@ -25,4 +25,4 @@ hashtags:
   - "treasure"
 ---
 Like a warm fire on a cold night, love fuels the magic of Christmas beyond the mere decorations
-#ornaments #love #warmth #Christmas #joy #unity #magic #memories #celebrations #light #sweater #sparkle #fruitcake #winter #heart #beauty #glow #brilliance #treasure https://t.co/LW5E6MorZ0
+#ornaments #love #warmth #Christmas #joy #unity #magic #memories #celebrations #light #sweater #sparkle #fruitcake #winter #heart #beauty #glow #brilliance #treasure

@@ -17,4 +17,4 @@ hashtags:
   - "Astronautics"
 ---
 "Dream as if you'll live forever, but launch rockets as if you'll die tomorrow." — Because who knows, maybe the rocket will find a shortcut to eternity!
-#Space #Rocket #Monument #History #Exploration #Achievement #Science #Inspiration #Cosmos #Launch #Astronautics https://t.co/q2nONApduN
+#Space #Rocket #Monument #History #Exploration #Achievement #Science #Inspiration #Cosmos #Launch #Astronautics

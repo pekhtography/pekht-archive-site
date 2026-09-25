@@ -10,4 +10,4 @@ hashtags:
   - "surrealism"
 ---
 🎬 Behind every surreal masterpiece lies a mind that dares to unlock the doors others fear to open. Buñuel didn't just make films - he crafted keys to the subconscious, turning cinema into a dreamscape where logic goes to die. ✨🔓 #SurrealCinema
-#portrait #buñuel #surrealism https://t.co/NgRNyG6mCt
+#portrait #buñuel #surrealism

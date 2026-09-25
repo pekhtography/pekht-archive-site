@@ -13,4 +13,4 @@ Eyelashes sealed by frost.
 The star watches us weigh options: 
 a spectacular wipeout or just a cinnamon bun. 
 Greatness here is measured in adrenaline and milliliters of hot tea. ✨🍵💫 
-#WinterVibes #RussianWinter #IceSkatingLife #ColdNoseWarmHeart https://t.co/k8adAw0eXi
+#WinterVibes #RussianWinter #IceSkatingLife #ColdNoseWarmHeart

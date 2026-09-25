@@ -19,4 +19,4 @@ hashtags:
   - "Heritage"
 ---
 Plot twist: The world's most Instagrammed fortress was built to keep people OUT 🤔🏛️ Now millions queue to get IN 📱 #IronicHistory
-#Moscow #Kremlin #Russia #Architecture #Towers #Domes #Palace #History #Tourism #Landmark #Culture #Heritage https://t.co/sjbc6PIecl
+#Moscow #Kremlin #Russia #Architecture #Towers #Domes #Palace #History #Tourism #Landmark #Culture #Heritage

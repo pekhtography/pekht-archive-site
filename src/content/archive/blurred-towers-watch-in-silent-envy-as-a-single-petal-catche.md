@@ -12,4 +12,4 @@ hashtags:
 Blurred towers watch in silent envy as a single petal catches the gold. 
 The city builds the stage; 
 the petunia performs the miracle. 🌸🌃
-#UrbanJungleCity #PetuniaPower #ConcreteContrast #FloralRebellion https://t.co/0V9EIpor5T
+#UrbanJungleCity #PetuniaPower #ConcreteContrast #FloralRebellion

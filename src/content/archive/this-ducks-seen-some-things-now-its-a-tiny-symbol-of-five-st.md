@@ -25,4 +25,4 @@ hashtags:
   - "Hobby"
 ---
 This duck's seen some things! Now it's a tiny symbol of five-star living and possible (small) investment potential
-#Princess #Royalty #Luxury #Collectable #Treasure #Rubber #Bouncy #Bath #Relaxation #Duck #Quack #PreOwned #History #Perfection #Toy #Memory #Magic #Wonder #Hobby https://t.co/6d72nVRCM1
+#Princess #Royalty #Luxury #Collectable #Treasure #Rubber #Bouncy #Bath #Relaxation #Duck #Quack #PreOwned #History #Perfection #Toy #Memory #Magic #Wonder #Hobby

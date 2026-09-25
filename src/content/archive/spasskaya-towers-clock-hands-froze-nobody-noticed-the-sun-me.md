@@ -14,4 +14,4 @@ Nobody noticed.
 The sun melts behind St. Basil’s domes like spilled honey. 
 Tourists chase silhouettes. 
 The city whispers: you’re just a shadow too. 🍯⏰ 
-#GoldenHour #MoscowMoments #SilhouetteStory #MelancholyMagic https://t.co/uj8xgjTHab
+#GoldenHour #MoscowMoments #SilhouetteStory #MelancholyMagic

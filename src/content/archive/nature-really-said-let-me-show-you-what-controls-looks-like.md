@@ -11,4 +11,4 @@ hashtags:
 ---
 Nature really said "let me show you what Control+S looks like in real life" and froze an entire river mid-vibe 🧊 
 Sky went full movie trailer mode while buildings watched like "this is fine, happens every winter" 🎬❄️ 
-#WinterVibes #CityScape #Moscow #DramaticSky https://t.co/NzKE6Tc4ge
+#WinterVibes #CityScape #Moscow #DramaticSky

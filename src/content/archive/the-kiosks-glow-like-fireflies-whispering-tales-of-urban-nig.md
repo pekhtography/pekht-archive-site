@@ -18,4 +18,4 @@ hashtags:
   - "ambiance"
 ---
 The kiosks glow like fireflies, whispering tales of urban nights and caffeine highs
-#kiosks #street #night #lights #urban #vibrant #city #glow #evening #colorful #life #ambiance https://t.co/n7BnmbpAK9
+#kiosks #street #night #lights #urban #vibrant #city #glow #evening #colorful #life #ambiance

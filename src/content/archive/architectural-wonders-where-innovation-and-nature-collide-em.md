@@ -16,4 +16,4 @@ hashtags:
   - "harmony"
   - "vision"
 ---
-Architectural wonders, where innovation and nature collide, embody the essence of all elements #steel #spires #architectural #wonders #innovation #nature #elements #human #grace #harmony #vision https://t.co/rZJYWwJM13
+Architectural wonders, where innovation and nature collide, embody the essence of all elements #steel #spires #architectural #wonders #innovation #nature #elements #human #grace #harmony #vision

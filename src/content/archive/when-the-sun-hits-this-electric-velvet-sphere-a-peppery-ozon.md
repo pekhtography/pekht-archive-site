@@ -13,4 +13,4 @@ When the sun hits this electric velvet sphere,
 a peppery ozone scent drifts through the grass, 
 making the humid air hum with purple static 💜. 
 Botanical firework 🎆.
-#Nature #GardenDesign #FloralMagic #VibrantColors https://t.co/bpjW7r1ErG
+#Nature #GardenDesign #FloralMagic #VibrantColors

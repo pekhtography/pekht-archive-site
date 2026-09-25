@@ -13,4 +13,4 @@ Cold wind rakes the feathers flat. 🌬️
 Curved beak, surgeon-grade. 
 Cleans what the world leaves, asks nothing, bows to no one. 🦅 
 The work is the dignity.
-#NaturePhotography #VultureConservation #UglyBeautiful #WildEye https://t.co/Ml27UNRyKF
+#NaturePhotography #VultureConservation #UglyBeautiful #WildEye

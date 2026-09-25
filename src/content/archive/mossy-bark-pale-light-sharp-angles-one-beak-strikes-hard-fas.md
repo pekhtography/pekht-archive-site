@@ -14,4 +14,4 @@ One beak strikes. Hard. Fast.
 You call it a headache; 
 he calls it a three-bedroom apartment with a view. 🏠 
 Rent-free.
-#Nature #Birdwatching #HardWork #Focus https://t.co/L183DjCtFI
+#Nature #Birdwatching #HardWork #Focus

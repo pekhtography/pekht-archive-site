@@ -19,4 +19,4 @@ hashtags:
   - "Devastation"
   - "Loss"
 ---
-#Earthquake #Bridge #Palace #Destruction #Disaster #History #Heritage #Collapse #Ruins #Tragedy #Nature #Power #Devastation #Loss https://t.co/7yCMkzeXCW
+#Earthquake #Bridge #Palace #Destruction #Disaster #History #Heritage #Collapse #Ruins #Tragedy #Nature #Power #Devastation #Loss

@@ -12,4 +12,4 @@ hashtags:
 Nature built a cathedral then cancelled all services 🌲 
 just you, the echo of your breath, and infinity pretending to be a path ❄️ 
 No Wi-Fi no problem ✨ 
-#WinterVibes #ForestRoad #SnowyCoverage #Solitude https://t.co/yoPQ8wLKTF
+#WinterVibes #ForestRoad #SnowyCoverage #Solitude

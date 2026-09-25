@@ -19,4 +19,4 @@ hashtags:
   - "magic"
 ---
 Some puppets act better than actors. Sorry, not sorry 😏🎬✨ #StringsOfDestiny
-#puppet #theater #fantasy #costume #art #drama #storytelling #doll #performance #fairytale #stage #magic https://t.co/WW5wTuijgb
+#puppet #theater #fantasy #costume #art #drama #storytelling #doll #performance #fairytale #stage #magic

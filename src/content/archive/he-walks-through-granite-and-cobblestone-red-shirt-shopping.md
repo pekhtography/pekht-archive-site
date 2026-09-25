@@ -14,4 +14,4 @@ red shirt, shopping bag, unhurried.
 One foot in 1910, one in now. 
 The street holds both. 
 He holds neither. 🌧️🏙️
-#SlowCity #UrbanPoetry #MoscowWalks #StreetMoments https://t.co/zqbWHxYO3s
+#SlowCity #UrbanPoetry #MoscowWalks #StreetMoments

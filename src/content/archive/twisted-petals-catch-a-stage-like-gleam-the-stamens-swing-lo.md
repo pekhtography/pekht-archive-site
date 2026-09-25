@@ -14,4 +14,4 @@ The stamens swing low,
 clumsy conductors of an invisible orchestra. 
 Black background inhales, 
 the flower exhales a scream of magenta. 🖤🎶🌺 
-#Nature #FloralPhotography #DramaticLighting #ColorContrast https://t.co/eLL2UZd9cX
+#Nature #FloralPhotography #DramaticLighting #ColorContrast

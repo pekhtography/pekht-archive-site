@@ -12,4 +12,4 @@ hashtags:
 Black armor, red slash across the wing — 🦋 
 lands on white foam like a coal dropped into snow. 
 Every quiet thing holds its fire. 🔥
-#NaturePhotography #MacroWorld #WildContrast #FireAndFrost https://t.co/2brj9EMDex
+#NaturePhotography #MacroWorld #WildContrast #FireAndFrost

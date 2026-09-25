@@ -14,4 +14,4 @@ Then one warm chest in the middle 🐦 —
 breathing where the blueprint forgot to. 
 Engineers call it interference. 
 Physics calls it resonance. 📡✨
-#NaturePhotography #BirdWatching #UrbanWildlife #UnexpectedBeauty https://t.co/1smCZsztJP
+#NaturePhotography #BirdWatching #UrbanWildlife #UnexpectedBeauty

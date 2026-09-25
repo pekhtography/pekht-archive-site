@@ -18,4 +18,4 @@ hashtags:
   - "TimelessBeauty"
 ---
 When luxury pauses, and time melts into porcelain sculptures — a banquet for the soul. 🥂💫 #GildedMoments
-#Art #History #Luxury #Culture #Antiques #Porcelain #MuseumLife #ClassicalArt #FineDining #Elegance #TimelessBeauty https://t.co/ek3RQPxXEg
+#Art #History #Luxury #Culture #Antiques #Porcelain #MuseumLife #ClassicalArt #FineDining #Elegance #TimelessBeauty

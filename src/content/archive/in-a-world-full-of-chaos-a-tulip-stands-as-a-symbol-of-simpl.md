@@ -19,4 +19,4 @@ hashtags:
   - "serene"
 ---
 In a world full of chaos, a tulip stands as a symbol of simplicity and grace. 🌷✨ #TulipPhilosophy
-#flower #nature #tulip #beauty #garden #spring #petal #photography #blossom #dew #macro #serene https://t.co/6qWRqNdgLc
+#flower #nature #tulip #beauty #garden #spring #petal #photography #blossom #dew #macro #serene

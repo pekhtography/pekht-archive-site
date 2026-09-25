@@ -28,4 +28,4 @@ hashtags:
   - "spicy"
 ---
 As summer packs its beach towels and flips flops, autumn rolls in with its stash of cozy sweaters and hot cocoa!
-#autumn #hotcocoa #hug #flames #romance #vibrant #fading #warmth #golden #hues #winds #russet #gold #beach #towels #cozy #sweaters #cocoa #dramatic #epic #warm #spicy https://t.co/y1AouP6Kqv
+#autumn #hotcocoa #hug #flames #romance #vibrant #fading #warmth #golden #hues #winds #russet #gold #beach #towels #cozy #sweaters #cocoa #dramatic #epic #warm #spicy

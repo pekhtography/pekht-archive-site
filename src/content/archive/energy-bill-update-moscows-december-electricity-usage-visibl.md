@@ -19,4 +19,4 @@ hashtags:
   - "evening"
 ---
 Energy bill update: Moscow's December electricity usage visible from space 🛰️ NASA: "We can see your Christmas spirit from orbit!" 🌍💡 #SpaceVisible
-#moscow #redsquare #kremlin #basilcathedral #christmas #lights #winter #russia #architecture #snow #tourism #evening https://t.co/LL5pRsA1YB
+#moscow #redsquare #kremlin #basilcathedral #christmas #lights #winter #russia #architecture #snow #tourism #evening

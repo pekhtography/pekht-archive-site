@@ -24,4 +24,4 @@ hashtags:
   - "Memories"
 ---
 Old buildings are like wise elders; they carry the knowledge of ages in their creaking floorboards and weathered facades
-#Building #Story #Bricks #Foundation #Harmony #Wisdom #Knowledge #City #Life #Heartbeat #Pulse #Architecture #Design #Epoch #Time #Art #Creativity #Memories https://t.co/1vsAZGEE8t
+#Building #Story #Bricks #Foundation #Harmony #Wisdom #Knowledge #City #Life #Heartbeat #Pulse #Architecture #Design #Epoch #Time #Art #Creativity #Memories

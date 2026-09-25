@@ -13,4 +13,4 @@ Ten thousand bulbs at −15° 💡 —
 the eye warms first, the coat catches up.
 The first city lights were a shopkeeper's trick to slow your feet. ❄️
 That trick is still running. ✨
-#NightPhotography #WinterLights #LightInstallation #GoldenHour https://t.co/OPvP5quwG0
+#NightPhotography #WinterLights #LightInstallation #GoldenHour

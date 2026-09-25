@@ -19,4 +19,4 @@ hashtags:
   - "TimelessBeauty"
 ---
 The fountain dances with the Bolshoi’s echoes—water writes symphonies, stone remembers the steps 💧🎭 #EternalWaltzOfMoscow
-#DramaQueenFountain #Art #Travel #Photography #Moscow #Architecture #BolshoiTheatre #NightVibes #CulturalHeritage #EpicMoments #LiveTheDrama #TimelessBeauty https://t.co/LsNKi2FNSo
+#DramaQueenFountain #Art #Travel #Photography #Moscow #Architecture #BolshoiTheatre #NightVibes #CulturalHeritage #EpicMoments #LiveTheDrama #TimelessBeauty

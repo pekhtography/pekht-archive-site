@@ -12,4 +12,4 @@ hashtags:
   - "faith"
   - "wilderness"
 ---
-The forest is a delight to the eye, for it is a place where nature's wonders are brought into full view #forest #wonder #sky #stars #nature #faith #wilderness https://t.co/JSj3tYIQQK
+The forest is a delight to the eye, for it is a place where nature's wonders are brought into full view #forest #wonder #sky #stars #nature #faith #wilderness

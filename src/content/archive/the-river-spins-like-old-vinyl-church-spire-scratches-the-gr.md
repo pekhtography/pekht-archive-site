@@ -13,4 +13,4 @@ The river spins like old vinyl. Church spire scratches the groove.
 No sound comes out — just golden light bleeding into blue. 
 That’s the city’s lullaby. 
 Turn it up. 🎵🌃
-#GoldenHour #ReflectionHunting #RippledReality #QuietChaos https://t.co/C1QYgQH6LQ
+#GoldenHour #ReflectionHunting #RippledReality #QuietChaos

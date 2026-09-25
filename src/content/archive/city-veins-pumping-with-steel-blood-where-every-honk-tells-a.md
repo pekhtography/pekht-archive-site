@@ -19,4 +19,4 @@ hashtags:
   - "vibrant"
 ---
 City veins pumping with steel blood 🚗 Where every honk tells a story of dreams chasing deadlines ⏰ #UrbanPulse
-#cityscape #urban #traffic #skyscrapers #architecture #metropolitan #downtown #bustling #modern #intersection #skyline #vibrant https://t.co/dCmCSVcVli
+#cityscape #urban #traffic #skyscrapers #architecture #metropolitan #downtown #bustling #modern #intersection #skyline #vibrant

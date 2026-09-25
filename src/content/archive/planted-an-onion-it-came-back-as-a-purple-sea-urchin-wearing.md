@@ -12,4 +12,4 @@ hashtags:
 Planted an onion. 🧅 
 It came back as a purple sea urchin wearing a tiara 
 and absolutely refusing to explain itself. 👑💜
-#UnexpectedGarden #FlowerHumor #AlliumVibes #GardenSurprise https://t.co/6MXt2CqOQx
+#UnexpectedGarden #FlowerHumor #AlliumVibes #GardenSurprise

@@ -14,4 +14,4 @@ hashtags:
   - "Adventure"
 ---
 While the rivers of machines twist like silver serpents, and mighty torrents of clouds and water rush past, we find ourselves adrift in a stream of aspirations, plunging headlong into the year that awaits
-#Year #Rivers #Water #Machines #Clouds #Possibilities #Future #Adventure https://t.co/c4KsyIKIZ0
+#Year #Rivers #Water #Machines #Clouds #Possibilities #Future #Adventure

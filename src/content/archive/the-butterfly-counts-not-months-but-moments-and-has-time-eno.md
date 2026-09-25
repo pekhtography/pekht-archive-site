@@ -11,4 +11,4 @@ hashtags:
   - "Flower"
   - "Beauty"
 ---
-The butterfly counts not months but moments, and has time enough #Butterfly #Magic #Garden #Serenity #Flower #Beauty https://t.co/JeNART3HfQ
+The butterfly counts not months but moments, and has time enough #Butterfly #Magic #Garden #Serenity #Flower #Beauty

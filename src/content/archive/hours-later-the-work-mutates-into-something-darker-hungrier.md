@@ -15,4 +15,4 @@ While you scroll inside, frost outside rewrites the whole sky into lace—
 no witnesses, no applause, just obsession in subzero❄️
 Beauty doesn't need permission.
 It needs conditions
-#Winter #FrostArt #IceArt #SlowLife https://t.co/MzpvConBrh
+#Winter #FrostArt #IceArt #SlowLife

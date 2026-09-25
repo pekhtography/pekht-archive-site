@@ -15,4 +15,4 @@ The spire. The bridge. The boat.
 All duplicated, all inverted.
 Technically — a mirror.
 Emotionally — the city caught staring at itself. 😄
-#CityLights #NightPhotography #MoscowRiver #GoldenReflection https://t.co/0Y79rrY7OJ
+#CityLights #NightPhotography #MoscowRiver #GoldenReflection

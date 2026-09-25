@@ -14,4 +14,4 @@ one petal bent the wrong way. 🌸
 The garden spent all winter underground practicing — 
 and still shipped with a bug. 😄 
 Gorgeous bug though.
-#SpringGarden #TulipLovers #GardenMood #FlowerPhotography https://t.co/GzuJhuhS1f
+#SpringGarden #TulipLovers #GardenMood #FlowerPhotography

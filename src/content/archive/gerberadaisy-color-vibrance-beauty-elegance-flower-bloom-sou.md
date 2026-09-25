@@ -18,4 +18,4 @@ hashtags:
   - "VibrantColors"
   - "Symbolism"
 ---
-#GerberaDaisy #Color #Vibrance #Beauty #Elegance #Flower #Bloom #SouthAfrica #Pink #White #InnatePurity #VibrantColors #Symbolism https://t.co/ujCMFBU0Y7
+#GerberaDaisy #Color #Vibrance #Beauty #Elegance #Flower #Bloom #SouthAfrica #Pink #White #InnatePurity #VibrantColors #Symbolism

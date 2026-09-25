@@ -26,4 +26,4 @@ hashtags:
   - "Pollinators"
   - "Creativity"
 ---
-#Heliconia #Paradise #Passion #Life #Beauty #Design #Lush #Artistry #Biodiversity #Tropical #Exotic #Lobsterclaws #Unique #Flowers #Beauty #Colors #Vibrancy #Nature #Wild #Hummingbirds #Pollinators #Creativity https://t.co/3BbtnrjRW2
+#Heliconia #Paradise #Passion #Life #Beauty #Design #Lush #Artistry #Biodiversity #Tropical #Exotic #Lobsterclaws #Unique #Flowers #Beauty #Colors #Vibrancy #Nature #Wild #Hummingbirds #Pollinators #Creativity

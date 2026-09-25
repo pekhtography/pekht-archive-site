@@ -12,4 +12,4 @@ hashtags:
   - "passion"
   - "beauty"
 ---
-A single rose can be my garden; a single friend, my world  #rose #red #bloom #garden #love #passion #beauty https://t.co/4fRxMRXLoJ
+A single rose can be my garden; a single friend, my world  #rose #red #bloom #garden #love #passion #beauty

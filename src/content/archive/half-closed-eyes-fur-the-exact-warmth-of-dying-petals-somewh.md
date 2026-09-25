@@ -13,4 +13,4 @@ Half-closed eyes,
 fur the exact warmth of dying petals — 🌸 
 somewhere between asleep and owning the whole afternoon. 
 The garden adjusted to him. 🍂
-#GoldenHour #AutumnVibes #CatsOfTwitter #CatCamouflage https://t.co/L8xLWpvfWV
+#GoldenHour #AutumnVibes #CatsOfTwitter #CatCamouflage

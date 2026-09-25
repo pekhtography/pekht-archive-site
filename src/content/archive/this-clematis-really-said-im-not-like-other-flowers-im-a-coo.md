@@ -16,4 +16,4 @@ hashtags:
   - "natural"
 ---
 This clematis really said "I'm not like other flowers, I'm a cool flower" 😎 Pulls off the messy hair look better than most influencers 💁‍♀️ Natural born trendsetter over here 📸 #NotLikeOtherFlowers
-#clematis #flower #seedhead #bud #nature #garden #flora #photography #natural https://t.co/oY8caAQbNR
+#clematis #flower #seedhead #bud #nature #garden #flora #photography #natural

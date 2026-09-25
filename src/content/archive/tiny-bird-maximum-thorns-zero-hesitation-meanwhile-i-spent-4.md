@@ -12,4 +12,4 @@ hashtags:
 Tiny bird, maximum thorns, zero hesitation. 🐦 
 Meanwhile I spent 40 minutes choosing a chair at the café. 😅 
 Evolution forgot to install the doubt module in this one.
-#BirdPhotography #Relatable #NatureHumor #WildlifePhotography https://t.co/tnj6cRdUPW
+#BirdPhotography #Relatable #NatureHumor #WildlifePhotography

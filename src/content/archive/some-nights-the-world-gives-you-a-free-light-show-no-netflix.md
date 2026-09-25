@@ -19,4 +19,4 @@ hashtags:
   - "festive"
 ---
 Some nights the world gives you a free light show 🎭🌙💡 No Netflix needed when nature's this dramatic! #NatureIsTheShow
-#cottage #moonlight #evening #cozy #lights #home #peaceful #winter #cabin #magical #twilight #festive https://t.co/BpP7uXAIJy
+#cottage #moonlight #evening #cozy #lights #home #peaceful #winter #cabin #magical #twilight #festive

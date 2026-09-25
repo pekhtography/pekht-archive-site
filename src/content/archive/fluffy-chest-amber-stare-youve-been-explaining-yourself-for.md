@@ -14,4 +14,4 @@ You've been explaining yourself for 40 seconds. 😶🐾
 He waited. You blinked first.
 That's $200/hour at a therapist. 
 Here it's free — and somehow worse.
-#CatLovers #MaineCoon #RoyalCatVibes #UnbotheredEnergy https://t.co/bFArpQx3iZ
+#CatLovers #MaineCoon #RoyalCatVibes #UnbotheredEnergy

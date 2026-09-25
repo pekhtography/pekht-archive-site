@@ -18,4 +18,4 @@ hashtags:
   - "Plant"
 ---
 Technically toxic, aesthetically euphoric – hellebores are the goths of the plant world
-#Hellebore #Flower #Nature #Garden #Botany #Petals #Purple #Bloom #Winter #Floral #Leaves #Plant https://t.co/CEMrcLaEyR
+#Hellebore #Flower #Nature #Garden #Botany #Petals #Purple #Bloom #Winter #Floral #Leaves #Plant

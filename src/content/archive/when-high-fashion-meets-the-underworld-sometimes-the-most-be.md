@@ -17,4 +17,4 @@ hashtags:
   - "underground"
 ---
 When high fashion meets the underworld 💀✨ Sometimes the most beautiful things emerge from darkness, just like Dior's ability to transform rebellion into elegance 🖤 #LuxuryRebellion
-#Dior #fashion #streetart #luxury #skull #grunge #contemporary #art #design #underground https://t.co/Ntu1Lj4N6r
+#Dior #fashion #streetart #luxury #skull #grunge #contemporary #art #design #underground

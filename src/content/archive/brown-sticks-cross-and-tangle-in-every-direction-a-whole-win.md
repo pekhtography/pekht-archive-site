@@ -13,4 +13,4 @@ a whole winter's argument left unresolved—
 and somewhere inside that mess,🌿
 a violet thing covered in cold velvet and faint blue dust is just standing there, vertical.💜
 The oldest comeback.
-#Spring #MacroPhotography #Muscari https://t.co/gmygrKPNF5
+#Spring #MacroPhotography #Muscari

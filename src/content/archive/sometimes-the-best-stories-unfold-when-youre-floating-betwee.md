@@ -15,4 +15,4 @@ hashtags:
   - "summer"
 ---
 Sometimes the best stories unfold when you're floating between two worlds - the historic past on one shore, the gleaming future on the other 🚢✨ Nothing beats a Moscow river cruise for perspective! #RiverStorytelling
-#boat #river #tourism #Moscow #cruise #travel #water #summer https://t.co/YBakOSduAK
+#boat #river #tourism #Moscow #cruise #travel #water #summer

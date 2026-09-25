@@ -18,4 +18,4 @@ hashtags:
   - "growth"
 ---
 Narcissus said to the daffodil, 'You're just a flower, but I'm a myth!' To which the daffodil replied, 'Well, at least I bloom every spring!'
-#Daffodil #spring #nature #bloom #flowers #beauty #garden #yellow #white #petals #sunlight #growth https://t.co/UbkuzCFyxl
+#Daffodil #spring #nature #bloom #flowers #beauty #garden #yellow #white #petals #sunlight #growth

@@ -21,4 +21,4 @@ hashtags:
   - "Change"
   - "China"
 ---
-#Chinese #Culture #LunarNewYear #Celebration #Future #Snake #Wisdom #Zodiac #Astrology #BestWishes #Positivity #Greetings #Connection #Transformation #Change #China https://t.co/EVbGwz7jRz
+#Chinese #Culture #LunarNewYear #Celebration #Future #Snake #Wisdom #Zodiac #Astrology #BestWishes #Positivity #Greetings #Connection #Transformation #Change #China

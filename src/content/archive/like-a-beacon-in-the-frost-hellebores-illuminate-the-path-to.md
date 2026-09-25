@@ -18,4 +18,4 @@ hashtags:
   - "Vibrant"
 ---
 Like a beacon in the frost, hellebores illuminate the path to spring, their petals echoing the melody of awakening
-#Hellebore #Bloom #Nature #Petals #Garden #Flora #Botany #Elegance #Spring #Beauty #Grace #Vibrant https://t.co/xM4O0PlAhy
+#Hellebore #Bloom #Nature #Petals #Garden #Flora #Botany #Elegance #Spring #Beauty #Grace #Vibrant

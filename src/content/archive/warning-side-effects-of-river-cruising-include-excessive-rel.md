@@ -18,4 +18,4 @@ hashtags:
   - "travel"
 ---
 Warning: Side effects of river cruising include excessive relaxation, spontaneous philosophy, and an irresistible urge to wave at strangers 👋 Proceed with caution! 🚨 #CruiseWarning
-#boat #river #cruise #tourists #fountain #city #summer #relaxation #sightseeing #water #travel https://t.co/ozPMeAQhmn
+#boat #river #cruise #tourists #fountain #city #summer #relaxation #sightseeing #water #travel

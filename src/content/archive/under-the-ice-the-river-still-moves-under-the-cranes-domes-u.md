@@ -13,4 +13,4 @@ Under the ice, the river still moves. 🌊
 Under the cranes — domes. Under the domes — something older. 
 This city never stopped. 
 It just keeps building the next floor on top of the last one's silence. ❄️🏗️
-#WinterCity #RiverLife #UrbanLayers #FrozenMoment https://t.co/6NoovhssLV
+#WinterCity #RiverLife #UrbanLayers #FrozenMoment

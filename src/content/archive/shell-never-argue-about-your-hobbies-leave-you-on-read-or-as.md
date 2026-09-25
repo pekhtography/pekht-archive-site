@@ -13,4 +13,4 @@ She'll never argue about your hobbies, leave you on read,
 or ask "what are we?" 
 Just sits there, scales shimmering, judging your life choices silently. 
 That's love. 💔✨
-#Fantasy #Collecting #Reality #Mood https://t.co/GfEkxsmGoQ
+#Fantasy #Collecting #Reality #Mood

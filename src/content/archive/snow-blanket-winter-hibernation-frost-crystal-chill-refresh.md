@@ -38,4 +38,4 @@ hashtags:
   - "Fun"
   - "Glide"
 ---
-#Snow #Blanket #Winter #Hibernation #Frost #Crystal #Chill #Refresh #Slope #Adventure #Uphill #Challenge #Mountain #Majesty #Glistens #Dazzle #Shimmer #Glow #Sparkle #Radiance #Twinkle #Star #Pale #Softness #Light #Brightness #Slippery #Risk #Danger #Caution #Slide #Fun #Glide https://t.co/d81Pj37aYy
+#Snow #Blanket #Winter #Hibernation #Frost #Crystal #Chill #Refresh #Slope #Adventure #Uphill #Challenge #Mountain #Majesty #Glistens #Dazzle #Shimmer #Glow #Sparkle #Radiance #Twinkle #Star #Pale #Softness #Light #Brightness #Slippery #Risk #Danger #Caution #Slide #Fun #Glide

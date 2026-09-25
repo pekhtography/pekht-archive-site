@@ -8,4 +8,4 @@ hashtags:
   - "AutumnVibes"
   - "Melancholy"
 ---
-The pond swallowed every sound but one—your own breath pretending nothing changed 🍂🌫️ Yet the water knew: autumn doesn't ask permission to drown who you were #LiminalSpaces #AutumnVibes #Melancholy https://t.co/b7gAV9AbBN
+The pond swallowed every sound but one—your own breath pretending nothing changed 🍂🌫️ Yet the water knew: autumn doesn't ask permission to drown who you were #LiminalSpaces #AutumnVibes #Melancholy

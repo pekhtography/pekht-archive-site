@@ -13,4 +13,4 @@ hashtags:
   - "Flowers"
   - "Colors"
 ---
-Muscari armeniacum, commonly known as grape hyacinth, blooms with clusters of small, bell-shaped flowers #Muscari #Beauty #Garden #Nature #Bloom #Spring #Flowers #Colors https://t.co/kd5EXpUzVZ
+Muscari armeniacum, commonly known as grape hyacinth, blooms with clusters of small, bell-shaped flowers #Muscari #Beauty #Garden #Nature #Bloom #Spring #Flowers #Colors

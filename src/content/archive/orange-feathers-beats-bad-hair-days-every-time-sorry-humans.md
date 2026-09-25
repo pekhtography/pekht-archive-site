@@ -19,4 +19,4 @@ hashtags:
   - "grass"
 ---
 Orange feathers beats bad hair days every time. Sorry, humans. 🦆😉 #FeatherWins
-#duck #bird #wildlife #nature #feathers #waterfowl #Tadorna #ornithology #animal #outdoors #spring #grass https://t.co/W5tRwoMOcL
+#duck #bird #wildlife #nature #feathers #waterfowl #Tadorna #ornithology #animal #outdoors #spring #grass

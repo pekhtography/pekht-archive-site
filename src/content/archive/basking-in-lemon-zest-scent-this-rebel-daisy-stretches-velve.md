@@ -13,4 +13,4 @@ Basking in lemon-zest scent,
 this rebel daisy stretches velvet, citrus-bright petals toward the light, 
 laughing at the rigid laws of perfect symmetry 🌼. 
 Solar bedhead 🌻.
-#Nature #GardenLife #PetalPower #GoldenHour https://t.co/9TS7FjlOvB
+#Nature #GardenLife #PetalPower #GoldenHour

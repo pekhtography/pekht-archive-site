@@ -13,4 +13,4 @@ hashtags:
   - "africa"
 ---
 Fun fact: Meerkats can recognize individual voices from their mob! 🎵 Imagine having 30+ roommates and knowing exactly who's calling for dinner just by their voice 😂 Talk about advanced social networking! 📱 #MeerkatFacts
-#meerkat #wildlife #nature #animal #photography #africa https://t.co/nqDoLDoe9A
+#meerkat #wildlife #nature #animal #photography #africa

@@ -14,4 +14,4 @@ spicy-scented domes,
 people keep walking in neon sneakers, 
 oblivious they are jogging through a 16th-century prayer 🍦. 
 Time is a suggestion ⏳
-#History #TravelGram #OldMeetsNew #Timeless https://t.co/pefY9u5oNL
+#History #TravelGram #OldMeetsNew #Timeless

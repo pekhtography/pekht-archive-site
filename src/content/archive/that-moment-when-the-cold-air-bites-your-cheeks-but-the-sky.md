@@ -12,4 +12,4 @@ hashtags:
 That moment when the cold air bites your cheeks 🥶, 
 but the sky pours liquid gold and tangerine dreams over the horizon 🌅… 
 and you realize winter's not a season, it's a filter for brilliance ✨ 
-#Winter #SunsetLovers #SilhouettePhotography #MagicInTheAir https://t.co/HNUoJrCIrA
+#Winter #SunsetLovers #SilhouettePhotography #MagicInTheAir

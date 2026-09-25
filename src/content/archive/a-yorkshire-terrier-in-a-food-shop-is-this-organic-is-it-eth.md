@@ -15,4 +15,4 @@ hashtags:
   - "Product"
   - "Toy"
 ---
-A Yorkshire Terrier in a food shop: 'Is this organic? Is it  ethically sourced? And most importantly, does it complement my fur? #YorkshireTerrier #Tiny #Customer #Buyer #Shop #Boutique #Choosing #Selecting #Product #Toy https://t.co/EwqaR9nTKj
+A Yorkshire Terrier in a food shop: 'Is this organic? Is it  ethically sourced? And most importantly, does it complement my fur? #YorkshireTerrier #Tiny #Customer #Buyer #Shop #Boutique #Choosing #Selecting #Product #Toy

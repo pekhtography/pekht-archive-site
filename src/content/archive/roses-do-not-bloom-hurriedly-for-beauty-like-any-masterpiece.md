@@ -11,4 +11,4 @@ hashtags:
   - "thorns"
   - "strength"
 ---
-Roses do not bloom hurriedly; for beauty, like any masterpiece, takes time to blossom #rose #love #garden #heart #thorns #strength https://t.co/d9W6hFc5Hc
+Roses do not bloom hurriedly; for beauty, like any masterpiece, takes time to blossom #rose #love #garden #heart #thorns #strength

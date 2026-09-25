@@ -12,4 +12,4 @@ hashtags:
 Nature’s ultimate specialist. 
 Doesn’t get headaches, just gives them out. 
 A masterclass in single-minded, wood-pulverizing focus 🔨👑
-#Nature #BirdWatching #Focus #WinterVibes https://t.co/8781jzzHbm
+#Nature #BirdWatching #Focus #WinterVibes

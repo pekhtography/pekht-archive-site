@@ -18,4 +18,4 @@ hashtags:
   - "Autumn"
 ---
 Botanically catfishing since forever – neither from Jerusalem nor an artichoke, it's the plant world's most successful identity thief with a PhD in confusing taxonomy
-#Sunchoke #Wildflower #Yellow #Nature #Helianthus #Sunflower #Botany #Garden #Flora #Bloom #Petals #Autumn https://t.co/odpt5FwNgE
+#Sunchoke #Wildflower #Yellow #Nature #Helianthus #Sunflower #Botany #Garden #Flora #Bloom #Petals #Autumn

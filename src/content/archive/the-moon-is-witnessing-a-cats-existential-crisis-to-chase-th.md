@@ -21,4 +21,4 @@ hashtags:
   - "dream"
 ---
 The moon is witnessing a cat's existential crisis: 'To chase the waves or to nap in the sand? That is the question!'
-#cat #shadow #sea #ocean #waves #night #moon #beach #sand #philosopher #wisdom #thought #life #crisis #dream https://t.co/l778a4iICc
+#cat #shadow #sea #ocean #waves #night #moon #beach #sand #philosopher #wisdom #thought #life #crisis #dream

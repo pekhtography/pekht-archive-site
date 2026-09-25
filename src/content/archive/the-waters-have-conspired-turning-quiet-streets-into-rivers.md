@@ -20,4 +20,4 @@ hashtags:
   - "Inundation"
 ---
 The waters have conspired, turning quiet streets into rivers of despair
-#Residents #Home #Floods #Deluge #Storm #Tempest #Rain #Downpour #Wind #Drenched #Gusty #Evacuated #Escape #Inundation https://t.co/HQLNNpdQMQ
+#Residents #Home #Floods #Deluge #Storm #Tempest #Rain #Downpour #Wind #Drenched #Gusty #Evacuated #Escape #Inundation

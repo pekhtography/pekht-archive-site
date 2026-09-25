@@ -19,4 +19,4 @@ hashtags:
   - "Beauty"
 ---
 Rodgersia's leaves are like a well-groomed beard—impressive and a bit mysterious
-#Rodgersia #Nature #Bloom #Garden #Plant #Flower #Botany #Leaves #Spring #Growth #Petals #Flora #Beauty https://t.co/jawuecxduG
+#Rodgersia #Nature #Bloom #Garden #Plant #Flower #Botany #Leaves #Spring #Growth #Petals #Flora #Beauty

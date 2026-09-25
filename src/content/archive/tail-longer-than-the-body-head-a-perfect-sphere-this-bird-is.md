@@ -13,4 +13,4 @@ Tail: longer than the body. Head: a perfect sphere.
 This bird is 60% handle, 30% puff, 10% judgment. 🐦 
 Physics said "impossible." 
 Evolution said "hold my seed." ✨ 
-#NaturePhotography #LongTailedTit #TinyBirdBigEnergy #JudgingYou https://t.co/PFMcSHQu3W
+#NaturePhotography #LongTailedTit #TinyBirdBigEnergy #JudgingYou

@@ -20,4 +20,4 @@ hashtags:
   - "Cheerfulness"
   - "Positivity"
 ---
-#Gerbera #Flower #Orange #Energy #Petals #Beauty #Garden #Nature #Vibrancy #Vibrance #Bright #LongPetals #Aesthetics #Cheerfulness #Positivity https://t.co/4r0VcuFCQe
+#Gerbera #Flower #Orange #Energy #Petals #Beauty #Garden #Nature #Vibrancy #Vibrance #Bright #LongPetals #Aesthetics #Cheerfulness #Positivity

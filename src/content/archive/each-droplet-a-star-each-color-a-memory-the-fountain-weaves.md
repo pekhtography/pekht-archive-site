@@ -19,4 +19,4 @@ hashtags:
   - "spectacular"
 ---
 Each droplet a star, each color a memory, the fountain weaves a tapestry of human joy and imagination
-#fountain #night #lights #water #colorful #beauty #art #magic #joy #beautiful #illumination #magical #spectacular https://t.co/sQBCod6W9G
+#fountain #night #lights #water #colorful #beauty #art #magic #joy #beautiful #illumination #magical #spectacular

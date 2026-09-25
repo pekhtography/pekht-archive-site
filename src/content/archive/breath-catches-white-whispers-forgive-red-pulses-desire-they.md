@@ -13,4 +13,4 @@ Breath catches —
 white whispers "forgive," red pulses "desire." 
 They bloom together because nature never learned "or." 
 Only "and." 🌷🤍❤️ 
-#OppositesAttract #TulipGarden #RedAndWhite #NatureContrast https://t.co/cTudW3b4kT
+#OppositesAttract #TulipGarden #RedAndWhite #NatureContrast

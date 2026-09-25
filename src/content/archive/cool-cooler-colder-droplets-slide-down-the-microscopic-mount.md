@@ -15,4 +15,4 @@ Touch.
 Shiver. 
 Drink. ☔ 
 Just one drop... 💎
-#Nature #GardeningLife #PetalPerfection #VelvetVibes https://t.co/68ifAvtWJB
+#Nature #GardeningLife #PetalPerfection #VelvetVibes

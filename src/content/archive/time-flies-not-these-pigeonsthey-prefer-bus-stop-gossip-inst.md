@@ -18,4 +18,4 @@ hashtags:
   - "Morning"
 ---
 Time flies? Not these pigeons—they prefer bus stop gossip instead! 🕰️🐦🚌
-#BusStop #Pigeons #ClockTower #UrbanLife #PublicTransport #Cityscape #Waiting #Time #Birds #Architecture #Travel #Morning https://t.co/OBdsW9TjRx
+#BusStop #Pigeons #ClockTower #UrbanLife #PublicTransport #Cityscape #Waiting #Time #Birds #Architecture #Travel #Morning

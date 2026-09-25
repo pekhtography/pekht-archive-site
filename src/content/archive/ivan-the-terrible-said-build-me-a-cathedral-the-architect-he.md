@@ -12,4 +12,4 @@ hashtags:
 Ivan the Terrible said "build me a cathedral" 🎄 
 the architect heard "make candy land real" 🏰 
 Five centuries later tourists still can't believe this isn't Photoshop ✨ 
-#Moscow #StBasilsCathedral #WinterInRussia #Wanderlust https://t.co/Ghjw5a43Fk
+#Moscow #StBasilsCathedral #WinterInRussia #Wanderlust

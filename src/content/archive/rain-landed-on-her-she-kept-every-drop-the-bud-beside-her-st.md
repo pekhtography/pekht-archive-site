@@ -12,4 +12,4 @@ hashtags:
 Rain landed on her. She kept every drop. 🌧️ 
 The bud beside her — still clenched fists, practicing patience. 
 One storm, two answers. 🌹
-#NatureUnfiltered #GardenMoments #RainAndPetals #WildBeauty https://t.co/lIe58WCoXA
+#NatureUnfiltered #GardenMoments #RainAndPetals #WildBeauty

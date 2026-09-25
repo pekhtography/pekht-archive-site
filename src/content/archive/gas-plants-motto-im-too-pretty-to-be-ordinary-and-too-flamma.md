@@ -19,4 +19,4 @@ hashtags:
   - "elegance"
 ---
 Gas plant’s motto: ‘I’m too pretty to be ordinary, and too flammable to be ignored!’🔥💃 Don’t touch, just admire! #PrettyFlammableCharm
-#dictamnus #gasplant #flower #bloom #purple #botany #nature #garden #fragrance #petals #wildflower #elegance https://t.co/eFB9OCB2Oe
+#dictamnus #gasplant #flower #bloom #purple #botany #nature #garden #fragrance #petals #wildflower #elegance

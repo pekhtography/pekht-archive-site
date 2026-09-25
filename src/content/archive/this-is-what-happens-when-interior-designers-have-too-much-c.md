@@ -19,4 +19,4 @@ hashtags:
   - "vibrant"
 ---
 This is what happens when interior designers have too much coffee and access to a crayon box ☕🖍️ Somewhere a minimalist is having nightmares! #ColorOverload
-#cafeteria #colorful #modern #institutional #dining #architecture #interior #design #chairs #community #space #vibrant https://t.co/mpBfKPbnki
+#cafeteria #colorful #modern #institutional #dining #architecture #interior #design #chairs #community #space #vibrant

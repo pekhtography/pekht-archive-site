@@ -13,4 +13,4 @@ When dawn hits, this neon-pink riot spills over silent moss,
 smelling like sun-warmed satin and aggressive optimism, 
 creating a haptic explosion of petals. 
 Total botanical scream. 🌸✨
-#MainCharacterEnergy #BotanicalArt #PetalPower #Vibrant https://t.co/bNJoW1iGw1
+#MainCharacterEnergy #BotanicalArt #PetalPower #Vibrant

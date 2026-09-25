@@ -15,4 +15,4 @@ hashtags:
   - "neighborhood"
   - "life"
 ---
-Cities are the greatest creations of humanity #city #story #river #journey #bridge #connection #reflection #soul #neighborhood #life https://t.co/kicSJ41BcV
+Cities are the greatest creations of humanity #city #story #river #journey #bridge #connection #reflection #soul #neighborhood #life

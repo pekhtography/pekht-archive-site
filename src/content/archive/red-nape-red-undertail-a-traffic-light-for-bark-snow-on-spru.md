@@ -13,4 +13,4 @@ Red nape, red undertail. A traffic light for bark. 🚦❄️
 Snow on spruce paws. 
 He hammers — brain rattles in liquid cushion. 
 He’s the sapper who marks his own blast zone. 🔴🥚 
-#NatureIsMetal #BirdBehavior #WoodpeckerLife #UnexpectedHero https://t.co/fJJ57lo24K
+#NatureIsMetal #BirdBehavior #WoodpeckerLife #UnexpectedHero

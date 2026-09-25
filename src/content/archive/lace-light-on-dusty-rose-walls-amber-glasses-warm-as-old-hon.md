@@ -13,4 +13,4 @@ Lace light on dusty-rose walls,
 amber glasses warm as old honey 🍯, 
 a sofa that smells like Sunday — 
 you pull out the chair and realize the menu is the only thing that doesn't quite belong…
-#CozyVibes #VintageInterior #NostalgiaCore #GrandmaAesthetic https://t.co/qyGzJ9adw0
+#CozyVibes #VintageInterior #NostalgiaCore #GrandmaAesthetic

@@ -10,4 +10,4 @@ hashtags:
   - "observation"
   - "surprise"
 ---
-With big eyes filled with wonder, the meerkat watches the world pass by in a delightful curiosity #meerkat #watchful #curiosity #observation #surprise https://t.co/Va3ZGOkL54
+With big eyes filled with wonder, the meerkat watches the world pass by in a delightful curiosity #meerkat #watchful #curiosity #observation #surprise

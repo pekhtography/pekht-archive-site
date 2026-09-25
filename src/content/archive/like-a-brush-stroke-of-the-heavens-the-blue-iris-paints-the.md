@@ -15,4 +15,4 @@ hashtags:
   - "nature"
   - "beauty"
 ---
-Like a brush stroke of the heavens, the blue iris paints the garden with serenity #iris #flower #blue #sunlight #warmth #petals #softness #garden #nature #beauty https://t.co/m8lvn8YxQc
+Like a brush stroke of the heavens, the blue iris paints the garden with serenity #iris #flower #blue #sunlight #warmth #petals #softness #garden #nature #beauty

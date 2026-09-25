@@ -13,4 +13,4 @@ hashtags:
   - "magic"
   - "wonder"
 ---
-The magic of the holidays is in the air #illuminated #building #NewYear #celebration #lake #city #magic #wonder https://t.co/Yg4lFtPLGb
+The magic of the holidays is in the air #illuminated #building #NewYear #celebration #lake #city #magic #wonder

@@ -29,4 +29,4 @@ hashtags:
   - "Reach"
 ---
 Some believe that if you gaze into an autumn pond, you'll see your future reflected
-#Autumn #Transition #Pond #Serenity #Mirrors #Reflection #Trees #Strength #Reflections #Depth #Joy #Hues #Warmth #Gold #Wealth #Rust #Vintage #Secrets #Mystery #Season #Change #Branches #Reach https://t.co/Zpf8goAzM9
+#Autumn #Transition #Pond #Serenity #Mirrors #Reflection #Trees #Strength #Reflections #Depth #Joy #Hues #Warmth #Gold #Wealth #Rust #Vintage #Secrets #Mystery #Season #Change #Branches #Reach

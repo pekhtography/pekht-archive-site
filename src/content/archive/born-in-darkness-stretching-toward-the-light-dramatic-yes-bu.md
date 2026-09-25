@@ -18,4 +18,4 @@ hashtags:
   - "wildflower"
 ---
 Born in darkness, stretching toward the light — dramatic? Yes. But also… very photogenic
-#helianthus #yellow #flower #garden #nature #sunny #petals #blooming #tuberosus #leafy #beauty #wildflower https://t.co/qe5O59qxN5
+#helianthus #yellow #flower #garden #nature #sunny #petals #blooming #tuberosus #leafy #beauty #wildflower

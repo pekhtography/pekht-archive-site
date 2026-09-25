@@ -13,4 +13,4 @@ Against the blue, those tiny hairs catch the fire.
 A botanical radio station (reception: flawless) 
 broadcasting peace to the dark backyard. 
 One flower's whole galaxy. 💫🕊️ 
-#NaturePhotography #BacklitBotany #AnemoneGlow #SunlightKissed https://t.co/nevqDzQvBh
+#NaturePhotography #BacklitBotany #AnemoneGlow #SunlightKissed

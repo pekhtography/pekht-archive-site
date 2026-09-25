@@ -15,4 +15,4 @@ hashtags:
   - "cityscape"
 ---
 Engineering meets serenity 🌊 Who said infrastructure can't be beautiful? These cables don't just move people - they weave stories across the skyline, connecting not just places but moments 🏙️ #UrbanPoetry
-#river #transportation #urban #bridges #boats #cables #tourism #cityscape https://t.co/PGhKg5pVfe
+#river #transportation #urban #bridges #boats #cables #tourism #cityscape

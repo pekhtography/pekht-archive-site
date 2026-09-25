@@ -14,4 +14,4 @@ Then another, slow and warm as butter left in sun —
 and the three sealed buds beside it, furred and red-seamed, 
 still filed under: not yet. ⏳ 
 Victorian verdict. Ready.
-#Flowers #RoseGarden #BloomSeason #PetalFeels https://t.co/u1CRbbeuF8
+#Flowers #RoseGarden #BloomSeason #PetalFeels

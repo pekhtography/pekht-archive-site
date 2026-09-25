@@ -13,4 +13,4 @@ Two stone walls put on a thousand-light pajama. 🏛️
 This building survived two centuries of being serious — 
 December broke it in one evening. 🔥 
 The sky caught the memo and dressed accordingly.
-#CityLights #ArchitecturePhotography #WinterMagic #GoldenHour https://t.co/yoLfJMf6r7
+#CityLights #ArchitecturePhotography #WinterMagic #GoldenHour

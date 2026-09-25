@@ -14,4 +14,4 @@ But check the fade. Check the posture.
 Check how I'm holding this twig like it's executive seating.
 Winter doesn't build character—
 it reveals who had it all along🥶💼
-#Winter #SmallButMighty #FreshInTheFrost #SurvivalMode https://t.co/eluYBM4T5e
+#Winter #SmallButMighty #FreshInTheFrost #SurvivalMode

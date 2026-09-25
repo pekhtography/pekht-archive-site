@@ -12,4 +12,4 @@ hashtags:
 One beak, two completely different dress codes. 🦆 
 Evolution handed him every color — 
 she got the camouflage and all the actual decisions. 🎨
-#MandarinDuck #WildlifePhotography #BirdLovers #NatureHumor https://t.co/YlZxVdSJkn
+#MandarinDuck #WildlifePhotography #BirdLovers #NatureHumor

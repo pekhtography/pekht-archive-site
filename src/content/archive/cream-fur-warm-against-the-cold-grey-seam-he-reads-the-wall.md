@@ -13,4 +13,4 @@ Cream fur warm against the cold grey seam. 🐻‍❄️
 He reads the wall the way we reread old texts — 
 slowly, nose-first, half-hoping the meaning shifted. 
 It didn't. 🌨️
-#NatureVsCity #PolarBear #ZooLife #WildAtHeart https://t.co/P7k0zjrJeV
+#NatureVsCity #PolarBear #ZooLife #WildAtHeart

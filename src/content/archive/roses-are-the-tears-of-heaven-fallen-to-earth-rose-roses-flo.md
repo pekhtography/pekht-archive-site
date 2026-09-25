@@ -19,4 +19,4 @@ hashtags:
   - "colorful"
 ---
 Roses are the tears of heaven fallen to earth 
-#Rose #roses #flowers #bouquet #beauty #nature #blooms #vibrant #garden #petals #love #romance #colorful https://t.co/PshkGymV8x
+#Rose #roses #flowers #bouquet #beauty #nature #blooms #vibrant #garden #petals #love #romance #colorful

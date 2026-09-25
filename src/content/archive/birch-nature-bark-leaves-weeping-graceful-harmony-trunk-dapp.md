@@ -16,4 +16,4 @@ hashtags:
   - "Serenity"
   - "Wind"
 ---
-#Birch #Nature #Bark #Leaves #Weeping #Graceful #Harmony #Trunk #Dappled #Serenity #Wind https://t.co/qXBLgq0RdC
+#Birch #Nature #Bark #Leaves #Weeping #Graceful #Harmony #Trunk #Dappled #Serenity #Wind

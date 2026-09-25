@@ -12,4 +12,4 @@ hashtags:
 Grey clouds gather. Green buds peek. 
 Deep within that black-and-white cotton ball (the premium kind), 
 a tiny heart beats like a frantic drummer... 🥁🌿
-#Nature #BirdWatching #Flycatcher #Fluffy https://t.co/TtkIaNrOHG
+#Nature #BirdWatching #Flycatcher #Fluffy

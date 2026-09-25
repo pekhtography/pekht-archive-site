@@ -12,4 +12,4 @@ hashtags:
 The scent of damp earth rises as red crowns explode. 
 They demand sunlight with the ferocity of a caffeine-deprived coder at 4 AM. 
 Botanical audacity. 🚩🌞🔥
-#Nature #GardeningLife #PetalPower #VibrantVibes https://t.co/SdV2JjkFLL
+#Nature #GardeningLife #PetalPower #VibrantVibes

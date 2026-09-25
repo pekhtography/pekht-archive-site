@@ -21,4 +21,4 @@ hashtags:
   - "memories"
 ---
 As the days grow shorter, the trees transform into the poets of the forest, weaving verses of gold and crimson that ripple across the pond's surface
-#trees #reflection #pond #crimson #scarlet #autumn #sun #transformation #leaves #beauty #poetry #nature #seasons #gold #memories https://t.co/9liZJ3UPNf
+#trees #reflection #pond #crimson #scarlet #autumn #sun #transformation #leaves #beauty #poetry #nature #seasons #gold #memories

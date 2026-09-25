@@ -18,4 +18,4 @@ hashtags:
   - "relaxation"
 ---
 Every river tells a story, but some stories come with panoramic windows and gourmet dining 🚢✨ Sometimes the journey really is more important than the destination 🌊 #RiverCruiseLife
-#cruise #river #travel #boat #vacation #tourism #luxury #water #journey #adventure #relaxation https://t.co/hK1zi6TNrV
+#cruise #river #travel #boat #vacation #tourism #luxury #water #journey #adventure #relaxation

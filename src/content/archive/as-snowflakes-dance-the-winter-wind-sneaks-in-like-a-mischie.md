@@ -21,4 +21,4 @@ hashtags:
   - "Mischief"
 ---
 As snowflakes dance, the winter wind sneaks in like a mischievous kid, plotting to snatch your comfort away
-#Winter #Frost #Chill #Warmth #Cozy #Wind #Thief #Body #Breath #Snowflakes #Comfort #Cozy #Ghost #Magic #Embrace #Mischief https://t.co/uRCS78a5Vi
+#Winter #Frost #Chill #Warmth #Cozy #Wind #Thief #Body #Breath #Snowflakes #Comfort #Cozy #Ghost #Magic #Embrace #Mischief

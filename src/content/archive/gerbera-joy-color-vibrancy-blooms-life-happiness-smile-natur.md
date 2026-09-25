@@ -24,4 +24,4 @@ hashtags:
   - "Bouquet"
   - "Gift"
 ---
-#Gerbera #Joy #Color #Vibrancy #Blooms #Life #Happiness #Smile #Nature #Beauty #Home #Warmth #Love #Flower #Daisy #Vibrant #Energy #Bouquet #Gift #Happiness https://t.co/ohKKdX5MyU
+#Gerbera #Joy #Color #Vibrancy #Blooms #Life #Happiness #Smile #Nature #Beauty #Home #Warmth #Love #Flower #Daisy #Vibrant #Energy #Bouquet #Gift #Happiness

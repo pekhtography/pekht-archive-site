@@ -13,4 +13,4 @@ hashtags:
   - "Palace"
 ---
 History's grandest party, forever intermission. The table gleams for time travelers, spoons humming empire secrets, the chandelier waltzing with ghostly guests. What a breathtaking suspension of time. 👑🕰️ #ImperialEncore
-#History #Art #Architecture #Beautiful #Classicism #Palace https://t.co/W8bcw8MVhe
+#History #Art #Architecture #Beautiful #Classicism #Palace

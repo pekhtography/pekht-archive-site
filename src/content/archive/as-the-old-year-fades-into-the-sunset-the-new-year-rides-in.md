@@ -22,4 +22,4 @@ hashtags:
   - "Future"
 ---
 As the old year fades into the sunset, the new year rides in on a horse-drawn sleigh, beckoning us to chase our dreams
-#NewYear #Celebration #Gallop #Acceleration #Horse #Sleigh #Joy #Time #Memories #Nostalgia #Dreams #Aspiration #Possibilities #Opportunity #Hope #Future https://t.co/GNUB8gsOY7
+#NewYear #Celebration #Gallop #Acceleration #Horse #Sleigh #Joy #Time #Memories #Nostalgia #Dreams #Aspiration #Possibilities #Opportunity #Hope #Future

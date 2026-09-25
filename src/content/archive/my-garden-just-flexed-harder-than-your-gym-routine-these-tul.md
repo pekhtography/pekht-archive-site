@@ -19,4 +19,4 @@ hashtags:
   - "sunshine"
 ---
 My garden just flexed harder than your gym routine 💪 These tulips didn't ask permission to be this gorgeous 🌷 Mother Nature said "hold my watering can" 😎 #GardenGoals
-#spring #tulips #garden #flowers #bloom #nature #colorful #beauty #peaceful #suburban #landscape #sunshine https://t.co/Ox5cmdfG3J
+#spring #tulips #garden #flowers #bloom #nature #colorful #beauty #peaceful #suburban #landscape #sunshine

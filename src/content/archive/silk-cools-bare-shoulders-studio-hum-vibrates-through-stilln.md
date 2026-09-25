@@ -13,4 +13,4 @@ Silk cools bare shoulders. Studio hum vibrates through stillness.
 Black thread declares borders on white—diplomacy in fabric. 
 Her gaze doesn't audition. 
 Elegance is infrastructure, not decoration. 🕊️✨ 
-#Vintage #MidCentury #StudioPortrait #Timeless https://t.co/jzh98oq1c1
+#Vintage #MidCentury #StudioPortrait #Timeless

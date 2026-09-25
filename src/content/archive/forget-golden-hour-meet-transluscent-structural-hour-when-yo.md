@@ -13,4 +13,4 @@ Forget "golden hour".
 Meet "transluscent structural hour". 
 When you're done being pretty, become interesting. 
 Let them see your skeleton, elegantly framed by the sun 🦴☀️ 
-#Doronicum #StructuralBeauty #GardenStyle #Texture https://t.co/XgsbOsFcm2
+#Doronicum #StructuralBeauty #GardenStyle #Texture

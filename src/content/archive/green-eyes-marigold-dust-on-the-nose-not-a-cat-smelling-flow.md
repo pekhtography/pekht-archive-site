@@ -12,4 +12,4 @@ hashtags:
 Green eyes. Marigold dust on the nose. 
 Not a cat smelling flowers — a deity auditing her altar. 🐱✨ 
 The offering passed. Marigolds stay.
-#Cats #CatBehavior #FlowerCat #GoldenHour https://t.co/8QDoyaPRDQ
+#Cats #CatBehavior #FlowerCat #GoldenHour

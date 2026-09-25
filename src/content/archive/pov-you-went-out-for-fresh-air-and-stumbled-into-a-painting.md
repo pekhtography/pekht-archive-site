@@ -19,4 +19,4 @@ hashtags:
   - "evening"
 ---
 POV: you went out for fresh air and stumbled into a painting instead 🌿🖼️✨ Tell me this isn’t surreal. #LivingCanvas
-#sunset #sky #nature #park #trees #street #people #color #travel #landscape #urban #evening https://t.co/FhTI7Z1VJf
+#sunset #sky #nature #park #trees #street #people #color #travel #landscape #urban #evening

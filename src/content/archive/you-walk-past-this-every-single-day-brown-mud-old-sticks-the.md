@@ -14,4 +14,4 @@ brown mud, old sticks, the usual March grey.
 Then your shoe almost crushes it: 
 indigo, trembling, smaller than your thumbnail. 💙 
 The ground kept a secret all winter.
-#Scilla #SpringAwakening #NatureMoments #FlowerPhotography https://t.co/LK3RlxYV1n
+#Scilla #SpringAwakening #NatureMoments #FlowerPhotography

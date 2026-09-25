@@ -15,4 +15,4 @@ hashtags:
   - "Heritage"
   - "Travel"
 ---
-#Exhibition #Fountain #Architecture #Sunset #Crowd #Culture #History #Landmark #Heritage #Travel https://t.co/R4k3CJQ8OZ
+#Exhibition #Fountain #Architecture #Sunset #Crowd #Culture #History #Landmark #Heritage #Travel

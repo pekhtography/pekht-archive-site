@@ -21,4 +21,4 @@ hashtags:
   - "soul"
 ---
 Every time my cat gives me ‘the look,’ I feel like I’m getting scolded for an unnoticed crime. Sorry for the delayed dinner, Your Majesty!
-#cat #bed #gaze #disappointment #judgment #idiot #contemplation #reflection #thoughtful #puzzle #wisdom #stillness #mystery #universe #soul https://t.co/W2aSr4a8qC
+#cat #bed #gaze #disappointment #judgment #idiot #contemplation #reflection #thoughtful #puzzle #wisdom #stillness #mystery #universe #soul

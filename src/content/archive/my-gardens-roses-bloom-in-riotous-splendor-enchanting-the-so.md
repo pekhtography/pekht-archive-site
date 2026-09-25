@@ -23,4 +23,4 @@ hashtags:
   - "nostalgia"
 ---
 My garden's roses bloom in riotous splendor, enchanting the soul and perfuming the air with secrets of love
-#roses #romance #beauty #sunshine #bloom #fragrance #aroma #garden #sanctuary #joy #delight #splendor #extravagance #petals #love #memories #nostalgia https://t.co/giHXOxFJUk
+#roses #romance #beauty #sunshine #bloom #fragrance #aroma #garden #sanctuary #joy #delight #splendor #extravagance #petals #love #memories #nostalgia

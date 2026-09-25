@@ -12,4 +12,4 @@ hashtags:
 Pink petals, wet from rain, pressed against cold stone — 
 the city forgot to be grey today 🌸 
 and the flowers didn't ask 💜
-#UrbanNature #CityMoments #PetalRebellion #WeatherMood https://t.co/VNSrg5VB2v
+#UrbanNature #CityMoments #PetalRebellion #WeatherMood

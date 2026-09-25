@@ -13,4 +13,4 @@ hashtags:
   - "old"
   - "memories"
 ---
-#park #sculptures #silent #conversation #past #garden #old #memories https://t.co/Ie11cX97m0
+#park #sculptures #silent #conversation #past #garden #old #memories

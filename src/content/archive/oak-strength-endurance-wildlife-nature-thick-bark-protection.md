@@ -24,4 +24,4 @@ hashtags:
   - "Vitality"
   - "Resilience"
 ---
-#Oak #Strength #Endurance #Wildlife #Nature #Thick #Bark #Protection #Green #Leaves #Longevity #Acorns #EnglishOak #Majesty #ThickBark #Armor #GreenLeaves #Vitality #Resilience https://t.co/SKouT7w4Tw
+#Oak #Strength #Endurance #Wildlife #Nature #Thick #Bark #Protection #Green #Leaves #Longevity #Acorns #EnglishOak #Majesty #ThickBark #Armor #GreenLeaves #Vitality #Resilience

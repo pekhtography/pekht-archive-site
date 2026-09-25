@@ -12,4 +12,4 @@ hashtags:
 Look at my hairy stem 🧔🌿
 Real men don’t need tinsel to shine 🌟
 I’m the New Year’s resolution that actually survived the first week of winter ✅ 
-#NewYearSurvival #MensLogic #NatureWhisper #GoldenVibe https://t.co/IemqYKa3nt
+#NewYearSurvival #MensLogic #NatureWhisper #GoldenVibe

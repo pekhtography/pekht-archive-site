@@ -13,4 +13,4 @@ Cold cobblestone under your feet,
 warm gold bleeding across the sky. 🌇 
 Eight centuries of brick whispering the same thing to every new crowd shuffling past: 
 you, too, are temporary. ✨
-#History #CityPhotography #TravelMoments #Architecture https://t.co/FbOucwR39D
+#History #CityPhotography #TravelMoments #Architecture

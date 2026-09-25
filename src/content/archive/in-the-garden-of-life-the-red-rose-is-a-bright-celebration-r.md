@@ -10,4 +10,4 @@ hashtags:
   - "garden"
   - "red"
 ---
-In the garden of life, the red rose is a bright celebration #rose #beauty #love #garden #red https://t.co/eifmZSL55f
+In the garden of life, the red rose is a bright celebration #rose #beauty #love #garden #red

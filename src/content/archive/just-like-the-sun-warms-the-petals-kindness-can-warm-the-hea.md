@@ -11,4 +11,4 @@ hashtags:
   - "kindness"
   - "rhododendron"
 ---
-Just like the sun warms the petals, kindness can warm the heart #bloom #sun #garden #nature #kindness #rhododendron https://t.co/ofDgDcE8IZ
+Just like the sun warms the petals, kindness can warm the heart #bloom #sun #garden #nature #kindness #rhododendron

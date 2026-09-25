@@ -11,4 +11,4 @@ hashtags:
 ---
 This clown took one look at modern Christmas lights 
 and said "ah yes, my nightmares have texture now" 🎪💫 
-#Christmas #VintageOrnaments #ChristmasLights #Melancholy https://t.co/ieZn4jrN9Z
+#Christmas #VintageOrnaments #ChristmasLights #Melancholy

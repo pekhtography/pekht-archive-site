@@ -10,4 +10,4 @@ hashtags:
   - "zoo"
 ---
 Breaking: Local zebra refuses to conform to society's expectations of being either black OR white 🦓 "I'll be both, thank you very much," she seems to say while casually being the most stylish animal in the entire zoo 👑 Icon behavior honestly 🔥 #RebelZebra
-#zebra #wildlife #zoo https://t.co/H6iGajLb78
+#zebra #wildlife #zoo

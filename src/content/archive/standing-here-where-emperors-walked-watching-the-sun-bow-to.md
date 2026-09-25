@@ -19,4 +19,4 @@ hashtags:
   - "Dramatic"
 ---
 Standing here where emperors walked, watching the sun bow to the Kremlin towers 🌅 Some stones hold more secrets than libraries hold books 📚⭐ #KremlinSunset
-#Kremlin #Moscow #Russia #Sunset #Architecture #History #Power #Fortress #Tower #Cathedral #Heritage #Dramatic https://t.co/ibexPraUZN
+#Kremlin #Moscow #Russia #Sunset #Architecture #History #Power #Fortress #Tower #Cathedral #Heritage #Dramatic

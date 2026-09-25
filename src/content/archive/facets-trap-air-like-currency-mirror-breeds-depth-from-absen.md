@@ -15,4 +15,4 @@ Vertical gold slices silence into occasion.
 The gap before fingerprints—where perfection expires on contact.
 Beauty's most expensive second.
 Maximum shine, minimum human💎🕰️
-#PreGame #SetupLife #EmptyStage #PeakWait https://t.co/lot0iRXQ5B
+#PreGame #SetupLife #EmptyStage #PeakWait

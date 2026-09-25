@@ -17,4 +17,4 @@ hashtags:
   - "explore"
 ---
 Legend says, if you whisper your dreams here, the statues will come to life and help you achieve them — or at least, that's what the tour guide said!
-#architecture #history #grand #heritage #monument #majestic #landmark #iconic #culture #travel #explore https://t.co/MTSoRsftLe
+#architecture #history #grand #heritage #monument #majestic #landmark #iconic #culture #travel #explore

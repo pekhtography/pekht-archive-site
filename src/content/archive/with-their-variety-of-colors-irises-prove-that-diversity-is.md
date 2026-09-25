@@ -18,4 +18,4 @@ hashtags:
   - "outdoors"
 ---
 With their variety of colors, irises prove that 'diversity is the spice of life,' making every garden a unique masterpiece
-#irises #flowers #nature #bloom #purple #garden #petals #spring #beauty #flora #growth #outdoors https://t.co/BboZG17a09
+#irises #flowers #nature #bloom #purple #garden #petals #spring #beauty #flora #growth #outdoors

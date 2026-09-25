@@ -11,4 +11,4 @@ hashtags:
   - "Limitless"
   - "Perspective"
 ---
-Skyscrapers are the cathedrals of the modern era #Skyscraper #Ambition #City #Sky #Limitless #Perspective https://t.co/Vn08SdwZcG
+Skyscrapers are the cathedrals of the modern era #Skyscraper #Ambition #City #Sky #Limitless #Perspective

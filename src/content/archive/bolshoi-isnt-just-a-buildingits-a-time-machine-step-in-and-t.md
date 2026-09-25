@@ -19,4 +19,4 @@ hashtags:
   - "CulturalLegend"
 ---
 Bolshoi isn’t just a building—it’s a time machine. Step in, and the past dances with you. ⏳💃 #TimeTravelInHeels
-#OperaDramaLife #Art #Culture #Travel #Architecture #BolshoiTheatre #MoscowNights #PerformingArts #TimelessBeauty #UrbanRomance #EpicVibes #CulturalLegend https://t.co/FjRdCLT0e0
+#OperaDramaLife #Art #Culture #Travel #Architecture #BolshoiTheatre #MoscowNights #PerformingArts #TimelessBeauty #UrbanRomance #EpicVibes #CulturalLegend

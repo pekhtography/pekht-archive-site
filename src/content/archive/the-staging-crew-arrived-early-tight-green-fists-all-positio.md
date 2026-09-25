@@ -14,4 +14,4 @@ tight green fists, all positioned, all waiting. 🌿
 Then the headliner opened: 
 dense, powdery-sweet, the kind of pink that smells louder than it looks. 🌸 
 The ants had already been paid.
-#GardenLife #PeonyLovers #SlowBloom #PinkMood https://t.co/RcJxaYwX9w
+#GardenLife #PeonyLovers #SlowBloom #PinkMood

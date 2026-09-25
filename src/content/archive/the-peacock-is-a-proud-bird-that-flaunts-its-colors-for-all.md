@@ -11,4 +11,4 @@ hashtags:
   - "proud"
   - "shine"
 ---
-The peacock is a proud bird that flaunts its colors for all to see #peacock #beauty #grace #colors #proud #shine https://t.co/NK7Z6qnPgc
+The peacock is a proud bird that flaunts its colors for all to see #peacock #beauty #grace #colors #proud #shine

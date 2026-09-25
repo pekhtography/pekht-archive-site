@@ -20,4 +20,4 @@ hashtags:
   - "Nature"
 ---
 Fuchsia rose: the flashy diva of the garden—always blooming with confidence and a hint of sweet sass!
-#Rose #Fuchsia #Vibrance #Inflorescence #Cluster #Sweetness #Joy #Romance #Love #bloom #thorns #Passion #Garden #Nature https://t.co/6iKWQhx8UJ
+#Rose #Fuchsia #Vibrance #Inflorescence #Cluster #Sweetness #Joy #Romance #Love #bloom #thorns #Passion #Garden #Nature

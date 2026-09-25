@@ -12,4 +12,4 @@ hashtags:
 Clouds closed the lid. 🌩️ 
 Underneath: embers so orange your pupils physically contract. 
 The sky filed a threat and a gift in the same envelope. 🔥
-#SkyPhotography #NatureIsUnreal #Cloudscape #MoodSky https://t.co/meN8NfByko
+#SkyPhotography #NatureIsUnreal #Cloudscape #MoodSky

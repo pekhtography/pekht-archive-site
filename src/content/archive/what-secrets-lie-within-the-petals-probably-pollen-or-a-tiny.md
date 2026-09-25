@@ -18,4 +18,4 @@ hashtags:
   - "garden"
 ---
 What secrets lie within the petals? Probably pollen. Or a tiny bee conspiracy
-#tulip #bud #flower #nature #spring #green #petals #yellow #bloom #plant #fresh #garden https://t.co/edBvJ4m6MO
+#tulip #bud #flower #nature #spring #green #petals #yellow #bloom #plant #fresh #garden

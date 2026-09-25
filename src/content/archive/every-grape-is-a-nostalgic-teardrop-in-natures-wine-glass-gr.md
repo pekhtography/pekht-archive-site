@@ -26,4 +26,4 @@ hashtags:
   - "wine"
 ---
 Every grape is a nostalgic teardrop in nature's wine glass
-#Grape #Vine #Growth #Light #Glow #Nostalgia #Wishes #Hopes #Joy #Vineyard #Sunlight #Radiance #Sweet #Delight #Memories #Forgotten #Summers #Bliss #nature #wine https://t.co/W0MbREezYE
+#Grape #Vine #Growth #Light #Glow #Nostalgia #Wishes #Hopes #Joy #Vineyard #Sunlight #Radiance #Sweet #Delight #Memories #Forgotten #Summers #Bliss #nature #wine

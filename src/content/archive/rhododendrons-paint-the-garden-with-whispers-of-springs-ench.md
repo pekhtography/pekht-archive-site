@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 Rhododendrons paint the garden with whispers of spring's enchantment
-#Rhododendrons #Blooms #Nature #Garden #Pink #Flowers #Spring #Blossoms #Petals #Outdoors #Vibrant #Beauty https://t.co/q7Nejtste1
+#Rhododendrons #Blooms #Nature #Garden #Pink #Flowers #Spring #Blossoms #Petals #Outdoors #Vibrant #Beauty

@@ -24,4 +24,4 @@ hashtags:
   - "Playground"
 ---
 When the storm raged, it turned the streets into rivers and the lawns into aquatic playgrounds
-#Residents #Displacement #Floods #Deluge #Lawn #Storm #Chaotic #Homes #Shelter #Rain #Wind #Storm #Tempest #Streets #Boulevard #Rivers #Flow #Aquatic #Playground https://t.co/TeTCFWfDFR
+#Residents #Displacement #Floods #Deluge #Lawn #Storm #Chaotic #Homes #Shelter #Rain #Wind #Storm #Tempest #Streets #Boulevard #Rivers #Flow #Aquatic #Playground

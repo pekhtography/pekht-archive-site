@@ -19,4 +19,4 @@ hashtags:
   - "ornithology"
 ---
 Breaking: Ducks file complaint against boring pond life, demand upgrade to premium grass experience 📋🌿 #FirstWorldDuckProblems
-#ruddy #shelduck #ducks #waterfowl #birds #nature #wildlife #spring #grass #flowers #photography #ornithology https://t.co/xnlrROImpO
+#ruddy #shelduck #ducks #waterfowl #birds #nature #wildlife #spring #grass #flowers #photography #ornithology

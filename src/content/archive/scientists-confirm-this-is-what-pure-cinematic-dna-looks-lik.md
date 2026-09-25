@@ -17,4 +17,4 @@ hashtags:
   - "Creative"
 ---
 Scientists confirm: This is what pure cinematic DNA looks like under a microscope 🔬 Babina extracted the essence of Almodóvar and crystallized it into pure visual poetry! 🧬🎨💎 #CinematicDNA
-#Almodovar #Cinema #Director #Portrait #Art #Design #Film #Spanish #Poster #Creative https://t.co/YR51W4fNyE
+#Almodovar #Cinema #Director #Portrait #Art #Design #Film #Spanish #Poster #Creative

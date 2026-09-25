@@ -18,4 +18,4 @@ hashtags:
   - "Stream"
 ---
 The sunlight dripped through the branches like liquid gold, painting the earth with warmth and fading into an amber scattering of fallen leaves on the surface of a silver stream
-#autumn #Sunlight #trees #Branches #Gold #nature #Earth #Amber #warmth #Leaves #change #Stream https://t.co/BdImMQL8lq
+#autumn #Sunlight #trees #Branches #Gold #nature #Earth #Amber #warmth #Leaves #change #Stream

@@ -19,4 +19,4 @@ hashtags:
   - "paradise"
 ---
 Breaking: area men achieve enlightenment through strategic procrastination 📿⏰ Buddha found under tree, these guys found answers above water 🧘‍♂️💧 #LazyEnlightenment
-#swings #ocean #friendship #summer #tropical #relaxation #art #painting #beach #freedom #vacation #paradise https://t.co/nZm946RiOq
+#swings #ocean #friendship #summer #tropical #relaxation #art #painting #beach #freedom #vacation #paradise

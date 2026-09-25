@@ -19,4 +19,4 @@ hashtags:
   - "beauty"
 ---
 Tulips: nature’s supermodels, striking poses—except without the drama (or attitude). 🌷😎 Fashion week, who? 😂 #ModelBehaviorNature
-#tulips #flowers #spring #garden #nature #bloom #colorful #flora #sunlight #botany #plants #beauty https://t.co/0M5MyAuH0Q
+#tulips #flowers #spring #garden #nature #bloom #colorful #flora #sunlight #botany #plants #beauty

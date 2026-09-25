@@ -16,4 +16,4 @@ hashtags:
   - "Explore"
 ---
 The Grand Expo fountains: powerful enough to wash away your Monday blues—and maybe your phone too, in the heart of Urbania!
-#Fountain #Sunset #Crowd #Landmark #Architecture #Travel #Urban #Heritage #Evening #Explore https://t.co/oAm7tLJSVU
+#Fountain #Sunset #Crowd #Landmark #Architecture #Travel #Urban #Heritage #Evening #Explore

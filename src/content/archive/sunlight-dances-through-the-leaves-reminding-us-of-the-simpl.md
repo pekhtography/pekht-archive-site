@@ -19,4 +19,4 @@ hashtags:
   - "Botany"
 ---
 Sunlight dances through the leaves 🌿💚✨, reminding us of the simple beauty in nature. Let's take a moment to appreciate the little things #NatureLovers
-#Nature #Green #Plant #Leaves #Sunlight #Texture #Garden #Growth #Serenity #Peace #Flora #Botany https://t.co/JYTbHh4JgF
+#Nature #Green #Plant #Leaves #Sunlight #Texture #Garden #Growth #Serenity #Peace #Flora #Botany

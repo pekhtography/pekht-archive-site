@@ -17,4 +17,4 @@ hashtags:
   - "lonelymoments"
 ---
 Life is a station: arrivals, departures, delays 🕰️ We wait, we run, we miss. But sometimes waiting is the real destination. #timelessrails
-#TrainToTheFuture #citylights #urbanphotography #nightvibes #metropolis #railwaystation #commuterlife #travelgram #moderncity #lonelymoments https://t.co/cyFQuDugoY
+#TrainToTheFuture #citylights #urbanphotography #nightvibes #metropolis #railwaystation #commuterlife #travelgram #moderncity #lonelymoments

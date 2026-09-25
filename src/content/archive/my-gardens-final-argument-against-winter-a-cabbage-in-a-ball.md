@@ -11,4 +11,4 @@ hashtags:
 My garden’s final argument against winter: 
 a cabbage in a ballgown and her fiery yellow bodyguards. 
 They don’t fear the cold; they style it, they own it. 🥬🔥💛 
-#FallVibes #FallGarden #BeautyInDecay https://t.co/zCDUyKw73o
+#FallVibes #FallGarden #BeautyInDecay

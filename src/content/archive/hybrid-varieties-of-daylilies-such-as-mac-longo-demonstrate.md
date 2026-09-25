@@ -14,4 +14,4 @@ hashtags:
   - "charm"
   - "daylily"
 ---
-Hybrid varieties of daylilies, such as Mac longo, demonstrate an incredible palette of shades and forms that attract the attention of gardeners #elegance #hybrid #innovation #garden #color #vibrancy #attraction #charm #daylily https://t.co/7R3Gs9QUTR
+Hybrid varieties of daylilies, such as Mac longo, demonstrate an incredible palette of shades and forms that attract the attention of gardeners #elegance #hybrid #innovation #garden #color #vibrancy #attraction #charm #daylily

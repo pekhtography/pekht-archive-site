@@ -13,4 +13,4 @@ Then the windows start winking. One by one.
 Like the city is sending Morse code: relax, idiot.💡
 Turns out tension is just a lonely feeling.
 The crowd knows when to flick the switch
-#GoldenHour #CitySilhouette https://t.co/sHyCs5no91
+#GoldenHour #CitySilhouette

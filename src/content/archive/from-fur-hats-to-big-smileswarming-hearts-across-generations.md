@@ -20,4 +20,4 @@ hashtags:
   - "Russia"
 ---
 From fur hats to big smiles—warming hearts across generations 🧔🏼👵🏼🌟 Embrace the warmth of heritage and good stories! 📜❄️🧣 #TimelessTradition #GenerationsGlow
-#Tradition #Winter #Costume #Folklore #Festival #Vintage #Culture #Heritage #FurHat #Embroidery #Red #Russia https://t.co/8qhWkFkREt
+#Tradition #Winter #Costume #Folklore #Festival #Vintage #Culture #Heritage #FurHat #Embroidery #Red #Russia

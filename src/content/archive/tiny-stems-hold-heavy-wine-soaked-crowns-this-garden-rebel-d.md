@@ -12,4 +12,4 @@ hashtags:
 Tiny stems hold heavy wine-soaked crowns. 
 This garden rebel drinks frost and exhales pure, arrogant color. 
 Smallest keys open the heaviest seasons. 🍷❄️🗝️ 
-#Nature #GardenDesign #SpringVibes #VelvetTexture https://t.co/2ardNXAPrp
+#Nature #GardenDesign #SpringVibes #VelvetTexture

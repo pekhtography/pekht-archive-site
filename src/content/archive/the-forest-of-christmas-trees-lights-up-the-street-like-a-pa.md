@@ -27,4 +27,4 @@ hashtags:
   - "wonder"
 ---
 The forest of Christmas trees lights up the street like a parade of hopeful wishes
-#forest #ChristmasTrees #street #lights #wishes #spirit #magic #life #rebirth #nature #celebration #illumination #pathway #parade #procession #dreams #joy #happiness #peace #tranquility #wonder https://t.co/Y2q8BSGC5J
+#forest #ChristmasTrees #street #lights #wishes #spirit #magic #life #rebirth #nature #celebration #illumination #pathway #parade #procession #dreams #joy #happiness #peace #tranquility #wonder

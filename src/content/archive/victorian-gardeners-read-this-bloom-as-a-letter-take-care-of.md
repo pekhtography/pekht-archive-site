@@ -13,4 +13,4 @@ Victorian gardeners read this bloom as a letter:
 'take care of yourself for me.' 🌿 
 The azalea. Coral. Crumpled. Mildly toxic. 
 The most affectionate warning in any language ever written. 🧡
-#NaturePhotography #GardenLife #AzaleaSeason #BloomingNow https://t.co/r6XHykYMii
+#NaturePhotography #GardenLife #AzaleaSeason #BloomingNow

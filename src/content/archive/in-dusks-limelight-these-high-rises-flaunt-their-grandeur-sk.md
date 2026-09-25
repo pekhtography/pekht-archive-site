@@ -17,4 +17,4 @@ hashtags:
   - "Sunset"
 ---
 In dusk's limelight, these high-rises flaunt their grandeur
-#Skyscrapers #Giants #Twilight #Spire #Dusk #Silhouettes #Stars #Grand #Shimmer #Titans #Sunset https://t.co/Dty8jlFuSm
+#Skyscrapers #Giants #Twilight #Spire #Dusk #Silhouettes #Stars #Grand #Shimmer #Titans #Sunset

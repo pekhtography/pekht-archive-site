@@ -14,4 +14,4 @@ My pollination strategy?
 Waiting for a bee with a PhD in abstract art. 
 My petals are a riddle wrapped in lace. 
 Survival is overrated; being a conversation piece is forever 🐝🧩 
-#Aesthetic #GardenHumor #Maximalism #UnnecessaryBeauty #Columbine https://t.co/jYDZzBX4gU
+#Aesthetic #GardenHumor #Maximalism #UnnecessaryBeauty #Columbine

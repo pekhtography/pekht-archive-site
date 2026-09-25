@@ -12,4 +12,4 @@ hashtags:
   - "trees"
 ---
 Museums aren't just buildings - they're time machines wrapped in marble and memories 🏛️ Walking through autumn leaves to reach stories that span centuries reminds us that beauty exists in both nature and knowledge ✨🍂 #MuseumMagic
-#museum #autumn #architecture #culture #trees https://t.co/IaE13ynjEJ
+#museum #autumn #architecture #culture #trees

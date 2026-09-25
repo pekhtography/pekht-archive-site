@@ -18,4 +18,4 @@ hashtags:
   - "WanderlustMood"
 ---
 Not Hogwarts, just real streets ✨ but the clock whispers of magic and old stories every evening. #TimeSpireMagic
-#Architecture #Travel #Cityscape #Sunset #ClockTower #HistoricBuildings #UrbanExploration #EveningStroll #EuropeanStreets #TimelessBeauty #WanderlustMood https://t.co/kV1ZZAO0QC
+#Architecture #Travel #Cityscape #Sunset #ClockTower #HistoricBuildings #UrbanExploration #EveningStroll #EuropeanStreets #TimelessBeauty #WanderlustMood

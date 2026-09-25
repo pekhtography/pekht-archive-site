@@ -18,4 +18,4 @@ hashtags:
   - "Explorer"
   - "Discovery"
 ---
-Every kitten's a furry Indiana Jones, uncovering life's mysteries one clumsy step at a time! #Kitten #Playfulness #World #Exploration #Comfort #Warmth #Moments #Pawprints #Home #Curiosity #Adventure #Explorer #Discovery https://t.co/FoLE06ATVQ
+Every kitten's a furry Indiana Jones, uncovering life's mysteries one clumsy step at a time! #Kitten #Playfulness #World #Exploration #Comfort #Warmth #Moments #Pawprints #Home #Curiosity #Adventure #Explorer #Discovery

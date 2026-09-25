@@ -14,4 +14,4 @@ Missed one ridiculous sentinel—
 casting shadow longer than logic, standing sentry over nothing or everything, depending how your heart tilts. 
 That's winter 🌾☀️ 
 Beautiful. Pointless. Yours. 
-#WinterVibes #Minimalism #Solitude #QuietBeauty https://t.co/MtJ549Vejm
+#WinterVibes #Minimalism #Solitude #QuietBeauty

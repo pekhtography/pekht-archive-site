@@ -19,4 +19,4 @@ hashtags:
   - "square"
 ---
 From the ashes of war, heroes rise 🔥 Red Square remembers what freedom costs ⭐ #HeroicLegacy
-#aircraft #soviet #moscow #kremlin #history #military #aviation #russia #memorial #victory #heritage #square https://t.co/6jqZbMxLig
+#aircraft #soviet #moscow #kremlin #history #military #aviation #russia #memorial #victory #heritage #square

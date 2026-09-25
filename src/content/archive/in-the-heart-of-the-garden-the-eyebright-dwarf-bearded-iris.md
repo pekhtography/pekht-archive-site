@@ -19,4 +19,4 @@ hashtags:
   - "Greenery"
 ---
 In the heart of the garden, the Eyebright Dwarf Bearded Iris stretches its golden petals towards the sun, a small beacon of hope navigating through the greens of life
-#Eyebright #Flower #Dwarf #Tiny #Bearded #Iris #Beauty #Golden #Sunshine #Petals #Softness #Leaves #Greenery https://t.co/sY59jMUUYZ
+#Eyebright #Flower #Dwarf #Tiny #Bearded #Iris #Beauty #Golden #Sunshine #Petals #Softness #Leaves #Greenery

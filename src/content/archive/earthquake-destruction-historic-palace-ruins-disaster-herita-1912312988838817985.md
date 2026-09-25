@@ -20,4 +20,4 @@ hashtags:
   - "Aftermath"
   - "History"
 ---
-#Earthquake #Destruction #Historic #Palace #Ruins #Disaster #Heritage #Collapse #Tragedy #Devastation #Cultural #Loss #Damage #Aftermath #History https://t.co/KOlHz2r1fx
+#Earthquake #Destruction #Historic #Palace #Ruins #Disaster #Heritage #Collapse #Tragedy #Devastation #Cultural #Loss #Damage #Aftermath #History

@@ -18,4 +18,4 @@ hashtags:
   - "Blossom"
   - "Fluff"
 ---
-#Fireweed #Bloom #Fading #Plant #Resilience #Strength #Renewal #Transformation #Change #Nature #Wild #Blossom #Fluff https://t.co/0empyC09gy
+#Fireweed #Bloom #Fading #Plant #Resilience #Strength #Renewal #Transformation #Change #Nature #Wild #Blossom #Fluff

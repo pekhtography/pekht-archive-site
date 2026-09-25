@@ -26,4 +26,4 @@ hashtags:
   - "Colors"
 ---
 Each petal a brushstroke, painting the canvas of life with hues of harmony
-#Rainbow #Rose #Colorful #Blooms #Vibrant #Petals #Floral #Art #Bright #Blossoms #Multicolor #Nature #Flower #Power #Garden #Delight #Lovers #Beauty #Blooming #Colors https://t.co/BVLobtMQRG
+#Rainbow #Rose #Colorful #Blooms #Vibrant #Petals #Floral #Art #Bright #Blossoms #Multicolor #Nature #Flower #Power #Garden #Delight #Lovers #Beauty #Blooming #Colors

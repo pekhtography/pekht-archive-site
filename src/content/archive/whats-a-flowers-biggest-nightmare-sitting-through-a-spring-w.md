@@ -24,4 +24,4 @@ hashtags:
   - "outdoors"
 ---
 What's a flower's biggest nightmare? Sitting through a 'spring’ without a single admirer! Now, that's drama!
-#Hollyhock #Mallow #Flower #Pink #Garden #Nature #Bloom #Flora #Botanical #Petal #Plant #Colorful #Beauty #Botany #Spring #botanical #vibrant #outdoors https://t.co/3TVPG4FF4w
+#Hollyhock #Mallow #Flower #Pink #Garden #Nature #Bloom #Flora #Botanical #Petal #Plant #Colorful #Beauty #Botany #Spring #botanical #vibrant #outdoors

@@ -14,4 +14,4 @@ While tulips wait for permission,
 this one already pickpocketed spring. 
 The fluff isn’t fashion. It’s a space suit. 
 Frost hits? Flower just zips up. 🌬️
-#NatureResilience #EarlySpring #FuzzyFlowers #WinterBloom https://t.co/bcJyebQGwE
+#NatureResilience #EarlySpring #FuzzyFlowers #WinterBloom

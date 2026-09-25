@@ -18,4 +18,4 @@ hashtags:
   - "Outdoors"
 ---
 If lupines had a motto, it would be ‘Climb high, bloom loud.’
-#Lupine #Flowers #Bloom #Garden #Nature #Pink #Floral #Plants #Spring #Meadow #Beauty #Outdoors https://t.co/Odx7HhmtOr
+#Lupine #Flowers #Bloom #Garden #Nature #Pink #Floral #Plants #Spring #Meadow #Beauty #Outdoors

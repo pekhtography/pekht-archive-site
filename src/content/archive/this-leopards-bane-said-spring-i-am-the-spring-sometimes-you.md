@@ -19,4 +19,4 @@ hashtags:
   - "alpine"
 ---
 This Leopard's bane said "Spring? I AM the spring!" 🌼🔥 Sometimes you have to be your own season starter! ⚡ Nature's entrepreneur right here. #SpringStarter
-#doronicum #leopardsbane #wildflower #spring #bloom #yellow #meadow #botanical #nature #perennial #mountain #alpine https://t.co/ZiugF7PYCk
+#doronicum #leopardsbane #wildflower #spring #bloom #yellow #meadow #botanical #nature #perennial #mountain #alpine

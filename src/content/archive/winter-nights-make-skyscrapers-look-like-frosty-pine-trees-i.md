@@ -23,4 +23,4 @@ hashtags:
   - "trees"
 ---
 Winter nights make skyscrapers look like frosty pine trees — if you squint hard enough and add a dash of moonlight magic!
-#skyscrapers #dreams #fullmoon #silver #towers #ambition #winter #chill #sentinels #night #magic #performer #shivery #frosty #moonlight #pine #trees https://t.co/vlj8SVoskI
+#skyscrapers #dreams #fullmoon #silver #towers #ambition #winter #chill #sentinels #night #magic #performer #shivery #frosty #moonlight #pine #trees

@@ -27,4 +27,4 @@ hashtags:
   - "snowdrifts"
 ---
 If this pond could talk, it would probably complain about its snow hat being a tad too fluffy!
-#pond #glassy #canvas #reflects #artistry #winter #frostkissed #tranquil #frozen #woodland #glistening #snowy #blanket #wildlife #snow #fish #slide #gracefully #icy #mirrors #snowdrifts https://t.co/4pPZVBWrfQ
+#pond #glassy #canvas #reflects #artistry #winter #frostkissed #tranquil #frozen #woodland #glistening #snowy #blanket #wildlife #snow #fish #slide #gracefully #icy #mirrors #snowdrifts

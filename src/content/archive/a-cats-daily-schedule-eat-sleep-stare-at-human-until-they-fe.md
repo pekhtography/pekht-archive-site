@@ -17,4 +17,4 @@ hashtags:
   - "sleep"
 ---
 A cat's daily schedule: eat, sleep, stare at human until they feel awkward, repeat.
-#cat #schedule #nap #comfort #stare #control #plotting #overlord #awkward #eat #sleep https://t.co/ZNDmhyQuEH
+#cat #schedule #nap #comfort #stare #control #plotting #overlord #awkward #eat #sleep

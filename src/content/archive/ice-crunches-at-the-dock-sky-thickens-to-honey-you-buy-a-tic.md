@@ -14,4 +14,4 @@ floating past a fortress that outlived more tourists than stones in its walls⛵
 One sunset.
 Five centuries of walls.
 You're the second between
-#PowerAndBeauty #LuxuryTravel #GoldenHour https://t.co/gFtu2iEDoI
+#PowerAndBeauty #LuxuryTravel #GoldenHour

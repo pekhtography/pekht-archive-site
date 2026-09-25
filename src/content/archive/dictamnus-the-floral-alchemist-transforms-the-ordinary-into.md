@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 Dictamnus, the floral alchemist, transforms the ordinary into the extraordinary, painting the garden with strokes of pure enchantment
-#Dictamnus #Garden #Blooms #Nature #Flora #Botany #Elegance #Wildflowers #Petals #Growth #Blossoms #Beauty https://t.co/X7XPhA554B
+#Dictamnus #Garden #Blooms #Nature #Flora #Botany #Elegance #Wildflowers #Petals #Growth #Blossoms #Beauty

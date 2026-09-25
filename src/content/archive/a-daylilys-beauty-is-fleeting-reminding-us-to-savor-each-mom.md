@@ -9,4 +9,4 @@ hashtags:
   - "daylily"
   - "garden"
 ---
-A daylily’s beauty is fleeting, reminding us to savor each moment #flower #bloom #daylily #garden https://t.co/vcrpZsqhxM
+A daylily’s beauty is fleeting, reminding us to savor each moment #flower #bloom #daylily #garden

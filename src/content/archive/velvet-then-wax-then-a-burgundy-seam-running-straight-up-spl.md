@@ -15,4 +15,4 @@ Ottoman sultans lit these with candles strapped to tortoises at midnight.
 Slow. 
 Bright. 
 Moving toward something… 🕯️
-#Flowers #TulipSeason #MacroPhotography #RedEnergy https://t.co/UAL2y9L52I
+#Flowers #TulipSeason #MacroPhotography #RedEnergy

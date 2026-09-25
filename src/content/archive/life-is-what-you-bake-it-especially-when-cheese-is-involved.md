@@ -19,4 +19,4 @@ hashtags:
   - "Yummy"
 ---
 Life is what you bake it — especially when cheese is involved! 🧀🔥 Fresh cheese buns coming your way. #CheeseLifeStory
-#Cheesebuns #Baking #Oven #Homemade #Bread #Cheese #Snack #Delicious #Fresh #Crust #Golden #Yummy https://t.co/YiXV70CvwP
+#Cheesebuns #Baking #Oven #Homemade #Bread #Cheese #Snack #Delicious #Fresh #Crust #Golden #Yummy

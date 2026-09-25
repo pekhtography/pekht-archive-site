@@ -13,4 +13,4 @@ Six buds clenched tight like tiny fists 👊 —
 then two punches land: 
 white petals, yellow gut, stem still shaking 🌸🌿 
 That bud up top? Still loading.
-#WildFlowers #NatureCloseUp #BotanicalArt #FlowerPower https://t.co/PouBnpIPhj
+#WildFlowers #NatureCloseUp #BotanicalArt #FlowerPower

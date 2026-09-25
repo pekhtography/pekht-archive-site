@@ -12,4 +12,4 @@ hashtags:
 We store time in objects. 
 In matte ceramic, in the blue glow of a bulb no bigger than a tear. 
 A century of winters, held perfectly still by a child who never ages. ❄️👧
-#Nostalgia #ChristmasVibes #MiniatureWorld #QuietMagic https://t.co/9DSa8amAZo
+#Nostalgia #ChristmasVibes #MiniatureWorld #QuietMagic

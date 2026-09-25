@@ -14,4 +14,4 @@ hashtags:
   - "winte"
   - "gliding"
 ---
-In the city of lights, laughter and joy fill the air, as skaters twirl beneath the winter stars #skating #dance #ice #call #city #lights #joy #winte #gliding https://t.co/RcLU0yCPss
+In the city of lights, laughter and joy fill the air, as skaters twirl beneath the winter stars #skating #dance #ice #call #city #lights #joy #winte #gliding

@@ -8,4 +8,4 @@ hashtags:
   - "RussianWine"
   - "LuxuryAndLegacy"
 ---
-This isn’t just a wine hall. It’s a time machine to 19th-century St. Petersburg, where every sip is a toast to history—and every hangover a lesson in humility. 🕰️🍷 #WineCulture #RussianWine #LuxuryAndLegacy https://t.co/T8Lvo6AYha
+This isn’t just a wine hall. It’s a time machine to 19th-century St. Petersburg, where every sip is a toast to history—and every hangover a lesson in humility. 🕰️🍷 #WineCulture #RussianWine #LuxuryAndLegacy

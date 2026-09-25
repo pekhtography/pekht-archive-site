@@ -18,4 +18,4 @@ hashtags:
   - "evergreen"
 ---
 The shoots are competing in a 'growth race,' each aiming to be the tallest 
-#pine #shoots #nature #green #growth #forest #spring #botany #life #wilderness #beauty #evergreen https://t.co/iXXFdUTxGC
+#pine #shoots #nature #green #growth #forest #spring #botany #life #wilderness #beauty #evergreen

@@ -14,4 +14,4 @@ Bark angles, bottle curves, grass-stuffed gaps.
 He perches where precision quit—just care, uneven and raw. 
 Your hands, his wings: 
 trust negotiated in crooked lines. 🕊️✨ 
-#Nature #Birdwatching #DIYGarden #SimpleJoy https://t.co/3uzTGBhIqw
+#Nature #Birdwatching #DIYGarden #SimpleJoy

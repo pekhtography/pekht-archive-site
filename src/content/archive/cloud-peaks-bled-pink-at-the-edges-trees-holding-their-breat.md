@@ -13,4 +13,4 @@ Cloud-peaks bled pink at the edges, trees holding their breath below. 🌄
 Sky assembled a full mountain range — 
 no rocks, no warranty, no refunds. ☁️ 
 My chest believed every inch of it. 🩷
-#NaturePhotography #CloudWatching #FakeItNature #GoldenHour https://t.co/lXOPZUWYeQ
+#NaturePhotography #CloudWatching #FakeItNature #GoldenHour

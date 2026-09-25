@@ -13,4 +13,4 @@ hashtags:
   - "Lights"
   - "Glow"
 ---
-The red and white on that toy ambulance stand out, the perfect blend of vibrant and calm #ToyAmbulance #Rescue #Bright #Vibrant #Store #Wonder #Lights #Glow https://t.co/xePEuiBac2
+The red and white on that toy ambulance stand out, the perfect blend of vibrant and calm #ToyAmbulance #Rescue #Bright #Vibrant #Store #Wonder #Lights #Glow

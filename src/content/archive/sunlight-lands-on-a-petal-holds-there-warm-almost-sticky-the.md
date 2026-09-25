@@ -12,4 +12,4 @@ hashtags:
 Sunlight lands on a petal, holds there — warm, almost sticky. 🌸 
 The spruce behind it stood through thirty winters without once asking to be noticed. 🌲 
 One moment. Two lifetimes.
-#QuietNature #PeonyDay #GardenDepth #SlowBeauty https://t.co/Py3mEfP3o5
+#QuietNature #PeonyDay #GardenDepth #SlowBeauty

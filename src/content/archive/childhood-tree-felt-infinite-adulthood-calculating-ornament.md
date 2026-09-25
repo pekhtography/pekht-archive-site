@@ -12,4 +12,4 @@ hashtags:
 Childhood: tree felt infinite. 
 Adulthood: calculating ornament weight distribution and fire hazard probability. 
 Blue sky stayed perfect tho 💙🎄 
-#Christmas #ChristmasTree #ChristmasLights #MagicMoments https://t.co/lxDGJ7zlsN
+#Christmas #ChristmasTree #ChristmasLights #MagicMoments

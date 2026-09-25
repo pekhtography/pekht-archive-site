@@ -18,4 +18,4 @@ hashtags:
   - "Wild"
 ---
 These fluffballs may look cute now, but just wait — soon they’ll throw a full-blown floral fashion show
-#Peony #Spring #Nature #Garden #Growth #Buds #Fluffy #Botany #Emerging #Leaves #Soil #Wild https://t.co/rtSWyxZWwG
+#Peony #Spring #Nature #Garden #Growth #Buds #Fluffy #Botany #Emerging #Leaves #Soil #Wild

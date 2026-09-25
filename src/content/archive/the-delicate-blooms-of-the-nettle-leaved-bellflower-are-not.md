@@ -11,4 +11,4 @@ hashtags:
   - "meadows"
   - "garden"
 ---
-The delicate blooms of the Nettle-leaved Bellflower are not only a feast for the eyes but also serve as a crucial food source for pollinators #Bellflower #purple #petals #elegance #meadows #garden https://t.co/WqvMZiQGMf
+The delicate blooms of the Nettle-leaved Bellflower are not only a feast for the eyes but also serve as a crucial food source for pollinators #Bellflower #purple #petals #elegance #meadows #garden

@@ -12,4 +12,4 @@ hashtags:
 Copper filaments, green core, zero destination. 🌀 
 Every seed-hair already knows the exact coordinates of a spring that hasn't happened yet. 🌿 
 Migration encoded before departure.
-#NatureMacro #SeedScience #WildBotany #NatureUnfiltered https://t.co/V5D9pSeEVI
+#NatureMacro #SeedScience #WildBotany #NatureUnfiltered

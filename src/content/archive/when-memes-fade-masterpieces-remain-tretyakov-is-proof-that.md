@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 When memes fade, masterpieces remain. Tretyakov is proof that the real trend is timeless beauty. 🖼️🔥 #ForeverTrending
-#art #museum #architecture #culture #Moscow #TretyakovGallery #RussianArt #heritage #inspiration #timeless #beauty https://t.co/jY3Cqt5B14
+#art #museum #architecture #culture #Moscow #TretyakovGallery #RussianArt #heritage #inspiration #timeless #beauty

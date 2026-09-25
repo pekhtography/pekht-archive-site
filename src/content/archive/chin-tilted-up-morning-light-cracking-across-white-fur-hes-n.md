@@ -14,4 +14,4 @@ he's not watching the sky. 🐱
 He's auditing it. 
 Three clouds: rejected. One pigeon: pending. ✨ 
 The verdict takes as long as it takes.
-#CatsOfTwitter #WindowCat #CatPhilosophy #SoftLight https://t.co/Xinh53vrbT
+#CatsOfTwitter #WindowCat #CatPhilosophy #SoftLight

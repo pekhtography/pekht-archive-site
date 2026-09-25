@@ -12,4 +12,4 @@ hashtags:
 As the sky spills molten honey over the grey concrete, 
 the 'Maestro' glides through a thick scent of vanilla diesel and warm iron. 
 Coin. 🍯🚢
-#Sunset #RiverCruise #GoldenHourMagic #Glowing https://t.co/OI2xV96Dy7
+#Sunset #RiverCruise #GoldenHourMagic #Glowing

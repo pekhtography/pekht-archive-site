@@ -18,4 +18,4 @@ hashtags:
   - "companionship"
 ---
 Sometimes the best conversations happen without words 🌊 A man, his dog, and the endless ocean - proof that paradise isn't a place, it's a moment of perfect understanding🐕 #BeachBuddies
-#beach #ocean #summer #dog #man #waves #paradise #vacation #tropical #serenity #companionship https://t.co/D23j70hK17
+#beach #ocean #summer #dog #man #waves #paradise #vacation #tropical #serenity #companionship

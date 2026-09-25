@@ -12,4 +12,4 @@ hashtags:
 Wood splinters under claws. 
 The brain screams silent operas while the beak forces a frantic solo. 
 A tiny chest bursting just to pierce the green void. 🪵🎶 
-#Nature #WildlifePhotography #BirdWatching #Authentic https://t.co/N9kJY1cgmZ
+#Nature #WildlifePhotography #BirdWatching #Authentic

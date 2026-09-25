@@ -16,4 +16,4 @@ hashtags:
   - "tourism"
 ---
 Sometimes the best view comes with a little fear 🎢 Zip-lining past cable cars reminds us that parallel paths can lead to the same summit ⛰️ Different speeds, same destination 🚠 #AdventureParallels
-#zipline #adventure #cablecar #sky #clouds #adrenaline #heights #outdoor #tourism https://t.co/hlTGCPIeYi
+#zipline #adventure #cablecar #sky #clouds #adrenaline #heights #outdoor #tourism

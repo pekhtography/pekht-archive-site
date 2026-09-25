@@ -16,4 +16,4 @@ hashtags:
   - "transport"
 ---
 When Moscow shows off, even the sky becomes a masterpiece 🎨 These boats carry more than passengers - they carry dreams across the water 🛥️💭 Every journey begins with a single wave ⚡ #DreamCarriers
-#boat #river #Moscow #cloud #water #travel #cityscape #evening #transport https://t.co/sdifPE0VBy
+#boat #river #Moscow #cloud #water #travel #cityscape #evening #transport

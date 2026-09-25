@@ -13,4 +13,4 @@ hashtags:
   - "Ghost"
   - "Transparent"
 ---
-#HarryPotter #Magic #Supermarket #Mundane #Apparition #Specter #Ghost #Transparent https://t.co/KxO4gwZcgj
+#HarryPotter #Magic #Supermarket #Mundane #Apparition #Specter #Ghost #Transparent

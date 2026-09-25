@@ -13,4 +13,4 @@ Sunlight pools on white paws.
 Behind: cassette decks stacked like a shrine 🎞️ 
 The cat settled before the altar of warm frequencies, eyes half-closed, 
 judging the treble 😼
-#LoFiCats #VinylCommunity #RetroAudio #CatVibes https://t.co/NpSdqV4Jcl
+#LoFiCats #VinylCommunity #RetroAudio #CatVibes

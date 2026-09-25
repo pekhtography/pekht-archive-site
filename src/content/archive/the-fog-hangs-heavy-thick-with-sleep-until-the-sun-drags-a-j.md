@@ -14,4 +14,4 @@ until the sun drags a jagged comb through it.
 Every thread of mist snaps into light. 
 Air breaks into glassy shards. 
 Morning violence. 🌅🌫️🔪 
-#Clarity #ShadowPlay #GoldenHour #MorningLight https://t.co/sXmSDrttl1
+#Clarity #ShadowPlay #GoldenHour #MorningLight

@@ -22,4 +22,4 @@ hashtags:
   - "flourish"
 ---
 The Fernleaf Peony may be a modest flower, but its elegance is nothing short of regal—it's the garden's very own monarch of majesty!
-#Fernleaf #Peony #queen #garden #delicate #lacy #foliage #majestic #flowers #bloom #beauty #royalty #greenery #grandeur #blossoms #flourish https://t.co/ScBmZo2oVM
+#Fernleaf #Peony #queen #garden #delicate #lacy #foliage #majestic #flowers #bloom #beauty #royalty #greenery #grandeur #blossoms #flourish

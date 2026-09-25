@@ -17,4 +17,4 @@ hashtags:
   - "Dream"
 ---
 The rocket is a giant pencil, forever sketching dreams in the sky 
-#Space #Rocket #Monument #History #Exploration #Achievement #Science #Heritage #Cosmos #Inspiration #Dream https://t.co/IW5YXYq1T0
+#Space #Rocket #Monument #History #Exploration #Achievement #Science #Heritage #Cosmos #Inspiration #Dream

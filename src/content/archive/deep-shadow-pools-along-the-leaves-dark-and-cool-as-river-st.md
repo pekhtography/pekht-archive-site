@@ -15,4 +15,4 @@ something warm, layered,
 almost sticky-sweet detonates pink across the whole frame.🌸
 Two thousand years of emperors stopped here.✨
 Same corner of the garden
-#Peonies #GardenMagic https://t.co/hfaxsHp5a7
+#Peonies #GardenMagic

@@ -19,4 +19,4 @@ hashtags:
   - "Beauty"
 ---
 A garden without Aquilegia (Columbine) is like a BBQ without meat—it's just not complete!
-#Aquilegia #Columbine #Flower #Garden #Nature #Color #Delicate #Charming #Show #BBQ #Complete #Sunlight #Beauty https://t.co/HH5GCoiVzd
+#Aquilegia #Columbine #Flower #Garden #Nature #Color #Delicate #Charming #Show #BBQ #Complete #Sunlight #Beauty

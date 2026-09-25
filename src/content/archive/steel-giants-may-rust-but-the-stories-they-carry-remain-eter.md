@@ -19,4 +19,4 @@ hashtags:
   - "honor"
 ---
 Steel giants may rust, but the stories they carry remain eternal 🏛️ Where history meets heartbeats, legends are born ⚔️✨ #HistoryLivesOn
-#tank #memorial #history #Moscow #military #family #monument #heritage #victory #remembrance #tradition #honor https://t.co/4eZhCRQL9X
+#tank #memorial #history #Moscow #military #family #monument #heritage #victory #remembrance #tradition #honor

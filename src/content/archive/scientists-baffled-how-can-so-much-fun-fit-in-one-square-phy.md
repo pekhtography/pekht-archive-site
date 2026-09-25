@@ -19,4 +19,4 @@ hashtags:
   - "Community"
 ---
 Scientists baffled: How can so much fun fit in one square? 🤯📏 Physicists suspect joy operates outside normal space-time laws ⚛️ #JoyPhysics
-#Moscow #RedSquare #Celebration #Dance #Festival #Russia #Culture #History #Architecture #Summer #Joy #Community https://t.co/Ky2FZlzLaM
+#Moscow #RedSquare #Celebration #Dance #Festival #Russia #Culture #History #Architecture #Summer #Joy #Community

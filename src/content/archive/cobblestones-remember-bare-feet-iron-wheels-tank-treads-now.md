@@ -8,4 +8,4 @@ hashtags:
   - "History"
   - "Moscow"
 ---
-Cobblestones remember bare feet, iron wheels, tank treads — now they feel sneakers running late to artisan coffee ☕🕰️🏛️ Time doesn't erase, it layers #Timeless #History #Moscow https://t.co/PD1NRE55pC
+Cobblestones remember bare feet, iron wheels, tank treads — now they feel sneakers running late to artisan coffee ☕🕰️🏛️ Time doesn't erase, it layers #Timeless #History #Moscow

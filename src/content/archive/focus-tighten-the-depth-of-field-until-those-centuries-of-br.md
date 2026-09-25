@@ -14,4 +14,4 @@ Tighten the depth of field until those centuries of brickwork vanish,
 leaving only the structural integrity of a single, 
 sun-drunk blossom ruling the entire horizon. 
 Mini universe. 📸🌺
-#Nature #UrbanGardening #CityViews #Vibrant https://t.co/c1ZDcPluDG
+#Nature #UrbanGardening #CityViews #Vibrant

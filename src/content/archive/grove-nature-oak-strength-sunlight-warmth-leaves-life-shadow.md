@@ -19,4 +19,4 @@ hashtags:
   - "Endurance"
   - "Forest"
 ---
-#Grove #Nature #Oak #Strength #Sunlight #Warmth #Leaves #Life #Shadows #Trunks #Canopy #Resilience #Endurance #Forest https://t.co/s6Q2pbxcrd
+#Grove #Nature #Oak #Strength #Sunlight #Warmth #Leaves #Life #Shadows #Trunks #Canopy #Resilience #Endurance #Forest

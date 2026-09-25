@@ -19,4 +19,4 @@ hashtags:
   - "minimalism"
 ---
 Customer service: "Did you install this wire correctly?" Bird: "Bold of you to assume I need instructions" 🎪🔥. Original influencer energy ⭐ #WireWisdom
-#bird #wire #sky #nature #freedom #balance #wings #morning #peace #wildlife #photography #minimalism https://t.co/CtaLaeD0Tj
+#bird #wire #sky #nature #freedom #balance #wings #morning #peace #wildlife #photography #minimalism

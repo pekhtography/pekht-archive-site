@@ -19,4 +19,4 @@ hashtags:
   - "Waterfront"
 ---
 The Stalinist skyscrapers always leave me in awe 🕊️🏢👑. A symbol of power, history, and architectural brilliance. #HistoricLandmark
-#Architecture #Cityscape #Riverbank #Stalinist #HistoricBuilding #Landmark #UrbanView #RiverView #Clouds #Skyline #TallBuilding #Waterfront https://t.co/frxCprWRrQ
+#Architecture #Cityscape #Riverbank #Stalinist #HistoricBuilding #Landmark #UrbanView #RiverView #Clouds #Skyline #TallBuilding #Waterfront

@@ -14,4 +14,4 @@ hashtags:
   - "Spring"
   - "Color"
 ---
-In a sea of color, the orange tulip draws the eye, like a beacon of pride #Tulip #Orange #Warmth #Cheer #Majesty #Beauty #Pride #Spring #Color https://t.co/LUlVJgRJLZ
+In a sea of color, the orange tulip draws the eye, like a beacon of pride #Tulip #Orange #Warmth #Cheer #Majesty #Beauty #Pride #Spring #Color

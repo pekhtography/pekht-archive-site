@@ -11,4 +11,4 @@ hashtags:
   - "sun"
   - "purity"
 ---
-As the sun kisses the petals, the white rose sparkles with a lustrous glow #white #rose #bloom #garden #sun #purity https://t.co/VLXKn2CLyy
+As the sun kisses the petals, the white rose sparkles with a lustrous glow #white #rose #bloom #garden #sun #purity

@@ -18,4 +18,4 @@ hashtags:
   - "Cycle"
   - "Continuity"
 ---
-#Forest #Nature #Fallen #Trees #Resilience #Fallen #Leaves #Change #Autumn #Transition #Beauty #Aesthetic #Cycle #Continuity https://t.co/LUe8jlInDL
+#Forest #Nature #Fallen #Trees #Resilience #Fallen #Leaves #Change #Autumn #Transition #Beauty #Aesthetic #Cycle #Continuity

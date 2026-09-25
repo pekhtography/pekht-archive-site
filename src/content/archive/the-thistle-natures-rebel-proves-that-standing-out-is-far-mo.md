@@ -18,4 +18,4 @@ hashtags:
   - "Photography"
 ---
 The thistle, nature's rebel, proves that standing out is far more interesting than fitting in
-#Thistle #Nature #Bloom #Wildflower #Purple #Flora #Meadow #Botany #Ecosystem #Biodiversity #Petals #Photography https://t.co/zQ3rA60eA1
+#Thistle #Nature #Bloom #Wildflower #Purple #Flora #Meadow #Botany #Ecosystem #Biodiversity #Petals #Photography

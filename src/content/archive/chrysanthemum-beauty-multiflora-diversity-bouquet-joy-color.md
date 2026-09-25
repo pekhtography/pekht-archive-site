@@ -24,4 +24,4 @@ hashtags:
   - "Softness"
   - "Celebration"
 ---
-#Chrysanthemum #Beauty #Multiflora #Diversity #Bouquet #Joy #Color #Vibrancy #Bushy #Resilience #Early #Freshness #Burgundy #Richness #Yellow #Sunshine #Petals #Softness #Celebration https://t.co/Jk3e9ex3sd
+#Chrysanthemum #Beauty #Multiflora #Diversity #Bouquet #Joy #Color #Vibrancy #Bushy #Resilience #Early #Freshness #Burgundy #Richness #Yellow #Sunshine #Petals #Softness #Celebration

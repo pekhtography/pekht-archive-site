@@ -1,0 +1,30 @@
+---
+title: "As winter’s chill envelops us, the wind becomes a crafty thief, eager to collect the warmth from our fingertips"
+x_id: "1893791697974206585"
+x_created_at: "2025-02-23T22:35:00Z"
+image: "/images/archive/as-winters-chill-envelops-us-the-wind-becomes-a-crafty-thief.jpg"
+hashtags:
+  - "Winter"
+  - "Frost"
+  - "Wind"
+  - "BodyHeat"
+  - "Warmth"
+  - "Thief"
+  - "Night"
+  - "Darkness"
+  - "Cozy"
+  - "Comfort"
+  - "Breath"
+  - "Air"
+  - "Ghost"
+  - "Spirit"
+  - "Fingers"
+  - "Grip"
+  - "Villain"
+  - "Chill"
+  - "Cold"
+  - "Collect"
+  - "Gather"
+---
+As winter’s chill envelops us, the wind becomes a crafty thief, eager to collect the warmth from our fingertips 
+#Winter #Frost #Wind #BodyHeat #Warmth #Thief #Night #Darkness #Cozy #Comfort #Breath #Air #Ghost #Spirit #Fingers #Grip #Villain #Chill #Cold #Collect #Gather https://t.co/jKo3CnJxWY

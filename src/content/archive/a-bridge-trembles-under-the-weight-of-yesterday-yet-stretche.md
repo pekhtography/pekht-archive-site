@@ -11,4 +11,4 @@ hashtags:
 A bridge trembles under the weight of yesterday 🌫️, 
 yet stretches toward tomorrow's light 🌅 — 
 we walk suspended between worlds, daring to dream.
-#ArtisticVision #LiminalSpaces #ExistentialWonder https://t.co/8nLhRWQBd3
+#ArtisticVision #LiminalSpaces #ExistentialWonder

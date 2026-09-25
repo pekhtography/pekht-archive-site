@@ -12,4 +12,4 @@ hashtags:
   - "color"
   - "garden"
 ---
-Daylilies bloom with a grace that adds a delicate charm to any garden #daylily #elegance #beauty #charm #bloom #color #garden https://t.co/5ukoPKxbLM
+Daylilies bloom with a grace that adds a delicate charm to any garden #daylily #elegance #beauty #charm #bloom #color #garden

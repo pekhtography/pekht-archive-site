@@ -13,4 +13,4 @@ The purple cluster held its breath. The serrated leaf braced.
 Even the rain paused (four milliseconds, measurable). 🌷 
 Then the red bud did absolutely nothing — 
 and somehow the whole frame rearranged itself around it. 😅
-#Nature #TulipSeason #MacroPhotography #RedEnergy https://t.co/GvCU1TW0h9
+#Nature #TulipSeason #MacroPhotography #RedEnergy

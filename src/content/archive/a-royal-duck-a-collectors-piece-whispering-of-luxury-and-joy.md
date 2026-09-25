@@ -28,4 +28,4 @@ hashtags:
   - "Pampering"
 ---
 A royal duck, a collector's piece, whispering of luxury and joyful memories
-#Duck #Quack #Princess #Regal #Opulence #Collectible #Treasure #Luxury #PreOwned #History #Admiration #Bath #Relaxation #Collector #Joyful #Happiness #Small #Smile #Bubbles #Frivolity #Spa #Pampering https://t.co/7ue4EPBEih
+#Duck #Quack #Princess #Regal #Opulence #Collectible #Treasure #Luxury #PreOwned #History #Admiration #Bath #Relaxation #Collector #Joyful #Happiness #Small #Smile #Bubbles #Frivolity #Spa #Pampering

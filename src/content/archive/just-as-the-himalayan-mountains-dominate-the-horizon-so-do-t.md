@@ -14,4 +14,4 @@ hashtags:
   - "majesty"
   - "peaks"
 ---
-Just as the Himalayan mountains dominate the horizon, so do the hydrangeas command attention in any garden #Hydrangea #height #beauty #garden #Himalayas #color #mountain #majesty #peaks https://t.co/38pGTTdh1w
+Just as the Himalayan mountains dominate the horizon, so do the hydrangeas command attention in any garden #Hydrangea #height #beauty #garden #Himalayas #color #mountain #majesty #peaks

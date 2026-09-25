@@ -14,4 +14,4 @@ A heavy violet slug wafts out,
 bends the pine needles slightly, 
 suspends a moth mid-flight. 
 Reality, here, is a matter of chemical gravity. 🌫️🦋 
-#Nature #Botanical #Unfolding #Rebel https://t.co/kGhF0cN7pz
+#Nature #Botanical #Unfolding #Rebel

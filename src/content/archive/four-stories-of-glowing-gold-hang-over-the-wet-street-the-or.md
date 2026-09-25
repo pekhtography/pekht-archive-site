@@ -13,4 +13,4 @@ Four stories of glowing gold hang over the wet street 🎄 —
 the ornament that ate the skyline. 
 Pedestrians pass it like a crosswalk signal. ✨ 
 Some decorations just outgrow their tree.
-#Christmas #WinterAesthetics #OrnamentSized #GoldenLight https://t.co/6vSb7SLyqN
+#Christmas #WinterAesthetics #OrnamentSized #GoldenLight

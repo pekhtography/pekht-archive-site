@@ -14,4 +14,4 @@ Then it throws thirty purple acrobats into the air with their arms wide open —
 all at once. 🌿💜 
 Nobody warned the moss. 
 Botanical jazz. 
-#NaturalWonders #WildBotany #Epimedium #PurpleMood https://t.co/yalwt4BgrL
+#NaturalWonders #WildBotany #Epimedium #PurpleMood

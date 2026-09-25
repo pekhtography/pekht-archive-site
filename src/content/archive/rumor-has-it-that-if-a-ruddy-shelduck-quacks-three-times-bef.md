@@ -20,4 +20,4 @@ hashtags:
   - "Wetlands"
 ---
 Rumor has it that if a Ruddy Shelduck quacks three times before noon, you may want to pack an umbrella—due to less-than-stellar meteorological skills!
-#Ruddy #Shelduck #Wanderlust #Life #Plumage #Feathers #Birdwatching #Nature #Quack #Wild #Migration #Journey #Voyage #Wetlands https://t.co/RMCiCY7XYK
+#Ruddy #Shelduck #Wanderlust #Life #Plumage #Feathers #Birdwatching #Nature #Quack #Wild #Migration #Journey #Voyage #Wetlands

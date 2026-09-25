@@ -12,4 +12,4 @@ hashtags:
 Orange horizon glows like a giant low-battery notification.
 Even the river holds its breath,
 watching the metropolis switch from concrete to pure starlight poetry. 🌌🕯️
-#Cityscape #TwilightChasers #SkylineSilhouette #ElectricEvening https://t.co/zKUPen3CWk
+#Cityscape #TwilightChasers #SkylineSilhouette #ElectricEvening

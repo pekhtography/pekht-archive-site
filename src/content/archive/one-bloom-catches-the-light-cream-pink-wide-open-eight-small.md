@@ -12,4 +12,4 @@ hashtags:
 One bloom catches the light ☀️ cream-pink, wide open. 
 Eight small hearts hang curved on a single stem behind — 
 each one a full sentence the tulip never finished. 💗
-#MacroFlowers #SpringGarden #BleedingHeartFlower #NaturePoetry https://t.co/3Wyu7yman3
+#MacroFlowers #SpringGarden #BleedingHeartFlower #NaturePoetry

@@ -17,4 +17,4 @@ hashtags:
   - "DramaticSky"
 ---
 Towers don't scroll. 🌆 They watch empires rise, sunsets bleed, storms gather — while we refresh feeds. Silent witness to everything. 📡✨ #TowerWatches
-#Photography #SkyPorn #Sunset #Nature #Architecture #TravelPhotography #MoscowCity #CityScape #MoodPhotography #DramaticSky https://t.co/welNG0PlXJ
+#Photography #SkyPorn #Sunset #Nature #Architecture #TravelPhotography #MoscowCity #CityScape #MoodPhotography #DramaticSky

@@ -24,4 +24,4 @@ hashtags:
   - "wild"
 ---
 In the garden's embrace, Sneezeweed sways, a siren call to bees seeking nectar's delight
-#Sneezeweed #petals #beckon #bee #feast #nectar #garden #color #banquet #nature #flower #allure #buzz #treat #blossom #beauty #sweetness #wild https://t.co/mFOSBZwa4R
+#Sneezeweed #petals #beckon #bee #feast #nectar #garden #color #banquet #nature #flower #allure #buzz #treat #blossom #beauty #sweetness #wild

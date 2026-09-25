@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 The sun kisses the chicory petals, awakening them to a day of radiant beauty
-#nature #bloom #wildflower #chicory #purple #meadow #sunlight #petals #flora #growth #serenity #beauty https://t.co/NxKaUcqaIC
+#nature #bloom #wildflower #chicory #purple #meadow #sunlight #petals #flora #growth #serenity #beauty

@@ -23,4 +23,4 @@ hashtags:
   - "Landscape"
   - "Scenery"
 ---
-#Autumn #Change #Birches #Resilience #DryGrass #Stillness #Leaves #Transience #CrispAir #Freshness #Golden #Warmth #Season #Cycle #Breeze #Movement #Landscape #Scenery https://t.co/u3K7OcJSQW
+#Autumn #Change #Birches #Resilience #DryGrass #Stillness #Leaves #Transience #CrispAir #Freshness #Golden #Warmth #Season #Cycle #Breeze #Movement #Landscape #Scenery

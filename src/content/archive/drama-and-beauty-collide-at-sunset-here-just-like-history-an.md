@@ -17,4 +17,4 @@ hashtags:
   - "History"
 ---
 Drama and beauty collide at sunset here, just like history and modern reality 🌇😅 #SunsetEnergyBoost
-#Exhibition #Pavilion #Spring #Architecture #Garden #Sunset #Trees #Landmark #Culture #History https://t.co/1cOJ09AWIS
+#Exhibition #Pavilion #Spring #Architecture #Garden #Sunset #Trees #Landmark #Culture #History

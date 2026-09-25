@@ -21,4 +21,4 @@ hashtags:
   - "bright"
   - "park"
 ---
-Count the moments, not the numbers — celebrate every glow #colorful #joy #lights #magic #holiday #newbeginning #hope #renewal  #moments #celebrate #illumination #darkness #shine #dreams #bright #park https://t.co/pNmASeUuzV
+Count the moments, not the numbers — celebrate every glow #colorful #joy #lights #magic #holiday #newbeginning #hope #renewal  #moments #celebrate #illumination #darkness #shine #dreams #bright #park

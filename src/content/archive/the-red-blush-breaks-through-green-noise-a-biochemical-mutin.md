@@ -13,4 +13,4 @@ The red blush breaks through green noise —
 a biochemical mutiny (hidden in plain sight) that smells like rain, 
 feels like velvety skin, tastes like a scream of sweetness. 
 Final chord. 🍎✨ 
-#Nature #GardenLife #OrchardHarvest #SummerBounty https://t.co/5tzssOaCOd
+#Nature #GardenLife #OrchardHarvest #SummerBounty

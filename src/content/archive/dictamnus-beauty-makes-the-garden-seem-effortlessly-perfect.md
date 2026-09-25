@@ -18,4 +18,4 @@ hashtags:
   - "Botany"
 ---
 Dictamnus' beauty makes the garden seem effortlessly perfect 
-#Dictamnus #Blooms #Nature #Garden #Flora #Pink #White #Petals #Summer #Beauty #Wildflowers #Botany https://t.co/FXW11ikIGE
+#Dictamnus #Blooms #Nature #Garden #Flora #Pink #White #Petals #Summer #Beauty #Wildflowers #Botany

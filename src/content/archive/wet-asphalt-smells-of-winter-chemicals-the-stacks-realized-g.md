@@ -13,4 +13,4 @@ Wet asphalt smells of winter chemicals. 🏭
 The stacks realized grey smoke doesn’t trend. 
 So they ordered an orange filter from the sunset. 
 Beauty is just pollution with good lighting. 🌇
-#IndustrialSunset #UrbanHellScenery #SmokeAesthetics #GlowingGloom https://t.co/iUe8lxJAxW
+#IndustrialSunset #UrbanHellScenery #SmokeAesthetics #GlowingGloom

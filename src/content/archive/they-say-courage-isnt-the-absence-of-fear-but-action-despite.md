@@ -19,4 +19,4 @@ hashtags:
   - "commemoration"
 ---
 They say courage isn't the absence of fear, but action despite it 💪 Here, where legends walked, ordinary people become extraordinary 🌟✨ #RememberTheHeroes
-#victory #memorial #uniform #moscow #history #patriotic #celebration #tourism #military #heritage #square #commemoration https://t.co/8pp3aY2uAH
+#victory #memorial #uniform #moscow #history #patriotic #celebration #tourism #military #heritage #square #commemoration

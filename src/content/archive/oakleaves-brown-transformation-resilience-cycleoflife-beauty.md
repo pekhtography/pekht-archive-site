@@ -25,4 +25,4 @@ hashtags:
   - "Freshness"
   - "Foliage"
 ---
-#OakLeaves #Brown #Transformation #Resilience #CycleOfLife #Beauty #Nature #Autumn #Change #Aesthetics #Oak #Leaves #BrownTint #Chlorophyll #Decay #Ecosystem #Earthy #GreenLeaves #Freshness #Foliage https://t.co/BvntxdccGX
+#OakLeaves #Brown #Transformation #Resilience #CycleOfLife #Beauty #Nature #Autumn #Change #Aesthetics #Oak #Leaves #BrownTint #Chlorophyll #Decay #Ecosystem #Earthy #GreenLeaves #Freshness #Foliage

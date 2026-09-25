@@ -16,4 +16,4 @@ hashtags:
   - "classic"
 ---
 This tram runs on electricity and pure nostalgia - the most sustainable fuel combination ever invented! 🔋🚋 Zero carbon emissions, maximum emotional impact per kilometer! #EmotionalSustainability
-#tram #vintage #soviet #transport #retro #nostalgia #history #urban #classic https://t.co/ACImoiJP4z
+#tram #vintage #soviet #transport #retro #nostalgia #history #urban #classic

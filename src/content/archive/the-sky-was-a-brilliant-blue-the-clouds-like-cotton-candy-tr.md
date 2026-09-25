@@ -13,4 +13,4 @@ hashtags:
   - "color"
   - "sky"
 ---
-The sky was a brilliant blue, the clouds like cotton candy, transforming the city into a fairy tale #clouds #dream #city #fairy #sunshine #light #color #sky https://t.co/PWRqOkq3B2
+The sky was a brilliant blue, the clouds like cotton candy, transforming the city into a fairy tale #clouds #dream #city #fairy #sunshine #light #color #sky

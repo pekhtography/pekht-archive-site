@@ -13,4 +13,4 @@ hashtags:
   - "garden"
   - "flower"
 ---
-The larger the bud, the greater the bloom—a testament to nature's design #rose #thorns #bud #bloom #elegance #nature #garden #flower https://t.co/cJGYBubpP5
+The larger the bud, the greater the bloom—a testament to nature's design #rose #thorns #bud #bloom #elegance #nature #garden #flower

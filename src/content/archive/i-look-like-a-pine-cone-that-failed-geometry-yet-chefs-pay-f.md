@@ -14,4 +14,4 @@ Yet, chefs pay for me by the gram.
 Moral: stop trying to look perfect. 
 Start being irreplaceable. 
 And a little weird 🍄💸 
-#Morel #SpringForaging #Mycology #Mindset https://t.co/M55oNTf0pn
+#Morel #SpringForaging #Mycology #Mindset

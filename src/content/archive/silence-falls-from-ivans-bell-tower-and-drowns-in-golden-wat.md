@@ -14,4 +14,4 @@ Sky made a 10-million-ruble drama.
 Kremlin just stands there — already wins «Best Background». 
 Less movement. Louder greatness. 
 Unwritten law. 🔔🌅👑
-#GoldenHour #MoscowMoments #ArchitecturePlaysLight #SilentAwe https://t.co/37Nyd8IAkd
+#GoldenHour #MoscowMoments #ArchitecturePlaysLight #SilentAwe

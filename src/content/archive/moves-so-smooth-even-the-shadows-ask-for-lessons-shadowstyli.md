@@ -19,4 +19,4 @@ hashtags:
   - "Hunter"
 ---
 Moves so smooth, even the shadows ask for lessons 🌑😏 #ShadowStylist
-#BlackCat #Cat #Feline #WildEyes #Cute #Stealth #Nature #Grass #Pets #Animal #Mystery #Hunter https://t.co/sYn3jMOv4w
+#BlackCat #Cat #Feline #WildEyes #Cute #Stealth #Nature #Grass #Pets #Animal #Mystery #Hunter

@@ -14,4 +14,4 @@ and right in the middle of all that graceful collapse,
 one dark bloom still sealed,
 still vertical,
 still carrying the whole idea of spring🌷✨
-#Flowers #Tulip #MacroPhotography https://t.co/NJtSgcSwPR
+#Flowers #Tulip #MacroPhotography

@@ -18,4 +18,4 @@ hashtags:
   - "decor"
 ---
 The vase is lucky to hold such a stunning bouquet 
-#flowers #bouquet #beauty #nature #blooms #vase #elegance #colorful #petals #floral #arrangement #decor https://t.co/b5NTpGRnJM
+#flowers #bouquet #beauty #nature #blooms #vase #elegance #colorful #petals #floral #arrangement #decor

@@ -13,4 +13,4 @@ One bloom. 🌼
 Sixteen hours of molten gold poured hard against the dark — 
 rust stamens struck like matches, petals flung wide, and then: gone. 
 Glorious math. ✨
-#Flowers #Daylily #OneAndDone #GoldenHour https://t.co/HkNCsYKuWI
+#Flowers #Daylily #OneAndDone #GoldenHour

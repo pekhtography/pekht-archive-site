@@ -14,4 +14,4 @@ while behind it,
 towers that survived Napoleon soften into pale suggestion,
 like something you almost remember.
 One summer. Whole history🏛️
-#Moscow #Flower https://t.co/Rqz55fzvTS
+#Moscow #Flower

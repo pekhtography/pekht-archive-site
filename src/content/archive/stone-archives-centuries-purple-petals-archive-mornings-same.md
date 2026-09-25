@@ -12,4 +12,4 @@ hashtags:
 Stone archives centuries. 
 Purple petals archive mornings. 
 Same hunger — different ink. 💜🌿
-#FlowerPhotography #UrbanFlora #PurpleAesthetic #SlowLiving https://t.co/59QLbyp8jv
+#FlowerPhotography #UrbanFlora #PurpleAesthetic #SlowLiving

@@ -19,4 +19,4 @@ hashtags:
   - "Beautiful"
 ---
 Moscow spring logic: Why choose between sacred and stunning when you can have both? 🤷‍♀️⛪🌸 #WhyNotBoth
-#Moscow #Cathedral #Orthodox #Golden #Domes #Russia #Flowers #Architecture #Church #Savior #Christianity #Beautiful https://t.co/dd5qRoAzVD
+#Moscow #Cathedral #Orthodox #Golden #Domes #Russia #Flowers #Architecture #Church #Savior #Christianity #Beautiful

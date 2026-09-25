@@ -25,4 +25,4 @@ hashtags:
   - "Journey"
   - "Moon"
 ---
-#Chinese #LunarNewYear #celebration #YearOfTheSnake #transformation #Wisdom #knowledge #Fortune #luck #Renewal #freshstart #Fireworks #excitement #Resolutions #goals #Change #evolution #Snake #Journey #Moon https://t.co/IxwSAOuiR3
+#Chinese #LunarNewYear #celebration #YearOfTheSnake #transformation #Wisdom #knowledge #Fortune #luck #Renewal #freshstart #Fireworks #excitement #Resolutions #goals #Change #evolution #Snake #Journey #Moon

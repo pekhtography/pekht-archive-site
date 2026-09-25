@@ -20,4 +20,4 @@ hashtags:
   - "delicious"
 ---
 Raspberries, rich in nutrients, remind us that 'Nature's beauty is a gift that cultivates the soul,' as once said by a wise gardener
-#berries #raspberry #fruit #nature #garden #plant #red #fresh #sweet #organic #summer #healthy #berry #delicious https://t.co/RWTuZeR4k8
+#berries #raspberry #fruit #nature #garden #plant #red #fresh #sweet #organic #summer #healthy #berry #delicious

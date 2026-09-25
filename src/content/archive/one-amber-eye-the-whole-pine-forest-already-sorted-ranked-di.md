@@ -13,4 +13,4 @@ One amber eye. 🦅
 The whole pine forest already sorted, ranked, dismissed — 
 by the time your camera clicked. 📸 
 That's not a bird. That's a verdict.
-#Raptor #ForestLife #WildEye #NaturePhotography https://t.co/4tu81emLag
+#Raptor #ForestLife #WildEye #NaturePhotography

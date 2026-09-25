@@ -13,4 +13,4 @@ hashtags:
   - "calm"
   - "tranquility"
 ---
-Amidst the calm of the park, the lion's gaze holds the tranquility of the palace #lion #sculpture #guardian #park #secrets #story #calm #tranquility https://t.co/JqvvjiALok
+Amidst the calm of the park, the lion's gaze holds the tranquility of the palace #lion #sculpture #guardian #park #secrets #story #calm #tranquility

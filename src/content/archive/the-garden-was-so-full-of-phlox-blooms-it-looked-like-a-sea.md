@@ -18,4 +18,4 @@ hashtags:
   - "Botanical"
 ---
 The garden was so full of Phlox blooms, it looked like a sea of pink petals stretching to the horizon 
-#Phlox #Flowers #Blooms #Nature #Garden #Pink #Petals #Beauty #Summer #Blossom #Flora #Botanical https://t.co/t56uHAn8Df
+#Phlox #Flowers #Blooms #Nature #Garden #Pink #Petals #Beauty #Summer #Blossom #Flora #Botanical

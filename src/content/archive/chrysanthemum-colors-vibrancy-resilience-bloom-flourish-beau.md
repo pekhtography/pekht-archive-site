@@ -21,4 +21,4 @@ hashtags:
   - "Admiration"
   - "Love"
 ---
-#Chrysanthemum #Colors #Vibrancy #Resilience #Bloom #Flourish #Beauty #Violet #Mystery #Pink #Gentleness #Burgundy #Elegance #Happiness #Admiration #Love https://t.co/CEgbTPRLns
+#Chrysanthemum #Colors #Vibrancy #Resilience #Bloom #Flourish #Beauty #Violet #Mystery #Pink #Gentleness #Burgundy #Elegance #Happiness #Admiration #Love

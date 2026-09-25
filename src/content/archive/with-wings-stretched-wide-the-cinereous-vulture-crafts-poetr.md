@@ -25,4 +25,4 @@ hashtags:
   - "Variety"
 ---
 With wings stretched wide, the Cinereous Vulture crafts poetry in the sky, a master of majestic solitude
-#Cinereous #Grey #Vulture #Watcher #Bird #Sky #Scavenger #Waste #Ecosystem #soaring #Glide #Wingspan #Stretch #Nature #Wilderness #Majesty #Splendor #biodiversity #Variety https://t.co/deBOTZ6ztT
+#Cinereous #Grey #Vulture #Watcher #Bird #Sky #Scavenger #Waste #Ecosystem #soaring #Glide #Wingspan #Stretch #Nature #Wilderness #Majesty #Splendor #biodiversity #Variety

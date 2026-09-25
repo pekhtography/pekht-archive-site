@@ -16,4 +16,4 @@ hashtags:
   - "yellow"
   - "red"
 ---
-#tulip #snake #nature #flower #reptile #spring #bloom #petal #garden #yellow #red https://t.co/1nhmVC2u1M
+#tulip #snake #nature #flower #reptile #spring #bloom #petal #garden #yellow #red

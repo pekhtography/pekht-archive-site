@@ -21,4 +21,4 @@ hashtags:
   - "decoration"
 ---
 Much like our lives, the decorations on the New Year's evergreen tree each tell a story—some sparkly, some scratched
-#NewYear #evergreen #tree #memories #imperfect #handmade #love #special #laughter #mischief #story #sparkly #happy #entertaining #decoration https://t.co/0heHZeeQlM
+#NewYear #evergreen #tree #memories #imperfect #handmade #love #special #laughter #mischief #story #sparkly #happy #entertaining #decoration

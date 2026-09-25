@@ -19,4 +19,4 @@ hashtags:
   - "sky"
 ---
 A red star glimmers under Moscow's clouds 🌟☁️ — this fighter pilots through time, reminding us of stories stitched by courage and iron wings ⚔️🕊️ #SovietSkyLegacy
-#plane #vintage #military #Soviet #aircraft #Kremlin #Russia #history #exhibition #people #architecture #sky https://t.co/yCqKPrYNe3
+#plane #vintage #military #Soviet #aircraft #Kremlin #Russia #history #exhibition #people #architecture #sky

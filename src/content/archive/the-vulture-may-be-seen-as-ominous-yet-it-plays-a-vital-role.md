@@ -12,4 +12,4 @@ hashtags:
   - "Master"
   - "Clouds"
 ---
-The vulture may be seen as ominous, yet it plays a vital role in the cycle of life #Vulture #Balance #Heavens #Importance #Wings #Master #Clouds https://t.co/6gSXMcPcgk
+The vulture may be seen as ominous, yet it plays a vital role in the cycle of life #Vulture #Balance #Heavens #Importance #Wings #Master #Clouds

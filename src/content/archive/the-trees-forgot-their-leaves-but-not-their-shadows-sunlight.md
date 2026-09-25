@@ -9,4 +9,4 @@ hashtags:
   - "FallAesthetic"
 ---
 The trees forgot their leaves, but not their shadows. 🍂 Sunlight keeps writing love letters to what’s already gone. ✨
-#autumnvibes #GoldenHour #FallAesthetic https://t.co/z6AJGLR7IL
+#autumnvibes #GoldenHour #FallAesthetic

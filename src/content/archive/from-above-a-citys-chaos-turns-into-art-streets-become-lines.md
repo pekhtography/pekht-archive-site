@@ -12,4 +12,4 @@ hashtags:
   - "dream"
   - "perspective"
 ---
-From above, a city's chaos turns into art; streets become lines on a canvas #city #urban #jungle #birdseye #sky #dream #perspective https://t.co/a62dPpKwIV
+From above, a city's chaos turns into art; streets become lines on a canvas #city #urban #jungle #birdseye #sky #dream #perspective

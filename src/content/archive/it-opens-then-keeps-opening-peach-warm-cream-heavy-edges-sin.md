@@ -14,4 +14,4 @@ Peach-warm, cream-heavy,
 edges singed like it got too close to its own idea — 
 a rose that ran the 'more petals' experiment until the experiment ran the rose. 🔥 
 Peak hubris.
-#Roses #GardenLife #BotanicalBeauty #PetalPerfection https://t.co/ZHwyCClVvE
+#Roses #GardenLife #BotanicalBeauty #PetalPerfection

@@ -21,4 +21,4 @@ hashtags:
   - "plant"
   - "growth"
 ---
-#BroadwayStar #Spotlight #Daffodil #Bloom #Yellow #Sunshine #White #Petals #Garden #Paradise #Beauty #nature #spring #outdoors #plant #growth https://t.co/04XbZvwEiZ
+#BroadwayStar #Spotlight #Daffodil #Bloom #Yellow #Sunshine #White #Petals #Garden #Paradise #Beauty #nature #spring #outdoors #plant #growth

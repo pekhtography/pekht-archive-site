@@ -14,4 +14,4 @@ Sun walked in, torched the whole sermon.
 Now every branch wears a crown that's already melting.
 Proof that beauty doesn't preserve—
 it just burns brighter before it's gone🕯️❄️🔥
-#Transformation #NaturePhotography #Winter #MeltingMoment https://t.co/Dpk3T4uIWC
+#Transformation #NaturePhotography #Winter #MeltingMoment

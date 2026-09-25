@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 Mystery solved: This allium is actually a secret agent working for the Department of Garden Aesthetics! 🕵️ Mission: Make humans stop and stare. Status: Accomplished. 💜📸 #SecretAgentFlower
-#allium #purple #flower #garden #bokeh #nature #spring #bloom #photography #macro #beauty https://t.co/ZZBOMz7aJv
+#allium #purple #flower #garden #bokeh #nature #spring #bloom #photography #macro #beauty

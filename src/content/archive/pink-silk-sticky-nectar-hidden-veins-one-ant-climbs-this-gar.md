@@ -12,4 +12,4 @@ hashtags:
 Pink silk. Sticky nectar. Hidden veins. 
 One ant climbs this gargantuan, glowing mountain of scent, 
 wondering if the view from the top is worth it... 🐜☀️
-#Nature #GardenLife #PetalPower #GoldenHour https://t.co/igmyh4Jku5
+#Nature #GardenLife #PetalPower #GoldenHour

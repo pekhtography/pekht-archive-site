@@ -23,4 +23,4 @@ hashtags:
   - "Inspiration"
 ---
 Each painting is a portal, inviting us to step into worlds where colors speak louder than words, beyond the noise of urban life
-#Streets #Canvas #Creation #Painter #Brush #Art #Stories #Narrative #Emotions #Feelings #Beauty #Aesthetics #Chaos #Artist #Picture #Nature #Inspiration https://t.co/DKoJJ5Qg4Z
+#Streets #Canvas #Creation #Painter #Brush #Art #Stories #Narrative #Emotions #Feelings #Beauty #Aesthetics #Chaos #Artist #Picture #Nature #Inspiration

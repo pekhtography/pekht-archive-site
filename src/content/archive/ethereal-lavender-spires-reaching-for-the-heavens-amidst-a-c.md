@@ -18,4 +18,4 @@ hashtags:
   - "Greenery"
 ---
 Ethereal lavender spires reaching for the heavens amidst a chorus of emerald blades
-#Veronica #Longifolia #Purple #Blooms #Nature #Flora #Garden #Wildflowers #Botany #Blossoms #Petals #Greenery https://t.co/OLK190ScyE
+#Veronica #Longifolia #Purple #Blooms #Nature #Flora #Garden #Wildflowers #Botany #Blossoms #Petals #Greenery

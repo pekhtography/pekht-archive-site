@@ -13,4 +13,4 @@ hashtags:
   - "Urban"
 ---
 Nothing says "romantic city break" like a skyline dominated by giant candy canes that happen to belch smoke 🍭 Who needs Paris when you have industrial poetry in motion? 💨 Modern love stories are written in steam! 😂 #RomanticRealism
-#Moscow #Power #Building #City #Russia #Urban https://t.co/AY4BdYKzSp
+#Moscow #Power #Building #City #Russia #Urban

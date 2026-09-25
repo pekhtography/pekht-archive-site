@@ -24,4 +24,4 @@ hashtags:
   - "life"
 ---
 The dark cherry peony stands as a regal sentinel in the garden, its hue capturing the twilight's embrace
-#peony #beauty #bloom #garden #secret #passion #heart #regal #artistry #complexity #gardening #fragrance #transience #nature #flowers #weeds #color #life https://t.co/KRtY60ogh2
+#peony #beauty #bloom #garden #secret #passion #heart #regal #artistry #complexity #gardening #fragrance #transience #nature #flowers #weeds #color #life

@@ -15,4 +15,4 @@ and then —
 cold-white stars with chartreuse hearts 🌿 
 holding the whole frame hostage. 
 The filler won again. 🌼
-#Nature #MacroPhotography #SlowLiving #PetalMood https://t.co/2lw3HZm2Pp
+#Nature #MacroPhotography #SlowLiving #PetalMood

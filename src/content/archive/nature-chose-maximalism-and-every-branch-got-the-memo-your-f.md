@@ -12,4 +12,4 @@ hashtags:
 Nature chose maximalism and every branch got the memo 🌨️
 Your friend: "I know a shortcut through winter" 🎄
 Four hours later: frozen fingers, zero regrets, one realization—getting beautifully lost beats arriving on time ❄️
-#WinterWonderland #ForestPath #SnowyRoad #AdventureAwaits https://t.co/JXgYfWUkCl
+#WinterWonderland #ForestPath #SnowyRoad #AdventureAwaits

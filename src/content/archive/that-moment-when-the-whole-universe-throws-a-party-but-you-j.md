@@ -14,4 +14,4 @@ but you just want to sit with your kid
 and admire the tiny orange in their paw. 
 The lanterns aren't lighting the sky. 
 They're blushing at this level of tenderness. 🏮🐼
-#Heartwarming #PandaLove #TinyHappiness #GentleChaos https://t.co/JTUm8oq1xR
+#Heartwarming #PandaLove #TinyHappiness #GentleChaos

@@ -29,4 +29,4 @@ hashtags:
   - "adrift"
 ---
 In the wake of the storm, homes stood like lonely ships adrift on a turbulent sea
-#Floods #Deluge #Fury #Evacuated #Relocation #Rain #Drench #Wind #Whirlwind #storm #homes #ships #sea #turbulent #aftermath #tempest #vessels #ocean #tide #shelter #chaos #lonely #adrift https://t.co/AZM8oSu6Aw
+#Floods #Deluge #Fury #Evacuated #Relocation #Rain #Drench #Wind #Whirlwind #storm #homes #ships #sea #turbulent #aftermath #tempest #vessels #ocean #tide #shelter #chaos #lonely #adrift

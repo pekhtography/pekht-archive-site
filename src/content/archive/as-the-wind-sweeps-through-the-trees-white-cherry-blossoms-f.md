@@ -16,4 +16,4 @@ hashtags:
   - "Renewal"
 ---
 As the wind sweeps through the trees, white cherry blossoms flutter down like nature’s confetti, celebrating the moments of life that are often fleeting but filled with joy and color
-#Cherry #Joy #Resilience #Strength #Nature #Earth #Beauty #Aesthetics #Spring #Renewal https://t.co/9HSIjsg7MV
+#Cherry #Joy #Resilience #Strength #Nature #Earth #Beauty #Aesthetics #Spring #Renewal

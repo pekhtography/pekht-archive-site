@@ -20,4 +20,4 @@ hashtags:
   - "NewYear"
 ---
 When creativity collides with the festive spirit of the New Year, the city transforms into a shimmering wonderland, inviting laughter and joy
-#Decorations #Festive #City #Wonderland #Lights #Glowing #Creativity #Imagination #Celebration #Joy #Laughter #Magic #Whimsy #NewYear https://t.co/zrRE3qn3Lq
+#Decorations #Festive #City #Wonderland #Lights #Glowing #Creativity #Imagination #Celebration #Joy #Laughter #Magic #Whimsy #NewYear

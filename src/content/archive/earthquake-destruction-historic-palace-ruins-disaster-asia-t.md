@@ -20,4 +20,4 @@ hashtags:
   - "Damage"
   - "Aftermath"
 ---
-#Earthquake #Destruction #Historic #Palace #Ruins #Disaster #Asia #Tragedy #Heritage #Collapse #Devastation #Crisis #Loss #Damage #Aftermath https://t.co/MmfY9bRmN7
+#Earthquake #Destruction #Historic #Palace #Ruins #Disaster #Asia #Tragedy #Heritage #Collapse #Devastation #Crisis #Loss #Damage #Aftermath

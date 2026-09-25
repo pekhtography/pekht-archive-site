@@ -14,4 +14,4 @@ all lined up exactly as history arranged them 🌿 —
 and then, from below, diagonally, insistently, the petunias arrived
 and rewrote the whole frame from the bottom up,
 the way summer always does…
-#Moscow #FlowerPower #KremlinVibes #SummerMood https://t.co/TVxck5k8a3
+#Moscow #FlowerPower #KremlinVibes #SummerMood

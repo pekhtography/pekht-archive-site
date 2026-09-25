@@ -21,4 +21,4 @@ hashtags:
   - "Risk"
 ---
 Mushrooms are like people: they can be pretty interesting, but some might just make you sick.
-#Mushrooms #People #Interesting #Nutritious #Flavor #Thrive #Environment #Dark #Recyclers #Sick #Life #Beautiful #Dangerous #Edible #Risk https://t.co/B256svjYUf
+#Mushrooms #People #Interesting #Nutritious #Flavor #Thrive #Environment #Dark #Recyclers #Sick #Life #Beautiful #Dangerous #Edible #Risk

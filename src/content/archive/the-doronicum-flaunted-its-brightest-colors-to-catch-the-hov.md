@@ -20,4 +20,4 @@ hashtags:
   - "yellow"
 ---
 The Doronicum flaunted its brightest colors to catch the hoverfly's eye 
-#Oriental #leopardsbane #Doronicum #orientale #Eristalis #saxorum #hoverfly #flower #nature #bloom #garden #pollinator #spring #yellow https://t.co/scefMDb7tf
+#Oriental #leopardsbane #Doronicum #orientale #Eristalis #saxorum #hoverfly #flower #nature #bloom #garden #pollinator #spring #yellow

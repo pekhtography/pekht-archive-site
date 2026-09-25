@@ -15,4 +15,4 @@ Silk pulled flat, orange straight toward the sun,
 stamens aimed up like small torches. 
 Shadow cuts between them. 
 Old gardens knew — put the argument in the frame… 🌿
-#FlowerPhotography #GardenLife #DaylilySeason #RoseGarden https://t.co/4Vh0ARARWp
+#FlowerPhotography #GardenLife #DaylilySeason #RoseGarden

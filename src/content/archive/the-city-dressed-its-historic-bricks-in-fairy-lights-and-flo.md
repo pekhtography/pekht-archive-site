@@ -12,4 +12,4 @@ hashtags:
 The city dressed its historic bricks in fairy lights and floating glass ornaments. 💎 
 Then winter shrugged and dumped a giant, dirty plush toy in the middle of the parlor 🧸. 
 We take photos of both. 📸
-#Moscow #UrbanWinter #WinterAesthetic #SurrealBeauty https://t.co/SJB1vfMuxP
+#Moscow #UrbanWinter #WinterAesthetic #SurrealBeauty

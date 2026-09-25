@@ -12,4 +12,4 @@ hashtags:
 You can't buy this feeling, even with a market full of overpriced gingerbread. 
 The cold air, the history, the quiet sparkle. 
 This is the real holiday budget. 🧣❤️ 
-#Christmas #WinterMarket #FestiveVibes #CozySeason https://t.co/4GkMevmkVv
+#Christmas #WinterMarket #FestiveVibes #CozySeason

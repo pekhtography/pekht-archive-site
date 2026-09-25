@@ -21,4 +21,4 @@ hashtags:
   - "journey"
 ---
 Forget fairy tales; the handmade doll is the true keeper of secrets and giggles
-#handmade #doll #soulful #story #told #dreams #tales #joy #nostalgia #mischief #artistry #creativity #emotion #narrative #journey https://t.co/AXd7QNKCU1
+#handmade #doll #soulful #story #told #dreams #tales #joy #nostalgia #mischief #artistry #creativity #emotion #narrative #journey

@@ -19,4 +19,4 @@ hashtags:
   - "Classy"
 ---
 Peek-a-boo! Behind this glass, Dior’s plotting to steal your heart with a hat and a bag. Resistance is futile. 🎩❤️👜 #FashionAmbush
-#Dior #Fashion #Luxury #Elegance #Style #Bag #Model #City #Evening #Flowers #Window #Classy https://t.co/3Tz3WSEr7V
+#Dior #Fashion #Luxury #Elegance #Style #Bag #Model #City #Evening #Flowers #Window #Classy

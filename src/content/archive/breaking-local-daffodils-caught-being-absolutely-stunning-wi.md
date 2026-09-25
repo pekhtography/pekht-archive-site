@@ -19,4 +19,4 @@ hashtags:
   - "botanical"
 ---
 Breaking: Local daffodils caught being absolutely stunning without permission 📸🚨 #FlowerCrime
-#daffodils #flowers #yellow #spring #narcissus #bloom #petals #garden #nature #bright #golden #botanical https://t.co/zjbegMYmiY
+#daffodils #flowers #yellow #spring #narcissus #bloom #petals #garden #nature #bright #golden #botanical

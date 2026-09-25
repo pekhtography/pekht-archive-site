@@ -19,4 +19,4 @@ hashtags:
   - "green"
 ---
 Like the crocus breaking through winter’s grasp ❄️🌸, remember: resilience blooms quietly but powerfully in the smallest things. 🌞💪 #QuietStrengthOfSpring
-#crocus #spring #flowers #garden #nature #blooms #purple #sunlight #fresh #beautiful #outdoor #green https://t.co/fq9uNfQdCJ
+#crocus #spring #flowers #garden #nature #blooms #purple #sunlight #fresh #beautiful #outdoor #green

@@ -18,4 +18,4 @@ hashtags:
   - "Affection"
   - "Surprise"
 ---
-The only thing a cat worries about is what’s happening right now #cat #worry #now #Playful #comfort #Warmth #owner #wisdom #ignore #Friendship #Love #Affection #Surprise https://t.co/4ar83XgglB
+The only thing a cat worries about is what’s happening right now #cat #worry #now #Playful #comfort #Warmth #owner #wisdom #ignore #Friendship #Love #Affection #Surprise

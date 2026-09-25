@@ -18,4 +18,4 @@ hashtags:
   - "Delicate"
 ---
 Mallows are the fairy godmothers of the garden, turning ordinary moments into magical memories
-#Mallow #Blossom #Pink #Nature #Bloom #Petals #Garden #Flora #Summer #Beauty #Wildflower #Delicate https://t.co/pIpbqXCTbm
+#Mallow #Blossom #Pink #Nature #Bloom #Petals #Garden #Flora #Summer #Beauty #Wildflower #Delicate

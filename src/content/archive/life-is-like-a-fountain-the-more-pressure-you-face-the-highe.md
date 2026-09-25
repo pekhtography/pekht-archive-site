@@ -18,4 +18,4 @@ hashtags:
   - "majestic"
 ---
 Life is like a fountain - the more pressure you face, the higher you rise!💫 Just like ancient Romans believed water displays brought good fortune to cities🏛️✨ #WaterWisdom
-#fountain #water #rainbow #city #architecture #spectacle #urban #classical #display #celebration #majestic https://t.co/yKmDmByY0s
+#fountain #water #rainbow #city #architecture #spectacle #urban #classical #display #celebration #majestic

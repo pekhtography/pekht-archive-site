@@ -15,4 +15,4 @@ but watch the time ⏰.
 The metro dies at 0:30, and night buses aren't helicopters—
 they can't cross drawn bridges. 
 Choose: beauty or your bed? 
-#UrbanTwilight #NightPhotography #StPetersburg #TravelHack https://t.co/gWdcKhDCJm
+#UrbanTwilight #NightPhotography #StPetersburg #TravelHack

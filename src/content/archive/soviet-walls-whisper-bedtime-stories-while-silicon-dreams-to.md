@@ -11,4 +11,4 @@ hashtags:
 Soviet walls whisper bedtime stories while silicon dreams touch stratosphere 🌃💫 
 Same street, different sky—
 ambition just learned to wear taller shoes 👠⚡ 
-#CityLife #UrbanContrast #Nostalgia https://t.co/UeGLPfHISN
+#CityLife #UrbanContrast #Nostalgia

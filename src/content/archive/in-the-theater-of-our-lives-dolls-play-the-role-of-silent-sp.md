@@ -22,4 +22,4 @@ hashtags:
   - "dreams"
 ---
 In the theater of our lives, dolls play the role of silent spectators, their stitched expressions whispering secrets of joy and sorrow
-#Dolls #silent #witnesses #stitched #smiles #charm #audience #quirky #companions #laughter #adventures #melodramatic #joy #sorrow #hopes #dreams https://t.co/waVhZHGHXD
+#Dolls #silent #witnesses #stitched #smiles #charm #audience #quirky #companions #laughter #adventures #melodramatic #joy #sorrow #hopes #dreams

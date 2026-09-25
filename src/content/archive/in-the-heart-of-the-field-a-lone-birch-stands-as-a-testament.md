@@ -18,4 +18,4 @@ hashtags:
   - "tranquil"
 ---
 In the heart of the field, a lone birch stands as a testament to nature's quiet resilience 
-#tree #nature #field #forest #sky #landscape #outdoors #birch #autumn #serene #golden #tranquil https://t.co/pkYwbSaJ7r
+#tree #nature #field #forest #sky #landscape #outdoors #birch #autumn #serene #golden #tranquil

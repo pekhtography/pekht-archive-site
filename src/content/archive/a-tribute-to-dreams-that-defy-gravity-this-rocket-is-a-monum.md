@@ -17,4 +17,4 @@ hashtags:
   - "Inspiration"
 ---
 A tribute to dreams that defy gravity, this rocket is a monument to the boundless imagination of humanity, forever aspiring to touch the stars
-#Monument #Space #Rocket #Night #Light #History #Exploration #Achievement #Science #Technology #Inspiration https://t.co/adM7yN4ruE
+#Monument #Space #Rocket #Night #Light #History #Exploration #Achievement #Science #Technology #Inspiration

@@ -18,4 +18,4 @@ hashtags:
   - "Botanical"
 ---
 Peonies were prized in imperial China — which makes them officially royalty… even if they’re growing sideways
-#Peony #Spring #Nature #Garden #Bloom #Flowers #Floral #Fernleaf #Colorful #Grapehyacinth #Petals #Botanical https://t.co/RmHRfSeQbB
+#Peony #Spring #Nature #Garden #Bloom #Flowers #Floral #Fernleaf #Colorful #Grapehyacinth #Petals #Botanical

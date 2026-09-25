@@ -17,4 +17,4 @@ hashtags:
   - "Unity"
 ---
 A monument to friendship, where water and art intertwine in a timeless embrace
-#Friendship #Nations #Fountain #Water #Sculpture #Art #Culture #History #Beauty #Heritage #Unity https://t.co/bDjprhhvQc
+#Friendship #Nations #Fountain #Water #Sculpture #Art #Culture #History #Beauty #Heritage #Unity

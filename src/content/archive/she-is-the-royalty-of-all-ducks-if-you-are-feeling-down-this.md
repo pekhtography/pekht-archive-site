@@ -25,4 +25,4 @@ hashtags:
   - "Value"
 ---
 She is the royalty of all ducks. If you are feeling down, this Princess will know how to cheer you up
-#Princess #Crown #Duck #Quack #Luxury #Collectible #Treasure #Rubber #Bounce #Bath #Bubbles #PreOwned #Legacy #Spotlight #Guests #Pampering #Elegant #Refinement #Value https://t.co/xluKj3DD9N
+#Princess #Crown #Duck #Quack #Luxury #Collectible #Treasure #Rubber #Bounce #Bath #Bubbles #PreOwned #Legacy #Spotlight #Guests #Pampering #Elegant #Refinement #Value

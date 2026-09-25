@@ -17,4 +17,4 @@ hashtags:
   - "pop"
 ---
 Art critics be like: "The juxtaposition of consumerist imagery with organic forms represents..." 🎓📚 Meanwhile, the art: "I HAVE MANY EYES AND I'M HUNGRY" 👁️👁️👁️😋 #ArtCriticVsReality
-#contemporary #artwork #surreal #colorful #monsters #eyes #teeth #psychedelic #luxury #pop https://t.co/9YBWK1hplk
+#contemporary #artwork #surreal #colorful #monsters #eyes #teeth #psychedelic #luxury #pop

@@ -22,4 +22,4 @@ hashtags:
   - "Beauty"
   - "Wild"
 ---
-#Birch #Forest #Canopy #Leaves #Autumn #Palette #Trees #Nature #Wonder #Silence #Peace #Tree #Grove #Fall #Leaves #Foliage #Beauty #Wild https://t.co/1ARw8tvat0
+#Birch #Forest #Canopy #Leaves #Autumn #Palette #Trees #Nature #Wonder #Silence #Peace #Tree #Grove #Fall #Leaves #Foliage #Beauty #Wild

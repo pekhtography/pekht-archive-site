@@ -21,4 +21,4 @@ hashtags:
   - "Heritage"
 ---
 Like a well-choreographed dance, the fountain's jets perform a unity tango under the moonlight
-#Fountain #Friendship #Night #Lights #Beauty #Art #Water #Magic #Celebration #Glow #Spectacle #Nations #Architecture #Unity #Heritage https://t.co/qXkO6dO9FS
+#Fountain #Friendship #Night #Lights #Beauty #Art #Water #Magic #Celebration #Glow #Spectacle #Nations #Architecture #Unity #Heritage

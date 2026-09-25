@@ -12,4 +12,4 @@ hashtags:
 Every raindrop on this petal holds a tiny upside-down garden. 🔬 
 The flower didn't open for you — 
 it opened for a bee that's already running late. 🌼⚡
-#FlowerPhotography #NatureMacro #GoldenHour #PetalPerfect https://t.co/PRIBpvhQKH
+#FlowerPhotography #NatureMacro #GoldenHour #PetalPerfect

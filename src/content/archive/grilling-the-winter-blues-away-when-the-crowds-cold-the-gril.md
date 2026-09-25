@@ -19,4 +19,4 @@ hashtags:
   - "Delicious"
 ---
 Grilling the winter blues away! 🔥🍢 When the crowd’s cold, the grill’s hot! 😄 #GrillAndChill
-#BBQ #Skewers #Grill #StreetFood #Festival #WinterMarket #Barbecue #FoodStall #OutdoorCooking #Tasty #Foodie #Delicious https://t.co/d9dyS33uGC
+#BBQ #Skewers #Grill #StreetFood #Festival #WinterMarket #Barbecue #FoodStall #OutdoorCooking #Tasty #Foodie #Delicious

@@ -19,4 +19,4 @@ hashtags:
   - "culture"
 ---
 Where ancient domes meet modern dreams 🏛️ Moscow proves that bridges aren't just for crossing rivers - they're for crossing centuries! ⚡ #MoscowBridge
-#bridge #Moscow #Kremlin #architecture #tourism #orthodox #modern #contrast #sky #dome #history #culture https://t.co/fJn965KQZp
+#bridge #Moscow #Kremlin #architecture #tourism #orthodox #modern #contrast #sky #dome #history #culture

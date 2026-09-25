@@ -19,4 +19,4 @@ hashtags:
   - "photography"
 ---
 Flowers judging our photography skills? 📸 This lily's internal monologue: "Another amateur with auto-focus… do I look like Instagram material to you?" 😒🌿📱 #FloralCritique
-#lily #flower #nature #green #bloom #garden #spring #botanical #petals #leaves #natural #photography https://t.co/rlgx4dHRvh
+#lily #flower #nature #green #bloom #garden #spring #botanical #petals #leaves #natural #photography

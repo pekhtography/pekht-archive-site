@@ -8,4 +8,4 @@ hashtags:
   - "AutumnLeaves"
   - "BittersweetMoments"
 ---
-The ground collects what heaven couldn't keep 🍁 Every ending is just gravity doing the makeup for the next beginning — death dressed in gold never looked this alive 💛✨ #FallVibes #AutumnLeaves #BittersweetMoments https://t.co/S0wtyq8DBO
+The ground collects what heaven couldn't keep 🍁 Every ending is just gravity doing the makeup for the next beginning — death dressed in gold never looked this alive 💛✨ #FallVibes #AutumnLeaves #BittersweetMoments

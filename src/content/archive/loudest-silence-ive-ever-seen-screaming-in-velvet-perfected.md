@@ -14,4 +14,4 @@ hashtags:
   - "Peaceful"
 ---
 Loudest silence I've ever seen. 🔇 Screaming in velvet, perfected. #LoudSilence
-#Nature #Beauty #Photography #Gardening #RoseLover #FlowerMacro #Peaceful https://t.co/6eV3ilv7se
+#Nature #Beauty #Photography #Gardening #RoseLover #FlowerMacro #Peaceful

@@ -9,4 +9,4 @@ hashtags:
   - "EpicViews"
 ---
 Sunlight crowns the Stalinist giant, yet the street below whispers stories of fleeting lives. 🏢🌤️ Ambition reaches sky-high, reality stays grounded.
-#Architecture #StalinistArchitecture #EpicViews https://t.co/VblGuG8o82
+#Architecture #StalinistArchitecture #EpicViews

@@ -8,4 +8,4 @@ hashtags:
   - "WinterMagic"
   - "RedSquare"
 ---
-Kremlin towers watch carousels spin below 🎠 Empires build squares, December fills them with laughter 🎄✨ #Christmas #WinterMagic #RedSquare https://t.co/x50IFbLHpQ
+Kremlin towers watch carousels spin below 🎠 Empires build squares, December fills them with laughter 🎄✨ #Christmas #WinterMagic #RedSquare

@@ -14,4 +14,4 @@ The dark thought it was empty space.
 Wrong. 
 It's a tiny factory running on pure stubbornness. 
 Softness is the hottest kind of fire. 🔥🌸 
-#Nature #MacroPhotography #PinkResilience #SoftPower https://t.co/VC399dTbGG
+#Nature #MacroPhotography #PinkResilience #SoftPower

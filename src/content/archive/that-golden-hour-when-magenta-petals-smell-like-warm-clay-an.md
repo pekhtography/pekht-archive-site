@@ -13,4 +13,4 @@ That golden hour when magenta petals smell like warm clay 🌸
 and the tower behind you stops being architecture — 
 just becomes weather. 🏙️ 
 Soft things outlast hard ones. ✨
-#GoldenHourVibes #FlowersOfInstagram #UrbanSoul #Petunia https://t.co/lfjCBU6YN8
+#GoldenHourVibes #FlowersOfInstagram #UrbanSoul #Petunia

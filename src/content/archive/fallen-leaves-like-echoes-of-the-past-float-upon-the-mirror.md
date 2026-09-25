@@ -18,4 +18,4 @@ hashtags:
   - "Change"
 ---
 Fallen leaves, like echoes of the past, float upon the mirror-like pond
-#Fallen #Leaves #Remembrance #Nature #Pond #Autumn #Nostalgia #Release #Water #Calm #Tree #Change https://t.co/1LxSnXo1u3
+#Fallen #Leaves #Remembrance #Nature #Pond #Autumn #Nostalgia #Release #Water #Calm #Tree #Change

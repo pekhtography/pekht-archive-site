@@ -12,4 +12,4 @@ hashtags:
 Towers melt in focus, crocus stays sharp. 🏙️💜 
 Concrete lives centuries, trembles at a petal. 
 The durable dissolves when tenderness looks. 
-#NatureWins #UrbanWilderness #SpringRevolt #TenderDefiance https://t.co/nE7fDk3fAo
+#NatureWins #UrbanWilderness #SpringRevolt #TenderDefiance

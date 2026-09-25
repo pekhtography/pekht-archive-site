@@ -15,4 +15,4 @@ They're both refusing to lose, and we all win.
 The drama! 
 The reflection! 
 The sheer audacity 😂👏 
-#Nature #WinterWonderland #IcePatterns #InBetween https://t.co/LFoe02oo2a
+#Nature #WinterWonderland #IcePatterns #InBetween

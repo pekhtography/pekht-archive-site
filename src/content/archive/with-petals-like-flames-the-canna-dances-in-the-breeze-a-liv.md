@@ -18,4 +18,4 @@ hashtags:
   - "Botanical"
 ---
 With petals like flames, the canna dances in the breeze, a living embodiment of nature's artistry
-#Canna #Flower #Bloom #Nature #Garden #Red #Vibrant #Petals #Beauty #Blossom #Summer #Botanical https://t.co/lqsBVwqsG2
+#Canna #Flower #Bloom #Nature #Garden #Red #Vibrant #Petals #Beauty #Blossom #Summer #Botanical

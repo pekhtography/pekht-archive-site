@@ -19,4 +19,4 @@ hashtags:
   - "drama"
 ---
 Plot twist: The real treasure was the audience we entertained along the way 🎭 Behind every great pirate is an even greater puppeteer! 🏴‍☠️⚓️ #PuppetMaster
-#pirate #theater #puppet #adventure #treasure #nautical #performance #story #entertainment #maritime #stage #drama https://t.co/ztWoLxQr4L
+#pirate #theater #puppet #adventure #treasure #nautical #performance #story #entertainment #maritime #stage #drama

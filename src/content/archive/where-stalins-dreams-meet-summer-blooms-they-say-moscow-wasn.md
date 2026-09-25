@@ -6,4 +6,4 @@ image: "/images/archive/where-stalins-dreams-meet-summer-blooms-they-say-moscow-
 hashtags:
   []
 ---
-Where Stalin's dreams meet summer blooms 🌸 They say Moscow wasn't built in a day, but when you see these spires kissing the clouds, you realize some things are worth the wait ⛅ Beauty isn't just in the eye of the beholder—sometimes it's in the petunias at your feet 💜 https://t.co/plbkuKVKvI
+Where Stalin's dreams meet summer blooms 🌸 They say Moscow wasn't built in a day, but when you see these spires kissing the clouds, you realize some things are worth the wait ⛅ Beauty isn't just in the eye of the beholder—sometimes it's in the petunias at your feet 💜

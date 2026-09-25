@@ -23,4 +23,4 @@ hashtags:
   - "Life"
   - "Vibrance"
 ---
-#Phlox #Blossom #Blue #Sky #Flowers #Five #Petals #Nature #Garden #Beauty #Resilience #Strength #Hope #Dream #Spring #Renewal #Life #Vibrance https://t.co/z5jUwYATMb
+#Phlox #Blossom #Blue #Sky #Flowers #Five #Petals #Nature #Garden #Beauty #Resilience #Strength #Hope #Dream #Spring #Renewal #Life #Vibrance

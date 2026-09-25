@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 Queen Anne’s Lace: proof that even royalty can have wild roots
-#wildcarrot #queenanneslace #flower #nature #white #botanical #delicate #meadow #bloom #plants #umbrella #beauty https://t.co/vbjRAHHxIS
+#wildcarrot #queenanneslace #flower #nature #white #botanical #delicate #meadow #bloom #plants #umbrella #beauty

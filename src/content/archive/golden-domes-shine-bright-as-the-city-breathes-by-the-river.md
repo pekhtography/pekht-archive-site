@@ -19,4 +19,4 @@ hashtags:
   - "Sunset"
 ---
 Golden domes shine bright as the city breathes by the river 🌅✨ #MoscowMagicMoments
-#Moscow #River #Embankment #Cathedral #Bridge #Architecture #Cityscape #Landmark #Travel #Russia #Nature #Sunset https://t.co/ZD4A8po7hD
+#Moscow #River #Embankment #Cathedral #Bridge #Architecture #Cityscape #Landmark #Travel #Russia #Nature #Sunset

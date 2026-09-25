@@ -14,4 +14,4 @@ Then a colonnade that straightens your spine before you even reach it —
 cold granite rehearsing the same entrance, 
 same crowd, same ovation. 
 The iron railing mid-clap. Forever. ⚡
-#UrbanPhotography #SovietArchitecture #CityAesthetics #EmptyPlaces https://t.co/CVQRGNbLrK
+#UrbanPhotography #SovietArchitecture #CityAesthetics #EmptyPlaces

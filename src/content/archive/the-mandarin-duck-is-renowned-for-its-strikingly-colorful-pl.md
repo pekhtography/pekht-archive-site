@@ -14,4 +14,4 @@ hashtags:
   - "Lakes"
   - "Duck"
 ---
-The Mandarin duck is renowned for its strikingly colorful plumage #MandarinDuck #Love #Plumage #Pond #Vibrant #Nature #Colorful #Lakes #Duck https://t.co/aafc9OabbF
+The Mandarin duck is renowned for its strikingly colorful plumage #MandarinDuck #Love #Plumage #Pond #Vibrant #Nature #Colorful #Lakes #Duck

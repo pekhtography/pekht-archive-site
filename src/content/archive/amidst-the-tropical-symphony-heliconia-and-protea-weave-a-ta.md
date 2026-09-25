@@ -18,4 +18,4 @@ hashtags:
   - "Garden"
 ---
 Amidst the tropical symphony, heliconia and protea weave a tale of vibrant resilience, while kangaroo paw adds a touch of whimsy 
-#Heliconia #Protea #KangarooPaw #FloralArt #Nature #Beauty #Exotic #Tropical #Blooms #Vibrant #Elegance #Garden https://t.co/xk5p9z6d82
+#Heliconia #Protea #KangarooPaw #FloralArt #Nature #Beauty #Exotic #Tropical #Blooms #Vibrant #Elegance #Garden

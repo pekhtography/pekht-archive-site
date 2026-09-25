@@ -12,4 +12,4 @@ hashtags:
 Gritty sand against a soft belly, claws touching dust. 
 The desert is offline. 
 Surveillance can wait because the soul is currently out of office. ☀️🌵
-#Nature #WildlifePhotography #Burnout #Relatable https://t.co/8enpfPxPhJ
+#Nature #WildlifePhotography #Burnout #Relatable

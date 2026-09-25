@@ -20,4 +20,4 @@ hashtags:
   - "Devastation"
   - "Crisis"
 ---
-#Earthquake #Heritage #Destruction #History #Culture #Disaster #Asia #Bridge #Palace #Ruins #Tragedy #Architecture #Loss #Devastation #Crisis https://t.co/Ysk9zGm8zR
+#Earthquake #Heritage #Destruction #History #Culture #Disaster #Asia #Bridge #Palace #Ruins #Tragedy #Architecture #Loss #Devastation #Crisis

@@ -11,4 +11,4 @@ hashtags:
   - "tranquility"
   - "contemplation"
 ---
-In the stillness of the park, the pagoda evokes a sense of eternity, inviting contemplation #pagoda #guardian #autumn #timeless #tranquility #contemplation https://t.co/FX0KTbEVdw
+In the stillness of the park, the pagoda evokes a sense of eternity, inviting contemplation #pagoda #guardian #autumn #timeless #tranquility #contemplation

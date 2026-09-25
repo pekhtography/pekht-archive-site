@@ -8,4 +8,4 @@ hashtags:
   - "DigitalDilemma"
   - "InnerPeace"
 ---
-The city runs on Wi-Fi. The church runs on forever. 🕊️📡 One buffers your soul, the other feeds your calendar. Which bandwidth are you syncing with tonight? #ModernLife #DigitalDilemma #InnerPeace https://t.co/TyopJYV6fw
+The city runs on Wi-Fi. The church runs on forever. 🕊️📡 One buffers your soul, the other feeds your calendar. Which bandwidth are you syncing with tonight? #ModernLife #DigitalDilemma #InnerPeace

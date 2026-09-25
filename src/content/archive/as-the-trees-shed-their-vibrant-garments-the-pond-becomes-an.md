@@ -15,4 +15,4 @@ hashtags:
   - "masterpiece"
   - "beauty"
 ---
-As the trees shed their vibrant garments, the pond becomes an artist’s canvas, rich with the hues of fall #pond #autumn #palette #colors #reflection #nature #canvas #leaves #masterpiece #beauty https://t.co/ZejYco43PI
+As the trees shed their vibrant garments, the pond becomes an artist’s canvas, rich with the hues of fall #pond #autumn #palette #colors #reflection #nature #canvas #leaves #masterpiece #beauty

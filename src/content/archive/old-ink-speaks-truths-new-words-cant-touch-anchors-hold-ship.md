@@ -12,4 +12,4 @@ and what's over the edge.
 Two sirens sing, two flags snap in the breeze—
 the mast still points forward. 
 That ache between dock and distance? 
-That's the voyage, brother. 🧭❤️ https://t.co/UjWcKpQwNj
+That's the voyage, brother. 🧭❤️

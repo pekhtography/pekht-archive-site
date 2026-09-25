@@ -18,4 +18,4 @@ hashtags:
   - "plant"
 ---
 They rise from the dirt, looking like alien fingers — peonies don’t grow; they perform an entrance
-#peony #spring #sprout #nature #growth #garden #red #flower #bud #life #emerging #plant https://t.co/nZPPU2hbiS
+#peony #spring #sprout #nature #growth #garden #red #flower #bud #life #emerging #plant

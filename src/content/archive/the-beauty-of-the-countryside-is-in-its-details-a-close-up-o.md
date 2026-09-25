@@ -19,4 +19,4 @@ hashtags:
   - "rural"
 ---
 The beauty of the countryside is in its details: a close-up of wheat 🌾, the gentle rustle of leaves 🌿. It's a world full of wonder. 🌸 #CountrysideCharm
-#wheat #barley #green #field #nature #agriculture #plants #crops #summer #harvest #grain #rural https://t.co/hSiL500EsE
+#wheat #barley #green #field #nature #agriculture #plants #crops #summer #harvest #grain #rural

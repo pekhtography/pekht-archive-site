@@ -12,4 +12,4 @@ hashtags:
 Tight green shell sealed shut 🌿 
 The neighbor is exhausted, this one lies in ambush 💥 
 Unspent light is also light ✨ 
-#Nature #GardeningLife #UnopenedBloom #Anticipation https://t.co/zB8b8TbWSt
+#Nature #GardeningLife #UnopenedBloom #Anticipation

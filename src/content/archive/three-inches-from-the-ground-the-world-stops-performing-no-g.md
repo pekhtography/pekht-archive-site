@@ -14,4 +14,4 @@ No grand reveal, no sweeping vista—
 just light caught mid-shatter, holding its breath before becoming water again 💫
 Sometimes the answer isn't wider.
 It's closer ❄️
-#Perspective #MacroMagic #CloseUpObsession #WinterWonder https://t.co/rpR5vlD0JW
+#Perspective #MacroMagic #CloseUpObsession #WinterWonder

@@ -20,4 +20,4 @@ hashtags:
   - "daisy"
   - "Plant"
 ---
-#Gerbera #Flowers #Blooms #Vibrant #Nature #Petals #Bright #Colorful #Blossoms #Fresh #Beauty #Garden #Transvaal #daisy #Plant https://t.co/1GgcRspJJz
+#Gerbera #Flowers #Blooms #Vibrant #Nature #Petals #Bright #Colorful #Blossoms #Fresh #Beauty #Garden #Transvaal #daisy #Plant

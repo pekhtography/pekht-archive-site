@@ -30,4 +30,4 @@ hashtags:
   - "Harmony"
   - "Palette"
 ---
-#autumn #transition #leaves #colors #oak #strength #yellow #brown #warmth #change #nostalgia #memories #journey #beauty #nature #resilience #Season #Foliage #Birch #Golden #Treasure #Wind #Transformation #Harmony #Palette https://t.co/QjZE20zyPU
+#autumn #transition #leaves #colors #oak #strength #yellow #brown #warmth #change #nostalgia #memories #journey #beauty #nature #resilience #Season #Foliage #Birch #Golden #Treasure #Wind #Transformation #Harmony #Palette

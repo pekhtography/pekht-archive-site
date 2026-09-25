@@ -13,4 +13,4 @@ hashtags:
   - "vintage"
 ---
 Life's greatest plays happen between the strings of a puppet and a heartfelt accordion ❤️🎭🎶. As Shakespeare said, ‘All the world’s a stage,’ and today the music of history dances with whimsy. #PuppetAndAccordionTales
-#puppetry #accordion #theater #military #performance #vintage https://t.co/9eIr3ABFOd
+#puppetry #accordion #theater #military #performance #vintage

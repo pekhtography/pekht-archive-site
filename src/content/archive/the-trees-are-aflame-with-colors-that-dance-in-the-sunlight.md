@@ -12,4 +12,4 @@ hashtags:
   - "Vibrancy"
   - "Sunlight"
 ---
-The trees are aflame with colors that dance in the sunlight #Forest #Nature #Autumn #Change #Colors #Vibrancy #Sunlight https://t.co/VB8LRbZOQt
+The trees are aflame with colors that dance in the sunlight #Forest #Nature #Autumn #Change #Colors #Vibrancy #Sunlight

@@ -19,4 +19,4 @@ hashtags:
   - "photography"
 ---
 This furry creature sure knows how to pose while munching! 😂🐿️ #ModelSquirrel
-#squirrel #nature #animals #wildlife #park #cute #grass #furry #forest #creature #outdoors #photography https://t.co/wbJIwKw4Mm
+#squirrel #nature #animals #wildlife #park #cute #grass #furry #forest #creature #outdoors #photography

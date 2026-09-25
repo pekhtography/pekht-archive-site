@@ -18,4 +18,4 @@ hashtags:
   - "Growth"
 ---
 Cannas are the garden's artists, their fiery blooms transforming the landscape into a canvas of living art
-#Canna #Bloom #Garden #Nature #Vibrant #Red #Flower #Petals #Lush #Tropical #Beauty #Growth https://t.co/CGXRBS0iRm
+#Canna #Bloom #Garden #Nature #Vibrant #Red #Flower #Petals #Lush #Tropical #Beauty #Growth

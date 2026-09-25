@@ -17,4 +17,4 @@ A soft pink flash erupts from the center —
 sharpness everywhere — 
 while the rest just stay in their concrete suits. 
 And the path continues… 🌫️💗 
-#Nature #FlowerStories #BloomingProcess #Patience https://t.co/FLsXHL0Z9I
+#Nature #FlowerStories #BloomingProcess #Patience

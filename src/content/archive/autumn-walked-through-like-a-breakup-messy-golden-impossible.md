@@ -8,4 +8,4 @@ hashtags:
   - "AutumnVibes"
   - "ForestBathing"
 ---
-Autumn walked through like a breakup — messy, golden, impossible to look away from 🍂 Even the worst endings sparkle when nature writes them ⚡ #Nature #AutumnVibes #ForestBathing https://t.co/OnkY9COAcL
+Autumn walked through like a breakup — messy, golden, impossible to look away from 🍂 Even the worst endings sparkle when nature writes them ⚡ #Nature #AutumnVibes #ForestBathing

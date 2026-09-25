@@ -12,4 +12,4 @@ hashtags:
   - "insect"
 ---
 Plot twist: the villain might actually be the hero 🎭 While we're busy fearing the buzz, this striped warrior is eliminating the real garden menaces 🗡️ Sometimes the most misunderstood characters carry the heaviest burdens 💪 #PlotTwist
-#hornet #nature #garden #wildlife #insect https://t.co/J1c1z7X6cL
+#hornet #nature #garden #wildlife #insect

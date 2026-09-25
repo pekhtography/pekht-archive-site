@@ -18,4 +18,4 @@ hashtags:
   - "Beauty"
 ---
 Each viburnum berry is a drop of ruby, frozen in anticipation of winter's chill 
-#Viburnum #Nature #Autumn #Leaves #Berries #Red #Outdoors #Plants #Fall #Foliage #Wild #Beauty https://t.co/GwMMnsvXdm
+#Viburnum #Nature #Autumn #Leaves #Berries #Red #Outdoors #Plants #Fall #Foliage #Wild #Beauty

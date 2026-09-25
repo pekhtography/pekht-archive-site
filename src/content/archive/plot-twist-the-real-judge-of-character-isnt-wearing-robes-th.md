@@ -18,4 +18,4 @@ hashtags:
   - "paws"
 ---
 Plot twist: The real judge of character isn't wearing robes - they're wearing bandanas and have the most honest eyes you've ever seen 👁️‍🗨️🎭 Who's really evaluating whom here? #JudgeOfCharacter
-#dog #shepherd #bandana #event #show #pet #canine #adorable #loyal #friend #paws https://t.co/vTNMUCgd7t
+#dog #shepherd #bandana #event #show #pet #canine #adorable #loyal #friend #paws

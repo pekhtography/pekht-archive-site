@@ -11,4 +11,4 @@ hashtags:
   - "cloud"
 ---
 Rivers don't just divide cities—they unite stories. Every boat carries dreams, every building holds ambitions, and every flower blooms despite the concrete jungle. 🌸⛵ Sometimes the most beautiful perspectives come from the margins. #RiverCityLife
-#river #urban #flower #cloud https://t.co/dIoOSRqiFx
+#river #urban #flower #cloud

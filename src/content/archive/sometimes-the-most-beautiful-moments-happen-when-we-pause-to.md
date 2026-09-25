@@ -15,4 +15,4 @@ hashtags:
   - "vintage"
 ---
 Sometimes the most beautiful moments happen when we pause to arrange wildflowers in grandma's old teapot while our cat claims the best sunny spot nearby🌼☕️🐱 Life's simple pleasures never go out of style #CozyMoments
-#painting #flowers #cat #teapot #stilllife #art #cozy #vintage https://t.co/CaPsLnTswS
+#painting #flowers #cat #teapot #stilllife #art #cozy #vintage

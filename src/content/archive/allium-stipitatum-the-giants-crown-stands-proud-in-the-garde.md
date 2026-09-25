@@ -11,4 +11,4 @@ hashtags:
   - "seeds"
   - "sun"
 ---
-Allium stipitatum, the giant's crown, stands proud in the garden #Allium #flower #garden #bloom #seeds #sun https://t.co/Han5bHXKbp
+Allium stipitatum, the giant's crown, stands proud in the garden #Allium #flower #garden #bloom #seeds #sun

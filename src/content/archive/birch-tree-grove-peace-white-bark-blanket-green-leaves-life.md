@@ -28,4 +28,4 @@ hashtags:
   - "Seasons"
   - "Change"
 ---
-#Birch #Tree #Grove #Peace #White #bark #Blanket #Green #leaves #Life #High #grass #Nature #Harmony #Balance #Solace #Comfort #Whisper #Secrets #Sentinel #Guardian #Seasons #Change https://t.co/l58BRJAE7g
+#Birch #Tree #Grove #Peace #White #bark #Blanket #Green #leaves #Life #High #grass #Nature #Harmony #Balance #Solace #Comfort #Whisper #Secrets #Sentinel #Guardian #Seasons #Change

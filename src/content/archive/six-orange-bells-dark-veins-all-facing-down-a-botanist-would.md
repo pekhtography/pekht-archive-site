@@ -13,4 +13,4 @@ Six orange bells. Dark veins. All facing down. 🌿
 A botanist would call this "selective pollinator exclusion." 
 Everyone else calls it a vibe. 🔻 
 Royal snub.
-#NatureIsWeird #BotanicalBeauty #Fritillaria #WildFlowers https://t.co/wn5AZiqYOV
+#NatureIsWeird #BotanicalBeauty #Fritillaria #WildFlowers

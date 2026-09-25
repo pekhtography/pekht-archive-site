@@ -19,4 +19,4 @@ hashtags:
   - "planning"
 ---
 Nature itself holds a compass, leading us through this geometric dream, a thoughtful creation by the park's architect
-#geometry #park #play #sunlight #rhythm #nature #compass #masterpiece #story #symmetry #balance #trees #planning https://t.co/3ecKseoRyx
+#geometry #park #play #sunlight #rhythm #nature #compass #masterpiece #story #symmetry #balance #trees #planning

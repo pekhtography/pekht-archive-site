@@ -19,4 +19,4 @@ hashtags:
   - "Holiday"
 ---
 A carousel spins between towers that have seen centuries of history 🌟🎠… #HistoricJoyfulFusion
-#Moscow #Kremlin #RedSquare #Carousel #Festival #Winter #Architecture #Celebration #Historic #Skyline #People #Holiday https://t.co/n2Qymojc3e
+#Moscow #Kremlin #RedSquare #Carousel #Festival #Winter #Architecture #Celebration #Historic #Skyline #People #Holiday

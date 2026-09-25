@@ -19,4 +19,4 @@ hashtags:
   - "Leaves"
 ---
 Mystery wrapped in purple? More like a fancy way to say 'I’m just a high-maintenance flower' 🌺🕵️‍♂️😅 #HighMaintenanceBloom
-#Rhododendron #Flower #Purple #Blossom #Nature #Garden #Floral #Plant #Botany #Spring #Beauty #Leaves https://t.co/wV3yDSyvIj
+#Rhododendron #Flower #Purple #Blossom #Nature #Garden #Floral #Plant #Botany #Spring #Beauty #Leaves

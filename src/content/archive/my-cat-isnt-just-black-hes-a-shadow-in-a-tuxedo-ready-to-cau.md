@@ -23,4 +23,4 @@ hashtags:
   - "Havoc"
 ---
 My cat isn’t just black; he’s a shadow in a tuxedo, ready to cause mischief during the midnight hour.
-#Cat #Black #Whiskers #Shadow #Midnight #Mischief #Rascal #Play #Playful #Antics #Bed #Battleground #Mayhem #Toss #Chaos #Turmoil #Havoc https://t.co/vVUv6UReuq
+#Cat #Black #Whiskers #Shadow #Midnight #Mischief #Rascal #Play #Playful #Antics #Bed #Battleground #Mayhem #Toss #Chaos #Turmoil #Havoc

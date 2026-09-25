@@ -11,4 +11,4 @@ hashtags:
 ---
 Watch as these electric-pink trumpets blast velvet fanfares against the cold, limestone silence of the massive monolith that thinks it runs the world 🌸 🎺 
 Petal coup.
-#Life #UrbanGardening #PetalPower #Vibrant https://t.co/oNwnqxy5YW
+#Life #UrbanGardening #PetalPower #Vibrant

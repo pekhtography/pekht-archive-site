@@ -14,4 +14,4 @@ This cat traded the fish for a Gibson, and the backyard for a stadium.
 The apocalypse happened.
 He built a band.
 And honestly? They rock harder than your favorites🎸⚙️😺
-#RockAndRoll #SteampunkArt #RobotCat https://t.co/Uze7DeqSLf
+#RockAndRoll #SteampunkArt #RobotCat

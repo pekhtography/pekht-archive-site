@@ -19,4 +19,4 @@ hashtags:
   - "smile"
 ---
 When life gets tough, remember this bear's philosophy: stick your tongue out and keep moving forward! 🐻 Sometimes the best response to stress is a good old-fashioned bear grin 😄 #BearWisdom
-#bear #wildlife #zoo #nature #brown #happy #tongue #cute #animal #majestic #wild #smile https://t.co/2i3Ssjgbt0
+#bear #wildlife #zoo #nature #brown #happy #tongue #cute #animal #majestic #wild #smile

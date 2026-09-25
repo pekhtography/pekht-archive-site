@@ -16,4 +16,4 @@ hashtags:
   - "Resilience"
   - "Strength"
 ---
-#Rhododendron #Pink #Blush #Petals #Green #Leaves #Garden #Nature #Beauty #Resilience #Strength https://t.co/v5NmlNLXQS
+#Rhododendron #Pink #Blush #Petals #Green #Leaves #Garden #Nature #Beauty #Resilience #Strength

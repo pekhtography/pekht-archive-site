@@ -16,4 +16,4 @@ hashtags:
   - "life"
 ---
 Urban life flows like a river, carving paths through the stone of time and tradition
-#city #stories #river #architecture #secrets #time #tales #lights #transformation #life https://t.co/6LZjGGXbqr
+#city #stories #river #architecture #secrets #time #tales #lights #transformation #life

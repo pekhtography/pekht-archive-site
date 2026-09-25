@@ -11,4 +11,4 @@ hashtags:
   - "garden"
   - "vibrance"
 ---
-The orange lily blooms with joy, brightening every garden #orange #bloom #lily #blossom #garden #vibrance https://t.co/wKYPT5Qk0M
+The orange lily blooms with joy, brightening every garden #orange #bloom #lily #blossom #garden #vibrance

@@ -12,4 +12,4 @@ hashtags:
 Edges fringed white, petals sealed like a fist — 🌺 
 the most violent red hides before it opens. 
 Some promises keep their teeth. 🔥
-#NatureUnfiltered #FloralFury #WildBeauty #SensoryNature https://t.co/8lHjJibdVD
+#NatureUnfiltered #FloralFury #WildBeauty #SensoryNature

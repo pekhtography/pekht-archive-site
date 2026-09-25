@@ -19,4 +19,4 @@ hashtags:
   - "Aesthetic"
 ---
 🍦 Childhood never leaves—it just hides in giant ice cream painted on park spheres. Sweetness is memory in color. 🌈 #SweetMemorySphere
-#FruitBallEnergy #Art #Summer #Foodie #StreetArt #FoodArt #UrbanVibes #SweetLife #Joyful #Colorful #HappyVibes #Aesthetic https://t.co/69M6xqLsIC
+#FruitBallEnergy #Art #Summer #Foodie #StreetArt #FoodArt #UrbanVibes #SweetLife #Joyful #Colorful #HappyVibes #Aesthetic

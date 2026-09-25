@@ -12,4 +12,4 @@ hashtags:
 4.5 billion years, one angle, zero pivot 🌗 — 
 historians call it loyalty, brand strategists call it positioning. 
 She's been running the same campaign since before oceans existed. 🪐
-#Moon #Astrophotography #LunarTerminator #HalfAndWhole https://t.co/yfNTtqFAGY
+#Moon #Astrophotography #LunarTerminator #HalfAndWhole

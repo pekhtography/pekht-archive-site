@@ -19,4 +19,4 @@ hashtags:
   - "celebration"
 ---
 Christmas hero? This tree's just the main character syndrome in pine form! 🎄👑🎪 #MainCharacterTree
-#christmas #tree #red #decorations #ornaments #lights #church #square #holiday #festive #winter #celebration https://t.co/l8Cfav3ZaF
+#christmas #tree #red #decorations #ornaments #lights #church #square #holiday #festive #winter #celebration

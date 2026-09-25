@@ -10,4 +10,4 @@ hashtags:
   - "ice"
   - "grace"
 ---
-Amidst the shimmering ice, a white giant strolls, embracing the sun's gentle kiss #polarbear #sunligh #majestic #ice #grace https://t.co/ANG6tU1DX6
+Amidst the shimmering ice, a white giant strolls, embracing the sun's gentle kiss #polarbear #sunligh #majestic #ice #grace

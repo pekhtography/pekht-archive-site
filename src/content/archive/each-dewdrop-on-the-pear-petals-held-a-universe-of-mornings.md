@@ -18,4 +18,4 @@ hashtags:
   - "flowering"
 ---
 Each dewdrop on the pear petals held a universe of morning's first light
-#pear #blossom #nature #spring #blooming #petals #dewdrops #green #white #beauty #fresh #flowering https://t.co/YRx6W3PUGt
+#pear #blossom #nature #spring #blooming #petals #dewdrops #green #white #beauty #fresh #flowering

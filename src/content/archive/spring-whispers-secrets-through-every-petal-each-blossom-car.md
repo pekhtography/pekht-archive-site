@@ -19,4 +19,4 @@ hashtags:
   - "botanical"
 ---
 Spring whispers secrets through every petal 🌸 Each blossom carries the promise of tomorrow's harvest ✨ Nature's reminder that patience always pays off 🍎 #SpringAwakening
-#blossoms #spring #flowers #pink #nature #bloom #apple #petals #garden #beauty #photography #botanical https://t.co/2El5MFFm6G
+#blossoms #spring #flowers #pink #nature #bloom #apple #petals #garden #beauty #photography #botanical

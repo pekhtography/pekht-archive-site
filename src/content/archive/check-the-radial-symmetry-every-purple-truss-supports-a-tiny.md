@@ -13,4 +13,4 @@ Check the radial symmetry.
 Every purple truss supports a tiny star. 
 Stress-tested by heavy bumblebees. 
 Actually, it is just an onion wearing haute couture. 🏗️✨
-#Nature #GardeningLife #BotanicalPunk #Awe https://t.co/41Bq5igNDC
+#Nature #GardeningLife #BotanicalPunk #Awe

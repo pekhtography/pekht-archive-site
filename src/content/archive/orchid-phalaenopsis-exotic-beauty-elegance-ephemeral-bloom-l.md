@@ -26,4 +26,4 @@ hashtags:
   - "Houseplant"
   - "Home"
 ---
-#Orchid #Phalaenopsis #Exotic #Beauty #Elegance #Ephemeral #Bloom #Life #Color #Vibrancy #Strength #Resilience #Care #Purple #Violet #Royalty #Flowers #Decorative #Charm #Houseplant #Home https://t.co/hb1h8VBaBU
+#Orchid #Phalaenopsis #Exotic #Beauty #Elegance #Ephemeral #Bloom #Life #Color #Vibrancy #Strength #Resilience #Care #Purple #Violet #Royalty #Flowers #Decorative #Charm #Houseplant #Home

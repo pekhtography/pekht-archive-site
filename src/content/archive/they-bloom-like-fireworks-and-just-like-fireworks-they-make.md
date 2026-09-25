@@ -18,4 +18,4 @@ hashtags:
   - "floral"
 ---
 They bloom like fireworks — and just like fireworks, they make the neighbors jealous
-#rhododendron #azalea #blooming #springtime #garden #colors #shrubs #flowers #landscape #nature #botany #floral https://t.co/7b4WTiHTew
+#rhododendron #azalea #blooming #springtime #garden #colors #shrubs #flowers #landscape #nature #botany #floral

@@ -12,4 +12,4 @@ hashtags:
   - "renewal"
   - "garden"
 ---
-Cherry blossoms are an iconic symbol of renewal and hope associated with spring #sakura #blossom #spring #beauty #impermanence #renewal #garden https://t.co/pblLzyAuvc
+Cherry blossoms are an iconic symbol of renewal and hope associated with spring #sakura #blossom #spring #beauty #impermanence #renewal #garden

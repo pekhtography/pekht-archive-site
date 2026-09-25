@@ -12,4 +12,4 @@ hashtags:
 One drip per second — the cathedral melts itself. 💧 
 Built by January, demolished by the first warm glance. 
 Ice never looked more permanent than right before it's gone. 🧊
-#NaturePhotography #MeltingSeason #IcePhotography #FrozenLight https://t.co/YX3DRH3ecU
+#NaturePhotography #MeltingSeason #IcePhotography #FrozenLight

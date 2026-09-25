@@ -15,4 +15,4 @@ Above: lights pretending to be stars.
 Me? Professional plus-one 😏
 Stuck here since Thanksgiving. 
 Time's relative when you're decorative 💡🎅❄️ 
-#ChristmasVibes #HolidayHumor #FestiveMood #RealTalk https://t.co/2wt6X61apJ
+#ChristmasVibes #HolidayHumor #FestiveMood #RealTalk

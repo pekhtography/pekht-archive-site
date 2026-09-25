@@ -19,4 +19,4 @@ hashtags:
   - "Blossom"
 ---
 These blossoms are like tiny ballerinas, pirouetting in the breeze, performing a dance of renewal and hope
-#Blossoms #Spring #Nature #Bloom #Petals #Flowering #Garden #Beauty #Blossoming #Fresh #White #Apple #Blossom https://t.co/XuhSnx9dYw
+#Blossoms #Spring #Nature #Bloom #Petals #Flowering #Garden #Beauty #Blossoming #Fresh #White #Apple #Blossom

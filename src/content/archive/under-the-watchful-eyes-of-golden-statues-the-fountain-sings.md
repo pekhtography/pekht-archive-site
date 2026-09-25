@@ -16,4 +16,4 @@ hashtags:
   - "Culture"
 ---
 Under the watchful eyes of golden statues, the fountain sings tales of unity, where every drop is a testament to the enduring friendship of nations
-#Friendship #Nations #Fountain #Golden #Sculpture #Heritage #Art #Grandeur #History #Culture https://t.co/bh2xQj6NkI
+#Friendship #Nations #Fountain #Golden #Sculpture #Heritage #Art #Grandeur #History #Culture

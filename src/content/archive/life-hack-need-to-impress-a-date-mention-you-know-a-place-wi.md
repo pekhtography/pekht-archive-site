@@ -16,4 +16,4 @@ hashtags:
   - "Cathedral"
 ---
 Life hack: Need to impress a date? Mention you know a place with river views and 500 years of history 😏 Don't mention the tourist crowds until after dessert 🍰 Works every time! 💕 #DatingHacks
-#Moscow #Kremlin #Russia #Architecture #History #River #Flowers #Tourism #Cathedral https://t.co/m68IjOxq1I
+#Moscow #Kremlin #Russia #Architecture #History #River #Flowers #Tourism #Cathedral

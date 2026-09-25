@@ -9,4 +9,4 @@ hashtags:
   - "AutumnMelancholy"
 ---
 The forest holds its breath. Trees undress silently, their golden shame falling to drown in the perfect, still mirror. Two worlds agree to lie to each other about eternity. ✨🍂🌲
-#MirrorLake #ForestBathing #AutumnMelancholy https://t.co/ak6uhn9B8r
+#MirrorLake #ForestBathing #AutumnMelancholy

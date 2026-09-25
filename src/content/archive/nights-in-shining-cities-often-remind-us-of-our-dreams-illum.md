@@ -14,4 +14,4 @@ hashtags:
   - "Magic"
   - "Lights"
 ---
-Nights in shining cities often remind us of our dreams #Illumination #Glow #Buildings #Structure #City #Dreams #Nights #Magic #Lights https://t.co/WZjN2OLAaG
+Nights in shining cities often remind us of our dreams #Illumination #Glow #Buildings #Structure #City #Dreams #Nights #Magic #Lights

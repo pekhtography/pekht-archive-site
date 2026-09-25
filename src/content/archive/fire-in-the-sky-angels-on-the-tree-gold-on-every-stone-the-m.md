@@ -12,4 +12,4 @@ hashtags:
 Fire in the sky, angels on the tree, gold on every stone 🔥 
 The market was here before midnight mass. 🌙 
 Hermes always kept the best stall. ✨
-#Christmas #ChristmasMarket #RoyalFairground #GoldenLight https://t.co/aNBcvLyTyF
+#Christmas #ChristmasMarket #RoyalFairground #GoldenLight

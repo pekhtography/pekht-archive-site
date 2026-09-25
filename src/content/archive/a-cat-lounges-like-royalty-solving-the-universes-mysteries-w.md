@@ -14,4 +14,4 @@ hashtags:
   - "sunlight"
 ---
 A cat lounges like royalty, solving the universe's mysteries while purring sweeter than any melody.
-#cat #feline #lazy #windowsill #comfort  #food #Sleep #sunlight https://t.co/TpcFc0zeua
+#cat #feline #lazy #windowsill #comfort  #food #Sleep #sunlight

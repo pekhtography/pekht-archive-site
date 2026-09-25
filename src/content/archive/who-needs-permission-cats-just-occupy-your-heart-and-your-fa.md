@@ -18,4 +18,4 @@ hashtags:
   - "Companion"
 ---
 Who needs permission? Cats just occupy — your heart and your favorite seat, no refunds! 🐾💺😹
-#MaineCoon #Kitten #Cat #Pets #Feline #Cute #Fluffy #Whiskers #Adorable #Cuddly #Animal #Companion https://t.co/qq2wP25aE8
+#MaineCoon #Kitten #Cat #Pets #Feline #Cute #Fluffy #Whiskers #Adorable #Cuddly #Animal #Companion

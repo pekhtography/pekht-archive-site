@@ -19,4 +19,4 @@ hashtags:
   - "modern"
 ---
 They say cities never sleep, but I think they dream in neon lights ✨ Every reflection tells a story of ambition reaching toward infinity🌃 #CityDreams
-#cityscape #skyscrapers #nightlife #reflection #lights #urban #architecture #panorama #skyline #metropolis #illumination #modern https://t.co/N0M0U7xcVv
+#cityscape #skyscrapers #nightlife #reflection #lights #urban #architecture #panorama #skyline #metropolis #illumination #modern

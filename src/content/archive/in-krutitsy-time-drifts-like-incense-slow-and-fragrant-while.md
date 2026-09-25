@@ -9,4 +9,4 @@ hashtags:
   - "timelessbeauty"
 ---
 In Krutitsy, time drifts like incense, slow and fragrant, while shadows play hide-and-seek in the red bricks. Even the air hums secrets of centuries. ☁️⛪️
-#architecturelovers #moscowhistory #timelessbeauty https://t.co/yRp830dPm2
+#architecturelovers #moscowhistory #timelessbeauty

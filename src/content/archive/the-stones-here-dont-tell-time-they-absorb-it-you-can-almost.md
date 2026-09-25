@@ -8,4 +8,4 @@ hashtags:
   - "HiddenGems"
   - "Timeless"
 ---
-The stones here don't tell time. They absorb it. You can almost hear the centuries exhaling in the sunlit silence. A perfect escape from the rush. 🧱☀️🤫 #Travel #HiddenGems #Timeless https://t.co/ZhjQb3uNSf
+The stones here don't tell time. They absorb it. You can almost hear the centuries exhaling in the sunlit silence. A perfect escape from the rush. 🧱☀️🤫 #Travel #HiddenGems #Timeless

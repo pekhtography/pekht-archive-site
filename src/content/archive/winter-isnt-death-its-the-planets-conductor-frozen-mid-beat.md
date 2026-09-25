@@ -12,4 +12,4 @@ Winter isn't death.
 It's the planet's conductor, frozen mid-beat, giving the silence a death stare because someone dared to breathe. 
 Symphony on pause. 
 The spring crescendo is earned. ❄️👀🎻
-#WinterWonderland #IceArt #WinterVibes https://t.co/I4nRLV0Kvv
+#WinterWonderland #IceArt #WinterVibes

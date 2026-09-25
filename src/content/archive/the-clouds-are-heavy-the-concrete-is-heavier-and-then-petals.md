@@ -12,4 +12,4 @@ hashtags:
 The clouds are heavy, the concrete is heavier — 
 and then petals, soft as a bruise, lean into all of it. 🌸☁️ 
 Tenderness is just stubbornness with better lighting.
-#MoscowRiver #SoftCity #FlowerPower #MoodShot https://t.co/zwUFg85cAK
+#MoscowRiver #SoftCity #FlowerPower #MoodShot

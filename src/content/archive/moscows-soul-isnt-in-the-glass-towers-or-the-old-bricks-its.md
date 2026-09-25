@@ -8,4 +8,4 @@ hashtags:
   - "UrbanPhotography"
   - "FutureNostalgia"
 ---
-Moscow’s soul isn't in the glass towers or the old bricks. It's in the quiet space between them, where the smell of fresh asphalt meets the echo of a courtyard ballad. The future is loud, but the past has a better soundtrack. 🎶🧱🏙️ #Moscow #UrbanPhotography #FutureNostalgia https://t.co/Kn9Y2iMBjv
+Moscow’s soul isn't in the glass towers or the old bricks. It's in the quiet space between them, where the smell of fresh asphalt meets the echo of a courtyard ballad. The future is loud, but the past has a better soundtrack. 🎶🧱🏙️ #Moscow #UrbanPhotography #FutureNostalgia

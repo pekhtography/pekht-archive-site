@@ -13,4 +13,4 @@ Melting ice mirrors golden windows
 while your expensive shoes pray for survival. 
 That giant tent mimics an iceberg, 
 hosting parties in a giant puddle. 🧊✨
-#CityLife #UrbanPhotography #SpringVibes #Mood https://t.co/ZSjhO6wczd
+#CityLife #UrbanPhotography #SpringVibes #Mood

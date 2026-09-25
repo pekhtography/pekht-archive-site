@@ -19,4 +19,4 @@ hashtags:
   - "cute"
 ---
 Plot twist: Black cats don't bring bad luck - they collect it from you! This one's doing community service 😸🌟💫 #CatHero
-#blackcat #cat #feline #kitten #pet #animal #eyes #street #outdoor #nature #photography #cute https://t.co/0t0SQLBAkK
+#blackcat #cat #feline #kitten #pet #animal #eyes #street #outdoor #nature #photography #cute

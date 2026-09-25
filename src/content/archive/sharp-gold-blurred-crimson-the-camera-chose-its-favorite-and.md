@@ -13,4 +13,4 @@ Sharp gold, blurred crimson —
 the camera chose its favorite 
 and the rest of the garden went soft around the edges. 📷🌼 
 Focus is just another word for cruelty.
-#DepthOfField #FlowerPhotography #PeonyLovers #NatureMood https://t.co/h2hB8QfMMQ
+#DepthOfField #FlowerPhotography #PeonyLovers #NatureMood

@@ -12,4 +12,4 @@ hashtags:
 Every line costs light ❄️
 Each pattern burns a little more sky 🌅
 The masterpiece grows while the source disappears ✨
-#WinterMood #EphemeralArt #FrostPatterns #VanishingLight https://t.co/QVZHGUbZoO
+#WinterMood #EphemeralArt #FrostPatterns #VanishingLight

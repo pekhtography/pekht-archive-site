@@ -13,4 +13,4 @@ hashtags:
   - "Life"
   - "Towe"
 ---
-Campanula blooms like a bell, reverberating the whispers of nature #Campanula #Bell #Plant #Nature #Garden #Bloom #Life #Towe https://t.co/oogW1iIfOn
+Campanula blooms like a bell, reverberating the whispers of nature #Campanula #Bell #Plant #Nature #Garden #Bloom #Life #Towe

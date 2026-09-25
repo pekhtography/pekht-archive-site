@@ -12,4 +12,4 @@ hashtags:
   - "park"
 ---
 Mental health tip: Replace your therapist with a pond 🛋️ Side effects may include: excessive peace, unauthorized happiness, and spontaneous tree-hugging 🤗 Warning: Insurance doesn't cover "accidental enlightenment" ⚠️ #TherapyAlternatives
-#autumn #river #nature #peaceful #park https://t.co/7J1z3pIfHx
+#autumn #river #nature #peaceful #park

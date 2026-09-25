@@ -21,4 +21,4 @@ hashtags:
   - "Colors"
   - "Vibrancy"
 ---
-#Heuchera #Flower #Pink #Joy #Yellow #Sunshine #Petals #Delight #Garden #Nature #Diversity #Inclusion #Beauty #Aesthetics #Colors #Vibrancy https://t.co/agfrD5B1k1
+#Heuchera #Flower #Pink #Joy #Yellow #Sunshine #Petals #Delight #Garden #Nature #Diversity #Inclusion #Beauty #Aesthetics #Colors #Vibrancy

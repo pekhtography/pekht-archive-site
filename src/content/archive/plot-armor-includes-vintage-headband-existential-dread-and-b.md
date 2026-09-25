@@ -18,4 +18,4 @@ hashtags:
   - "director"
 ---
 Plot armor includes: vintage headband, existential dread, and binoculars for spotting bad acting from miles away🔍 Anderson sees all, judges cinematically 🎭 #VisionaryProblems
-#Anderson #vintage #poster #retro #character #portrait #military #cinematic #aesthetic #indie #director https://t.co/xU8ZeFqWOy
+#Anderson #vintage #poster #retro #character #portrait #military #cinematic #aesthetic #indie #director

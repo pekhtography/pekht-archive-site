@@ -12,4 +12,4 @@ hashtags:
   - "aura"
   - "garden"
 ---
-In gardens, the scent of lilies can fill the air with their enchanting aroma #lily #purity #yellow #happiness #scent #aura #garden https://t.co/nVZFIHOPm5
+In gardens, the scent of lilies can fill the air with their enchanting aroma #lily #purity #yellow #happiness #scent #aura #garden

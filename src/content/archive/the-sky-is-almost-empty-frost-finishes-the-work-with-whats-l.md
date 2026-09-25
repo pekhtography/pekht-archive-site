@@ -12,4 +12,4 @@ hashtags:
 The sky is almost empty ❄️
 Frost finishes the work with what’s left 🌅
 Great art never asks if the price was fair ✨
-#WinterMood #EphemeralArt #FrostPatterns #VanishingLight https://t.co/4klca8Q9Iy
+#WinterMood #EphemeralArt #FrostPatterns #VanishingLight

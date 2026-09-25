@@ -19,4 +19,4 @@ hashtags:
   - "Beauty"
 ---
 In the autumnal embrace, the Physalis stands regal, draping the garden with its amber lanterns, as if the sun itself had chosen to linger a little longer
-#Physalis #ChineseLantern #Lanterns #Garden #Hues #Autumnal #Autumn #Regal #Amber #Enchanted #Husk #Palette #Beauty https://t.co/ATwPwkwliO
+#Physalis #ChineseLantern #Lanterns #Garden #Hues #Autumnal #Autumn #Regal #Amber #Enchanted #Husk #Palette #Beauty

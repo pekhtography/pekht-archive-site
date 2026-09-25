@@ -13,4 +13,4 @@ Sun hits. Petals unfurl.
 The creased, sugary, velvet layers (thicker than a wedding cake) 
 expand until the backyard becomes a cheap motel. 
 Royal arrival. 🍭🏰
-#Nature #GardenLife #PetalPerfection #MainCharacterEnergy https://t.co/jZR8baWuBh
+#Nature #GardenLife #PetalPerfection #MainCharacterEnergy

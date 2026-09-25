@@ -23,4 +23,4 @@ hashtags:
   - "bloom"
 ---
 Why did the common agrimony break up with the cactus? It wanted a partner who wouldn’t just be prickly!
-#common #agrimony #church #steeples #sticklewort #yellow #flower #flora #nature #botany #wildflowers #plants #herb #gardening #beauty #outdoors #bloom https://t.co/G5GvV54aFs
+#common #agrimony #church #steeples #sticklewort #yellow #flower #flora #nature #botany #wildflowers #plants #herb #gardening #beauty #outdoors #bloom

@@ -23,4 +23,4 @@ hashtags:
   - "embrace"
 ---
 The river, a silver serpent, weaves through the heart of the city, tracing its contours with the tenderness of flowing silk
-#river #silver #serpent #twist #heart #city #flow #water #currents #ribbon #life #direction #tenderness #care #silk #smooth #embrace https://t.co/p3bRTouEQU
+#river #silver #serpent #twist #heart #city #flow #water #currents #ribbon #life #direction #tenderness #care #silk #smooth #embrace

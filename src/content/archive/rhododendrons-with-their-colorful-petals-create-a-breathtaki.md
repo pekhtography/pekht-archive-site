@@ -9,4 +9,4 @@ hashtags:
   - "Azalea"
   - "Garden"
 ---
-Rhododendrons, with their colorful petals, create a breathtaking tapestry in spring #Rhododendron #Colorful #Azalea #Garden https://t.co/eabNGBFSRO
+Rhododendrons, with their colorful petals, create a breathtaking tapestry in spring #Rhododendron #Colorful #Azalea #Garden

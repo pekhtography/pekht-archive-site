@@ -18,4 +18,4 @@ hashtags:
   - "blossom"
 ---
 The Siberian squills shared secrets with the tulip, making it blush with delight 
-#spring #flowers #nature #garden #bloom #tulip #bluebells #greenery #outdoors #vibrant #serene #blossom https://t.co/mQe4X3uaMd
+#spring #flowers #nature #garden #bloom #tulip #bluebells #greenery #outdoors #vibrant #serene #blossom

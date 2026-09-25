@@ -19,4 +19,4 @@ hashtags:
   - "dwelling"
 ---
 Beneath the radiant sun, a ship glides along the river, carrying stories from the past to the present
-#ship #vessel #journey #adventure #river #stream #water #sunshine #ray #history #tale #house #dwelling https://t.co/vpzfPuXlZI
+#ship #vessel #journey #adventure #river #stream #water #sunshine #ray #history #tale #house #dwelling

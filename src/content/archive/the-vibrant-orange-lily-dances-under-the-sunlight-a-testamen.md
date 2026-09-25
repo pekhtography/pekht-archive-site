@@ -14,4 +14,4 @@ hashtags:
   - "sunlight"
   - "lily"
 ---
-The vibrant orange lily dances under the sunlight, a testament to nature's artistry #orange #vibrant #bloom #grace #garden #beauty #nature #sunlight #lily https://t.co/6uCoMIBviX
+The vibrant orange lily dances under the sunlight, a testament to nature's artistry #orange #vibrant #bloom #grace #garden #beauty #nature #sunlight #lily

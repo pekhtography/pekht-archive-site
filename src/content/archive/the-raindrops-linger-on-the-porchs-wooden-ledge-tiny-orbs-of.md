@@ -16,4 +16,4 @@ hashtags:
   - "moment"
 ---
 The raindrops linger on the porch's wooden ledge, tiny orbs of liquid glass reflecting the world in shimmering clarity
-#raindrop #wooden #Rustic #railing #porch #time #Eternity #gem #Value #moment https://t.co/7E1NtNf8Ym
+#raindrop #wooden #Rustic #railing #porch #time #Eternity #gem #Value #moment

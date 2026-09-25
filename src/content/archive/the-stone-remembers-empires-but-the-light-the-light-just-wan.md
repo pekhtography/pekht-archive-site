@@ -8,4 +8,4 @@ hashtags:
   - "Nostalgia"
   - "Neoclassical"
 ---
-The stone remembers empires, but the light? The light just wants to look expensive on Instagram. A perfect marriage of legacy and flex. 🏛️💡✨ #Aesthetic #Nostalgia #Neoclassical https://t.co/FS9lncYeye
+The stone remembers empires, but the light? The light just wants to look expensive on Instagram. A perfect marriage of legacy and flex. 🏛️💡✨ #Aesthetic #Nostalgia #Neoclassical

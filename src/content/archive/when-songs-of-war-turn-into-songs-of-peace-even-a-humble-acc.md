@@ -19,4 +19,4 @@ hashtags:
   - "reenactment"
 ---
 When songs of war turn into songs of peace, even a humble accordion tells the loudest stories 🎵✊📜 #EchoesOfTheRedArmy
-#train #vintage #history #war #victory #soldiers #uniform #USSR #Stalin #celebration #patriotism #reenactment https://t.co/L0g6SfgRIT
+#train #vintage #history #war #victory #soldiers #uniform #USSR #Stalin #celebration #patriotism #reenactment

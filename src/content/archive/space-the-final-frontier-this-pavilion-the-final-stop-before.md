@@ -16,4 +16,4 @@ hashtags:
   - "Tourism"
 ---
 Space: the final frontier. This pavilion: the final stop before the souvenir shop frontier
-#Cosmos #Architecture #Night #Illumination #Exhibition #Space #Pavilion #Golden #Arch #Tourism https://t.co/G5b2zqg6Cq
+#Cosmos #Architecture #Night #Illumination #Exhibition #Space #Pavilion #Golden #Arch #Tourism

@@ -15,4 +15,4 @@ and then, warm as bread from an oven, rough-gold against the cold,
 the tower simply catches fire. 🌆 
 One building. 
 Whole dusk. ✨
-#Moscow #ArchitectureLovers #SovietAesthetics #NightCity https://t.co/niatswZxaY
+#Moscow #ArchitectureLovers #SovietAesthetics #NightCity

@@ -19,4 +19,4 @@ hashtags:
   - "botany"
 ---
 The silent symphony of rebirth in every bud
-#larch #buds #nature #spring #growth #green #branch #bloom #life #forest #blossom #sunlight #botany https://t.co/lOUHNpci7z
+#larch #buds #nature #spring #growth #green #branch #bloom #life #forest #blossom #sunlight #botany

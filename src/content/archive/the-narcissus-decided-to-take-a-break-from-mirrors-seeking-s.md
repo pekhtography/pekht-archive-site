@@ -18,4 +18,4 @@ hashtags:
   - "Growth"
 ---
 The narcissus decided to take a break from mirrors, seeking solace in the arms of the wind
-#Narcissus #Flower #Bloom #Spring #Nature #Yellow #White #Petals #Garden #Blossom #Fresh #Growth https://t.co/9AEYdVw4iL
+#Narcissus #Flower #Bloom #Spring #Nature #Yellow #White #Petals #Garden #Blossom #Fresh #Growth

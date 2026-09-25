@@ -18,4 +18,4 @@ hashtags:
   - "outdoors"
 ---
 The muscari, humble yet vibrant, brighten the day with their steadfast blue spirit
-#muscari #flowers #blooms #nature #spring #garden #blue #blossoms #bulbs #botany #flora #outdoors https://t.co/zeOEBP499I
+#muscari #flowers #blooms #nature #spring #garden #blue #blossoms #bulbs #botany #flora #outdoors

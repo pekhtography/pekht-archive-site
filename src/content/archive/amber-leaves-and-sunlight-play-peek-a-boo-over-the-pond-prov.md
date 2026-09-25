@@ -18,4 +18,4 @@ hashtags:
   - "magic"
 ---
 Amber leaves and sunlight play peek-a-boo over the pond, proving that all that glitters might just be autumn
-#sunbeam #autumn #amber #gold #pond #ripples #beauty #warmth #nostalgia #light #tranquility #magic https://t.co/RYa9ujxiWn
+#sunbeam #autumn #amber #gold #pond #ripples #beauty #warmth #nostalgia #light #tranquility #magic

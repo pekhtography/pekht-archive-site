@@ -19,4 +19,4 @@ hashtags:
   - "Joy"
 ---
 Who needs therapy when you have pancakes and a festival? Calories don’t count if you believe hard enough! 🥞😜 #PancakePsychology 
-#Maslenitsa #Moscow #Festival #Tradition #Winter #Celebration #Russia #Culture #RedSquare #Holiday #FolkArt #Joy https://t.co/rB3UGmjT2b
+#Maslenitsa #Moscow #Festival #Tradition #Winter #Celebration #Russia #Culture #RedSquare #Holiday #FolkArt #Joy

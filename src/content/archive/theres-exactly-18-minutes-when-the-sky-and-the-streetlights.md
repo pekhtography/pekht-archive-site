@@ -11,4 +11,4 @@ There's exactly 18 minutes when the sky and the streetlights agree on everything
 The buildings go gold, the snow turns pink,
 the bare trees stop looking sad and start looking architectural.
 Miss it by one red light and you're back to just… winter❄️🖤
-#WinterVibes #Photography https://t.co/q4gSaUEh6L
+#WinterVibes #Photography

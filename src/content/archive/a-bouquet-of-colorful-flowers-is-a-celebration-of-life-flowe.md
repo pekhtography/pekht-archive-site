@@ -11,4 +11,4 @@ hashtags:
   - "colors"
   - "vibrancy"
 ---
-A bouquet of colorful flowers is a celebration of life #flowers #bloom #garden #nature #colors #vibrancy https://t.co/2Nz4bWADqe
+A bouquet of colorful flowers is a celebration of life #flowers #bloom #garden #nature #colors #vibrancy

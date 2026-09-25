@@ -13,4 +13,4 @@ Glass swallowed the sky. 🏙️
 Towers ate each other's reflection and forgot which one was real. 
 Steel. Cloud. 
 Same thing. ✨
-#Architecture #UrbanMirror #ReflectionPhotography #Vertigo https://t.co/bYidjUTA8O
+#Architecture #UrbanMirror #ReflectionPhotography #Vertigo

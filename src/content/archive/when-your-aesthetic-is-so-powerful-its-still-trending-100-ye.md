@@ -18,4 +18,4 @@ hashtags:
   - "graphics"
 ---
 When your aesthetic is so powerful it's still trending 100 years later 💯🔴 Some things never go out of style - revolutionary design is eternal! #TimelessDesign
-#vintage #soviet #propaganda #poster #constructivist #automobile #concert #theater #cinema #revolutionary #graphics https://t.co/Lyg1uwKP9L
+#vintage #soviet #propaganda #poster #constructivist #automobile #concert #theater #cinema #revolutionary #graphics

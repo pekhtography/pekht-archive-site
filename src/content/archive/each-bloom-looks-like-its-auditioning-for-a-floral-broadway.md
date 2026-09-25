@@ -18,4 +18,4 @@ hashtags:
   - "flowers"
 ---
 Each bloom looks like it’s auditioning for a floral Broadway show—and it nailed it
-#rhododendron #blossom #spring #blooming #nature #garden #petals #botanical #purple #evergreen #beauty #flowers https://t.co/gmvHGi1PEG
+#rhododendron #blossom #spring #blooming #nature #garden #petals #botanical #purple #evergreen #beauty #flowers

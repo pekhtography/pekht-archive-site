@@ -22,4 +22,4 @@ hashtags:
   - "Petal"
   - "Celebration"
 ---
-#CrabApple #Tree #RoyalBeauty #Elegance #Spring #Renewal #Bloom #Joy #Garden #Color #Vibrance #Fragrance #Delight #Nature #Artistry #Petal #Celebration https://t.co/vEmCiT2NYX
+#CrabApple #Tree #RoyalBeauty #Elegance #Spring #Renewal #Bloom #Joy #Garden #Color #Vibrance #Fragrance #Delight #Nature #Artistry #Petal #Celebration

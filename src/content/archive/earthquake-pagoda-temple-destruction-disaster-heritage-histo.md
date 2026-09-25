@@ -20,4 +20,4 @@ hashtags:
   - "Devastation"
   - "Collapse"
 ---
-#Earthquake #Pagoda #Temple #Destruction #Disaster #Heritage #History #Tragedy #Asia #Buddhism #Cultural #Loss #Ruins #Devastation #Collapse https://t.co/lZ22XTJWj5
+#Earthquake #Pagoda #Temple #Destruction #Disaster #Heritage #History #Tragedy #Asia #Buddhism #Cultural #Loss #Ruins #Devastation #Collapse

@@ -19,4 +19,4 @@ hashtags:
   - "Nostalgia"
 ---
 The horizon ignites in a fiery farewell, while gloomy clouds lounge about, reminiscing about their best stormy performances, as day surrenders to the velvet darkness
-#Sunset #Golden #Sky #Infinity #Crimson #Fire #Clouds #Days #Moments #Twilight #Blaze #Reminiscing #Nostalgia https://t.co/r7hlIGXdNi
+#Sunset #Golden #Sky #Infinity #Crimson #Fire #Clouds #Days #Moments #Twilight #Blaze #Reminiscing #Nostalgia

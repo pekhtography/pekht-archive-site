@@ -20,4 +20,4 @@ hashtags:
   - "hope"
 ---
 The pale roses blush like tender confessions shared beneath the stars, while the deep crimson ones burn like passions ignited in the night
-#rose #bloom #blooming #palette #color #twilight #dark #light #garden #memory #passion #love #beauty #hope https://t.co/IAIuqbZ558
+#rose #bloom #blooming #palette #color #twilight #dark #light #garden #memory #passion #love #beauty #hope

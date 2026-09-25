@@ -14,4 +14,4 @@ hashtags:
   - "dance"
   - "freedom"
 ---
-Skating rinks are magical places #winter #canvas #skating #stars #laughter #glow #ice #dance #freedom https://t.co/UAqXJB9qDF
+Skating rinks are magical places #winter #canvas #skating #stars #laughter #glow #ice #dance #freedom

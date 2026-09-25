@@ -13,4 +13,4 @@ Cold settles on painted wood. Strangers blur past.
 The manger holds its breath 🕊️❄️
 Miracle paused mid-air — 
 waiting for faith, settling for flash photography.
-#ChristmasVibes #UrbanTraditions #SacredScenes #Nostalgia https://t.co/b1JOyrAQz2
+#ChristmasVibes #UrbanTraditions #SacredScenes #Nostalgia

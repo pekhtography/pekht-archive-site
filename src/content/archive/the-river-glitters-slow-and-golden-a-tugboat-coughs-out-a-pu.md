@@ -14,4 +14,4 @@ hovering on chopsticks,
 deciding whether to sit down or launch back into orbit.
 It stayed.
 Now the flowers are its landing pad🌊🛸🌸
-#Architecture #Brutalism https://t.co/HA6IUmxLQ4
+#Architecture #Brutalism

@@ -12,4 +12,4 @@ hashtags:
 Velvet petals—
 nestled on sharp granite—
 breathe in warm sunset right before the thunder crashes down across the quiet skyline. 🌸⚡
-#CityVibes #UrbanGlow #GoldenHourMagic #MoodySkies https://t.co/mekkZuKgBb
+#CityVibes #UrbanGlow #GoldenHourMagic #MoodySkies

@@ -12,4 +12,4 @@ hashtags:
 Rain bit every petal. 🌧️ 
 Left pink scars on amber silk. 
 The florist would've tossed it — the garden kept it anyway. 🌹
-#RealBeauty #FlowerPhotography #GardenMoments #NatureLovers https://t.co/1gVNvvokeS
+#RealBeauty #FlowerPhotography #GardenMoments #NatureLovers

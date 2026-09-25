@@ -15,4 +15,4 @@ hashtags:
   - "ceremony"
 ---
 Me: "I need more peace in my life" Universe: "Hold up, let me dim the city lights and float some magic your way" 🏮✨ Sometimes the answer is literally floating right in front of you 🌊 #UniverseDelivered
-#lanterns #night #festival #reflection #city #lights #tradition #ceremony https://t.co/Y6qmIWfulw
+#lanterns #night #festival #reflection #city #lights #tradition #ceremony

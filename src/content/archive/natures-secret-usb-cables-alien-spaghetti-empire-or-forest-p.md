@@ -21,4 +21,4 @@ hashtags:
   - "botany"
 ---
 Nature's secret USB cables? 🔌 Alien spaghetti empire? 👽 Or forest poetry? 🌱 Fern spirals connect us to Earth's magic. ✨ #PluggedIntoNature #SpaghettiFernEmpire #WhispersOfTheForest
-#fern #nature #green #forest #wild #plants #fresh #growth #jungle #eco #leaves #botany https://t.co/A8cPyl9TVQ
+#fern #nature #green #forest #wild #plants #fresh #growth #jungle #eco #leaves #botany

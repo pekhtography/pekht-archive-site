@@ -17,4 +17,4 @@ hashtags:
   - "Historic"
 ---
 When you realize Moscow's towers are basically the city's original influencers - standing tall, looking dramatic, and photobombing every skyline shot since 1953 📸🎪 #OriginalInfluencers
-#Moscow #Architecture #Skyscraper #Soviet #Stalinist #Traffic #Urban #City #Tower #Historic https://t.co/zavizZ0IzV
+#Moscow #Architecture #Skyscraper #Soviet #Stalinist #Traffic #Urban #City #Tower #Historic

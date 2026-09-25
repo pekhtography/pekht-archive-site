@@ -13,4 +13,4 @@ They put up two giant festive trees to frame the square.
 I feel you, brothers. 
 We're all just temporary decorations 
 meant to make someone else's grandiose plan look more cheerful. 🎄😏 
-#MensMind #UrbanLife #WinterPhilosophy #CalmChaos https://t.co/HJaB33AvQR
+#MensMind #UrbanLife #WinterPhilosophy #CalmChaos

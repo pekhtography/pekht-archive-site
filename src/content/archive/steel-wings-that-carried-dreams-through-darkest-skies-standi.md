@@ -19,4 +19,4 @@ hashtags:
   - "uniforms"
 ---
 Steel wings that carried dreams through darkest skies 🌟 Standing where courage wrote its finest chapters 📖 ✈️ #VictoryWings
-#aircraft #history #moscow #kremlin #military #vintage #commemoration #russia #aviation #square #tower #uniforms https://t.co/5E75awCEtu
+#aircraft #history #moscow #kremlin #military #vintage #commemoration #russia #aviation #square #tower #uniforms

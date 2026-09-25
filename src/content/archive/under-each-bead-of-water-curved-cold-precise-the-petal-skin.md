@@ -13,4 +13,4 @@ Under each bead of water — curved, cold, precise —
 the petal skin maps itself in miniature, 
 every vein doubled, every fold archived 🔬, 
 like the rain came to study, not to drown. 🌸
-#Flowers #JasmineSeason #RainPhotography #PetalMood https://t.co/nSPms7eRKe
+#Flowers #JasmineSeason #RainPhotography #PetalMood

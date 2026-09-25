@@ -17,4 +17,4 @@ hashtags:
   - "Culture"
 ---
 🌞 Who needs sunshine when you have a sun doll staring at you all day? #Tradition 
-#Sun #Doll #Folk #Spring #Festival #Colorful #Tree #Ribbons #Handmade #Culture https://t.co/QmOfEUklcy
+#Sun #Doll #Folk #Spring #Festival #Colorful #Tree #Ribbons #Handmade #Culture

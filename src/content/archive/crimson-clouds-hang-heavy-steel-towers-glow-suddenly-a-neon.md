@@ -13,4 +13,4 @@ Crimson clouds hang heavy. Steel towers glow.
 Suddenly, a neon pink bridge crashes onto the fourth floor, 
 right where the laundry dries 🌈. 
 Gravity quit.
-#Skyline #UrbanNature #RainbowMagic #GoldenHour https://t.co/d42FrhUnls
+#Skyline #UrbanNature #RainbowMagic #GoldenHour

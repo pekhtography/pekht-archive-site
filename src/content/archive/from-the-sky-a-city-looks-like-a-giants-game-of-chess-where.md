@@ -25,4 +25,4 @@ hashtags:
   - "architecture"
 ---
 From the sky, a city looks like a giant’s game of chess, where everyone’s too busy to know they’re being played
-#City #Metropolis #Sky #Heavens #Chess #Strategy #Game #Competition #Pawns #Players #urban #view #perspective #heights #altitude #life #existence #design #architecture https://t.co/rstjp31MoP
+#City #Metropolis #Sky #Heavens #Chess #Strategy #Game #Competition #Pawns #Players #urban #view #perspective #heights #altitude #life #existence #design #architecture

@@ -19,4 +19,4 @@ hashtags:
   - "floral"
 ---
 Some say burgundy roses whisper secrets only the heart can hear 🌹 When life gets thorny, remember even roses need their sharp edges to protect their beauty ✨ #DeepBeautySecrets
-#roses #burgundy #garden #flowers #bloom #petals #nature #red #beauty #romance #photography #floral https://t.co/lZHbQQQU9r
+#roses #burgundy #garden #flowers #bloom #petals #nature #red #beauty #romance #photography #floral

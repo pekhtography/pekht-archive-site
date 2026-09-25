@@ -22,4 +22,4 @@ hashtags:
   - "infinity"
 ---
 Glass giants cradle urban life, where dreams and realities intertwine in vertical spaces
-#Skyscrapers #giants #Architectural #design #Space #expanse #Community #togetherness #Urban #jungle #Glass #reflection #Buildings #structures #Sky #infinity https://t.co/xsaa6Ew2qP
+#Skyscrapers #giants #Architectural #design #Space #expanse #Community #togetherness #Urban #jungle #Glass #reflection #Buildings #structures #Sky #infinity

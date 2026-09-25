@@ -18,4 +18,4 @@ hashtags:
   - "Outdoors"
 ---
 Meadowsweet can soothe headaches; it's nature's aspirin, minus the annoying commercials!
-#Meadowsweet #Filipendula #Ulmaria #Nature #Wildflowers #Blooms #Summer #Garden #Botany #Flora #Green #Outdoors https://t.co/t8dzufMLMZ
+#Meadowsweet #Filipendula #Ulmaria #Nature #Wildflowers #Blooms #Summer #Garden #Botany #Flora #Green #Outdoors

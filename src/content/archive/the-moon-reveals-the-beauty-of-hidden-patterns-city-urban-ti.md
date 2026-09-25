@@ -26,4 +26,4 @@ hashtags:
   - "Bliss"
 ---
 The moon reveals the beauty of hidden patterns
-#city #Urban #timelessness #Infinity #patterns #Tapestry #dance #Rhythm #moonlight #Glow #celebration #Festival #jewels #Treasures #stories #Tales #history #Legacy #joy #Bliss https://t.co/IYYorhi21v
+#city #Urban #timelessness #Infinity #patterns #Tapestry #dance #Rhythm #moonlight #Glow #celebration #Festival #jewels #Treasures #stories #Tales #history #Legacy #joy #Bliss

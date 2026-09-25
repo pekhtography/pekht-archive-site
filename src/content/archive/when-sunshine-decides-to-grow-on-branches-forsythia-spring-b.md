@@ -18,4 +18,4 @@ hashtags:
   - "landscape"
 ---
 When sunshine decides to grow on branches 🌼
-#forsythia #spring #blossom #nature #yellow #garden #bloom #tree #outdoors #colorful #seasonal #landscape https://t.co/mchQQTzh7L
+#forsythia #spring #blossom #nature #yellow #garden #bloom #tree #outdoors #colorful #seasonal #landscape

@@ -14,4 +14,4 @@ Snow-covered branch right into the lens:
 "LISTEN TO ME !"
 Now I have a portrait of a snow dictator demanding attention.
 Perfect ❄️👊
-#Nature #WinterVibes #OutdoorPhotography #Chaos https://t.co/rnIRntLaen
+#Nature #WinterVibes #OutdoorPhotography #Chaos

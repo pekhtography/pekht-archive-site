@@ -16,4 +16,4 @@ hashtags:
   - "jewels"
   - "stories"
 ---
-In the city where time stood still, patterns danced under the lunar glow #ancient #history #patterns #designs #moon #light #joy #city #celebration #jewels #stories https://t.co/R9YyUTPCq2
+In the city where time stood still, patterns danced under the lunar glow #ancient #history #patterns #designs #moon #light #joy #city #celebration #jewels #stories

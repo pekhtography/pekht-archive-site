@@ -19,4 +19,4 @@ hashtags:
   - "vacation"
 ---
 Sometimes the best perspective comes from floating between two worlds 🚢 The bridge above, the water below, and us somewhere magical in between ✨ #RiverCruiseLife
-#cruise #river #boat #tourism #bridge #flowers #city #travel #sightseeing #architecture #summer #vacation https://t.co/9gvOH9ybUL
+#cruise #river #boat #tourism #bridge #flowers #city #travel #sightseeing #architecture #summer #vacation

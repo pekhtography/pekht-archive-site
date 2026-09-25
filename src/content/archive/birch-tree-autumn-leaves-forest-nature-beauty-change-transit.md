@@ -24,4 +24,4 @@ hashtags:
   - "serenity"
   - "peace"
 ---
-#Birch #Tree #Autumn #Leaves #Forest #Nature #Beauty #Change #Transition #Memories #Time #woods #outdoors #wilderness #ecology #green #tranquility #serenity #peace https://t.co/jJVbmro5DD
+#Birch #Tree #Autumn #Leaves #Forest #Nature #Beauty #Change #Transition #Memories #Time #woods #outdoors #wilderness #ecology #green #tranquility #serenity #peace

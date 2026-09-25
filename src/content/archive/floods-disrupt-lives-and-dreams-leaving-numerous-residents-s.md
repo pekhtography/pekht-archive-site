@@ -16,4 +16,4 @@ hashtags:
   - "Downpour"
 ---
 Floods disrupt lives and dreams, leaving numerous residents stranded after a powerful storm, showcasing nature's fury through relentless winds and heavy rainfall, resulting in widespread evacuations
-#Floods #Deluge #Chaos #Nature #Wildlife #Storm #Tempest #Wind #Rain #Downpour https://t.co/SHH5QC4XyA
+#Floods #Deluge #Chaos #Nature #Wildlife #Storm #Tempest #Wind #Rain #Downpour

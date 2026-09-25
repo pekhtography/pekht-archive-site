@@ -11,4 +11,4 @@ hashtags:
   - "garden"
   - "miracle"
 ---
-If we were able to fully appreciate the wonder of a single flower, it would transform our entire existence #tulip #beauty #sunshine #nature #garden #miracle https://t.co/wboWXtC0Fh
+If we were able to fully appreciate the wonder of a single flower, it would transform our entire existence #tulip #beauty #sunshine #nature #garden #miracle

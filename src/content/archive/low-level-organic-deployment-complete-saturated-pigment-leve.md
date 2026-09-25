@@ -14,4 +14,4 @@ Saturated pigment levels exceeding building height.
 Vertical steel structures blurred into irrelevance. 
 No budget. 
 Just sheer audacity. 🌺🏙️
-#Nature #UrbanGardening #PetalsAndConcrete #VibrantLiving https://t.co/OO9ZbB06mX
+#Nature #UrbanGardening #PetalsAndConcrete #VibrantLiving

@@ -23,4 +23,4 @@ hashtags:
   - "Emotions"
   - "Feelings"
 ---
-#Bouquet #Celebration #Colorful #Joy #Flowers #Nature #Fresh #Vitality #Petal #Composition #Harmony #Multicolored #Rainbow #Gift #Colors #Vivid #Emotions #Feelings https://t.co/gJwKSxylUU
+#Bouquet #Celebration #Colorful #Joy #Flowers #Nature #Fresh #Vitality #Petal #Composition #Harmony #Multicolored #Rainbow #Gift #Colors #Vivid #Emotions #Feelings

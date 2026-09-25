@@ -19,4 +19,4 @@ hashtags:
   - "beauty"
 ---
 Miniature wonders of nature, showing us how to bloom gracefully 🌸💫 Tiny petals, big dreams! #GracefulBlooms
-#flower #spring #nature #white #bloom #garden #plant #botany #petals #green #flora #beauty https://t.co/mvvQYi4PMH
+#flower #spring #nature #white #bloom #garden #plant #botany #petals #green #flora #beauty

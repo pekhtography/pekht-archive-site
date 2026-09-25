@@ -14,4 +14,4 @@ Veins on fuchsia skin,
 sticky with summer dew, 
 start to glow as the neon landing pads launch a sweet, 
 floral rebellion... 🌺🐝
-#Nature #UrbanGardening #CityEscape #Vibrant https://t.co/N7XqVju0ti
+#Nature #UrbanGardening #CityEscape #Vibrant

@@ -1,0 +1,27 @@
+---
+title: "#Leaves #Nature #Hazelnut #Jagged #Gold #Green #Life #Autumn #Change #Hazel #Leaf #Serrated #Drama #Color #Beauty #Nut #"
+x_id: "1901946179912605696"
+x_created_at: "2025-03-18T10:38:00Z"
+image: "/images/archive/leaves-nature-hazelnut-jagged-gold-green-life-autumn-change.jpg"
+hashtags:
+  - "Leaves"
+  - "Nature"
+  - "Hazelnut"
+  - "Jagged"
+  - "Gold"
+  - "Green"
+  - "Life"
+  - "Autumn"
+  - "Change"
+  - "Hazel"
+  - "Leaf"
+  - "Serrated"
+  - "Drama"
+  - "Color"
+  - "Beauty"
+  - "Nut"
+  - "Foliage"
+  - "Seasons"
+  - "Transformation"
+---
+#Leaves #Nature #Hazelnut #Jagged #Gold #Green #Life #Autumn #Change #Hazel #Leaf #Serrated #Drama #Color #Beauty #Nut #Foliage #Seasons #Transformation https://t.co/P0fO1yVMNq

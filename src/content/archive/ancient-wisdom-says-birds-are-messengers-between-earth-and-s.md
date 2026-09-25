@@ -19,4 +19,4 @@ hashtags:
   - "songbird"
 ---
 Ancient wisdom says birds are messengers between earth and sky 🐦 This little hunter carries news of spring's abundance, one insect at a time ✨🌿 #FeatheredMessenger
-#bird #wagtail #insect #feeding #nature #garden #wildlife #ceramic #vessel #bokeh #photography #songbird https://t.co/EYlPYnDUFA
+#bird #wagtail #insect #feeding #nature #garden #wildlife #ceramic #vessel #bokeh #photography #songbird

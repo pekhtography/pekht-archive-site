@@ -13,4 +13,4 @@ hashtags:
   - "joy"
   - "daylily"
 ---
-Four Stella de Oro daylily flowers, lined up in a perfect row, like soldiers ready for a parade, create a magnificent sight in the garden #elegance #garden #beauty #nature #spirit #flowers #joy #daylily https://t.co/PP6gvy25Vt
+Four Stella de Oro daylily flowers, lined up in a perfect row, like soldiers ready for a parade, create a magnificent sight in the garden #elegance #garden #beauty #nature #spirit #flowers #joy #daylily

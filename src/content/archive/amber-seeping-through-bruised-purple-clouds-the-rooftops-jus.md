@@ -13,4 +13,4 @@ Amber seeping through bruised purple clouds,
 the rooftops just black teeth against the glow 🌇 — 
 this is the sky's handwriting, 
 scrawled fast before dark erases it. ✨🔥
-#SkyOnFire #GoldenHour #EphemeralLight #Awestruck https://t.co/tHefVraKK3
+#SkyOnFire #GoldenHour #EphemeralLight #Awestruck

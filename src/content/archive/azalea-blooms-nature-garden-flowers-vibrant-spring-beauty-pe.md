@@ -17,4 +17,4 @@ hashtags:
   - "blossoms"
   - "flora"
 ---
-#Azalea #blooms #nature #garden #flowers #vibrant #spring #beauty #petals #colorful #blossoms #flora https://t.co/HlMHJUpQFt
+#Azalea #blooms #nature #garden #flowers #vibrant #spring #beauty #petals #colorful #blossoms #flora

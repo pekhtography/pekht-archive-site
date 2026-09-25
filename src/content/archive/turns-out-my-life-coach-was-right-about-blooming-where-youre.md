@@ -19,4 +19,4 @@ hashtags:
   - "portrait"
 ---
 Turns out my life coach was right about "blooming where you're planted" - she just forgot to mention the part about photogenic pets with frisbee obsessions 🙄🌸🎾 #BloomingReality
-#woman #dress #flowers #wreath #dog #frisbee #art #celebration #joy #nature #elegant #portrait https://t.co/ga3p9fHmeG
+#woman #dress #flowers #wreath #dog #frisbee #art #celebration #joy #nature #elegant #portrait

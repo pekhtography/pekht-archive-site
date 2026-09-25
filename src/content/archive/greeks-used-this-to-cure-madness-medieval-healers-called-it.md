@@ -14,4 +14,4 @@ Medieval healers called it the Christmas rose.
 Every cell is cardiac-toxic. ☠️
 The flower hangs its head so pollinators climb inside. 🌺 
 The plant knows exactly what it's doing.
-#WildBeauty #HelleboreGarden #PoisonousPlants #WinterBloom https://t.co/Ln7S36yrtG
+#WildBeauty #HelleboreGarden #PoisonousPlants #WinterBloom

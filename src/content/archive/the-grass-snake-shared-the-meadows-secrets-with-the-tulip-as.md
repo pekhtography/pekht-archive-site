@@ -18,4 +18,4 @@ hashtags:
   - "wildlife"
 ---
 The grass snake shared the meadow's secrets with the tulip, as if they were old friends 
-#grassnake #tulip #nature #spring #bloom #yellow #petals #contrast #serenity #harmony #beauty #wildlife https://t.co/5KhP0HBG8m
+#grassnake #tulip #nature #spring #bloom #yellow #petals #contrast #serenity #harmony #beauty #wildlife

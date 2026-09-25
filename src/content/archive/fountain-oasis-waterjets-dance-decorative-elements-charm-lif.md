@@ -19,4 +19,4 @@ hashtags:
   - "Dreams"
   - "Aspirations"
 ---
-#Fountain #Oasis #WaterJets #Dance #Decorative #Elements #Charm #Life #Reflection #Mirror #Beauty #Aesthetic #Dreams #Aspirations https://t.co/MfAizGMu52
+#Fountain #Oasis #WaterJets #Dance #Decorative #Elements #Charm #Life #Reflection #Mirror #Beauty #Aesthetic #Dreams #Aspirations

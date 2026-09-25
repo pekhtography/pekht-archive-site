@@ -15,4 +15,4 @@ Stone and history up there.
 A shiver when the boat passes, down here. ✨ 
 Two Moscows. 
 One breathes. 
-#Moscow #NightPhotography #GrandeurAsDefault #GoldenHour https://t.co/AEOXvze4JN
+#Moscow #NightPhotography #GrandeurAsDefault #GoldenHour

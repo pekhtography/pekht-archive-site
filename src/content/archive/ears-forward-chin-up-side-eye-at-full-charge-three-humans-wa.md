@@ -13,4 +13,4 @@ Ears forward, chin up, side-eye at full charge. 😂
 Three humans walked past — 
 one passed, two got the slow blink of disappointment. 
 The auditions run daily. 🐾 
-#Cats #KittenLife #SunbeamRoyalty #SoftPower https://t.co/1hg9kVjJlB
+#Cats #KittenLife #SunbeamRoyalty #SoftPower

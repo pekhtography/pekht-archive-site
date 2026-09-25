@@ -19,4 +19,4 @@ hashtags:
   - "victory"
 ---
 History speaks louder than words when steel meets stone 🏛️⚔️ Standing where legends were forged and destinies decided 🇷🇺 #RedSquareLegends
-#tank #kremlin #moscow #military #history #russia #parade #patriotic #memorial #tourism #heritage #victory https://t.co/tvGdo8tDdf
+#tank #kremlin #moscow #military #history #russia #parade #patriotic #memorial #tourism #heritage #victory

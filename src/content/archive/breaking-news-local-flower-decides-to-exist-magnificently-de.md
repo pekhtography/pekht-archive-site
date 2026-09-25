@@ -19,4 +19,4 @@ hashtags:
   - "spring"
 ---
 Breaking news: Local flower decides to exist magnificently despite having no social media presence 📱🚫 Confidence level: unbothered botanical 🌺😎 #OfflineBeauty
-#bellflower #purple #wildflower #meadow #nature #bloom #campanula #field #violet #botanical #woodland #spring https://t.co/sV1lh2EAxA
+#bellflower #purple #wildflower #meadow #nature #bloom #campanula #field #violet #botanical #woodland #spring

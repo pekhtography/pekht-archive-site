@@ -14,4 +14,4 @@ Someone opened the wrong delivery —
 golden tassels everywhere, towers stood very still and said nothing. 
 Dragon enters bear's den. 
 Bear offers tea. 🐉
-#LunarNewYear #RedSquare #MoscowVibes #FestivalMood https://t.co/cFUwi0sNyr
+#LunarNewYear #RedSquare #MoscowVibes #FestivalMood

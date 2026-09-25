@@ -15,4 +15,4 @@ hashtags:
   - "colorful"
 ---
 Plot twist: While we're busy scrolling, flowers are out here throwing the most epic color parties 🎉 These phlox said "let's make this garden pop!" 💥 Maybe it's time to RSVP to nature's invitations 🌺 #ColorParty
-#flowers #phlox #garden #blooming #nature #summer #petal #colorful https://t.co/XoC2pCADqz
+#flowers #phlox #garden #blooming #nature #summer #petal #colorful

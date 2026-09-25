@@ -18,4 +18,4 @@ hashtags:
   - "beauty"
 ---
 The thistle's bloom is a silent ode to nature's unyielding spirit
-#thistle #nature #bloom #wildflowers #meadow #sunlight #purple #flora #outdoors #botany #petals #beauty https://t.co/iH6GkJ8RuZ
+#thistle #nature #bloom #wildflowers #meadow #sunlight #purple #flora #outdoors #botany #petals #beauty

@@ -19,4 +19,4 @@ hashtags:
   - "heritage"
 ---
 Chrome dreams under Kremlin spires 🌟 Some things get better with age - like fine wine, vintage cars, and timeless architecture 🍷🏛️ #TimelessElegance
-#vintage #classic #automobile #moscow #kremlin #history #luxury #chrome #exhibition #cobblestone #tourism #heritage https://t.co/GSM5x27Owd
+#vintage #classic #automobile #moscow #kremlin #history #luxury #chrome #exhibition #cobblestone #tourism #heritage

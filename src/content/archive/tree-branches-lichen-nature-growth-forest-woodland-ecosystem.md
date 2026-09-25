@@ -17,4 +17,4 @@ hashtags:
   - "Wilderness"
   - "Outdoors"
 ---
-#Tree #Branches #Lichen #Nature #Growth #Forest #Woodland #Ecosystem #Green #Bark #Wilderness #Outdoors https://t.co/cHvqUmQsEx
+#Tree #Branches #Lichen #Nature #Growth #Forest #Woodland #Ecosystem #Green #Bark #Wilderness #Outdoors

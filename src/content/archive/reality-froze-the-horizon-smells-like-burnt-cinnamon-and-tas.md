@@ -13,4 +13,4 @@ Reality froze.
 The horizon smells like burnt cinnamon and tastes like crunchy, freezing indigo. 
 The graphics card quit. 
 Simulation failure. 👾⚠️
-#Sky #SimulationTheory #GoldenHour #Surreal https://t.co/9xrXdN0XVf
+#Sky #SimulationTheory #GoldenHour #Surreal

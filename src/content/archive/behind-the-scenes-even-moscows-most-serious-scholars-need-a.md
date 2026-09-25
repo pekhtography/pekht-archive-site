@@ -19,4 +19,4 @@ hashtags:
   - "Landmark"
 ---
 Behind the scenes: Even Moscow's most serious scholars need a boat day 🛥️ The river whispers secrets that libraries never could 🌊 Work hard, float harder! #RiverWisdom
-#Moscow #University #Architecture #Russia #River #Building #Education #Sky #Boat #Trees #Summer #Landmark https://t.co/NibdtEErV1
+#Moscow #University #Architecture #Russia #River #Building #Education #Sky #Boat #Trees #Summer #Landmark

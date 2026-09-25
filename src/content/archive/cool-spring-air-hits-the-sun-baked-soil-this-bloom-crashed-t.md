@@ -13,4 +13,4 @@ Cool spring air hits the sun-baked soil.
 This bloom crashed the Dutch economy once, 
 now it just crashes every elegant minimalist bouquet. 
 Absolute legend. 🍷📉
-#Nature #GardeningLife #TulipMania #VelvetRed https://t.co/r2UYVDavPq
+#Nature #GardeningLife #TulipMania #VelvetRed

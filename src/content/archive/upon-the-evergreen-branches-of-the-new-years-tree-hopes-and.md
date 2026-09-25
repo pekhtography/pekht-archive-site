@@ -18,4 +18,4 @@ hashtags:
   - "love"
 ---
 Upon the evergreen branches of the New Year's tree, hopes and dreams dangle like ornaments, whispering blessings of joy and prosperity for the coming year
-#NewYear #Celebration #Tree #Aspiration #Ornaments #Decorations #Goodwill #Happiness #Prosperity #Abundance #evergreen #love https://t.co/isWg5rEKJU
+#NewYear #Celebration #Tree #Aspiration #Ornaments #Decorations #Goodwill #Happiness #Prosperity #Abundance #evergreen #love

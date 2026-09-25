@@ -19,4 +19,4 @@ hashtags:
   - "holiday"
 ---
 No coffee from this mill ☕, but it sure grinds strange myths—and does some magic with the wind! 🌀🌪️🪄 #GrindingMyths
-#windmill #wooden #decoration #festival #tradition #folkart #sunface #colorful #ribbon #celebration #village #holiday https://t.co/QLfLK2dHhW
+#windmill #wooden #decoration #festival #tradition #folkart #sunface #colorful #ribbon #celebration #village #holiday

@@ -14,4 +14,4 @@ Cranes at the top
 a rust-and-glass skin warm as a radiator in October — 
 this thing isn't a building. 
 It's an argument. 🔥
-#Architecture #UrbanDesign #SkylineShot #CityFeels https://t.co/9Eosm6N1UY
+#Architecture #UrbanDesign #SkylineShot #CityFeels

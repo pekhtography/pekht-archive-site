@@ -11,4 +11,4 @@ hashtags:
 ---
 This prickly green radio, vibrating with sunlit static, broadcasts its spiky frequency while leaning heavily against the velvety, cool nectar of neon peonies. 
 Cosmic reception. 📡🌸
-#NatureLovers #GardenLife #BotanicalOddities #JoyfulVibes https://t.co/I94mdInQef
+#NatureLovers #GardenLife #BotanicalOddities #JoyfulVibes

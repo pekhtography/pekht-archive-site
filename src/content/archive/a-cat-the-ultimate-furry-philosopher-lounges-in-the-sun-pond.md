@@ -15,4 +15,4 @@ hashtags:
   - "snack"
 ---
 A cat, the ultimate furry philosopher, lounges in the sun, pondering life’s big questions—like snacks.
-#cat #mystery #comfort #sun #warmth #nap #joy #peace #snack https://t.co/AwTJpdPYfN
+#cat #mystery #comfort #sun #warmth #nap #joy #peace #snack

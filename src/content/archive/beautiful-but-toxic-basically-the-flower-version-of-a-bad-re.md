@@ -19,4 +19,4 @@ hashtags:
   - "azalea"
 ---
 Beautiful but toxic - basically the flower version of a bad relationship! 💐💔 Looks can be deceiving! #ToxicBeauty
-#rhododendron #flowers #purple #blooming #spring #garden #nature #petals #shrub #botanical #evergreen #azalea https://t.co/lnx8M2SGwV
+#rhododendron #flowers #purple #blooming #spring #garden #nature #petals #shrub #botanical #evergreen #azalea

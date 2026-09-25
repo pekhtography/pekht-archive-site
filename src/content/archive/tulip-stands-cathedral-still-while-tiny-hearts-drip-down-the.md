@@ -12,4 +12,4 @@ hashtags:
 Tulip stands cathedral-still 🌷 
 while tiny hearts drip down the stem behind it — 
 turns out composure is just drama with better posture 💗
-#NatureHumor #GardenVibes #FlowerPhotography #MoodInBloom https://t.co/KSKl7MVJyB
+#NatureHumor #GardenVibes #FlowerPhotography #MoodInBloom

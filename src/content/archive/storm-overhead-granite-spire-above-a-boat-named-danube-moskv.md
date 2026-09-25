@@ -15,4 +15,4 @@ A boat named Danube-Moskva slides under both —
 white hull, flat wake, completely unbothered. 
 The marble stayed. 
 The river didn't. 🚢 
-#Moscow #RiverLife #SovietAesthetics #CityDrift https://t.co/YGY36o4eAr
+#Moscow #RiverLife #SovietAesthetics #CityDrift

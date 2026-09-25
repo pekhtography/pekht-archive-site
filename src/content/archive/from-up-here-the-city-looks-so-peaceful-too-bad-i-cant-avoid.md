@@ -22,4 +22,4 @@ hashtags:
   - "horizon"
 ---
 From up here, the city looks so peaceful... Too bad I can't avoid the morning commute!
-#city #peaceful #morning #commute #hustle #problems #parking #dreams #traffic #patience #birds #view #streets #pulse #skyline #horizon https://t.co/ihFDzuqfkF
+#city #peaceful #morning #commute #hustle #problems #parking #dreams #traffic #patience #birds #view #streets #pulse #skyline #horizon

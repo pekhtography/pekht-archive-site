@@ -19,4 +19,4 @@ hashtags:
   - "Travel"
 ---
 Moscow's dating profile: "I'm complex - historic on the outside, modern on the inside 💼 Love long walks by the water 🚶‍♀️ Flowers are my love language" 🌺 #MoscowTinder
-#Moscow #River #Monument #Boats #Architecture #Tourism #Summer #Flowers #History #Cityscape #Culture #Travel https://t.co/JGYKhDSYpK
+#Moscow #River #Monument #Boats #Architecture #Tourism #Summer #Flowers #History #Cityscape #Culture #Travel

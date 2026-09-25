@@ -19,4 +19,4 @@ hashtags:
   - "vibrant"
 ---
 Roses: Nature's way of saying "I'm gorgeous AND dangerous, deal with it" 🌹 Honestly, we should all have this level of confidence 😏💅 #ThornyButGorgeous
-#rose #pink #flower #garden #bloom #nature #beauty #petals #romantic #photography #botanical #vibrant https://t.co/AfesikNKFF
+#rose #pink #flower #garden #bloom #nature #beauty #petals #romantic #photography #botanical #vibrant

@@ -14,4 +14,4 @@ Don't pretend you don't want to. 🫣
 Inside, six stamens are screaming: 
 "We made this softness to trap bees!" 
 The most embarrassing flex is when your trap becomes art. 🐝
-#TheStruggleIsReal #GardenHumor #AccidentalBeauty #SoftAndAwkward https://t.co/2NcymcjR9i
+#TheStruggleIsReal #GardenHumor #AccidentalBeauty #SoftAndAwkward

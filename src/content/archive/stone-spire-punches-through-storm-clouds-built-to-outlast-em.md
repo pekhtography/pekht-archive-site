@@ -13,4 +13,4 @@ Stone spire punches through storm clouds ⚡ —
 built to outlast empires, outlast weather, outlast doubt. 
 The river just watches. 🏛️ 
 Permanence has a silhouette. 🌊
-#Architecture #Moscow #SovietAesthetics #StormChasing https://t.co/HffKAt7DVO
+#Architecture #Moscow #SovietAesthetics #StormChasing

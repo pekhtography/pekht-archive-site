@@ -14,4 +14,4 @@ hashtags:
   - "possibility"
   - "paradise"
 ---
-A manicured lawn is a testament to care and dedication, transforming an ordinary space into a vibrant green paradise #lawn #mowed #canvas #vibrant #beauty #breathe #grass #possibility #paradise https://t.co/Oibo5HOsnB
+A manicured lawn is a testament to care and dedication, transforming an ordinary space into a vibrant green paradise #lawn #mowed #canvas #vibrant #beauty #breathe #grass #possibility #paradise

@@ -19,4 +19,4 @@ hashtags:
   - "Landmark"
 ---
 Breaking: Local fortress refuses to age gracefully, insists on looking fabulous after 500 years 💁‍♀️ Meanwhile, my house paint peels after two winters 🤷 #AgingGoals
-#Moscow #Kremlin #Russia #Architecture #Cathedral #Golden #Fortress #River #Bridge #Orthodox #History #Landmark https://t.co/DGajmTxK6D
+#Moscow #Kremlin #Russia #Architecture #Cathedral #Golden #Fortress #River #Bridge #Orthodox #History #Landmark

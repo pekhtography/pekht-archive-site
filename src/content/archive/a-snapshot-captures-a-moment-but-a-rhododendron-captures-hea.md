@@ -19,4 +19,4 @@ hashtags:
   - "Photography"
 ---
 A snapshot captures a moment, but a Rhododendron captures hearts! 😊🌼 Folklore says fairies love their shade. #HeartCapturer
-#Flowers #Nature #Rhododendron #Bloom #Garden #Spring #Petals #Botany #Flora #Pink #Beauty #Photography https://t.co/dL7yZjuH8K
+#Flowers #Nature #Rhododendron #Bloom #Garden #Spring #Petals #Botany #Flora #Pink #Beauty #Photography

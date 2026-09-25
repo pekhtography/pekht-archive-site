@@ -18,4 +18,4 @@ hashtags:
   - "Botany"
 ---
 The Reynoutria sachalinensis attempted to rule the garden, but the daisies led a colorful uprising 
-#ReynoutriaSachalinensis #Invasive #Nature #Plants #Green #Growth #Wildlife #Garden #Weed #Leaves #Flora #Botany https://t.co/jHVyk75wSI
+#ReynoutriaSachalinensis #Invasive #Nature #Plants #Green #Growth #Wildlife #Garden #Weed #Leaves #Flora #Botany

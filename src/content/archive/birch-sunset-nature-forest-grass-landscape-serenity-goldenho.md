@@ -17,4 +17,4 @@ hashtags:
   - "meadow"
   - "sunlight"
 ---
-#birch #sunset #nature #forest #grass #landscape #serenity #goldenhour #wilderness #tranquility #meadow #sunlight https://t.co/N0502eo5yg
+#birch #sunset #nature #forest #grass #landscape #serenity #goldenhour #wilderness #tranquility #meadow #sunlight

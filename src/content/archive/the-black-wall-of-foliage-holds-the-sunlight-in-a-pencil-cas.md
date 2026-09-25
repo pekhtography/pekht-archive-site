@@ -12,4 +12,4 @@ The black wall of foliage holds the sunlight in a pencil case.
 But one cheeky lily burst out of the dark and screams across the whole garden.
 Someone hides in the shade to avoid being blinded by their own potential.
 And someone strikes a match🔥🌑
-#Growth #Garden #GoldenHour https://t.co/MaT1XI1Bi3
+#Growth #Garden #GoldenHour

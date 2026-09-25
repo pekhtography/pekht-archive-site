@@ -19,4 +19,4 @@ hashtags:
   - "photography"
 ---
 A flag, a smile, and a journey through time! 😊🕰️ The Red Square never ceases to amaze with its timeless beauty and historical charm. #TimelessBeauty
-#history #military #moscow #redsquare #uniform #flag #celebration #event #culture #heritage #travel #photography https://t.co/wfTVbNpQHs
+#history #military #moscow #redsquare #uniform #flag #celebration #event #culture #heritage #travel #photography

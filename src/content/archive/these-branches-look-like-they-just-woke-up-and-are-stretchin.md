@@ -18,4 +18,4 @@ hashtags:
   - "foliage"
 ---
 These branches look like they just woke up and are stretching after a long nap 
-#tree #branches #leaves #nature #green #outdoors #forest #wood #autumn #bark #trunk #foliage https://t.co/eoCLDvVjPJ
+#tree #branches #leaves #nature #green #outdoors #forest #wood #autumn #bark #trunk #foliage

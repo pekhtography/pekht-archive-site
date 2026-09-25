@@ -19,4 +19,4 @@ hashtags:
   - "banner"
 ---
 The cosmos whispers secrets to those who dare to forge their destiny among the stars 🔨⭐ Space is not the final frontier—it's the first step 🚀 #CosmicComrades
-#space #soviet #propaganda #cosmos #hammer #sickle #earth #red #star #orbit #universe #banner https://t.co/l0B7PsmYSI
+#space #soviet #propaganda #cosmos #hammer #sickle #earth #red #star #orbit #universe #banner

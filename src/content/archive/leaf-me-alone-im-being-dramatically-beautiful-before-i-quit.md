@@ -18,4 +18,4 @@ hashtags:
   - "NatureMagic"
 ---
 Leaf me alone, I'm being dramatically beautiful before I quit. 🍂💅 #LeafDrama
-#Autumn #Fall #Nature #Photography #Leaf #Beauty #Mindfulness #Seasonal #Colors #LettingGo #NatureMagic https://t.co/VSbNNSplgh
+#Autumn #Fall #Nature #Photography #Leaf #Beauty #Mindfulness #Seasonal #Colors #LettingGo #NatureMagic

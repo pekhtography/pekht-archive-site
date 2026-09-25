@@ -19,4 +19,4 @@ hashtags:
   - "horizon"
 ---
 The breeze gently sways the bulrush, as if inviting it to a silent waltz under the sky's gaze 
-#nature #bulrush #reed #sky #wildlife #outdoors #grass #blue #ecology #landscape #environment #flora #horizon https://t.co/6Hi79JIEHi
+#nature #bulrush #reed #sky #wildlife #outdoors #grass #blue #ecology #landscape #environment #flora #horizon

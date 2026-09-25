@@ -12,4 +12,4 @@ hashtags:
   - "Spring"
   - "Colors"
 ---
-In the garden, the crown imperial stands tall, a regal symbol of spring's vibrant embrace #CrownImperial #Royal #Garden #Nature #Beauty #Spring #Colors https://t.co/A6vX1i5Ihw
+In the garden, the crown imperial stands tall, a regal symbol of spring's vibrant embrace #CrownImperial #Royal #Garden #Nature #Beauty #Spring #Colors

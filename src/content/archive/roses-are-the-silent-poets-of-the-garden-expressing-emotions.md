@@ -19,4 +19,4 @@ hashtags:
   - "Flora"
 ---
 Roses are the silent poets of the garden, expressing emotions through their delicate petals 🌹💕 #RoseLoveStories
-#Roses #Pink #Flowers #Garden #Nature #Beauty #Floral #Blossom #Gardening #Love #Blooming #Flora https://t.co/MEcab5LVIg
+#Roses #Pink #Flowers #Garden #Nature #Beauty #Floral #Blossom #Gardening #Love #Blooming #Flora

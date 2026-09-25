@@ -18,4 +18,4 @@ hashtags:
   - "hope"
 ---
 A lost kitten wanders like a tiny star searching for a warm blanket in the universe.
-#kitten #purr #lost #wander #help #love #meow #friend #light #dark #star #hope https://t.co/XdNxDhug5Y
+#kitten #purr #lost #wander #help #love #meow #friend #light #dark #star #hope

@@ -18,4 +18,4 @@ hashtags:
   - "Serenity"
 ---
 Life is a garden, dig it! Especially when you find Corydalis blooming in unexpected places
-#Corydalis #Blooms #Nature #Purple #Garden #Spring #Wildflowers #Botany #Flora #Elegance #Blossoms #Serenity https://t.co/nod6FcdNWJ
+#Corydalis #Blooms #Nature #Purple #Garden #Spring #Wildflowers #Botany #Flora #Elegance #Blossoms #Serenity

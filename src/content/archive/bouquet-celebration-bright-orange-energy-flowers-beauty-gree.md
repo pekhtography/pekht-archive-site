@@ -24,4 +24,4 @@ hashtags:
   - "delight"
   - "bloom"
 ---
-#Bouquet #Celebration #Bright #Orange #Energy #Flowers #Beauty #Green #Nature #Leaves #Growth #Life #Love #arrangement #petals #lush #foliage #delight #bloom https://t.co/M3thtPwiNS
+#Bouquet #Celebration #Bright #Orange #Energy #Flowers #Beauty #Green #Nature #Leaves #Growth #Life #Love #arrangement #petals #lush #foliage #delight #bloom

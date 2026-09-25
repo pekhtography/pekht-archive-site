@@ -14,4 +14,4 @@ Faintly cool to the eye like silk left in a dark room.
 Petals thrown back so far they named it after a turban🌺—
 and the moths still find it, nose-first, in the dark,
 because the whole design was always for them, not us.
-#WildFlowers #BotanyBeauty #MartagonLily #Petal https://t.co/g5yDjvbnaC
+#WildFlowers #BotanyBeauty #MartagonLily #Petal

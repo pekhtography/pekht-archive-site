@@ -12,4 +12,4 @@ hashtags:
   - "beauty"
   - "shadows"
 ---
-Amidst the gilded leaves and dancing shadows, one finds solace #garden #harmony #heart #peace #trees #beauty #shadows https://t.co/RuHvby3JKG
+Amidst the gilded leaves and dancing shadows, one finds solace #garden #harmony #heart #peace #trees #beauty #shadows

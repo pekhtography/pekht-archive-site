@@ -20,4 +20,4 @@ hashtags:
   - "Crisis"
   - "Damage"
 ---
-#Earthquake #Disaster #Destruction #Historic #Palace #Bridge #Collapse #Ruins #Tragedy #Asia #Nature #Devastation #Heritage #Crisis #Damage https://t.co/x6pUBbAOGb
+#Earthquake #Disaster #Destruction #Historic #Palace #Bridge #Collapse #Ruins #Tragedy #Asia #Nature #Devastation #Heritage #Crisis #Damage

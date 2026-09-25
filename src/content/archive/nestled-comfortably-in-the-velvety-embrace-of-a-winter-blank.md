@@ -16,4 +16,4 @@ hashtags:
   - "Snooze"
 ---
 Nestled comfortably in the velvety embrace of a winter blanket, the fox, caressed by a magical spell of warmth and tranquility, falls into a blissful sleep to the lulling of the fading light of day
-#Fox #Winter #Blanket #Warmth #Tranquility #Sleep #Light #Magic #Nature #Snooze https://t.co/257CcuqSDb
+#Fox #Winter #Blanket #Warmth #Tranquility #Sleep #Light #Magic #Nature #Snooze

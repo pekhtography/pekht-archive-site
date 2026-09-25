@@ -19,4 +19,4 @@ hashtags:
   - "vibrant"
 ---
 When orange meets purple magic happens 🧡💜 Nature's color theory masterclass in full display #ColorHarmony
-#azalea #orange #pink #purple #flowers #bloom #spring #garden #contrast #nature #beautiful #vibrant https://t.co/9brJjZoj81
+#azalea #orange #pink #purple #flowers #bloom #spring #garden #contrast #nature #beautiful #vibrant

@@ -14,4 +14,4 @@ melting into existence while refusing to disappear ❄️
 This fragile? 
 This loud? 
 Yes ✨ 
-#NaturePhotography #MacroPhotography #FrozenMoment #Ephemeral https://t.co/dx6qxqHFtE
+#NaturePhotography #MacroPhotography #FrozenMoment #Ephemeral

@@ -14,4 +14,4 @@ Winter turned a birdhouse into a fashion icon by adding 300% unnecessary snow.
 Functional? No. 
 Fabulous? Absolutely. 
 Nature's doing runway shows and nobody's invited. 
-#WinterPhotography #BirdhouseLife #SnowSculpture #NatureComedy https://t.co/eJgkmf1Zz0
+#WinterPhotography #BirdhouseLife #SnowSculpture #NatureComedy

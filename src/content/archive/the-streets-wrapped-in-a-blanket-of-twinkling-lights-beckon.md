@@ -22,4 +22,4 @@ hashtags:
   - "Cheer"
 ---
 The streets, wrapped in a blanket of twinkling lights, beckon us to wander
-#Christmas #Celebration #Joy #Happiness #Lights #Sparkle #Winter #Chill #Magic #Wonder #Street #Pathways #Journey #Adventure #Merry #Cheer https://t.co/pnSMbmOJ1M
+#Christmas #Celebration #Joy #Happiness #Lights #Sparkle #Winter #Chill #Magic #Wonder #Street #Pathways #Journey #Adventure #Merry #Cheer

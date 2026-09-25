@@ -22,4 +22,4 @@ hashtags:
   - "renewal"
 ---
 In my garden's labyrinth, every corner turned is a new riddle—like “Where did I put my gardening gloves again?”
-#green #nature #labyrinth #mystery #paths #journey #garden #sanctuary #lose #wander #find #discover #themselves #identity #anew #renewal https://t.co/DZ31VxHqn6
+#green #nature #labyrinth #mystery #paths #journey #garden #sanctuary #lose #wander #find #discover #themselves #identity #anew #renewal

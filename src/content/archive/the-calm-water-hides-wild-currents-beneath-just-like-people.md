@@ -17,4 +17,4 @@ hashtags:
   - "Architecture"
 ---
 The calm water hides wild currents beneath, just like people at the park hide their WiFi passwords. 🌊🤫📶
-#Bridge #Park #Pond #Cityscape #Nature #Reflection #People #Trees #Relaxation #Urban #Architecture https://t.co/3yNIrzobpB
+#Bridge #Park #Pond #Cityscape #Nature #Reflection #People #Trees #Relaxation #Urban #Architecture

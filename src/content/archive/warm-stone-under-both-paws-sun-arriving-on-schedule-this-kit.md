@@ -13,4 +13,4 @@ Warm stone under both paws, sun arriving on schedule. ☀️
 This kitten didn't come to soak — 
 the sun clocked in at 6 AM just to shine on his terms. 😏 
 Employed. 
-#CatsOfTwitter #SunbathingCat #TinyKingEnergy #GoldenHour https://t.co/NWgI6EcamV
+#CatsOfTwitter #SunbathingCat #TinyKingEnergy #GoldenHour

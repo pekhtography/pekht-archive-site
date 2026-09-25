@@ -14,4 +14,4 @@ hashtags:
   - "nature"
   - "earth"
 ---
-The clearest way into the Universe is through a forest wilderness #woods #forest #wilderness #silent #freedom #cloud #sky #nature #earth https://t.co/sxz3mxm4BV
+The clearest way into the Universe is through a forest wilderness #woods #forest #wilderness #silent #freedom #cloud #sky #nature #earth

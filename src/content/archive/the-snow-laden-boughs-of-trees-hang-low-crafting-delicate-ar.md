@@ -24,4 +24,4 @@ hashtags:
   - "magic"
 ---
 The snow-laden boughs of trees hang low, crafting delicate arches that invite wanderers into a frost-kissed fairytale
-#tunnels #adventure #branches #balance #snow #cold #drifts #depth #winter #wonder #adventure #trees #boughs #arch #wanderers #explorers #frost #fairytale #magic https://t.co/y9hqKxX43W
+#tunnels #adventure #branches #balance #snow #cold #drifts #depth #winter #wonder #adventure #trees #boughs #arch #wanderers #explorers #frost #fairytale #magic

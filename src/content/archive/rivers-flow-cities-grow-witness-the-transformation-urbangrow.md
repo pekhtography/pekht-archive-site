@@ -19,4 +19,4 @@ hashtags:
   - "cranes"
 ---
 Rivers flow, cities grow 🌊🌆📈. Witness the transformation! #UrbanGrowth
-#city #river #bridge #construction #development #urban #landscape #architecture #sky #clouds #buildings #cranes https://t.co/tTRVzNgfsH
+#city #river #bridge #construction #development #urban #landscape #architecture #sky #clouds #buildings #cranes

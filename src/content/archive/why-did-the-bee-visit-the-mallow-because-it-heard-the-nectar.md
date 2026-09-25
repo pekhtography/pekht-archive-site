@@ -18,4 +18,4 @@ hashtags:
   - "Wildlife"
 ---
 Why did the bee visit the mallow? Because it heard the nectar was un-bee-lievably good!
-#Mallow #Flower #Bee #Pollination #Nature #White #Blossom #Garden #Insect #Spring #Petals #Wildlife https://t.co/5NwuPFhiZn
+#Mallow #Flower #Bee #Pollination #Nature #White #Blossom #Garden #Insect #Spring #Petals #Wildlife

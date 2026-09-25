@@ -14,4 +14,4 @@ The river cracks open in silver shards. ⚡
 Somewhere behind the glass, someone ordered a latte. 
 Cathedral watches. 
 Charon upgraded. 🛥️
-#Moscow #DarkAesthetics #RiverLife #StormChasing https://t.co/vUbbw49qX1
+#Moscow #DarkAesthetics #RiverLife #StormChasing

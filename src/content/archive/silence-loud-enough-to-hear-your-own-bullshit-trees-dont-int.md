@@ -13,4 +13,4 @@ Silence loud enough to hear your own bullshit.
 Trees don't interrupt. 
 Snow doesn't scroll. 
 Just you and a road pretending it knows the way. 🌨️❄️🛣️ 
-#WinterWonderland #SnowyForest #WinterRoad #Solitude https://t.co/FHGNFqw8Ho
+#WinterWonderland #SnowyForest #WinterRoad #Solitude

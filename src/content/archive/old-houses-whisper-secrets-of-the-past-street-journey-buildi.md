@@ -12,4 +12,4 @@ hashtags:
   - "heritage"
   - "brick"
 ---
-Old houses whisper secrets of the past #street #journey #building #memory #history #heritage #brick https://t.co/ONCocpNO0e
+Old houses whisper secrets of the past #street #journey #building #memory #history #heritage #brick

@@ -12,4 +12,4 @@ hashtags:
 Evolution spent 40 million years on that tail 🎨 
 He spent zero seconds being grateful. 
 Just stands there, iridescent and furious, daring you to look away. 🦚
-#Peacock #WildlifePhotography #NatureIsUnhinged #FeatherArt https://t.co/PHMn8sYRqP
+#Peacock #WildlifePhotography #NatureIsUnhinged #FeatherArt

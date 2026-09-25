@@ -18,4 +18,4 @@ hashtags:
   - "Growth"
 ---
 The narcissus blooms as a testament to the myth of self-love, a flower that mirrors the soul's eternal quest for beauty
-#Narcissus #Daffodils #Spring #Bloom #Flowers #Nature #Garden #Beauty #Blossom #Petals #Sunlight #Growth https://t.co/QmuP8Dv9yO
+#Narcissus #Daffodils #Spring #Bloom #Flowers #Nature #Garden #Beauty #Blossom #Petals #Sunlight #Growth

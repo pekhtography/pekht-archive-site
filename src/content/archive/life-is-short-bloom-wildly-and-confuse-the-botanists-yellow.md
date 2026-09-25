@@ -20,4 +20,4 @@ hashtags:
   - "outdoors"
 ---
 Life is short, bloom wildly and confuse the botanists
-#Yellow #Hawkweed #Hieracium #flower #nature #wildflower #macro #botany #bloom #petals #field #flora #green #outdoors https://t.co/cWNpm7fn70
+#Yellow #Hawkweed #Hieracium #flower #nature #wildflower #macro #botany #bloom #petals #field #flora #green #outdoors

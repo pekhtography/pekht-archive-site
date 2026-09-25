@@ -19,4 +19,4 @@ hashtags:
   - "golden"
   - "freshness"
 ---
-#Oak #Majesty #Autumn #Change #Green #Vibrance #Dry #Beauty #Nature #leaves #growth #drygrass #golden #freshness https://t.co/pEi3M7mCIN
+#Oak #Majesty #Autumn #Change #Green #Vibrance #Dry #Beauty #Nature #leaves #growth #drygrass #golden #freshness

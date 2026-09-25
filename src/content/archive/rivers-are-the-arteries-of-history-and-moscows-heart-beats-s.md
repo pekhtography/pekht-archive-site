@@ -19,4 +19,4 @@ hashtags:
   - "heritage"
 ---
 Rivers are the arteries of history, and Moscow's heart beats strongest along its ancient waterways 🏛️⛵ Every ripple tells a thousand-year story! #MoscowRiverTales
-#Moscow #river #boat #tourism #Kremlin #architecture #summer #cruise #Russia #sightseeing #travel #heritage https://t.co/MWIBoFt3v6
+#Moscow #river #boat #tourism #Kremlin #architecture #summer #cruise #Russia #sightseeing #travel #heritage

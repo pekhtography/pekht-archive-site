@@ -23,4 +23,4 @@ hashtags:
   - "bird"
 ---
 Pied Flycatchers are like the DIY enthusiasts of the bird world, taking over old nests and making them their own stylish abodes
-#PiedFlycatcher #Nesting #Resourceful #BirdBrain #Adaptability #Memory #DIY #Style #Crafty #Clever #Smart #Innovative #Durable #Nature #Home #Tune #bird https://t.co/mcVqQZaWnT
+#PiedFlycatcher #Nesting #Resourceful #BirdBrain #Adaptability #Memory #DIY #Style #Crafty #Clever #Smart #Innovative #Durable #Nature #Home #Tune #bird

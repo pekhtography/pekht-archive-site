@@ -13,4 +13,4 @@ hashtags:
   - "Film"
 ---
 Plot twist: The real suspense isn't in his movies, it's trying to figure out how one man made entire audiences afraid of showers, birds, and blonde women 🚿🐦 Modern problems require vintage solutions 😏💡 #PlotTwistMaster
-#Hitchcock #Cinema #Director #Thriller #Suspense #Film https://t.co/mEmnITQVXa
+#Hitchcock #Cinema #Director #Thriller #Suspense #Film

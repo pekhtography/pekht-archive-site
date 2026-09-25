@@ -13,4 +13,4 @@ A pink splat on green, a scream in silence.
 This plant never aimed for a portrait — 
 it just spat paint into the world's face. 
 And the world said thank you. 🎨🌿
-#Nature #Botanical #ChaosInBloom #RawBeauty https://t.co/fg2ilbIfYR
+#Nature #Botanical #ChaosInBloom #RawBeauty

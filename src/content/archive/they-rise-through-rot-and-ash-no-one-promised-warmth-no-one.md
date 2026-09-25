@@ -13,4 +13,4 @@ They rise through rot and ash🌱💔
 No one promised warmth, no one cleared the stage.
 Just cells splitting in the dark, purple tongues tasting light.
 Beauty doesn't wait for permission—it just cracks the tomb and blooms
-#SpringAwakening #UrbanNature #CrocusRevolution #FragileBeauty https://t.co/Uu04WnmSQl
+#SpringAwakening #UrbanNature #CrocusRevolution #FragileBeauty

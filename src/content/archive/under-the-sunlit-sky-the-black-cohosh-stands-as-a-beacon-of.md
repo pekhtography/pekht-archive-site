@@ -18,4 +18,4 @@ hashtags:
   - "Serenity"
 ---
 Under the sunlit sky, the black cohosh stands as a beacon of serenity and mystery
-#Actaea #Racemosa #BlackCohosh #Botany #Nature #Flora #Blooms #Wildflowers #Herbs #Garden #Elegance #Serenity https://t.co/6gzCLaSL2x
+#Actaea #Racemosa #BlackCohosh #Botany #Nature #Flora #Blooms #Wildflowers #Herbs #Garden #Elegance #Serenity

@@ -21,4 +21,4 @@ hashtags:
   - "grace"
 ---
 A little gray kitten, a sunbeam's best friend, turns home into a playground of purrs and mischief!
-#kitten #play #playful #spirit #fur #sunbeams #sunlight #light #shadow #home #warmth #joy #dreams #explorer #grace https://t.co/r7izIhzljC
+#kitten #play #playful #spirit #fur #sunbeams #sunlight #light #shadow #home #warmth #joy #dreams #explorer #grace

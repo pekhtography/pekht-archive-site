@@ -20,4 +20,4 @@ hashtags:
   - "botanical"
   - "bouquet"
 ---
-#tulip #flowers #yellow #red #bloom #spring #nature #garden #petals #vibrant #colorful #outdoors #flora #botanical #bouquet https://t.co/ytCcz1KcRd
+#tulip #flowers #yellow #red #bloom #spring #nature #garden #petals #vibrant #colorful #outdoors #flora #botanical #bouquet

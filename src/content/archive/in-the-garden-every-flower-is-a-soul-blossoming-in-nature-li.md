@@ -10,4 +10,4 @@ hashtags:
   - "garden"
   - "color"
 ---
-In the garden, every flower is a soul blossoming in nature #lilies #orange #summer #garden #color https://t.co/t7UMGZHqqE
+In the garden, every flower is a soul blossoming in nature #lilies #orange #summer #garden #color

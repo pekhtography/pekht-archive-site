@@ -13,4 +13,4 @@ Chin tilted up, one paw forward, warm wood under velvet fur. 😏
 The whole room holds its breath. 
 Egyptians built pyramids for this look. 🐾 
 Tiny throne, maximum reign.
-#CatLife #KittenVibes #TinyBossEnergy #SoftAndWild https://t.co/XmRkLJoIvA
+#CatLife #KittenVibes #TinyBossEnergy #SoftAndWild

@@ -20,4 +20,4 @@ hashtags:
   - "Memory"
 ---
 Every handcrafted doll holds a universe of imagination, where dreams dance in fabric and laughter lingers in the threads
-#Handcrafted #Artisan #Dolls #Playmates #Stories #Tales #Dreams #Imagination #Emotions #Feelings #Love #Affection #Nostalgia #Memory https://t.co/xFhtjPOOGx
+#Handcrafted #Artisan #Dolls #Playmates #Stories #Tales #Dreams #Imagination #Emotions #Feelings #Love #Affection #Nostalgia #Memory

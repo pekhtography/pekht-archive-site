@@ -14,4 +14,4 @@ lungs open, shoulders drop, jaw unclenches. ❄️
 No app did that. No subscription. 
 Just snow heavy enough to bow. 🌲 
 Gravity as grace.
-#Nature #WinterTrails #SnowArch #ForestFeeling https://t.co/3H2uAgo1NI
+#Nature #WinterTrails #SnowArch #ForestFeeling

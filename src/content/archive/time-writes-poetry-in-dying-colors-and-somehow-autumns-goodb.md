@@ -19,4 +19,4 @@ hashtags:
   - "moments"
 ---
 Time writes poetry 🍂 in dying colors, and somehow autumn's goodbye sounds like a love song 💛 #AutumnWritesPoetry
-#AutumnVibesHit #nature #autumn #fall #leaves #photography #seasons #beautiful #golden #change #life #moments https://t.co/rxLpQSBsjX
+#AutumnVibesHit #nature #autumn #fall #leaves #photography #seasons #beautiful #golden #change #life #moments

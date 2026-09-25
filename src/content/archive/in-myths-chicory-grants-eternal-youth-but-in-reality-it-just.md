@@ -18,4 +18,4 @@ hashtags:
   - "outdoors"
 ---
 In myths, chicory grants eternal youth, but in reality, it just makes your tea smooth
-#chicory #flowers #nature #bloom #purple #wildflowers #botany #garden #meadow #flora #petals #outdoors https://t.co/4oUXc64REz
+#chicory #flowers #nature #bloom #purple #wildflowers #botany #garden #meadow #flora #petals #outdoors

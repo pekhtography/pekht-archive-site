@@ -18,4 +18,4 @@ Tales of heroes and ancient lore,
 Beneath the arch, forevermore,
 The stars above in silence sing,
 Of dreams and hopes that time will bring
-#Architecture #Night #Lights #Historic #Monument #Beautiful #Celebration #Landmark #Travel https://t.co/CHoWeCRaDL
+#Architecture #Night #Lights #Historic #Monument #Beautiful #Celebration #Landmark #Travel

@@ -13,4 +13,4 @@ Five fingers, one drip, zero art school. 🧊
 Winter built a hand overnight — 
 veins dark, skin glass-clear, grip already loosening. 
 Turns out the best sculptors never touch their work. 🫴
-#NaturePhotography #IceArt #AccidentalSculpture #FrozenInTime https://t.co/KSDXUe2BeE
+#NaturePhotography #IceArt #AccidentalSculpture #FrozenInTime

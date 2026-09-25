@@ -14,4 +14,4 @@ while everything else surrenders to winter's silence 🍂
 Trees lean in, listening—or eavesdropping? ❄️ 
 Cold meets warmth. Neither wins. 
 Just coexists, like exes at a wedding 🌊
-#NatureParadox #WinterReflections #UnfrozenMoments #SilentWonder https://t.co/hs5abg1OFw
+#NatureParadox #WinterReflections #UnfrozenMoments #SilentWonder

@@ -19,4 +19,4 @@ hashtags:
   - "photography"
 ---
 Like ancient Greeks believed, perfect spheres hold divine secrets 🌸 This allium whispers nature's geometry to those who listen 🐝✨ #PurplePerfection
-#allium #purple #flower #sphere #petals #nature #bee #garden #bloom #botanical #macro #photography https://t.co/aRS2pPBNiT
+#allium #purple #flower #sphere #petals #nature #bee #garden #bloom #botanical #macro #photography

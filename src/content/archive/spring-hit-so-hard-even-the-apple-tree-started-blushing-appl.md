@@ -19,4 +19,4 @@ hashtags:
   - "colorful"
 ---
 Spring hit so hard, even the apple tree started blushing!
-#apple #blossom #spring #flowers #pink #nature #beauty #bloom #tree #garden #petals #flora #colorful https://t.co/lEStwalAbe
+#apple #blossom #spring #flowers #pink #nature #beauty #bloom #tree #garden #petals #flora #colorful

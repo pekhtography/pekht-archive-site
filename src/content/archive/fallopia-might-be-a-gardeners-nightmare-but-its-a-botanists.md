@@ -18,4 +18,4 @@ hashtags:
   - "Life"
 ---
 Fallopia might be a gardener's nightmare, but it's a botanist's dream come true—a plant that thrives against all odds
-#Fallopia #Nature #Plants #Growth #Green #Leaves #Bloom #Wild #Earth #Forest #Buds #Life https://t.co/uyHHYXHr81
+#Fallopia #Nature #Plants #Growth #Green #Leaves #Bloom #Wild #Earth #Forest #Buds #Life

@@ -18,4 +18,4 @@ hashtags:
   - "africa"
 ---
 Plot twist: This zebra is actually a life coach teaching us about mindfulness 🦓🧘‍♂️ $500/hour for grass-eating meditation sessions. I see the business opportunity! 💰 #LifeCoach
-#zebra #wildlife #nature #grazing #stripes #zoo #animals #peaceful #safari #beautiful #africa https://t.co/2Aw4YAYnMK
+#zebra #wildlife #nature #grazing #stripes #zoo #animals #peaceful #safari #beautiful #africa

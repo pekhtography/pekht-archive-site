@@ -19,4 +19,4 @@ hashtags:
   - "commemoration"
 ---
 When legends touch the cobblestones ✈️ History whispers through every rivet and wing 🏛️ Some stories are too powerful to stay in museums ⭐ #WingsOfHistory
-#aircraft #history #moscow #military #victory #heritage #aviation #memorial #cathedral #square #tourism #commemoration https://t.co/FiWlxgp49Z
+#aircraft #history #moscow #military #victory #heritage #aviation #memorial #cathedral #square #tourism #commemoration

@@ -20,4 +20,4 @@ hashtags:
   - "beauty"
 ---
 Breaking: Local flower refuses to follow Instagram beauty standards, rocks natural spots instead 📸✨ Confidence level: Tiger lily 🧡👑 #AuthenticBeauty
-#lily #tiger #orange #flower #garden #nature #bloom #petals #summer #botanical #wildlife #photography #beauty https://t.co/Rbr6TqtM1Q
+#lily #tiger #orange #flower #garden #nature #bloom #petals #summer #botanical #wildlife #photography #beauty

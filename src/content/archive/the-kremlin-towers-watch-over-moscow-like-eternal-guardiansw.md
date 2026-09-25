@@ -18,4 +18,4 @@ hashtags:
   - "Timeless"
 ---
 The Kremlin towers watch over Moscow like eternal guardians—where every brick whispers centuries, and every star dreams of the cosmos. 🌌✨ #TimeInRedBrick
-#StarOverKremlin #History #Architecture #Cityscape #Travel #Kremlin #Moscow #RussianHeritage #RedSquare #Majestic #Timeless https://t.co/5ew2DileD5
+#StarOverKremlin #History #Architecture #Cityscape #Travel #Kremlin #Moscow #RussianHeritage #RedSquare #Majestic #Timeless

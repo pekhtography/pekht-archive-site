@@ -26,4 +26,4 @@ hashtags:
   - "Life"
 ---
 Who needs history books when you can just spin around next to them? Fastest way to learn, guaranteed! 📚🎠 #SpinToLearn
-#City #Fair #Carousel #Winter #Festival #Historic #Center #Magic #Street #Celebration #EveningLight #Vibes #Urban #Fun #Holiday #Spirit #Culture #Square #Life https://t.co/iG9EWBZ8Ac
+#City #Fair #Carousel #Winter #Festival #Historic #Center #Magic #Street #Celebration #EveningLight #Vibes #Urban #Fun #Holiday #Spirit #Culture #Square #Life

@@ -14,4 +14,4 @@ Same tunnel — different understanding of what runs out first:
 the magic, or the time left inside it. 
 Eight arches. 
 Nobody rushes the last one. ✨❄️
-#Christmas #WinterWonderland #FestiveArch #GoldenLight https://t.co/ZM7JIaU8Cx
+#Christmas #WinterWonderland #FestiveArch #GoldenLight

@@ -19,4 +19,4 @@ hashtags:
   - "curiosity"
 ---
 A clever ginger cat lounges in the library, flipping through pages while contemplating if naps count as reading.
-#cat #feline #book #literature #comfort #cozy #peace #reading #solitude #wisdom #library #warmth  #curiosity https://t.co/Wh5V3wVPwZ
+#cat #feline #book #literature #comfort #cozy #peace #reading #solitude #wisdom #library #warmth  #curiosity

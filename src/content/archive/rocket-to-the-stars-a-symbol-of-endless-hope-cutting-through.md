@@ -17,4 +17,4 @@ hashtags:
   - "EpicJourney"
 ---
 Rocket to the stars 🌌 — a symbol of endless hope, cutting through dusk’s flame, reminding us progress is never still. 🚀 #SkyDreams
-#SpaceExploration #Innovation #SunsetVibes #Inspiration #SovietLegacy #Cosmonaut #RocketLaunch #Hope #SkyDreams #Momentum #EpicJourney https://t.co/w9cJPE04wz
+#SpaceExploration #Innovation #SunsetVibes #Inspiration #SovietLegacy #Cosmonaut #RocketLaunch #Hope #SkyDreams #Momentum #EpicJourney

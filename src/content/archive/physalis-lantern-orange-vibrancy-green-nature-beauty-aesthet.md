@@ -16,4 +16,4 @@ hashtags:
   - "Transition"
   - "Garden"
 ---
-#Physalis #Lantern #Orange #Vibrancy #Green #Nature #Beauty #Aesthetic #Autumn #Transition #Garden https://t.co/hUoCxm36Qx
+#Physalis #Lantern #Orange #Vibrancy #Green #Nature #Beauty #Aesthetic #Autumn #Transition #Garden

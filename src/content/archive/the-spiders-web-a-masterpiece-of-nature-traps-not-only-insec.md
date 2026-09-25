@@ -18,4 +18,4 @@ hashtags:
   - "ecosystem"
 ---
 The spider's web, a masterpiece of nature, traps not only insects but also the seeds of life
-#spiderweb #nature #insects #seeds #wooden #outdoors #cobweb #autumn #decay #texture #delicate #ecosystem https://t.co/PD85fc5wQ2
+#spiderweb #nature #insects #seeds #wooden #outdoors #cobweb #autumn #decay #texture #delicate #ecosystem

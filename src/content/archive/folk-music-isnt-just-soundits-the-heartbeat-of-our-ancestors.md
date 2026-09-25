@@ -19,4 +19,4 @@ hashtags:
   - "Pride"
 ---
 Folk music isn’t just sound—it's the heartbeat of our ancestors ❤️🎶. Watch the past and present dance in every note and every step. 🌿✨ #AncestorsInHarmony
-#Cossacks #Tradition #Folk #Culture #Performance #Heritage #Costumes #Stage #History #Music #Unity #Pride https://t.co/zbd8botG3u
+#Cossacks #Tradition #Folk #Culture #Performance #Heritage #Costumes #Stage #History #Music #Unity #Pride

@@ -15,4 +15,4 @@ hashtags:
   - "home"
   - "wonder"
 ---
-Illuminated in the winter night, the old mansion stands like a beacon of dreams, whispering tales of Christmas past #mansion #illumination #winter #dreams #Christmas #magic #twinkling #story #home #wonder https://t.co/29Xy0Zpb44
+Illuminated in the winter night, the old mansion stands like a beacon of dreams, whispering tales of Christmas past #mansion #illumination #winter #dreams #Christmas #magic #twinkling #story #home #wonder

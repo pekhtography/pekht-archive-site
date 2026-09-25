@@ -18,4 +18,4 @@ hashtags:
   - "Fresh"
 ---
 🌷✨ Spring’s masterpiece: tulips painting the world with color! #BloomingBlossom 
-#Flowers #Spring #Garden #Nature #Bloom #Floral #Colorful #Beauty #Petals #Botany #Fresh https://t.co/0jFOwL4kM3
+#Flowers #Spring #Garden #Nature #Bloom #Floral #Colorful #Beauty #Petals #Botany #Fresh

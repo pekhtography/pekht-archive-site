@@ -17,4 +17,4 @@ hashtags:
   - "Warmth"
   - "Amber"
 ---
-#Autumn #Change #Birch #Elegance #DryGrass #Whispers #Landscape #Beauty #Transformation #Sunlight #Warmth #Amber https://t.co/Hf1Yuw9Xov
+#Autumn #Change #Birch #Elegance #DryGrass #Whispers #Landscape #Beauty #Transformation #Sunlight #Warmth #Amber

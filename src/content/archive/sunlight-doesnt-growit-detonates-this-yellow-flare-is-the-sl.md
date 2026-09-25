@@ -13,4 +13,4 @@ This yellow flare is the slow-motion aftermath of a photon hitting the dark.
 Green buds are misfired shells. 
 You’re not watching a flower; 
 you’re watching a light-bomb that forgot to land. ⚡💥 
-#Nature #BotanicalSurrealism #LightTrap https://t.co/oSHrqzPgbB
+#Nature #BotanicalSurrealism #LightTrap
