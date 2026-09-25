@@ -8,6 +8,7 @@ import {
   BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb";
 import site_config from "@/site-config.json";
+import { sitePath } from "@/lib/site-url";
 
 const { pathname } = Astro.props;
 const isCurrent = (href: string) => pathname === href;
@@ -23,7 +24,7 @@ const isCurrent = (href: string) => pathname === href;
             {isCurrent("/") ? (
               <BreadcrumbPage>{site_config.homeLabel}</BreadcrumbPage>
             ) : (
-              <BreadcrumbLink href="/">{site_config.homeLabel}</BreadcrumbLink>
+              <BreadcrumbLink href={sitePath("/") }>{site_config.homeLabel}</BreadcrumbLink>
             )}
           </BreadcrumbItem>
 
@@ -32,10 +33,10 @@ const isCurrent = (href: string) => pathname === href;
               <>
                 <BreadcrumbSeparator>•</BreadcrumbSeparator>
                 <BreadcrumbItem>
-                  {pathname.startsWith(`/${item}`) ? (
+                  {pathname.startsWith(sitePath(`/${item}`)) ? (
                     <BreadcrumbPage>{item}</BreadcrumbPage>
                   ) : (
-                    <BreadcrumbLink href={`/${item}`}>{item}</BreadcrumbLink>
+                    <BreadcrumbLink href={sitePath(`/${item}`)}>{item}</BreadcrumbLink>
                   )}
                 </BreadcrumbItem>
               </>
