@@ -48,4 +48,5 @@ export default defineConfig({
 
   site: "https://pekhtography.github.io/pekht-archive-site/",
   base: "/pekht-archive-site",
+  trailingSlash: "always",
 });
