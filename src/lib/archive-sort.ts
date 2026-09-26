@@ -1,3 +1,5 @@
+export const ARCHIVE_PAGE_SIZE = 48;
+
 export function getArchiveSortKey(body: string): string {
     const match = body.match(/[\p{L}\p{N}]/u);
     return match ? body.slice(match.index).toLocaleLowerCase() : body.toLocaleLowerCase();

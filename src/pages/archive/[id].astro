@@ -1,8 +1,9 @@
 ---
 import IdLayout from "@/layouts/IdLayout.astro";
 import { getCollection, render } from "astro:content";
-import { sortArchiveItems } from "@/lib/archive-sort";
+import { ARCHIVE_PAGE_SIZE, sortArchiveItems } from "@/lib/archive-sort";
 import { sitePath } from "@/lib/site-url";
+import BackButton from "@/components/static/BackButton.astro";
 
 export async function getStaticPaths() {
     const items = sortArchiveItems(await getCollection("archive"));
@@ -26,6 +27,9 @@ const next =
     currentIndex < allItems.length - 1
         ? allItems[currentIndex + 1]
         : null;
+
+const archivePage = Math.floor(currentIndex / ARCHIVE_PAGE_SIZE) + 1;
+const archiveUrl = archivePage === 1 ? "/archive" : `/archive/${archivePage}`;
 ---
 
 <IdLayout
@@ -37,13 +41,8 @@ const next =
     next={next}
 >
     <article transition:animate="fade">
-        <div class="mb-6">
-            <a
-                href={sitePath("/archive")}
-                class="text-sm text-muted-foreground hover:text-foreground animation"
-            >
-                ← archive
-            </a>
+        <div class="h-11 flex items-center pl-6">
+            <BackButton url={archiveUrl} />
         </div>
 
         <div>

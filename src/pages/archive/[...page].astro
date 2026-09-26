@@ -1,16 +1,17 @@
 ---
 import { getCollection } from "astro:content";
-import { sortArchiveItems } from "@/lib/archive-sort";
+import { ARCHIVE_PAGE_SIZE, sortArchiveItems } from "@/lib/archive-sort";
 import IndexHeader from "@/components/static/IndexHeader.astro";
 import IndexLayout from "@/layouts/IndexLayout.astro";
 import { ArchiveCard } from "@/components/client/ArchiveCard";
+import { sitePath } from "@/lib/site-url";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 
 export async function getStaticPaths({ paginate }) {
     const items = sortArchiveItems(await getCollection("archive"));
 
     return paginate(items, {
-        pageSize: 48,
+        pageSize: ARCHIVE_PAGE_SIZE,
     });
 }
 
@@ -18,6 +19,34 @@ const { page } = Astro.props;
 const items = page.data;
 const allItems = sortArchiveItems(await getCollection("archive"));
 const archiveCount = allItems.length;
+
+const currentPage = page.currentPage;
+const lastPage = page.lastPage;
+
+const activeStart = Math.max(
+    1,
+    Math.min(currentPage - 2, lastPage - 4),
+);
+const activeEnd = Math.min(lastPage, activeStart + 4);
+const activePages = Array.from(
+    { length: activeEnd - activeStart + 1 },
+    (_, index) => activeStart + index,
+);
+
+const anchorPages = Array.from(
+    { length: 4 },
+    (_, index) =>
+        Math.round(1 + ((lastPage - 1) * index) / 3),
+);
+
+const paginationPages = Array.from(
+    new Set([...anchorPages, ...activePages]),
+).sort((a, b) => a - b);
+
+const pageUrl = (pageNumber: number) =>
+    pageNumber === 1
+        ? sitePath("/archive")
+        : sitePath(`/archive/${pageNumber}`);
 ---
 
 <IndexLayout
@@ -41,7 +70,7 @@ const archiveCount = allItems.length;
             }
         </div>
 
-        <nav class="mt-10 flex items-center justify-between border border-border p-4">
+        <nav class="relative mt-10 flex items-center justify-between border border-border p-4">
             {
                 page.url.prev ? (
                     <div class="group flex items-center gap-2">
@@ -61,9 +90,36 @@ const archiveCount = allItems.length;
                 )
             }
 
-            <span class="text-sm text-muted-foreground">
-                {page.currentPage} / {page.lastPage}
-            </span>
+            <div class="absolute left-1/2 flex -translate-x-1/2 items-center gap-1">
+                {
+                    paginationPages.map((pageNumber, index) => {
+                        const previousPage = paginationPages[index - 1];
+                        const showEllipsis = index > 0 && pageNumber - previousPage > 1;
+
+                        return (
+                            <>
+                                {showEllipsis && (
+                                    <span class="px-1 text-sm text-muted-foreground select-none">
+                                        …
+                                    </span>
+                                )}
+                                <a
+                                    href={pageUrl(pageNumber)}
+                                    aria-current={pageNumber === currentPage ? "page" : undefined}
+                                    class:list={[
+                                        "inline-flex size-8 shrink-0 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border text-sm transition-all active:scale-95",
+                                        pageNumber === currentPage
+                                            ? "bg-secondary text-secondary-foreground"
+                                            : "bg-background text-muted-foreground shadow-xs hover:bg-muted hover:text-foreground",
+                                    ]}
+                                >
+                                    {pageNumber}
+                                </a>
+                            </>
+                        );
+                    })
+                }
+            </div>
 
             {
                 page.url.next ? (
