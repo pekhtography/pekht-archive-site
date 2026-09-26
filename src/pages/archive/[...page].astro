@@ -70,7 +70,7 @@ const pageUrl = (pageNumber: number) =>
             }
         </div>
 
-        <nav class="mt-10 flex items-center justify-between border border-border p-4">
+        <nav class="relative mt-10 flex items-center justify-between border border-border p-4">
             {
                 page.url.prev ? (
                     <div class="group flex items-center gap-2">
@@ -90,7 +90,7 @@ const pageUrl = (pageNumber: number) =>
                 )
             }
 
-            <div class="flex items-center gap-1">
+            <div class="absolute left-1/2 flex -translate-x-1/2 items-center gap-1">
                 {
                     paginationPages.map((pageNumber, index) => {
                         const previousPage = paginationPages[index - 1];
