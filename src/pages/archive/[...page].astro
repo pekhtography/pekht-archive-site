@@ -4,6 +4,7 @@ import { ARCHIVE_PAGE_SIZE, sortArchiveItems } from "@/lib/archive-sort";
 import IndexHeader from "@/components/static/IndexHeader.astro";
 import IndexLayout from "@/layouts/IndexLayout.astro";
 import { ArchiveCard } from "@/components/client/ArchiveCard";
+import { sitePath } from "@/lib/site-url";
 import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 
 export async function getStaticPaths({ paginate }) {
@@ -43,7 +44,9 @@ const paginationPages = Array.from(
 ).sort((a, b) => a - b);
 
 const pageUrl = (pageNumber: number) =>
-    pageNumber === 1 ? "/archive" : `/archive/${pageNumber}`;
+    pageNumber === 1
+        ? sitePath("/archive")
+        : sitePath(`/archive/${pageNumber}`);
 ---
 
 <IndexLayout
