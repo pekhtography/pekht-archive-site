@@ -3,6 +3,7 @@ import IdLayout from "@/layouts/IdLayout.astro";
 import { getCollection, render } from "astro:content";
 import { sortArchiveItems } from "@/lib/archive-sort";
 import { sitePath } from "@/lib/site-url";
+import BackButton from "@/components/static/BackButton.astro";
 
 export async function getStaticPaths() {
     const items = sortArchiveItems(await getCollection("archive"));
@@ -38,12 +39,7 @@ const next =
 >
     <article transition:animate="fade">
         <div class="mb-6">
-            <a
-                href={sitePath("/archive")}
-                class="text-sm text-muted-foreground hover:text-foreground animation"
-            >
-                ← archive
-            </a>
+            <BackButton url="/archive" />
         </div>
 
         <div>
