@@ -266,7 +266,8 @@ const pageUrl = (pageNumber: number) =>
                 hitArea.addEventListener("mousemove", onMove);
                 hitArea.addEventListener("click", (event) => {
                     const pageNumber = pageFromX(event.clientX);
-                    window.location.href = pageNumber === 1 ? firstEndpoint.href : `${firstEndpoint.href.replace(/\\/$/, "")}/${pageNumber}/`;
+                    const archiveBase = firstEndpoint.href.endsWith("/") ? firstEndpoint.href.slice(0, -1) : firstEndpoint.href;
+                    window.location.href = pageNumber === 1 ? firstEndpoint.href : `${archiveBase}/${pageNumber}/`;
                 });
                 hitArea.addEventListener("mouseleave", leavePreview);
                 engine.addEventListener("mouseleave", leavePreview);
