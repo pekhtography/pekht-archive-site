@@ -117,7 +117,7 @@ const pageUrl = (pageNumber: number) =>
                     id="archive-page-preview"
                     href="#"
                     aria-label={`Preview archive page ${currentPage}`}
-                    class="pointer-events-none absolute top-1/2 z-20 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground opacity-0 shadow-xs transition-none"
+                    class="pointer-events-none absolute top-1/2 z-20 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground opacity-0 shadow-xs transition-opacity duration-200"
                 >
                     {currentPage}
                 </a>
@@ -206,7 +206,7 @@ const pageUrl = (pageNumber: number) =>
                     preview.classList.add("opacity-0");
                     currentMarker.classList.remove("size-2", "bg-foreground", "text-transparent");
                     currentMarker.classList.add("size-8", "bg-secondary", "text-secondary-foreground");
-                    firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-border";
+                    firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-secondary transition-all duration-200";
                     lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-foreground";
                     firstEndpoint.innerHTML = '<span class="sr-only">1</span>';
                     lastEndpoint.innerHTML = `<span class="sr-only">${lastPage}</span>`;
@@ -214,11 +214,11 @@ const pageUrl = (pageNumber: number) =>
 
                 const setActive = () => {
                     preview.classList.remove("opacity-0");
-                    currentMarker.classList.add("size-2", "bg-foreground", "text-transparent");
+                    currentMarker.classList.add("size-4", "bg-foreground", "text-transparent");
                     currentMarker.classList.remove("size-8", "bg-secondary", "text-secondary-foreground");
 
-                    firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 inline-flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-sm text-muted-foreground shadow-xs";
-                    lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 inline-flex size-8 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-sm text-muted-foreground shadow-xs";
+                    firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 inline-flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-sm text-muted-foreground shadow-xs transition-all duration-200";
+                    lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 inline-flex size-8 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-sm text-muted-foreground shadow-xs transition-all duration-200";
                     firstEndpoint.innerHTML = "1";
                     lastEndpoint.innerHTML = String(lastPage);
                 };
