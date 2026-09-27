@@ -23,26 +23,6 @@ const archiveCount = allItems.length;
 const currentPage = page.currentPage;
 const lastPage = page.lastPage;
 
-const activeStart = Math.max(
-    1,
-    Math.min(currentPage - 2, lastPage - 4),
-);
-const activeEnd = Math.min(lastPage, activeStart + 4);
-const activePages = Array.from(
-    { length: activeEnd - activeStart + 1 },
-    (_, index) => activeStart + index,
-);
-
-const anchorPages = Array.from(
-    { length: 4 },
-    (_, index) =>
-        Math.round(1 + ((lastPage - 1) * index) / 3),
-);
-
-const paginationPages = Array.from(
-    new Set([...anchorPages, ...activePages]),
-).sort((a, b) => a - b);
-
 const pageUrl = (pageNumber: number) =>
     pageNumber === 1
         ? sitePath("/archive")
@@ -62,7 +42,7 @@ const pageUrl = (pageNumber: number) =>
             variant="archive"
         />
 
-        <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+        <div id="archive-grid" class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
             {
                 items.map((item) => (
                     <ArchiveCard item={item} />
@@ -70,10 +50,16 @@ const pageUrl = (pageNumber: number) =>
             }
         </div>
 
-        <nav class="relative mt-10 flex items-center justify-between border border-border p-4">
+        <nav
+            id="archive-pagination"
+            class="relative mt-10 flex min-h-16 items-center justify-between border border-border p-4"
+            aria-label="Archive pages"
+            data-current-page={currentPage}
+            data-last-page={lastPage}
+        >
             {
                 page.url.prev ? (
-                    <div class="group flex items-center gap-2">
+                    <div class="group z-20 flex items-center gap-2">
                         <a
                             href={page.url.prev}
                             aria-label="Previous archive page"
@@ -90,40 +76,63 @@ const pageUrl = (pageNumber: number) =>
                 )
             }
 
-            <div class="absolute left-1/2 flex -translate-x-1/2 items-center gap-1">
-                {
-                    paginationPages.map((pageNumber, index) => {
-                        const previousPage = paginationPages[index - 1];
-                        const showEllipsis = index > 0 && pageNumber - previousPage > 1;
+            <div
+                id="archive-page-engine"
+                class="absolute inset-y-0 left-0 right-0"
+                style="--nav-left: 24%; --nav-right: 76%; --line-left: calc(24% + 44px); --line-right: calc(76% - 44px);"
+            >
+                <div
+                    class="pointer-events-none absolute left-[var(--line-left)] right-[calc(100%-var(--line-right))] top-1/2 h-px -translate-y-1/2 bg-border"
+                    aria-hidden="true"
+                ></div>
 
-                        return (
-                            <>
-                                {showEllipsis && (
-                                    <span class="px-1 text-sm text-muted-foreground select-none">
-                                        …
-                                    </span>
-                                )}
-                                <a
-                                    href={pageUrl(pageNumber)}
-                                    aria-current={pageNumber === currentPage ? "page" : undefined}
-                                    class:list={[
-                                        "inline-flex size-8 shrink-0 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border text-sm transition-all active:scale-95",
-                                        pageNumber === currentPage
-                                            ? "bg-secondary text-secondary-foreground"
-                                            : "bg-background text-muted-foreground shadow-xs hover:bg-muted hover:text-foreground",
-                                    ]}
-                                >
-                                    {pageNumber}
-                                </a>
-                            </>
-                        );
-                    })
-                }
+                <a
+                    id="archive-page-first"
+                    href={pageUrl(1)}
+                    aria-label="Archive page 1"
+                    class="archive-page-endpoint absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-y-1/2 border border-border bg-background transition-all duration-300"
+                >
+                    <span class="sr-only">1</span>
+                </a>
+
+                <a
+                    id="archive-page-last"
+                    href={pageUrl(lastPage)}
+                    aria-label={`Archive page ${lastPage}`}
+                    class="archive-page-endpoint absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 -translate-y-1/2 border border-border bg-background transition-all duration-300"
+                >
+                    <span class="sr-only">{lastPage}</span>
+                </a>
+
+                <div
+                    id="archive-page-current"
+                    class="absolute top-1/2 z-10 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground transition-all duration-200"
+                    style={`left: calc(var(--line-left) + (var(--line-right) - var(--line-left)) * ${lastPage === 1 ? 0 : (currentPage - 1) / (lastPage - 1)});`}
+                    aria-hidden="true"
+                >
+                    {currentPage}
+                </div>
+
+                <a
+                    id="archive-page-preview"
+                    href="#"
+                    aria-label={`Preview archive page ${currentPage}`}
+                    class="pointer-events-none absolute top-1/2 z-20 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground opacity-0 shadow-xs transition-[left,opacity] duration-100"
+                >
+                    {currentPage}
+                </a>
+
+                <div
+                    id="archive-page-hit-area"
+                    class="absolute top-1/2 h-8 -translate-y-1/2 cursor-ew-resize"
+                    style="left: var(--line-left); right: calc(100% - var(--line-right));"
+                    aria-hidden="true"
+                ></div>
             </div>
 
             {
                 page.url.next ? (
-                    <div class="group flex items-center gap-2">
+                    <div class="group z-20 flex items-center gap-2">
                         <span class="pointer-events-none text-sm text-muted-foreground opacity-0 translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all">
                             next
                         </span>
@@ -140,5 +149,128 @@ const pageUrl = (pageNumber: number) =>
                 )
             }
         </nav>
+
+        <script>
+            const nav = document.querySelector("#archive-pagination");
+            const engine = document.querySelector("#archive-page-engine");
+            const grid = document.querySelector("#archive-grid");
+            const firstEndpoint = document.querySelector("#archive-page-first");
+            const lastEndpoint = document.querySelector("#archive-page-last");
+            const currentMarker = document.querySelector("#archive-page-current");
+            const preview = document.querySelector("#archive-page-preview");
+            const hitArea = document.querySelector("#archive-page-hit-area");
+
+            if (
+                nav instanceof HTMLElement &&
+                engine instanceof HTMLElement &&
+                grid instanceof HTMLElement &&
+                firstEndpoint instanceof HTMLAnchorElement &&
+                lastEndpoint instanceof HTMLAnchorElement &&
+                currentMarker instanceof HTMLElement &&
+                preview instanceof HTMLAnchorElement &&
+                hitArea instanceof HTMLElement
+            ) {
+                const currentPage = Number(nav.dataset.currentPage);
+                const lastPage = Number(nav.dataset.lastPage);
+
+                const setBounds = () => {
+                    const cards = Array.from(grid.children) as HTMLElement[];
+                    const rect = grid.getBoundingClientRect();
+                    const navRect = nav.getBoundingClientRect();
+
+                    if (cards.length >= 3 && window.matchMedia("(min-width: 768px)").matches) {
+                        const second = cards[1].getBoundingClientRect();
+                        const third = cards[2].getBoundingClientRect();
+
+                        const left = second.left - navRect.left;
+                        const right = third.right - navRect.left;
+
+                        if (right > left) {
+                            const leftPct = (left / navRect.width) * 100;
+                            const rightPct = (right / navRect.width) * 100;
+
+                            nav.style.setProperty("--nav-left", `${leftPct}%`);
+                            nav.style.setProperty("--nav-right", `${rightPct}%`);
+                            nav.style.setProperty("--line-left", `${(left + 44) / navRect.width * 100}%`);
+                            nav.style.setProperty("--line-right", `${(right - 44) / navRect.width * 100}%`);
+                            return;
+                        }
+                    }
+
+                    const left = rect.left - navRect.left;
+                    const right = rect.right - navRect.left;
+                    nav.style.setProperty("--nav-left", `${left / navRect.width * 100}%`);
+                    nav.style.setProperty("--nav-right", `${right / navRect.width * 100}%`);
+                    nav.style.setProperty("--line-left", `${(left + 44) / navRect.width * 100}%`);
+                    nav.style.setProperty("--line-right", `${(right - 44) / navRect.width * 100}%`);
+                };
+
+                const pageFromX = (clientX: number) => {
+                    const hitRect = hitArea.getBoundingClientRect();
+                    const progress = Math.max(
+                        0,
+                        Math.min(1, (clientX - hitRect.left) / hitRect.width),
+                    );
+
+                    if (lastPage <= 1) return 1;
+                    return Math.round(1 + progress * (lastPage - 1));
+                };
+
+                const updatePreview = (clientX: number) => {
+                    const hitRect = hitArea.getBoundingClientRect();
+                    const progress = Math.max(
+                        0,
+                        Math.min(1, (clientX - hitRect.left) / hitRect.width),
+                    );
+                    const pageNumber = pageFromX(clientX);
+
+                    preview.style.left = `${hitRect.left - nav.getBoundingClientRect().left + progress * hitRect.width}px`;
+                    preview.textContent = String(pageNumber);
+                    const archiveBase = firstEndpoint.href.replace(/\/$/, "");
+                    preview.href = pageNumber === 1 ? `${archiveBase}/` : `${archiveBase}/${pageNumber}/`;
+                    preview.setAttribute("aria-label", `Go to archive page ${pageNumber}`);
+                    preview.classList.remove("pointer-events-none", "opacity-0");
+                    currentMarker.classList.add("size-2", "bg-foreground", "text-transparent");
+                    currentMarker.classList.remove("size-8", "bg-secondary", "text-secondary-foreground");
+                    firstEndpoint.classList.remove("size-2", "border-border", "bg-background");
+                    lastEndpoint.classList.remove("size-2", "border-border", "bg-background");
+                    firstEndpoint.classList.add("size-8", "rounded-[min(var(--radius-md),10px)]", "bg-background", "text-sm", "text-muted-foreground", "shadow-xs");
+                    lastEndpoint.classList.add("size-8", "rounded-[min(var(--radius-md),10px)]", "bg-background", "text-sm", "text-muted-foreground", "shadow-xs");
+                    firstEndpoint.innerHTML = "1";
+                    lastEndpoint.innerHTML = String(lastPage);
+                };
+
+                const leavePreview = () => {
+                    preview.classList.add("pointer-events-none", "opacity-0");
+                    currentMarker.classList.remove("size-2", "bg-foreground", "text-transparent");
+                    currentMarker.classList.add("size-8", "bg-secondary", "text-secondary-foreground");
+                    firstEndpoint.classList.remove("size-8", "rounded-[min(var(--radius-md),10px)]", "bg-background", "text-sm", "text-muted-foreground", "shadow-xs");
+                    lastEndpoint.classList.remove("size-8", "rounded-[min(var(--radius-md),10px)]", "bg-background", "text-sm", "text-muted-foreground", "shadow-xs");
+                    firstEndpoint.classList.add("size-2", "border-border", "bg-background");
+                    lastEndpoint.classList.add("size-2", "border-border", "bg-background");
+                    firstEndpoint.innerHTML = '<span class="sr-only">1</span>';
+                    lastEndpoint.innerHTML = `<span class="sr-only">${lastPage}</span>`;
+                };
+
+                const onMove = (event: MouseEvent) => {
+                    updatePreview(event.clientX);
+                };
+
+                const onResize = () => {
+                    setBounds();
+                };
+
+                setBounds();
+                window.addEventListener("resize", onResize);
+                hitArea.addEventListener("mouseenter", (event) => updatePreview(event.clientX));
+                hitArea.addEventListener("mousemove", onMove);
+                hitArea.addEventListener("click", (event) => {
+                    const pageNumber = pageFromX(event.clientX);
+                    window.location.href = pageNumber === 1 ? firstEndpoint.href : `${firstEndpoint.href.replace(/\\/$/, "")}/${pageNumber}/`;
+                });
+                hitArea.addEventListener("mouseleave", leavePreview);
+                engine.addEventListener("mouseleave", leavePreview);
+            }
+        </script>
     </div>
 </IndexLayout>
