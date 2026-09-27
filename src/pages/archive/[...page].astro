@@ -151,6 +151,7 @@ const pageUrl = (pageNumber: number) =>
         </nav>
 
         <script>
+            const initArchiveNavigator = () => {
             const nav = document.querySelector("#archive-pagination");
             const engine = document.querySelector("#archive-page-engine");
             const grid = document.querySelector("#archive-grid");
@@ -299,6 +300,10 @@ const pageUrl = (pageNumber: number) =>
                 hitArea.addEventListener("pointerleave", onPointerLeave);
                 hitArea.addEventListener("click", onPointerClick);
             }
+            };
+            
+            initArchiveNavigator();
+            document.addEventListener("astro:page-load", initArchiveNavigator);
         </script>
     </div>
 </IndexLayout>
