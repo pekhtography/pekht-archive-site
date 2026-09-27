@@ -90,7 +90,7 @@ const pageUrl = (pageNumber: number) =>
                     id="archive-page-first"
                     href={pageUrl(1)}
                     aria-label="Archive page 1"
-                    class="archive-page-endpoint absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-y-1/2 border border-border bg-background transition-all duration-300"
+                    class="archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-y-1/2 border border-border bg-background transition-none"
                 >
                     <span class="sr-only">1</span>
                 </a>
@@ -99,7 +99,7 @@ const pageUrl = (pageNumber: number) =>
                     id="archive-page-last"
                     href={pageUrl(lastPage)}
                     aria-label={`Archive page ${lastPage}`}
-                    class="archive-page-endpoint absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 -translate-y-1/2 border border-border bg-background transition-all duration-300"
+                    class="archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 -translate-y-1/2 border border-border bg-background transition-none"
                 >
                     <span class="sr-only">{lastPage}</span>
                 </a>
@@ -117,14 +117,14 @@ const pageUrl = (pageNumber: number) =>
                     id="archive-page-preview"
                     href="#"
                     aria-label={`Preview archive page ${currentPage}`}
-                    class="pointer-events-none absolute top-1/2 z-20 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground opacity-0 shadow-xs transition-[left,opacity] duration-100"
+                    class="pointer-events-none absolute top-1/2 z-20 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground opacity-0 shadow-xs transition-none"
                 >
                     {currentPage}
                 </a>
 
                 <div
                     id="archive-page-hit-area"
-                    class="absolute top-1/2 h-8 -translate-y-1/2 cursor-ew-resize"
+                    class="absolute inset-y-0 cursor-ew-resize"
                     style="left: var(--line-left); right: calc(100% - var(--line-right));"
                     aria-hidden="true"
                 ></div>
