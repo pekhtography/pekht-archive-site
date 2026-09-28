@@ -38,7 +38,7 @@ const pageUrl = (pageNumber: number) =>
         <IndexHeader
             url="/"
             heading="Archive"
-            description={`${archiveCount} observations.\nPhotographs and fragments from encounters with the everyday world.`}
+            description={`${archiveCount} observations.\\nPhotographs and fragments from encounters with the everyday world.`}
             variant="archive"
         />
 
@@ -90,7 +90,7 @@ const pageUrl = (pageNumber: number) =>
                     id="archive-page-first"
                     href={pageUrl(1)}
                     aria-label="Archive page 1"
-                    class="archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-y-1/2 border border-border bg-background transition-none"
+                    class="archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"
                 >
                     <span class="sr-only">1</span>
                 </a>
@@ -99,7 +99,7 @@ const pageUrl = (pageNumber: number) =>
                     id="archive-page-last"
                     href={pageUrl(lastPage)}
                     aria-label={`Archive page ${lastPage}`}
-                    class="archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 -translate-y-1/2 border border-border bg-background transition-none"
+                    class="archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"
                 >
                     <span class="sr-only">{lastPage}</span>
                 </a>
@@ -113,8 +113,8 @@ const pageUrl = (pageNumber: number) =>
                     <span id="archive-page-current-number" class="absolute left-1/2 top-1/2 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground transition-all duration-200">
                         {currentPage}
                     </span>
-                    <span id="archive-page-current-diamond-top" class="archive-page-current-diamond absolute left-1/2 top-1/2 size-2 -translate-x-1/2 -translate-y-[calc(50%+4px)] rotate-45 border border-border bg-background opacity-0 transition-opacity duration-200"></span>
-                    <span id="archive-page-current-diamond-bottom" class="archive-page-current-diamond absolute left-1/2 top-1/2 size-2 -translate-x-1/2 translate-y-[calc(50%+4px)] rotate-45 border border-border bg-background opacity-0 transition-opacity duration-200"></span>
+                    <span id="archive-page-current-triangle-top" class="archive-page-current-triangle absolute left-1/2 top-1/2 size-0 -translate-x-1/2 -translate-y-[calc(50%+4px)] border-x-4 border-x-transparent border-b-4 border-b-border opacity-0 transition-opacity duration-200"></span>
+                    <span id="archive-page-current-triangle-bottom" class="archive-page-current-triangle absolute left-1/2 top-1/2 size-0 -translate-x-1/2 translate-y-[calc(50%+4px)] border-x-4 border-x-transparent border-t-4 border-t-border opacity-0 transition-opacity duration-200"></span>
                 </div>
 
                 <a
@@ -163,8 +163,8 @@ const pageUrl = (pageNumber: number) =>
             const lastEndpoint = document.querySelector("#archive-page-last");
             const currentMarker = document.querySelector("#archive-page-current");
             const currentNumber = document.querySelector("#archive-page-current-number");
-            const currentDiamondTop = document.querySelector("#archive-page-current-diamond-top");
-            const currentDiamondBottom = document.querySelector("#archive-page-current-diamond-bottom");
+            const currentTriangleTop = document.querySelector("#archive-page-current-triangle-top");
+            const currentTriangleBottom = document.querySelector("#archive-page-current-triangle-bottom");
             const preview = document.querySelector("#archive-page-preview");
             const hitArea = document.querySelector("#archive-page-hit-area");
 
@@ -176,8 +176,8 @@ const pageUrl = (pageNumber: number) =>
                 lastEndpoint instanceof HTMLAnchorElement &&
                 currentMarker instanceof HTMLElement &&
                 currentNumber instanceof HTMLElement &&
-                currentDiamondTop instanceof HTMLElement &&
-                currentDiamondBottom instanceof HTMLElement &&
+                currentTriangleTop instanceof HTMLElement &&
+                currentTriangleBottom instanceof HTMLElement &&
                 preview instanceof HTMLAnchorElement &&
                 hitArea instanceof HTMLElement
             ) {
@@ -216,8 +216,8 @@ const pageUrl = (pageNumber: number) =>
                 const setPassive = () => {
                     preview.classList.add("opacity-0");
                     currentNumber.classList.remove("opacity-0");
-                    currentDiamondTop.classList.add("opacity-0");
-                    currentDiamondBottom.classList.add("opacity-0");
+                    currentTriangleTop.classList.add("opacity-0");
+                    currentTriangleBottom.classList.add("opacity-0");
                     firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-secondary transition-all duration-200";
                     lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-secondary transition-all duration-200";
                     firstEndpoint.innerHTML = '<span class="sr-only">1</span>';
@@ -227,8 +227,8 @@ const pageUrl = (pageNumber: number) =>
                 const setActive = () => {
                     preview.classList.remove("opacity-0");
                     currentNumber.classList.add("opacity-0");
-                    currentDiamondTop.classList.remove("opacity-0");
-                    currentDiamondBottom.classList.remove("opacity-0");
+                    currentTriangleTop.classList.remove("opacity-0");
+                    currentTriangleBottom.classList.remove("opacity-0");
 
                     firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 inline-flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-sm text-muted-foreground shadow-xs transition-all duration-200";
                     lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 inline-flex size-8 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-sm text-muted-foreground shadow-xs transition-all duration-200";
