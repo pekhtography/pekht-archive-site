@@ -113,8 +113,9 @@ const pageUrl = (pageNumber: number) =>
                     <span id="archive-page-current-number" class="absolute left-1/2 top-1/2 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground transition-all duration-200">
                         {currentPage}
                     </span>
-                    <span id="archive-page-current-triangle-top" class="archive-page-current-triangle absolute left-1/2 top-[calc(50%-8px)] size-0 -translate-x-1/2 border-x-[8px] border-x-transparent border-t-[8px] border-t-foreground opacity-0 transition-opacity duration-200"></span>
-                    <span id="archive-page-current-triangle-bottom" class="archive-page-current-triangle absolute left-1/2 top-1/2 size-0 -translate-x-1/2 border-x-[8px] border-x-transparent border-b-[8px] border-b-foreground opacity-0 transition-opacity duration-200"></span>
+                    <span id="archive-page-current-dot" class="archive-page-current-dot absolute left-1/2 top-1/2 z-10 size-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-background border border-background opacity-0 transition-opacity duration-200"></span>
+                    <span id="archive-page-current-triangle-top" class="archive-page-current-triangle absolute left-1/2 top-[calc(50%-10px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-b-[6px] border-b-foreground/60 opacity-0 transition-opacity duration-200"></span>
+                    <span id="archive-page-current-triangle-bottom" class="archive-page-current-triangle absolute left-1/2 top-[calc(50%+4px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-t-[6px] border-t-foreground/60 opacity-0 transition-opacity duration-200"></span>
                 </div>
 
                 <a
@@ -163,6 +164,7 @@ const pageUrl = (pageNumber: number) =>
             const lastEndpoint = document.querySelector("#archive-page-last");
             const currentMarker = document.querySelector("#archive-page-current");
             const currentNumber = document.querySelector("#archive-page-current-number");
+            const currentDot = document.querySelector("#archive-page-current-dot");
             const currentTriangleTop = document.querySelector("#archive-page-current-triangle-top");
             const currentTriangleBottom = document.querySelector("#archive-page-current-triangle-bottom");
             const preview = document.querySelector("#archive-page-preview");
@@ -176,6 +178,7 @@ const pageUrl = (pageNumber: number) =>
                 lastEndpoint instanceof HTMLAnchorElement &&
                 currentMarker instanceof HTMLElement &&
                 currentNumber instanceof HTMLElement &&
+                currentDot instanceof HTMLElement &&
                 currentTriangleTop instanceof HTMLElement &&
                 currentTriangleBottom instanceof HTMLElement &&
                 preview instanceof HTMLAnchorElement &&
@@ -216,6 +219,7 @@ const pageUrl = (pageNumber: number) =>
                 const setPassive = () => {
                     preview.classList.add("opacity-0");
                     currentNumber.classList.remove("opacity-0");
+                    currentDot.classList.add("opacity-0");
                     currentTriangleTop.classList.add("opacity-0");
                     currentTriangleBottom.classList.add("opacity-0");
                     firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-secondary transition-all duration-200";
@@ -227,6 +231,7 @@ const pageUrl = (pageNumber: number) =>
                 const setActive = () => {
                     preview.classList.remove("opacity-0");
                     currentNumber.classList.add("opacity-0");
+                    currentDot.classList.remove("opacity-0");
                     currentTriangleTop.classList.remove("opacity-0");
                     currentTriangleBottom.classList.remove("opacity-0");
 
