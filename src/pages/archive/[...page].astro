@@ -129,7 +129,7 @@ const pageUrl = (pageNumber: number) =>
 
                 <div
                     id="archive-page-hit-area"
-                    class="absolute inset-y-0 cursor-pointer"
+                    class="absolute inset-y-0 cursor-pointer touch-none"
                     style="left: var(--line-left); right: calc(100% - var(--line-right));"
                     aria-hidden="true"
                 ></div>
@@ -276,8 +276,12 @@ const pageUrl = (pageNumber: number) =>
                     setActive();
                 };
 
+                let touchActive = false;
+
                 const onPointerMove = (event: PointerEvent) => {
                     if (event.pointerType === "mouse") {
+                        updatePreview(event.clientX);
+                    } else if (event.pointerType === "touch" && touchActive) {
                         updatePreview(event.clientX);
                     }
                 };
@@ -290,6 +294,41 @@ const pageUrl = (pageNumber: number) =>
 
                 const onPointerLeave = (event: PointerEvent) => {
                     if (event.pointerType === "mouse") {
+                        setPassive();
+                    }
+                };
+
+                const onPointerDown = (event: PointerEvent) => {
+                    if (event.pointerType !== "touch") return;
+
+                    touchActive = true;
+                    hitArea.setPointerCapture(event.pointerId);
+                    updatePreview(event.clientX);
+                };
+
+                const onPointerUp = (event: PointerEvent) => {
+                    if (event.pointerType !== "touch" || !touchActive) return;
+
+                    const pageNumber = pageFromClientX(event.clientX);
+                    const archiveBase = firstEndpoint.href.endsWith("/")
+                        ? firstEndpoint.href.slice(0, -1)
+                        : firstEndpoint.href;
+
+                    touchActive = false;
+                    hitArea.releasePointerCapture(event.pointerId);
+
+                    window.location.href =
+                        pageNumber === 1
+                            ? firstEndpoint.href
+                            : `${archiveBase}/${pageNumber}/`;
+                };
+
+                const onPointerCancel = (event: PointerEvent) => {
+                    if (event.pointerType === "touch") {
+                        touchActive = false;
+                        if (hitArea.hasPointerCapture(event.pointerId)) {
+                            hitArea.releasePointerCapture(event.pointerId);
+                        }
                         setPassive();
                     }
                 };
@@ -315,6 +354,9 @@ const pageUrl = (pageNumber: number) =>
                 hitArea.addEventListener("pointerenter", onPointerEnter);
                 hitArea.addEventListener("pointermove", onPointerMove);
                 hitArea.addEventListener("pointerleave", onPointerLeave);
+                hitArea.addEventListener("pointerdown", onPointerDown);
+                hitArea.addEventListener("pointerup", onPointerUp);
+                hitArea.addEventListener("pointercancel", onPointerCancel);
                 hitArea.addEventListener("click", onPointerClick);
             }
             };
