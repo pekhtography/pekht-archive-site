@@ -106,11 +106,15 @@ const pageUrl = (pageNumber: number) =>
 
                 <div
                     id="archive-page-current"
-                    class="pointer-events-none absolute top-1/2 z-10 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground transition-all duration-200"
+                    class="pointer-events-none absolute left-0 top-1/2 z-10 size-0 -translate-y-1/2"
                     style={`left: calc(var(--line-left) + (var(--line-right) - var(--line-left)) * ${lastPage === 1 ? 0 : (currentPage - 1) / (lastPage - 1)});`}
                     aria-hidden="true"
                 >
-                    {currentPage}
+                    <span id="archive-page-current-number" class="absolute left-1/2 top-1/2 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground transition-all duration-200">
+                        {currentPage}
+                    </span>
+                    <span id="archive-page-current-diamond-top" class="archive-page-current-diamond absolute left-1/2 top-1/2 size-1.5 -translate-x-1/2 -translate-y-[calc(50%+3px)] rotate-45 border border-border bg-background opacity-0 transition-opacity duration-200"></span>
+                    <span id="archive-page-current-diamond-bottom" class="archive-page-current-diamond absolute left-1/2 top-1/2 size-1.5 -translate-x-1/2 translate-y-[calc(50%+3px)] rotate-45 border border-border bg-background opacity-0 transition-opacity duration-200"></span>
                 </div>
 
                 <a
@@ -158,6 +162,9 @@ const pageUrl = (pageNumber: number) =>
             const firstEndpoint = document.querySelector("#archive-page-first");
             const lastEndpoint = document.querySelector("#archive-page-last");
             const currentMarker = document.querySelector("#archive-page-current");
+            const currentNumber = document.querySelector("#archive-page-current-number");
+            const currentDiamondTop = document.querySelector("#archive-page-current-diamond-top");
+            const currentDiamondBottom = document.querySelector("#archive-page-current-diamond-bottom");
             const preview = document.querySelector("#archive-page-preview");
             const hitArea = document.querySelector("#archive-page-hit-area");
 
@@ -168,6 +175,9 @@ const pageUrl = (pageNumber: number) =>
                 firstEndpoint instanceof HTMLAnchorElement &&
                 lastEndpoint instanceof HTMLAnchorElement &&
                 currentMarker instanceof HTMLElement &&
+                currentNumber instanceof HTMLElement &&
+                currentDiamondTop instanceof HTMLElement &&
+                currentDiamondBottom instanceof HTMLElement &&
                 preview instanceof HTMLAnchorElement &&
                 hitArea instanceof HTMLElement
             ) {
@@ -205,8 +215,9 @@ const pageUrl = (pageNumber: number) =>
 
                 const setPassive = () => {
                     preview.classList.add("opacity-0");
-                    currentMarker.classList.remove("size-2", "bg-foreground", "text-transparent");
-                    currentMarker.classList.add("size-8", "bg-secondary", "text-secondary-foreground");
+                    currentNumber.classList.remove("opacity-0");
+                    currentDiamondTop.classList.add("opacity-0");
+                    currentDiamondBottom.classList.add("opacity-0");
                     firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-secondary transition-all duration-200";
                     lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-secondary transition-all duration-200";
                     firstEndpoint.innerHTML = '<span class="sr-only">1</span>';
@@ -215,8 +226,9 @@ const pageUrl = (pageNumber: number) =>
 
                 const setActive = () => {
                     preview.classList.remove("opacity-0");
-                    currentMarker.classList.add("size-4", "bg-foreground", "text-transparent");
-                    currentMarker.classList.remove("size-8", "bg-secondary", "text-secondary-foreground");
+                    currentNumber.classList.add("opacity-0");
+                    currentDiamondTop.classList.remove("opacity-0");
+                    currentDiamondBottom.classList.remove("opacity-0");
 
                     firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 inline-flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-sm text-muted-foreground shadow-xs transition-all duration-200";
                     lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 inline-flex size-8 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-sm text-muted-foreground shadow-xs transition-all duration-200";
