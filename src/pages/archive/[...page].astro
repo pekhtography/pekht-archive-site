@@ -82,7 +82,7 @@ const pageUrl = (pageNumber: number) =>
                 style="--nav-left: 24%; --nav-right: 76%; --line-left: calc(24% + 44px); --line-right: calc(76% - 44px);"
             >
                 <div
-                    class="pointer-events-none absolute left-[var(--line-left)] right-[calc(100%-var(--line-right))] top-1/2 h-px -translate-y-1/2 bg-border"
+                    class="pointer-events-none absolute left-[var(--line-left)] right-[calc(100%-var(--line-right))] top-1/2 h-px -translate-y-1/2 bg-foreground/35"
                     aria-hidden="true"
                 ></div>
 
@@ -222,7 +222,7 @@ const pageUrl = (pageNumber: number) =>
                     currentDot.classList.add("opacity-0");
                     currentTriangleTop.classList.add("opacity-0");
                     currentTriangleBottom.classList.add("opacity-0");
-                    firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-secondary transition-all duration-200";
+                    firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-foreground/45 bg-foreground/25 transition-all duration-200";
                     lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-secondary transition-all duration-200";
                     firstEndpoint.innerHTML = '<span class="sr-only">1</span>';
                     lastEndpoint.innerHTML = `<span class="sr-only">${lastPage}</span>`;
