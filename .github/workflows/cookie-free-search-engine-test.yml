@@ -1,0 +1,41 @@
+name: cookie-free search engine test
+
+on:
+  push:
+    branches: [main-clean]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Query search engines
+        run: |
+          set -euo pipefail
+
+          for engine in google bing ddg; do
+            echo "===== $engine ====="
+            case "$engine" in
+              google)
+                url='https://www.google.com/search?q=%22PEKHTography%22+%22x.com%2FPEKHTography%2Fstatus%22'
+                ;;
+              bing)
+                url='https://www.bing.com/search?q=%22PEKHTography%22+%22x.com%2FPEKHTography%2Fstatus%22'
+                ;;
+              ddg)
+                url='https://html.duckduckgo.com/html/?q=%22PEKHTography%22+%22x.com%2FPEKHTography%2Fstatus%22'
+                ;;
+            esac
+
+            curl -L --fail --silent --show-error --max-time 30 \
+              -A 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36' \
+              "$url" > "/tmp/$engine.html"
+
+            echo "Bytes: $(wc -c < "/tmp/$engine.html")"
+            echo "X status URLs:"
+            grep -Eo 'https?://(x|twitter)\\.com/[^"<> ]+/status/[0-9]+' "/tmp/$engine.html" | sort -u | head -30 || true
+            echo "Raw status IDs:"
+            grep -Eo '/status/[0-9]{15,}' "/tmp/$engine.html" | sed 's#^/status/##' | sort -u | head -30 || true
+          done
