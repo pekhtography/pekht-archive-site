@@ -1,0 +1,70 @@
+name: PEKHTOGRAPHY archive collector
+
+on:
+  push:
+    branches:
+      - main-clean
+      - main
+    paths:
+      - ".github/workflows/archive-collector.yml"
+      - "scripts/archive-collect.ts"
+      - "scripts/archive-add.ts"
+      - "package.json"
+  schedule:
+    - cron: "17 3 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: pekhtography-archive-collector
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: "stable"
+
+      - name: Install x-cli
+        run: |
+          go install github.com/tamnd/x-cli/cmd/x@v0.5.0
+          echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
+
+      - name: Set up Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Enable pnpm
+        run: corepack enable
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run incremental collector
+        run: pnpm archive:collect
+
+      - name: Commit archive changes
+        run: |
+          if git diff --quiet; then
+            echo "No archive changes."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add src/content/archive public/images/archive
+          git commit -m "feat: sync new PEKHTOGRAPHY posts"
+          git push
