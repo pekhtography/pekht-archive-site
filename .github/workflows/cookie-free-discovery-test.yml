@@ -1,0 +1,46 @@
+name: PEKHTOGRAPHY cookie-free discovery test
+
+on:
+  push:
+    branches:
+      - main-clean
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set up Go
+        uses: actions/setup-go@v6
+        with:
+          go-version: "stable"
+
+      - name: Install x-cli
+        run: |
+          go install github.com/tamnd/x-cli/cmd/x@v0.5.0
+          echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
+
+      - name: Run guest timeline discovery
+        run: |
+          x timeline PEKHTOGRAPHY --guest -o json -n 5000 > /tmp/guest.json
+          node <<'NODE'
+          const fs = require("fs");
+          const rows = JSON.parse(fs.readFileSync("/tmp/guest.json", "utf8"));
+          const originals = rows.filter((r) => r?.id && r?.conversation_id && r.id === r.conversation_id);
+          const ids = originals.map((r) => r.id);
+          const maxId = ids.reduce((max, id) => !max || BigInt(id) > BigInt(max) ? id : max, "");
+          const checkpoint = "2097378431910772875";
+          const newer = ids.filter((id) => BigInt(id) > BigInt(checkpoint));
+          console.log("Cookie-free Tier 1 guest timeline");
+          console.log("Rows: " + rows.length);
+          console.log("Original posts: " + originals.length);
+          console.log("Max discovered original ID: " + maxId);
+          console.log("Posts newer than current checkpoint: " + newer.length);
+          console.log("Newest 10 IDs:");
+          for (const id of newer.sort((a, b) => BigInt(b) > BigInt(a) ? 1 : -1).slice(0, 10)) {
+            console.log(id);
+          }
+          NODE
