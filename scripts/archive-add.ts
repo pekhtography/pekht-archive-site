@@ -206,7 +206,7 @@ const slug = archiveBody
   .replace(/-+/g, "-")
   .slice(0, 60);
 
-const safeSlug = slug || `x-${postId}`;
+let safeSlug = slug || `x-${postId}`;
 
 const projectRoot = process.cwd();
 
@@ -227,28 +227,34 @@ const contentDir = path.join(
 await fs.mkdir(imageDir, { recursive: true });
 await fs.mkdir(contentDir, { recursive: true });
 
-const imagePath = path.join(
+let imagePath = path.join(
   imageDir,
   `${safeSlug}.jpg`,
 );
 
-const markdownPath = path.join(
+let markdownPath = path.join(
   contentDir,
   `${safeSlug}.md`,
 );
 
-try {
-  await fs.access(markdownPath);
+while (true) {
+  try {
+    const existing = await fs.readFile(markdownPath, "utf8");
+    const existingId = existing.match(/^x_id:\s*"?([0-9]+)"?\s*$/m)?.[1];
 
-  console.error("");
-  console.error(
-    `Archive entry already exists: ${safeSlug}.md`,
-  );
-  console.error("");
+    if (existingId === postId) {
+      console.error("");
+      console.error(`Archive entry already exists: ${safeSlug}.md`);
+      console.error("");
+      process.exit(1);
+    }
 
-  process.exit(1);
-} catch {
-  // File does not exist — continue.
+    safeSlug = `${slug || "x"}-x-${postId}`;
+    imagePath = path.join(imageDir, `${safeSlug}.jpg`);
+    markdownPath = path.join(contentDir, `${safeSlug}.md`);
+  } catch {
+    break;
+  }
 }
 
 console.log("Downloading image...");
