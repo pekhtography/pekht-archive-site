@@ -40,7 +40,8 @@
     "build:serve": "astro build && npx -y pagefind --site dist --serve",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "husky"
+    "prepare": "husky",
+    "archive:collect": "tsx scripts/archive-collect.ts"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.2",
