@@ -11,7 +11,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Query X oEmbed
+      - name: Query X oEmbed (retry)
         run: |
           set -euo pipefail
           post_url='https://x.com/PEKHTography/status/2042907005795565709'
