@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## [v3.18.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.18.0) | 2026-09-29
+
+### Features
+- sync new PEKHTOGRAPHY posts [72b7cf8](https://github.com/pekhtography/pekht-archive-site/commit/72b7cf8)
+- authenticate archive collector [b8b6daf](https://github.com/pekhtography/pekht-archive-site/commit/b8b6daf)
+### Bug Fixes
+- detect new archive files before commit [cd74038](https://github.com/pekhtography/pekht-archive-site/commit/cd74038)
+- format X session import step [a56b925](https://github.com/pekhtography/pekht-archive-site/commit/a56b925)
+- use authenticated Tier 2 timeline collector [f996f0b](https://github.com/pekhtography/pekht-archive-site/commit/f996f0b)
+
 ## [v3.17.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.17.0) | 2026-09-29
 
 ### Features
