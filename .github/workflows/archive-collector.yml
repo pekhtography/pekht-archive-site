@@ -45,6 +45,14 @@ jobs:
           go install github.com/tamnd/x-cli/cmd/x@v0.5.0
           echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
 
+      - name: Import X session
+        env:
+          X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
+          X_CT0: ${{ secrets.X_CT0 }}
+        run: |
+          printf 'Cookie: auth_token=%s; ct0=%s\n'             "$X_AUTH_TOKEN" "$X_CT0"             | x auth import
+          x auth status
+
       - name: Set up Node
         uses: actions/setup-node@v5
         with:
