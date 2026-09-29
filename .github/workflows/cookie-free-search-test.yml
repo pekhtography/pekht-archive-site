@@ -1,6 +1,11 @@
 name: Cookie-free search discovery probe
 
 on:
+  push:
+    branches:
+      - main-clean
+    paths:
+      - ".github/workflows/cookie-free-search-test.yml"
   workflow_dispatch:
 
 permissions:
