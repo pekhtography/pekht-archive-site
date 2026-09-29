@@ -1,0 +1,59 @@
+name: Cookie-free search discovery probe
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe Nitter RSS instances
+        shell: bash
+        run: |
+          set -u
+          CP="2097378431910772875"
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36"
+          bases=(
+            "https://xcancel.com"
+            "https://nitter.poast.org"
+            "https://nitter.unixfox.eu"
+            "https://nitter.fdn.fr"
+          )
+          for base in "${bases[@]}"; do
+            url="$base/PEKHTography/rss"
+            echo "=== $url ==="
+            body="$(curl -sL --max-time 15 -A "$UA" -w '\n__HTTP_CODE:%{http_code}\n' "$url" || true)"
+            code="$(printf '%s\n' "$body" | sed -n 's/^__HTTP_CODE://p' | tail -1)"
+            payload="$(printf '%s\n' "$body" | sed '/^__HTTP_CODE:/d')"
+            echo "HTTP: $code"
+            ids="$(printf '%s' "$payload" | grep -oE 'status/[0-9]{15,}' | sed 's|status/||' | sort -u || true)"
+            echo "Status IDs: $(printf '%s\n' "$ids" | sed '/^$/d' | wc -l)"
+            if [ -n "$ids" ]; then
+              echo "Max ID: $(printf '%s\n' "$ids" | sort -n | tail -1)"
+              echo "IDs > checkpoint: $(printf '%s\n' "$ids" | awk -v cp="$CP" '$1 > cp' | wc -l)"
+              printf '%s\n' "$ids" | sort -n | tail -10
+            fi
+          done
+
+      - name: Probe DuckDuckGo HTML
+        shell: bash
+        run: |
+          set -u
+          CP="2097378431910772875"
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 Chrome/140 Safari/537.36"
+          url='https://html.duckduckgo.com/html/?q=site%3Ax.com%2FPEKHTography%2Fstatus+PEKHTography'
+          echo "=== DuckDuckGo HTML ==="
+          body="$(curl -sL --max-time 20 -A "$UA" -w '\n__HTTP_CODE:%{http_code}\n' "$url" || true)"
+          code="$(printf '%s\n' "$body" | sed -n 's/^__HTTP_CODE://p' | tail -1)"
+          payload="$(printf '%s\n' "$body" | sed '/^__HTTP_CODE:/d')"
+          echo "HTTP: $code"
+          ids="$(printf '%s' "$payload" | grep -oE 'x\.com/PEKHTography/status/[0-9]{15,}' | sed 's|.*/||' | sort -u || true)"
+          echo "Status IDs: $(printf '%s\n' "$ids" | sed '/^$/d' | wc -l)"
+          if [ -n "$ids" ]; then
+            echo "Max ID: $(printf '%s\n' "$ids" | sort -n | tail -1)"
+            echo "IDs > checkpoint: $(printf '%s\n' "$ids" | awk -v cp="$CP" '$1 > cp' | wc -l)"
+            printf '%s\n' "$ids" | sort -n | tail -20
+          fi
