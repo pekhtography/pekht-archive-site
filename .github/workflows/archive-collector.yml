@@ -50,7 +50,7 @@ jobs:
           X_AUTH_TOKEN: ${{ secrets.X_AUTH_TOKEN }}
           X_CT0: ${{ secrets.X_CT0 }}
         run: |
-          printf 'Cookie: auth_token=%s; ct0=%s\n'             "$X_AUTH_TOKEN" "$X_CT0"             | x auth import
+          printf 'Cookie: auth_token=%s; ct0=%s\n' "$X_AUTH_TOKEN" "$X_CT0" | x auth import
           x auth status
 
       - name: Set up Node
