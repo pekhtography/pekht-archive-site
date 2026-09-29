@@ -82,4 +82,4 @@ jobs:
           fi
 
           git commit -m "feat: sync new PEKHTOGRAPHY posts"
-          git push
+          AUREUS_INTERNAL_PUSH=true git push
