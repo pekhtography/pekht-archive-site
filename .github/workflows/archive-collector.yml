@@ -71,14 +71,15 @@ jobs:
 
       - name: Commit archive changes
         run: |
-          if git diff --quiet; then
-            echo "No archive changes."
-            exit 0
-          fi
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add pnpm-lock.yaml src/content/archive public/images/archive
+
+          if git diff --staged --quiet; then
+            echo "No archive changes."
+            exit 0
+          fi
+
           git commit -m "feat: sync new PEKHTOGRAPHY posts"
           git push
