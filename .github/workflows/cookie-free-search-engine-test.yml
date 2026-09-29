@@ -34,8 +34,17 @@ jobs:
               "$url" > "/tmp/$engine.html"
 
             echo "Bytes: $(wc -c < "/tmp/$engine.html")"
-            echo "X status URLs:"
-            grep -Eo 'https?://(x|twitter)\.com/[^"<> ]+/status/[0-9]+' "/tmp/$engine.html" | sort -u | head -30 || true
-            echo "Raw status IDs:"
-            grep -Eo '/status/[0-9]{15,}' "/tmp/$engine.html" | sed 's#^/status/##' | sort -u | head -30 || true
+            echo "Query text hits:"
+            grep -io 'Rain hit\|PEKHTography' "/tmp/$engine.html" | sort | uniq -c | head -20 || true
+            echo "Decoded X status URLs:"
+            python3 - "/tmp/$engine.html" <<'PY'
+import html, re, sys, urllib.parse
+s=open(sys.argv[1],encoding="utf-8",errors="ignore").read()
+s=html.unescape(s)
+for _ in range(2):
+    s=urllib.parse.unquote(s)
+urls=sorted(set(re.findall(r'https?://(?:x|twitter)\.com/[^"<> ]+/status/[0-9]{15,}', s, re.I)))
+for u in urls[:50]:
+    print(u)
+PY
           done
