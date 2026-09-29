@@ -4,7 +4,7 @@ import fs from "node:fs/promises";
 import path from "node:path";
 
 const execFileAsync = promisify(execFile);
-const username = "PEKHTography";
+const username = "PEKHTOGRAPHY";
 const contentDir = path.join(process.cwd(), "src", "content", "archive");
 
 const extractXIds = (markdown: string) =>
@@ -29,16 +29,30 @@ console.log("Archived posts: " + archivedIds.size);
 console.log("Checkpoint: " + checkpoint);
 console.log("");
 
-console.log("Discovering X timeline with x-cli...");
+console.log("Discovering X timeline with x-cli (Tier 2 session)...");
 const { stdout } = await execFileAsync(
   "x",
-  ["timeline", username, "--guest", "-o", "url", "-n", "5000"],
-  { maxBuffer: 10 * 1024 * 1024 },
+  ["timeline", username, "--tier", "2", "--replies", "-o", "json", "-n", "5000"],
+  { maxBuffer: 20 * 1024 * 1024 },
 );
 
-const discovered = [...new Set(stdout.split(/\r?\n/).map((line) => line.trim()).filter((line) =>
-  /^https?:\/\/(?:x\.com|twitter\.com)\/[^/]+\/status\/\d+$/i.test(line),
-))];
+type TimelineRow = {
+  id?: string;
+  conversation_id?: string;
+  url?: string;
+};
+
+const rows = JSON.parse(stdout) as TimelineRow[];
+
+const discovered = [...new Set(
+  rows
+    .filter((row) => row.id && row.conversation_id && row.id === row.conversation_id)
+    .map((row) => row.url?.trim())
+    .filter((url): url is string =>
+      Boolean(url) &&
+      /^https?:\/\/(?:x\.com|twitter\.com)\/[^/]+\/status\/\d+$/i.test(url),
+    ),
+)];
 
 const candidates = discovered
   .map((url) => {
@@ -50,7 +64,8 @@ const candidates = discovered
   )
   .sort((a, b) => BigInt(a.id) < BigInt(b.id) ? -1 : 1);
 
-console.log("Discovered URLs: " + discovered.length);
+console.log("Timeline rows: " + rows.length);
+console.log("Discovered original-post URLs: " + discovered.length);
 console.log("New candidates: " + candidates.length);
 console.log("");
 
@@ -73,7 +88,8 @@ for (const candidate of candidates) {
 }
 
 console.log("Collector finished.");
-console.log("Discovered: " + discovered.length);
+console.log("Timeline rows: " + rows.length);
+console.log("Discovered original-post URLs: " + discovered.length);
 console.log("Already archived / below checkpoint: " + (discovered.length - candidates.length));
 console.log("Candidates: " + candidates.length);
 console.log("Imported: " + imported);
