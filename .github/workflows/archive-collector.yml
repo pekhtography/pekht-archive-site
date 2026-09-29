@@ -1,5 +1,7 @@
 name: PEKHTOGRAPHY archive collector
 
+# First live collector test trigger.
+
 on:
   push:
     branches:
