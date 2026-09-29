@@ -1,0 +1,19 @@
+name: cookie-free indexer resolve test
+
+on:
+  push:
+    branches: [main-clean]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          set -e
+          q=$(python3 -c 'import urllib.parse; print(urllib.parse.quote_plus(""Golden light squeezed between two shut doors""))')
+          curl -L --fail --silent --show-error -A 'Mozilla/5.0' "https://www.google.com/search?q=$q" -o /tmp/a
+          echo "bytes: $(wc -c < /tmp/a)"
+          grep -Eo 'https?://(x|twitter)\.com/[^"<> ]+/status/[0-9]{15,}' /tmp/a | sort -u | head -20 || true
