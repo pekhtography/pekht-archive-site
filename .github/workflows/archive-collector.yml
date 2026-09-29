@@ -12,6 +12,8 @@ on:
       - "scripts/archive-collect.ts"
       - "scripts/archive-add.ts"
       - "package.json"
+      - "pnpm-lock.yaml"
+      - "pnpm-workspace.yaml"
   schedule:
     - cron: "17 3 * * *"
   workflow_dispatch:
