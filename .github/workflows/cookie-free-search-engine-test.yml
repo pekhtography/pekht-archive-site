@@ -19,13 +19,13 @@ jobs:
             echo "===== $engine ====="
             case "$engine" in
               google)
-                url='https://www.google.com/search?q=%22PEKHTography%22+%22x.com%2FPEKHTography%2Fstatus%22'
+                url='https://www.google.com/search?q=site%3Ax.com%2FPEKHTography%2Fstatus+%22Rain+hit%22+PEKHTography'
                 ;;
               bing)
-                url='https://www.bing.com/search?q=%22PEKHTography%22+%22x.com%2FPEKHTography%2Fstatus%22'
+                url='https://www.bing.com/search?q=site%3Ax.com%2FPEKHTography%2Fstatus+%22Rain+hit%22+PEKHTography'
                 ;;
               ddg)
-                url='https://html.duckduckgo.com/html/?q=%22PEKHTography%22+%22x.com%2FPEKHTography%2Fstatus%22'
+                url='https://html.duckduckgo.com/html/?q=site%3Ax.com%2FPEKHTography%2Fstatus+%22Rain+hit%22+PEKHTography'
                 ;;
             esac
 
@@ -35,7 +35,7 @@ jobs:
 
             echo "Bytes: $(wc -c < "/tmp/$engine.html")"
             echo "X status URLs:"
-            grep -Eo 'https?://(x|twitter)\\.com/[^"<> ]+/status/[0-9]+' "/tmp/$engine.html" | sort -u | head -30 || true
+            grep -Eo 'https?://(x|twitter)\.com/[^"<> ]+/status/[0-9]+' "/tmp/$engine.html" | sort -u | head -30 || true
             echo "Raw status IDs:"
             grep -Eo '/status/[0-9]{15,}' "/tmp/$engine.html" | sed 's#^/status/##' | sort -u | head -30 || true
           done
