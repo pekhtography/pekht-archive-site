@@ -1,6 +1,7 @@
 name: PEKHTOGRAPHY archive collector
 
 # First live collector test trigger.
+# Force schedule re-registration check.
 
 on:
   push:
@@ -15,7 +16,7 @@ on:
       - "pnpm-workspace.yaml"
   schedule:
     - cron: "53 8 * * *"
-  workflow_dispatch:
+  workflow_dispatch
 
 concurrency:
   group: pekhtography-archive-collector
