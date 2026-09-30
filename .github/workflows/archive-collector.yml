@@ -16,7 +16,7 @@ on:
       - "pnpm-workspace.yaml"
   schedule:
     - cron: '10 16 * * *'
-  workflow_dispatch
+  workflow_dispatch:
 
 concurrency:
   group: pekhtography-archive-collector
