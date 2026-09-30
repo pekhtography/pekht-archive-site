@@ -32,6 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
         with:
+          ref: main-clean
           fetch-depth: 0
 
       - name: Set up Go
@@ -81,4 +82,4 @@ jobs:
           fi
 
           git commit -m "feat: sync new PEKHTOGRAPHY posts"
-          AUREUS_INTERNAL_PUSH=true git push
+          AUREUS_INTERNAL_PUSH=true git push origin HEAD:main-clean
