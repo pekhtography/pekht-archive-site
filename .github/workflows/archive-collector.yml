@@ -15,7 +15,7 @@ on:
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
   schedule:
-    - cron: '27 22 * * *'
+    - cron: '*/5 * * * *'
   workflow_dispatch:
 
 concurrency:
