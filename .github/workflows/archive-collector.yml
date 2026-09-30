@@ -6,16 +6,14 @@ on:
   push:
     branches:
       - main-clean
-      - main
     paths:
-      - ".github/workflows/archive-collector.yml"
       - "scripts/archive-collect.ts"
       - "scripts/archive-add.ts"
       - "package.json"
       - "pnpm-lock.yaml"
       - "pnpm-workspace.yaml"
   schedule:
-    - cron: "17 3 * * *"
+    - cron: "17 11 * * *"
   workflow_dispatch:
 
 concurrency:
