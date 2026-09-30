@@ -6,7 +6,6 @@ on:
   push:
     branches:
       - main-clean
-      - main
     paths:
       - ".github/workflows/archive-collector.yml"
       - "scripts/archive-collect.ts"
