@@ -42,11 +42,6 @@ jobs:
           go-version: "stable"
 
       - name: Install x-cli
-        uses: actions/setup-go@v6
-        with:
-          go-version: "stable"
-
-      - name: Install x-cli
         run: |
           go install github.com/tamnd/x-cli/cmd/x@v0.5.0
           echo "$(go env GOPATH)/bin" >> "$GITHUB_PATH"
