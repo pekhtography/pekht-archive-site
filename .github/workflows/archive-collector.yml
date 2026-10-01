@@ -24,6 +24,7 @@ concurrency:
 
 permissions:
   contents: write
+  actions: write
 
 jobs:
   collect:
@@ -71,6 +72,7 @@ jobs:
         run: pnpm archive:collect
 
       - name: Commit archive changes
+        id: commit_archive
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -79,8 +81,16 @@ jobs:
 
           if git diff --staged --quiet; then
             echo "No archive changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
 
           git commit -m "feat: sync new PEKHTOGRAPHY posts"
           AUREUS_INTERNAL_PUSH=true git push origin HEAD:main-clean
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Trigger site preview
+        if: steps.commit_archive.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run pekhtography-preview.yml --repo "$GITHUB_REPOSITORY" --ref main-clean
