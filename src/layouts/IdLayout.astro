@@ -11,6 +11,15 @@ const { type, prev, next, ...headProps } = Astro.props as HeadProps & {
     prev: any;
     next: any;
 };
+
+const section =
+    type === "archive"
+        ? "Archive"
+        : type === "portfolio"
+          ? "Portfolio"
+          : type === "blog"
+            ? "Blog"
+            : "PEKHTOGRAPHY";
 ---
 
 <!doctype html>
@@ -20,6 +29,7 @@ const { type, prev, next, ...headProps } = Astro.props as HeadProps & {
         <Header />
         {/* Content */}
         <main class={`max-w-4xl mx-auto ${type === "archive" ? "min-h-0" : ""}`} data-pagefind-body>
+            <span data-pagefind-meta={`section:${section}`} class="sr-only">{section}</span>
             <slot />
         </main>
         <FooterId type={type} prev={prev} next={next} />
