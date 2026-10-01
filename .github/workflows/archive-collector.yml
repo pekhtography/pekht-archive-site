@@ -1,19 +1,8 @@
 name: PEKHTOGRAPHY archive collector
 
-# First live collector test trigger.
-# Force schedule re-registration check.
+# Production collector: main is the single source of truth.
 
 on:
-  push:
-    branches:
-      - main-clean
-    paths:
-      - ".github/workflows/archive-collector.yml"
-      - "scripts/archive-collect.ts"
-      - "scripts/archive-add.ts"
-      - "package.json"
-      - "pnpm-lock.yaml"
-      - "pnpm-workspace.yaml"
   schedule:
     - cron: '27 22 * * *'
   workflow_dispatch:
@@ -34,7 +23,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v5
         with:
-          ref: main-clean
+          ref: main
           fetch-depth: 0
 
       - name: Set up Go
@@ -86,11 +75,11 @@ jobs:
           fi
 
           git commit -m "feat: sync new PEKHTOGRAPHY posts"
-          AUREUS_INTERNAL_PUSH=true git push origin HEAD:main-clean
+          AUREUS_INTERNAL_PUSH=true git push origin HEAD:main
           echo "changed=true" >> "$GITHUB_OUTPUT"
 
       - name: Trigger site preview
         if: steps.commit_archive.outputs.changed == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh workflow run pekhtography-preview.yml --repo "$GITHUB_REPOSITORY" --ref main-clean
+        run: gh workflow run pekhtography-preview.yml --repo "$GITHUB_REPOSITORY" --ref main
