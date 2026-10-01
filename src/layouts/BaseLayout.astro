@@ -12,6 +12,7 @@ const headProps = Astro.props as HeadProps;
 <!doctype html>
 <html lang="en">
     <Head {...headProps} />
+    <pagefind-config bundle-path={sitePath("/pagefind/")} base-url={sitePath("/")} />
     <body class="mx-auto">
         <Header />
         {/* Content */}
@@ -19,7 +20,6 @@ const headProps = Astro.props as HeadProps;
             <slot />
         </main>
         <Footer />
-        <pagefind-config bundle-path={sitePath("/pagefind/")} base-url={sitePath("/")} />
         <pagefind-modal reset-on-close></pagefind-modal>
     </body>
 </html>
