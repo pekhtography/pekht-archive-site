@@ -7,6 +7,13 @@ import "@/styles/typography.css";
 import Head, { type Props as HeadProps } from "@/components/static/Head.astro";
 
 const headProps = Astro.props as HeadProps;
+const section = Astro.url.pathname.startsWith("/archive/")
+    ? "Archive"
+    : Astro.url.pathname.startsWith("/portfolio")
+      ? "Portfolio"
+      : Astro.url.pathname.startsWith("/blog")
+        ? "Blog"
+        : "PEKHTOGRAPHY";
 ---
 
 <!doctype html>
@@ -16,6 +23,7 @@ const headProps = Astro.props as HeadProps;
         <Header />
         {/* Content */}
         <main class="max-w-4xl mx-auto" data-pagefind-body>
+            <span data-pagefind-meta={"section:" + section} class="sr-only">{section}</span>
             <slot />
         </main>
         <Footer />
