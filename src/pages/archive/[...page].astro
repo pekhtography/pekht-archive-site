@@ -19,6 +19,20 @@ const { page } = Astro.props;
 const items = page.data;
 const allItems = sortArchiveItems(await getCollection("archive"));
 const archiveCount = allItems.length;
+const latestArchiveTimestamp = allItems.reduce<string | null>((latest, item) => {
+    const createdAt = item.data.x_created_at;
+
+    if (!createdAt) return latest;
+    return !latest || createdAt > latest ? createdAt : latest;
+}, null);
+const archiveLatestDate = latestArchiveTimestamp
+    ? new Date(latestArchiveTimestamp).toLocaleDateString("en-GB", {
+          day: "numeric",
+          month: "short",
+          year: "numeric",
+          timeZone: "UTC",
+      })
+    : null;
 
 const currentPage = page.currentPage;
 const lastPage = page.lastPage;
@@ -38,7 +52,7 @@ const pageUrl = (pageNumber: number) =>
         <IndexHeader
             url="/"
             heading="Archive"
-            description={`${archiveCount} observations.\nPhotographs and fragments from encounters with the everyday world.`}
+            description={`Photographs and fragments from encounters with the everyday world.\n${archiveCount} observations${archiveLatestDate ? `, gathered through ${archiveLatestDate}` : ""}.`}
             variant="archive"
         />
 
