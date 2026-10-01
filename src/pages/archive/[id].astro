@@ -30,7 +30,6 @@ const next =
 
 const archivePage = Math.floor(currentIndex / ARCHIVE_PAGE_SIZE) + 1;
 const archiveUrl = archivePage === 1 ? "/archive" : `/archive/${archivePage}`;
-const pubDate = item.data.x_created_at ? new Date(item.data.x_created_at) : undefined;
 ---
 
 <IdLayout
@@ -38,7 +37,6 @@ const pubDate = item.data.x_created_at ? new Date(item.data.x_created_at) : unde
     title={item.data.title}
     description={item.body}
     image={item.data.image}
-    pubDate={pubDate}
     prev={prev}
     next={next}
 >
@@ -82,7 +80,7 @@ const pubDate = item.data.x_created_at ? new Date(item.data.x_created_at) : unde
             </div>
 
             {item.data.x_id && (
-                <div class="mt-[clamp(1.5rem,4vw,2rem)] px-[clamp(1.25rem,8%,5rem)] pt-[clamp(1rem,3vw,1.5rem)] text-center">
+                <div class="mt-[clamp(1.5rem,4vw,2rem)] px-[clamp(1.25rem,8vw,5rem)] pt-[clamp(1rem,3vw,1.5rem)] text-center">
                     <div class="border-t border-border pt-[clamp(1rem,3vw,1.5rem)]">
                         <div class="relative group/original">
                             <div
