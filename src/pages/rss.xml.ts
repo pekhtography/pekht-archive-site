@@ -13,7 +13,8 @@ export async function GET(context: { site: URL }) {
       const aDate = new Date(a.data.x_created_at!).getTime();
       const bDate = new Date(b.data.x_created_at!).getTime();
       return bDate - aDate;
-    });
+    })
+    .slice(0, 50);
 
   return rss({
     trailingSlash: false,
