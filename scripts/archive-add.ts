@@ -301,6 +301,7 @@ const xCreatedAt = new Date(timestampMs)
 
 const markdown = `---
 x_id: ${yamlString(postId)}
+x_created_at: ${yamlString(xCreatedAt)}
 title: ${yamlString(title)}
 image: "/images/archive/${safeSlug}.jpg"
 hashtags:
