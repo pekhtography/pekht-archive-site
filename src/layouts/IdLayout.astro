@@ -20,15 +20,6 @@ const section =
           : type === "blog"
             ? "Blog"
             : "PEKHTOGRAPHY";
-
-const pagefindDate = headProps.pubDate
-    ? headProps.pubDate.toLocaleDateString("en-US", {
-          month: "short",
-          day: "numeric",
-          year: "numeric",
-          timeZone: "UTC",
-      })
-    : null;
 ---
 
 <!doctype html>
@@ -39,53 +30,9 @@ const pagefindDate = headProps.pubDate
         {/* Content */}
         <main class={`max-w-4xl mx-auto ${type === "archive" ? "min-h-0" : ""}`} data-pagefind-body>
             <span data-pagefind-meta={`section:${section}`} class="sr-only">{section}</span>
-            {pagefindDate && <span data-pagefind-meta={`date:${pagefindDate}`} class="sr-only">{pagefindDate}</span>}
             <slot />
         </main>
         <FooterId type={type} prev={prev} next={next} />
-        <pagefind-modal reset-on-close>
-            <pagefind-modal-header>
-                <pagefind-input></pagefind-input>
-            </pagefind-modal-header>
-            <pagefind-modal-body>
-                <pagefind-summary></pagefind-summary>
-                <pagefind-results>
-                    <script type="text/pagefind-template">
-                        <li class="pf-result">
-                            <div class="pf-result-card">
-                                <div class="pf-result-content">
-                                    <p class="pf-result-title">
-                                        <a class="pf-result-link" href="{{ meta.url | default(url) | safeUrl }}">{{ meta.title }}</a>
-                                    </p>
-                                    {{#if meta.section}}
-                                    <p class="text-xs text-muted-foreground mt-0.5">
-                                        {{ meta.section }}{{#if meta.date}} · {{ meta.date }}{{/if}}
-                                    </p>
-                                    {{/if}}
-                                    {{#if excerpt}}
-                                    <p class="pf-result-excerpt">{{+ excerpt +}}</p>
-                                    {{/if}}
-                                </div>
-                            </div>
-                            {{#if sub_results}}
-                            <ul class="pf-heading-chips">
-                                {{#each sub_results as sub}}
-                                <li class="pf-heading-chip">
-                                    <a class="pf-heading-link" href="{{ sub.url | safeUrl }}">{{ sub.title }}</a>
-                                    {{#if sub.excerpt}}
-                                    <p class="pf-heading-excerpt">{{+ sub.excerpt +}}</p>
-                                    {{/if}}
-                                </li>
-                                {{/each}}
-                            </ul>
-                            {{/if}}
-                        </li>
-                    </script>
-                </pagefind-results>
-            </pagefind-modal-body>
-            <pagefind-modal-footer>
-                <pagefind-keyboard-hints></pagefind-keyboard-hints>
-            </pagefind-modal-footer>
-        </pagefind-modal>
+        <pagefind-modal reset-on-close></pagefind-modal>
     </body>
 </html>
