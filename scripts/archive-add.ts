@@ -292,6 +292,13 @@ const hashtagYaml = hashtags.length
       .join("\n")
   : "  []";
 
+const timestampMs =
+  Number((BigInt(postId) >> 22n) + 1288834974657n);
+
+const xCreatedAt = new Date(timestampMs)
+  .toISOString()
+  .replace(/\.\d{3}Z$/, "Z");
+
 const markdown = `---
 x_id: ${yamlString(postId)}
 title: ${yamlString(title)}
