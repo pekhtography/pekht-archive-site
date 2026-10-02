@@ -8,7 +8,7 @@ const nlp = winkNLP(model);
 const its = nlp.its;
 const STOP = new Set(["photography", "macro", "photo"]);
 const TOP = 48;
-const LAMBDAS = [0.7, 0.5, 0.3];
+const LAMBDAS = [1.0, 0.9, 0.8, 0.7, 0.5, 0.3];
 
 type Post = { id: string; file: string; nouns: string[]; score: number };
 
