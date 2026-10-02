@@ -2,6 +2,9 @@ name: explore-preview-test (experimental, do not merge to main)
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - explore-preview-test:
 
 permissions:
   contents: read
@@ -31,3 +34,6 @@ jobs:
 
       - name: Run Explore preview
         run: pnpm exec tsx scripts/explore-preview.ts
+
+      - name: Run zero-noun audit
+        run: pnpm exec tsx scripts/explore-zero-noun-audit.ts
