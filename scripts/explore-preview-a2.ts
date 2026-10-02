@@ -16,8 +16,14 @@ function parse(content: string) {
   return { id, body, tags };
 }
 
+function normalizeHashtags(text: string): string {
+  return text.replace(/#([A-Za-z0-9_]+)/g, (_, tag: string) =>
+    tag.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
+  );
+}
+
 function nounLemmas(text: string): string[] {
-  const doc = nlp.readDoc(text);
+  const doc = nlp.readDoc(normalizeHashtags(text));
   const tokens = doc.tokens();
   const values = tokens.out(its.value);
   const types = tokens.out(its.type);
@@ -27,7 +33,7 @@ function nounLemmas(text: string): string[] {
   return [...new Set(
     values
       .map((value, i) => ({ value, type: types[i], lemma: lemmas[i], pos: pos[i] }))
-      .filter(row => row.type === "word" && row.pos === "NOUN")
+      .filter(row => row.type === "word" && (row.pos === "NOUN" || row.pos === "PROPN"))
       .map(row => row.lemma.toLocaleLowerCase())
       .filter(Boolean)
   )];
