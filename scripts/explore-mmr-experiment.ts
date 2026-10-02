@@ -92,9 +92,9 @@ function jaccard(a: Post,b: Post) {
   for(const x of a.nouns) if(bs.has(x)) hit++;
   return hit/(new Set([...a.nouns,...b.nouns]).size)||0;
 }
-function mmr(sim:(a:Post,b:Post)=>number, lambda:number, rel: Map<string, number>) {
+function mmr(sim:(a:Post,b:Post)=>number, lambda:number, rel: Map<string, number>, limit=TOP) {
   const out:Post[]=[]; const left=new Set(a2);
-  while(out.length<TOP && left.size) {
+  while(out.length<limit && left.size) {
     let best:Post|undefined, bv=-Infinity;
     for(const p of left) {
       const red=out.length ? Math.max(...out.map(q=>sim(p,q))) : 0;
@@ -108,6 +108,31 @@ function mmr(sim:(a:Post,b:Post)=>number, lambda:number, rel: Map<string, number
 function reportFull(name:string, r:Post[]) {
   console.log("\n=== FULL TOP 48 " + name + " ===");
   for(const [i,p] of r.entries()) console.log(String(i+1).padStart(2,"0"),"A2#"+String(a2.findIndex(x=>x.id===p.id)+1).padStart(4,"0"),p.score.toFixed(3),p.id,"=>",p.nouns.join(", "));
+}
+
+function reportBlocks(name:string, r:Post[], blockSize=TOP, blocks=4) {
+  console.log("\n=== BLOCKS " + name + " ===");
+  for (let b=0; b<blocks; b++) {
+    const block=r.slice(b*blockSize,(b+1)*blockSize);
+    if (!block.length) break;
+    const concepts=new Set(block.flatMap(p=>p.nouns)); let pair=0,n=0;
+    for(let i=0;i<block.length;i++) for(let j=i+1;j<block.length;j++){pair+=jaccard(block[i],block[j]);n++;}
+    const pos=block.map(p=>a2.findIndex(x=>x.id===p.id)+1);
+    console.log(
+      "block", b+1,
+      `(\${b*blockSize+1}-\${(b+1)*blockSize})`,
+      "unique concepts:",concepts.size,
+      "mean Jaccard:",(pair/n).toFixed(4),
+      "A2 top48:",pos.filter(x=>x<=TOP).length+"/"+block.length,
+      "mean A2 position:",(pos.reduce((a,x)=>a+x,0)/pos.length).toFixed(1),
+      "A2 range:",Math.min(...pos)+"-"+Math.max(...pos)
+    );
+    for(const [i,p] of block.slice(0,5).entries()) console.log(
+      String(i+1).padStart(2,"0"),
+      "A2#"+String(a2.findIndex(x=>x.id===p.id)+1).padStart(4,"0"),
+      p.score.toFixed(3),p.id,"=>",p.nouns.join(", ")
+    );
+  }
 }
 
 function report(name:string, r:Post[]) {
@@ -154,3 +179,6 @@ report("Rank MMR power8 lambda=0.85", power8Top48_85);
 report("Rank MMR inverse-sqrt lambda=0.85", inverseSqrtTop48_85);
 reportFull("Rank MMR power8 lambda=0.85", power8Top48_85);
 reportFull("Rank MMR inverse-sqrt lambda=0.85", inverseSqrtTop48_85);
+
+const power8Top192_90 = mmr((a,b)=>coverage(a,b,rankW),0.9,normalizedRelevance("power8"),192);
+reportBlocks("Rank MMR power8 lambda=0.9", power8Top192_90, TOP, 4);
