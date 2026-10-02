@@ -6,7 +6,6 @@ import model from "wink-eng-lite-web-model";
 const ARCHIVE_DIR = join(process.cwd(), "src/content/archive");
 const nlp = winkNLP(model);
 const its = nlp.its;
-const lemmaMerges = JSON.parse(await readFile(join(process.cwd(), "scripts/explore-lemma-merges.json"), "utf8")) as Record<string, string>;
 const technicalStopWords = new Set(["photography", "macro", "photo"]);
 
 function parse(content: string) {
@@ -24,6 +23,20 @@ function normalizeHashtags(text: string): string {
   );
 }
 
+function normalizeRegularPlural(lemma: string): string {
+  if (
+    lemma.length > 4 &&
+    lemma.endsWith("s") &&
+    !lemma.endsWith("ss") &&
+    !lemma.endsWith("us") &&
+    !lemma.endsWith("is") &&
+    !lemma.endsWith("ves")
+  ) {
+    return lemma.slice(0, -1);
+  }
+  return lemma;
+}
+
 function nounLemmas(text: string): string[] {
   const doc = nlp.readDoc(normalizeHashtags(text));
   const tokens = doc.tokens();
@@ -37,7 +50,7 @@ function nounLemmas(text: string): string[] {
       .map((value, i) => ({ value, type: types[i], lemma: lemmas[i], pos: pos[i] }))
       .filter(row => row.type === "word" && (row.pos === "NOUN" || row.pos === "PROPN"))
       .map(row => row.lemma.toLocaleLowerCase())
-      .map(lemma => lemmaMerges[lemma] ?? lemma)
+      .map(lemma => normalizeRegularPlural(lemma))
       .filter(lemma => !technicalStopWords.has(lemma))
       .filter(Boolean)
   )];
