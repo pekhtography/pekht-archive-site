@@ -146,5 +146,11 @@ report("Jaccard MMR minmax lambda=0.5",mmr(jaccard,0.5,normalizedRelevance("minm
 
 const power8Top48 = mmr((a,b)=>coverage(a,b,rankW),0.9,normalizedRelevance("power8"));
 const inverseSqrtTop48 = mmr((a,b)=>coverage(a,b,rankW),0.9,normalizedRelevance("inverse-sqrt"));
+const power8Top48_85 = mmr((a,b)=>coverage(a,b,rankW),0.85,normalizedRelevance("power8"));
+const inverseSqrtTop48_85 = mmr((a,b)=>coverage(a,b,rankW),0.85,normalizedRelevance("inverse-sqrt"));
 reportFull("Rank MMR power8 lambda=0.9", power8Top48);
 reportFull("Rank MMR inverse-sqrt lambda=0.9", inverseSqrtTop48);
+report("Rank MMR power8 lambda=0.85", power8Top48_85);
+report("Rank MMR inverse-sqrt lambda=0.85", inverseSqrtTop48_85);
+reportFull("Rank MMR power8 lambda=0.85", power8Top48_85);
+reportFull("Rank MMR inverse-sqrt lambda=0.85", inverseSqrtTop48_85);
