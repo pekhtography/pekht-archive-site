@@ -120,7 +120,7 @@ function reportBlocks(name:string, r:Post[], blockSize=TOP, blocks=4) {
     const pos=block.map(p=>a2.findIndex(x=>x.id===p.id)+1);
     console.log(
       "block", b+1,
-      `(\${b*blockSize+1}-\${(b+1)*blockSize})`,
+      `(${b*blockSize+1}-${(b+1)*blockSize})`,
       "unique concepts:",concepts.size,
       "mean Jaccard:",(pair/n).toFixed(4),
       "A2 top48:",pos.filter(x=>x<=TOP).length+"/"+block.length,
@@ -182,3 +182,5 @@ reportFull("Rank MMR inverse-sqrt lambda=0.85", inverseSqrtTop48_85);
 
 const power8Top192_90 = mmr((a,b)=>coverage(a,b,rankW),0.9,normalizedRelevance("power8"),192);
 reportBlocks("Rank MMR power8 lambda=0.9", power8Top192_90, TOP, 4);
+const inverseSqrtTop192_90 = mmr((a,b)=>coverage(a,b,rankW),0.9,normalizedRelevance("inverse-sqrt"),192);
+reportBlocks("Rank MMR inverse-sqrt lambda=0.9", inverseSqrtTop192_90, TOP, 4);
