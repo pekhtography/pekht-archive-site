@@ -6,6 +6,19 @@ import model from "wink-eng-lite-web-model";
 const ARCHIVE_DIR = join(process.cwd(), "src/content/archive");
 const nlp = winkNLP(model);
 const its = nlp.its;
+const lemmaMerges: Record<string, string> = {
+  flowers: "flower",
+  petals: "petal",
+  trees: "tree",
+  blooms: "bloom",
+  blossoms: "blossom",
+  colors: "color",
+  lights: "light",
+  clouds: "cloud",
+  roses: "rose",
+  tulips: "tulip",
+};
+const technicalStopWords = new Set(["photography", "macro", "photo"]);
 
 function parse(content: string) {
   const m = content.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
@@ -35,6 +48,8 @@ function nounLemmas(text: string): string[] {
       .map((value, i) => ({ value, type: types[i], lemma: lemmas[i], pos: pos[i] }))
       .filter(row => row.type === "word" && (row.pos === "NOUN" || row.pos === "PROPN"))
       .map(row => row.lemma.toLocaleLowerCase())
+      .map(lemma => lemmaMerges[lemma] ?? lemma)
+      .filter(lemma => !technicalStopWords.has(lemma))
       .filter(Boolean)
   )];
 }
