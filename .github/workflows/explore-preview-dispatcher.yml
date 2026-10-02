@@ -2,9 +2,6 @@ name: explore-preview-dispatcher (temporary)
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - main
 
 permissions:
   contents: read
@@ -31,9 +28,6 @@ jobs:
 
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
-
-      - name: Run lemma merge audit
-        run: pnpm exec tsx scripts/explore-lemma-merge-audit.ts
 
       - name: Check POS tagging in context
         run: pnpm exec tsx scripts/explore-nlp-context-test.ts
