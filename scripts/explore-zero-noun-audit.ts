@@ -25,7 +25,9 @@ const wordLenFreq = new Map<number, number>();
 for (const file of files) {
   const raw = await readFile(join(ARCHIVE_DIR, file), "utf8");
   const { id, body, tags } = parse(raw);
-  const text = body + " " + tags.map(x => "#" + x).join(" ");
+  const text = (body + " " + tags.map(x => "#" + x).join(" ")).replace(/#([A-Za-z0-9_]+)/g, (_, tag: string) =>
+    tag.replace(/([a-z])([A-Z])/g, "$1 $2").replace(/([A-Z]+)([A-Z][a-z])/g, "$1 $2")
+  );
   const doc = nlp.readDoc(text);
   const tokens = doc.tokens();
   const values = tokens.out(its.value);
@@ -35,7 +37,7 @@ for (const file of files) {
   const rows = values.map((value, i) => ({ value, type: types[i], pos: pos[i], lemma: lemmas[i] }))
     .filter(x => x.type === "word");
 
-  const nounCount = rows.filter(x => x.pos === "NOUN").length;
+  const nounCount = rows.filter(x => x.pos === "NOUN" || x.pos === "PROPN").length;
   if (nounCount === 0) {
     const counts: Record<string, number> = {};
     for (const r of rows) {
