@@ -2,9 +2,6 @@ name: explore-preview-dispatcher (temporary)
 
 on:
   workflow_dispatch:
-  push:
-    paths:
-      - ".github/workflows/explore-preview-dispatcher.yml"
 
 permissions:
   contents: read
@@ -32,8 +29,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Run full Explore A1
-        run: pnpm exec tsx scripts/explore-preview.ts
+      - name: Check POS tagging in context
+        run: pnpm exec tsx scripts/explore-nlp-context-test.ts
 
       - name: Run full Explore A2
         run: pnpm exec tsx scripts/explore-preview-a2.ts
