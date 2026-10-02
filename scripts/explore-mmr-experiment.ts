@@ -94,6 +94,12 @@ console.log("Algorithm: A3 MMR experiment");
 console.log("Archive posts:",posts.length,"Noun vocabulary:",ranked.length);
 report("A2 baseline",a2.slice(0,TOP));
 
+console.log("\n=== Relevance scale audit ===");
+for (const n of [1, 10, 48, 100, 300, 500, 1000, 1500]) {
+  const p = a2[n - 1];
+  console.log("A2#" + String(n).padStart(4, "0"), "score=" + p.score.toFixed(3), "rel=" + (rel.get(p.id) ?? 0).toFixed(6), "concepts=" + p.nouns.length, p.id);
+}
+
 const rankW=new Map(ranked.map(([x],i)=>[x,1/(i+1)]));
 for(const l of LAMBDAS) report("MMR rank-weighted lambda="+l,mmr((a,b)=>coverage(a,b,rankW),l));
 for(const l of LAMBDAS) report("MMR IDF-weighted lambda="+l,mmr((a,b)=>coverage(a,b,idf),l));
