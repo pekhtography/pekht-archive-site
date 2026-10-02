@@ -6,18 +6,7 @@ import model from "wink-eng-lite-web-model";
 const ARCHIVE_DIR = join(process.cwd(), "src/content/archive");
 const nlp = winkNLP(model);
 const its = nlp.its;
-const lemmaMerges: Record<string, string> = {
-  flowers: "flower",
-  petals: "petal",
-  trees: "tree",
-  blooms: "bloom",
-  blossoms: "blossom",
-  colors: "color",
-  lights: "light",
-  clouds: "cloud",
-  roses: "rose",
-  tulips: "tulip",
-};
+const lemmaMerges = JSON.parse(await readFile(join(process.cwd(), "scripts/explore-lemma-merges.json"), "utf8")) as Record<string, string>;
 const technicalStopWords = new Set(["photography", "macro", "photo"]);
 
 function parse(content: string) {
