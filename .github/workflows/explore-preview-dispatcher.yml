@@ -29,5 +29,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Run Explore NLP test
-        run: pnpm exec tsx scripts/explore-nlp-test.ts
+      - name: Run Explore NLP context test
+        run: pnpm exec tsx scripts/explore-nlp-context-test.ts
