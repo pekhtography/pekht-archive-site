@@ -19,9 +19,18 @@ function parse(content: string) {
 
 function inspect(text: string) {
   const doc = nlp.readDoc(text);
-  return doc.tokens()
-    .out(its.type, its.lemma, its.pos, its.value)
-    .filter((row: [string, string, string, string]) => row[0] === "word");
+  const tokens = doc.tokens();
+  const values = tokens.out(its.value);
+  const types = tokens.out(its.type);
+  const lemmas = tokens.out(its.lemma);
+  const pos = tokens.out(its.pos);
+
+  return values.map((value, i) => ({
+    value,
+    type: types[i],
+    lemma: lemmas[i],
+    pos: pos[i],
+  }));
 }
 
 const files = (await readdir(ARCHIVE_DIR)).filter(x => x.endsWith(".md")).sort();
@@ -36,8 +45,8 @@ for (const file of sampleFiles) {
   const rows = inspect(text);
   const nouns = [...new Set(
     rows
-      .filter(([, , pos]) => pos === "NN" || pos === "NNS" || pos === "NNP" || pos === "NNPS")
-      .map(([, lemma]) => lemma.toLocaleLowerCase())
+      .filter(row => row.type === "word" && row.pos === "NOUN")
+      .map(row => row.lemma.toLocaleLowerCase())
       .filter(Boolean)
   )];
 
@@ -64,5 +73,5 @@ for (const [i, item] of examples.slice(0, 20).entries()) {
 console.log("\nTarget checks:");
 for (const word of ["like", "one", "every", "while", "still", "flower", "flowers", "tree", "trees", "light", "love"]) {
   const rows = inspect(word);
-  console.log(word, "=>", rows.map(([, lemma, pos]) => `${lemma}/${pos}`).join(", "));
+  console.log(word, "=>", rows.map(row => `${row.lemma}/${row.pos}`).join(", "));
 }
