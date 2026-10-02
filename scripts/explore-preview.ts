@@ -38,7 +38,9 @@ const scored = posts.map(p => ({
 
 console.log("Archive posts:", posts.length);
 console.log("Vocabulary size:", ranked.length);
-console.log("Top words:");
-for (const [word, n] of ranked.slice(0, 30)) console.log(word, n);
+console.log("Top 100 words:");
+for (const [i, [word, n]] of ranked.slice(0, 100).entries()) {
+  console.log(String(i + 1).padStart(3, "0"), word, n);
+}
 console.log("\nTop 48 Explore results:");
 for (const [i, p] of scored.slice(0, 48).entries()) console.log(String(i+1).padStart(2,"0"), p.score.toFixed(3), p.id, p.file);
