@@ -1,0 +1,35 @@
+name: Explore A1 A2 comparison (temporary)
+
+on:
+  push:
+    branches:
+      - explore-compare-temp
+
+jobs:
+  compare:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: explore-compare-temp
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run A1
+        run: pnpm exec tsx scripts/explore-preview.ts
+
+      - name: Run A2
+        run: pnpm exec tsx scripts/explore-preview-a2.ts
