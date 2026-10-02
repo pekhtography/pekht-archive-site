@@ -32,3 +32,5 @@ jobs:
       - name: Run Explore preview
         run: pnpm exec tsx scripts/explore-preview.ts
 
+      - name: Run MMR experiment
+        run: pnpm exec tsx scripts/explore-mmr-experiment.ts
