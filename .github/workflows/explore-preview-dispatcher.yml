@@ -29,5 +29,8 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
-      - name: Run Explore NLP context test
+      - name: Check POS tagging in context
         run: pnpm exec tsx scripts/explore-nlp-context-test.ts
+
+      - name: Run full Explore A2
+        run: pnpm exec tsx scripts/explore-preview-a2.ts
