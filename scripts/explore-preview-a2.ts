@@ -23,20 +23,6 @@ function normalizeHashtags(text: string): string {
   );
 }
 
-function normalizeRegularPlural(lemma: string): string {
-  if (
-    lemma.length > 4 &&
-    lemma.endsWith("s") &&
-    !lemma.endsWith("ss") &&
-    !lemma.endsWith("us") &&
-    !lemma.endsWith("is") &&
-    !lemma.endsWith("ves")
-  ) {
-    return lemma.slice(0, -1);
-  }
-  return lemma;
-}
-
 function nounLemmas(text: string): string[] {
   const doc = nlp.readDoc(normalizeHashtags(text));
   const tokens = doc.tokens();
@@ -49,8 +35,7 @@ function nounLemmas(text: string): string[] {
     values
       .map((value, i) => ({ value, type: types[i], lemma: lemmas[i], pos: pos[i] }))
       .filter(row => row.type === "word" && (row.pos === "NOUN" || row.pos === "PROPN"))
-      .map(row => row.lemma.toLocaleLowerCase())
-      .map(lemma => normalizeRegularPlural(lemma))
+      .map(row => (row.pos === "PROPN" ? row.value : row.lemma).toLocaleLowerCase())
       .filter(lemma => !technicalStopWords.has(lemma))
       .filter(Boolean)
   )];
@@ -58,14 +43,33 @@ function nounLemmas(text: string): string[] {
 
 const files = (await readdir(ARCHIVE_DIR)).filter(x => x.endsWith(".md")).sort();
 const posts: Array<{ id: string; file: string; nouns: string[] }> = [];
-const df = new Map<string, number>();
 
 for (const file of files) {
   const { id, body, tags } = parse(await readFile(join(ARCHIVE_DIR, file), "utf8"));
-  const nouns = nounLemmas(body + " " + tags.map(x => "#" + x).join(" "));
+  posts.push({
+    id,
+    file,
+    nouns: nounLemmas(body + " " + tags.map(x => "#" + x).join(" ")),
+  });
+}
 
-  for (const noun of nouns) df.set(noun, (df.get(noun) ?? 0) + 1);
-  posts.push({ id, file, nouns });
+const rawNounVocabulary = new Set(posts.flatMap(post => post.nouns));
+
+function mergeWithObservedSingular(lemma: string): string {
+  if (lemma.length > 1 && lemma.endsWith("s")) {
+    const singular = lemma.slice(0, -1);
+    if (rawNounVocabulary.has(singular)) return singular;
+  }
+  return lemma;
+}
+
+for (const post of posts) {
+  post.nouns = [...new Set(post.nouns.map(mergeWithObservedSingular))];
+}
+
+const df = new Map<string, number>();
+for (const post of posts) {
+  for (const noun of post.nouns) df.set(noun, (df.get(noun) ?? 0) + 1);
 }
 
 const ranked = [...df.entries()]
