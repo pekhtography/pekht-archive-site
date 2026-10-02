@@ -55,7 +55,31 @@ for (const p of posts) p.score = p.nouns.length ? p.nouns.reduce((s,x) => s + (r
 const a2 = [...posts].sort((a,b) => a.score-b.score || a.id.localeCompare(b.id));
 const finite = a2.filter(p => Number.isFinite(p.score));
 const lo = finite[0].score, hi = finite.at(-1)!.score;
-const rel = new Map(a2.map(p => [p.id, Number.isFinite(p.score) ? (hi-p.score)/(hi-lo || 1) : 0]));
+function normalizedRelevance(mode: string) {
+  const out = new Map<string, number>();
+  for (const p of a2) {
+    if (!Number.isFinite(p.score)) {
+      out.set(p.id, 0);
+      continue;
+    }
+    if (mode === "minmax") {
+      out.set(p.id, (hi - p.score) / (hi - lo || 1));
+    } else if (mode === "power4") {
+      out.set(p.id, Math.pow((hi - p.score) / (hi - lo || 1), 4));
+    } else if (mode === "power8") {
+      out.set(p.id, Math.pow((hi - p.score) / (hi - lo || 1), 8));
+    } else if (mode === "inverse-sqrt") {
+      const x = 1 / Math.sqrt(p.score);
+      const xmin = 1 / Math.sqrt(hi);
+      const xmax = 1 / Math.sqrt(lo);
+      out.set(p.id, (x - xmin) / (xmax - xmin || 1));
+    } else {
+      throw new Error("Unknown relevance mode: " + mode);
+    }
+  }
+  return out;
+}
+const relevanceModes = ["minmax", "power4", "power8", "inverse-sqrt"];
 
 function coverage(a: Post, b: Post, w: Map<string,number>) {
   const bs = new Set(b.nouns);
@@ -68,7 +92,7 @@ function jaccard(a: Post,b: Post) {
   for(const x of a.nouns) if(bs.has(x)) hit++;
   return hit/(new Set([...a.nouns,...b.nouns]).size)||0;
 }
-function mmr(sim:(a:Post,b:Post)=>number, lambda:number) {
+function mmr(sim:(a:Post,b:Post)=>number, lambda:number, rel: Map<string, number>) {
   const out:Post[]=[]; const left=new Set(a2);
   while(out.length<TOP && left.size) {
     let best:Post|undefined, bv=-Infinity;
@@ -94,13 +118,23 @@ console.log("Algorithm: A3 MMR experiment");
 console.log("Archive posts:",posts.length,"Noun vocabulary:",ranked.length);
 report("A2 baseline",a2.slice(0,TOP));
 
-console.log("\n=== Relevance scale audit ===");
-for (const n of [1, 10, 48, 100, 300, 500, 1000, 1500]) {
-  const p = a2[n - 1];
-  console.log("A2#" + String(n).padStart(4, "0"), "score=" + p.score.toFixed(3), "rel=" + (rel.get(p.id) ?? 0).toFixed(6), "concepts=" + p.nouns.length, p.id);
+console.log("\n=== Relevance transform audit ===");
+for (const mode of relevanceModes) {
+  const r = normalizedRelevance(mode);
+  console.log(mode, [1, 10, 48, 100, 300, 500, 1000, 1500].map(n => (r.get(a2[n - 1].id) ?? 0).toFixed(6)).join(" "));
 }
 
 const rankW=new Map(ranked.map(([x],i)=>[x,1/(i+1)]));
-for(const l of LAMBDAS) report("MMR rank-weighted lambda="+l,mmr((a,b)=>coverage(a,b,rankW),l));
-for(const l of LAMBDAS) report("MMR IDF-weighted lambda="+l,mmr((a,b)=>coverage(a,b,idf),l));
-report("MMR Jaccard lambda=0.5",mmr(jaccard,0.5));
+const idfW=new Map(ranked.map(([x,n])=>[x,Math.log((posts.length+1)/(n+1))+1]));
+
+for (const mode of relevanceModes) {
+  const r = normalizedRelevance(mode);
+  for (const l of [0.9, 0.8, 0.7]) {
+    report("Rank MMR " + mode + " lambda=" + l, mmr((a,b)=>coverage(a,b,rankW),l,r));
+  }
+}
+for (const l of [0.9, 0.8, 0.7]) {
+  const r = normalizedRelevance("minmax");
+  report("IDF MMR minmax lambda="+l,mmr((a,b)=>coverage(a,b,idfW),l,r));
+}
+report("Jaccard MMR minmax lambda=0.5",mmr(jaccard,0.5,normalizedRelevance("minmax")));
