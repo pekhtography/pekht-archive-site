@@ -105,6 +105,11 @@ function mmr(sim:(a:Post,b:Post)=>number, lambda:number, rel: Map<string, number
   }
   return out;
 }
+function reportFull(name:string, r:Post[]) {
+  console.log("\n=== FULL TOP 48 " + name + " ===");
+  for(const [i,p] of r.entries()) console.log(String(i+1).padStart(2,"0"),"A2#"+String(a2.findIndex(x=>x.id===p.id)+1).padStart(4,"0"),p.score.toFixed(3),p.id,"=>",p.nouns.join(", "));
+}
+
 function report(name:string, r:Post[]) {
   const concepts=new Set(r.flatMap(p=>p.nouns)); let pair=0,n=0;
   for(let i=0;i<r.length;i++) for(let j=i+1;j<r.length;j++){pair+=jaccard(r[i],r[j]);n++;}
@@ -138,3 +143,8 @@ for (const l of [0.9, 0.8, 0.7]) {
   report("IDF MMR minmax lambda="+l,mmr((a,b)=>coverage(a,b,idfW),l,r));
 }
 report("Jaccard MMR minmax lambda=0.5",mmr(jaccard,0.5,normalizedRelevance("minmax")));
+
+const power8Top48 = mmr((a,b)=>coverage(a,b,rankW),0.9,normalizedRelevance("power8"));
+const inverseSqrtTop48 = mmr((a,b)=>coverage(a,b,rankW),0.9,normalizedRelevance("inverse-sqrt"));
+reportFull("Rank MMR power8 lambda=0.9", power8Top48);
+reportFull("Rank MMR inverse-sqrt lambda=0.9", inverseSqrtTop48);
