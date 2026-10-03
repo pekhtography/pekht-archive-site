@@ -59,28 +59,8 @@ const pageUrl = (pageNumber: number) =>
             heading="Archive — Explore"
             description={`Photographs and fragments from encounters with the everyday world.\n${archiveCount} observations${archiveLatestDate ? `, gathered through ${archiveLatestDate}` : ""}.`}
             variant="archive"
-            modeDescription="From the everyday to the once noticed"
+            archiveMode="explore"
         />
-
-<nav class="relative z-10 -mt-[18px] flex justify-center" aria-label="Archive mode">
-            <div class="flex items-center gap-3 bg-background px-3">
-                <a
-                    href={sitePath("/archive/explore")}
-                    aria-current="page"
-                    
-                    class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] bg-secondary text-secondary-foreground px-3 text-sm transition-colors"
-                >
-                    Explore
-                </a>
-                <a
-                    href={sitePath("/archive")}
-                    
-                    class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground px-3 text-sm transition-colors"
-                >
-                    A–Z
-                </a>
-            </div>
-        </nav>
 
         <div id="archive-grid" class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
             {
