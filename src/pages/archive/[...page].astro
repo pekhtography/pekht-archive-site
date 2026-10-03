@@ -44,20 +44,20 @@ const pageUrl = (pageNumber: number) =>
 ---
 
 <IndexLayout
-    title="Archive - PEKHTOGRAPHY"
+    title="Archive — from A to Z - PEKHTOGRAPHY"
     description="A visual archive of photographs, fragments, light, color, and moments."
     image="/og/default.png"
 >
     <div transition:animate="fade">
         <IndexHeader
             url="/"
-            heading="Archive"
+            heading="Archive — from A to Z"
             description={`Photographs and fragments from encounters with the everyday world.\n${archiveCount} observations${archiveLatestDate ? `, gathered through ${archiveLatestDate}` : ""}.`}
             variant="archive"
         />
 
 <nav class="mt-6 flex justify-center" aria-label="Archive mode">
-            <div class="relative flex items-center gap-2">
+            <div class="relative flex items-center gap-3">
                 <div class="group relative">
                     <a
                         href={sitePath("/archive/explore")}
@@ -66,7 +66,7 @@ const pageUrl = (pageNumber: number) =>
                         Explore
                     </a>
                     <span class="pointer-events-none absolute right-[calc(100%+0.75rem)] top-1/2 w-max -translate-y-1/2 text-right text-sm text-muted-foreground opacity-0 -translate-x-1 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100">
-                        Explore relations
+                        From the everyday to the once noticed.
                     </span>
                 </div>
 
@@ -79,7 +79,7 @@ const pageUrl = (pageNumber: number) =>
                         A–Z
                     </a>
                     <span class="pointer-events-none absolute left-[calc(100%+0.75rem)] top-1/2 w-max -translate-y-1/2 text-left text-sm text-muted-foreground opacity-0 translate-x-1 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100">
-                        Alphabetical index
+                        A passage through a range of things.
                     </span>
                 </div>
             </div>
