@@ -9,28 +9,22 @@ import BackButton from "@/components/static/BackButton.astro";
 export async function getStaticPaths() {
     const items = sortExploreItems(await getCollection("archive"));
 
-    return items.map((item) => ({
+    return items.map((item, index) => ({
         params: { id: item.id },
-        props: { item },
+        props: {
+            item,
+            prev: index > 0 ? items[index - 1] : null,
+            next: index < items.length - 1 ? items[index + 1] : null,
+            archiveUrl:
+                Math.floor(index / ARCHIVE_PAGE_SIZE) + 1 === 1
+                    ? "/archive/explore"
+                    : `/archive/explore/${Math.floor(index / ARCHIVE_PAGE_SIZE) + 1}`,
+        },
     }));
 }
 
-const { item } = Astro.props;
+const { item, prev, next, archiveUrl } = Astro.props;
 const { Content } = await render(item);
-
-const allItems = sortExploreItems(await getCollection("archive"));
-const currentIndex = allItems.findIndex((i) => i.id === item.id);
-
-const prev =
-    currentIndex > 0 ? allItems[currentIndex - 1] : null;
-
-const next =
-    currentIndex < allItems.length - 1
-        ? allItems[currentIndex + 1]
-        : null;
-
-const archivePage = Math.floor(currentIndex / ARCHIVE_PAGE_SIZE) + 1;
-const archiveUrl = archivePage === 1 ? "/archive/explore" : `/archive/explore/${archivePage}`;
 ---
 
 <IdLayout
