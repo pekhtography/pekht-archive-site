@@ -6,7 +6,7 @@ const its = nlp.its;
 const STOP = new Set(["photography", "macro", "photo"]);
 const LAMBDA = 0.9;
 
-type ArchiveItem = { id: string; body: string };
+type ArchiveItem = { id: string; body: string; data?: { tags?: string[] } };
 type ScoredItem<T> = {
   item: T;
   nouns: string[];
@@ -92,7 +92,7 @@ function coverage<T>(
 export function sortExploreItems<T extends ArchiveItem>(items: T[]): T[] {
   const posts: ScoredItem<T>[] = items.map((item) => ({
     item,
-    nouns: nouns(item.body),
+    nouns: nouns(`${item.body} ${(item.data?.tags ?? []).map((tag) => `#${tag}`).join(" ")}`),
     score: Infinity,
   }));
 
