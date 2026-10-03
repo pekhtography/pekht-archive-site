@@ -2,12 +2,12 @@
 import site_config from "@/site-config.json";
 import IdNav from "./IdNav.astro";
 
-const { type, prev, next } = Astro.props;
+const { type, prev, next, archiveMode } = Astro.props;
 ---
 
 <footer class="mx-auto font-mono antialiased bg-background max-w-4xl text-foreground select-none sticky bottom-0 z-0">
     <div class="border border-border p-6 -mt-px">
-        <IdNav type={type} prev={prev} next={next} />
+        <IdNav type={type} prev={prev} next={next} archiveMode={archiveMode} />
     </div>
     <div class="flex items-center justify-between px-3 py-2">
         <div class="flex items-center gap-4">
