@@ -120,15 +120,14 @@ function mmr(relevance: Map<string, number>) {
   const out: Post[] = [];
   const left = new Set(a2);
   const weights = new Map(ranked.map(([x], i) => [x, 1 / (i + 1)]));
+  const maxRedundancy = new Map<string, number>();
 
   while (left.size) {
     let best: Post | undefined;
     let bestValue = -Infinity;
 
     for (const p of left) {
-      const redundancy = out.length
-        ? Math.max(...out.map(q => coverage(p, q, weights)))
-        : 0;
+      const redundancy = maxRedundancy.get(p.id) ?? 0;
       const value =
         LAMBDA * (relevance.get(p.id) ?? 0) -
         (1 - LAMBDA) * redundancy;
@@ -151,6 +150,13 @@ function mmr(relevance: Map<string, number>) {
     if (!best) break;
     out.push(best);
     left.delete(best);
+
+    for (const p of left) {
+      const similarity = coverage(p, best, weights);
+      if (similarity > (maxRedundancy.get(p.id) ?? 0)) {
+        maxRedundancy.set(p.id, similarity);
+      }
+    }
   }
 
   return out;
