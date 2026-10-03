@@ -6,10 +6,11 @@ import "katex/dist/katex.min.css";
 import Head, { type Props as HeadProps } from "@/components/static/Head.astro";
 import FooterId from "@/components/static/FooterId.astro";
 
-const { type, prev, next, ...headProps } = Astro.props as HeadProps & {
+const { type, prev, next, archiveMode, ...headProps } = Astro.props as HeadProps & {
     type: "blog" | "portfolio" | "archive";
     prev: any;
     next: any;
+    archiveMode?: "az" | "explore";
 };
 
 const section =
@@ -32,7 +33,7 @@ const section =
             <span data-pagefind-meta={`section:${section}`} class="sr-only">{section}</span>
             <slot />
         </main>
-        <FooterId type={type} prev={prev} next={next} />
+        <FooterId type={type} prev={prev} next={next} archiveMode={archiveMode} />
         <pagefind-modal reset-on-close></pagefind-modal>
     </body>
 </html>
