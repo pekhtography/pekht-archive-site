@@ -1,7 +1,8 @@
 ---
 import BackButton from "./BackButton.astro";
+import { sitePath } from "@/lib/site-url";
 
-const { url, heading, description, variant, modeDescription } = Astro.props;
+const { url, heading, description, variant, archiveMode } = Astro.props;
 ---
 
 <div class="border border-border p-6 mt-10 bg-background">
@@ -13,6 +14,36 @@ const { url, heading, description, variant, modeDescription } = Astro.props;
             <p class={variant === "archive" ? "mt-3 max-w-3xl text-lg text-muted-foreground whitespace-pre-line" : "mt-4 max-w-prose text-base leading-relaxed text-secondary-foreground/80"}>
                 {description}
             </p>
+        )
+    }
+
+    {
+        variant === "archive" && archiveMode && (
+            <div class="mt-6 flex justify-end" aria-label="Archive mode">
+                <div class="grid grid-cols-[minmax(0,1fr)_6rem] items-center gap-x-4 gap-y-2">
+                    <span class={archiveMode === "explore" ? "text-sm text-foreground" : "text-sm text-muted-foreground/50"}>
+                        From the everyday to the once noticed
+                    </span>
+                    <a
+                        href={sitePath("/archive/explore")}
+                        aria-current={archiveMode === "explore" ? "page" : undefined}
+                        class={archiveMode === "explore" ? "inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] bg-secondary text-secondary-foreground px-3 text-sm transition-colors" : "inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] border border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground px-3 text-sm transition-colors"}
+                    >
+                        Explore
+                    </a>
+
+                    <span class={archiveMode === "az" ? "text-sm text-foreground" : "text-sm text-muted-foreground/50"}>
+                        A passage through a range of things
+                    </span>
+                    <a
+                        href={sitePath("/archive")}
+                        aria-current={archiveMode === "az" ? "page" : undefined}
+                        class={archiveMode === "az" ? "inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] bg-secondary text-secondary-foreground px-3 text-sm transition-colors" : "inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] border border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground px-3 text-sm transition-colors"}
+                    >
+                        A–Z
+                    </a>
+                </div>
+            </div>
         )
     }
 </div>
