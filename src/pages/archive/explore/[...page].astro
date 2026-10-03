@@ -61,9 +61,33 @@ const pageUrl = (pageNumber: number) =>
             variant="archive"
         />
 
-        <nav class="mt-6 flex items-center gap-2" aria-label="Archive mode">
-            <a href={sitePath("/archive/explore")} class="inline-flex items-center border border-border bg-secondary px-3 py-2 text-sm text-secondary-foreground transition-colors">Explore</a>
-            <a href={sitePath("/archive")} class="inline-flex items-center border border-border px-3 py-2 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground">A–Z</a>
+<nav class="mt-6 flex justify-center" aria-label="Archive mode">
+            <div class="relative flex items-center gap-2">
+                <div class="group relative">
+                    <a
+                        href={sitePath("/archive/explore")}
+                        aria-current="page"
+                        class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] bg-secondary px-3 text-sm text-secondary-foreground transition-colors"
+                    >
+                        Explore
+                    </a>
+                    <span class="pointer-events-none absolute right-[calc(100%+0.75rem)] top-1/2 w-max -translate-y-1/2 text-right text-sm text-muted-foreground opacity-0 -translate-x-1 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100">
+                        Explore relations
+                    </span>
+                </div>
+
+                <div class="group relative">
+                    <a
+                        href={sitePath("/archive")}
+                        class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background px-3 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                    >
+                        A–Z
+                    </a>
+                    <span class="pointer-events-none absolute left-[calc(100%+0.75rem)] top-1/2 w-max -translate-y-1/2 text-left text-sm text-muted-foreground opacity-0 translate-x-1 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100">
+                        Alphabetical index
+                    </span>
+                </div>
+            </div>
         </nav>
 
         <div id="archive-grid" class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
