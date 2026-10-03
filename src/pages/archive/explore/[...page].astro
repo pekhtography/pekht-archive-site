@@ -11,30 +11,32 @@ import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 export async function getStaticPaths({ paginate }) {
     const items = sortExploreItems(await getCollection("archive"));
 
+    const latestArchiveTimestamp = items.reduce<string | null>((latest, item) => {
+        const createdAt = item.data.x_created_at;
+        if (!createdAt) return latest;
+        return !latest || createdAt > latest ? createdAt : latest;
+    }, null);
+
+    const archiveLatestDate = latestArchiveTimestamp
+        ? new Date(latestArchiveTimestamp).toLocaleDateString("en-GB", {
+              day: "numeric",
+              month: "short",
+              year: "numeric",
+              timeZone: "UTC",
+          })
+        : null;
+
     return paginate(items, {
         pageSize: ARCHIVE_PAGE_SIZE,
+        props: {
+            archiveCount: items.length,
+            archiveLatestDate,
+        },
     });
 }
 
-const { page } = Astro.props;
+const { page, archiveCount, archiveLatestDate } = Astro.props;
 const items = page.data;
-const allItems = sortExploreItems(await getCollection("archive"));
-const archiveCount = allItems.length;
-const latestArchiveTimestamp = allItems.reduce<string | null>((latest, item) => {
-    const createdAt = item.data.x_created_at;
-
-    if (!createdAt) return latest;
-    return !latest || createdAt > latest ? createdAt : latest;
-}, null);
-const archiveLatestDate = latestArchiveTimestamp
-    ? new Date(latestArchiveTimestamp).toLocaleDateString("en-GB", {
-          day: "numeric",
-          month: "short",
-          year: "numeric",
-          timeZone: "UTC",
-      })
-    : null;
-
 const currentPage = page.currentPage;
 const lastPage = page.lastPage;
 
@@ -42,6 +44,7 @@ const pageUrl = (pageNumber: number) =>
     pageNumber === 1
         ? sitePath("/archive/explore")
         : sitePath(`/archive/explore/${pageNumber}`);
+
 ---
 
 <IndexLayout
