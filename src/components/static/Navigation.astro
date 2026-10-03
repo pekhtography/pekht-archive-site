@@ -36,7 +36,7 @@ const isCurrent = (href: string) => pathname === href;
                   {pathname.startsWith(item === "archive" ? sitePath("/archive/explore") : sitePath(`/${item}`)) ? (
                     <BreadcrumbPage>{item}</BreadcrumbPage>
                   ) : (
-                    <BreadcrumbLink href={sitePath(`/${item}`)}>{item}</BreadcrumbLink>
+                    <BreadcrumbLink href={item === "archive" ? sitePath("/archive/explore") : sitePath(`/${item}`)}>{item}</BreadcrumbLink>
                   )}
                 </BreadcrumbItem>
               </>
