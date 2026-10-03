@@ -1,0 +1,106 @@
+---
+import IdLayout from "@/layouts/IdLayout.astro";
+import { getCollection, render } from "astro:content";
+import { ARCHIVE_PAGE_SIZE } from "@/lib/archive-sort";
+import { sortExploreItems } from "@/lib/explore-sort";
+import { sitePath } from "@/lib/site-url";
+import BackButton from "@/components/static/BackButton.astro";
+
+export async function getStaticPaths() {
+    const items = sortExploreItems(await getCollection("archive"));
+
+    return items.map((item) => ({
+        params: { id: item.id },
+        props: { item },
+    }));
+}
+
+const { item } = Astro.props;
+const { Content } = await render(item);
+
+const allItems = sortExploreItems(await getCollection("archive"));
+const currentIndex = allItems.findIndex((i) => i.id === item.id);
+
+const prev =
+    currentIndex > 0 ? allItems[currentIndex - 1] : null;
+
+const next =
+    currentIndex < allItems.length - 1
+        ? allItems[currentIndex + 1]
+        : null;
+
+const archivePage = Math.floor(currentIndex / ARCHIVE_PAGE_SIZE) + 1;
+const archiveUrl = archivePage === 1 ? "/archive/explore" : `/archive/explore/${archivePage}`;
+---
+
+<IdLayout
+    type="archive"
+    title={item.data.title}
+    description={item.body}
+    image={item.data.image}
+    prev={prev}
+    next={next}
+>
+    <article transition:animate="fade">
+        <div class="h-11 flex items-center pl-6">
+            <BackButton url={archiveUrl} />
+        </div>
+
+        <div>
+            <div class="border border-border overflow-hidden">
+                <img
+                    src={sitePath(item.data.image)}
+                    alt={item.data.title}
+                    class="block w-full h-auto"
+                />
+            </div>
+
+            {item.data.gallery.map((image, index) => (
+                <div class="mt-8 border border-border overflow-hidden">
+                    <img
+                        src={sitePath(image)}
+                        alt={`${item.data.title} — photo ${index + 2}`}
+                        class="block w-full h-auto"
+                    />
+                </div>
+            ))}
+        </div>
+
+        <div class="relative mt-8 border-x border-b border-border p-6">
+            <span
+                class="pointer-events-none absolute left-0 top-0 h-px w-[clamp(4rem,20%,14rem)] bg-border"
+                aria-hidden="true"
+            ></span>
+            <span
+                class="pointer-events-none absolute right-0 top-0 h-px w-[clamp(4rem,20%,14rem)] bg-border"
+                aria-hidden="true"
+            ></span>
+
+            <div class="whitespace-pre-line text-base leading-relaxed text-center px-[clamp(1.25rem,8%,5rem)]">
+                <Content />
+            </div>
+
+            {item.data.x_id && (
+                <div class="mt-[clamp(1.5rem,4vw,2rem)] px-[clamp(1.25rem,8vw,5rem)] pt-[clamp(1rem,3vw,1.5rem)] text-center">
+                    <div class="border-t border-border pt-[clamp(1rem,3vw,1.5rem)]">
+                        <div class="relative group/original">
+                            <div
+                                class="pointer-events-none absolute inset-x-0 -top-[clamp(1rem,3vw,1.5rem)] bottom-0 bg-[radial-gradient(ellipse_50%_100%_at_50%_0%,color-mix(in_oklab,var(--muted)_98%,black)_0%,transparent_100%)] opacity-100 transition-opacity duration-300 group-hover/original:opacity-0"
+                                aria-hidden="true"
+                            ></div>
+                            <a
+                                href={`https://x.com/PEKHTography/status/${item.data.x_id}`}
+                                target="_blank"
+                                rel="nofollow noopener noreferrer"
+                                class="relative text-sm text-muted-foreground transition-colors hover:text-foreground"
+                            >
+                                Original publication
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            )}
+
+        </div>
+    </article>
+</IdLayout>
