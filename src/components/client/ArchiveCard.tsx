@@ -3,10 +3,10 @@ import { sitePath } from "@/lib/site-url";
 
 type ArchiveItem = CollectionEntry<"archive">;
 
-export function ArchiveCard({ item }: { item: ArchiveItem }) {
+export function ArchiveCard({ item, mode = "az" }: { item: ArchiveItem; mode?: "az" | "explore" }) {
   return (
     <a
-      href={sitePath(`/archive/${item.id}`)}
+      href={sitePath(mode === "explore" ? `/archive/explore/${item.id}` : `/archive/${item.id}`)}
       className="group block overflow-hidden border border-border bg-background"
     >
       <div className="relative aspect-square overflow-hidden">
