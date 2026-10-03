@@ -8,7 +8,6 @@ const nlp = winkNLP(model);
 const its = nlp.its;
 const STOP = new Set(["photography", "macro", "photo"]);
 const TOP = 48;
-const EXPLORE_LIMIT = 192;
 const LAMBDA = 0.9;
 
 type Post = { id: string; file: string; nouns: string[]; score: number };
@@ -117,19 +116,12 @@ function coverage(a: Post, b: Post, weights: Map<string, number>) {
   return total ? hit / total : 0;
 }
 
-function jaccard(a: Post, b: Post) {
-  const bSet = new Set(b.nouns);
-  let hit = 0;
-  for (const x of a.nouns) if (bSet.has(x)) hit++;
-  return hit / new Set([...a.nouns, ...b.nouns]).size || 0;
-}
-
-function mmr(relevance: Map<string, number>, limit: number) {
+function mmr(relevance: Map<string, number>) {
   const out: Post[] = [];
   const left = new Set(a2);
   const weights = new Map(ranked.map(([x], i) => [x, 1 / (i + 1)]));
 
-  while (out.length < limit && left.size) {
+  while (left.size) {
     let best: Post | undefined;
     let bestValue = -Infinity;
 
@@ -178,44 +170,11 @@ function reportTop48(result: Post[]) {
   }
 }
 
-function reportBlocks(result: Post[]) {
-  console.log("\n=== Explore v1 · Top 192 blocks ===");
-
-  for (let b = 0; b < EXPLORE_LIMIT / TOP; b++) {
-    const block = result.slice(b * TOP, (b + 1) * TOP);
-    if (!block.length) break;
-
-    const concepts = new Set(block.flatMap(p => p.nouns));
-    let pair = 0;
-    let n = 0;
-
-    for (let i = 0; i < block.length; i++) {
-      for (let j = i + 1; j < block.length; j++) {
-        pair += jaccard(block[i], block[j]);
-        n++;
-      }
-    }
-
-    const positions = block.map(p => a2.findIndex(x => x.id === p.id) + 1);
-
-    console.log(
-      "block", b + 1,
-      `(${b * TOP + 1}-${(b + 1) * TOP})`,
-      "unique concepts:", concepts.size,
-      "mean Jaccard:", (pair / n).toFixed(4),
-      "A2 top48:", positions.filter(x => x <= TOP).length + "/" + block.length,
-      "mean A2 position:", (positions.reduce((sum, x) => sum + x, 0) / positions.length).toFixed(1),
-      "A2 range:", Math.min(...positions) + "-" + Math.max(...positions)
-    );
-  }
-}
-
 const relevance = power8Relevance();
-const result = mmr(relevance, EXPLORE_LIMIT);
+const result = mmr(relevance);
 
 console.log("Algorithm: Explore v1 — Rank MMR + Power8 relevance + lambda=0.90");
 console.log("Archive posts:", posts.length, "Noun vocabulary:", ranked.length);
 console.log("A2 baseline Top 48: 48 posts before diversity reranking");
-console.log("Explore result:", result.length, "posts");
+console.log("Explore result:", result.length, "posts (full archive)");
 reportTop48(result);
-reportBlocks(result);
