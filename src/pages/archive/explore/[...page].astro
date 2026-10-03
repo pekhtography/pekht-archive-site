@@ -1,0 +1,384 @@
+---
+import { getCollection } from "astro:content";
+import { ARCHIVE_PAGE_SIZE } from "@/lib/archive-sort";
+import { sortExploreItems } from "@/lib/explore-sort";
+import IndexHeader from "@/components/static/IndexHeader.astro";
+import IndexLayout from "@/layouts/IndexLayout.astro";
+import { ArchiveCard } from "@/components/client/ArchiveCard";
+import { sitePath } from "@/lib/site-url";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
+
+export async function getStaticPaths({ paginate }) {
+    const items = sortExploreItems(await getCollection("archive"));
+
+    return paginate(items, {
+        pageSize: ARCHIVE_PAGE_SIZE,
+    });
+}
+
+const { page } = Astro.props;
+const items = page.data;
+const allItems = sortExploreItems(await getCollection("archive"));
+const archiveCount = allItems.length;
+const latestArchiveTimestamp = allItems.reduce<string | null>((latest, item) => {
+    const createdAt = item.data.x_created_at;
+
+    if (!createdAt) return latest;
+    return !latest || createdAt > latest ? createdAt : latest;
+}, null);
+const archiveLatestDate = latestArchiveTimestamp
+    ? new Date(latestArchiveTimestamp).toLocaleDateString("en-GB", {
+          day: "numeric",
+          month: "short",
+          year: "numeric",
+          timeZone: "UTC",
+      })
+    : null;
+
+const currentPage = page.currentPage;
+const lastPage = page.lastPage;
+
+const pageUrl = (pageNumber: number) =>
+    pageNumber === 1
+        ? sitePath("/archive/explore")
+        : sitePath(`/archive/explore/${pageNumber}`);
+---
+
+<IndexLayout
+    title="Archive — Explore - PEKHTOGRAPHY"
+    description="A visual archive of photographs, fragments, light, color, and moments."
+    image="/og/default.png"
+>
+    <div transition:animate="fade">
+        <IndexHeader
+            url="/archive"
+
+            heading="Archive — Explore"
+            description={`Photographs and fragments from encounters with the everyday world.\n${archiveCount} observations${archiveLatestDate ? `, gathered through ${archiveLatestDate}` : ""}.`}
+            variant="archive"
+        />
+
+        <div id="archive-grid" class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-6">
+            {
+                items.map((item) => (
+                    <ArchiveCard item={item} mode="explore" />
+                ))
+            }
+        </div>
+
+        <nav
+            id="archive-pagination"
+            class="relative mt-10 flex min-h-16 items-center justify-between border border-border p-4"
+            aria-label="Archive pages"
+            data-current-page={currentPage}
+            data-last-page={lastPage}
+        >
+            {
+                page.url.prev ? (
+                    <a
+                        href={page.url.prev}
+                        aria-label="Previous archive page"
+                        class="group z-20 inline-flex items-center gap-2"
+                    >
+                        <span class="inline-flex size-8 shrink-0 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background shadow-xs group-hover:bg-muted group-hover:text-foreground transition-all active:scale-95">
+                            <RiArrowLeftSLine className="size-5 fill-muted-foreground" />
+                        </span>
+                        <span class="pointer-events-none text-sm text-muted-foreground opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all">
+                            previous
+                        </span>
+                    </a>
+                ) : (
+                    <span class="size-8" />
+                )
+            }
+
+            <div
+                id="archive-page-engine"
+                class="absolute inset-y-0 left-0 right-0"
+                style="--nav-left: 24%; --nav-right: 76%; --line-left: calc(24% + 44px); --line-right: calc(76% - 44px);"
+            >
+                <div
+                    class="pointer-events-none absolute left-[var(--line-left)] right-[calc(100%-var(--line-right))] top-1/2 h-px -translate-y-1/2 bg-foreground/35"
+                    aria-hidden="true"
+                ></div>
+
+                <a
+                    id="archive-page-first"
+                    href={pageUrl(1)}
+                    aria-label="Archive page 1"
+                    class="archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"
+                >
+                    <span class="sr-only">1</span>
+                </a>
+
+                <a
+                    id="archive-page-last"
+                    href={pageUrl(lastPage)}
+                    aria-label={`Archive page ${lastPage}`}
+                    class="archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"
+                >
+                    <span class="sr-only">{lastPage}</span>
+                </a>
+
+                <div
+                    id="archive-page-current"
+                    class="pointer-events-none absolute left-0 top-1/2 z-10 size-0 -translate-y-1/2"
+                    style={`left: calc(var(--line-left) + (var(--line-right) - var(--line-left)) * ${lastPage === 1 ? 0 : (currentPage - 1) / (lastPage - 1)});`}
+                    aria-hidden="true"
+                >
+                    <span id="archive-page-current-number" class="absolute left-1/2 top-1/2 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground transition-all duration-200">
+                        {currentPage}
+                    </span>
+                    <span id="archive-page-current-dot" class="archive-page-current-dot absolute left-1/2 top-1/2 z-10 size-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground opacity-0 transition-opacity duration-200"></span>
+                    <span id="archive-page-current-triangle-top" class="archive-page-current-triangle absolute left-1/2 top-[calc(50%-10px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-t-[6px] border-t-foreground/60 opacity-0 transition-opacity duration-200"></span>
+                    <span id="archive-page-current-triangle-bottom" class="archive-page-current-triangle absolute left-1/2 top-[calc(50%+4px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-b-[6px] border-b-foreground/60 opacity-0 transition-opacity duration-200"></span>
+                </div>
+
+                <a
+                    id="archive-page-preview"
+                    href="#"
+                    aria-label={`Preview archive page ${currentPage}`}
+                    class="pointer-events-none absolute top-1/2 z-20 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground opacity-0 shadow-xs transition-opacity duration-200"
+                >
+                    {currentPage}
+                </a>
+
+                <div
+                    id="archive-page-hit-area"
+                    class="absolute inset-y-0 cursor-pointer touch-none"
+                    style="left: var(--line-left); right: calc(100% - var(--line-right));"
+                    aria-hidden="true"
+                ></div>
+            </div>
+
+            {
+                page.url.next ? (
+                    <a
+                        href={page.url.next}
+                        aria-label="Next archive page"
+                        class="group z-20 inline-flex items-center gap-2"
+                    >
+                        <span class="pointer-events-none text-sm text-muted-foreground opacity-0 translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all">
+                            next
+                        </span>
+                        <span class="inline-flex size-8 shrink-0 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background shadow-xs group-hover:bg-muted group-hover:text-foreground transition-all active:scale-95">
+                            <RiArrowRightSLine className="size-5 fill-muted-foreground" />
+                        </span>
+                    </a>
+                ) : (
+                    <span class="size-8" />
+                )
+            }
+        </nav>
+
+        <script>
+            const initArchiveNavigator = () => {
+            const nav = document.querySelector("#archive-pagination");
+            const engine = document.querySelector("#archive-page-engine");
+            const grid = document.querySelector("#archive-grid");
+            const firstEndpoint = document.querySelector("#archive-page-first");
+            const lastEndpoint = document.querySelector("#archive-page-last");
+            const currentMarker = document.querySelector("#archive-page-current");
+            const currentNumber = document.querySelector("#archive-page-current-number");
+            const currentDot = document.querySelector("#archive-page-current-dot");
+            const currentTriangleTop = document.querySelector("#archive-page-current-triangle-top");
+            const currentTriangleBottom = document.querySelector("#archive-page-current-triangle-bottom");
+            const preview = document.querySelector("#archive-page-preview");
+            const hitArea = document.querySelector("#archive-page-hit-area");
+
+            if (
+                nav instanceof HTMLElement &&
+                engine instanceof HTMLElement &&
+                grid instanceof HTMLElement &&
+                firstEndpoint instanceof HTMLAnchorElement &&
+                lastEndpoint instanceof HTMLAnchorElement &&
+                currentMarker instanceof HTMLElement &&
+                currentNumber instanceof HTMLElement &&
+                currentDot instanceof HTMLElement &&
+                currentTriangleTop instanceof HTMLElement &&
+                currentTriangleBottom instanceof HTMLElement &&
+                preview instanceof HTMLAnchorElement &&
+                hitArea instanceof HTMLElement
+            ) {
+                const currentPage = Number(nav.dataset.currentPage);
+                const lastPage = Number(nav.dataset.lastPage);
+
+                const setBounds = () => {
+                    const cards = Array.from(grid.children) as HTMLElement[];
+                    const gridRect = grid.getBoundingClientRect();
+                    const navRect = nav.getBoundingClientRect();
+
+                    let left = gridRect.left - navRect.left;
+                    let right = gridRect.right - navRect.left;
+
+                    if (cards.length >= 3 && window.matchMedia("(min-width: 768px)").matches) {
+                        const second = cards[1].getBoundingClientRect();
+                        const third = cards[2].getBoundingClientRect();
+                        const cardLeft = second.left - navRect.left;
+                        const cardRight = third.right - navRect.left;
+
+                        if (cardRight > cardLeft) {
+                            left = cardLeft;
+                            right = cardRight;
+                        }
+                    }
+
+                    nav.style.setProperty("--nav-left", `${(left / navRect.width) * 100}%`);
+                    nav.style.setProperty("--nav-right", `${(right / navRect.width) * 100}%`);
+
+                    const lineLeft = left + 44;
+                    const lineRight = right - 44;
+                    nav.style.setProperty("--line-left", `${(lineLeft / navRect.width) * 100}%`);
+                    nav.style.setProperty("--line-right", `${(lineRight / navRect.width) * 100}%`);
+                };
+
+                const setPassive = () => {
+                    preview.classList.add("opacity-0");
+                    currentNumber.classList.remove("opacity-0");
+                    currentDot.classList.add("opacity-0");
+                    currentTriangleTop.classList.add("opacity-0");
+                    currentTriangleBottom.classList.add("opacity-0");
+                    firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-foreground/45 bg-foreground/25 transition-all duration-200";
+                    lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-foreground/45 bg-foreground/25 transition-all duration-200";
+                    firstEndpoint.innerHTML = '<span class="sr-only">1</span>';
+                    lastEndpoint.innerHTML = `<span class="sr-only">${lastPage}</span>`;
+                };
+
+                const setActive = () => {
+                    preview.classList.remove("opacity-0");
+                    currentNumber.classList.add("opacity-0");
+                    currentDot.classList.remove("opacity-0");
+                    currentTriangleTop.classList.remove("opacity-0");
+                    currentTriangleBottom.classList.remove("opacity-0");
+
+                    firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 inline-flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-sm text-muted-foreground shadow-xs transition-all duration-200";
+                    lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 inline-flex size-8 translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-sm text-muted-foreground shadow-xs transition-all duration-200";
+                    firstEndpoint.innerHTML = "1";
+                    lastEndpoint.innerHTML = String(lastPage);
+                };
+
+                const pageFromClientX = (clientX: number) => {
+                    const rect = hitArea.getBoundingClientRect();
+                    const progress = Math.max(
+                        0,
+                        Math.min(1, (clientX - rect.left) / rect.width),
+                    );
+
+                    return lastPage <= 1
+                        ? 1
+                        : Math.round(1 + progress * (lastPage - 1));
+                };
+
+                const updatePreview = (clientX: number) => {
+                    const rect = hitArea.getBoundingClientRect();
+                    const navRect = nav.getBoundingClientRect();
+                    const progress = Math.max(
+                        0,
+                        Math.min(1, (clientX - rect.left) / rect.width),
+                    );
+                    const pageNumber = pageFromClientX(clientX);
+
+                    preview.style.left = `${rect.left - navRect.left + progress * rect.width}px`;
+                    preview.textContent = String(pageNumber);
+
+                    const archiveBase = firstEndpoint.href.endsWith("/")
+                        ? firstEndpoint.href.slice(0, -1)
+                        : firstEndpoint.href;
+                    preview.href =
+                        pageNumber === 1
+                            ? firstEndpoint.href
+                            : `${archiveBase}/${pageNumber}/`;
+                    preview.setAttribute("aria-label", `Go to archive page ${pageNumber}`);
+                    setActive();
+                };
+
+                let touchActive = false;
+
+                const onPointerMove = (event: PointerEvent) => {
+                    if (event.pointerType === "mouse") {
+                        updatePreview(event.clientX);
+                    } else if (event.pointerType === "touch" && touchActive) {
+                        updatePreview(event.clientX);
+                    }
+                };
+
+                const onPointerEnter = (event: PointerEvent) => {
+                    if (event.pointerType === "mouse") {
+                        updatePreview(event.clientX);
+                    }
+                };
+
+                const onPointerLeave = (event: PointerEvent) => {
+                    if (event.pointerType === "mouse") {
+                        setPassive();
+                    }
+                };
+
+                const onPointerDown = (event: PointerEvent) => {
+                    if (event.pointerType !== "touch") return;
+
+                    touchActive = true;
+                    hitArea.setPointerCapture(event.pointerId);
+                    updatePreview(event.clientX);
+                };
+
+                const onPointerUp = (event: PointerEvent) => {
+                    if (event.pointerType !== "touch" || !touchActive) return;
+
+                    const pageNumber = pageFromClientX(event.clientX);
+                    const archiveBase = firstEndpoint.href.endsWith("/")
+                        ? firstEndpoint.href.slice(0, -1)
+                        : firstEndpoint.href;
+
+                    touchActive = false;
+                    hitArea.releasePointerCapture(event.pointerId);
+
+                    window.location.href =
+                        pageNumber === 1
+                            ? firstEndpoint.href
+                            : `${archiveBase}/${pageNumber}/`;
+                };
+
+                const onPointerCancel = (event: PointerEvent) => {
+                    if (event.pointerType === "touch") {
+                        touchActive = false;
+                        if (hitArea.hasPointerCapture(event.pointerId)) {
+                            hitArea.releasePointerCapture(event.pointerId);
+                        }
+                        setPassive();
+                    }
+                };
+
+                const onPointerClick = (event: PointerEvent) => {
+                    if (event.pointerType !== "mouse") return;
+
+                    const pageNumber = pageFromClientX(event.clientX);
+                    const archiveBase = firstEndpoint.href.endsWith("/")
+                        ? firstEndpoint.href.slice(0, -1)
+                        : firstEndpoint.href;
+
+                    window.location.href =
+                        pageNumber === 1
+                            ? firstEndpoint.href
+                            : `${archiveBase}/${pageNumber}/`;
+                };
+
+                setBounds();
+                setPassive();
+
+                window.addEventListener("resize", setBounds);
+                hitArea.addEventListener("pointerenter", onPointerEnter);
+                hitArea.addEventListener("pointermove", onPointerMove);
+                hitArea.addEventListener("pointerleave", onPointerLeave);
+                hitArea.addEventListener("pointerdown", onPointerDown);
+                hitArea.addEventListener("pointerup", onPointerUp);
+                hitArea.addEventListener("pointercancel", onPointerCancel);
+                hitArea.addEventListener("click", onPointerClick);
+            }
+            };
+            
+            initArchiveNavigator();
+            document.addEventListener("astro:page-load", initArchiveNavigator);
+        </script>
+    </div>
+</IndexLayout>
