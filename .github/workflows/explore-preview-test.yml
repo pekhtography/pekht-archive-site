@@ -31,3 +31,6 @@ jobs:
 
       - name: Run MMR experiment
         run: pnpm exec tsx scripts/explore-mmr-experiment.ts
+
+      - name: Build Astro site
+        run: pnpm build
