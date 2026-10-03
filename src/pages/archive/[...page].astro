@@ -61,8 +61,7 @@ const pageUrl = (pageNumber: number) =>
                 <div class="group relative">
                     <a
                         href={sitePath("/archive/explore")}
-                        aria-current="page"
-                        class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] bg-secondary px-3 text-sm text-secondary-foreground transition-colors"
+                        class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background px-3 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
                     >
                         Explore
                     </a>
@@ -74,7 +73,8 @@ const pageUrl = (pageNumber: number) =>
                 <div class="group relative">
                     <a
                         href={sitePath("/archive")}
-                        class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background px-3 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                        aria-current="page"
+                        class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] bg-secondary px-3 text-sm text-secondary-foreground transition-colors"
                     >
                         A–Z
                     </a>
