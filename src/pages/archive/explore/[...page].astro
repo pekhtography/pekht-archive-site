@@ -59,34 +59,26 @@ const pageUrl = (pageNumber: number) =>
             heading="Archive — Explore"
             description={`Photographs and fragments from encounters with the everyday world.\n${archiveCount} observations${archiveLatestDate ? `, gathered through ${archiveLatestDate}` : ""}.`}
             variant="archive"
+            modeDescription="From the everyday to the once noticed"
         />
 
-<nav class="mt-6 flex justify-center" aria-label="Archive mode">
-            <div class="relative flex items-center gap-3">
-                <div class="group relative">
-                    <a
-                        href={sitePath("/archive/explore")}
-                        aria-current="page"
-                        class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] bg-secondary px-3 text-sm text-secondary-foreground transition-colors"
-                    >
-                        Explore
-                    </a>
-                    <span class="pointer-events-none absolute right-[calc(100%+0.75rem)] top-1/2 w-max -translate-y-1/2 text-right text-sm text-muted-foreground opacity-0 -translate-x-1 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100">
-                        From the everyday to the once noticed
-                    </span>
-                </div>
-
-                <div class="group relative">
-                    <a
-                        href={sitePath("/archive")}
-                        class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background px-3 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-                    >
-                        A–Z
-                    </a>
-                    <span class="pointer-events-none absolute left-[calc(100%+0.75rem)] top-1/2 w-max -translate-y-1/2 text-left text-sm text-muted-foreground opacity-0 translate-x-1 transition-all duration-200 group-hover:translate-x-0 group-hover:opacity-100">
-                        A passage through a range of things
-                    </span>
-                </div>
+<nav class="relative z-10 -mt-[18px] flex justify-center" aria-label="Archive mode">
+            <div class="flex items-center gap-3 bg-background px-3">
+                <a
+                    href={sitePath("/archive/explore")}
+                    aria-current="page"
+                    
+                    class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] bg-secondary text-secondary-foreground px-3 text-sm transition-colors"
+                >
+                    Explore
+                </a>
+                <a
+                    href={sitePath("/archive")}
+                    
+                    class="inline-flex h-9 w-24 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background text-muted-foreground hover:bg-muted hover:text-foreground px-3 text-sm transition-colors"
+                >
+                    A–Z
+                </a>
             </div>
         </nav>
 
