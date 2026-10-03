@@ -34,3 +34,11 @@ jobs:
 
       - name: Build Astro site
         run: pnpm build
+
+      - name: Upload Explore build artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: explore-preview-dist
+          path: dist
+          if-no-files-found: error
+          retention-days: 3
