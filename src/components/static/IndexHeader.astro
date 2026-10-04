@@ -177,6 +177,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                         const isActive = modeOf(label) === activeMode;
                         label.classList.remove(
                             "text-background",
+                            "text-secondary",
                             "text-secondary-foreground",
                             "text-foreground",
                             "text-muted-foreground",
@@ -228,8 +229,8 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
 
                         if (isActive) {
                             // The active label stays exactly in place; only its color merges with the active fill.
-                            label.classList.remove("text-secondary-foreground");
-                            label.classList.add("text-background", "opacity-100");
+                            label.classList.remove("text-secondary-foreground", "text-secondary");
+                            label.classList.add("text-secondary", "opacity-100");
                         } else if (isPreview) {
                             label.classList.remove("text-muted-foreground", "opacity-70");
                             label.classList.add("text-foreground", "opacity-100");
@@ -263,7 +264,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     );
 
                     if (activeLabel && activeLink) {
-                        activeLabel.classList.remove("translate-x-0", "opacity-100", "text-background");
+                        activeLabel.classList.remove("translate-x-0", "opacity-100", "text-background", "text-secondary");
                         activeLabel.classList.add("translate-x-2", "opacity-0");
 
                         activeLink.classList.remove(
