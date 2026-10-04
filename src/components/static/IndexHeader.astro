@@ -220,7 +220,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                         if (isActive) {
                             label.classList.remove("text-secondary-foreground");
                             label.classList.add("text-background");
-                            show(label, false, false);
+                            show(label, true);
                         }
                     });
                 };
