@@ -50,51 +50,24 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     </span>
                 </div>
 
-                <a
-                    data-mode-link="explore"
-                    href={sitePath("/archive/explore")}
-                    aria-current={archiveMode === "explore" ? "page" : undefined}
-                    class:list={[
-                        "archive-mode-link inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] border px-3 text-sm transition-all duration-200",
-                        archiveMode === "explore"
-                            ? "border-transparent bg-secondary text-secondary-foreground"
-                            : "border-border bg-background text-muted-foreground hover:bg-secondary/50 hover:text-foreground",
-                    ]}
+                <div
+                    data-current-mode-label
+                    class="inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] bg-secondary px-3 text-sm text-secondary-foreground select-none"
+                    aria-hidden="true"
                 >
-                    <span
-                        data-mode-label="explore"
-                        class:list={[
-                            "transition-all duration-200",
-                            archiveMode === "explore"
-                                ? "translate-x-0 opacity-100 text-secondary-foreground"
-                                : "translate-x-0 opacity-100 text-muted-foreground",
-                        ]}
-                    >
-                        Explore
-                    </span>
-                </a>
+                    <span data-current-mode-text>{archiveMode === "explore" ? "Explore" : "A–Z"}</span>
+                </div>
 
                 <a
-                    data-mode-link="az"
-                    href={sitePath("/archive")}
-                    aria-current={archiveMode === "az" ? "page" : undefined}
-                    class:list={[
-                        "archive-mode-link inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] border px-3 text-sm transition-all duration-200",
-                        archiveMode === "az"
-                            ? "border-transparent bg-secondary text-secondary-foreground"
-                            : "border-border bg-background text-muted-foreground hover:bg-secondary/50 hover:text-foreground",
-                    ]}
+                    data-mode-link={archiveMode === "explore" ? "az" : "explore"}
+                    href={archiveMode === "explore" ? sitePath("/archive") : sitePath("/archive/explore")}
+                    class="archive-mode-link inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] border border-border bg-background px-3 text-sm text-muted-foreground transition-all duration-200 hover:bg-secondary/50 hover:text-foreground"
                 >
                     <span
-                        data-mode-label="az"
-                        class:list={[
-                            "transition-all duration-200",
-                            archiveMode === "az"
-                                ? "translate-x-0 opacity-100 text-secondary-foreground"
-                                : "translate-x-0 opacity-100 text-muted-foreground",
-                        ]}
+                        data-mode-label={archiveMode === "explore" ? "az" : "explore"}
+                        class="transition-all duration-200 text-muted-foreground"
                     >
-                        A–Z
+                        {archiveMode === "explore" ? "A–Z" : "Explore"}
                     </span>
                 </a>
             </div>
@@ -130,7 +103,9 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     element instanceof HTMLElement,
                 );
 
-                if (links.length !== 2 || descriptions.length !== 2 || labels.length !== 2) return;
+                const currentModeText = switcher.querySelector("[data-current-mode-text]");
+
+                if (links.length !== 1 || descriptions.length !== 2 || labels.length !== 1 || !(currentModeText instanceof HTMLElement)) return;
 
                 const modeOf = (element: Element) =>
                     element.getAttribute("data-mode-link") ??
@@ -152,17 +127,11 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
 
                 const stable = () => {
                     links.forEach((link) => {
-                        const isActive = modeOf(link) === activeMode;
-
-                        link.classList.toggle("bg-secondary", isActive);
-                        link.classList.toggle("text-secondary-foreground", isActive);
-                        link.classList.toggle("border-transparent", isActive);
-
-                        link.classList.toggle("bg-background", !isActive);
-                        link.classList.toggle("text-muted-foreground", !isActive);
-                        link.classList.toggle("border-border", !isActive);
-                        link.classList.remove("bg-secondary/50", "text-foreground", "text-background", "opacity-0");
+                        link.classList.remove("bg-secondary", "border-transparent", "text-secondary-foreground");
+                        link.classList.add("bg-background", "border-border", "text-muted-foreground");
                     });
+
+                    currentModeText.textContent = activeMode === "explore" ? "Explore" : "A–Z";
 
                     descriptions.forEach((description) => {
                         const isActive = modeOf(description) === activeMode;
@@ -174,7 +143,6 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     });
 
                     labels.forEach((label) => {
-                        const isActive = modeOf(label) === activeMode;
                         label.classList.remove(
                             "text-background",
                             "text-secondary",
@@ -183,18 +151,9 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                             "text-muted-foreground",
                             "opacity-70",
                         );
-                        label.classList.add(
-                            isActive ? "text-secondary-foreground" : "text-muted-foreground",
-                            "opacity-100",
-                        );
+                        label.classList.add("text-muted-foreground", "opacity-100");
                         label.style.removeProperty("color");
-                        label.textContent = isActive
-                            ? activeMode === "explore"
-                                ? "Explore"
-                                : "A–Z"
-                            : modeOf(label) === "explore"
-                                ? "Explore"
-                                : "A–Z";
+                        label.textContent = activeMode === "explore" ? "A–Z" : "Explore";
                         show(label, true);
                     });
                 };
@@ -248,19 +207,13 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     });
                 };
 
-                const rightLink = links.find((link) => modeOf(link) === "az");
+                const rightLink = links[0];
 
                 if (rightLink) {
                     rightLink.addEventListener("pointerenter", (event) => {
                         if (event.pointerType === "mouse") {
-                            preview("az");
-
-                            const activeLabel = labels.find(
-                                (label) => modeOf(label) === activeMode,
-                            );
-                            if (activeLabel) {
-                                activeLabel.textContent = ". . .";
-                            }
+                            preview(modeOf(rightLink) ?? "");
+                            currentModeText.textContent = "...";
                         }
                     });
 
@@ -279,46 +232,6 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
 
                 stable();
 
-                requestAnimationFrame(() => {
-                    const activeLabel = labels.find(
-                        (label) => modeOf(label) === activeMode,
-                    );
-                    const activeLink = links.find(
-                        (link) => modeOf(link) === activeMode,
-                    );
-
-                    if (activeLabel && activeLink) {
-                        activeLabel.classList.remove("translate-x-0", "opacity-100", "text-background", "text-secondary");
-                        activeLabel.style.removeProperty("color");
-                        activeLabel.classList.add("translate-x-2", "opacity-0");
-
-                        activeLink.classList.remove(
-                            "bg-secondary",
-                            "border-transparent",
-                        );
-                        activeLink.classList.add(
-                            "bg-secondary/70",
-                            "border-border",
-                            "translate-x-1",
-                        );
-
-                        requestAnimationFrame(() => {
-                            activeLabel.classList.remove("translate-x-2", "opacity-0");
-                            activeLabel.classList.add("translate-x-0", "opacity-100");
-
-                            activeLink.classList.remove(
-                                "bg-secondary/70",
-                                "border-border",
-                                "translate-x-1",
-                            );
-                            activeLink.classList.add(
-                                "bg-secondary",
-                                "border-transparent",
-                                "translate-x-0",
-                            );
-                        });
-                    }
-                });
             };
 
             initArchiveModeSwitch();
