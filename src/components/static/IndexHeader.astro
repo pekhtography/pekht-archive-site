@@ -189,16 +189,8 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                         const isHovered = modeOf(link) === mode;
 
                         if (isActive) {
-                            link.classList.remove(
-                                "bg-secondary",
-                                "text-secondary-foreground",
-                                "border-transparent",
-                            );
-                            link.classList.add(
-                                "bg-background",
-                                "border-transparent",
-                                "text-muted-foreground",
-                            );
+                            link.classList.remove("text-secondary-foreground");
+                            link.classList.add("text-muted-foreground");
                         }
 
                         if (isHovered) {
@@ -253,13 +245,38 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     const activeLabel = labels.find(
                         (label) => modeOf(label) === activeMode,
                     );
-                    if (activeLabel) {
+                    const activeLink = links.find(
+                        (link) => modeOf(link) === activeMode,
+                    );
+
+                    if (activeLabel && activeLink) {
                         activeLabel.classList.remove("translate-x-0", "opacity-100", "text-background");
                         activeLabel.classList.add("translate-x-2", "opacity-0");
+
+                        activeLink.classList.remove(
+                            "bg-secondary",
+                            "border-transparent",
+                        );
+                        activeLink.classList.add(
+                            "bg-secondary/70",
+                            "border-border",
+                            "translate-x-1",
+                        );
 
                         requestAnimationFrame(() => {
                             activeLabel.classList.remove("translate-x-2", "opacity-0");
                             activeLabel.classList.add("translate-x-0", "opacity-100");
+
+                            activeLink.classList.remove(
+                                "bg-secondary/70",
+                                "border-border",
+                                "translate-x-1",
+                            );
+                            activeLink.classList.add(
+                                "bg-secondary",
+                                "border-transparent",
+                                "translate-x-0",
+                            );
                         });
                     }
                 });
