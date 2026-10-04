@@ -166,12 +166,18 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
 
                     descriptions.forEach((description) => {
                         const isActive = modeOf(description) === activeMode;
+                        description.classList.remove("text-background", "text-muted-foreground/50");
+                        description.classList.add(
+                            isActive ? "text-foreground" : "text-muted-foreground/50",
+                        );
                         show(description, isActive);
                     });
 
                     labels.forEach((label) => {
                         const isActive = modeOf(label) === activeMode;
-                        show(label, isActive);
+                        label.classList.remove("text-background");
+                        if (isActive) label.classList.add("text-secondary-foreground");
+                        show(label, true);
                     });
                 };
 
