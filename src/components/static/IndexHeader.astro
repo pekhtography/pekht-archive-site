@@ -142,15 +142,10 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     visible: boolean,
                     enterFromRight = true,
                 ) => {
-                    element.classList.toggle(
-                        enterFromRight ? "translate-x-2" : "-translate-x-2",
-                        !visible,
+                    element.classList.remove("translate-x-0", "translate-x-2", "-translate-x-2");
+                    element.classList.add(
+                        visible ? "translate-x-0" : enterFromRight ? "translate-x-2" : "-translate-x-2",
                     );
-                    element.classList.toggle(
-                        enterFromRight ? "-translate-x-2" : "translate-x-2",
-                        false,
-                    );
-                    element.classList.toggle("translate-x-0", visible);
                     element.classList.toggle("opacity-100", visible);
                     element.classList.toggle("opacity-0", !visible);
                 };
