@@ -25,11 +25,11 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                 aria-label="Archive mode"
                 data-active-mode={archiveMode}
             >
-                <div class="relative min-w-0 h-9 overflow-hidden text-right text-sm">
+                <div class="relative h-9 min-w-0 overflow-hidden text-right text-sm">
                     <span
                         data-mode-description="explore"
                         class:list={[
-                            "absolute inset-y-0 right-0 flex w-full items-center justify-end text-right transition-all duration-200",
+                            "absolute inset-0 flex w-full items-center justify-end text-right transition-all duration-200",
                             archiveMode === "explore"
                                 ? "translate-x-0 opacity-100 text-foreground"
                                 : "translate-x-2 opacity-0 text-muted-foreground/50",
@@ -40,7 +40,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     <span
                         data-mode-description="az"
                         class:list={[
-                            "absolute inset-y-0 right-0 flex w-full items-center justify-end text-right transition-all duration-200",
+                            "absolute inset-0 flex w-full items-center justify-end text-right transition-all duration-200",
                             archiveMode === "az"
                                 ? "translate-x-0 opacity-100 text-foreground"
                                 : "translate-x-2 opacity-0 text-muted-foreground/50",
@@ -55,10 +55,10 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     href={sitePath("/archive/explore")}
                     aria-current={archiveMode === "explore" ? "page" : undefined}
                     class:list={[
-                        "archive-mode-link inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] px-3 text-sm transition-all duration-200",
+                        "archive-mode-link inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] border px-3 text-sm transition-all duration-200",
                         archiveMode === "explore"
-                            ? "bg-secondary text-secondary-foreground"
-                            : "border border-border bg-background text-muted-foreground hover:bg-secondary/50 hover:text-foreground",
+                            ? "border-transparent bg-secondary text-secondary-foreground"
+                            : "border-border bg-background text-muted-foreground hover:bg-secondary/50 hover:text-foreground",
                     ]}
                 >
                     <span
@@ -79,10 +79,10 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     href={sitePath("/archive")}
                     aria-current={archiveMode === "az" ? "page" : undefined}
                     class:list={[
-                        "archive-mode-link inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] px-3 text-sm transition-all duration-200",
+                        "archive-mode-link inline-flex h-9 w-24 items-center justify-center justify-self-end rounded-[min(var(--radius-md),10px)] border px-3 text-sm transition-all duration-200",
                         archiveMode === "az"
-                            ? "bg-secondary text-secondary-foreground"
-                            : "border border-border bg-background text-muted-foreground hover:bg-secondary/50 hover:text-foreground",
+                            ? "border-transparent bg-secondary text-secondary-foreground"
+                            : "border-border bg-background text-muted-foreground hover:bg-secondary/50 hover:text-foreground",
                     ]}
                 >
                     <span
@@ -104,7 +104,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
 
 {
     variant === "archive" && archiveMode && (
-        <script define:vars={{ archiveMode }}>
+        <script>
             const initArchiveModeSwitch = () => {
                 const switcher = document.querySelector("#archive-mode-switch");
                 if (!(switcher instanceof HTMLElement)) return;
@@ -114,111 +114,147 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
 
                 const links = Array.from(
                     switcher.querySelectorAll("[data-mode-link]"),
-                ).filter((element): element is HTMLAnchorElement => element instanceof HTMLAnchorElement);
+                ).filter((element): element is HTMLAnchorElement =>
+                    element instanceof HTMLAnchorElement,
+                );
 
                 const descriptions = Array.from(
                     switcher.querySelectorAll("[data-mode-description]"),
-                ).filter((element): element is HTMLElement => element instanceof HTMLElement);
+                ).filter((element): element is HTMLElement =>
+                    element instanceof HTMLElement,
+                );
 
                 const labels = Array.from(
                     switcher.querySelectorAll("[data-mode-label]"),
-                ).filter((element): element is HTMLElement => element instanceof HTMLElement);
+                ).filter((element): element is HTMLElement =>
+                    element instanceof HTMLElement,
+                );
 
                 if (links.length !== 2 || descriptions.length !== 2 || labels.length !== 2) return;
 
-                const getMode = (element: Element) => element.getAttribute("data-mode-link");
+                const modeOf = (element: Element) =>
+                    element.getAttribute("data-mode-link") ??
+                    element.getAttribute("data-mode-description") ??
+                    element.getAttribute("data-mode-label");
 
-                const setPreview = (mode: string) => {
-                    if (mode === activeMode) return;
-
-                    links.forEach((link) => {
-                        const isPreview = getMode(link) === mode;
-                        const isActive = getMode(link) === activeMode;
-
-                        link.classList.toggle("bg-secondary/50", isPreview);
-                        link.classList.toggle("text-foreground", isPreview);
-                        link.classList.toggle("bg-secondary", false);
-                        link.classList.toggle("bg-background", !isPreview && !isActive);
-                        link.classList.toggle("border", !isActive);
-                        link.classList.toggle("border-border", !isActive);
-                    });
-
-                    descriptions.forEach((description) => {
-                        const isPreview = description.dataset.modeDescription === mode;
-                        description.classList.toggle("translate-x-0", isPreview);
-                        description.classList.toggle("opacity-100", isPreview);
-                        description.classList.toggle("translate-x-2", !isPreview);
-                        description.classList.toggle("opacity-0", !isPreview);
-                    });
-
-                    labels.forEach((label) => {
-                        const isActive = label.dataset.modeLabel === activeMode;
-                        label.classList.toggle("translate-x-0", !isActive);
-                        label.classList.toggle("opacity-100", !isActive);
-                        label.classList.toggle("translate-x-2", isActive);
-                        label.classList.toggle("opacity-0", isActive);
-                    });
+                const show = (
+                    element: HTMLElement,
+                    visible: boolean,
+                    enterFromRight = true,
+                ) => {
+                    element.classList.toggle(
+                        enterFromRight ? "translate-x-2" : "-translate-x-2",
+                        !visible,
+                    );
+                    element.classList.toggle(
+                        enterFromRight ? "-translate-x-2" : "translate-x-2",
+                        false,
+                    );
+                    element.classList.toggle("translate-x-0", visible);
+                    element.classList.toggle("opacity-100", visible);
+                    element.classList.toggle("opacity-0", !visible);
                 };
 
-                const reset = () => {
+                const stable = () => {
                     links.forEach((link) => {
-                        const mode = getMode(link);
-                        const isActive = mode === activeMode;
+                        const isActive = modeOf(link) === activeMode;
 
                         link.classList.toggle("bg-secondary", isActive);
                         link.classList.toggle("text-secondary-foreground", isActive);
+                        link.classList.toggle("border-transparent", isActive);
+
                         link.classList.toggle("bg-background", !isActive);
                         link.classList.toggle("text-muted-foreground", !isActive);
-                        link.classList.toggle("bg-secondary/50", false);
-                        link.classList.toggle("text-foreground", false);
-                        link.classList.toggle("border", !isActive);
                         link.classList.toggle("border-border", !isActive);
+                        link.classList.remove("bg-secondary/50", "text-foreground");
                     });
 
                     descriptions.forEach((description) => {
-                        const isActive = description.dataset.modeDescription === activeMode;
-                        description.classList.toggle("translate-x-0", isActive);
-                        description.classList.toggle("opacity-100", isActive);
-                        description.classList.toggle("translate-x-2", !isActive);
-                        description.classList.toggle("opacity-0", !isActive);
+                        const isActive = modeOf(description) === activeMode;
+                        show(description, isActive);
                     });
 
                     labels.forEach((label) => {
-                        const isActive = label.dataset.modeLabel === activeMode;
-                        label.classList.toggle("translate-x-0", isActive);
-                        label.classList.toggle("opacity-100", isActive);
-                        label.classList.toggle("translate-x-2", !isActive);
-                        label.classList.toggle("opacity-0", !isActive);
+                        const isActive = modeOf(label) === activeMode;
+                        show(label, isActive);
+                    });
+                };
+
+                const preview = (mode: string) => {
+                    if (mode === activeMode) return;
+
+                    links.forEach((link) => {
+                        const isActive = modeOf(link) === activeMode;
+                        const isHovered = modeOf(link) === mode;
+
+                        if (isActive) {
+                            link.classList.remove(
+                                "bg-secondary",
+                                "text-secondary-foreground",
+                                "border-transparent",
+                            );
+                            link.classList.add(
+                                "bg-background",
+                                "border-transparent",
+                                "text-muted-foreground",
+                            );
+                        }
+
+                        if (isHovered) {
+                            link.classList.remove("bg-background", "border-border", "text-muted-foreground");
+                            link.classList.add("bg-secondary/50", "border-border", "text-foreground");
+                        }
+                    });
+
+                    descriptions.forEach((description) => {
+                        const isPreview = modeOf(description) === mode;
+                        const isActive = modeOf(description) === activeMode;
+
+                        if (isActive) {
+                            show(description, false, false);
+                        } else if (isPreview) {
+                            show(description, true, true);
+                        }
+                    });
+
+                    labels.forEach((label) => {
+                        const isActive = modeOf(label) === activeMode;
+
+                        if (isActive) {
+                            show(label, false, false);
+                        }
                     });
                 };
 
                 links.forEach((link) => {
                     link.addEventListener("pointerenter", (event) => {
                         if (event.pointerType === "mouse") {
-                            setPreview(getMode(link) ?? "");
+                            preview(modeOf(link) ?? "");
                         }
                     });
                 });
 
                 switcher.addEventListener("pointerleave", (event) => {
                     if (event.pointerType === "mouse") {
-                        reset();
+                        stable();
                     }
                 });
 
-                reset();
+                stable();
 
                 requestAnimationFrame(() => {
                     const activeLabel = labels.find(
-                        (label) => label.dataset.modeLabel === activeMode,
+                        (label) => modeOf(label) === activeMode,
                     );
                     const activeDescription = descriptions.find(
-                        (description) => description.dataset.modeDescription === activeMode,
+                        (description) => modeOf(description) === activeMode,
                     );
 
                     [activeLabel, activeDescription].forEach((element) => {
                         if (!element) return;
+                        element.classList.remove("translate-x-0", "opacity-100");
                         element.classList.add("translate-x-2", "opacity-0");
+
                         requestAnimationFrame(() => {
                             element.classList.remove("translate-x-2", "opacity-0");
                             element.classList.add("translate-x-0", "opacity-100");
