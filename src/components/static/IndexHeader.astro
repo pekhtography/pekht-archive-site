@@ -253,10 +253,6 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     const activeLabel = labels.find(
                         (label) => modeOf(label) === activeMode,
                     );
-                    const activeDescription = descriptions.find(
-                        (description) => modeOf(description) === activeMode,
-                    );
-
                     if (activeLabel) {
                         activeLabel.classList.remove("translate-x-0", "opacity-100", "text-background");
                         activeLabel.classList.add("translate-x-2", "opacity-0");
