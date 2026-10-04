@@ -67,7 +67,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                             "transition-all duration-200",
                             archiveMode === "explore"
                                 ? "translate-x-0 opacity-100"
-                                : "translate-x-0 opacity-100 text-muted-foreground/60",
+                                : "translate-x-0 opacity-70 text-foreground",
                         ]}
                     >
                         Explore
@@ -91,7 +91,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                             "transition-all duration-200",
                             archiveMode === "az"
                                 ? "translate-x-0 opacity-100"
-                                : "translate-x-0 opacity-100 text-muted-foreground/60",
+                                : "translate-x-0 opacity-70 text-foreground",
                         ]}
                     >
                         A–Z
@@ -178,7 +178,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                         label.classList.remove("text-background", "text-secondary-foreground", "text-foreground");
                         label.classList.add(isActive ? "text-secondary-foreground" : "text-foreground");
                         label.classList.toggle("opacity-70", !isActive);
-                        label.classList.toggle("opacity-100", isActive);
+                        label.classList.toggle("opacity-100", true);
                         show(label, true);
                     });
                 };
@@ -217,11 +217,18 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
 
                     labels.forEach((label) => {
                         const isActive = modeOf(label) === activeMode;
+                        const isPreview = modeOf(label) === mode;
 
                         if (isActive) {
                             label.classList.remove("text-secondary-foreground");
                             label.classList.add("text-background");
-                            show(label, false, false);
+                            label.classList.remove("opacity-70");
+                            label.classList.add("opacity-100");
+                            show(label, true);
+                        } else if (isPreview) {
+                            label.classList.remove("text-muted-foreground", "opacity-70");
+                            label.classList.add("text-foreground", "opacity-100");
+                            show(label, true);
                         }
                     });
                 };
