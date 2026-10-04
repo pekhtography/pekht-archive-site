@@ -67,7 +67,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                             "transition-all duration-200",
                             archiveMode === "explore"
                                 ? "translate-x-0 opacity-100"
-                                : "translate-x-0 opacity-100 text-muted-foreground",
+                                : "translate-x-0 opacity-100 text-muted-foreground/60",
                         ]}
                     >
                         Explore
@@ -91,7 +91,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                             "transition-all duration-200",
                             archiveMode === "az"
                                 ? "translate-x-0 opacity-100"
-                                : "translate-x-0 opacity-100 text-muted-foreground",
+                                : "translate-x-0 opacity-100 text-muted-foreground/60",
                         ]}
                     >
                         A–Z
@@ -161,7 +161,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                         link.classList.toggle("bg-background", !isActive);
                         link.classList.toggle("text-muted-foreground", !isActive);
                         link.classList.toggle("border-border", !isActive);
-                        link.classList.remove("bg-secondary/50", "text-foreground", "text-background");
+                        link.classList.remove("bg-secondary/50", "text-foreground", "text-background", "opacity-0");
                     });
 
                     descriptions.forEach((description) => {
@@ -189,8 +189,16 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                         const isHovered = modeOf(link) === mode;
 
                         if (isActive) {
-                            link.classList.remove("text-secondary-foreground");
-                            link.classList.add("text-muted-foreground");
+                            link.classList.remove(
+                                "bg-secondary",
+                                "text-secondary-foreground",
+                                "border-transparent",
+                            );
+                            link.classList.add(
+                                "bg-background",
+                                "border-transparent",
+                                "opacity-0",
+                            );
                         }
 
                         if (isHovered) {
@@ -220,7 +228,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                         if (isActive) {
                             label.classList.remove("text-secondary-foreground");
                             label.classList.add("text-background");
-                            show(label, true);
+                            show(label, false, false);
                         }
                     });
                 };
