@@ -188,6 +188,13 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                             "opacity-100",
                         );
                         label.style.removeProperty("color");
+                        label.textContent = isActive
+                            ? activeMode === "explore"
+                                ? "Explore"
+                                : "A–Z"
+                            : modeOf(label) === "explore"
+                                ? "Explore"
+                                : "A–Z";
                         show(label, true);
                     });
                 };
@@ -241,13 +248,28 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     });
                 };
 
-                links.forEach((link) => {
-                    link.addEventListener("pointerenter", (event) => {
+                const rightLink = links.find((link) => modeOf(link) === "az");
+
+                if (rightLink) {
+                    rightLink.addEventListener("pointerenter", (event) => {
                         if (event.pointerType === "mouse") {
-                            preview(modeOf(link) ?? "");
+                            preview("az");
+
+                            const activeLabel = labels.find(
+                                (label) => modeOf(label) === activeMode,
+                            );
+                            if (activeLabel) {
+                                activeLabel.textContent = ". . .";
+                            }
                         }
                     });
-                });
+
+                    rightLink.addEventListener("pointerleave", (event) => {
+                        if (event.pointerType === "mouse") {
+                            stable();
+                        }
+                    });
+                }
 
                 switcher.addEventListener("pointerleave", (event) => {
                     if (event.pointerType === "mouse") {
