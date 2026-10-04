@@ -187,6 +187,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                             isActive ? "text-secondary-foreground" : "text-muted-foreground",
                             "opacity-100",
                         );
+                        label.style.removeProperty("color");
                         show(label, true);
                     });
                 };
