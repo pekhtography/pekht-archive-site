@@ -137,10 +137,10 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
 
                         link.classList.toggle("bg-secondary/50", isPreview);
                         link.classList.toggle("text-foreground", isPreview);
-                        link.classList.toggle("bg-secondary", isActive && false);
-                        link.classList.toggle("bg-background", !isPreview);
-                        link.classList.toggle("border", !isActive || isPreview);
-                        link.classList.toggle("border-border", !isActive || isPreview);
+                        link.classList.toggle("bg-secondary", false);
+                        link.classList.toggle("bg-background", !isPreview && !isActive);
+                        link.classList.toggle("border", !isActive);
+                        link.classList.toggle("border-border", !isActive);
                     });
 
                     descriptions.forEach((description) => {
@@ -212,12 +212,18 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
                     const activeLabel = labels.find(
                         (label) => label.dataset.modeLabel === activeMode,
                     );
-                    if (activeLabel) {
-                        activeLabel.classList.add("archive-mode-enter");
+                    const activeDescription = descriptions.find(
+                        (description) => description.dataset.modeDescription === activeMode,
+                    );
+
+                    [activeLabel, activeDescription].forEach((element) => {
+                        if (!element) return;
+                        element.classList.add("translate-x-2", "opacity-0");
                         requestAnimationFrame(() => {
-                            activeLabel.classList.remove("archive-mode-enter");
+                            element.classList.remove("translate-x-2", "opacity-0");
+                            element.classList.add("translate-x-0", "opacity-100");
                         });
-                    }
+                    });
                 });
             };
 
