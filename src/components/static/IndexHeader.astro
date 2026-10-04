@@ -127,7 +127,13 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
 
                 const stable = () => {
                     links.forEach((link) => {
-                        link.classList.remove("bg-secondary", "border-transparent", "text-secondary-foreground");
+                        link.classList.remove(
+                            "bg-secondary",
+                            "bg-secondary/50",
+                            "border-transparent",
+                            "text-secondary-foreground",
+                            "text-foreground",
+                        );
                         link.classList.add("bg-background", "border-border", "text-muted-foreground");
                     });
 
