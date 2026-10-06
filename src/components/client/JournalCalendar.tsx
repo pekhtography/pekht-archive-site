@@ -1,8 +1,8 @@
 "use client";
 
 import * as React from "react";
-import { addMonths, format, isSameDay, parse, startOfMonth, subMonths } from "date-fns";
-import { RiArrowLeftSLine, RiArrowRightSLine, RiCalendar2Line } from "@remixicon/react";
+import { format, parse } from "date-fns";
+import { RiArrowLeftSLine, RiArrowRightSLine } from "@remixicon/react";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -15,77 +15,125 @@ export default function JournalCalendar({
   selectedDate: string | null;
   onSelect: (date: string | null) => void;
 }) {
-  const [month, setMonth] = React.useState(() => {
-    const latest = dates.length ? dates.map((d) => parse(d, "dd-MM-yyyy", new Date())).sort((a, b) => b.getTime() - a.getTime())[0] : new Date();
-    return startOfMonth(latest);
-  });
-
-  const publishedDays = React.useMemo(
-    () => dates.map((date) => parse(date, "dd-MM-yyyy", new Date())),
+  const publicationDates = React.useMemo(
+    () =>
+      Array.from(new Set(dates))
+        .map((date) => parse(date, "dd-MM-yyyy", new Date()))
+        .sort((a, b) => a.getTime() - b.getTime()),
     [dates],
   );
 
-  const firstDay = startOfMonth(month);
-  const offset = (firstDay.getDay() + 6) % 7;
-  const daysInMonth = new Date(month.getFullYear(), month.getMonth() + 1, 0).getDate();
+  const [position, setPosition] = React.useState(
+    Math.max(publicationDates.length - 1, 0),
+  );
 
-  const cells = Array.from({ length: offset + daysInMonth }, (_, index) => {
-    if (index < offset) return null;
-    return new Date(month.getFullYear(), month.getMonth(), index - offset + 1);
-  });
+  React.useEffect(() => {
+    if (!publicationDates.length) {
+      setPosition(0);
+      return;
+    }
 
-  const toValue = (day: Date) => format(day, "dd-MM-yyyy");
-  const hasPost = (day: Date) => publishedDays.some((date) => isSameDay(date, day));
+    const selectedIndex = selectedDate
+      ? publicationDates.findIndex((date) => format(date, "dd-MM-yyyy") === selectedDate)
+      : publicationDates.length - 1;
+
+    setPosition(selectedIndex >= 0 ? selectedIndex : publicationDates.length - 1);
+  }, [selectedDate, publicationDates]);
+
+  if (!publicationDates.length) return null;
+
+  const selectPosition = (nextPosition: number) => {
+    const clamped = Math.max(0, Math.min(publicationDates.length - 1, nextPosition));
+    setPosition(clamped);
+
+    const value = format(publicationDates[clamped], "dd-MM-yyyy");
+    onSelect(selectedDate === value ? null : value);
+  };
+
+  const currentDate = publicationDates[position];
 
   return (
-    <section className="mt-10 border border-border p-5 md:p-6" aria-label="Journal calendar">
+    <section className="mt-10 border border-border p-4 md:p-5" aria-label="Journal publication timeline">
       <div className="flex items-center justify-between gap-3">
-        <div className="flex items-center gap-2">
-          <RiCalendar2Line className="size-4 text-muted-foreground" />
-          <span className="text-sm font-medium">{format(month, "MMMM yyyy")}</span>
+        <span className="text-xs uppercase tracking-[0.12em] text-muted-foreground">
+          Publications
+        </span>
+        <span className="text-sm text-foreground">
+          {format(currentDate, "d MMM yyyy")}
+        </span>
+      </div>
+
+      <div className="mt-5 flex items-center gap-3">
+        <Button
+          variant="outline"
+          size="icon-sm"
+          onClick={() => selectPosition(position - 1)}
+          disabled={position === 0}
+          aria-label="Previous publication date"
+        >
+          <RiArrowLeftSLine className="size-4" />
+        </Button>
+
+        <div className="relative h-8 flex-1">
+          <div className="absolute left-0 right-0 top-1/2 h-px -translate-y-1/2 bg-foreground/35" />
+
+          {publicationDates.map((date, index) => {
+            const left =
+              publicationDates.length === 1
+                ? 50
+                : (index / (publicationDates.length - 1)) * 100;
+            const active = index === position;
+
+            return (
+              <button
+                key={format(date, "dd-MM-yyyy")}
+                type="button"
+                aria-label={format(date, "d MMMM yyyy")}
+                onClick={() => selectPosition(index)}
+                className="absolute top-1/2 -translate-x-1/2 -translate-y-1/2"
+                style={{ left: `${left}%` }}
+              >
+                <span
+                  className={cn(
+                    "block size-2 border border-border bg-background transition-all duration-200",
+                    active && "size-8 rounded-[min(var(--radius-md),10px)] bg-secondary",
+                  )}
+                >
+                  <span className={cn("sr-only", active && "not-sr-only")}>
+                    {format(date, "d MMM yyyy")}
+                  </span>
+                </span>
+              </button>
+            );
+          })}
         </div>
-        <div className="flex items-center gap-1">
-          <Button variant="outline" size="icon-sm" onClick={() => setMonth(subMonths(month, 1))} aria-label="Previous month">
-            <RiArrowLeftSLine className="size-4" />
-          </Button>
-          <Button variant="outline" size="icon-sm" onClick={() => setMonth(addMonths(month, 1))} aria-label="Next month">
-            <RiArrowRightSLine className="size-4" />
-          </Button>
-        </div>
+
+        <Button
+          variant="outline"
+          size="icon-sm"
+          onClick={() => selectPosition(position + 1)}
+          disabled={position === publicationDates.length - 1}
+          aria-label="Next publication date"
+        >
+          <RiArrowRightSLine className="size-4" />
+        </Button>
       </div>
 
-      <div className="mt-5 grid grid-cols-7 gap-1 text-center text-xs text-muted-foreground">
-        {["Mo", "Tu", "We", "Th", "Fr", "Sa", "Su"].map((day) => <span key={day} className="py-1">{day}</span>)}
+      <div className="mt-2 flex items-center justify-between text-xs text-muted-foreground">
+        <span>{format(publicationDates[0], "d MMM yyyy")}</span>
+        <span>{publicationDates.length} {publicationDates.length === 1 ? "date" : "dates"}</span>
+        <span>{format(publicationDates[publicationDates.length - 1], "d MMM yyyy")}</span>
       </div>
 
-      <div className="mt-1 grid grid-cols-7 gap-1">
-        {cells.map((day, index) => day ? (
-          <button
-            key={index}
-            type="button"
-            disabled={!hasPost(day)}
-            onClick={() => onSelect(selectedDate === toValue(day) ? null : toValue(day))}
-            className={cn(
-              "min-h-9 rounded text-sm transition-colors",
-              hasPost(day)
-                ? "cursor-pointer text-foreground hover:bg-muted"
-                : "cursor-default text-muted-foreground/30",
-              selectedDate === toValue(day) && "bg-secondary-foreground text-secondary hover:bg-secondary-foreground",
-            )}
-          >
-            {day.getDate()}
-          </button>
-        ) : <span key={index} />)}
-      </div>
-
-      <div className="mt-4 flex items-center justify-between text-xs text-muted-foreground">
-        <span>{dates.length} {dates.length === 1 ? "publication" : "publications"}</span>
-        {selectedDate && (
-          <button type="button" className="hover:text-foreground" onClick={() => onSelect(null)}>
-            Clear date
-          </button>
-        )}
-      </div>
+      {selectedDate && (
+        <button
+          type="button"
+          className="mt-3 text-xs text-muted-foreground hover:text-foreground"
+          onClick={() => onSelect(null)}
+        >
+          Clear date
+        </button>
+      )}
     </section>
   );
 }
