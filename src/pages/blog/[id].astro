@@ -68,7 +68,8 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
     .journal-content {
         width: min(100%, 46rem);
         margin: 4rem auto 0;
-        padding: 0 1.5rem 3rem;
+        padding: 1.5rem;
+        border: 1px solid var(--border);
     }
 
     .journal-content :global(p),
@@ -110,16 +111,5 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
     .journal-content :global(hr) {
         max-width: 42rem;
         margin: 4rem auto;
-    }
-
-    @media (min-width: 768px) {
-        .journal-content {
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .journal-content :global(img) {
-            width: min(100%, 50rem);
-        }
     }
 </style>
