@@ -5,8 +5,12 @@ import { getCollection, render } from "astro:content";
 import { parse } from "date-fns";
 
 export async function getStaticPaths() {
-    const items = (await getCollection("blog")).filter((item) => !item.data.draft && item.data.category === "journal");
-    return items.map((item) => ({
+    const items = await getCollection("blog");
+    const journalItems = items.filter((item) => !item.data.draft && item.data.category === "journal");
+    const legacySample = items.find((item) => !item.data.draft && item.id === "markdown-showcase");
+    const pages = legacySample ? [...journalItems, legacySample] : journalItems;
+
+    return pages.map((item) => ({
         params: { id: item.id },
         props: { item },
     }));
@@ -26,7 +30,7 @@ const allItems = (await getCollection("blog"))
 
 const currentIndex = allItems.findIndex((i) => i.id === item.id);
 const prev = currentIndex > 0 ? allItems[currentIndex - 1] : null;
-const next = currentIndex < allItems.length - 1 ? allItems[currentIndex + 1] : null;
+const next = currentIndex >= 0 && currentIndex < allItems.length - 1 ? allItems[currentIndex + 1] : null;
 
 const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
 ---
