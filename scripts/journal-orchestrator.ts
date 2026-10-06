@@ -227,10 +227,23 @@ async function run() {
     .slice(0, 80) || "journal";
   const now = new Date();\n  const date = String(now.getUTCDate()).padStart(2, "0") + "-" + String(now.getUTCMonth() + 1).padStart(2, "0") + "-" + now.getUTCFullYear();
   const slug = `${date}-${slugBase}`;
-  const markdown = `---
+  function firstWords(text: string, count = 12): string {
+  const plain = text
+    .replace(/!\\[[^\\]]*\\]\\([^)]*\\)/g, " ")
+    .replace(/\\[[^\\]]*\\]\\([^)]*\\)/g, " ")
+    .replace(/[#>*_~`]/g, " ")
+    .replace(/\\s+/g, " ")
+    .trim();
+
+  const words = plain.split(" ").filter(Boolean);
+  if (words.length <= count) return plain;
+  return words.slice(0, count).join(" ") + "…";
+}
+
+const markdown = `---
 draft: false
 date: "${date}"
-title: "${String(task2.title).replace(/"/g, "\\\"")}"
+title: "${firstWords(String(task2.markdown), 12).replace(/"/g, "\\\"")}"
 description: "${String(task2.description).replace(/"/g, "\\\"")}"
 category: "journal"
 tags: ["archive"]
