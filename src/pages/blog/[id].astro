@@ -14,6 +14,7 @@ export async function getStaticPaths() {
 
 const { item } = Astro.props;
 const { Content } = await render(item);
+const isJournal = item.data.category === "journal";
 
 const allItems = (await getCollection("blog"))
     .filter((item) => !item.data.draft)
@@ -41,10 +42,10 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
     prev={prev}
     next={next}
 >
-    <article transition:animate="fade">
+    <article transition:animate="fade" class={isJournal ? "journal-entry" : ""}>
         <IdHeader backUrl="/blog" items={item.data} />
 
-        <div class="mt-10 prose border border-border p-6">
+        <div class={isJournal ? "journal-content" : "mt-10 prose border border-border p-6"}>
             <Content />
         </div>
     </article>
