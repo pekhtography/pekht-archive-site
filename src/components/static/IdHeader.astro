@@ -19,7 +19,7 @@ const formattedDate = format(parsedDate, "MMM dd, yyyy");
 
     <header class:list={["mt-3 select-none", isJournal ? "journal-header-inner" : ""]}>
         <h1 class:list={["font-semibold opacity-90", isJournal ? "text-5xl md:text-6xl tracking-tight" : "text-5xl"]}>{items.title}</h1>
-        <p class="text-lg text-muted-foreground mt-4 max-w-2xl">{items.description}</p>
+        <p class="text-base text-muted-foreground mt-4 max-w-2xl">{items.description}</p>
 
         {
             isJournal ? (
