@@ -5,7 +5,7 @@ import { getCollection, render } from "astro:content";
 import { parse } from "date-fns";
 
 export async function getStaticPaths() {
-    const items = (await getCollection("blog")).filter((item) => !item.data.draft);
+    const items = (await getCollection("blog")).filter((item) => !item.data.draft && item.data.category === "journal");
     return items.map((item) => ({
         params: { id: item.id },
         props: { item },
@@ -17,7 +17,7 @@ const { Content } = await render(item);
 const isJournal = item.data.category === "journal";
 
 const allItems = (await getCollection("blog"))
-    .filter((item) => !item.data.draft)
+    .filter((item) => !item.data.draft && item.data.category === "journal")
     .sort((a, b) => {
         const dateA = parse(a.data.date, "dd-MM-yyyy", new Date());
         const dateB = parse(b.data.date, "dd-MM-yyyy", new Date());
