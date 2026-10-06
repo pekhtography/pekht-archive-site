@@ -142,6 +142,8 @@ export function useFilter<T extends FilterType>(items: FilterItem<T>[], type: Fi
     handleReset,
     isFilterActive,
     allCategories,
+    selectedDate,
+    setSelectedDate,
     allTags,
     handleCategoryChange,
     handleTagToggle,
