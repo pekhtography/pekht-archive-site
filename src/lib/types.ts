@@ -56,7 +56,7 @@ export interface blogConfig {
   };
 }
 
-export type navigationType = "portfolio" | "blog";
+export type navigationType = "portfolio" | "journal" | "archive";
 
 export type subHeadingIconType = "mail" | "address" | "phone" | "web";
 export type socialIconType = "linkedin" | "instagram" | "youtube" | "facebook" | "bluesky" | "reddit" | "threads" | "mastodon" | "tumblr" | "twitter" | "x" | "discord" | "steam" | "twitch" | "medium" | "github" | "gitlab";
