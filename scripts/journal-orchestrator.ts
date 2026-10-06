@@ -224,7 +224,7 @@ async function run() {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "")
     .slice(0, 80) || "journal";
-  const date = new Date().toISOString().slice(0, 10).split("-").reverse().join("-");
+  const now = new Date();\n  const date = String(now.getUTCDate()).padStart(2, "0") + "-" + String(now.getUTCMonth() + 1).padStart(2, "0") + "-" + now.getUTCFullYear();
   const slug = `${date}-${slugBase}`;
   const markdown = `---
 draft: false
