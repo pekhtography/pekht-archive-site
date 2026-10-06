@@ -13,6 +13,7 @@ export const collections = {
       category: z.enum(["engineering", "workflow", "strategy", "devlog", "journal"]),
       tags: z.array(z.string()).optional().default([]),
       author: z.string().optional().default("Subhashis Hansda"),
+      source_ids: z.array(z.string()).optional().default([]),
     }),
   }),
 
