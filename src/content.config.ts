@@ -14,6 +14,7 @@ export const collections = {
       tags: z.array(z.string()).optional().default([]),
       author: z.string().optional().default("Subhashis Hansda"),
       source_ids: z.array(z.string()).optional().default([]),
+      facets: z.array(z.string()).optional().default([]),
     }),
   }),
 
