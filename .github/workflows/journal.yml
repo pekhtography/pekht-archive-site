@@ -1,0 +1,55 @@
+name: Journal
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "15 3 * * 1"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pekhtography-journal
+  cancel-in-progress: false
+
+jobs:
+  journal:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Generate Journal
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_FALLBACK_1: ${{ vars.GEMINI_FALLBACK_1 }}
+          GEMINI_FALLBACK_2: ${{ vars.GEMINI_FALLBACK_2 }}
+        run: pnpm journal
+
+      - name: Commit Journal entry
+        run: |
+          if git diff --quiet -- src/content/blog; then
+            echo "No new Journal entry."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add src/content/blog
+          git commit -m "feat: publish Journal entry"
+          git push origin main
