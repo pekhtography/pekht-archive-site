@@ -25,18 +25,22 @@ const rssPath = Astro.url.pathname.startsWith("/blog") ? "/blog/rss.xml" : "/rss
     {site_config.bThemeToggle && <ThemeToggle client:load />}
     {
         site_config.bRssFeed && (
-            <Button variant="outline" size="icon-xs" aria-label="rss">
-                <a
-                    id="rss-link"
-                    href={sitePath(rssPath)}
-                    data-rss-archive={sitePath("/rss.xml")}
-                    data-rss-journal={sitePath("/blog/rss.xml")}
-                    class="p-1"
-                    aria-label="rss"
-                >
-                    <RiRssLine />
-                </a>
-            </Button>
+            <Button
+                variant="outline"
+                size="icon-xs"
+                aria-label="rss"
+                render={
+                    <a
+                        id="rss-link"
+                        href={sitePath(rssPath)}
+                        data-rss-archive={sitePath("/rss.xml")}
+                        data-rss-journal={sitePath("/blog/rss.xml")}
+                        aria-label={pathname.startsWith("/blog") ? "Journal RSS" : "Archive RSS"}
+                    >
+                        <RiRssLine />
+                    </a>
+                }
+            />
         )
     }
 </div>
