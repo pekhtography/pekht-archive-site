@@ -227,23 +227,51 @@ async function run() {
     .slice(0, 80) || "journal";
   const now = new Date();\n  const date = String(now.getUTCDate()).padStart(2, "0") + "-" + String(now.getUTCMonth() + 1).padStart(2, "0") + "-" + now.getUTCFullYear();
   const slug = `${date}-${slugBase}`;
-  function firstWords(text: string, count = 12): string {
-  const plain = text
-    .replace(/!\\[[^\\]]*\\]\\([^)]*\\)/g, " ")
-    .replace(/\\[[^\\]]*\\]\\([^)]*\\)/g, " ")
-    .replace(/[#>*_~`]/g, " ")
-    .replace(/\\s+/g, " ")
-    .trim();
+  function journalHeading(text: string): string {
+    const plain = text
+      .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+      .replace(/\[[^\]]*\]\([^)]*\)/g, " ")
+      .replace(/[#>*_~`]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
 
-  const words = plain.split(" ").filter(Boolean);
-  if (words.length <= count) return plain;
-  return words.slice(0, count).join(" ") + "…";
-}
+    const words = plain.split(" ").filter(Boolean);
+    if (words.length <= 14) return plain;
+
+    const targetMin = Math.min(10, words.length);
+    const targetMax = Math.min(14, words.length);
+
+    const boundaries = new Set([".", ",", ";", ":", "—", "–"]);
+    const candidates: { text: string; count: number; distance: number }[] = [];
+
+    let position = 0;
+    for (let i = 0; i < words.length; i++) {
+      position += words[i].length + (i > 0 ? 1 : 0);
+      if (i + 1 < targetMin || i + 1 > targetMax) continue;
+
+      const nextChar = plain[position] ?? "";
+      const endChar = words[i].slice(-1);
+      if (boundaries.has(endChar) || boundaries.has(nextChar)) {
+        candidates.push({
+          text: words.slice(0, i + 1).join(" "),
+          count: i + 1,
+          distance: Math.abs((i + 1) - 12),
+        });
+      }
+    }
+
+    if (candidates.length > 0) {
+      candidates.sort((a, b) => a.distance - b.distance || a.count - b.count);
+      return candidates[0].text;
+    }
+
+    return words.slice(0, targetMax).join(" ") + "…";
+  }
 
 const markdown = `---
 draft: false
 date: "${date}"
-title: "${firstWords(String(task2.markdown), 12).replace(/"/g, "\\\"")}"
+title: "${journalHeading(String(task2.markdown)).replace(/"/g, "\\\"")}"
 description: "${String(task2.description).replace(/"/g, "\\\"")}"
 category: "journal"
 tags: ["archive"]
