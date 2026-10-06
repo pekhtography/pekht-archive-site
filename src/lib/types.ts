@@ -52,6 +52,7 @@ export interface blogConfig {
     tags: string[];
     draft?: boolean;
     author?: string;
+    facets?: string[];
   };
 }
 
