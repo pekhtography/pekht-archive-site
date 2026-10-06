@@ -2,7 +2,7 @@
 import site_config from "@/site-config.json";
 import { sitePath } from "@/lib/site-url";
 import ThemeToggle from "../client/ThemeToggle";
-import { Button } from "../ui/button";
+import { Button, buttonVariants } from "../ui/button";
 import { RiRssLine, RiSearchLine } from "@remixicon/react";
 
 const rssPath = Astro.url.pathname.startsWith("/blog") ? "/blog/rss.xml" : "/rss.xml";
@@ -25,22 +25,16 @@ const rssPath = Astro.url.pathname.startsWith("/blog") ? "/blog/rss.xml" : "/rss
     {site_config.bThemeToggle && <ThemeToggle client:load />}
     {
         site_config.bRssFeed && (
-            <Button
-                variant="outline"
-                size="icon-xs"
-                aria-label="rss"
-                render={
-                    <a
-                        id="rss-link"
-                        href={sitePath(rssPath)}
-                        data-rss-archive={sitePath("/rss.xml")}
-                        data-rss-journal={sitePath("/blog/rss.xml")}
-                        aria-label={Astro.url.pathname.startsWith("/blog") ? "Journal RSS" : "Archive RSS"}
-                    >
-                        <RiRssLine />
-                    </a>
-                }
-            />
+            <a
+                id="rss-link"
+                class={buttonVariants({ variant: "outline", size: "icon-xs" })}
+                href={sitePath(rssPath)}
+                data-rss-archive={sitePath("/rss.xml")}
+                data-rss-journal={sitePath("/blog/rss.xml")}
+                aria-label={Astro.url.pathname.startsWith("/blog") ? "Journal RSS" : "Archive RSS"}
+            >
+                <RiRssLine />
+            </a>
         )
     }
 </div>
@@ -54,6 +48,7 @@ const rssPath = Astro.url.pathname.startsWith("/blog") ? "/blog/rss.xml" : "/rss
         const journalFeed = link.dataset.rssJournal;
         const archiveFeed = link.dataset.rssArchive;
         link.href = isJournal ? (journalFeed ?? "/blog/rss.xml") : (archiveFeed ?? "/rss.xml");
+        link.setAttribute("aria-label", isJournal ? "Journal RSS" : "Archive RSS");
     };
 
     document.addEventListener("astro:page-load", updateRssLink);
