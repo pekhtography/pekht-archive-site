@@ -14,13 +14,7 @@ const journalItems = blogItems
         return bDate.getTime() - aDate.getTime();
     });
 
-const legacySamples = blogItems.filter(
-    (blog) =>
-        !blog.data.draft &&
-        ["markdown-showcase", "aureus-cli-automation"].includes(blog.id),
-);
-
-const allItems = [...journalItems, ...legacySamples];
+const allItems = journalItems;
 ---
 
 <IndexLayout title="Journal - PEKHTOGRAPHY" description="Editorial passages assembled from the archive." image="/og/default.png">
