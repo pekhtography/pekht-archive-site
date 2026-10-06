@@ -8,13 +8,19 @@ import BackButton from "@/components/static/BackButton.astro";
 export async function getStaticPaths() {
     const items = sortArchiveItems(await getCollection("archive"));
 
-    return items.map((item) => ({
+    return items.map((item, index) => ({
         params: { id: item.id },
-        props: { item },
+        props: {
+            item,
+            archiveUrl:
+                Math.floor(index / ARCHIVE_PAGE_SIZE) + 1 === 1
+                    ? "/archive"
+                    : `/archive/${Math.floor(index / ARCHIVE_PAGE_SIZE) + 1}`,
+        },
     }));
 }
 
-const { item } = Astro.props;
+const { item, archiveUrl } = Astro.props;
 const { Content } = await render(item);
 
 const allItems = sortArchiveItems(await getCollection("archive"));
@@ -28,8 +34,6 @@ const next =
         ? allItems[currentIndex + 1]
         : null;
 
-const archivePage = Math.floor(currentIndex / ARCHIVE_PAGE_SIZE) + 1;
-const archiveUrl = archivePage === 1 ? "/archive" : `/archive/${archivePage}`;
 ---
 
 <IdLayout
