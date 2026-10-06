@@ -63,7 +63,7 @@ export type socialIconType = "linkedin" | "instagram" | "youtube" | "facebook" |
 type variantType = "default" | "secondary" | "outline" | "ghost" | "destructive" | "link" | null | undefined;
 
 export type portfolioCategoryType = "robotics" | "analytics" | "gameplay" | "software" | "ai" | "hardware";
-export type blogCategoryType = "engineering" | "workflow" | "strategy" | "devlog";
+export type blogCategoryType = "engineering" | "workflow" | "strategy" | "devlog" | "journal";
 export interface archiveConfig {
   id: string;
   data: {
