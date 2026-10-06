@@ -7,8 +7,12 @@ import { parse } from "date-fns";
 export async function getStaticPaths() {
     const items = await getCollection("blog");
     const journalItems = items.filter((item) => !item.data.draft && item.data.category === "journal");
-    const legacySample = items.find((item) => !item.data.draft && item.id === "markdown-showcase");
-    const pages = legacySample ? [...journalItems, legacySample] : journalItems;
+    const legacySamples = items.filter(
+        (item) =>
+            !item.data.draft &&
+            ["markdown-showcase", "aureus-cli-automation"].includes(item.id),
+    );
+    const pages = [...journalItems, ...legacySamples];
 
     return pages.map((item) => ({
         params: { id: item.id },
