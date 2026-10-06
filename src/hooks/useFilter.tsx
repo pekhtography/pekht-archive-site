@@ -44,7 +44,7 @@ interface FilterResult<T extends FilterType> {
   setFilterOpen: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const BLOG_CATEGORIES: blogCategoryType[] = ["engineering", "workflow", "strategy", "devlog"];
+const BLOG_CATEGORIES: blogCategoryType[] = ["journal", "engineering", "workflow", "strategy", "devlog"];
 const PORTFOLIO_CATEGORIES: portfolioCategoryType[] = ["robotics", "analytics", "gameplay", "software", "ai"];
 
 function getItemTags<T extends FilterType>(item: FilterItem<T>): string[] {
