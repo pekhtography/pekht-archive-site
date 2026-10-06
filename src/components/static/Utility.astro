@@ -26,10 +26,23 @@ const rssPath = Astro.url.pathname.startsWith("/blog") ? "/blog/rss.xml" : "/rss
     {
         site_config.bRssFeed && (
             <Button variant="outline" size="icon-xs" aria-label="rss">
-                <a href={sitePath(rssPath)} class="p-1" aria-label="rss">
+                <a id="rss-link" href={sitePath(rssPath)} class="p-1" aria-label="rss">
                     <RiRssLine />
                 </a>
             </Button>
         )
     }
 </div>
+
+<script>
+    const updateRssLink = () => {
+        const link = document.querySelector<HTMLAnchorElement>("#rss-link");
+        if (!link) return;
+
+        const isJournal = window.location.pathname.includes("/blog");
+        link.href = isJournal ? "/blog/rss.xml" : "/rss.xml";
+    };
+
+    document.addEventListener("astro:page-load", updateRssLink);
+    updateRssLink();
+</script>
