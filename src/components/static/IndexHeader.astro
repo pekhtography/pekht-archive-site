@@ -11,7 +11,7 @@ const { url, heading, description, variant, archiveMode } = Astro.props;
 
     {
         description && (
-            <p class={variant === "archive" ? "mt-3 max-w-3xl text-lg text-muted-foreground whitespace-pre-line" : "mt-4 max-w-prose text-base leading-relaxed text-secondary-foreground/80"}>
+            <p class={variant === "archive" || variant === "journal" ? "mt-3 max-w-3xl text-lg text-muted-foreground whitespace-pre-line" : "mt-4 max-w-prose text-base leading-relaxed text-secondary-foreground/80"}>
                 {description}
             </p>
         )
