@@ -177,21 +177,23 @@ export function FilterControls<T extends FilterType>({ filter }: FilterControlsP
           }
         ></PopoverTrigger>
         <PopoverContent align="end" className="flex w-50 flex-col gap-3 p-3 -translate-y-9" sideOffset={4}>
-          <div className="flex flex-col gap-2">
-            <p className="text-xs font-medium text-muted-foreground">Category</p>
-            <div className="flex flex-wrap gap-1.5">
-              {allCategories.map((cat) => (
-                <button key={cat} type="button" onClick={() => handleCategoryChange(cat as CategoryFilterType)} className={cn("cursor-pointer text-xs px-2 py-0.5 rounded border border-border", category === cat ? "bg-secondary-foreground text-secondary" : "bg-transparent text-muted-foreground hover:bg-muted")}>
-                  {cat}
-                </button>
-              ))}
+          {type !== "blog" && (
+            <div className="flex flex-col gap-2">
+              <p className="text-xs font-medium text-muted-foreground">Category</p>
+              <div className="flex flex-wrap gap-1.5">
+                {allCategories.map((cat) => (
+                  <button key={cat} type="button" onClick={() => handleCategoryChange(cat as CategoryFilterType)} className={cn("cursor-pointer text-xs px-2 py-0.5 rounded border border-border", category === cat ? "bg-secondary-foreground text-secondary" : "bg-transparent text-muted-foreground hover:bg-muted")}>
+                    {cat}
+                  </button>
+                ))}
+              </div>
             </div>
-          </div>
+          )}
 
           <div className="flex flex-col gap-2">
             <div className="flex items-center justify-between">
-              <p className="text-xs font-medium text-muted-foreground">Tags</p>
-              <Checkbox checked={allTagsSelected} indeterminate={someTagsSelected} onCheckedChange={(checked) => handleToggleAllTags(checked === true)} />
+              <p className="text-xs font-medium text-muted-foreground">{type === "blog" ? "Filter" : "Tags"}</p>
+              {type !== "blog" && <Checkbox checked={allTagsSelected} indeterminate={someTagsSelected} onCheckedChange={(checked) => handleToggleAllTags(checked === true)} />}
             </div>
             <div className="max-h-32 overflow-y-auto overflow-x-hidden no-scrollbar pr-1">
               {allTags.map((tag) => (
