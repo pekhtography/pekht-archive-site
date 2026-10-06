@@ -12,6 +12,12 @@ import { sitePath } from "@/lib/site-url";
 
 const { pathname } = Astro.props;
 const isCurrent = (href: string) => pathname === href;
+const itemPath = (item: string) =>
+  item === "archive"
+    ? "/archive/explore"
+    : item === "journal"
+      ? "/blog"
+      : `/${item}`;
 ---
 
 {
@@ -24,23 +30,27 @@ const isCurrent = (href: string) => pathname === href;
             {isCurrent("/") ? (
               <BreadcrumbPage>{site_config.homeLabel}</BreadcrumbPage>
             ) : (
-              <BreadcrumbLink href={sitePath("/") }>{site_config.homeLabel}</BreadcrumbLink>
+              <BreadcrumbLink href={sitePath("/")}>{site_config.homeLabel}</BreadcrumbLink>
             )}
           </BreadcrumbItem>
 
           {site_config.navigationItems &&
-            site_config.navigationItems.map((item) => (
-              <>
-                <BreadcrumbSeparator>•</BreadcrumbSeparator>
-                <BreadcrumbItem>
-                  {pathname.startsWith(item === "archive" ? sitePath("/archive/explore") : sitePath(`/${item}`)) ? (
-                    <BreadcrumbPage>{item}</BreadcrumbPage>
-                  ) : (
-                    <BreadcrumbLink href={item === "archive" ? sitePath("/archive/explore") : sitePath(`/${item}`)}>{item}</BreadcrumbLink>
-                  )}
-                </BreadcrumbItem>
-              </>
-            ))}
+            site_config.navigationItems.map((item) => {
+              const href = sitePath(itemPath(item));
+
+              return (
+                <>
+                  <BreadcrumbSeparator>•</BreadcrumbSeparator>
+                  <BreadcrumbItem>
+                    {pathname.startsWith(href) ? (
+                      <BreadcrumbPage>{item}</BreadcrumbPage>
+                    ) : (
+                      <BreadcrumbLink href={href}>{item}</BreadcrumbLink>
+                    )}
+                  </BreadcrumbItem>
+                </>
+              );
+            })}
         </BreadcrumbList>
       </Breadcrumb>
     </>
