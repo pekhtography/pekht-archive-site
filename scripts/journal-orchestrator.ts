@@ -128,9 +128,10 @@ const task2Schema = {
     description: { type: "STRING" },
     source_ids: { type: "ARRAY", items: { type: "STRING" } },
     markdown: { type: "STRING" },
-    reason: { type: "STRING" }
+    reason: { type: "STRING" },
+    facets: { type: "ARRAY", items: { type: "STRING" } }
   },
-  required: ["status", "candidate_id", "title", "description", "source_ids", "markdown", "reason"]
+  required: ["status", "candidate_id", "title", "description", "source_ids", "markdown", "reason", "facets"]
 };
 
 const task3Schema = {
