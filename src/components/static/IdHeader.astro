@@ -5,36 +5,50 @@ import ShareButton from "../client/ShareButton.tsx";
 import { parse, format } from "date-fns";
 
 const { backUrl, items } = Astro.props;
+const isJournal = items.category === "journal";
 
 const parsedDate = parse(items.date, "dd-MM-yyyy", new Date());
 const formattedDate = format(parsedDate, "MMM dd, yyyy");
 ---
 
-<div class="border border-border mt-10 p-6">
+<div class:list={[
+    "mt-10",
+    isJournal ? "journal-header" : "border border-border p-6"
+]}>
     <BackButton url={backUrl} />
 
-    <header class="mt-3 select-none">
-        <h1 class="text-5xl font-semibold opacity-90">{items.title}</h1>
-        <p class="text-lg text-muted-foreground mt-3">{items.description}</p>
-
-        <div class="flex items-center gap-3 mt-3 text-sm text-muted-foreground">
-            <div class="flex items-center gap-3 mr-3">
-                <RiCalendar2Line className="size-4" />
-                <span>{formattedDate}</span>
-            </div>
-            <span class="text-xs px-2 py-0.5 border border-muted-foreground/30 text-muted-foreground rounded uppercase mr-1">
-                {items.category}
-            </span>
-            <ShareButton client:load />
-        </div>
+    <header class:list={["mt-3 select-none", isJournal ? "journal-header-inner" : ""]}>
+        <h1 class:list={["font-semibold opacity-90", isJournal ? "text-5xl md:text-6xl tracking-tight" : "text-5xl"]}>{items.title}</h1>
+        <p class="text-lg text-muted-foreground mt-4 max-w-2xl">{items.description}</p>
 
         {
-            items.tags && items.tags.length > 0 && (
-                <div class="flex gap-2 mt-4 flex-wrap">
-                    {items.tags.map((tag: string) => (
-                        <span class="text-xs px-3 py-1 bg-muted text-muted-foreground rounded">{tag}</span>
-                    ))}
+            isJournal ? (
+                <div class="mt-5">
+                    <ShareButton client:load />
                 </div>
+            ) : (
+                <>
+                    <div class="flex items-center gap-3 mt-3 text-sm text-muted-foreground">
+                        <div class="flex items-center gap-3 mr-3">
+                            <RiCalendar2Line className="size-4" />
+                            <span>{formattedDate}</span>
+                        </div>
+                        <span class="text-xs px-2 py-0.5 border border-muted-foreground/30 text-muted-foreground rounded uppercase mr-1">
+                            {items.category}
+                        </span>
+                        <ShareButton client:load />
+                    </div>
+
+                    {
+                        items.tags && items.tags.length > 0 && (
+                            <div class="flex gap-2 mt-4 flex-wrap">
+                                {items.tags.map((tag: string) => (
+                                    <span class="text-xs px-3 py-1 bg-muted text-muted-foreground rounded">{tag}</span>
+                                ))}
+                            </div>
+                        )
+                    }
+                </>
             )
         }
     </header>
