@@ -17,7 +17,7 @@ export class ProviderError extends Error {
 function models(): string[] {
   return [
     process.env.GEMINI_MODEL || "gemini-3.8-flash",
-    process.env.GEMINI_FALLBACK_1 || "gemini-3.7-flash",
+    process.env.GEMINI_FALLBACK_1 || "gemini-3.5-flash",
     process.env.GEMINI_FALLBACK_2 || "gemini-2.5-flash",
   ].filter(Boolean);
 }
@@ -34,12 +34,8 @@ async function requestModel(model: string, prompt: string, schema: JsonSchema): 
   const body = {
     contents: [{ role: "user", parts: [{ text: prompt }] }],
     generationConfig: {
-      responseFormat: {
-        text: {
-          mimeType: "application/json",
-          schema,
-        },
-      },
+      responseMimeType: "application/json",
+      responseSchema: schema,
     },
   };
 
