@@ -36,6 +36,8 @@ interface FilterResult<T extends FilterType> {
   handleReset: () => void;
   isFilterActive: boolean;
   allCategories: CategoryFilterType[];
+  selectedDate: string | null;
+  setSelectedDate: React.Dispatch<React.SetStateAction<string | null>>;
   allTags: string[];
   handleCategoryChange: (cat: blogCategoryType | portfolioCategoryType) => void;
   handleTagToggle: (tag: string) => void;
@@ -60,8 +62,9 @@ export function useFilter<T extends FilterType>(items: FilterItem<T>[], type: Fi
   const [selectedTags, setSelectedTags] = React.useState<string[]>([]);
   const [sortOrder, setSortOrder] = React.useState<"asc" | "desc">("desc");
   const [filterOpen, setFilterOpen] = React.useState(false);
+  const [selectedDate, setSelectedDate] = React.useState<string | null>(null);
 
-  const allCategories = type === "blog" ? BLOG_CATEGORIES : PORTFOLIO_CATEGORIES;
+  const allCategories = React.useMemo(() => Array.from(new Set(items.map((item) => getItemCategory(item)).filter(Boolean))) as CategoryFilterType[], [items]);
 
   const allTags = React.useMemo(() => {
     const tagSet = new Set<string>();
@@ -76,7 +79,7 @@ export function useFilter<T extends FilterType>(items: FilterItem<T>[], type: Fi
     return Array.from(tagSet).sort();
   }, [items]);
 
-  const isFilterActive = category !== null || selectedTags.length > 0;
+  const isFilterActive = category !== null || selectedTags.length > 0 || selectedDate !== null;
 
   const filteredAndSortedItems = React.useMemo(() => {
     if (!items || !Array.isArray(items)) {
@@ -95,6 +98,10 @@ export function useFilter<T extends FilterType>(items: FilterItem<T>[], type: Fi
       });
     }
 
+    if (selectedDate !== null) {
+      result = result.filter((item) => item.data.date === selectedDate);
+    }
+
     result.sort((a, b) => {
       const dateA = parse(a.data.date, "dd-MM-yyyy", new Date());
       const dateB = parse(b.data.date, "dd-MM-yyyy", new Date());
@@ -102,11 +109,12 @@ export function useFilter<T extends FilterType>(items: FilterItem<T>[], type: Fi
     });
 
     return result;
-  }, [items, category, selectedTags, sortOrder]);
+  }, [items, category, selectedTags, selectedDate, sortOrder]);
 
   const handleReset = () => {
     setCategory(null);
     setSelectedTags([]);
+    setSelectedDate(null);
     setSortOrder("desc");
   };
 
