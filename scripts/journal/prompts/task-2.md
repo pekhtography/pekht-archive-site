@@ -22,3 +22,11 @@ Rules:
 - The EXIT must create or reveal a resulting state; it cannot merely be the last selected source.
 
 Return JSON matching the supplied schema.
+
+PUBLIC JOURNAL FILTER FACETS:
+- Return 2–5 short, concrete, normalized facets that describe the real thread running through the completed Journal.
+- Facets are the public filter values, not internal editorial labels such as ENTRY, EXIT, HERO, ARC or scores.
+- Derive facets from the assembled whole and source evidence. Do not invent generic categories merely to fill the field.
+- Prefer stable concepts such as a recurring subject, state, mood, process, relation, phenomenon or movement.
+- Avoid near-duplicates, synonyms and overly specific one-off details.
+- If no meaningful public facet is justified, return an empty array.
