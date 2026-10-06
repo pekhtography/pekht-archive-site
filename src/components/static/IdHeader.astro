@@ -19,15 +19,31 @@ const formattedDate = format(parsedDate, "MMM dd, yyyy");
 
     <header class:list={["mt-3 select-none", isJournal ? "journal-header-inner" : ""]}>
         <h1 class:list={["font-semibold opacity-90", isJournal ? "text-5xl md:text-6xl tracking-tight" : "text-5xl"]}>{items.title}</h1>
-        <p class="text-base text-muted-foreground mt-4 max-w-2xl">{items.description}</p>
 
         {
             isJournal ? (
-                <div class="mt-5">
+                <div class="flex flex-wrap items-center gap-3 mt-4 text-sm text-muted-foreground">
+                    <div class="flex items-center gap-3 mr-3">
+                        <RiCalendar2Line className="size-4" />
+                        <span>{formattedDate}</span>
+                    </div>
+
+                    {
+                        items.facets && items.facets.length > 0 && (
+                            <div class="flex flex-wrap gap-2">
+                                {items.facets.map((facet: string) => (
+                                    <span class="text-xs px-3 py-1 bg-muted text-muted-foreground rounded">{facet}</span>
+                                ))}
+                            </div>
+                        )
+                    }
+
                     <ShareButton client:load />
                 </div>
             ) : (
                 <>
+                    <p class="text-base text-muted-foreground mt-4 max-w-2xl">{items.description}</p>
+
                     <div class="flex items-center gap-3 mt-3 text-sm text-muted-foreground">
                         <div class="flex items-center gap-3 mr-3">
                             <RiCalendar2Line className="size-4" />
