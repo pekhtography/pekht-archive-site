@@ -35,7 +35,7 @@ const rssPath = Astro.url.pathname.startsWith("/blog") ? "/blog/rss.xml" : "/rss
                         href={sitePath(rssPath)}
                         data-rss-archive={sitePath("/rss.xml")}
                         data-rss-journal={sitePath("/blog/rss.xml")}
-                        aria-label={pathname.startsWith("/blog") ? "Journal RSS" : "Archive RSS"}
+                        aria-label={Astro.url.pathname.startsWith("/blog") ? "Journal RSS" : "Archive RSS"}
                     >
                         <RiRssLine />
                     </a>
