@@ -80,9 +80,14 @@ for (const candidate of candidates) {
     imported += 1;
     console.log("Imported.");
   } catch (error) {
-    failed += 1;
     const message = error instanceof Error ? error.message : String(error);
-    console.error("IMPORT ERROR: " + message);
+
+    if (message.includes("No photo found in this post.")) {
+      console.log("Skipped: no photo found in this post.");
+    } else {
+      failed += 1;
+      console.error("IMPORT ERROR: " + message);
+    }
   }
   console.log("");
 }
