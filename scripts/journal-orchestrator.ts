@@ -236,6 +236,7 @@ category: "journal"
 tags: ["archive"]
 author: "PEKHTOGRAPHY"
 source_ids: [${task2.source_ids.map((id: string) => JSON.stringify(id)).join(", ")}]
+facets: [${(Array.isArray(task2.facets) ? task2.facets : []).map((facet: string) => JSON.stringify(facet)).join(", ")}]
 ---
 
 ${String(task2.markdown).trim()}
