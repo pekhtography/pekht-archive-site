@@ -3,10 +3,11 @@
 import { BlogCard } from "@/components/client/BlogCard";
 import type { blogConfig } from "@/lib/types";
 import { FilterControls, useFilter } from "@/hooks/useFilter";
+import JournalCalendar from "@/components/client/JournalCalendar";
 
 export default function FilterBlog({ items }: { items: blogConfig[] }) {
   const filter = useFilter(items, "blog");
-  const { filteredAndSortedItems } = filter;
+  const { filteredAndSortedItems, selectedDate, setSelectedDate } = filter;
 
   return (
     <div className="flex flex-col gap-3 animation">
@@ -23,6 +24,12 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
           ))}
         </div>
       )}
+
+      <JournalCalendar
+        dates={items.map((item) => item.data.date)}
+        selectedDate={selectedDate}
+        onSelect={setSelectedDate}
+      />
     </div>
   );
 }
