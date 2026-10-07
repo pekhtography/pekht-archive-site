@@ -58,8 +58,7 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add src/content/blog
           git commit -m "feat: publish Journal entry"
-          # aureus' commit-msg hook performs the version bump and push.
-          # Do not push again here: a second push races with the hook's push.
+          git push origin main
           echo "published=true" >> "$GITHUB_OUTPUT"
 
       - name: Trigger site deployment
