@@ -1,5 +1,6 @@
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
+import { sortExploreItems } from "../src/lib/explore-sort.ts";
 import { generateJson } from "./journal/provider.ts";
 
 type ArchivePost = {
@@ -86,37 +87,34 @@ const task1Schema = {
   type: "OBJECT",
   properties: {
     status: { type: "STRING", enum: ["OK", "NO_JOURNAL"] },
-    candidates: {
-      type: "ARRAY",
-      items: {
-        type: "OBJECT",
-        properties: {
-          id: { type: "STRING" },
-          vector: { type: "STRING" },
-          hero: { type: "STRING" },
-          entry_id: { type: "STRING" },
-          exit_id: { type: "STRING" },
-          source_ids: { type: "ARRAY", items: { type: "STRING" } },
-          emergent_whole: { type: "STRING" },
-          evidence: { type: "ARRAY", items: { type: "STRING" } },
-          scores: {
-            type: "OBJECT",
-            properties: {
-              emergent_whole: { type: "NUMBER" },
-              arc: { type: "NUMBER" },
-              necessity: { type: "NUMBER" },
-              minimality: { type: "NUMBER" },
-              preservation: { type: "NUMBER" },
-              ending: { type: "NUMBER" }
-            },
-            required: ["emergent_whole", "arc", "necessity", "minimality", "preservation", "ending"]
-          }
-        },
-        required: ["id", "vector", "hero", "entry_id", "exit_id", "source_ids", "emergent_whole", "evidence", "scores"]
-      }
+    candidate: {
+      type: "OBJECT",
+      properties: {
+        id: { type: "STRING" },
+        vector: { type: "STRING" },
+        hero: { type: "STRING" },
+        entry_id: { type: "STRING" },
+        exit_id: { type: "STRING" },
+        source_ids: { type: "ARRAY", items: { type: "STRING" } },
+        emergent_whole: { type: "STRING" },
+        evidence: { type: "ARRAY", items: { type: "STRING" } },
+        scores: {
+          type: "OBJECT",
+          properties: {
+            emergent_whole: { type: "NUMBER" },
+            arc: { type: "NUMBER" },
+            necessity: { type: "NUMBER" },
+            minimality: { type: "NUMBER" },
+            preservation: { type: "NUMBER" },
+            ending: { type: "NUMBER" }
+          },
+          required: ["emergent_whole", "arc", "necessity", "minimality", "preservation", "ending"]
+        }
+      },
+      required: ["id", "vector", "hero", "entry_id", "exit_id", "source_ids", "emergent_whole", "evidence", "scores"]
     }
   },
-  required: ["status", "candidates"]
+  required: ["status", "candidate"]
 };
 
 const task2Schema = {
@@ -158,30 +156,36 @@ async function run() {
     return;
   }
 
-  // Journal discovery works from a stratified sample of the current archive.
-  // The archive is first put into the same deterministic A–Z order used by
-  // the public Archive, then divided into TARGET_SAMPLE_SIZE contiguous zones.
-  // Each zone contributes exactly one random representative. Thus every
-  // part of the archive has equal probability of entering discovery.
+  // Journal discovery uses the current Explore sequence, not the public A–Z archive order.
+  // The sequence is divided into up to 1000 contiguous zones and one representative
+  // is selected from each zone. This gives DISCOVER broad coverage of the same
+  // semantic space that users see in Explore.
   const TARGET_SAMPLE_SIZE = 1000;
-  const MAX_DISCOVERY_ROUNDS = 2;
+  const RUN_BUDGET_MS = 105 * 60 * 1000;
+  const startedAt = Date.now();
+
+  function ensureBudget(stage: string) {
+    if (Date.now() - startedAt >= RUN_BUDGET_MS) {
+      throw new Error(`JOURNAL_BUDGET_EXCEEDED during ${stage}`);
+    }
+  }
 
   function stratifiedSample(posts: ArchivePost[], target: number): ArchivePost[] {
-    const ordered = [...posts].sort((a, b) => {
-      const ka = a.body.match(/[\p{L}\p{N}]/u)?.index;
-      const kb = b.body.match(/[\p{L}\p{N}]/u)?.index;
-      const sa = ka === undefined ? a.body.toLocaleLowerCase() : a.body.slice(ka).toLocaleLowerCase();
-      const sb = kb === undefined ? b.body.toLocaleLowerCase() : b.body.slice(kb).toLocaleLowerCase();
-      return sa.localeCompare(sb) || a.source_id.localeCompare(b.source_id);
-    });
+    const exploreInput = posts.map((post) => ({
+      id: post.source_id,
+      body: post.body,
+      data: { tags: post.hashtags },
+      post,
+    }));
 
-    const sampleSize = Math.min(target, ordered.length);
+    const explored = sortExploreItems(exploreInput).map((item) => item.post);
+    const sampleSize = Math.min(target, explored.length);
     const sampled: ArchivePost[] = [];
 
     for (let i = 0; i < sampleSize; i += 1) {
-      const start = Math.floor((i * ordered.length) / sampleSize);
-      const end = Math.floor(((i + 1) * ordered.length) / sampleSize);
-      const zone = ordered.slice(start, Math.max(start + 1, end));
+      const start = Math.floor((i * explored.length) / sampleSize);
+      const end = Math.floor(((i + 1) * explored.length) / sampleSize);
+      const zone = explored.slice(start, Math.max(start + 1, end));
       sampled.push(zone[Math.floor(Math.random() * zone.length)]);
     }
 
@@ -191,109 +195,124 @@ async function run() {
   const eligibleArchive = archive.filter((post) => !used.has(post.source_id));
   const sampled = stratifiedSample(eligibleArchive, TARGET_SAMPLE_SIZE);
 
-  function compactSnapshot(posts: ArchivePost[], usedIds: Set<string>): string {
-    return posts
-      .filter((p) => !usedIds.has(p.source_id))
-      .map((p) => [
-        `SOURCE_ID: ${p.source_id}`,
-        `X_ID: ${p.x_id}`,
-        `DATE: ${p.created_at}`,
-        `TITLE: ${p.title}`,
-        `HASHTAGS: ${p.hashtags.join(" ")}`,
-        `TEXT:\n${p.body}`,
-      ].join("\n"))
-      .join("\n\n---\n\n");
-  }
-
   const snapshot = compactSnapshot(sampled, used);
   if (!snapshot.trim()) {
     console.log("NO_JOURNAL: sampled archive snapshot is empty.");
     return;
   }
 
+  const snapshotIds = new Set(sampled.map((post) => post.source_id));
   const sourceMap = new Map(archive.map((p) => [p.source_id, p]));
 
-  const scoreCandidate = (candidate: any) =>
-    Object.values(candidate.scores ?? {}).reduce((sum: number, value: any) => sum + Number(value || 0), 0);
+  const sourcesFor = (ids: string[]) => {
+    const unique = [...new Set(ids)];
+    return unique
+      .map((id) => sourceMap.get(id))
+      .filter((p): p is ArchivePost => Boolean(p))
+      .map((p) => `SOURCE_ID: ${p.source_id}\nTITLE: ${p.title}\nTEXT:\n${p.body}`)
+      .join("\n\n---\n\n");
+  };
 
-  const rankCandidates = (candidates: any[]) =>
-    candidates
-      .filter((candidate) => candidate && typeof candidate.id === "string")
-      .sort((a, b) => scoreCandidate(b) - scoreCandidate(a))
-      .slice(0, 3);
+  // Working state for this run only. It is deliberately not persisted.
+  // It prevents DISCOVER from retrying a candidate that has already failed
+  // definitively during the same run. The persistent Journal memory remains
+  // the source_ids recorded in published Journal entries.
+  const rejectedThisRun = new Set<string>();
 
-  const sourcesFor = (ids: string[]) => ids
-    .map((id) => sourceMap.get(id))
-    .filter(Boolean)
-    .map((p: any) => `SOURCE_ID: ${p.source_id}\nTITLE: ${p.title}\nTEXT:\n${p.body}`)
-    .join("\n\n---\n\n");
+  while (true) {
+    ensureBudget("DISCOVER");
 
-  let rejectedCandidateIds: string[] = [];
-
-  for (let discoveryRound = 0; discoveryRound < MAX_DISCOVERY_ROUNDS; discoveryRound += 1) {
-    const discoveryInstruction = rejectedCandidateIds.length
-      ? `\n\nPREVIOUS CANDIDATES ALREADY REJECTED: ${rejectedCandidateIds.join(", ")}\nDo not return those candidates again. Find genuinely different alternatives from the supplied snapshot.`
+    const discoveryInstruction = rejectedThisRun.size
+      ? `\n\nPREVIOUS CANDIDATES ALREADY REJECTED IN THIS RUN: ${[...rejectedThisRun].join(", ")}\nDo not return any of them. Find a genuinely different candidate from the supplied snapshot.`
       : "";
 
     const task1 = await generateJson(
-      `${await prompt("task-1.md")}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
+      `${await prompt("task-1.md")}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
       task1Schema,
     );
 
-    if (task1.status !== "OK" || !Array.isArray(task1.candidates)) {
-      console.log("NO_JOURNAL: discovery found no viable candidates.");
+    ensureBudget("DISCOVER response");
+
+    if (task1.status !== "OK" || !task1.candidate || typeof task1.candidate.id !== "string") {
+      console.log("NO_JOURNAL: discovery found no viable candidate.");
       return;
     }
 
-    const candidates = rankCandidates(task1.candidates);
-    if (!candidates.length) {
-      console.log("NO_JOURNAL: discovery found no viable candidates.");
-      return;
+    const selected = task1.candidate;
+    const selectedId = String(selected.id);
+
+    if (rejectedThisRun.has(selectedId)) {
+      console.log(`RETURN: DISCOVER repeated rejected candidate ${selectedId}; retrying discovery.`);
+      continue;
     }
 
-    // Keep rejected candidate IDs across discovery rounds so Stage 3 → Stage 1
-    // cannot rediscover the same failed candidate set.
-    // Stage 2 failures return to Stage 1, as required by the Journal state machine.
-    // Stage 3 failures first try the next candidate from the current discovery.
-    for (let candidateIndex = 0; candidateIndex < candidates.length; candidateIndex += 1) {
-      const selected = candidates[candidateIndex];
+    const candidateSourceIds = Array.isArray(selected.source_ids)
+      ? selected.source_ids.map(String)
+      : [];
+    const candidateSourcesValid =
+      candidateSourceIds.length > 0 &&
+      candidateSourceIds.every((id) => snapshotIds.has(id)) &&
+      snapshotIds.has(String(selected.entry_id)) &&
+      snapshotIds.has(String(selected.exit_id));
 
-      let task2 = await generateJson(
-        `${await prompt("task-2.md")}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(selected.source_ids)}`,
+    if (!candidateSourcesValid) {
+      rejectedThisRun.add(selectedId);
+      console.log(`RETURN: DISCOVER candidate ${selectedId} failed source validation.`);
+      continue;
+    }
+
+    let currentMontage: any = null;
+    let lastRevisionInstruction = "";
+    const seenMontages = new Set<string>();
+
+    while (true) {
+      ensureBudget(currentMontage ? "REVISION/SELECT-MONTAGE" : "SELECT-MONTAGE");
+
+      const task2 = await generateJson(
+        currentMontage
+          ? `${await prompt("task-2.md")}\n\nREVISION MODE: Preserve the proven candidate vector. You may add, remove, replace, or reorder source posts from the supplied snapshot when that is the smallest justified change. Do not leave the supplied snapshot.\n\nREVISION REQUIRED:\n${lastRevisionInstruction}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`
+          : `${await prompt("task-2.md")}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`,
         task2Schema,
       );
 
-      if (task2.status !== "OK") {
-        rejectedCandidateIds.push(String(selected.id));
-        console.log(`RETURN: TASK_2 rejected candidate ${selected.id}: ${task2.reason}`);
+      ensureBudget("SELECT-MONTAGE response");
+
+      const montageSourceIds = Array.isArray(task2.source_ids)
+        ? task2.source_ids.map(String)
+        : [];
+      const montageSourcesValid =
+        task2.status === "OK" &&
+        montageSourceIds.length > 0 &&
+        montageSourceIds.every((id) => snapshotIds.has(id));
+
+      if (!montageSourcesValid) {
+        rejectedThisRun.add(selectedId);
+        console.log(`RETURN: TASK_2 rejected candidate ${selectedId}: missing or invalid source_ids.`);
         break;
       }
 
-      let task3 = await generateJson(
-        `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nTASK 2 JOURNAL:\n${JSON.stringify(task2, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(task2.source_ids)}`,
+      const montageSignature = JSON.stringify({
+        source_ids: [...new Set(montageSourceIds)].sort(),
+        markdown: String(task2.markdown ?? "").trim(),
+      });
+
+      if (seenMontages.has(montageSignature)) {
+        rejectedThisRun.add(selectedId);
+        console.log(`RETURN: candidate ${selectedId} stagnated: identical montage repeated.`);
+        break;
+      }
+      seenMontages.add(montageSignature);
+      currentMontage = task2;
+
+      const task3 = await generateJson(
+        `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT JOURNAL MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nSOURCE TEXTS USED BY CURRENT MONTAGE:\n${sourcesFor(montageSourceIds)}`,
         task3Schema,
       );
 
-      if (task3.verdict === "REVISION") {
-        task2 = await generateJson(
-          `${await prompt("task-2.md")}\n\nREVISION REQUIRED:\n${task3.revision}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT MONTAGE:\n${JSON.stringify(task2, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(selected.source_ids)}`,
-          task2Schema,
-        );
-
-        if (task2.status !== "OK") {
-          rejectedCandidateIds.push(String(selected.id));
-          console.log(`RETURN: revised TASK_2 rejected candidate ${selected.id}: ${task2.reason}`);
-          break;
-        }
-
-        task3 = await generateJson(
-          `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nREVISED JOURNAL:\n${JSON.stringify(task2, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(task2.source_ids)}`,
-          task3Schema,
-        );
-      }
+      ensureBudget("TEST response");
 
       if (task3.verdict === "STRONG") {
-        const slugBase = String(task2.title || "journal")
+        const slugBase = String(currentMontage.title || "journal")
           .toLowerCase()
           .replace(/[^a-z0-9]+/g, "-")
           .replace(/^-|-$/g, "")
@@ -345,16 +364,16 @@ async function run() {
         const markdown = `---
 draft: false
 date: "${date}"
-title: "${journalHeading(String(task2.markdown)).replace(/"/g, "\\\"")}"
-description: "${String(task2.description).replace(/"/g, "\\\"")}"
+title: "${journalHeading(String(currentMontage.markdown)).replace(/"/g, "\\\"")}"
+description: "${String(currentMontage.description).replace(/"/g, "\\\"")}"
 category: "journal"
 tags: ["archive"]
 author: "PEKHTOGRAPHY"
-source_ids: [${task2.source_ids.map((id: string) => JSON.stringify(id)).join(", ")}]
-facets: [${(Array.isArray(task2.facets) ? task2.facets : []).map((facet: string) => JSON.stringify(facet)).join(", ")}]
+source_ids: [${montageSourceIds.map((id: string) => JSON.stringify(id)).join(", ")}]
+facets: [${(Array.isArray(currentMontage.facets) ? currentMontage.facets : []).map((facet: string) => JSON.stringify(facet)).join(", ")}]
 ---
 
-${String(task2.markdown).trim()}
+${String(currentMontage.markdown).trim()}
 `;
 
         await writeFile(join(BLOG_DIR, `${slug}.md`), markdown, "utf8");
@@ -362,12 +381,22 @@ ${String(task2.markdown).trim()}
         return;
       }
 
-      rejectedCandidateIds.push(String(selected.id));
-      console.log(`${task3.verdict}: candidate ${selected.id}: ${task3.reason}`);
-    }
+      if (task3.verdict === "REVISION") {
+        const revision = String(task3.revision ?? "").trim();
+        if (!revision || revision === lastRevisionInstruction) {
+          rejectedThisRun.add(selectedId);
+          console.log(`RETURN: candidate ${selectedId} stagnated: repeated revision instruction.`);
+          break;
+        }
+        lastRevisionInstruction = revision;
+        console.log(`REVISION: candidate ${selectedId}; continuing same candidate.`);
+        continue;
+      }
 
-    if (!rejectedCandidateIds.length) break;
-    console.log(`RETURN: discovery after candidate set exhausted. Round ${discoveryRound + 1}/${MAX_DISCOVERY_ROUNDS}.`);
+      rejectedThisRun.add(selectedId);
+      console.log(`RETURN: candidate ${selectedId} rejected by TEST: ${task3.reason}`);
+      break;
+    }
   }
 
   console.log("NO_JOURNAL: all discovery/selection/validation paths exhausted.");
