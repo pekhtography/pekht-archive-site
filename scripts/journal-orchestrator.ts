@@ -282,6 +282,7 @@ async function run() {
         : [];
       const montageSourcesValid =
         task2.status === "OK" &&
+        String(task2.candidate_id ?? "") === selectedId &&
         montageSourceIds.length > 0 &&
         montageSourceIds.every((id) => snapshotIds.has(id));
 
