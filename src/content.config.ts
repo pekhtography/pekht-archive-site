@@ -15,6 +15,22 @@ export const collections = {
       author: z.string().optional().default("Subhashis Hansda"),
       source_ids: z.array(z.string()).optional().default([]),
       facets: z.array(z.string()).optional().default([]),
+      composition: z.array(
+        z.union([
+          z.object({
+            type: z.literal("source"),
+            source_id: z.string(),
+            text: z.string(),
+            image_side: z.enum(["left", "right"]),
+            image_size: z.enum(["small", "medium", "large"]),
+            text_offset: z.enum(["up", "center", "down"]),
+          }),
+          z.object({
+            type: z.literal("bridge"),
+            text: z.string(),
+          }),
+        ]),
+      ).optional().default([]),
     }),
   }),
 
