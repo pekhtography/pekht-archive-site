@@ -25,6 +25,7 @@ Return JSON matching the supplied schema. Evidence must be concrete and source-l
 
 DISCOVERY INPUT:
 - The archive snapshot is a stratified sample of the currently eligible archive, not a ranking of the best posts.
-- It contains up to 1000 representatives distributed across the full deterministic Archive A–Z order. Each contiguous zone contributes one randomly selected post.
-- Treat the sample as broad coverage of the archive. Do not assume that a sampled post is locally optimal or that unsampled posts do not exist.
-- The orchestration layer may return here after a candidate or candidate set fails downstream validation. When previous candidate IDs are supplied, reject them and search for genuinely different candidates in the supplied snapshot.
+- It contains up to 1000 representatives distributed across the current Explore sequence. Each contiguous Explore zone contributes one randomly selected post.
+- Treat the sample as broad coverage of the archive's current Explore space. Do not assume that a sampled post is locally optimal or that unsampled posts do not exist.
+- The orchestration layer may return here after the current candidate fails downstream validation. When previous candidate IDs are supplied, reject them and search for a genuinely different candidate in the supplied snapshot.
+- Return exactly one candidate: the strongest currently proven option in the supplied snapshot.
