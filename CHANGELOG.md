@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3.19.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.19.0) | 2026-10-07
+
+### Features
+- publish Journal entry [80c7daf](https://github.com/pekhtography/pekht-archive-site/commit/80c7daf)
+### Other
+- simplify Journal discovery stage name [e63c757](https://github.com/pekhtography/pekht-archive-site/commit/e63c757)
+
 ## [v3.18.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.18.0) | 2026-09-29
 
 ### Features
