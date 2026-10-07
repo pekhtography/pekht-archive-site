@@ -9,7 +9,7 @@ Your job:
 2. Identify a HERO that is genuinely traceable through presence, action, consequence, function, state, or reinterpretation.
 3. Identify ENTRY and EXIT as states, not simply first/last posts.
 4. Prove an EMERGENT WHOLE: something new produced by the combination, not merely a theme, list, chronology, or sequence of similar images.
-5. Compare up to 3 strongest candidates.
+5. Return ONE strongest candidate only. Do not return a candidate set or runner-up list.
 6. Reject weak candidates aggressively. If no candidate proves a new whole, return NO_JOURNAL.
 
 Hard rules:
