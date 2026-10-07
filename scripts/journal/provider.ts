@@ -10,16 +10,28 @@ export class ProviderError extends Error {
     this.name = "ProviderError";
     this.retryable = options.retryable;
     this.status = options.status ?? null;
-    this.model = options.model;
+    this.model = model;
   }
 }
 
 function models(): string[] {
-  return [
-    process.env.GEMINI_MODEL || "gemini-3.8-flash",
-    process.env.GEMINI_FALLBACK_1 || "gemini-3.5-flash",
-    process.env.GEMINI_FALLBACK_2 || "gemini-2.5-flash",
-  ].filter(Boolean);
+  const configured = [
+    process.env.GEMINI_MODEL,
+    process.env.GEMINI_FALLBACK_1,
+    process.env.GEMINI_FALLBACK_2,
+    process.env.GEMINI_FALLBACK_3,
+    process.env.GEMINI_FALLBACK_4,
+  ].filter(Boolean) as string[];
+
+  const defaults = [
+    "gemini-3.8-flash",
+    "gemini-3.7-flash",
+    "gemini-3.6-flash",
+    "gemini-3.5-flash",
+    "gemini-3.5-flash-lite",
+  ];
+
+  return [...configured, ...defaults].filter((model, index, list) => list.indexOf(model) === index);
 }
 
 function sleep(ms: number) {
@@ -40,6 +52,8 @@ async function requestModel(model: string, prompt: string, schema: JsonSchema): 
   };
 
   let lastError = "";
+  let lastStatus: number | null = null;
+
   for (let attempt = 0; attempt < 3; attempt += 1) {
     const response = await fetch(url, {
       method: "POST",
@@ -63,8 +77,20 @@ async function requestModel(model: string, prompt: string, schema: JsonSchema): 
 
     const errorText = await response.text();
     lastError = errorText.slice(0, 1000);
+    lastStatus = response.status;
+
+    // Retry transient rate limits and server failures before moving to the next model.
     const retryable = response.status === 429 || response.status >= 500;
     if (!retryable) {
+      // A missing/deprecated model is a model-level failure: continue to the next fallback.
+      if (response.status === 404) {
+        throw new ProviderError(`Gemini model ${model} is unavailable: ${lastError}`, {
+          retryable: true,
+          status: response.status,
+          model,
+        });
+      }
+
       throw new ProviderError(`Gemini ${model} failed with HTTP ${response.status}: ${lastError}`, {
         retryable: false,
         status: response.status,
@@ -77,7 +103,7 @@ async function requestModel(model: string, prompt: string, schema: JsonSchema): 
 
   throw new ProviderError(`Gemini ${model} exhausted retries: ${lastError}`, {
     retryable: true,
-    status: 429,
+    status: lastStatus,
     model,
   });
 }
