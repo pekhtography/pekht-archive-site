@@ -10,7 +10,7 @@ export class ProviderError extends Error {
     this.name = "ProviderError";
     this.retryable = options.retryable;
     this.status = options.status ?? null;
-    this.model = model;
+    this.model = options.model;
   }
 }
 
