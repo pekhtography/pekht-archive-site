@@ -40,6 +40,8 @@ jobs:
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
           GEMINI_FALLBACK_1: ${{ vars.GEMINI_FALLBACK_1 }}
           GEMINI_FALLBACK_2: ${{ vars.GEMINI_FALLBACK_2 }}
+          GEMINI_FALLBACK_3: ${{ vars.GEMINI_FALLBACK_3 }}
+          GEMINI_FALLBACK_4: ${{ vars.GEMINI_FALLBACK_4 }}
         run: pnpm journal
 
       - name: Commit Journal entry
