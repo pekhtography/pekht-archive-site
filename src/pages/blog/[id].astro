@@ -1,5 +1,6 @@
 ---
 import IdHeader from "@/components/static/IdHeader.astro";
+import JournalComposition from "@/components/static/JournalComposition.astro";
 import IdLayout from "@/layouts/IdLayout.astro";
 import { getCollection, render } from "astro:content";
 import { parse } from "date-fns";
@@ -23,6 +24,7 @@ export async function getStaticPaths() {
 const { item } = Astro.props;
 const { Content } = await render(item);
 const isJournal = item.data.category === "journal";
+const archiveItems = await getCollection("archive");
 
 const allItems = (await getCollection("blog"))
     .filter((item) => !item.data.draft && item.data.category === "journal")
@@ -53,9 +55,17 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
     <article transition:animate="fade" class={isJournal ? "journal-entry" : ""}>
         <IdHeader backUrl="/blog" items={item.data} />
 
-        <div class={isJournal ? "journal-content" : "mt-10 prose border border-border p-6"}>
-            <Content />
-        </div>
+        {
+            isJournal && item.data.composition.length > 0 ? (
+                <div class="journal-content">
+                    <JournalComposition composition={item.data.composition} archiveItems={archiveItems} />
+                </div>
+            ) : (
+                <div class={isJournal ? "journal-content" : "mt-10 prose border border-border p-6"}>
+                    <Content />
+                </div>
+            )
+        }
     </article>
 </IdLayout>
 
@@ -72,44 +82,9 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
         border: 1px solid var(--border);
     }
 
-    .journal-content :global(p),
-    .journal-content :global(ul),
-    .journal-content :global(ol),
-    .journal-content :global(blockquote) {
-        max-width: 42rem;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .journal-content :global(p) {
-        margin-top: 1.8rem;
-        margin-bottom: 1.8rem;
-        line-height: 1.85;
-    }
-
-    .journal-content :global(img) {
-        display: block;
-        width: 100%;
-        height: auto;
-        margin: 3.5rem auto;
-        border: 1px solid var(--border);
-    }
-
-    .journal-content :global(img):hover {
-        opacity: 0.94;
-    }
-
-    .journal-content :global(h2),
-    .journal-content :global(h3) {
-        max-width: 42rem;
-        margin-left: auto;
-        margin-right: auto;
+    .journal-content {
         margin-top: 4rem;
-        margin-bottom: 1.25rem;
-    }
-
-    .journal-content :global(hr) {
-        max-width: 42rem;
-        margin: 4rem auto;
+        padding: clamp(1rem, 3vw, 1.5rem);
+        border: 1px solid var(--border);
     }
 </style>
