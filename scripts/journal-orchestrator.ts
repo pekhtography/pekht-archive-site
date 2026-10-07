@@ -251,8 +251,8 @@ async function run() {
       return;
     }
 
-    rejectedCandidateIds = [];
-
+    // Keep rejected candidate IDs across discovery rounds so Stage 3 → Stage 1
+    // cannot rediscover the same failed candidate set.
     // Stage 2 failures return to Stage 1, as required by the Journal state machine.
     // Stage 3 failures first try the next candidate from the current discovery.
     for (let candidateIndex = 0; candidateIndex < candidates.length; candidateIndex += 1) {
