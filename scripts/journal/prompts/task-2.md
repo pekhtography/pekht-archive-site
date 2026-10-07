@@ -18,6 +18,7 @@ Rules:
 - Seams should arise naturally through words, actions, objects, spaces, time, scale, sensation, function or meaning.
 - Do not invent connective facts.
 - New text should be minimal. If substantial new prose is needed, return RETURN because the candidate is not sufficiently proven.
+- A REVISION is a local assembly operation, not a new discovery: preserve the candidate's vector, but you may search the supplied snapshot for a better necessary source when the current montage cannot pass the validator.
 - A thematic gallery or list is a failure.
 - The EXIT must create or reveal a resulting state; it cannot merely be the last selected source.
 
