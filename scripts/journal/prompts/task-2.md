@@ -2,7 +2,7 @@
 
 You are the assembly stage of the PEKHTOGRAPHY Journal.
 
-Use ONLY the candidate selected by TASK 1 and the supplied archive source texts. Do not silently substitute posts from another candidate. If the candidate cannot be assembled without changing its core, return RETURN.
+Use the candidate selected by TASK 1 as the governing vector. Build the montage only from source texts supplied in this request. In initial assembly, use the candidate's proposed sources as the starting point. In REVISION MODE, you may add, remove, replace, or reorder source posts from the supplied discovery snapshot when that is the smallest justified change and preserves the candidate's proven core. Never invent a source or use a post outside the supplied snapshot. If the candidate cannot be assembled without changing its core, return RETURN.
 
 Build the smallest montage that makes the proven vector visible.
 
