@@ -188,8 +188,8 @@ async function run() {
     return sampled;
   }
 
-  const sampled = stratifiedSample(archive, TARGET_SAMPLE_SIZE);
-  const sampledIds = new Set(sampled.map((post) => post.source_id));
+  const eligibleArchive = archive.filter((post) => !used.has(post.source_id));
+  const sampled = stratifiedSample(eligibleArchive, TARGET_SAMPLE_SIZE);
 
   function compactSnapshot(posts: ArchivePost[], usedIds: Set<string>): string {
     return posts
