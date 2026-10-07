@@ -1,0 +1,204 @@
+---
+import { sitePath } from "@/lib/site-url";
+
+type SourceBlock = {
+    type: "source";
+    source_id: string;
+    text: string;
+    image_side: "left" | "right";
+    image_size: "small" | "medium" | "large";
+    text_offset: "up" | "center" | "down";
+};
+
+type BridgeBlock = {
+    type: "bridge";
+    text: string;
+};
+
+type ArchiveItem = {
+    id: string;
+    data: {
+        title: string;
+        image: string;
+    };
+};
+
+const { composition, archiveItems } = Astro.props as {
+    composition: Array<SourceBlock | BridgeBlock>;
+    archiveItems: ArchiveItem[];
+};
+
+const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
+---
+
+<div class="journal-composition">
+    {composition.map((block) =>
+        block.type === "source" ? (
+            (() => {
+                const archive = archiveMap.get(block.source_id);
+                if (!archive) return null;
+
+                const imageClass = "journal-image journal-image-" + block.image_size;
+                const textClass = "journal-text journal-text-" + block.text_offset;
+                const imageSideClass = block.image_side === "left" ? "journal-image-left" : "journal-image-right";
+
+                return (
+                    <section class={`journal-source ${imageSideClass}`} aria-label={archive.data.title}>
+                        <div class={textClass}>
+                            <div class="journal-source-text">{block.text}</div>
+                        </div>
+                        <a
+                            class={imageClass}
+                            href={sitePath("/archive/" + archive.id)}
+                            aria-label={"Open archive post: " + archive.data.title}
+                        >
+                            <img
+                                src={sitePath(archive.data.image)}
+                                alt={archive.data.title}
+                                loading="lazy"
+                            />
+                        </a>
+                    </section>
+                );
+            })()
+        ) : (
+            <div class="journal-bridge">
+                {block.text}
+            </div>
+        )
+    )}
+</div>
+
+<style>
+    .journal-composition {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .journal-source {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: start;
+        column-gap: clamp(1.5rem, 5vw, 4rem);
+        padding: clamp(1.5rem, 5vw, 4rem) 0;
+    }
+
+    .journal-image-left .journal-source-text {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .journal-image-left .journal-image {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .journal-image-right .journal-source-text {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .journal-image-right .journal-image {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .journal-source-text {
+        font-size: clamp(1rem, 1.35vw, 1.15rem);
+        line-height: 1.85;
+        white-space: pre-line;
+        max-width: 34rem;
+    }
+
+    .journal-text-up {
+        align-self: start;
+        transform: translateY(clamp(-1.5rem, -2vw, -0.5rem));
+    }
+
+    .journal-text-center {
+        align-self: center;
+    }
+
+    .journal-text-down {
+        align-self: start;
+        transform: translateY(clamp(0.5rem, 2vw, 1.5rem));
+    }
+
+    .journal-image {
+        display: block;
+        align-self: start;
+        overflow: hidden;
+    }
+
+    .journal-image img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border: 1px solid var(--border);
+        transition: opacity 180ms ease;
+    }
+
+    .journal-image:hover img {
+        opacity: 0.94;
+    }
+
+    .journal-image-small {
+        width: min(100%, 84%);
+    }
+
+    .journal-image-medium {
+        width: min(100%, 94%);
+    }
+
+    .journal-image-large {
+        width: 100%;
+    }
+
+    .journal-image-left {
+        justify-self: start;
+    }
+
+    .journal-image-right {
+        justify-self: end;
+    }
+
+    .journal-bridge {
+        width: min(86%, 38rem);
+        margin: 0 auto;
+        padding: clamp(0.75rem, 2vw, 1.5rem) 0;
+        font-size: clamp(1rem, 1.25vw, 1.1rem);
+        line-height: 1.85;
+        white-space: pre-line;
+    }
+
+    @media (max-width: 767px) {
+        .journal-source {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding: 2.25rem 0;
+        }
+
+        .journal-image {
+            order: 1;
+            width: 100%;
+        }
+
+        .journal-source-text {
+            order: 2;
+            width: 100%;
+            max-width: none;
+        }
+
+        .journal-text-up,
+        .journal-text-down {
+            transform: none;
+        }
+
+        .journal-bridge {
+            width: 100%;
+            padding: 1rem 0;
+        }
+    }
+</style>
