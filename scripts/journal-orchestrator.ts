@@ -225,7 +225,8 @@ async function run() {
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "")
     .slice(0, 80) || "journal";
-  const now = new Date();\n  const date = String(now.getUTCDate()).padStart(2, "0") + "-" + String(now.getUTCMonth() + 1).padStart(2, "0") + "-" + now.getUTCFullYear();
+  const now = new Date();
+  const date = String(now.getUTCDate()).padStart(2, "0") + "-" + String(now.getUTCMonth() + 1).padStart(2, "0") + "-" + now.getUTCFullYear();
   const slug = `${date}-${slugBase}`;
   function journalHeading(text: string): string {
     const plain = text
