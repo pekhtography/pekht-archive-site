@@ -9,6 +9,7 @@ type ArchivePost = {
   title: string;
   body: string;
   hashtags: string[];
+  image: string;
   created_at: string;
 };
 
@@ -49,6 +50,7 @@ async function loadArchive(): Promise<ArchivePost[]> {
       title: String(fm.title ?? source_id),
       body,
       hashtags: Array.isArray(fm.hashtags) ? fm.hashtags.map(String) : [],
+      image: String(fm.image ?? ""),
       created_at: String(fm.x_created_at ?? ""),
     });
   }
@@ -126,10 +128,25 @@ const task2Schema = {
     description: { type: "STRING" },
     source_ids: { type: "ARRAY", items: { type: "STRING" } },
     markdown: { type: "STRING" },
+    composition: {
+      type: "ARRAY",
+      items: {
+        type: "OBJECT",
+        properties: {
+          type: { type: "STRING", enum: ["source", "bridge"] },
+          source_id: { type: "STRING" },
+          text: { type: "STRING" },
+          image_side: { type: "STRING", enum: ["left", "right"] },
+          image_size: { type: "STRING", enum: ["small", "medium", "large"] },
+          text_offset: { type: "STRING", enum: ["up", "center", "down"] }
+        },
+        required: ["type", "text"]
+      }
+    },
     reason: { type: "STRING" },
     facets: { type: "ARRAY", items: { type: "STRING" } }
   },
-  required: ["status", "candidate_id", "title", "description", "source_ids", "markdown", "reason", "facets"]
+  required: ["status", "candidate_id", "title", "description", "source_ids", "markdown", "composition", "reason", "facets"]
 };
 
 const task3Schema = {
@@ -209,7 +226,7 @@ async function run() {
     return unique
       .map((id) => sourceMap.get(id))
       .filter((p): p is ArchivePost => Boolean(p))
-      .map((p) => `SOURCE_ID: ${p.source_id}\nTITLE: ${p.title}\nTEXT:\n${p.body}`)
+      .map((p) => `SOURCE_ID: ${p.source_id}\nTITLE: ${p.title}\nIMAGE: ${p.image}\nTEXT:\n${p.body}`)
       .join("\n\n---\n\n");
   };
 
@@ -280,21 +297,33 @@ async function run() {
       const montageSourceIds = Array.isArray(task2.source_ids)
         ? task2.source_ids.map(String)
         : [];
+      const uniqueMontageSourceIds = [...new Set(montageSourceIds)];
+      const composition = Array.isArray(task2.composition) ? task2.composition : [];
+      const compositionSourceBlocks = composition.filter((block: any) => block?.type === "source");
+      const compositionSourceIds = compositionSourceBlocks.map((block: any) => String(block?.source_id ?? ""));
+      const compositionValid =
+        composition.length > 0 &&
+        compositionSourceBlocks.length === uniqueMontageSourceIds.length &&
+        new Set(compositionSourceIds).size === compositionSourceIds.length &&
+        compositionSourceIds.every((id: string) => uniqueMontageSourceIds.includes(id)) &&
+        compositionSourceBlocks.every((block: any) =>
+          typeof block?.text === "string" &&
+          ["left", "right"].includes(block?.image_side) &&
+          ["small", "medium", "large"].includes(block?.image_size) &&
+          ["up", "center", "down"].includes(block?.text_offset)
+        );
       const montageSourcesValid =
         task2.status === "OK" &&
         String(task2.candidate_id ?? "") === selectedId &&
-        montageSourceIds.length > 0 &&
-        montageSourceIds.every((id) => snapshotIds.has(id));
-
-      if (!montageSourcesValid) {
-        rejectedThisRun.add(selectedId);
-        console.log(`RETURN: TASK_2 rejected candidate ${selectedId}: missing or invalid source_ids.`);
-        break;
-      }
+        uniqueMontageSourceIds.length >= 4 &&
+        uniqueMontageSourceIds.length <= 6 &&
+        uniqueMontageSourceIds.every((id) => snapshotIds.has(id)) &&
+        compositionValid;
 
       const montageSignature = JSON.stringify({
-        source_ids: [...new Set(montageSourceIds)].sort(),
+        source_ids: uniqueMontageSourceIds.sort(),
         markdown: String(task2.markdown ?? "").trim(),
+        composition,
       });
 
       if (seenMontages.has(montageSignature)) {
@@ -303,7 +332,7 @@ async function run() {
         break;
       }
       seenMontages.add(montageSignature);
-      currentMontage = task2;
+      currentMontage = { ...task2, source_ids: uniqueMontageSourceIds, composition };
 
       const task3 = await generateJson(
         `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT JOURNAL MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nSOURCE TEXTS USED BY CURRENT MONTAGE:\n${sourcesFor(montageSourceIds)}`,
@@ -372,6 +401,7 @@ tags: ["archive"]
 author: "PEKHTOGRAPHY"
 source_ids: [${montageSourceIds.map((id: string) => JSON.stringify(id)).join(", ")}]
 facets: [${(Array.isArray(currentMontage.facets) ? currentMontage.facets : []).map((facet: string) => JSON.stringify(facet)).join(", ")}]
+composition: ${JSON.stringify(currentMontage.composition)}
 ---
 
 ${String(currentMontage.markdown).trim()}
