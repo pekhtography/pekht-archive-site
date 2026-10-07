@@ -168,8 +168,8 @@ async function run() {
 
   function stratifiedSample(posts: ArchivePost[], target: number): ArchivePost[] {
     const ordered = [...posts].sort((a, b) => {
-      const ka = a.body.match(/[\\p{L}\\p{N}]/u)?.index;
-      const kb = b.body.match(/[\\p{L}\\p{N}]/u)?.index;
+      const ka = a.body.match(/[\p{L}\p{N}]/u)?.index;
+      const kb = b.body.match(/[\p{L}\p{N}]/u)?.index;
       const sa = ka === undefined ? a.body.toLocaleLowerCase() : a.body.slice(ka).toLocaleLowerCase();
       const sb = kb === undefined ? b.body.toLocaleLowerCase() : b.body.slice(kb).toLocaleLowerCase();
       return sa.localeCompare(sb) || a.source_id.localeCompare(b.source_id);
@@ -200,9 +200,9 @@ async function run() {
         `DATE: ${p.created_at}`,
         `TITLE: ${p.title}`,
         `HASHTAGS: ${p.hashtags.join(" ")}`,
-        `TEXT:\\n${p.body}`,
-      ].join("\\n"))
-      .join("\\n\\n---\\n\\n");
+        `TEXT:\n${p.body}`,
+      ].join("\n"))
+      .join("\n\n---\n\n");
   }
 
   const snapshot = compactSnapshot(sampled, used);
@@ -225,18 +225,18 @@ async function run() {
   const sourcesFor = (ids: string[]) => ids
     .map((id) => sourceMap.get(id))
     .filter(Boolean)
-    .map((p: any) => `SOURCE_ID: ${p.source_id}\\nTITLE: ${p.title}\\nTEXT:\\n${p.body}`)
-    .join("\\n\\n---\\n\\n");
+    .map((p: any) => `SOURCE_ID: ${p.source_id}\nTITLE: ${p.title}\nTEXT:\n${p.body}`)
+    .join("\n\n---\n\n");
 
   let rejectedCandidateIds: string[] = [];
 
   for (let discoveryRound = 0; discoveryRound < MAX_DISCOVERY_ROUNDS; discoveryRound += 1) {
     const discoveryInstruction = rejectedCandidateIds.length
-      ? `\\n\\nPREVIOUS CANDIDATES ALREADY REJECTED: ${rejectedCandidateIds.join(", ")}\\nDo not return those candidates again. Find genuinely different alternatives from the supplied snapshot.`
+      ? `\n\nPREVIOUS CANDIDATES ALREADY REJECTED: ${rejectedCandidateIds.join(", ")}\nDo not return those candidates again. Find genuinely different alternatives from the supplied snapshot.`
       : "";
 
     const task1 = await generateJson(
-      `${await prompt("task-1.md")}${discoveryInstruction}\\n\\nARCHIVE SNAPSHOT (STRATIFIED SAMPLE OF CURRENT ARCHIVE):\\n${snapshot}`,
+      `${await prompt("task-1.md")}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
       task1Schema,
     );
 
@@ -259,7 +259,7 @@ async function run() {
       const selected = candidates[candidateIndex];
 
       let task2 = await generateJson(
-        `${await prompt("task-2.md")}\\n\\nSELECTED CANDIDATE:\\n${JSON.stringify(selected, null, 2)}\\n\\nSOURCE TEXTS:\\n${sourcesFor(selected.source_ids)}`,
+        `${await prompt("task-2.md")}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(selected.source_ids)}`,
         task2Schema,
       );
 
@@ -270,13 +270,13 @@ async function run() {
       }
 
       let task3 = await generateJson(
-        `${await prompt("task-3.md")}\\n\\nTASK 1 CANDIDATE:\\n${JSON.stringify(selected, null, 2)}\\n\\nTASK 2 JOURNAL:\\n${JSON.stringify(task2, null, 2)}\\n\\nSOURCE TEXTS:\\n${sourcesFor(task2.source_ids)}`,
+        `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nTASK 2 JOURNAL:\n${JSON.stringify(task2, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(task2.source_ids)}`,
         task3Schema,
       );
 
       if (task3.verdict === "REVISION") {
         task2 = await generateJson(
-          `${await prompt("task-2.md")}\\n\\nREVISION REQUIRED:\\n${task3.revision}\\n\\nSELECTED CANDIDATE:\\n${JSON.stringify(selected, null, 2)}\\n\\nCURRENT MONTAGE:\\n${JSON.stringify(task2, null, 2)}\\n\\nSOURCE TEXTS:\\n${sourcesFor(selected.source_ids)}`,
+          `${await prompt("task-2.md")}\n\nREVISION REQUIRED:\n${task3.revision}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT MONTAGE:\n${JSON.stringify(task2, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(selected.source_ids)}`,
           task2Schema,
         );
 
@@ -287,7 +287,7 @@ async function run() {
         }
 
         task3 = await generateJson(
-          `${await prompt("task-3.md")}\\n\\nTASK 1 CANDIDATE:\\n${JSON.stringify(selected, null, 2)}\\n\\nREVISED JOURNAL:\\n${JSON.stringify(task2, null, 2)}\\n\\nSOURCE TEXTS:\\n${sourcesFor(task2.source_ids)}`,
+          `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nREVISED JOURNAL:\n${JSON.stringify(task2, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(task2.source_ids)}`,
           task3Schema,
         );
       }
@@ -304,10 +304,10 @@ async function run() {
 
         function journalHeading(text: string): string {
           const plain = text
-            .replace(/!\\[[^\\]]*\\]\\([^)]*\\)/g, " ")
-            .replace(/\\[[^\\]]*\\]\\([^)]*\\)/g, " ")
+            .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+            .replace(/\[[^\]]*\]\([^)]*\)/g, " ")
             .replace(/[#>*_~\`]/g, " ")
-            .replace(/\\s+/g, " ")
+            .replace(/\s+/g, " ")
             .trim();
 
           const words = plain.split(" ").filter(Boolean);
