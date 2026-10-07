@@ -7,6 +7,7 @@ on:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: pekhtography-journal
@@ -56,3 +57,9 @@ jobs:
           git add src/content/blog
           git commit -m "feat: publish Journal entry"
           git push origin main
+
+      - name: Trigger site deployment
+        if: success()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run pekhtography-preview.yml --ref main
