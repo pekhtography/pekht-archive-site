@@ -15,6 +15,7 @@ concurrency:
 jobs:
   journal:
     runs-on: ubuntu-latest
+    timeout-minutes: 120
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -46,7 +47,7 @@ jobs:
 
       - name: Commit Journal entry
         run: |
-          if git diff --quiet -- src/content/blog; then
+          if [ -z "$(git status --porcelain -- src/content/blog)" ]; then
             echo "No new Journal entry."
             exit 0
           fi
