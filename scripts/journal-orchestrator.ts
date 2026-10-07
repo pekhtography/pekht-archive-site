@@ -152,124 +152,197 @@ async function prompt(path: string): Promise<string> {
 async function run() {
   const archive = await loadArchive();
   const used = await loadUsedSources();
-  const snapshot = compactSnapshot(archive, used);
 
+  if (!archive.length) {
+    console.log("NO_JOURNAL: archive is empty.");
+    return;
+  }
+
+  // Journal discovery works from a stratified sample of the current archive.
+  // The archive is first put into the same deterministic A–Z order used by
+  // the public Archive, then divided into TARGET_SAMPLE_SIZE contiguous zones.
+  // Each zone contributes exactly one random representative. Thus every
+  // part of the archive has equal probability of entering discovery.
+  const TARGET_SAMPLE_SIZE = 1000;
+  const MAX_DISCOVERY_ROUNDS = 2;
+
+  function stratifiedSample(posts: ArchivePost[], target: number): ArchivePost[] {
+    const ordered = [...posts].sort((a, b) => {
+      const ka = a.body.match(/[\\p{L}\\p{N}]/u)?.index;
+      const kb = b.body.match(/[\\p{L}\\p{N}]/u)?.index;
+      const sa = ka === undefined ? a.body.toLocaleLowerCase() : a.body.slice(ka).toLocaleLowerCase();
+      const sb = kb === undefined ? b.body.toLocaleLowerCase() : b.body.slice(kb).toLocaleLowerCase();
+      return sa.localeCompare(sb) || a.source_id.localeCompare(b.source_id);
+    });
+
+    const sampleSize = Math.min(target, ordered.length);
+    const sampled: ArchivePost[] = [];
+
+    for (let i = 0; i < sampleSize; i += 1) {
+      const start = Math.floor((i * ordered.length) / sampleSize);
+      const end = Math.floor(((i + 1) * ordered.length) / sampleSize);
+      const zone = ordered.slice(start, Math.max(start + 1, end));
+      sampled.push(zone[Math.floor(Math.random() * zone.length)]);
+    }
+
+    return sampled;
+  }
+
+  const sampled = stratifiedSample(archive, TARGET_SAMPLE_SIZE);
+  const sampledIds = new Set(sampled.map((post) => post.source_id));
+
+  function compactSnapshot(posts: ArchivePost[], usedIds: Set<string>): string {
+    return posts
+      .filter((p) => !usedIds.has(p.source_id))
+      .map((p) => [
+        `SOURCE_ID: ${p.source_id}`,
+        `X_ID: ${p.x_id}`,
+        `DATE: ${p.created_at}`,
+        `TITLE: ${p.title}`,
+        `HASHTAGS: ${p.hashtags.join(" ")}`,
+        `TEXT:\\n${p.body}`,
+      ].join("\\n"))
+      .join("\\n\\n---\\n\\n");
+  }
+
+  const snapshot = compactSnapshot(sampled, used);
   if (!snapshot.trim()) {
-    console.log("NO_JOURNAL: archive snapshot is empty.");
+    console.log("NO_JOURNAL: sampled archive snapshot is empty.");
     return;
   }
-
-  const task1 = await generateJson(
-    `${await prompt("task-1.md")}\n\nARCHIVE SNAPSHOT:\n${snapshot}`,
-    task1Schema,
-  );
-
-  if (task1.status !== "OK" || !Array.isArray(task1.candidates) || task1.candidates.length === 0) {
-    console.log("NO_JOURNAL");
-    return;
-  }
-
-  const candidates = [...task1.candidates]
-    .sort((a, b) => {
-      const score = (c: any) => Object.values(c.scores ?? {}).reduce((s: number, v: any) => s + Number(v || 0), 0);
-      return score(b) - score(a);
-    })
-    .slice(0, 3);
 
   const sourceMap = new Map(archive.map((p) => [p.source_id, p]));
-  let selected = candidates[0];
+
+  const scoreCandidate = (candidate: any) =>
+    Object.values(candidate.scores ?? {}).reduce((sum: number, value: any) => sum + Number(value || 0), 0);
+
+  const rankCandidates = (candidates: any[]) =>
+    candidates
+      .filter((candidate) => candidate && typeof candidate.id === "string")
+      .sort((a, b) => scoreCandidate(b) - scoreCandidate(a))
+      .slice(0, 3);
 
   const sourcesFor = (ids: string[]) => ids
     .map((id) => sourceMap.get(id))
     .filter(Boolean)
-    .map((p: any) => `SOURCE_ID: ${p.source_id}\nTITLE: ${p.title}\nTEXT:\n${p.body}`)
-    .join("\n\n---\n\n");
+    .map((p: any) => `SOURCE_ID: ${p.source_id}\\nTITLE: ${p.title}\\nTEXT:\\n${p.body}`)
+    .join("\\n\\n---\\n\\n");
 
-  let task2 = await generateJson(
-    `${await prompt("task-2.md")}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(selected.source_ids)}`,
-    task2Schema,
-  );
+  let rejectedCandidateIds: string[] = [];
 
-  if (task2.status !== "OK") {
-    console.log(`RETURN: TASK_2 rejected candidate: ${task2.reason}`);
-    return;
-  }
+  for (let discoveryRound = 0; discoveryRound < MAX_DISCOVERY_ROUNDS; discoveryRound += 1) {
+    const discoveryInstruction = rejectedCandidateIds.length
+      ? `\\n\\nPREVIOUS CANDIDATES ALREADY REJECTED: ${rejectedCandidateIds.join(", ")}\\nDo not return those candidates again. Find genuinely different alternatives from the supplied snapshot.`
+      : "";
 
-  let task3 = await generateJson(
-    `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nTASK 2 JOURNAL:\n${JSON.stringify(task2, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(task2.source_ids)}`,
-    task3Schema,
-  );
-
-  if (task3.verdict === "REVISION") {
-    task2 = await generateJson(
-      `${await prompt("task-2.md")}\n\nREVISION REQUIRED:\n${task3.revision}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT MONTAGE:\n${JSON.stringify(task2, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(selected.source_ids)}`,
-      task2Schema,
+    const task1 = await generateJson(
+      `${await prompt("task-1.md")}${discoveryInstruction}\\n\\nARCHIVE SNAPSHOT (STRATIFIED SAMPLE OF CURRENT ARCHIVE):\\n${snapshot}`,
+      task1Schema,
     );
-    if (task2.status !== "OK") {
-      console.log(`NO_JOURNAL: revision could not be assembled: ${task2.reason}`);
+
+    if (task1.status !== "OK" || !Array.isArray(task1.candidates)) {
+      console.log("NO_JOURNAL: discovery found no viable candidates.");
       return;
     }
-    task3 = await generateJson(
-      `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nREVISED JOURNAL:\n${JSON.stringify(task2, null, 2)}\n\nSOURCE TEXTS:\n${sourcesFor(task2.source_ids)}`,
-      task3Schema,
-    );
-  }
 
-  if (task3.verdict !== "STRONG") {
-    console.log(`${task3.verdict}: ${task3.reason}`);
-    return;
-  }
+    const candidates = rankCandidates(task1.candidates);
+    if (!candidates.length) {
+      console.log("NO_JOURNAL: discovery found no viable candidates.");
+      return;
+    }
 
-  const slugBase = String(task2.title || "journal")
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "")
-    .slice(0, 80) || "journal";
-  const now = new Date();
-  const date = String(now.getUTCDate()).padStart(2, "0") + "-" + String(now.getUTCMonth() + 1).padStart(2, "0") + "-" + now.getUTCFullYear();
-  const slug = `${date}-${slugBase}`;
-  function journalHeading(text: string): string {
-    const plain = text
-      .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
-      .replace(/\[[^\]]*\]\([^)]*\)/g, " ")
-      .replace(/[#>*_~`]/g, " ")
-      .replace(/\s+/g, " ")
-      .trim();
+    rejectedCandidateIds = [];
 
-    const words = plain.split(" ").filter(Boolean);
-    if (words.length <= 14) return plain;
+    // Stage 2 failures return to Stage 1, as required by the Journal state machine.
+    // Stage 3 failures first try the next candidate from the current discovery.
+    for (let candidateIndex = 0; candidateIndex < candidates.length; candidateIndex += 1) {
+      const selected = candidates[candidateIndex];
 
-    const targetMin = Math.min(10, words.length);
-    const targetMax = Math.min(14, words.length);
+      let task2 = await generateJson(
+        `${await prompt("task-2.md")}\\n\\nSELECTED CANDIDATE:\\n${JSON.stringify(selected, null, 2)}\\n\\nSOURCE TEXTS:\\n${sourcesFor(selected.source_ids)}`,
+        task2Schema,
+      );
 
-    const boundaries = new Set([".", ",", ";", ":", "—", "–"]);
-    const candidates: { text: string; count: number; distance: number }[] = [];
-
-    let position = 0;
-    for (let i = 0; i < words.length; i++) {
-      position += words[i].length + (i > 0 ? 1 : 0);
-      if (i + 1 < targetMin || i + 1 > targetMax) continue;
-
-      const nextChar = plain[position] ?? "";
-      const endChar = words[i].slice(-1);
-      if (boundaries.has(endChar) || boundaries.has(nextChar)) {
-        candidates.push({
-          text: words.slice(0, i + 1).join(" "),
-          count: i + 1,
-          distance: Math.abs((i + 1) - 12),
-        });
+      if (task2.status !== "OK") {
+        rejectedCandidateIds.push(String(selected.id));
+        console.log(`RETURN: TASK_2 rejected candidate ${selected.id}: ${task2.reason}`);
+        break;
       }
-    }
 
-    if (candidates.length > 0) {
-      candidates.sort((a, b) => a.distance - b.distance || a.count - b.count);
-      return candidates[0].text;
-    }
+      let task3 = await generateJson(
+        `${await prompt("task-3.md")}\\n\\nTASK 1 CANDIDATE:\\n${JSON.stringify(selected, null, 2)}\\n\\nTASK 2 JOURNAL:\\n${JSON.stringify(task2, null, 2)}\\n\\nSOURCE TEXTS:\\n${sourcesFor(task2.source_ids)}`,
+        task3Schema,
+      );
 
-    return words.slice(0, targetMax).join(" ") + "…";
-  }
+      if (task3.verdict === "REVISION") {
+        task2 = await generateJson(
+          `${await prompt("task-2.md")}\\n\\nREVISION REQUIRED:\\n${task3.revision}\\n\\nSELECTED CANDIDATE:\\n${JSON.stringify(selected, null, 2)}\\n\\nCURRENT MONTAGE:\\n${JSON.stringify(task2, null, 2)}\\n\\nSOURCE TEXTS:\\n${sourcesFor(selected.source_ids)}`,
+          task2Schema,
+        );
 
-const markdown = `---
+        if (task2.status !== "OK") {
+          rejectedCandidateIds.push(String(selected.id));
+          console.log(`RETURN: revised TASK_2 rejected candidate ${selected.id}: ${task2.reason}`);
+          break;
+        }
+
+        task3 = await generateJson(
+          `${await prompt("task-3.md")}\\n\\nTASK 1 CANDIDATE:\\n${JSON.stringify(selected, null, 2)}\\n\\nREVISED JOURNAL:\\n${JSON.stringify(task2, null, 2)}\\n\\nSOURCE TEXTS:\\n${sourcesFor(task2.source_ids)}`,
+          task3Schema,
+        );
+      }
+
+      if (task3.verdict === "STRONG") {
+        const slugBase = String(task2.title || "journal")
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "")
+          .slice(0, 80) || "journal";
+        const now = new Date();
+        const date = String(now.getUTCDate()).padStart(2, "0") + "-" + String(now.getUTCMonth() + 1).padStart(2, "0") + "-" + now.getUTCFullYear();
+        const slug = `${date}-${slugBase}`;
+
+        function journalHeading(text: string): string {
+          const plain = text
+            .replace(/!\\[[^\\]]*\\]\\([^)]*\\)/g, " ")
+            .replace(/\\[[^\\]]*\\]\\([^)]*\\)/g, " ")
+            .replace(/[#>*_~\`]/g, " ")
+            .replace(/\\s+/g, " ")
+            .trim();
+
+          const words = plain.split(" ").filter(Boolean);
+          if (words.length <= 14) return plain;
+
+          const targetMin = Math.min(10, words.length);
+          const targetMax = Math.min(14, words.length);
+          const boundaries = new Set([".", ",", ";", ":", "—", "–"]);
+          const headingCandidates: { text: string; count: number; distance: number }[] = [];
+
+          let position = 0;
+          for (let i = 0; i < words.length; i += 1) {
+            position += words[i].length + (i > 0 ? 1 : 0);
+            if (i + 1 < targetMin || i + 1 > targetMax) continue;
+
+            const nextChar = plain[position] ?? "";
+            const endChar = words[i].slice(-1);
+            if (boundaries.has(endChar) || boundaries.has(nextChar)) {
+              headingCandidates.push({
+                text: words.slice(0, i + 1).join(" "),
+                count: i + 1,
+                distance: Math.abs((i + 1) - 12),
+              });
+            }
+          }
+
+          if (headingCandidates.length > 0) {
+            headingCandidates.sort((a, b) => a.distance - b.distance || a.count - b.count);
+            return headingCandidates[0].text;
+          }
+
+          return words.slice(0, targetMax).join(" ") + "…";
+        }
+
+        const markdown = `---
 draft: false
 date: "${date}"
 title: "${journalHeading(String(task2.markdown)).replace(/"/g, "\\\"")}"
@@ -284,8 +357,20 @@ facets: [${(Array.isArray(task2.facets) ? task2.facets : []).map((facet: string)
 ${String(task2.markdown).trim()}
 `;
 
-  await writeFile(join(BLOG_DIR, `${slug}.md`), markdown, "utf8");
-  console.log(`STRONG JOURNAL: ${slug}.md`);
+        await writeFile(join(BLOG_DIR, `${slug}.md`), markdown, "utf8");
+        console.log(`STRONG JOURNAL: ${slug}.md`);
+        return;
+      }
+
+      rejectedCandidateIds.push(String(selected.id));
+      console.log(`${task3.verdict}: candidate ${selected.id}: ${task3.reason}`);
+    }
+
+    if (!rejectedCandidateIds.length) break;
+    console.log(`RETURN: discovery after candidate set exhausted. Round ${discoveryRound + 1}/${MAX_DISCOVERY_ROUNDS}.`);
+  }
+
+  console.log("NO_JOURNAL: all discovery/selection/validation paths exhausted.");
 }
 
 run().catch((error) => {
