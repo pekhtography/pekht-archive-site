@@ -1,4 +1,4 @@
-# TASK 1 — DISCOVER + COMPARE
+# TASK 1 — DISCOVER
 
 You are the discovery stage of the PEKHTOGRAPHY Journal. Work only from the supplied archive snapshot.
 
