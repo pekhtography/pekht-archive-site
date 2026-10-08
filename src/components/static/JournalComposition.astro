@@ -50,6 +50,8 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
                         <a
                             class={imageClass}
                             href={sitePath("/archive/" + archive.id)}
+                            target="_blank"
+                            rel="noopener noreferrer"
                             aria-label={"Open archive post: " + archive.data.title}
                         >
                             <img
