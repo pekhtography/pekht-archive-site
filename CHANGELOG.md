@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3.20.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.20.0) | 2026-10-08
+
+### Features
+- publish Journal entry [b4373dd](https://github.com/pekhtography/pekht-archive-site/commit/b4373dd)
+### Bug Fixes
+- finalize Journal v1 orchestrator safeguards [7a4e5b2](https://github.com/pekhtography/pekht-archive-site/commit/7a4e5b2)
+
 ## [v3.19.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.19.0) | 2026-10-07
 
 ### Features
