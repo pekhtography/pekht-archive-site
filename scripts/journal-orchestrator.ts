@@ -237,6 +237,17 @@ const task2Schema = {
   ],
 };
 
+const titleCutSchema = {
+  type: "OBJECT",
+  properties: {
+    cut_index: {
+      type: "NUMBER",
+      enum: [10, 11, 12, 13, 14],
+    },
+  },
+  required: ["cut_index"],
+};
+
 const task3Schema = {
   type: "OBJECT",
   properties: {
@@ -614,10 +625,70 @@ async function run() {
           );
         }
 
+        function plainJournalText(text: string): string {
+          return text
+            .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+            .replace(/\[[^\]]*\]\([^)]*\)/g, " ")
+            .replace(/[#>*_~\`]/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+        }
+
+        async function chooseTitleCut(text: string): Promise<number | null> {
+          const plain = plainJournalText(text);
+          const words = plain.split(" ").filter(Boolean);
+
+          if (words.length <= 14) return null;
+
+          const context = words.slice(0, 24).join(" ");
+
+          try {
+            const result = await generateJson(
+              \`\${await prompt("title-cut.md")}\${context}\`,
+              titleCutSchema,
+            );
+
+            const cutIndex = Number(result?.cut_index);
+
+            if (
+              !Number.isInteger(cutIndex) ||
+              cutIndex < 10 ||
+              cutIndex > 14 ||
+              cutIndex > words.length
+            ) {
+              return null;
+            }
+
+            return cutIndex;
+          } catch (error) {
+            console.warn(
+              "TITLE CUT: semantic selection failed; using legacy journalHeading().",
+              error,
+            );
+            return null;
+          }
+        }
+
+        const plainMarkdown = plainJournalText(
+          String(currentMontage.markdown),
+        );
+        const headingWords = plainMarkdown
+          .split(" ")
+          .filter(Boolean);
+
+        const titleCut = await chooseTitleCut(
+          String(currentMontage.markdown),
+        );
+
+        const journalTitle =
+          titleCut !== null
+            ? headingWords.slice(0, titleCut).join(" ") + "…"
+            : journalHeading(String(currentMontage.markdown));
+
         const markdown = `---
 draft: false
 date: "${date}"
-title: "${journalHeading(String(currentMontage.markdown)).replace(/"/g, "\\\"")}"
+title: "${journalTitle.replace(/"/g, "\\\"")}"
 description: "${String(currentMontage.description).replace(/"/g, "\\\"")}"
 category: "journal"
 tags: ["archive"]
