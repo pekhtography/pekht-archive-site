@@ -644,7 +644,7 @@ async function run() {
 
           try {
             const result = await generateJson(
-              \`\${await prompt("title-cut.md")}\${context}\`,
+              `${await prompt("title-cut.md")}${context}`,
               titleCutSchema,
             );
 
