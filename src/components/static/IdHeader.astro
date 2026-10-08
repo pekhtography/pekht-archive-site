@@ -16,7 +16,7 @@ const titleContinuation = titleWords.slice(3).join(" ");
 
 <div class:list={[
     "mt-10",
-    isJournal ? "border border-border p-6 bg-background" : "border border-border p-6"
+    "border border-border p-6 bg-background"
 ]}>
     <BackButton url={backUrl} />
 
@@ -71,11 +71,11 @@ const titleContinuation = titleWords.slice(3).join(" ");
                         items.tags && items.tags.length > 0 && (
                             <div class="flex gap-2 mt-4 flex-wrap">
                                 {items.tags.map((tag: string) => (
-                                    <div class="flex gap-2 mt-4 flex-wrap">
-                        {items.tags.map((tag: string) => (
-                            <span class="text-xs px-3 py-1 bg-muted text-muted-foreground rounded">{tag}</span>
-                        ))}
-                    </div>
+                                    <span class="text-xs px-3 py-1 bg-muted text-muted-foreground rounded">{tag}</span>
+                                ))}
+                            </div>
+                        )
+                    }
                 </>
             )
         }
