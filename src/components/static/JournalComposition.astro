@@ -30,19 +30,6 @@ const { composition, archiveItems } = Astro.props as {
 
 const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
-const splitJournalLead = (text: string) => {
-    const matches = [...text.matchAll(/\S+/g)];
-
-    if (matches.length <= 3) {
-        return { lead: text, rest: "" };
-    }
-
-    const leadEnd = matches[2].index! + matches[2][0].length;
-    return {
-        lead: text.slice(0, leadEnd),
-        rest: text.slice(leadEnd),
-    };
-};
 ---
 
 <div class="journal-composition">
@@ -60,15 +47,7 @@ const splitJournalLead = (text: string) => {
                     <section class={`journal-source ${imageSideClass}`} aria-label={archive.data.title}>
                         <div class={textClass}>
                             <div class="journal-source-text">
-                                {(() => {
-                                    const { lead, rest } = splitJournalLead(block.text);
-                                    return (
-                                        <>
-                                            <span class="journal-lead">{lead}</span>
-                                            {rest && <span class="journal-body">{rest}</span>}
-                                        </>
-                                    );
-                                })()}
+                                {block.text}
                             </div>
                         </div>
                         <a
@@ -135,21 +114,6 @@ const splitJournalLead = (text: string) => {
         max-width: 34rem;
     }
 
-    .journal-lead {
-        display: block;
-        font-size: 3rem;
-        line-height: 1;
-        font-weight: 600;
-        opacity: 0.9;
-    }
-
-    .journal-body {
-        display: block;
-        margin-top: 0.75rem;
-        font-size: 1.125rem;
-        line-height: 1.75;
-        color: var(--muted-foreground);
-    }
 
     .journal-text-up {
         align-self: start;
