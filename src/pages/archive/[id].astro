@@ -4,6 +4,7 @@ import { getCollection, render } from "astro:content";
 import { ARCHIVE_PAGE_SIZE, sortArchiveItems } from "@/lib/archive-sort";
 import { sitePath } from "@/lib/site-url";
 import BackButton from "@/components/static/BackButton.astro";
+import { Tilt } from "@/components/client/Tilt";
 
 export async function getStaticPaths() {
     const items = sortArchiveItems(await getCollection("archive"));
@@ -50,22 +51,26 @@ const next =
         </div>
 
         <div>
-            <div class="border border-border overflow-hidden">
-                <img
-                    src={sitePath(item.data.image)}
-                    alt={item.data.title}
-                    class="block w-full h-auto"
-                />
-            </div>
-
-            {item.data.gallery.map((image, index) => (
-                <div class="mt-8 border border-border overflow-hidden">
+            <Tilt maxTilt={3} client:load>
+                <div class="border border-border overflow-hidden">
                     <img
-                        src={sitePath(image)}
-                        alt={`${item.data.title} — photo ${index + 2}`}
+                        src={sitePath(item.data.image)}
+                        alt={item.data.title}
                         class="block w-full h-auto"
                     />
                 </div>
+            </Tilt>
+
+            {item.data.gallery.map((image, index) => (
+                <Tilt maxTilt={3} client:load>
+                    <div class="mt-8 border border-border overflow-hidden">
+                        <img
+                            src={sitePath(image)}
+                            alt={`${item.data.title} — photo ${index + 2}`}
+                            class="block w-full h-auto"
+                        />
+                    </div>
+                </Tilt>
             ))}
         </div>
 
