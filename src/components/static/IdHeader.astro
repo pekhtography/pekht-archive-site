@@ -9,16 +9,28 @@ const isJournal = items.category === "journal";
 
 const parsedDate = parse(items.date, "dd-MM-yyyy", new Date());
 const formattedDate = format(parsedDate, "MMM dd, yyyy");
+const titleWords = String(items.title).trim().split(/\s+/);
+const titleLead = titleWords.slice(0, 3).join(" ");
+const titleContinuation = titleWords.slice(3).join(" ");
 ---
 
 <div class:list={[
     "mt-10",
-    isJournal ? "journal-header" : "border border-border p-6"
+    isJournal ? "border border-border p-6 bg-background" : "border border-border p-6"
 ]}>
     <BackButton url={backUrl} />
 
     <header class:list={["mt-3 select-none", isJournal ? "journal-header-inner" : ""]}>
-        <h1 class:list={["font-semibold opacity-90", isJournal ? "text-5xl md:text-6xl tracking-tight" : "text-5xl"]}>{items.title}</h1>
+        {
+            isJournal ? (
+                <>
+                    <h1 class="pt-3 text-5xl font-semibold opacity-90 select-none">{titleLead}</h1>
+                    <p class="mt-3 max-w-3xl text-lg text-muted-foreground whitespace-pre-line">{titleContinuation}</p>
+                </>
+            ) : (
+                <h1 class="text-5xl font-semibold opacity-90">{items.title}</h1>
+            )
+        }
 
         {
             isJournal ? (
@@ -32,7 +44,7 @@ const formattedDate = format(parsedDate, "MMM dd, yyyy");
                         items.facets && items.facets.length > 0 && (
                             <div class="flex flex-wrap gap-2">
                                 {items.facets.map((facet: string) => (
-                                    <span class="text-xs px-3 py-1 bg-muted text-muted-foreground rounded">{facet}</span>
+                                    <span class="text-xs px-3 py-1 bg-muted text-muted-foreground border border-border rounded">{facet}</span>
                                 ))}
                             </div>
                         )
@@ -59,11 +71,11 @@ const formattedDate = format(parsedDate, "MMM dd, yyyy");
                         items.tags && items.tags.length > 0 && (
                             <div class="flex gap-2 mt-4 flex-wrap">
                                 {items.tags.map((tag: string) => (
-                                    <span class="text-xs px-3 py-1 bg-muted text-muted-foreground rounded">{tag}</span>
-                                ))}
-                            </div>
-                        )
-                    }
+                                    <div class="flex gap-2 mt-4 flex-wrap">
+                        {items.tags.map((tag: string) => (
+                            <span class="text-xs px-3 py-1 bg-muted text-muted-foreground rounded">{tag}</span>
+                        ))}
+                    </div>
                 </>
             )
         }
