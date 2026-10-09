@@ -69,7 +69,6 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
 <script>
     const ROOT_SELECTOR = "[data-journal-composition]";
-    const MAX_DESKTOP_WIDTH = 767;
 
     type SourceRecord = {
         section: HTMLElement;
@@ -82,6 +81,25 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         rightWeight: number;
         repeatedSides: number;
     };
+
+    function waitForImage(image: HTMLImageElement): Promise<void> {
+        if (image.complete && image.naturalWidth > 0) return Promise.resolve();
+
+        return new Promise((resolve) => {
+            const finish = () => resolve();
+            image.addEventListener("load", finish, { once: true });
+            image.addEventListener("error", finish, { once: true });
+            // The side-selection algorithm needs real image proportions before
+            // choosing sides, so load only the images belonging to this Journal.
+            image.loading = "eager";
+
+            if (typeof image.decode === "function") {
+                image.decode().then(finish).catch(() => {
+                    if (image.complete) finish();
+                });
+            }
+        });
+    }
 
     function imageWeight(image: HTMLImageElement): number {
         if (image.naturalWidth > 0 && image.naturalHeight > 0) {
@@ -101,9 +119,9 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
     function chooseSides(records: SourceRecord[]): number[] {
         if (records.length === 0) return [];
 
-        // Keep the existing maximum-run rule: for the usual 3–6 source blocks,
-        // no side receives more than two consecutive images. Larger runs adapt
-        // the limit to one third of their source count, rounded up.
+        // Preserve the existing maximum-run rule: for the usual 3–6 source
+        // blocks, no side receives more than two consecutive images. Larger
+        // runs adapt the limit to one third of their source count, rounded up.
         const maxConsecutiveImages = Math.max(2, Math.ceil(records.length / 3));
         let candidates: Candidate[] = [{
             sides: [],
@@ -142,51 +160,46 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         return candidates[0]?.sides ?? records.map((_, index) => index % 2);
     }
 
-    function applyCompositionSides(root: HTMLElement) {
+    async function initialize(root: HTMLElement) {
         const nodes = Array.from(root.children);
+        const runs: SourceRecord[][] = [];
         let run: SourceRecord[] = [];
 
-        const applyRun = () => {
-            if (run.length === 0) return;
-            const sides = chooseSides(run);
-            run.forEach((record, index) => {
-                record.section.classList.toggle("journal-image-left", sides[index] === 0);
-                record.section.classList.toggle("journal-image-right", sides[index] === 1);
-            });
+        const finishRun = () => {
+            if (run.length > 0) runs.push(run);
             run = [];
         };
 
         for (const node of nodes) {
             if (!(node instanceof HTMLElement) || !node.hasAttribute("data-journal-source")) {
-                applyRun();
+                finishRun();
                 continue;
             }
 
             const image = node.querySelector<HTMLImageElement>(".journal-image img");
             if (!image) {
-                applyRun();
+                finishRun();
                 continue;
             }
             run.push({ section: node, image });
         }
-        applyRun();
+        finishRun();
+
+        // Bridges split the composition into independent runs, as before.
+        await Promise.all(runs.flat().map(({ image }) => waitForImage(image)));
+
+        for (const records of runs) {
+            const sides = chooseSides(records);
+            records.forEach((record, index) => {
+                record.section.classList.toggle("journal-image-left", sides[index] === 0);
+                record.section.classList.toggle("journal-image-right", sides[index] === 1);
+            });
+        }
     }
 
-    function initialize(root: HTMLElement) {
-        applyCompositionSides(root);
-
-        // Lazy-loaded images may reveal their true aspect ratio only later.
-        // Recalculate side choices when an image finishes loading; never force
-        // all Journal images to load eagerly just to calculate the layout.
-        root.querySelectorAll<HTMLImageElement>(".journal-image img").forEach((image) => {
-            image.addEventListener("load", () => applyCompositionSides(root), { once: true });
-        });
-
-        const media = window.matchMedia(`(max-width: ${MAX_DESKTOP_WIDTH}px)`);
-        media.addEventListener?.("change", () => applyCompositionSides(root));
-    }
-
-    document.querySelectorAll<HTMLElement>(ROOT_SELECTOR).forEach(initialize);
+    document.querySelectorAll<HTMLElement>(ROOT_SELECTOR).forEach((root) => {
+        void initialize(root);
+    });
 </script>
 
 <style is:global>
