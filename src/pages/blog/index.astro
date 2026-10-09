@@ -6,6 +6,9 @@ import { getCollection } from "astro:content";
 import { parse } from "date-fns";
 
 const blogItems = await getCollection("blog");
+const archiveItems = await getCollection("archive");
+const archiveById = new Map(archiveItems.map((archive) => [archive.id, archive]));
+
 const journalItems = blogItems
     .filter((blog) => !blog.data.draft && blog.data.category === "journal")
     .sort((a, b) => {
@@ -14,7 +17,13 @@ const journalItems = blogItems
         return bDate.getTime() - aDate.getTime();
     });
 
-const allItems = journalItems;
+const allItems = journalItems.map((item) => {
+    const firstCompositionSource = item.data.composition?.find((block) => block.type === "source");
+    const firstSourceId = firstCompositionSource?.source_id ?? item.data.source_ids?.[0];
+    const previewImage = firstSourceId ? archiveById.get(firstSourceId)?.data.image : undefined;
+
+    return { ...item, previewImage };
+});
 ---
 
 <IndexLayout title="Journal - PEKHTOGRAPHY" description="Editorial passages assembled from the archive." image="/og/default.png">
