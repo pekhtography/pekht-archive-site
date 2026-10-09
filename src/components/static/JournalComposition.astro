@@ -166,24 +166,78 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
             const { layout, left, right } = makeLayout();
             const rootWidth = root.getBoundingClientRect().width;
-            const gap = Math.min(24, Math.max(16, window.innerWidth * 0.02));
+            const gap = Math.min(14, Math.max(10, window.innerWidth * 0.012));
             const columnWidth = Math.max(1, (rootWidth - gap) / 2);
-            let leftHeight = 0;
-            let rightHeight = 0;
+            layout.style.setProperty("--journal-column-gap", "clamp(0.75rem, 1.2vw, 0.9rem)");
 
-            layout.style.setProperty("--journal-column-gap", COLUMN_GAP);
-
-            for (const record of pendingRun) {
+            const items = pendingRun.map((record) => {
                 const img = record.image.querySelector("img")!;
-                const imgHeight = imageHeight(img, columnWidth);
-                const textHeight = measureTextHeight(record.text, columnWidth);
+                return {
+                    record,
+                    imageHeight: imageHeight(img, columnWidth),
+                    textHeight: measureTextHeight(record.text, columnWidth),
+                };
+            });
 
-                // Place each image opposite its text, choosing the orientation
-                // that best balances the projected heights of the two columns.
-                const imageLeftDifference = Math.abs((leftHeight + imgHeight) - (rightHeight + textHeight));
-                const imageRightDifference = Math.abs((leftHeight + textHeight) - (rightHeight + imgHeight));
-                const imageGoesLeft = imageLeftDifference <= imageRightDifference;
+            // Choose the orientation for the entire run, not one pair at a time.
+            // 0 = image left / text right; 1 = text left / image right.
+            // Each source contributes exactly one item to each column, so both
+            // columns retain the original source order A -> B -> C -> ...
+            type Candidate = {
+                orientations: number[];
+                leftHeight: number;
+                rightHeight: number;
+                score: number;
+            };
+            let candidates: Candidate[] = [{
+                orientations: [],
+                leftHeight: 0,
+                rightHeight: 0,
+                score: 0,
+            }];
 
+            for (let index = 0; index < items.length; index++) {
+                const item = items[index];
+                const next: Candidate[] = [];
+
+                for (const candidate of candidates) {
+                    for (const orientation of [0, 1]) {
+                        const leftItemHeight = orientation === 0 ? item.imageHeight : item.textHeight;
+                        const rightItemHeight = orientation === 0 ? item.textHeight : item.imageHeight;
+                        const leftHeight = candidate.leftHeight + leftItemHeight + (index > 0 ? gap : 0);
+                        const rightHeight = candidate.rightHeight + rightItemHeight + (index > 0 ? gap : 0);
+                        const previous = candidate.orientations[candidate.orientations.length - 1];
+                        const repeatedSidePenalty = previous === orientation ? columnWidth * 0.28 : 0;
+                        next.push({
+                            orientations: [...candidate.orientations, orientation],
+                            leftHeight,
+                            rightHeight,
+                            // Penalize imbalance at every prefix, not just at the end.
+                            // A modest repeat penalty prevents a trivial all-photos-on-one-
+                            // side layout when several orientations have similar total height.
+                            score: candidate.score
+                                + Math.abs(leftHeight - rightHeight)
+                                + repeatedSidePenalty,
+                        });
+                    }
+                }
+
+                // Five-source compositions evaluate all 2^5 layouts. For unusually
+                // long runs, keep a diverse beam so the search remains bounded.
+                next.sort((a, b) => a.score - b.score);
+                const beamWidth = items.length <= 12 ? next.length : 512;
+                candidates = next.slice(0, beamWidth);
+            }
+
+            candidates.sort((a, b) => {
+                const scoreA = a.score + Math.abs(a.leftHeight - a.rightHeight) * 1.5;
+                const scoreB = b.score + Math.abs(b.leftHeight - b.rightHeight) * 1.5;
+                return scoreA - scoreB;
+            });
+            const best = candidates[0];
+
+            items.forEach(({ record }, index) => {
+                const imageGoesLeft = best.orientations[index] === 0;
                 record.section.remove();
                 record.image.className = "journal-image";
                 record.text.className = "journal-text-block " + (imageGoesLeft ? "journal-text-align-right" : "journal-text-align-left");
@@ -191,15 +245,11 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
                 if (imageGoesLeft) {
                     left.append(record.image);
                     right.append(record.text);
-                    leftHeight += imgHeight + gap;
-                    rightHeight += textHeight + gap;
                 } else {
                     right.append(record.image);
                     left.append(record.text);
-                    rightHeight += imgHeight + gap;
-                    leftHeight += textHeight + gap;
                 }
-            }
+            });
 
             fragment.append(layout);
             pendingRun = [];
@@ -268,7 +318,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         align-items: start;
         column-gap: clamp(1rem, 2vw, 1.5rem);
-        padding: clamp(1.5rem, 3vw, 2rem) 0;
+        padding: clamp(0.75rem, 1.5vw, 1rem) 0;
     }
 
     .journal-source-text {
@@ -365,7 +415,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            padding: 2.25rem 0;
+            padding: 1.25rem 0;
         }
 
         .journal-image {
