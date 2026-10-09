@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3.21.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.21.0) | 2026-10-09
+
+### Features
+- publish Journal entry [87925f7](https://github.com/pekhtography/pekht-archive-site/commit/87925f7)
+### Other
+- pair quiet promise Explore image and text [828a55e](https://github.com/pekhtography/pekht-archive-site/commit/828a55e)
+
 ## [v3.20.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.20.0) | 2026-10-08
 
 ### Features
