@@ -353,7 +353,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
     }
 
     .journal-source-text {
-        font-size: clamp(1rem, 1.35vw, 1.15rem);
+        font-size: clamp(1.5rem, 2.025vw, 1.725rem);
         line-height: 1.85;
         white-space: pre-line;
     }
@@ -388,7 +388,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         width: min(86%, 38rem);
         margin: 0 auto;
         padding: clamp(0.75rem, 2vw, 1.5rem) 0;
-        font-size: clamp(1rem, 1.25vw, 1.1rem);
+        font-size: clamp(1.5rem, 1.875vw, 1.65rem);
         line-height: 1.85;
         white-space: pre-line;
     }
@@ -404,8 +404,16 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
     .journal-column {
         display: flex;
         flex-direction: column;
-        gap: clamp(0.65rem, 1.2vw, 0.9rem);
+        gap: 0;
         min-width: 0;
+    }
+
+    .journal-layout .journal-column > * + * {
+        margin-top: clamp(0.65rem, 1.2vw, 0.9rem);
+    }
+
+    .journal-layout .journal-column > .journal-image + .journal-image {
+        margin-top: var(--journal-frame-inset, clamp(1rem, 3vw, 1.5rem));
     }
 
     .journal-layout .journal-image,
@@ -416,7 +424,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
     }
 
     .journal-text-block {
-        font-size: clamp(1rem, 1.35vw, 1.15rem);
+        font-size: clamp(1.5rem, 2.025vw, 1.725rem);
         line-height: 1.85;
         white-space: pre-line;
     }
@@ -435,7 +443,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         left: -100000px;
         visibility: hidden;
         box-sizing: border-box;
-        font-size: clamp(1rem, 1.35vw, 1.15rem);
+        font-size: clamp(1.5rem, 2.025vw, 1.725rem);
         line-height: 1.85;
         white-space: pre-line;
         overflow-wrap: anywhere;
