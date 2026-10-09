@@ -166,7 +166,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
             const { layout, left, right } = makeLayout();
             const rootWidth = root.getBoundingClientRect().width;
-            const gap = Math.min(14, Math.max(10, window.innerWidth * 0.012));
+            const gap = Math.min(14.4, Math.max(12, window.innerWidth * 0.012));
             const columnWidth = Math.max(1, (rootWidth - gap) / 2);
             layout.style.setProperty("--journal-column-gap", "clamp(0.75rem, 1.2vw, 0.9rem)");
 
@@ -179,22 +179,62 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
                 };
             });
 
-            // Choose the orientation for the entire run, not one pair at a time.
-            // 0 = image left / text right; 1 = text left / image right.
-            // Each source contributes exactly one item to each column, so both
-            // columns retain the original source order A -> B -> C -> ...
+            // Select which source images go to each column independently of their text.
+            // For every source, its image goes to one column and its text to the other.
+            // The source order remains unchanged in both columns.
+            // Priority: balance actual image heights first; then balance total column
+            // heights and their progression ("catch-up" effect); finally avoid long
+            // runs of images on the same side when the stronger constraints allow it.
             type Candidate = {
                 orientations: number[];
                 leftHeight: number;
                 rightHeight: number;
-                score: number;
+                leftImageHeight: number;
+                rightImageHeight: number;
+                imagePrefixImbalance: number;
+                totalPrefixImbalance: number;
+                sameSideRuns: number;
             };
+
             let candidates: Candidate[] = [{
                 orientations: [],
                 leftHeight: 0,
                 rightHeight: 0,
-                score: 0,
+                leftImageHeight: 0,
+                rightImageHeight: 0,
+                imagePrefixImbalance: 0,
+                totalPrefixImbalance: 0,
+                sameSideRuns: 0,
             }];
+
+            const compareCandidates = (a: Candidate, b: Candidate) => {
+                const imageDifferenceA = Math.abs(a.leftImageHeight - a.rightImageHeight);
+                const imageDifferenceB = Math.abs(b.leftImageHeight - b.rightImageHeight);
+                if (Math.abs(imageDifferenceA - imageDifferenceB) > 0.5) {
+                    return imageDifferenceA - imageDifferenceB;
+                }
+
+                if (Math.abs(a.imagePrefixImbalance - b.imagePrefixImbalance) > 0.5) {
+                    return a.imagePrefixImbalance - b.imagePrefixImbalance;
+                }
+
+                const totalDifferenceA = Math.abs(a.leftHeight - a.rightHeight);
+                const totalDifferenceB = Math.abs(b.leftHeight - b.rightHeight);
+                if (Math.abs(totalDifferenceA - totalDifferenceB) > 0.5) {
+                    return totalDifferenceA - totalDifferenceB;
+                }
+
+                if (Math.abs(a.totalPrefixImbalance - b.totalPrefixImbalance) > 0.5) {
+                    return a.totalPrefixImbalance - b.totalPrefixImbalance;
+                }
+
+                if (a.sameSideRuns !== b.sameSideRuns) {
+                    return a.sameSideRuns - b.sameSideRuns;
+                }
+
+                // Stable tie-break: avoid depending on random numbers or runtime timing.
+                return a.orientations.join("") < b.orientations.join("") ? -1 : 1;
+            };
 
             for (let index = 0; index < items.length; index++) {
                 const item = items[index];
@@ -202,38 +242,40 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
                 for (const candidate of candidates) {
                     for (const orientation of [0, 1]) {
-                        const leftItemHeight = orientation === 0 ? item.imageHeight : item.textHeight;
-                        const rightItemHeight = orientation === 0 ? item.textHeight : item.imageHeight;
-                        const leftHeight = candidate.leftHeight + leftItemHeight + (index > 0 ? gap : 0);
-                        const rightHeight = candidate.rightHeight + rightItemHeight + (index > 0 ? gap : 0);
+                        const imageGoesLeft = orientation === 0;
+                        const leftItemHeight = imageGoesLeft ? item.imageHeight : item.textHeight;
+                        const rightItemHeight = imageGoesLeft ? item.textHeight : item.imageHeight;
+                        const separator = index > 0 ? gap : 0;
+                        const leftHeight = candidate.leftHeight + leftItemHeight + separator;
+                        const rightHeight = candidate.rightHeight + rightItemHeight + separator;
+                        const leftImageHeight = candidate.leftImageHeight + (imageGoesLeft ? item.imageHeight : 0);
+                        const rightImageHeight = candidate.rightImageHeight + (imageGoesLeft ? 0 : item.imageHeight);
                         const previous = candidate.orientations[candidate.orientations.length - 1];
-                        const repeatedSidePenalty = previous === orientation ? columnWidth * 0.28 : 0;
+
                         next.push({
                             orientations: [...candidate.orientations, orientation],
                             leftHeight,
                             rightHeight,
-                            // Penalize imbalance at every prefix, not just at the end.
-                            // A modest repeat penalty prevents a trivial all-photos-on-one-
-                            // side layout when several orientations have similar total height.
-                            score: candidate.score
-                                + Math.abs(leftHeight - rightHeight)
-                                + repeatedSidePenalty,
+                            leftImageHeight,
+                            rightImageHeight,
+                            imagePrefixImbalance: candidate.imagePrefixImbalance
+                                + Math.abs(leftImageHeight - rightImageHeight),
+                            totalPrefixImbalance: candidate.totalPrefixImbalance
+                                + Math.abs(leftHeight - rightHeight),
+                            sameSideRuns: candidate.sameSideRuns + (previous === orientation ? 1 : 0),
                         });
                     }
                 }
 
-                // Five-source compositions evaluate all 2^5 layouts. For unusually
-                // long runs, keep a diverse beam so the search remains bounded.
-                next.sort((a, b) => a.score - b.score);
-                const beamWidth = items.length <= 12 ? next.length : 512;
+                // Enumerate every arrangement for normal Journal runs. For unusually
+                // long runs, retain a broad beam ordered by the primary image-balance
+                // objective so computation remains bounded.
+                next.sort(compareCandidates);
+                const beamWidth = items.length <= 16 ? next.length : 4096;
                 candidates = next.slice(0, beamWidth);
             }
 
-            candidates.sort((a, b) => {
-                const scoreA = a.score + Math.abs(a.leftHeight - a.rightHeight) * 1.5;
-                const scoreB = b.score + Math.abs(b.leftHeight - b.rightHeight) * 1.5;
-                return scoreA - scoreB;
-            });
+            candidates.sort(compareCandidates);
             const best = candidates[0];
 
             items.forEach(({ record }, index) => {
