@@ -66,271 +66,124 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
     )}
 </div>
 
+
 <script>
     const ROOT_SELECTOR = "[data-journal-composition]";
-    const DESKTOP_QUERY = "(min-width: 768px)";
-    const COLUMN_GAP = "clamp(1rem, 2vw, 1.5rem)";
+    const MAX_DESKTOP_WIDTH = 767;
 
     type SourceRecord = {
         section: HTMLElement;
-        text: HTMLElement;
-        image: HTMLAnchorElement;
+        image: HTMLImageElement;
     };
 
-    function getSourceRecord(section: HTMLElement): SourceRecord | null {
-        const text = section.querySelector<HTMLElement>(".journal-text");
-        const image = section.querySelector<HTMLAnchorElement>(".journal-image");
-        return text && image ? { section, text, image } : null;
-    }
+    type Candidate = {
+        sides: number[];
+        leftWeight: number;
+        rightWeight: number;
+        repeatedSides: number;
+    };
 
-    function waitForImage(image: HTMLImageElement): Promise<void> {
-        if (image.complete && image.naturalWidth > 0) return Promise.resolve();
-
-        return new Promise((resolve) => {
-            const finish = () => resolve();
-            image.addEventListener("load", finish, { once: true });
-            image.addEventListener("error", finish, { once: true });
-            image.loading = "eager";
-
-            if (typeof image.decode === "function") {
-                image.decode().then(finish).catch(() => {
-                    // A failed decode may still be followed by load/error.
-                    if (image.complete) finish();
-                });
-            }
-        });
-    }
-
-    function measureTextHeight(text: HTMLElement, width: number): number {
-        const measure = document.createElement("div");
-        measure.className = "journal-source-text journal-measure-text";
-        measure.style.width = width + "px";
-        measure.textContent = text.querySelector(".journal-source-text")?.textContent ?? "";
-        document.body.append(measure);
-        const height = measure.getBoundingClientRect().height;
-        measure.remove();
-        return height;
-    }
-
-    function imageHeight(image: HTMLImageElement, width: number): number {
+    function imageWeight(image: HTMLImageElement): number {
         if (image.naturalWidth > 0 && image.naturalHeight > 0) {
-            return width * image.naturalHeight / image.naturalWidth;
+            return image.naturalHeight / image.naturalWidth;
         }
-        return width * 0.75;
+        return 1;
     }
 
-    function makeColumn(): HTMLDivElement {
-        const column = document.createElement("div");
-        column.className = "journal-column";
-        return column;
+    function compareCandidates(a: Candidate, b: Candidate): number {
+        const balanceA = Math.abs(a.leftWeight - a.rightWeight);
+        const balanceB = Math.abs(b.leftWeight - b.rightWeight);
+        if (Math.abs(balanceA - balanceB) > 0.001) return balanceA - balanceB;
+        if (a.repeatedSides !== b.repeatedSides) return a.repeatedSides - b.repeatedSides;
+        return a.sides.join("").localeCompare(b.sides.join(""));
     }
 
-    function makeLayout(): { layout: HTMLDivElement; left: HTMLDivElement; right: HTMLDivElement } {
-        const layout = document.createElement("div");
-        layout.className = "journal-layout";
-        const left = makeColumn();
-        const right = makeColumn();
-        layout.append(left, right);
-        return { layout, left, right };
-    }
+    function chooseSides(records: SourceRecord[]): number[] {
+        if (records.length === 0) return [];
 
-    function restoreOriginal(root: HTMLElement, originalNodes: Element[], records: SourceRecord[]) {
-        for (const record of records) {
-            record.section.className = "journal-source";
-            record.text.className = "journal-text";
-            record.image.className = "journal-image";
-            record.section.append(record.text, record.image);
-        }
-        root.replaceChildren(...originalNodes);
-        root.classList.remove("journal-is-laid-out");
-    }
+        // Keep the existing maximum-run rule: for the usual 3–6 source blocks,
+        // no side receives more than two consecutive images. Larger runs adapt
+        // the limit to one third of their source count, rounded up.
+        const maxConsecutiveImages = Math.max(2, Math.ceil(records.length / 3));
+        let candidates: Candidate[] = [{
+            sides: [],
+            leftWeight: 0,
+            rightWeight: 0,
+            repeatedSides: 0,
+        }];
 
-    async function layoutComposition(root: HTMLElement) {
-        const originalNodes = Array.from(root.children);
-        const records = originalNodes
-            .filter((node): node is HTMLElement => node instanceof HTMLElement && node.hasAttribute("data-journal-source"))
-            .map(getSourceRecord)
-            .filter((record): record is SourceRecord => record !== null);
+        records.forEach((record, index) => {
+            const weight = imageWeight(record.image);
+            const next: Candidate[] = [];
 
-        if (records.length === 0) return;
+            for (const candidate of candidates) {
+                for (const side of [0, 1]) {
+                    let consecutive = 1;
+                    for (let i = candidate.sides.length - 1;
+                        i >= 0 && candidate.sides[i] === side;
+                        i--) consecutive++;
+                    if (consecutive > maxConsecutiveImages) continue;
 
-        await Promise.all(records.map((record) => waitForImage(record.image.querySelector("img")!)));
-        if (!window.matchMedia(DESKTOP_QUERY).matches) return;
-
-        const recordBySection = new Map(records.map((record) => [record.section, record]));
-        const fragment = document.createDocumentFragment();
-        let pendingRun: SourceRecord[] = [];
-
-        const flushRun = () => {
-            if (pendingRun.length === 0) return;
-
-            const { layout, left, right } = makeLayout();
-            layout.style.setProperty(
-                "--journal-column-gap",
-                "var(--journal-frame-inset, clamp(1rem, 3vw, 1.5rem))",
-            );
-            const rootWidth = root.getBoundingClientRect().width;
-            const gap = Number.parseFloat(getComputedStyle(layout).columnGap) || 0;
-            const columnWidth = Math.max(1, (rootWidth - gap) / 2);
-
-            const items = pendingRun.map((record) => {
-                const img = record.image.querySelector("img")!;
-                return {
-                    record,
-                    imageHeight: imageHeight(img, columnWidth),
-                    textHeight: measureTextHeight(record.text, columnWidth),
-                };
-            });
-
-            // Select which source images go to each column independently of their text.
-            // For every source, its image goes to one column and its text to the other.
-            // The source order remains unchanged in both columns.
-            // Hard constraint: no side may receive a run of more than the allowed
-            // number of consecutive images. For the usual 3–6 source images, the
-            // maximum run is two. Larger compositions adapt the limit to one third
-            // of their total image count, rounded up.
-            const maxConsecutiveImages = Math.max(2, Math.ceil(items.length / 3));
-
-            type Candidate = {
-                orientations: number[];
-                leftHeight: number;
-                rightHeight: number;
-                leftImageHeight: number;
-                rightImageHeight: number;
-            };
-
-            let candidates: Candidate[] = [{
-                orientations: [],
-                leftHeight: 0,
-                rightHeight: 0,
-                leftImageHeight: 0,
-                rightImageHeight: 0,
-            }];
-
-            const compareCandidates = (a: Candidate, b: Candidate) => {
-                const imageDifferenceA = Math.abs(a.leftImageHeight - a.rightImageHeight);
-                const imageDifferenceB = Math.abs(b.leftImageHeight - b.rightImageHeight);
-                if (Math.abs(imageDifferenceA - imageDifferenceB) > 0.5) {
-                    return imageDifferenceA - imageDifferenceB;
+                    const previous = candidate.sides[candidate.sides.length - 1];
+                    next.push({
+                        sides: [...candidate.sides, side],
+                        leftWeight: candidate.leftWeight + (side === 0 ? weight : 0),
+                        rightWeight: candidate.rightWeight + (side === 1 ? weight : 0),
+                        repeatedSides: candidate.repeatedSides + (index > 0 && previous === side ? 1 : 0),
+                    });
                 }
-
-                const totalDifferenceA = Math.abs(a.leftHeight - a.rightHeight);
-                const totalDifferenceB = Math.abs(b.leftHeight - b.rightHeight);
-                if (Math.abs(totalDifferenceA - totalDifferenceB) > 0.5) {
-                    return totalDifferenceA - totalDifferenceB;
-                }
-
-                // Deterministic tie-break only; no preference for alternation.
-                return a.orientations.join("").localeCompare(b.orientations.join(""));
-            };
-
-            for (let index = 0; index < items.length; index++) {
-                const item = items[index];
-                const next: Candidate[] = [];
-
-                for (const candidate of candidates) {
-                    for (const orientation of [0, 1]) {
-                        const imageGoesLeft = orientation === 0;
-                        const leftItemHeight = imageGoesLeft ? item.imageHeight : item.textHeight;
-                        const rightItemHeight = imageGoesLeft ? item.textHeight : item.imageHeight;
-                        const separator = index > 0 ? gap : 0;
-                        const leftHeight = candidate.leftHeight + leftItemHeight + separator;
-                        const rightHeight = candidate.rightHeight + rightItemHeight + separator;
-                        const leftImageHeight = candidate.leftImageHeight + (imageGoesLeft ? item.imageHeight : 0);
-                        const rightImageHeight = candidate.rightImageHeight + (imageGoesLeft ? 0 : item.imageHeight);
-                        let consecutiveImages = 1;
-                        for (let previousIndex = candidate.orientations.length - 1;
-                            previousIndex >= 0 && candidate.orientations[previousIndex] === orientation;
-                            previousIndex--) {
-                            consecutiveImages++;
-                        }
-                        if (consecutiveImages > maxConsecutiveImages) continue;
-
-                        next.push({
-                            orientations: [...candidate.orientations, orientation],
-                            leftHeight,
-                            rightHeight,
-                            leftImageHeight,
-                            rightImageHeight,
-                        });
-                    }
-                }
-
-                // Enumerate all valid arrangements for normal Journal runs. For
-                // unusually long runs, retain a broad beam ordered by final-balance
-                // objectives so computation remains bounded.
-                next.sort(compareCandidates);
-                const beamWidth = items.length <= 16 ? next.length : 4096;
-                candidates = next.slice(0, beamWidth);
             }
 
-            candidates.sort(compareCandidates);
-            const best = candidates[0];
+            next.sort(compareCandidates);
+            candidates = next.slice(0, records.length <= 16 ? next.length : 4096);
+        });
 
-            items.forEach(({ record }, index) => {
-                const imageGoesLeft = best.orientations[index] === 0;
-                record.section.remove();
-                record.image.className = "journal-image";
-                record.text.className = "journal-text-block " + (imageGoesLeft ? "journal-text-align-left" : "journal-text-align-right");
+        candidates.sort(compareCandidates);
+        return candidates[0]?.sides ?? records.map((_, index) => index % 2);
+    }
 
-                if (imageGoesLeft) {
-                    left.append(record.image);
-                    right.append(record.text);
-                } else {
-                    right.append(record.image);
-                    left.append(record.text);
-                }
+    function applyCompositionSides(root: HTMLElement) {
+        const nodes = Array.from(root.children);
+        let run: SourceRecord[] = [];
+
+        const applyRun = () => {
+            if (run.length === 0) return;
+            const sides = chooseSides(run);
+            run.forEach((record, index) => {
+                record.section.classList.toggle("journal-image-left", sides[index] === 0);
+                record.section.classList.toggle("journal-image-right", sides[index] === 1);
             });
-
-            fragment.append(layout);
-            pendingRun = [];
+            run = [];
         };
 
-        for (const node of originalNodes) {
-            if (node instanceof HTMLElement && recordBySection.has(node)) {
-                pendingRun.push(recordBySection.get(node)!);
-            } else {
-                flushRun();
-                fragment.append(node);
+        for (const node of nodes) {
+            if (!(node instanceof HTMLElement) || !node.hasAttribute("data-journal-source")) {
+                applyRun();
+                continue;
             }
-        }
-        flushRun();
 
-        root.replaceChildren(fragment);
-        root.classList.add("journal-is-laid-out");
+            const image = node.querySelector<HTMLImageElement>(".journal-image img");
+            if (!image) {
+                applyRun();
+                continue;
+            }
+            run.push({ section: node, image });
+        }
+        applyRun();
     }
 
     function initialize(root: HTMLElement) {
-        const originalNodes = Array.from(root.children);
-        const records = originalNodes
-            .filter((node): node is HTMLElement => node instanceof HTMLElement && node.hasAttribute("data-journal-source"))
-            .map(getSourceRecord)
-            .filter((record): record is SourceRecord => record !== null);
-        let isDesktopLayout = false;
-        let pending = false;
+        applyCompositionSides(root);
 
-        const update = async () => {
-            if (pending) return;
-            pending = true;
-            try {
-                const wantsDesktop = window.matchMedia(DESKTOP_QUERY).matches;
-                if (wantsDesktop && !isDesktopLayout) {
-                    await layoutComposition(root);
-                    isDesktopLayout = root.classList.contains("journal-is-laid-out");
-                } else if (!wantsDesktop && isDesktopLayout) {
-                    restoreOriginal(root, originalNodes, records);
-                    isDesktopLayout = false;
-                }
-            } finally {
-                pending = false;
-            }
-        };
-
-        void update();
-        window.addEventListener("resize", () => {
-            const wantsDesktop = window.matchMedia(DESKTOP_QUERY).matches;
-            if (wantsDesktop !== isDesktopLayout) void update();
+        // Lazy-loaded images may reveal their true aspect ratio only later.
+        // Recalculate side choices when an image finishes loading; never force
+        // all Journal images to load eagerly just to calculate the layout.
+        root.querySelectorAll<HTMLImageElement>(".journal-image img").forEach((image) => {
+            image.addEventListener("load", () => applyCompositionSides(root), { once: true });
         });
+
+        const media = window.matchMedia(`(max-width: ${MAX_DESKTOP_WIDTH}px)`);
+        media.addEventListener?.("change", () => applyCompositionSides(root));
     }
 
     document.querySelectorAll<HTMLElement>(ROOT_SELECTOR).forEach(initialize);
@@ -340,35 +193,40 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
     .journal-composition {
         display: flex;
         flex-direction: column;
-        gap: 0;
+        gap: var(--journal-frame-inset, clamp(1rem, 3vw, 1.5rem));
     }
 
-    /* No-JavaScript fallback and the pre-layout state. */
+    /* Each source remains one intact photo + text block. */
     .journal-source {
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        align-items: start;
-        column-gap: clamp(1rem, 2vw, 1.5rem);
-        padding: clamp(0.75rem, 1.5vw, 1rem) 0;
+        align-items: center;
+        column-gap: var(--journal-frame-inset, clamp(1rem, 3vw, 1.5rem));
+        min-width: 0;
+        margin: 0;
+        padding: 0;
     }
 
-    .journal-source-text {
-        font-size: clamp(1.5rem, 2.025vw, 1.725rem);
-        line-height: 1.2333;
+    .journal-source-text,
+    .journal-bridge {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 400;
         white-space: pre-line;
     }
 
     .journal-text {
-        grid-column: 2;
         grid-row: 1;
+        min-width: 0;
+        align-self: center;
     }
 
     .journal-image {
-        grid-column: 1;
         grid-row: 1;
         display: block;
         width: 100%;
-        align-self: start;
+        min-width: 0;
+        align-self: center;
         overflow: hidden;
     }
 
@@ -384,87 +242,60 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         opacity: 0.94;
     }
 
-    .journal-bridge {
-        width: min(86%, 38rem);
-        margin: 0 auto;
-        padding: clamp(0.75rem, 2vw, 1.5rem) 0;
-        font-size: clamp(1.5rem, 1.875vw, 1.65rem);
-        line-height: 1.2333;
-        white-space: pre-line;
+    .journal-source.journal-image-left .journal-image {
+        grid-column: 1;
     }
 
-    .journal-layout {
-        display: grid;
-        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        column-gap: var(--journal-column-gap, var(--journal-frame-inset, clamp(1rem, 3vw, 1.5rem)));
-        align-items: start;
-        padding: 0;
-    }
-
-    .journal-column {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        min-width: 0;
-    }
-
-    .journal-layout .journal-column > * + * {
-        margin-top: clamp(0.65rem, 1.2vw, 0.9rem);
-    }
-
-    .journal-layout .journal-column > .journal-image + .journal-image {
-        margin-top: var(--journal-frame-inset, clamp(1rem, 3vw, 1.5rem));
-    }
-
-    .journal-layout .journal-image,
-    .journal-layout .journal-text-block {
-        width: 100%;
-        min-width: 0;
-        margin: 0;
-    }
-
-    .journal-text-block {
-        font-size: clamp(1.5rem, 2.025vw, 1.725rem);
-        line-height: 1.2333;
-        white-space: pre-line;
-    }
-
-    .journal-text-align-left {
-        text-align: left;
-    }
-
-    .journal-text-align-right {
+    .journal-source.journal-image-left .journal-text {
+        grid-column: 2;
         text-align: right;
     }
 
-    .journal-measure-text {
-        position: absolute;
-        top: 0;
-        left: -100000px;
-        visibility: hidden;
-        box-sizing: border-box;
-        font-size: clamp(1.5rem, 2.025vw, 1.725rem);
-        line-height: 1.2333;
-        white-space: pre-line;
-        overflow-wrap: anywhere;
+    .journal-source.journal-image-right .journal-image {
+        grid-column: 2;
+    }
+
+    .journal-source.journal-image-right .journal-text {
+        grid-column: 1;
+        text-align: left;
+    }
+
+    /* A stable no-script fallback; the source pair is never split. */
+    .journal-source:not(.journal-image-left):not(.journal-image-right) .journal-image {
+        grid-column: 1;
+    }
+
+    .journal-source:not(.journal-image-left):not(.journal-image-right) .journal-text {
+        grid-column: 2;
+        text-align: right;
+    }
+
+    .journal-bridge {
+        width: min(86%, 38rem);
+        margin: 0 auto;
+        padding: 0;
     }
 
     @media (max-width: 767px) {
         .journal-source {
             display: flex;
             flex-direction: column;
-            gap: 1.5rem;
-            padding: 1.25rem 0;
+            align-items: stretch;
+            gap: var(--journal-frame-inset, clamp(1rem, 3vw, 1.5rem));
+        }
+
+        .journal-image,
+        .journal-text {
+            width: 100%;
         }
 
         .journal-image {
             order: 1;
-            width: 100%;
         }
 
         .journal-text {
             order: 2;
-            width: 100%;
+            text-align: left;
         }
 
         .journal-source-text {
@@ -474,7 +305,6 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
         .journal-bridge {
             width: 100%;
-            padding: 1rem 0;
         }
     }
 </style>
