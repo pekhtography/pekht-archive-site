@@ -236,6 +236,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
     .journal-image {
         grid-row: 1;
+        position: relative;
         display: block;
         width: 100%;
         min-width: 0;
@@ -251,8 +252,28 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         transition: opacity 180ms ease;
     }
 
+    .journal-image::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0;
+        background: linear-gradient(
+            90deg,
+            color-mix(in oklab, var(--background) 48%, transparent) 0%,
+            transparent 45%,
+            transparent 55%,
+            color-mix(in oklab, var(--background) 48%, transparent) 100%
+        );
+        transition: opacity 180ms ease;
+    }
+
     .journal-image:hover img {
-        opacity: 0.94;
+        opacity: 0.88;
+    }
+
+    .journal-image:hover::after {
+        opacity: 1;
     }
 
     .journal-source.journal-image-left .journal-image {
