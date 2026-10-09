@@ -165,10 +165,13 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
             if (pendingRun.length === 0) return;
 
             const { layout, left, right } = makeLayout();
+            layout.style.setProperty(
+                "--journal-column-gap",
+                "var(--journal-frame-inset, clamp(1rem, 3vw, 1.5rem))",
+            );
             const rootWidth = root.getBoundingClientRect().width;
-            const gap = Math.min(14.4, Math.max(12, window.innerWidth * 0.012));
+            const gap = Number.parseFloat(getComputedStyle(layout).columnGap) || 0;
             const columnWidth = Math.max(1, (rootWidth - gap) / 2);
-            layout.style.setProperty("--journal-column-gap", "clamp(0.75rem, 1.2vw, 0.9rem)");
 
             const items = pendingRun.map((record) => {
                 const img = record.image.querySelector("img")!;
@@ -182,18 +185,18 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
             // Select which source images go to each column independently of their text.
             // For every source, its image goes to one column and its text to the other.
             // The source order remains unchanged in both columns.
-            // Priority: balance actual image heights first; then balance total column
-            // heights and their progression ("catch-up" effect); finally avoid long
-            // runs of images on the same side when the stronger constraints allow it.
+            // Hard constraint: no side may receive a run of more than the allowed
+            // number of consecutive images. For the usual 3–6 source images, the
+            // maximum run is two. Larger compositions adapt the limit to one third
+            // of their total image count, rounded up.
+            const maxConsecutiveImages = Math.max(2, Math.ceil(items.length / 3));
+
             type Candidate = {
                 orientations: number[];
                 leftHeight: number;
                 rightHeight: number;
                 leftImageHeight: number;
                 rightImageHeight: number;
-                imagePrefixImbalance: number;
-                totalPrefixImbalance: number;
-                sameSideRuns: number;
             };
 
             let candidates: Candidate[] = [{
@@ -202,9 +205,6 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
                 rightHeight: 0,
                 leftImageHeight: 0,
                 rightImageHeight: 0,
-                imagePrefixImbalance: 0,
-                totalPrefixImbalance: 0,
-                sameSideRuns: 0,
             }];
 
             const compareCandidates = (a: Candidate, b: Candidate) => {
@@ -214,26 +214,14 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
                     return imageDifferenceA - imageDifferenceB;
                 }
 
-                if (Math.abs(a.imagePrefixImbalance - b.imagePrefixImbalance) > 0.5) {
-                    return a.imagePrefixImbalance - b.imagePrefixImbalance;
-                }
-
                 const totalDifferenceA = Math.abs(a.leftHeight - a.rightHeight);
                 const totalDifferenceB = Math.abs(b.leftHeight - b.rightHeight);
                 if (Math.abs(totalDifferenceA - totalDifferenceB) > 0.5) {
                     return totalDifferenceA - totalDifferenceB;
                 }
 
-                if (Math.abs(a.totalPrefixImbalance - b.totalPrefixImbalance) > 0.5) {
-                    return a.totalPrefixImbalance - b.totalPrefixImbalance;
-                }
-
-                if (a.sameSideRuns !== b.sameSideRuns) {
-                    return a.sameSideRuns - b.sameSideRuns;
-                }
-
-                // Stable tie-break: avoid depending on random numbers or runtime timing.
-                return a.orientations.join("") < b.orientations.join("") ? -1 : 1;
+                // Deterministic tie-break only; no preference for alternation.
+                return a.orientations.join("").localeCompare(b.orientations.join(""));
             };
 
             for (let index = 0; index < items.length; index++) {
@@ -250,7 +238,13 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
                         const rightHeight = candidate.rightHeight + rightItemHeight + separator;
                         const leftImageHeight = candidate.leftImageHeight + (imageGoesLeft ? item.imageHeight : 0);
                         const rightImageHeight = candidate.rightImageHeight + (imageGoesLeft ? 0 : item.imageHeight);
-                        const previous = candidate.orientations[candidate.orientations.length - 1];
+                        let consecutiveImages = 1;
+                        for (let previousIndex = candidate.orientations.length - 1;
+                            previousIndex >= 0 && candidate.orientations[previousIndex] === orientation;
+                            previousIndex--) {
+                            consecutiveImages++;
+                        }
+                        if (consecutiveImages > maxConsecutiveImages) continue;
 
                         next.push({
                             orientations: [...candidate.orientations, orientation],
@@ -258,18 +252,13 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
                             rightHeight,
                             leftImageHeight,
                             rightImageHeight,
-                            imagePrefixImbalance: candidate.imagePrefixImbalance
-                                + Math.abs(leftImageHeight - rightImageHeight),
-                            totalPrefixImbalance: candidate.totalPrefixImbalance
-                                + Math.abs(leftHeight - rightHeight),
-                            sameSideRuns: candidate.sameSideRuns + (previous === orientation ? 1 : 0),
                         });
                     }
                 }
 
-                // Enumerate every arrangement for normal Journal runs. For unusually
-                // long runs, retain a broad beam ordered by the primary image-balance
-                // objective so computation remains bounded.
+                // Enumerate all valid arrangements for normal Journal runs. For
+                // unusually long runs, retain a broad beam ordered by final-balance
+                // objectives so computation remains bounded.
                 next.sort(compareCandidates);
                 const beamWidth = items.length <= 16 ? next.length : 4096;
                 candidates = next.slice(0, beamWidth);
@@ -282,7 +271,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
                 const imageGoesLeft = best.orientations[index] === 0;
                 record.section.remove();
                 record.image.className = "journal-image";
-                record.text.className = "journal-text-block " + (imageGoesLeft ? "journal-text-align-right" : "journal-text-align-left");
+                record.text.className = "journal-text-block " + (imageGoesLeft ? "journal-text-align-left" : "journal-text-align-right");
 
                 if (imageGoesLeft) {
                     left.append(record.image);
@@ -407,7 +396,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
     .journal-layout {
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-        column-gap: var(--journal-column-gap, clamp(1rem, 2vw, 1.5rem));
+        column-gap: var(--journal-column-gap, var(--journal-frame-inset, clamp(1rem, 3vw, 1.5rem)));
         align-items: start;
         padding: 0;
     }
