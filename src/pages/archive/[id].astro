@@ -45,7 +45,7 @@ const next =
     prev={prev}
     next={next}
 >
-    <article transition:animate="fade">
+    <article transition:animate="fade" class:list={item.id === "that-quiet-promise-you-made-to-yourself-folded-tight-its-oka" ? ["quiet-promise-entry"] : []}>
         <div class="h-11 flex items-center pl-6">
             <BackButton url={archiveUrl} />
         </div>
@@ -112,3 +112,69 @@ const next =
         </div>
     </article>
 </IdLayout>
+
+
+<style>
+    article.quiet-promise-entry {
+        --journal-frame-inset: clamp(1rem, 3vw, 1.5rem);
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        align-items: center;
+        column-gap: var(--journal-frame-inset);
+        row-gap: var(--journal-frame-inset);
+        margin-top: 2rem;
+        padding: var(--journal-frame-inset);
+        border-left: 1px solid var(--border);
+        border-right: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+    }
+
+    article.quiet-promise-entry > div:nth-child(1) {
+        grid-column: 1 / -1;
+        height: auto;
+        min-height: 2.75rem;
+        padding-left: 0;
+    }
+
+    article.quiet-promise-entry > div:nth-child(2) {
+        grid-column: 1;
+        min-width: 0;
+    }
+
+    article.quiet-promise-entry > div:nth-child(3) {
+        grid-column: 2;
+        min-width: 0;
+        align-self: center;
+        margin: 0;
+        padding: 0;
+        border: 0;
+    }
+
+    article.quiet-promise-entry > div:nth-child(3) > div.whitespace-pre-line {
+        padding: 0;
+        text-align: left;
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        font-weight: 400;
+    }
+
+    @media (max-width: 767px) {
+        article.quiet-promise-entry {
+            grid-template-columns: minmax(0, 1fr);
+        }
+
+        article.quiet-promise-entry > div:nth-child(1),
+        article.quiet-promise-entry > div:nth-child(2),
+        article.quiet-promise-entry > div:nth-child(3) {
+            grid-column: 1;
+        }
+
+        article.quiet-promise-entry > div:nth-child(2) {
+            grid-row: 2;
+        }
+
+        article.quiet-promise-entry > div:nth-child(3) {
+            grid-row: 3;
+        }
+    }
+</style>
