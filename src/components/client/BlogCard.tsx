@@ -20,7 +20,7 @@ export function BlogCard({ item }: { item: blogConfig }) {
             {item.data.facets?.map((facet) => (
               <span
                 key={facet}
-                className="text-xs px-3 py-1 bg-muted text-muted-foreground border border-border rounded group-hover:bg-transparent animation"
+                className="text-xs px-3 py-1 bg-muted text-muted-foreground border border-border rounded group-hover:bg-background animation"
               >
                 {facet}
               </span>
