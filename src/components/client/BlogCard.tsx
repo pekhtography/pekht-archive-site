@@ -26,12 +26,9 @@ export function BlogCard({ item }: { item: blogConfig }) {
       )}
 
       <div className={`flex min-w-0 flex-1 flex-col gap-2 ${isJournal ? "p-3" : ""}`}>
-        <div className="flex items-center justify-between gap-3">
+        <div className={`flex justify-between gap-3 ${isJournal ? "items-start" : "items-center"}`}>
           {isJournal ? (
             <div className="flex min-w-0 flex-1 flex-wrap items-center gap-2">
-              <span className="shrink-0 text-sm text-muted-foreground/80 animation">
-                {formattedDate}
-              </span>
               {item.data.facets?.map((facet) => (
                 <span
                   key={facet}
@@ -46,12 +43,10 @@ export function BlogCard({ item }: { item: blogConfig }) {
               {item.data.category}
             </span>
           )}
-          <div className="flex items-center gap-2 shrink-0 pt-1">
-            {!isJournal && (
-              <span className="text-sm text-muted-foreground/80 group-hover:translate-x-0 translate-x-6 animation">
-                {formattedDate}
-              </span>
-            )}
+          <div className={`flex items-center gap-2 shrink-0 ${isJournal ? "" : "pt-1"}`}>
+            <span className={`text-sm text-muted-foreground/80 animation ${isJournal ? "" : "group-hover:translate-x-0 translate-x-6"}`}>
+              {formattedDate}
+            </span>
             <RiArrowRightUpLine className="size-5 scale-0 opacity-0 group-hover:scale-100 group-hover:opacity-100 group-hover:text-muted-foreground/80 group-active:text-foreground group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-200" />
           </div>
         </div>
