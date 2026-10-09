@@ -164,12 +164,11 @@ const { Content } = await render(item);
         inset: 0;
         pointer-events: none;
         opacity: 0;
+        /* This article places the photo at the outer left edge; fade inward toward the text. */
         background: linear-gradient(
             90deg,
             color-mix(in oklab, var(--background) 78%, transparent) 0%,
-            transparent 38%,
-            transparent 62%,
-            color-mix(in oklab, var(--background) 78%, transparent) 100%
+            transparent 42%
         );
         transition: opacity 180ms ease;
     }
