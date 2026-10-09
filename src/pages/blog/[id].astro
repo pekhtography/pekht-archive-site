@@ -93,10 +93,11 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
     }
 
     .journal-composition-frame {
+        --journal-frame-inset: clamp(1rem, 3vw, 1.5rem);
         position: relative;
         width: 100%;
         margin: 2rem auto 0;
-        padding: clamp(1rem, 3vw, 1.5rem);
+        padding: var(--journal-frame-inset);
         border-left: 1px solid var(--border);
         border-right: 1px solid var(--border);
         border-bottom: 1px solid var(--border);
