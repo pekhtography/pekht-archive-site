@@ -150,6 +150,38 @@ const { Content } = await render(item);
         font-weight: 400;
     }
 
+    article.quiet-promise-entry > div:nth-child(2) .overflow-hidden {
+        position: relative;
+    }
+
+    article.quiet-promise-entry > div:nth-child(2) img {
+        transition: opacity 180ms ease;
+    }
+
+    article.quiet-promise-entry > div:nth-child(2) .overflow-hidden::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        opacity: 0;
+        background: linear-gradient(
+            90deg,
+            color-mix(in oklab, var(--background) 78%, transparent) 0%,
+            transparent 38%,
+            transparent 62%,
+            color-mix(in oklab, var(--background) 78%, transparent) 100%
+        );
+        transition: opacity 180ms ease;
+    }
+
+    article.quiet-promise-entry > div:nth-child(2):hover img {
+        opacity: 0.76;
+    }
+
+    article.quiet-promise-entry > div:nth-child(2):hover .overflow-hidden::after {
+        opacity: 1;
+    }
+
     @media (max-width: 767px) {
         article.quiet-promise-entry {
             grid-template-columns: minmax(0, 1fr);
