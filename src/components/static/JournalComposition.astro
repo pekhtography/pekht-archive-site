@@ -347,7 +347,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
     document.querySelectorAll<HTMLElement>(ROOT_SELECTOR).forEach(initialize);
 </script>
 
-<style>
+<style is:global>
     .journal-composition {
         display: flex;
         flex-direction: column;
