@@ -15,7 +15,7 @@ export function BlogCard({ item }: { item: blogConfig }) {
       className={`group flex border border-border/50 hover:border-border hover:bg-muted active:border-border animation hover:scale-102 active:scale-100 select-none ${isJournal ? "flex-row gap-0 overflow-hidden p-0" : "flex-col gap-2 p-3"}`}
     >
       {isJournal && item.previewImage && (
-        <div className="relative aspect-[4/3] w-[36%] shrink-0 overflow-hidden md:aspect-auto md:h-[203px]">
+        <div className="relative aspect-[4/3] w-[36%] shrink-0 overflow-hidden md:aspect-[4/3] md:h-[203px] md:w-[270.667px]">
           <img
             src={sitePath(item.previewImage)}
             alt={item.data.title}
