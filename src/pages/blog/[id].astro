@@ -57,7 +57,15 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
 
         {
             isJournal && item.data.composition.length > 0 ? (
-                <div class="journal-content">
+                <div class="journal-content journal-composition-frame">
+                    <span
+                        class="pointer-events-none absolute left-0 top-0 h-px w-[clamp(4rem,20%,14rem)] bg-border"
+                        aria-hidden="true"
+                    ></span>
+                    <span
+                        class="pointer-events-none absolute right-0 top-0 h-px w-[clamp(4rem,20%,14rem)] bg-border"
+                        aria-hidden="true"
+                    ></span>
                     <JournalComposition composition={item.data.composition} archiveItems={archiveItems} />
                 </div>
             ) : (
@@ -75,7 +83,21 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
         padding-bottom: 3rem;
     }
 
-    .journal-content {
+    .journal-composition-frame {
+        position: relative;
+        width: 100%;
+        margin: 2rem auto 0;
+        padding: clamp(1rem, 3vw, 1.5rem);
+        border-left: 1px solid var(--border);
+        border-right: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .journal-entry:has(.journal-composition-frame) {
+        padding-bottom: 0;
+    }
+
+    .journal-content:not(.journal-composition-frame) {
         width: min(100%, 46rem);
         margin: 4rem auto 0;
         padding: clamp(1rem, 3vw, 1.5rem);
