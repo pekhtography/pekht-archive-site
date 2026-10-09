@@ -83,7 +83,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
     };
 
     function waitForImage(image: HTMLImageElement): Promise<void> {
-        if (image.complete && image.naturalWidth > 0) return Promise.resolve();
+        if (image.complete) return Promise.resolve();
 
         return new Promise((resolve) => {
             const finish = () => resolve();
