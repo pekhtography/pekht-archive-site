@@ -44,6 +44,7 @@ export interface portfolioConfig {
 
 export interface blogConfig {
   id: string;
+  previewImage?: string;
   data: {
     date: string;
     category: blogCategoryType;
