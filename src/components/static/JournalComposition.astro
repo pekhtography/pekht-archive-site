@@ -5,6 +5,7 @@ type SourceBlock = {
     type: "source";
     source_id: string;
     text: string;
+    // Kept in the schema for compatibility with published Journal entries.
     image_side: "left" | "right";
     image_size: "small" | "medium" | "large";
     text_offset: "up" | "center" | "down";
@@ -29,29 +30,22 @@ const { composition, archiveItems } = Astro.props as {
 };
 
 const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
-
 ---
 
-<div class="journal-composition">
+<div class="journal-composition" data-journal-composition>
     {composition.map((block) =>
         block.type === "source" ? (
             (() => {
                 const archive = archiveMap.get(block.source_id);
                 if (!archive) return null;
 
-                const imageClass = "journal-image journal-image-" + block.image_size;
-                const textClass = "journal-text journal-text-" + block.text_offset;
-                const imageSideClass = block.image_side === "left" ? "journal-image-left" : "journal-image-right";
-
                 return (
-                    <section class={`journal-source ${imageSideClass}`} aria-label={archive.data.title}>
-                        <div class={textClass}>
-                            <div class="journal-source-text">
-                                {block.text}
-                            </div>
+                    <section class="journal-source" data-journal-source aria-label={archive.data.title}>
+                        <div class="journal-text">
+                            <div class="journal-source-text">{block.text}</div>
                         </div>
                         <a
-                            class={imageClass}
+                            class="journal-image"
                             href={sitePath("/archive/explore/" + archive.id)}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -67,12 +61,199 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
                 );
             })()
         ) : (
-            <div class="journal-bridge">
-                {block.text}
-            </div>
+            <div class="journal-bridge" data-journal-bridge>{block.text}</div>
         )
     )}
 </div>
+
+<script>
+    const ROOT_SELECTOR = "[data-journal-composition]";
+    const DESKTOP_QUERY = "(min-width: 768px)";
+    const COLUMN_GAP = "clamp(1rem, 2vw, 1.5rem)";
+
+    type SourceRecord = {
+        section: HTMLElement;
+        text: HTMLElement;
+        image: HTMLAnchorElement;
+    };
+
+    function getSourceRecord(section: HTMLElement): SourceRecord | null {
+        const text = section.querySelector<HTMLElement>(".journal-text");
+        const image = section.querySelector<HTMLAnchorElement>(".journal-image");
+        return text && image ? { section, text, image } : null;
+    }
+
+    function waitForImage(image: HTMLImageElement): Promise<void> {
+        if (image.complete && image.naturalWidth > 0) return Promise.resolve();
+
+        return new Promise((resolve) => {
+            const finish = () => resolve();
+            image.addEventListener("load", finish, { once: true });
+            image.addEventListener("error", finish, { once: true });
+            image.loading = "eager";
+
+            if (typeof image.decode === "function") {
+                image.decode().then(finish).catch(() => {
+                    // A failed decode may still be followed by load/error.
+                    if (image.complete) finish();
+                });
+            }
+        });
+    }
+
+    function measureTextHeight(text: HTMLElement, width: number): number {
+        const measure = document.createElement("div");
+        measure.className = "journal-source-text journal-measure-text";
+        measure.style.width = width + "px";
+        measure.textContent = text.querySelector(".journal-source-text")?.textContent ?? "";
+        document.body.append(measure);
+        const height = measure.getBoundingClientRect().height;
+        measure.remove();
+        return height;
+    }
+
+    function imageHeight(image: HTMLImageElement, width: number): number {
+        if (image.naturalWidth > 0 && image.naturalHeight > 0) {
+            return width * image.naturalHeight / image.naturalWidth;
+        }
+        return width * 0.75;
+    }
+
+    function makeColumn(): HTMLDivElement {
+        const column = document.createElement("div");
+        column.className = "journal-column";
+        return column;
+    }
+
+    function makeLayout(): { layout: HTMLDivElement; left: HTMLDivElement; right: HTMLDivElement } {
+        const layout = document.createElement("div");
+        layout.className = "journal-layout";
+        const left = makeColumn();
+        const right = makeColumn();
+        layout.append(left, right);
+        return { layout, left, right };
+    }
+
+    function restoreOriginal(root: HTMLElement, originalNodes: Element[], records: SourceRecord[]) {
+        for (const record of records) {
+            record.section.className = "journal-source";
+            record.text.className = "journal-text";
+            record.image.className = "journal-image";
+            record.section.append(record.text, record.image);
+        }
+        root.replaceChildren(...originalNodes);
+        root.classList.remove("journal-is-laid-out");
+    }
+
+    async function layoutComposition(root: HTMLElement) {
+        const originalNodes = Array.from(root.children);
+        const records = originalNodes
+            .filter((node): node is HTMLElement => node instanceof HTMLElement && node.hasAttribute("data-journal-source"))
+            .map(getSourceRecord)
+            .filter((record): record is SourceRecord => record !== null);
+
+        if (records.length === 0) return;
+
+        await Promise.all(records.map((record) => waitForImage(record.image.querySelector("img")!)));
+        if (!window.matchMedia(DESKTOP_QUERY).matches) return;
+
+        const recordBySection = new Map(records.map((record) => [record.section, record]));
+        const fragment = document.createDocumentFragment();
+        let pendingRun: SourceRecord[] = [];
+
+        const flushRun = () => {
+            if (pendingRun.length === 0) return;
+
+            const { layout, left, right } = makeLayout();
+            const rootWidth = root.getBoundingClientRect().width;
+            const gap = Math.min(24, Math.max(16, window.innerWidth * 0.02));
+            const columnWidth = Math.max(1, (rootWidth - gap) / 2);
+            let leftHeight = 0;
+            let rightHeight = 0;
+
+            layout.style.setProperty("--journal-column-gap", COLUMN_GAP);
+
+            for (const record of pendingRun) {
+                const img = record.image.querySelector("img")!;
+                const imgHeight = imageHeight(img, columnWidth);
+                const textHeight = measureTextHeight(record.text, columnWidth);
+
+                // Place each image opposite its text, choosing the orientation
+                // that best balances the projected heights of the two columns.
+                const imageLeftDifference = Math.abs((leftHeight + imgHeight) - (rightHeight + textHeight));
+                const imageRightDifference = Math.abs((leftHeight + textHeight) - (rightHeight + imgHeight));
+                const imageGoesLeft = imageLeftDifference <= imageRightDifference;
+
+                record.section.remove();
+                record.image.className = "journal-image";
+                record.text.className = "journal-text-block " + (imageGoesLeft ? "journal-text-align-right" : "journal-text-align-left");
+
+                if (imageGoesLeft) {
+                    left.append(record.image);
+                    right.append(record.text);
+                    leftHeight += imgHeight + gap;
+                    rightHeight += textHeight + gap;
+                } else {
+                    right.append(record.image);
+                    left.append(record.text);
+                    rightHeight += imgHeight + gap;
+                    leftHeight += textHeight + gap;
+                }
+            }
+
+            fragment.append(layout);
+            pendingRun = [];
+        };
+
+        for (const node of originalNodes) {
+            if (node instanceof HTMLElement && recordBySection.has(node)) {
+                pendingRun.push(recordBySection.get(node)!);
+            } else {
+                flushRun();
+                fragment.append(node);
+            }
+        }
+        flushRun();
+
+        root.replaceChildren(fragment);
+        root.classList.add("journal-is-laid-out");
+    }
+
+    function initialize(root: HTMLElement) {
+        const originalNodes = Array.from(root.children);
+        const records = originalNodes
+            .filter((node): node is HTMLElement => node instanceof HTMLElement && node.hasAttribute("data-journal-source"))
+            .map(getSourceRecord)
+            .filter((record): record is SourceRecord => record !== null);
+        let isDesktopLayout = false;
+        let pending = false;
+
+        const update = async () => {
+            if (pending) return;
+            pending = true;
+            try {
+                const wantsDesktop = window.matchMedia(DESKTOP_QUERY).matches;
+                if (wantsDesktop && !isDesktopLayout) {
+                    await layoutComposition(root);
+                    isDesktopLayout = root.classList.contains("journal-is-laid-out");
+                } else if (!wantsDesktop && isDesktopLayout) {
+                    restoreOriginal(root, originalNodes, records);
+                    isDesktopLayout = false;
+                }
+            } finally {
+                pending = false;
+            }
+        };
+
+        void update();
+        window.addEventListener("resize", () => {
+            const wantsDesktop = window.matchMedia(DESKTOP_QUERY).matches;
+            if (wantsDesktop !== isDesktopLayout) void update();
+        });
+    }
+
+    document.querySelectorAll<HTMLElement>(ROOT_SELECTOR).forEach(initialize);
+</script>
 
 <style>
     .journal-composition {
@@ -81,58 +262,31 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         gap: 0;
     }
 
+    /* No-JavaScript fallback and the pre-layout state. */
     .journal-source {
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
         align-items: start;
-        column-gap: clamp(1.5rem, 5vw, 4rem);
-        padding: clamp(1.5rem, 5vw, 4rem) 0;
-    }
-
-    .journal-image-left .journal-source-text {
-        grid-column: 2;
-        grid-row: 1;
-    }
-
-    .journal-image-left .journal-image {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .journal-image-right .journal-source-text {
-        grid-column: 1;
-        grid-row: 1;
-    }
-
-    .journal-image-right .journal-image {
-        grid-column: 2;
-        grid-row: 1;
+        column-gap: clamp(1rem, 2vw, 1.5rem);
+        padding: clamp(1.5rem, 3vw, 2rem) 0;
     }
 
     .journal-source-text {
         font-size: clamp(1rem, 1.35vw, 1.15rem);
         line-height: 1.85;
         white-space: pre-line;
-        max-width: 34rem;
     }
 
-
-    .journal-text-up {
-        align-self: start;
-        transform: translateY(clamp(-1.5rem, -2vw, -0.5rem));
-    }
-
-    .journal-text-center {
-        align-self: center;
-    }
-
-    .journal-text-down {
-        align-self: start;
-        transform: translateY(clamp(0.5rem, 2vw, 1.5rem));
+    .journal-text {
+        grid-column: 2;
+        grid-row: 1;
     }
 
     .journal-image {
+        grid-column: 1;
+        grid-row: 1;
         display: block;
+        width: 100%;
         align-self: start;
         overflow: hidden;
     }
@@ -149,26 +303,6 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         opacity: 0.94;
     }
 
-    .journal-image-small {
-        width: min(100%, 84%);
-    }
-
-    .journal-image-medium {
-        width: min(100%, 94%);
-    }
-
-    .journal-image-large {
-        width: 100%;
-    }
-
-    .journal-image-left {
-        justify-self: start;
-    }
-
-    .journal-image-right {
-        justify-self: end;
-    }
-
     .journal-bridge {
         width: min(86%, 38rem);
         margin: 0 auto;
@@ -176,6 +310,54 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         font-size: clamp(1rem, 1.25vw, 1.1rem);
         line-height: 1.85;
         white-space: pre-line;
+    }
+
+    .journal-layout {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        column-gap: var(--journal-column-gap, clamp(1rem, 2vw, 1.5rem));
+        align-items: start;
+        padding: 0;
+    }
+
+    .journal-column {
+        display: flex;
+        flex-direction: column;
+        gap: clamp(1rem, 2vw, 1.5rem);
+        min-width: 0;
+    }
+
+    .journal-layout .journal-image,
+    .journal-layout .journal-text-block {
+        width: 100%;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .journal-text-block {
+        font-size: clamp(1rem, 1.35vw, 1.15rem);
+        line-height: 1.85;
+        white-space: pre-line;
+    }
+
+    .journal-text-align-left {
+        text-align: left;
+    }
+
+    .journal-text-align-right {
+        text-align: right;
+    }
+
+    .journal-measure-text {
+        position: absolute;
+        top: 0;
+        left: -100000px;
+        visibility: hidden;
+        box-sizing: border-box;
+        font-size: clamp(1rem, 1.35vw, 1.15rem);
+        line-height: 1.85;
+        white-space: pre-line;
+        overflow-wrap: anywhere;
     }
 
     @media (max-width: 767px) {
@@ -195,11 +377,6 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
             order: 2;
             width: 100%;
             max-width: none;
-        }
-
-        .journal-text-up,
-        .journal-text-down {
-            transform: none;
         }
 
         .journal-bridge {
