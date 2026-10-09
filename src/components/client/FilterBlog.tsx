@@ -207,7 +207,7 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
           <p className="paragraph">No Journal entries found.</p>
         </div>
       ) : (
-        <div ref={listRef} className="space-y-0 border border-border p-6">
+        <div ref={listRef} className="space-y-3 border border-border p-6">
           {pageItems.map((item) => (
             <BlogCard key={item.id} item={item as blogConfig} />
           ))}
