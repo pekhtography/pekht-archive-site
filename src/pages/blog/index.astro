@@ -22,6 +22,10 @@ const allItems = journalItems.map((item) => {
     const firstSourceId = firstCompositionSource?.source_id ?? item.data.source_ids?.[0];
     const previewImage = firstSourceId ? archiveById.get(firstSourceId)?.data.image : undefined;
 
+    if (!previewImage) {
+        throw new Error(`Journal entry "${item.id}" has no resolvable first archive image.`);
+    }
+
     return { ...item, previewImage };
 });
 ---
