@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3.21.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.21.0) | 2026-10-09
+
+### Features
+- publish Journal entry [f6456e2](https://github.com/pekhtography/pekht-archive-site/commit/f6456e2)
+### Other
+- soften Journal image hover opacity [ca92363](https://github.com/pekhtography/pekht-archive-site/commit/ca92363)
+
 ## [v3.20.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.20.0) | 2026-10-08
 
 ### Features
