@@ -52,7 +52,16 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
     prev={prev}
     next={next}
 >
-    <article transition:animate="fade" class={isJournal ? "journal-entry" : ""}>
+    <article
+        transition:animate="fade"
+        class={
+            isJournal
+                ? item.data.composition.length > 0
+                    ? "journal-entry journal-composed-entry"
+                    : "journal-entry"
+                : ""
+        }
+    >
         <IdHeader backUrl="/blog" items={item.data} />
 
         {
@@ -93,7 +102,7 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
         border-bottom: 1px solid var(--border);
     }
 
-    .journal-entry:has(.journal-composition-frame) {
+    .journal-composed-entry {
         padding-bottom: 0;
     }
 
