@@ -261,7 +261,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
     .journal-source.journal-image-left .journal-text {
         grid-column: 2;
-        text-align: right;
+        text-align: left;
     }
 
     .journal-source.journal-image-right .journal-image {
@@ -270,7 +270,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
     .journal-source.journal-image-right .journal-text {
         grid-column: 1;
-        text-align: left;
+        text-align: right;
     }
 
     /* A stable no-script fallback; the source pair is never split. */
@@ -280,7 +280,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
     .journal-source:not(.journal-image-left):not(.journal-image-right) .journal-text {
         grid-column: 2;
-        text-align: right;
+        text-align: left;
     }
 
     .journal-bridge {
