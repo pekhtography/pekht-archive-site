@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - journal/t6-montage-validation
-      - journal/t7-rejection-stage
   workflow_dispatch:
 
 permissions:
