@@ -3,6 +3,7 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { sortExploreItems } from "../src/lib/explore-sort.ts";
 import { generateJson } from "./journal/provider.ts";
+import { validateMontage } from "./journal/montage-validation.ts";
 
 type ArchivePost = {
   source_id: string;
@@ -521,82 +522,21 @@ async function run() {
         break;
       }
 
-      const montageSourceIds =
-        Array.isArray(task2.source_ids) &&
-        task2.source_ids.every(
-          (id: unknown) => typeof id === "string",
-        )
-          ? task2.source_ids as string[]
-          : [];
-
-      const uniqueMontageSourceIds = [
-        ...new Set(montageSourceIds),
-      ];
-
-      const composition = Array.isArray(
-        task2.composition,
-      )
-        ? task2.composition
-        : [];
-
-      // T5: enforce the montage boundary against the exact DISCOVER snapshot
-      // before duplicate-montage tracking or TASK 3.
-      const invalidMontageSourceId = montageSourceIds.find(
-        (id) => !snapshotIds.has(id),
+      const validation = validateMontage(
+        task2,
+        selectedId,
+        snapshotIds,
+        new Map(archive.map((post) => [post.source_id, post.image])),
       );
 
-      if (invalidMontageSourceId !== undefined) {
-        reject(
-          selectedId,
-          `MONTAGE_SOURCE_NOT_IN_SNAPSHOT: stage=MONTAGE source_id=${invalidMontageSourceId} is not in the DISCOVER snapshot.`,
-        );
+      if (!validation.ok) {
+        reject(selectedId, validation.reason);
         break;
       }
 
-      const compositionSourceIds: string[] = [];
-      let invalidCompositionSourceId: string | undefined;
-
-      for (const block of composition) {
-        if (block?.type !== "source") continue;
-
-        const sourceId =
-          typeof block.source_id === "string"
-            ? block.source_id
-            : "";
-
-        if (!sourceId || !snapshotIds.has(sourceId)) {
-          invalidCompositionSourceId = sourceId || "<missing>";
-          break;
-        }
-
-        compositionSourceIds.push(sourceId);
-      }
-
-      if (invalidCompositionSourceId !== undefined) {
-        reject(
-          selectedId,
-          `MONTAGE_SOURCE_NOT_IN_SNAPSHOT: stage=MONTAGE composition source_id=${invalidCompositionSourceId} is not in the DISCOVER snapshot.`,
-        );
-        break;
-      }
-
-      const declaredSourceSet = new Set(montageSourceIds);
-      const compositionSourceSet = new Set(compositionSourceIds);
-      const mismatchedSourceIds = [
-        ...[...declaredSourceSet].filter((id) => !compositionSourceSet.has(id)),
-        ...[...compositionSourceSet].filter((id) => !declaredSourceSet.has(id)),
-      ].sort();
-
-      if (
-        declaredSourceSet.size !== compositionSourceSet.size ||
-        mismatchedSourceIds.length > 0
-      ) {
-        reject(
-          selectedId,
-          `MONTAGE_COMPOSITION_MISMATCH: stage=MONTAGE source_id set differs between task2.source_ids and composition source blocks; mismatched source_id(s): ${mismatchedSourceIds.join(", ") || "<set-size mismatch>"}.`,
-        );
-        break;
-      }
+      const montageSourceIds = validation.sourceIds;
+      const uniqueMontageSourceIds = montageSourceIds;
+      const composition = validation.composition;
 
       const montageSignature = JSON.stringify({
         source_ids: uniqueMontageSourceIds.slice().sort(),
