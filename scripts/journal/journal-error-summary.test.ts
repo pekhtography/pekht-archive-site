@@ -92,7 +92,11 @@ globalThis.fetch = async () => {
         cwd: root,
         encoding: "utf8",
         timeout: 30_000,
-        env: { ...process.env, T9_TEST_SCENARIO: scenario },
+        env: {
+          ...process.env,
+          GEMINI_API_KEY: "t9-test-key",
+          T9_TEST_SCENARIO: scenario,
+        },
       },
     );
 
