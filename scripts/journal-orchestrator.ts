@@ -804,7 +804,7 @@ description: "${String(currentMontage.description).replace(/"/g, "\\\"")}"
 category: "journal"
 tags: ["archive"]
 author: "PEKHTOGRAPHY"
-source_ids: [${montageSourceIds
+source_ids: [${uniqueMontageSourceIds
           .map((id: string) => JSON.stringify(id))
           .join(", ")}]
 facets: [${(
