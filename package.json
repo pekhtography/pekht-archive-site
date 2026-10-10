@@ -42,7 +42,8 @@
     "astro": "astro",
     "prepare": "husky",
     "archive:collect": "tsx scripts/archive-collect.ts",
-    "journal": "tsx scripts/journal-orchestrator.ts"
+    "journal": "tsx scripts/journal-orchestrator.ts",
+    "test:journal:validation": "tsx --test scripts/journal/montage-validation.test.ts"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.2",
