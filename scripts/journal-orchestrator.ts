@@ -453,11 +453,13 @@ async function run() {
       continue;
     }
 
-    const candidateSourceIds = Array.isArray(
-      selected.source_ids,
-    )
-      ? selected.source_ids.map(String)
-      : [];
+    const candidateSourceIds =
+      Array.isArray(selected.source_ids) &&
+      selected.source_ids.every(
+        (id: unknown) => typeof id === "string",
+      )
+        ? selected.source_ids
+        : [];
     const uniqueCandidateSourceIds = new Set(candidateSourceIds);
     const entryId =
       typeof selected.entry_id === "string"
