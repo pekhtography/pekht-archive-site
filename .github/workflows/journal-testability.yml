@@ -1,9 +1,6 @@
 name: Journal Testability
 
 on:
-  push:
-    branches:
-      - test/journal-t5-green-validation
   workflow_dispatch:
 
 permissions:
