@@ -413,307 +413,306 @@ async function run() {
   }
 
   try {
-    discoveryLoop: while (true) {
-      ensureBudget("DISCOVER");
-  
-      const discoveryInstruction = rejectedThisRun.size
-        ? `\n\nPREVIOUS CANDIDATES ALREADY REJECTED IN THIS RUN: ${[...rejectedThisRun].join(", ")}\nDo not return any of them. Find a genuinely different candidate from the supplied snapshot.`
-        : "";
-  
-      const task1 = await generateJson(
-        `${await prompt("task-1.md")}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
-        task1Schema,
+  discoveryLoop: while (true) {
+    ensureBudget("DISCOVER");
+
+    const discoveryInstruction = rejectedThisRun.size
+      ? `\n\nPREVIOUS CANDIDATES ALREADY REJECTED IN THIS RUN: ${[...rejectedThisRun].join(", ")}\nDo not return any of them. Find a genuinely different candidate from the supplied snapshot.`
+      : "";
+
+    const task1 = await generateJson(
+      `${await prompt("task-1.md")}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
+      task1Schema,
+    );
+
+    ensureBudget("DISCOVER response");
+
+    if (
+      task1.status !== "OK" ||
+      !task1.candidate ||
+      typeof task1.candidate.id !== "string"
+    ) {
+      console.log(
+        "NO_JOURNAL: discovery found no viable candidate.",
       );
-  
-      ensureBudget("DISCOVER response");
-  
-      if (
-        task1.status !== "OK" ||
-        !task1.candidate ||
-        typeof task1.candidate.id !== "string"
-      ) {
-        console.log(
-          "NO_JOURNAL: discovery found no viable candidate.",
+      printRejectionSummary();
+      return;
+    }
+
+    const selected = task1.candidate;
+    const selectedId = String(selected.id);
+
+    if (rejectedThisRun.has(selectedId)) {
+      const repeatCount =
+        (repeatedRejectedIdReturns.get(selectedId) ?? 0) + 1;
+      repeatedRejectedIdReturns.set(selectedId, repeatCount);
+
+      console.log(
+        `RETURN: DISCOVER repeated rejected candidate ${selectedId}; repeat ${repeatCount}/${MAX_REPEATED_REJECTED_ID_RETURNS}.`,
+      );
+
+      if (repeatCount >= MAX_REPEATED_REJECTED_ID_RETURNS) {
+        console.warn(
+          `NO_JOURNAL: discovery repeatedly returned rejected candidate ${selectedId}; stopping to prevent an unbounded loop.`,
         );
-        printRejectionSummary();
-        return;
+        break discoveryLoop;
       }
-  
-      const selected = task1.candidate;
-      const selectedId = String(selected.id);
-  
-      if (rejectedThisRun.has(selectedId)) {
-        const repeatCount =
-          (repeatedRejectedIdReturns.get(selectedId) ?? 0) + 1;
-        repeatedRejectedIdReturns.set(selectedId, repeatCount);
-  
-        console.log(
-          `RETURN: DISCOVER repeated rejected candidate ${selectedId}; repeat ${repeatCount}/${MAX_REPEATED_REJECTED_ID_RETURNS}.`,
-        );
-  
-        if (repeatCount >= MAX_REPEATED_REJECTED_ID_RETURNS) {
-          console.warn(
-            `NO_JOURNAL: discovery repeatedly returned rejected candidate ${selectedId}; stopping to prevent an unbounded loop.`,
-          );
-          break discoveryLoop;
-        }
-  
-        continue;
-      }
-  
-      const candidateSourceIds =
-        Array.isArray(selected.source_ids) &&
-        selected.source_ids.every(
-          (id: unknown) => typeof id === "string",
-        )
-          ? selected.source_ids
-          : [];
-      const uniqueCandidateSourceIds = new Set(candidateSourceIds);
-      const entryId =
-        typeof selected.entry_id === "string"
-          ? selected.entry_id
+
+      continue;
+    }
+
+    const candidateSourceIds =
+      Array.isArray(selected.source_ids) &&
+      selected.source_ids.every(
+        (id: unknown) => typeof id === "string",
+      )
+        ? selected.source_ids
+        : [];
+    const uniqueCandidateSourceIds = new Set(candidateSourceIds);
+    const entryId =
+      typeof selected.entry_id === "string"
+        ? selected.entry_id
+        : "";
+    const exitId =
+      typeof selected.exit_id === "string"
+        ? selected.exit_id
+        : "";
+
+    const candidateSourcesValid =
+      candidateSourceIds.length >= 4 &&
+      candidateSourceIds.length <= 6 &&
+      uniqueCandidateSourceIds.size === candidateSourceIds.length &&
+      candidateSourceIds.every(
+        (id) => id.length > 0 && snapshotIds.has(id),
+      ) &&
+      uniqueCandidateSourceIds.has(entryId) &&
+      uniqueCandidateSourceIds.has(exitId);
+
+    if (!candidateSourcesValid) {
+      reject(
+        selectedId,
+        "DISCOVER",
+        "DISCOVER candidate failed source validation",
+      );
+      continue;
+    }
+
+    let currentMontage: any = null;
+    let lastRevisionInstruction = "";
+    const seenMontages = new Set<string>();
+
+    while (true) {
+      ensureBudget(
+        currentMontage
+          ? "REVISION/SELECT-MONTAGE"
+          : "SELECT-MONTAGE",
+      );
+
+      const task2 = await generateJson(
+        currentMontage
+          ? `${await prompt("task-2.md")}\n\nREVISION MODE: Preserve the proven candidate vector. You may add, remove, replace, or reorder source posts from the supplied snapshot when that is the smallest justified change. Do not leave the supplied snapshot.\n\nREVISION REQUIRED:\n${lastRevisionInstruction}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`
+          : `${await prompt("task-2.md")}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`,
+        task2Schema,
+      );
+
+      ensureBudget("SELECT-MONTAGE response");
+
+      const montageCandidateId =
+        typeof task2?.candidate_id === "string"
+          ? task2.candidate_id
           : "";
-      const exitId =
-        typeof selected.exit_id === "string"
-          ? selected.exit_id
-          : "";
-  
-      const candidateSourcesValid =
-        candidateSourceIds.length >= 4 &&
-        candidateSourceIds.length <= 6 &&
-        uniqueCandidateSourceIds.size === candidateSourceIds.length &&
-        candidateSourceIds.every(
-          (id) => id.length > 0 && snapshotIds.has(id),
-        ) &&
-        uniqueCandidateSourceIds.has(entryId) &&
-        uniqueCandidateSourceIds.has(exitId);
-  
-      if (!candidateSourcesValid) {
+
+      if (montageCandidateId !== selectedId) {
         reject(
           selectedId,
-          "DISCOVER",
-          "DISCOVER candidate failed source validation",
+          "SELECT-MONTAGE",
+          `SELECT-MONTAGE candidate_id mismatch (expected ${selectedId}, received ${montageCandidateId || "<missing>"})`,
         );
-        continue;
+        break;
       }
-  
-      let currentMontage: any = null;
-      let lastRevisionInstruction = "";
-      const seenMontages = new Set<string>();
-  
-      while (true) {
-        ensureBudget(
-          currentMontage
-            ? "REVISION/SELECT-MONTAGE"
-            : "SELECT-MONTAGE",
-        );
-  
-        const task2 = await generateJson(
-          currentMontage
-            ? `${await prompt("task-2.md")}\n\nREVISION MODE: Preserve the proven candidate vector. You may add, remove, replace, or reorder source posts from the supplied snapshot when that is the smallest justified change. Do not leave the supplied snapshot.\n\nREVISION REQUIRED:\n${lastRevisionInstruction}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`
-            : `${await prompt("task-2.md")}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`,
-          task2Schema,
-        );
-  
-        ensureBudget("SELECT-MONTAGE response");
-  
-        const montageCandidateId =
-          typeof task2?.candidate_id === "string"
-            ? task2.candidate_id
-            : "";
-  
-        if (montageCandidateId !== selectedId) {
-          reject(
-            selectedId,
-            "SELECT-MONTAGE",
-            `SELECT-MONTAGE candidate_id mismatch (expected ${selectedId}, received ${montageCandidateId || "<missing>"})`,
-          );
-          break;
-        }
-  
-        const validation = validateMontage(
-          task2,
+
+      const validation = validateMontage(
+        task2,
+        selectedId,
+        snapshotIds,
+        new Map(archive.map((post) => [post.source_id, post.image])),
+      );
+
+      if (!validation.ok) {
+        reject(selectedId, "MONTAGE", validation.reason);
+        break;
+      }
+
+      const montageSourceIds = validation.sourceIds;
+      const uniqueMontageSourceIds = montageSourceIds;
+      const composition = validation.composition;
+
+      const montageSignature = JSON.stringify({
+        source_ids: uniqueMontageSourceIds.slice().sort(),
+        markdown: String(task2.markdown ?? "").trim(),
+        composition,
+      });
+
+      if (seenMontages.has(montageSignature)) {
+        reject(
           selectedId,
-          snapshotIds,
-          new Map(archive.map((post) => [post.source_id, post.image])),
+          "MONTAGE",
+          "identical montage repeated",
         );
-  
-        if (!validation.ok) {
-          reject(selectedId, "MONTAGE", validation.reason);
-          break;
-        }
-  
-        const montageSourceIds = validation.sourceIds;
-        const uniqueMontageSourceIds = montageSourceIds;
-        const composition = validation.composition;
-  
-        const montageSignature = JSON.stringify({
-          source_ids: uniqueMontageSourceIds.slice().sort(),
-          markdown: String(task2.markdown ?? "").trim(),
-          composition,
-        });
-  
-        if (seenMontages.has(montageSignature)) {
-          reject(
-            selectedId,
-            "MONTAGE",
-            "identical montage repeated",
-          );
-          break;
-        }
-  
-        seenMontages.add(montageSignature);
-  
-        currentMontage = {
-          ...task2,
-          source_ids: uniqueMontageSourceIds,
-          composition,
-        };
-  
-        const task3 = await generateJson(
-          `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT JOURNAL MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nSOURCE TEXTS USED BY CURRENT MONTAGE:\n${sourcesFor(montageSourceIds)}`,
-          task3Schema,
-        );
-  
-        ensureBudget("TEST response");
-  
-        if (task3.verdict === "STRONG") {
-          const slugBase = String(
-            currentMontage.title || "journal",
-          )
-            .toLowerCase()
-            .replace(/[^a-z0-9]+/g, "-")
-            .replace(/^-|-$/g, "")
-            .slice(0, 80) || "journal";
-  
-          const now = new Date();
-  
-          const date =
-            String(now.getUTCDate()).padStart(2, "0") +
-            "-" +
-            String(now.getUTCMonth() + 1).padStart(2, "0") +
-            "-" +
-            now.getUTCFullYear();
-  
-          const slug = `${date}-${slugBase}`;
-  
-          function journalHeading(text: string): string {
-            const plain = text
-              .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
-              .replace(/\[[^\]]*\]\([^)]*\)/g, " ")
-              .replace(/[#>*_~\`]/g, " ")
-              .replace(/\s+/g, " ")
-              .trim();
-  
-            const words = plain.split(" ").filter(Boolean);
-  
-            if (words.length <= 14) return plain;
-  
-            const targetMin = Math.min(10, words.length);
-            const targetMax = Math.min(14, words.length);
-  
-            const boundaries = new Set([
-              ".",
-              ",",
-              ";",
-              ":",
-              "—",
-              "–",
-            ]);
-  
-            const headingCandidates: {
-              text: string;
-              count: number;
-              distance: number;
-            }[] = [];
-  
-            let position = 0;
-  
-            for (let i = 0; i < words.length; i += 1) {
-              position +=
-                words[i].length +
-                (i > 0 ? 1 : 0);
-  
-              if (
-                i + 1 < targetMin ||
-                i + 1 > targetMax
-              ) {
-                continue;
-              }
-  
-              const nextChar = plain[position] ?? "";
-              const endChar = words[i].slice(-1);
-  
-              if (
-                boundaries.has(endChar) ||
-                boundaries.has(nextChar)
-              ) {
-                headingCandidates.push({
-                  text: words
-                    .slice(0, i + 1)
-                    .join(" "),
-                  count: i + 1,
-                  distance: Math.abs(
-                    i + 1 - 12,
-                  ),
-                });
-              }
+        break;
+      }
+
+      seenMontages.add(montageSignature);
+
+      currentMontage = {
+        ...task2,
+        source_ids: uniqueMontageSourceIds,
+        composition,
+      };
+
+      const task3 = await generateJson(
+        `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT JOURNAL MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nSOURCE TEXTS USED BY CURRENT MONTAGE:\n${sourcesFor(montageSourceIds)}`,
+        task3Schema,
+      );
+
+      ensureBudget("TEST response");
+
+      if (task3.verdict === "STRONG") {
+        const slugBase = String(
+          currentMontage.title || "journal",
+        )
+          .toLowerCase()
+          .replace(/[^a-z0-9]+/g, "-")
+          .replace(/^-|-$/g, "")
+          .slice(0, 80) || "journal";
+
+        const now = new Date();
+
+        const date =
+          String(now.getUTCDate()).padStart(2, "0") +
+          "-" +
+          String(now.getUTCMonth() + 1).padStart(2, "0") +
+          "-" +
+          now.getUTCFullYear();
+
+        const slug = `${date}-${slugBase}`;
+
+        function journalHeading(text: string): string {
+          const plain = text
+            .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+            .replace(/\[[^\]]*\]\([^)]*\)/g, " ")
+            .replace(/[#>*_~\`]/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+
+          const words = plain.split(" ").filter(Boolean);
+
+          if (words.length <= 14) return plain;
+
+          const targetMin = Math.min(10, words.length);
+          const targetMax = Math.min(14, words.length);
+
+          const boundaries = new Set([
+            ".",
+            ",",
+            ";",
+            ":",
+            "—",
+            "–",
+          ]);
+
+          const headingCandidates: {
+            text: string;
+            count: number;
+            distance: number;
+          }[] = [];
+
+          let position = 0;
+
+          for (let i = 0; i < words.length; i += 1) {
+            position +=
+              words[i].length +
+              (i > 0 ? 1 : 0);
+
+            if (
+              i + 1 < targetMin ||
+              i + 1 > targetMax
+            ) {
+              continue;
             }
-  
-            if (headingCandidates.length > 0) {
-              headingCandidates.sort(
-                (a, b) =>
-                  a.distance - b.distance ||
-                  a.count - b.count,
-              );
-  
-              return headingCandidates[0].text;
+
+            const nextChar = plain[position] ?? "";
+            const endChar = words[i].slice(-1);
+
+            if (
+              boundaries.has(endChar) ||
+              boundaries.has(nextChar)
+            ) {
+              headingCandidates.push({
+                text: words
+                  .slice(0, i + 1)
+                  .join(" "),
+                count: i + 1,
+                distance: Math.abs(
+                  i + 1 - 12,
+                ),
+              });
             }
-  
-            return (
-              words
-                .slice(0, targetMax)
-                .join(" ") + "…"
+          }
+
+          if (headingCandidates.length > 0) {
+            headingCandidates.sort(
+              (a, b) =>
+                a.distance - b.distance ||
+                a.count - b.count,
             );
+
+            return headingCandidates[0].text;
           }
-  
-          function plainJournalText(text: string): string {
-            return text
-              .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
-              .replace(/\[[^\]]*\]\([^)]*\)/g, " ")
-              .replace(/[#>*_~\`]/g, " ")
-              .replace(/\s+/g, " ")
-              .trim();
-          }
-  
-          async function chooseTitleCut(text: string): Promise<number | null> {
-            const plain = plainJournalText(text);
-            const words = plain.split(" ").filter(Boolean);
-  
-            if (words.length <= 14) return null;
-  
-            const context = words.slice(0, 24).join(" ");
-  
-            try {
-              const result = await generateJson(
-                `${await prompt("title-cut.md")}${context}`,
-                titleCutSchema,
-              );
-  
-              const cutIndex = Number(result?.cut_index);
-  
-              if (
-                !Number.isInteger(cutIndex) ||
-                cutIndex < 10 ||
-                cutIndex > 14 ||
-                cutIndex > words.length
-              ) {
-                return null;
-              }
-  
-              return cutIndex;
-          
-  } catch (error) {
+
+          return (
+            words
+              .slice(0, targetMax)
+              .join(" ") + "…"
+          );
+        }
+
+        function plainJournalText(text: string): string {
+          return text
+            .replace(/!\[[^\]]*\]\([^)]*\)/g, " ")
+            .replace(/\[[^\]]*\]\([^)]*\)/g, " ")
+            .replace(/[#>*_~\`]/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+        }
+
+        async function chooseTitleCut(text: string): Promise<number | null> {
+          const plain = plainJournalText(text);
+          const words = plain.split(" ").filter(Boolean);
+
+          if (words.length <= 14) return null;
+
+          const context = words.slice(0, 24).join(" ");
+
+          try {
+            const result = await generateJson(
+              `${await prompt("title-cut.md")}${context}`,
+              titleCutSchema,
+            );
+
+            const cutIndex = Number(result?.cut_index);
+
+            if (
+              !Number.isInteger(cutIndex) ||
+              cutIndex < 10 ||
+              cutIndex > 14 ||
+              cutIndex > words.length
+            ) {
+              return null;
+            }
+
+            return cutIndex;
+          } catch (error) {
             console.warn(
               "TITLE CUT: semantic selection failed; using legacy journalHeading().",
               error,
