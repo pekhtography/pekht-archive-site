@@ -1,0 +1,51 @@
+name: Journal Build Check
+
+on:
+  push:
+    branches:
+      - journal/t6-montage-validation
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  journal-build-check:
+    name: Build site without deployment
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout selected ref
+        uses: actions/checkout@v4
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: pnpm
+
+      - name: Install dependencies
+        shell: bash
+        run: |
+          set -o pipefail
+          pnpm install --frozen-lockfile 2>&1 | tee journal-build.log
+
+      - name: Build Astro site and run Pagefind
+        shell: bash
+        run: |
+          set -o pipefail
+          pnpm build 2>&1 | tee -a journal-build.log
+
+      - name: Preserve build output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: journal-build-output
+          path: journal-build.log
+          if-no-files-found: warn
+          retention-days: 7
