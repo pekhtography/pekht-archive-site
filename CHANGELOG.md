@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3.22.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.22.0) | 2026-10-10
+
+### Features
+- publish Journal entry [1976912](https://github.com/pekhtography/pekht-archive-site/commit/1976912)
+### Other
+- extend Journal image hover gradient [4e49c93](https://github.com/pekhtography/pekht-archive-site/commit/4e49c93)
+
 ## [v3.21.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.21.0) | 2026-10-09
 
 ### Features
