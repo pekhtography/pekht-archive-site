@@ -580,6 +580,111 @@ async function main() {
     }
   });
 
+
+  // T5 boundary probes. These assert the required behavior; on the pre-T5
+  // orchestrator they should report the specific missing guards (Red).
+  const t5Failures: string[] = [];
+  const t5Probe = async (name: string, test: () => Promise<void>) => {
+    try {
+      await test();
+      console.log(`PASS T5 — ${name}`);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      t5Failures.push(`${name}: ${message}`);
+      console.log(`FAIL T5 — ${name}: ${message}`);
+    }
+  };
+
+  await t5Probe("C3a — task2.source_ids must belong to snapshot", async () => {
+    const montage = montageResponse();
+    montage.source_ids = [SOURCE_IDS[0], SOURCE_IDS[1], SOURCE_IDS[2], "not-in-snapshot"];
+    montage.composition = montage.source_ids.map((source_id) => ({
+      type: "source", source_id, text: `Fragment ${source_id}.`,
+      image_side: "left", image_size: "medium", text_offset: "center",
+    }));
+    const result = await execute([
+      { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      { stage: "MONTAGE", response: montage },
+      { stage: "DISCOVER", response: noJournalResponse() },
+    ]);
+    try {
+      assert.equal(result.calls.includes("TEST"), false,
+        "MONTAGE with an out-of-snapshot source_id reached TASK 3");
+      assert.ok(result.logs.some((line) => line.includes("not-in-snapshot")),
+        "Rejection diagnostic did not identify the invalid source ID");
+    } finally { await cleanup(result.root); }
+  });
+
+  await t5Probe("C3b — composition source blocks must belong to snapshot", async () => {
+    const montage = montageResponse();
+    montage.composition[3] = {
+      type: "source", source_id: "not-in-snapshot", text: "Invalid source block.",
+      image_side: "left", image_size: "medium", text_offset: "center",
+    };
+    const result = await execute([
+      { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      { stage: "MONTAGE", response: montage },
+      { stage: "DISCOVER", response: noJournalResponse() },
+    ]);
+    try {
+      assert.equal(result.calls.includes("TEST"), false,
+        "Composition with an out-of-snapshot source block reached TASK 3");
+      assert.ok(result.logs.some((line) => line.includes("not-in-snapshot")),
+        "Rejection diagnostic did not identify the invalid composition source ID");
+    } finally { await cleanup(result.root); }
+  });
+
+  await t5Probe("C3c — source_ids and composition source sets must match", async () => {
+    const montage = montageResponse();
+    montage.composition[3] = {
+      type: "source", source_id: SOURCE_IDS[4], text: "Different but valid source.",
+      image_side: "left", image_size: "medium", text_offset: "center",
+    };
+    const result = await execute([
+      { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      { stage: "MONTAGE", response: montage },
+      { stage: "DISCOVER", response: noJournalResponse() },
+    ]);
+    try {
+      assert.equal(result.calls.includes("TEST"), false,
+        "Mismatched valid source sets reached TASK 3");
+      assert.ok(result.logs.some((line) => line.includes("MONTAGE") &&
+        (line.includes("mismatch") || line.includes("composition") || line.includes("source"))),
+        "Rejection diagnostic did not describe the source-set mismatch");
+    } finally { await cleanup(result.root); }
+  });
+
+  await t5Probe("F4 — published frontmatter source_ids must be unique", async () => {
+    const montage = montageResponse();
+    montage.source_ids = [SOURCE_IDS[0], SOURCE_IDS[1], SOURCE_IDS[1], SOURCE_IDS[2], SOURCE_IDS[3]];
+    const result = await execute([
+      { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      { stage: "MONTAGE", response: montage },
+      { stage: "TEST", response: strongResponse() },
+      { stage: "TITLE", response: titleResponse() },
+    ]);
+    try {
+      assert.equal(result.thrown, undefined);
+      const files = await readdir(result.blogDir);
+      assert.equal(files.length, 1, "Expected one publication");
+      const published = await readFile(join(result.blogDir, files[0]), "utf8");
+      const sourceIdsLine = published.split("\n").find((line) => line.startsWith("source_ids:"));
+      assert.ok(sourceIdsLine, "Published frontmatter has no source_ids");
+      const parsed = JSON.parse(sourceIdsLine!.slice("source_ids: ".length).replace(/,\s*\]$/, "]"));
+      assert.deepEqual(parsed, [...new Set(montage.source_ids)],
+        "Published source_ids still contains duplicates");
+    } finally { await cleanup(result.root); }
+  });
+
+  if (t5Failures.length) {
+    console.log(`\nT5 Red confirmed: ${t5Failures.length}/4 required-behavior probes failed against current implementation.`);
+    for (const failure of t5Failures) console.log(`- ${failure}`);
+    process.exitCode = 1;
+  } else {
+    passed += 4;
+    console.log("T5 Green: all four required-behavior probes passed.");
+  }
+
   console.log(`\nAll ${passed} testability scenarios passed.`);
 }
 
