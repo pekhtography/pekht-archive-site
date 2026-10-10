@@ -88,3 +88,20 @@ test("blocks missing publication fields and invalid facets", () => {
 test("blocks candidate mismatch", () => {
   assert.equal(check(valid({ candidate_id: "other" })).ok, false);
 });
+test("accepts six unique sources with a non-empty bridge block", () => {
+  const sixIds = ["a", "b", "c", "d", "e", "f"];
+  const sixSnapshot = new Set(sixIds);
+  const sixImages = new Map(sixIds.map((id) => [id, `/images/${id}.jpg`]));
+  const six = {
+    ...valid(),
+    source_ids: sixIds,
+    composition: [
+      { type: "source", source_id: "a", text: "Text a" },
+      { type: "source", source_id: "b", text: "Text b" },
+      { type: "bridge", text: "A short connecting bridge." },
+      ...sixIds.slice(2).map((source_id) => ({ type: "source", source_id, text: `Text ${source_id}` })),
+    ],
+  };
+  const result = validateMontage(six, "candidate-1", sixSnapshot, sixImages);
+  assert.equal(result.ok, true);
+});
