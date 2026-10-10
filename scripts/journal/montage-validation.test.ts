@@ -3,7 +3,7 @@ import assert from "node:assert/strict";
 import { validateMontage } from "./montage-validation.ts";
 
 const ids = ["a", "b", "c", "d"];
-const snapshot = new Set([...ids, "outside"]);
+const snapshot = new Set(ids);
 const images = new Map(ids.map((id) => [id, `/images/${id}.jpg`]));
 
 function valid(overrides: Record<string, unknown> = {}) {
