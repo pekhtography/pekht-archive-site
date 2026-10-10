@@ -33,7 +33,7 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run montage validation tests
+      - name: Run Journal validation and T9 error summary tests
         shell: bash
         run: |
           set -o pipefail
