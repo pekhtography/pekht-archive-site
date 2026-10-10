@@ -44,12 +44,12 @@ test("assigns the approved stage at all seven orchestrator rejection call sites"
   );
   const source = await readFile(orchestratorPath, "utf8");
   const callPatterns = [
-    /reject\(\s*selectedId,\s*"DISCOVER",\s*"DISCOVER candidate failed source validation"\s*\)/s,
+    /reject\(\s*selectedId,\s*"DISCOVER",\s*"DISCOVER candidate failed source validation",?\s*\)/s,
     /reject\(\s*selectedId,\s*"SELECT-MONTAGE",[\s\S]{0,120}candidate_id mismatch/s,
     /reject\(\s*selectedId,\s*"MONTAGE",\s*validation\.reason\s*\)/s,
-    /reject\(\s*selectedId,\s*"MONTAGE",\s*"identical montage repeated"\s*\)/s,
-    /reject\(\s*selectedId,\s*"REVISION",\s*"revision limit exceeded"\s*\)/s,
-    /reject\(\s*selectedId,\s*"REVISION",\s*"repeated revision instruction"\s*\)/s,
+    /reject\(\s*selectedId,\s*"MONTAGE",\s*"identical montage repeated",?\s*\)/s,
+    /reject\(\s*selectedId,\s*"REVISION",\s*"revision limit exceeded",?\s*\)/s,
+    /reject\(\s*selectedId,\s*"REVISION",\s*"repeated revision instruction",?\s*\)/s,
     /reject\(\s*selectedId,\s*"TEST",[\s\S]{0,100}TEST rejected: \$\{task3\.reason\}/s,
   ];
 
