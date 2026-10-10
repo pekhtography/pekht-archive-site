@@ -1,3 +1,4 @@
+import { existsSync } from "node:fs";
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join } from "node:path";
 import { sortExploreItems } from "../src/lib/explore-sort.ts";
@@ -381,6 +382,8 @@ async function run() {
   // Working state for this run only. It is deliberately not persisted.
   const rejectedThisRun = new Set<string>();
   const rejectionReasons = new Map<string, string>();
+  const repeatedRejectedIdReturns = new Map<string, number>();
+  const MAX_REPEATED_REJECTED_ID_RETURNS = 2;
   const revisionAttempts = new Map<string, number>();
   const MAX_REVISION_ATTEMPTS = 2;
 
@@ -402,7 +405,7 @@ async function run() {
     }
   }
 
-  while (true) {
+  discoveryLoop: while (true) {
     ensureBudget("DISCOVER");
 
     const discoveryInstruction = rejectedThisRun.size
@@ -432,9 +435,21 @@ async function run() {
     const selectedId = String(selected.id);
 
     if (rejectedThisRun.has(selectedId)) {
+      const repeatCount =
+        (repeatedRejectedIdReturns.get(selectedId) ?? 0) + 1;
+      repeatedRejectedIdReturns.set(selectedId, repeatCount);
+
       console.log(
-        `RETURN: DISCOVER repeated rejected candidate ${selectedId}; retrying discovery.`,
+        `RETURN: DISCOVER repeated rejected candidate ${selectedId}; repeat ${repeatCount}/${MAX_REPEATED_REJECTED_ID_RETURNS}.`,
       );
+
+      if (repeatCount >= MAX_REPEATED_REJECTED_ID_RETURNS) {
+        console.warn(
+          `NO_JOURNAL: discovery repeatedly returned rejected candidate ${selectedId}; stopping to prevent an unbounded loop.`,
+        );
+        break discoveryLoop;
+      }
+
       continue;
     }
 
@@ -443,14 +458,25 @@ async function run() {
     )
       ? selected.source_ids.map(String)
       : [];
+    const uniqueCandidateSourceIds = new Set(candidateSourceIds);
+    const entryId =
+      typeof selected.entry_id === "string"
+        ? selected.entry_id
+        : "";
+    const exitId =
+      typeof selected.exit_id === "string"
+        ? selected.exit_id
+        : "";
 
     const candidateSourcesValid =
-      candidateSourceIds.length > 0 &&
-      candidateSourceIds.every((id) =>
-        snapshotIds.has(id),
+      candidateSourceIds.length >= 4 &&
+      candidateSourceIds.length <= 6 &&
+      uniqueCandidateSourceIds.size === candidateSourceIds.length &&
+      candidateSourceIds.every(
+        (id) => id.length > 0 && snapshotIds.has(id),
       ) &&
-      snapshotIds.has(String(selected.entry_id)) &&
-      snapshotIds.has(String(selected.exit_id));
+      uniqueCandidateSourceIds.has(entryId) &&
+      uniqueCandidateSourceIds.has(exitId);
 
     if (!candidateSourcesValid) {
       reject(
@@ -479,6 +505,19 @@ async function run() {
       );
 
       ensureBudget("SELECT-MONTAGE response");
+
+      const montageCandidateId =
+        typeof task2?.candidate_id === "string"
+          ? task2.candidate_id
+          : "";
+
+      if (montageCandidateId !== selectedId) {
+        reject(
+          selectedId,
+          `MONTAGE candidate_id mismatch (expected ${selectedId}, received ${montageCandidateId || "<missing>"})`,
+        );
+        break;
+      }
 
       const montageSourceIds = Array.isArray(
         task2.source_ids,
@@ -711,11 +750,33 @@ composition: ${JSON.stringify(
 ${String(currentMontage.markdown).trim()}
 `;
 
-        await writeFile(
-          join(BLOG_DIR, `${slug}.md`),
-          markdown,
-          "utf8",
-        );
+        const outputPath = join(BLOG_DIR, `${slug}.md`);
+
+        if (existsSync(outputPath)) {
+          throw new Error(
+            `JOURNAL_OUTPUT_CONFLICT: refusing to overwrite existing publication ${slug}.md.`,
+          );
+        }
+
+        try {
+          // "wx" makes the no-overwrite policy atomic if another writer races this check.
+          await writeFile(outputPath, markdown, {
+            encoding: "utf8",
+            flag: "wx",
+          });
+        } catch (error) {
+          if (
+            typeof error === "object" &&
+            error !== null &&
+            "code" in error &&
+            error.code === "EEXIST"
+          ) {
+            throw new Error(
+              `JOURNAL_OUTPUT_CONFLICT: refusing to overwrite existing publication ${slug}.md.`,
+            );
+          }
+          throw error;
+        }
 
         console.log(
           `STRONG JOURNAL: ${slug}.md`,
