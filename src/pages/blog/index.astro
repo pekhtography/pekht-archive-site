@@ -52,7 +52,7 @@ const journalSinceDate =
               timeZone: "UTC",
           });
 
-const journalDescription = `Photographs and words, composed into stories.\nA growing collection — ${journalItems.length} ${journalItems.length === 1 ? "story has" : "stories have"} found their way here${journalSinceDate ? ` since ${journalSinceDate}` : ""}.`;
+const journalDescription = `Photographs and words, woven together into narratives.\n${journalItems.length} ${journalItems.length === 1 ? "story" : "stories"} — moments held in time${journalSinceDate ? ` since ${journalSinceDate}` : ""}.`;
 
 const allItems = journalItems.map((item) => {
     const firstCompositionSource = item.data.composition?.find((block) => block.type === "source");
