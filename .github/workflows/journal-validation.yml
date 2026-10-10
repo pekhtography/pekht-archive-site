@@ -39,11 +39,27 @@ jobs:
           set -o pipefail
           pnpm test:journal:validation 2>&1 | tee journal-validation.log
 
-      - name: Preserve test output
+      - name: Run error summary tests
+        if: always()
+        shell: bash
+        run: |
+          set -o pipefail
+          pnpm test:journal:error-summary 2>&1 | tee journal-error-summary.log
+
+      - name: Preserve validation test output
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: journal-validation-output
           path: journal-validation.log
+          if-no-files-found: warn
+          retention-days: 7
+
+      - name: Preserve error summary test output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: journal-error-summary-output
+          path: journal-error-summary.log
           if-no-files-found: warn
           retention-days: 7
