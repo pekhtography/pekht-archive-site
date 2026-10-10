@@ -78,6 +78,45 @@ test("blocks IDs outside snapshot, mismatched IDs, and missing archive images", 
   assert.equal(validateMontage(valid(), "candidate-1", snapshot, new Map([["a", "/a"], ["b", "/b"], ["c", "/c"]])).ok, false);
 });
 
+test("preserves T5 snapshot diagnostic format for declared and composition source IDs", () => {
+  const declared = check(valid({ source_ids: ["a", "b", "c", "outside"] }));
+  assert.equal(
+    declared.ok ? "" : declared.reason,
+    "MONTAGE_SOURCE_NOT_IN_SNAPSHOT: stage=MONTAGE source_id=outside is not in the DISCOVER snapshot.",
+  );
+
+  const composition = (valid().composition as Record<string, unknown>[]).map((block) => ({ ...block }));
+  composition[3].source_id = "outside";
+  const composed = check(valid({ composition }));
+  assert.equal(
+    composed.ok ? "" : composed.reason,
+    "MONTAGE_SOURCE_NOT_IN_SNAPSHOT: stage=MONTAGE composition source_id=outside is not in the DISCOVER snapshot.",
+  );
+});
+
+test("preserves T5 composition mismatch diagnostic and sorted symmetric difference", () => {
+  const mismatchSnapshot = new Set(["a", "b", "c", "d", "e"]);
+  const mismatchImages = new Map([...mismatchSnapshot].map((id) => [id, `/images/${id}.jpg`]));
+  const composition = [
+    { type: "source", source_id: "a", text: "Text for a" },
+    { type: "source", source_id: "b", text: "Text for b" },
+    { type: "source", source_id: "c", text: "Text for c" },
+    { type: "source", source_id: "e", text: "Text for e" },
+  ];
+  const result = validateMontage(valid(), "candidate-1", mismatchSnapshot, mismatchImages);
+  assert.equal(result.ok, false);
+  const mismatch = validateMontage(
+    valid({ composition }),
+    "candidate-1",
+    mismatchSnapshot,
+    mismatchImages,
+  );
+  assert.equal(
+    mismatch.ok ? "" : mismatch.reason,
+    "MONTAGE_COMPOSITION_MISMATCH: stage=MONTAGE source_id set differs between task2.source_ids and composition source blocks; mismatched source_id(s): d, e.",
+  );
+});
+
 test("blocks missing publication fields and invalid facets", () => {
   assert.equal(check(valid({ title: " " })).ok, false);
   assert.equal(check(valid({ description: "" })).ok, false);
