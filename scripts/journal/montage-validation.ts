@@ -62,7 +62,7 @@ export function validateMontage(
 
   const outsideSnapshot = sourceIds.find((id) => !snapshotIds.has(id));
   if (outsideSnapshot !== undefined) {
-    return { ok: false, reason: `MONTAGE_SOURCE_NOT_IN_SNAPSHOT: source_id=${outsideSnapshot} is not in the DISCOVER snapshot.` };
+    return { ok: false, reason: `MONTAGE_SOURCE_NOT_IN_SNAPSHOT: stage=MONTAGE source_id=${outsideSnapshot} is not in the DISCOVER snapshot.` };
   }
 
   if (!Array.isArray(value.composition) || value.composition.length === 0) {
@@ -91,7 +91,7 @@ export function validateMontage(
 
     const sourceId = block.source_id;
     if (!snapshotIds.has(sourceId)) {
-      return { ok: false, reason: `MONTAGE_SOURCE_NOT_IN_SNAPSHOT: composition source_id=${sourceId} is not in the DISCOVER snapshot.` };
+      return { ok: false, reason: `MONTAGE_SOURCE_NOT_IN_SNAPSHOT: stage=MONTAGE composition source_id=${sourceId} is not in the DISCOVER snapshot.` };
     }
 
     if (seenSourceBlocks.has(sourceId)) {
@@ -108,8 +108,15 @@ export function validateMontage(
 
   const declared = new Set(sourceIds);
   const composed = new Set(compositionSourceIds);
-  if (declared.size !== composed.size || [...declared].some((id) => !composed.has(id))) {
-    return { ok: false, reason: "MONTAGE_COMPOSITION_MISMATCH: source_ids must exactly match the unique source blocks in composition." };
+  const mismatchedSourceIds = [
+    ...[...declared].filter((id) => !composed.has(id)),
+    ...[...composed].filter((id) => !declared.has(id)),
+  ].sort();
+  if (declared.size !== composed.size || mismatchedSourceIds.length > 0) {
+    return {
+      ok: false,
+      reason: `MONTAGE_COMPOSITION_MISMATCH: stage=MONTAGE source_id set differs between task2.source_ids and composition source blocks; mismatched source_id(s): ${mismatchedSourceIds.join(", ") || "<set-size mismatch>"}.`,
+    };
   }
 
   return { ok: true, sourceIds: [...sourceIds], composition: composition as MontageBlock[] };
