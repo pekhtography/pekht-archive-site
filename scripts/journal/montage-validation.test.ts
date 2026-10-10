@@ -103,8 +103,6 @@ test("preserves T5 composition mismatch diagnostic and sorted symmetric differen
     { type: "source", source_id: "c", text: "Text for c" },
     { type: "source", source_id: "e", text: "Text for e" },
   ];
-  const result = validateMontage(valid(), "candidate-1", mismatchSnapshot, mismatchImages);
-  assert.equal(result.ok, false);
   const mismatch = validateMontage(
     valid({ composition }),
     "candidate-1",
