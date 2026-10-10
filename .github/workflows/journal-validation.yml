@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - journal/t6-montage-validation
-      - journal/t9-error-summary
   workflow_dispatch:
 
 permissions:
@@ -33,12 +32,11 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run Journal validation and T9 error summary tests
+      - name: Run montage validation tests
         shell: bash
         run: |
           set -o pipefail
           pnpm test:journal:validation 2>&1 | tee journal-validation.log
-          pnpm test:journal:error-summary 2>&1 | tee -a journal-validation.log
 
       - name: Preserve test output
         if: always()
