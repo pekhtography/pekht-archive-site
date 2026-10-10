@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs";
 import { readdir, readFile, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { join, resolve } from "node:path";
+import { pathToFileURL } from "node:url";
 import { sortExploreItems } from "../src/lib/explore-sort.ts";
 import { generateJson } from "./journal/provider.ts";
 
@@ -41,15 +42,15 @@ function frontmatter(text: string): Record<string, string | string[]> {
   return data;
 }
 
-async function loadArchive(): Promise<ArchivePost[]> {
-  const names = (await readdir(ARCHIVE_DIR)).filter((n) =>
+async function loadArchive(archiveDir: string = ARCHIVE_DIR): Promise<ArchivePost[]> {
+  const names = (await readdir(archiveDir)).filter((n) =>
     n.endsWith(".md"),
   );
 
   const posts: ArchivePost[] = [];
 
   for (const name of names) {
-    const raw = await readFile(join(ARCHIVE_DIR, name), "utf8");
+    const raw = await readFile(join(archiveDir, name), "utf8");
     const fm = frontmatter(raw);
     const body = String(fm.__body ?? "").trim();
     const source_id = name.replace(/\.md$/, "");
@@ -70,12 +71,12 @@ async function loadArchive(): Promise<ArchivePost[]> {
   return posts;
 }
 
-async function loadUsedSources(): Promise<Set<string>> {
+async function loadUsedSources(blogDir: string = BLOG_DIR): Promise<Set<string>> {
   const used = new Set<string>();
   let names: string[] = [];
 
   try {
-    names = (await readdir(BLOG_DIR)).filter(
+    names = (await readdir(blogDir)).filter(
       (n) => n.endsWith(".md") || n.endsWith(".mdx"),
     );
   } catch {
@@ -83,7 +84,7 @@ async function loadUsedSources(): Promise<Set<string>> {
   }
 
   for (const name of names) {
-    const raw = await readFile(join(BLOG_DIR, name), "utf8");
+    const raw = await readFile(join(blogDir, name), "utf8");
     const fm = frontmatter(raw);
 
     if (fm.category !== "journal") continue;
@@ -271,16 +272,24 @@ const task3Schema = {
   ],
 };
 
-async function prompt(path: string): Promise<string> {
-  return readFile(
-    join(ROOT, "scripts/journal/prompts", path),
-    "utf8",
-  );
-}
+export type JournalRunOptions = {
+  archiveDir?: string;
+  blogDir?: string;
+  promptsDir?: string;
+  generateJsonFn?: typeof generateJson;
+  writeFileFn?: typeof writeFile;
+};
 
-async function run() {
-  const archive = await loadArchive();
-  const used = await loadUsedSources();
+export async function runJournal(options: JournalRunOptions = {}) {
+  const archiveDir = options.archiveDir ?? ARCHIVE_DIR;
+  const blogDir = options.blogDir ?? BLOG_DIR;
+  const promptsDir = options.promptsDir ?? join(ROOT, "scripts/journal/prompts");
+  const generate = options.generateJsonFn ?? generateJson;
+  const writePublication = options.writeFileFn ?? writeFile;
+  const prompt = (path: string) => readFile(join(promptsDir, path), "utf8");
+
+  const archive = await loadArchive(archiveDir);
+  const used = await loadUsedSources(blogDir);
 
   if (!archive.length) {
     console.log("NO_JOURNAL: archive is empty.");
@@ -412,7 +421,7 @@ async function run() {
       ? `\n\nPREVIOUS CANDIDATES ALREADY REJECTED IN THIS RUN: ${[...rejectedThisRun].join(", ")}\nDo not return any of them. Find a genuinely different candidate from the supplied snapshot.`
       : "";
 
-    const task1 = await generateJson(
+    const task1 = await generate(
       `${await prompt("task-1.md")}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
       task1Schema,
     );
@@ -499,7 +508,7 @@ async function run() {
           : "SELECT-MONTAGE",
       );
 
-      const task2 = await generateJson(
+      const task2 = await generate(
         currentMontage
           ? `${await prompt("task-2.md")}\n\nREVISION MODE: Preserve the proven candidate vector. You may add, remove, replace, or reorder source posts from the supplied snapshot when that is the smallest justified change. Do not leave the supplied snapshot.\n\nREVISION REQUIRED:\n${lastRevisionInstruction}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`
           : `${await prompt("task-2.md")}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`,
@@ -559,7 +568,7 @@ async function run() {
         composition,
       };
 
-      const task3 = await generateJson(
+      const task3 = await generate(
         `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT JOURNAL MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nSOURCE TEXTS USED BY CURRENT MONTAGE:\n${sourcesFor(montageSourceIds)}`,
         task3Schema,
       );
@@ -684,7 +693,7 @@ async function run() {
           const context = words.slice(0, 24).join(" ");
 
           try {
-            const result = await generateJson(
+            const result = await generate(
               `${await prompt("title-cut.md")}${context}`,
               titleCutSchema,
             );
@@ -752,7 +761,7 @@ composition: ${JSON.stringify(
 ${String(currentMontage.markdown).trim()}
 `;
 
-        const outputPath = join(BLOG_DIR, `${slug}.md`);
+        const outputPath = join(blogDir, `${slug}.md`);
 
         if (existsSync(outputPath)) {
           throw new Error(
@@ -762,7 +771,7 @@ ${String(currentMontage.markdown).trim()}
 
         try {
           // "wx" makes the no-overwrite policy atomic if another writer races this check.
-          await writeFile(outputPath, markdown, {
+          await writePublication(outputPath, markdown, {
             encoding: "utf8",
             flag: "wx",
           });
@@ -848,7 +857,16 @@ ${String(currentMontage.markdown).trim()}
   );
 }
 
-run().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+async function run() {
+  await runJournal();
+}
+
+if (
+  process.argv[1] &&
+  import.meta.url === pathToFileURL(resolve(process.argv[1])).href
+) {
+  run().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}
