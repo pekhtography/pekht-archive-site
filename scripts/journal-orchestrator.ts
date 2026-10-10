@@ -4,6 +4,12 @@ import { join } from "node:path";
 import { sortExploreItems } from "../src/lib/explore-sort.ts";
 import { generateJson } from "./journal/provider.ts";
 import { validateMontage } from "./journal/montage-validation.ts";
+import {
+  formatRejectionSummary,
+  recordRejection,
+  type RejectionReasons,
+  type RejectionStage,
+} from "./journal/rejection-reasons.ts";
 
 type ArchivePost = {
   source_id: string;
@@ -382,15 +388,15 @@ async function run() {
 
   // Working state for this run only. It is deliberately not persisted.
   const rejectedThisRun = new Set<string>();
-  const rejectionReasons = new Map<string, string>();
+  const rejectionReasons: RejectionReasons = new Map();
   const repeatedRejectedIdReturns = new Map<string, number>();
   const MAX_REPEATED_REJECTED_ID_RETURNS = 2;
   const revisionAttempts = new Map<string, number>();
   const MAX_REVISION_ATTEMPTS = 2;
 
-  function reject(id: string, reason: string) {
+  function reject(id: string, stage: RejectionStage, reason: string) {
     rejectedThisRun.add(id);
-    rejectionReasons.set(id, reason);
+    recordRejection(rejectionReasons, id, stage, reason);
     console.log(
       `REJECT: candidate ${id}: ${reason}`,
     );
@@ -401,8 +407,8 @@ async function run() {
 
     console.log("REJECTION SUMMARY:");
 
-    for (const [id, reason] of rejectionReasons) {
-      console.log(`- ${id}: ${reason}`);
+    for (const line of formatRejectionSummary(rejectionReasons)) {
+      console.log(line);
     }
   }
 
@@ -484,6 +490,7 @@ async function run() {
     if (!candidateSourcesValid) {
       reject(
         selectedId,
+        "DISCOVER",
         "DISCOVER candidate failed source validation",
       );
       continue;
@@ -517,7 +524,8 @@ async function run() {
       if (montageCandidateId !== selectedId) {
         reject(
           selectedId,
-          `MONTAGE candidate_id mismatch (expected ${selectedId}, received ${montageCandidateId || "<missing>"})`,
+          "SELECT-MONTAGE",
+          `SELECT-MONTAGE candidate_id mismatch (expected ${selectedId}, received ${montageCandidateId || "<missing>"})`,
         );
         break;
       }
@@ -530,7 +538,7 @@ async function run() {
       );
 
       if (!validation.ok) {
-        reject(selectedId, validation.reason);
+        reject(selectedId, "MONTAGE", validation.reason);
         break;
       }
 
@@ -547,6 +555,7 @@ async function run() {
       if (seenMontages.has(montageSignature)) {
         reject(
           selectedId,
+          "MONTAGE",
           "identical montage repeated",
         );
         break;
@@ -802,6 +811,7 @@ ${String(currentMontage.markdown).trim()}
         ) {
           reject(
             selectedId,
+            "REVISION",
             "revision limit exceeded",
           );
 
@@ -818,6 +828,7 @@ ${String(currentMontage.markdown).trim()}
         ) {
           reject(
             selectedId,
+            "REVISION",
             "repeated revision instruction",
           );
 
@@ -835,6 +846,7 @@ ${String(currentMontage.markdown).trim()}
 
       reject(
         selectedId,
+        "TEST",
         `TEST rejected: ${task3.reason}`,
       );
 
