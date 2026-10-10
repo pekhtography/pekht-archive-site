@@ -29,18 +29,28 @@ for (const item of journalItems) {
     }
 }
 
-const journalSourceDates = [...journalSourceIds]
-    .map((sourceId) => archiveById.get(sourceId)?.data.x_created_at)
-    .filter((createdAt): createdAt is string => Boolean(createdAt))
-    .map((createdAt) => new Date(createdAt))
-    .filter((date) => !Number.isNaN(date.getTime()))
-    .sort((a, b) => a.getTime() - b.getTime());
+let journalEarliestTimestamp: number | null = null;
 
-const journalSinceDate = journalSourceDates[0]?.toLocaleDateString("en-US", {
-    month: "long",
-    year: "numeric",
-    timeZone: "UTC",
-});
+for (const sourceId of journalSourceIds) {
+    const createdAt = archiveById.get(sourceId)?.data.x_created_at;
+    if (!createdAt) continue;
+
+    const timestamp = new Date(createdAt).getTime();
+    if (Number.isNaN(timestamp)) continue;
+
+    if (journalEarliestTimestamp === null || timestamp < journalEarliestTimestamp) {
+        journalEarliestTimestamp = timestamp;
+    }
+}
+
+const journalSinceDate =
+    journalEarliestTimestamp === null
+        ? undefined
+        : new Date(journalEarliestTimestamp).toLocaleDateString("en-US", {
+              month: "long",
+              year: "numeric",
+              timeZone: "UTC",
+          });
 
 const journalDescription = `Photographs and words, composed into stories.\nA growing collection — ${journalItems.length} ${journalItems.length === 1 ? "story has" : "stories have"} found their way here${journalSinceDate ? ` since ${journalSinceDate}` : ""}.`;
 
