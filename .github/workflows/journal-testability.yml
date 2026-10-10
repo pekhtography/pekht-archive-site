@@ -2,9 +2,6 @@ name: Journal Testability
 
 on:
   workflow_dispatch:
-  push:
-    branches:
-      - test/journal-testability
 
 permissions:
   contents: read
