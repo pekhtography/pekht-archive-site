@@ -250,8 +250,8 @@ const titleCutSchema = {
   type: "OBJECT",
   properties: {
     cut_index: {
-      type: "NUMBER",
-      enum: [10, 11, 12, 13, 14],
+      type: "STRING",
+      enum: ["10", "11", "12", "13", "14"],
     },
   },
   required: ["cut_index"],
