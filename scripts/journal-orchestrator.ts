@@ -50,7 +50,7 @@ function frontmatter(text: string): Record<string, string | string[]> {
 }
 
 async function loadArchive(archiveDir = ARCHIVE_DIR): Promise<ArchivePost[]> {
-  const names = (await readdir(ARCHIVE_DIR)).filter((n) =>
+  const names = (await readdir(archiveDir)).filter((n) =>
     n.endsWith(".md"),
   );
 
@@ -83,7 +83,7 @@ async function loadUsedSources(blogDir = BLOG_DIR): Promise<Set<string>> {
   let names: string[] = [];
 
   try {
-    names = (await readdir(BLOG_DIR)).filter(
+    names = (await readdir(blogDir)).filter(
       (n) => n.endsWith(".md") || n.endsWith(".mdx"),
     );
   } catch {
@@ -777,7 +777,7 @@ composition: ${JSON.stringify(
 ${String(currentMontage.markdown).trim()}
 `;
 
-        const outputPath = join(BLOG_DIR, `${slug}.md`);
+        const outputPath = join(blogDir, `${slug}.md`);
 
         if (existsSync(outputPath)) {
           throw new Error(
