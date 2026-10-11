@@ -799,6 +799,8 @@ ${String(currentMontage.markdown).trim()}
 
         const outputPath = join(blogDir, `${slug}.md`);
 
+        ensureBudget("PUBLICATION");
+
         if (existsSync(outputPath)) {
           throw new Error(
             `JOURNAL_OUTPUT_CONFLICT: refusing to overwrite existing publication ${slug}.md.`,
