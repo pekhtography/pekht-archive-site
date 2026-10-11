@@ -4,6 +4,7 @@ import { mkdtemp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promis
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { runJournal, type JournalRunOptions } from "./journal-orchestrator.ts";
+import { generateJson, JournalBudgetExceededError } from "./journal/provider.ts";
 
 type Stage = "DISCOVER" | "MONTAGE" | "TEST" | "TITLE";
 type QueueItem = { stage: Stage; response: unknown };
@@ -148,7 +149,10 @@ async function execute(
 
     let thrown: unknown;
     const generateJsonFn: NonNullable<JournalRunOptions["generateJsonFn"]> =
-      async (_prompt, schema) => {
+      async (_prompt, schema, providerOptions) => {
+        if (providerOptions?.checkBudget && !providerOptions.checkBudget()) {
+          throw new JournalBudgetExceededError();
+        }
         const stage = stageFor(schema);
         calls.push(stage);
         const next = queue.shift();
@@ -183,6 +187,49 @@ async function execute(
 
 async function cleanup(root: string) {
   await rm(root, { recursive: true, force: true });
+}
+
+
+function providerSuccessResponse(): Response {
+  return {
+    ok: true,
+    status: 200,
+    json: async () => ({ candidates: [{ content: { parts: [{ text: '{"ok":true}' }] } }] }),
+  } as Response;
+}
+
+async function withProviderEnvironment(fetchImpl: typeof fetch, test: () => Promise<void>) {
+  const keys = ["GEMINI_API_KEY", "GEMINI_MODEL", "GEMINI_FALLBACK_1", "GEMINI_FALLBACK_2", "GEMINI_FALLBACK_3", "GEMINI_FALLBACK_4"];
+  const previous = new Map(keys.map((key) => [key, process.env[key]]));
+  const originalFetch = globalThis.fetch;
+  process.env.GEMINI_API_KEY = "harness-test-key";
+  process.env.GEMINI_MODEL = "test-primary";
+  process.env.GEMINI_FALLBACK_1 = "test-fallback";
+  delete process.env.GEMINI_FALLBACK_2;
+  delete process.env.GEMINI_FALLBACK_3;
+  delete process.env.GEMINI_FALLBACK_4;
+  globalThis.fetch = fetchImpl;
+  try {
+    await test();
+  } finally {
+    globalThis.fetch = originalFetch;
+    for (const key of keys) {
+      const value = previous.get(key);
+      if (value === undefined) delete process.env[key];
+      else process.env[key] = value;
+    }
+  }
+}
+
+function timeoutFetch(): typeof fetch {
+  return (async (_input: RequestInfo | URL, init?: RequestInit) => new Promise<Response>((_resolve, reject) => {
+    const signal = init?.signal;
+    if (signal?.aborted) {
+      reject(signal.reason);
+      return;
+    }
+    signal?.addEventListener("abort", () => reject(signal.reason), { once: true });
+  })) as typeof fetch;
 }
 
 async function check(name: string, test: () => Promise<void>) {
