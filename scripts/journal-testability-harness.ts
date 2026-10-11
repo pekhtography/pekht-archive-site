@@ -295,6 +295,28 @@ async function main() {
     });
   });
 
+  await run("T16.1b — less than 60 seconds remaining prevents the first request", async () => {
+    const originalNow = Date.now;
+    const budgetMs = 105 * 60 * 1000;
+    const times = [0, 1, budgetMs - 59_999];
+    let index = 0;
+    Date.now = () => times[Math.min(index++, times.length - 1)];
+    let result: Awaited<ReturnType<typeof execute>>;
+    try {
+      result = await execute([]);
+    } finally {
+      Date.now = originalNow;
+    }
+    try {
+      assert.equal(result.thrown, undefined);
+      assert.equal(result.calls.length, 0, "No model request may start with less than 60 seconds remaining.");
+      assert.ok(result.logs.some((line) => line.includes("JOURNAL_BUDGET_EXCEEDED during DISCOVER")));
+      assert.equal((await readdir(result.blogDir)).length, 0);
+    } finally {
+      await cleanup(result.root);
+    }
+  });
+
   await run("T16.2 — exhausted budget prevents fallback after retries", async () => {
     let checks = 0;
     let calls = 0;
