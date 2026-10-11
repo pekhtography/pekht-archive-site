@@ -4,6 +4,7 @@ import { mkdtemp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promis
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { runJournal, type JournalRunOptions } from "./journal-orchestrator.ts";
+import { generateJson, JournalBudgetExceededError } from "./journal/provider.ts";
 
 type Stage = "DISCOVER" | "MONTAGE" | "TEST" | "TITLE";
 type QueueItem = { stage: Stage; response: unknown };
@@ -148,7 +149,10 @@ async function execute(
 
     let thrown: unknown;
     const generateJsonFn: NonNullable<JournalRunOptions["generateJsonFn"]> =
-      async (_prompt, schema) => {
+      async (_prompt, schema, providerOptions) => {
+        if (providerOptions?.checkBudget && !providerOptions.checkBudget()) {
+          throw new JournalBudgetExceededError();
+        }
         const stage = stageFor(schema);
         calls.push(stage);
         const next = queue.shift();
@@ -185,6 +189,55 @@ async function cleanup(root: string) {
   await rm(root, { recursive: true, force: true });
 }
 
+
+function providerSuccessResponse(): Response {
+  return {
+    ok: true,
+    status: 200,
+    json: async () => ({ candidates: [{ content: { parts: [{ text: '{"ok":true}' }] } }] }),
+  } as Response;
+}
+
+async function withProviderEnvironment(fetchImpl: typeof fetch, test: () => Promise<void>) {
+  const keys = ["GEMINI_API_KEY", "GEMINI_MODEL", "GEMINI_FALLBACK_1", "GEMINI_FALLBACK_2", "GEMINI_FALLBACK_3", "GEMINI_FALLBACK_4"];
+  const previous = new Map(keys.map((key) => [key, process.env[key]]));
+  const originalFetch = globalThis.fetch;
+  process.env.GEMINI_API_KEY = "harness-test-key";
+  process.env.GEMINI_MODEL = "test-primary";
+  process.env.GEMINI_FALLBACK_1 = "test-fallback";
+  delete process.env.GEMINI_FALLBACK_2;
+  delete process.env.GEMINI_FALLBACK_3;
+  delete process.env.GEMINI_FALLBACK_4;
+  globalThis.fetch = fetchImpl;
+  try {
+    await test();
+  } finally {
+    globalThis.fetch = originalFetch;
+    for (const key of keys) {
+      const value = previous.get(key);
+      if (value === undefined) delete process.env[key];
+      else process.env[key] = value;
+    }
+  }
+}
+
+function timeoutFetch(): typeof fetch {
+  return (async (_input: RequestInfo | URL, init?: RequestInit) => new Promise<Response>((_resolve, reject) => {
+    const signal = init?.signal;
+    if (signal?.aborted) {
+      reject(signal.reason);
+      return;
+    }
+    // AbortSignal.timeout() uses an unreferenced timer in Node; this guard keeps
+    // the mocked request alive long enough for the timeout signal to fire.
+    const guard = setTimeout(() => reject(new Error("Timeout signal did not fire.")), 100);
+    signal?.addEventListener("abort", () => {
+      clearTimeout(guard);
+      reject(signal?.reason);
+    }, { once: true });
+  })) as typeof fetch;
+}
+
 async function check(name: string, test: () => Promise<void>) {
   await test();
   console.log(`PASS ${name}`);
@@ -196,6 +249,141 @@ async function main() {
     await check(name, test);
     passed += 1;
   };
+
+
+  // T8/T16 provider and controlled-budget acceptance scenarios.
+  await run("T8.1 — request timeout retries the same model", async () => {
+    let calls = 0;
+    const fetchImpl = (async (_input: RequestInfo | URL, init?: RequestInit) => {
+      calls += 1;
+      if (calls === 1) return await timeoutFetch()("https://example.test", init);
+      return providerSuccessResponse();
+    }) as typeof fetch;
+    await withProviderEnvironment(fetchImpl, async () => {
+      const result = await generateJson("prompt", {}, { timeoutMs: 5 });
+      assert.deepEqual(result, { ok: true });
+      assert.equal(calls, 2);
+    });
+  });
+
+  await run("T8.2 — three timeouts fall back to the next model", async () => {
+    const requestedModels: string[] = [];
+    const fetchImpl = (async (input: RequestInfo | URL, init?: RequestInit) => {
+      const match = String(input).match(/models\/([^:]+)/);
+      requestedModels.push(decodeURIComponent(match?.[1] ?? ""));
+      if (requestedModels.at(-1) === "test-primary") {
+        return await timeoutFetch()(input, init);
+      }
+      return providerSuccessResponse();
+    }) as typeof fetch;
+    await withProviderEnvironment(fetchImpl, async () => {
+      const result = await generateJson("prompt", {}, { timeoutMs: 5 });
+      assert.deepEqual(result, { ok: true });
+      assert.deepEqual(requestedModels, ["test-primary", "test-primary", "test-primary", "test-fallback"]);
+    });
+  });
+
+  await run("T16.1 — exhausted budget prevents the first request", async () => {
+    let calls = 0;
+    const fetchImpl = (async () => { calls += 1; return providerSuccessResponse(); }) as typeof fetch;
+    await withProviderEnvironment(fetchImpl, async () => {
+      await assert.rejects(
+        generateJson("prompt", {}, { checkBudget: () => false, timeoutMs: 5 }),
+        JournalBudgetExceededError,
+      );
+      assert.equal(calls, 0);
+    });
+  });
+
+  await run("T16.1b — less than 60 seconds remaining prevents the first request", async () => {
+    const originalNow = Date.now;
+    const budgetMs = 105 * 60 * 1000;
+    const times = [0, 1, budgetMs - 59_999];
+    let index = 0;
+    Date.now = () => times[Math.min(index++, times.length - 1)];
+    let result: Awaited<ReturnType<typeof execute>>;
+    try {
+      result = await execute([]);
+    } finally {
+      Date.now = originalNow;
+    }
+    try {
+      assert.equal(result.thrown, undefined);
+      assert.equal(result.calls.length, 0, "No model request may start with less than 60 seconds remaining.");
+      assert.ok(result.logs.some((line) => line.includes("JOURNAL_BUDGET_EXCEEDED during DISCOVER")));
+      assert.equal((await readdir(result.blogDir)).length, 0);
+    } finally {
+      await cleanup(result.root);
+    }
+  });
+
+  await run("T16.2 — exhausted budget prevents fallback after retries", async () => {
+    let checks = 0;
+    let calls = 0;
+    const fetchImpl = (async (input: RequestInfo | URL, init?: RequestInit) => {
+      calls += 1;
+      return await timeoutFetch()(input, init);
+    }) as typeof fetch;
+    await withProviderEnvironment(fetchImpl, async () => {
+      await assert.rejects(
+        generateJson("prompt", {}, { checkBudget: () => ++checks < 5, timeoutMs: 5 }),
+        JournalBudgetExceededError,
+      );
+      assert.equal(calls, 3, "Fallback request must not start after the budget check fails.");
+      assert.equal(checks, 5);
+    });
+  });
+
+  await run("T8.3 — external AbortError does not retry or fall back", async () => {
+    let calls = 0;
+    const abort = Object.assign(new Error("caller cancelled"), { name: "AbortError" });
+    const fetchImpl = (async () => { calls += 1; throw abort; }) as typeof fetch;
+    await withProviderEnvironment(fetchImpl, async () => {
+      await assert.rejects(generateJson("prompt", {}, { timeoutMs: 5 }), (error: unknown) =>
+        error instanceof Error && error.name === "AbortError");
+      assert.equal(calls, 1);
+    });
+  });
+
+  await run("T8.4 — transient network error retries", async () => {
+    let calls = 0;
+    const fetchImpl = (async () => {
+      calls += 1;
+      if (calls === 1) throw new TypeError("simulated network failure");
+      return providerSuccessResponse();
+    }) as typeof fetch;
+    await withProviderEnvironment(fetchImpl, async () => {
+      const result = await generateJson("prompt", {}, { timeoutMs: 5 });
+      assert.deepEqual(result, { ok: true });
+      assert.equal(calls, 2);
+    });
+  });
+
+  await run("T16.3 — budget exhaustion logs NO_JOURNAL and does not publish", async () => {
+    const originalNow = Date.now;
+    const times = [0, 1, 2, 3, 105 * 60 * 1000];
+    let index = 0;
+    Date.now = () => times[Math.min(index++, times.length - 1)];
+    let result: Awaited<ReturnType<typeof execute>>;
+    try {
+      const invalid = candidate("candidate-invalid", { source_ids: SOURCE_IDS.slice(0, 3) });
+      result = await execute([
+        { stage: "DISCOVER", response: discoverResponse(invalid) },
+        { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      ]);
+    } finally {
+      Date.now = originalNow;
+    }
+    try {
+      assert.equal(result.thrown, undefined);
+      assert.ok(result.logs.some((line) => line.includes("JOURNAL_BUDGET_EXCEEDED during DISCOVER")));
+      assert.ok(result.logs.some((line) => line.includes("REJECTION SUMMARY")));
+      assert.ok(result.logs.some((line) => line.includes("NO_JOURNAL: budget exhausted")));
+      assert.equal((await readdir(result.blogDir)).length, 0);
+    } finally {
+      await cleanup(result.root);
+    }
+  });
 
   // Importing the orchestrator must not execute the CLI or attempt model generation.
   await run("0 — importing orchestrator has no side effects", async () => {

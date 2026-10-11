@@ -3,7 +3,7 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { sortExploreItems } from "../src/lib/explore-sort.ts";
-import { generateJson } from "./journal/provider.ts";
+import { generateJson, JournalBudgetExceededError } from "./journal/provider.ts";
 import { validateMontage } from "./journal/montage-validation.ts";
 import {
   formatRejectionSummary,
@@ -426,6 +426,19 @@ export async function runJournal(options: JournalRunOptions = {}) {
     }
   }
 
+  async function generateWithBudget(promptText: string, schema: Record<string, unknown>, stage: string) {
+    try {
+      return await generateJsonFn(promptText, schema, {
+        checkBudget: () => RUN_BUDGET_MS - (Date.now() - startedAt) >= 60_000,
+      });
+    } catch (error) {
+      if (error instanceof JournalBudgetExceededError) {
+        throw new Error(`JOURNAL_BUDGET_EXCEEDED during ${stage}`);
+      }
+      throw error;
+    }
+  }
+
   try {
   discoveryLoop: while (true) {
     ensureBudget("DISCOVER");
@@ -434,9 +447,10 @@ export async function runJournal(options: JournalRunOptions = {}) {
       ? `\n\nPREVIOUS CANDIDATES ALREADY REJECTED IN THIS RUN: ${[...rejectedThisRun].join(", ")}\nDo not return any of them. Find a genuinely different candidate from the supplied snapshot.`
       : "";
 
-    const task1 = await generateJsonFn(
+    const task1 = await generateWithBudget(
       `${await prompt("task-1.md", promptsDir)}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
       task1Schema,
+      "DISCOVER",
     );
 
     ensureBudget("DISCOVER response");
@@ -522,11 +536,12 @@ export async function runJournal(options: JournalRunOptions = {}) {
           : "SELECT-MONTAGE",
       );
 
-      const task2 = await generateJsonFn(
+      const task2 = await generateWithBudget(
         currentMontage
           ? `${await prompt("task-2.md", promptsDir)}\n\nREVISION MODE: Preserve the proven candidate vector. You may add, remove, replace, or reorder source posts from the supplied snapshot when that is the smallest justified change. Do not leave the supplied snapshot.\n\nREVISION REQUIRED:\n${lastRevisionInstruction}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`
           : `${await prompt("task-2.md", promptsDir)}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`,
         task2Schema,
+        "SELECT-MONTAGE",
       );
 
       ensureBudget("SELECT-MONTAGE response");
@@ -584,9 +599,10 @@ export async function runJournal(options: JournalRunOptions = {}) {
         composition,
       };
 
-      const task3 = await generateJsonFn(
+      const task3 = await generateWithBudget(
         `${await prompt("task-3.md", promptsDir)}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT JOURNAL MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nSOURCE TEXTS USED BY CURRENT MONTAGE:\n${sourcesFor(montageSourceIds)}`,
         task3Schema,
+        "TEST",
       );
 
       ensureBudget("TEST response");
@@ -709,9 +725,10 @@ export async function runJournal(options: JournalRunOptions = {}) {
           const context = words.slice(0, 24).join(" ");
 
           try {
-            const result = await generateJsonFn(
+            const result = await generateWithBudget(
               `${await prompt("title-cut.md", promptsDir)}${context}`,
               titleCutSchema,
+              "TITLE CUT",
             );
 
             const cutIndex = Number(result?.cut_index);
@@ -727,6 +744,7 @@ export async function runJournal(options: JournalRunOptions = {}) {
 
             return cutIndex;
           } catch (error) {
+            if (error instanceof Error && error.message.startsWith("JOURNAL_BUDGET_EXCEEDED")) throw error;
             console.warn(
               "TITLE CUT: semantic selection failed; using legacy journalHeading().",
               error,
@@ -745,6 +763,8 @@ export async function runJournal(options: JournalRunOptions = {}) {
         const titleCut = await chooseTitleCut(
           String(currentMontage.markdown),
         );
+
+        ensureBudget("TITLE CUT response");
 
         const journalTitle =
           titleCut !== null
@@ -778,6 +798,8 @@ ${String(currentMontage.markdown).trim()}
 `;
 
         const outputPath = join(blogDir, `${slug}.md`);
+
+        ensureBudget("PUBLICATION");
 
         if (existsSync(outputPath)) {
           throw new Error(
@@ -875,6 +897,17 @@ ${String(currentMontage.markdown).trim()}
     "NO_JOURNAL: all discovery/selection/validation paths exhausted.",
   );
   } catch (error) {
+    if (error instanceof Error && error.message.startsWith("JOURNAL_BUDGET_EXCEEDED")) {
+      console.error(error.message);
+      try {
+        printRejectionSummary();
+      } catch (summaryError) {
+        console.error("REJECTION SUMMARY: failed to print summary; preserving budget-exhaustion outcome.", summaryError);
+      }
+      console.log("NO_JOURNAL: budget exhausted; incomplete material was not published.");
+      return;
+    }
+
     try {
       printRejectionSummary();
     } catch {
