@@ -1,6 +1,7 @@
 name: Journal Testability
 
 on:
+  pull_request:
   workflow_dispatch:
 
 permissions:
