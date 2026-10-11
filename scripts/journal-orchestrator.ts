@@ -1,6 +1,7 @@
 import { existsSync } from "node:fs";
 import { readdir, readFile, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { join, resolve } from "node:path";
+import { fileURLToPath } from "node:url";
 import { sortExploreItems } from "../src/lib/explore-sort.ts";
 import { generateJson } from "./journal/provider.ts";
 import { validateMontage } from "./journal/montage-validation.ts";
@@ -48,7 +49,7 @@ function frontmatter(text: string): Record<string, string | string[]> {
   return data;
 }
 
-async function loadArchive(): Promise<ArchivePost[]> {
+async function loadArchive(archiveDir = ARCHIVE_DIR): Promise<ArchivePost[]> {
   const names = (await readdir(ARCHIVE_DIR)).filter((n) =>
     n.endsWith(".md"),
   );
@@ -56,7 +57,7 @@ async function loadArchive(): Promise<ArchivePost[]> {
   const posts: ArchivePost[] = [];
 
   for (const name of names) {
-    const raw = await readFile(join(ARCHIVE_DIR, name), "utf8");
+    const raw = await readFile(join(archiveDir, name), "utf8");
     const fm = frontmatter(raw);
     const body = String(fm.__body ?? "").trim();
     const source_id = name.replace(/\.md$/, "");
@@ -77,7 +78,7 @@ async function loadArchive(): Promise<ArchivePost[]> {
   return posts;
 }
 
-async function loadUsedSources(): Promise<Set<string>> {
+async function loadUsedSources(blogDir = BLOG_DIR): Promise<Set<string>> {
   const used = new Set<string>();
   let names: string[] = [];
 
@@ -90,7 +91,7 @@ async function loadUsedSources(): Promise<Set<string>> {
   }
 
   for (const name of names) {
-    const raw = await readFile(join(BLOG_DIR, name), "utf8");
+    const raw = await readFile(join(blogDir, name), "utf8");
     const fm = frontmatter(raw);
 
     if (fm.category !== "journal") continue;
@@ -278,16 +279,29 @@ const task3Schema = {
   ],
 };
 
-async function prompt(path: string): Promise<string> {
+async function prompt(path: string, promptsDir = join(ROOT, "scripts/journal/prompts")): Promise<string> {
   return readFile(
-    join(ROOT, "scripts/journal/prompts", path),
+    join(promptsDir, path),
     "utf8",
   );
 }
 
-async function run() {
-  const archive = await loadArchive();
-  const used = await loadUsedSources();
+export type JournalRunOptions = {
+  archiveDir?: string;
+  blogDir?: string;
+  promptsDir?: string;
+  generateJsonFn?: typeof generateJson;
+  writeFileFn?: typeof writeFile;
+};
+
+export async function runJournal(options: JournalRunOptions = {}) {
+  const archiveDir = options.archiveDir ?? ARCHIVE_DIR;
+  const blogDir = options.blogDir ?? BLOG_DIR;
+  const promptsDir = options.promptsDir ?? join(ROOT, "scripts/journal/prompts");
+  const generateJsonFn = options.generateJsonFn ?? generateJson;
+  const writeFileFn = options.writeFileFn ?? writeFile;
+  const archive = await loadArchive(archiveDir);
+  const used = await loadUsedSources(blogDir);
 
   if (!archive.length) {
     console.log("NO_JOURNAL: archive is empty.");
@@ -420,8 +434,8 @@ async function run() {
       ? `\n\nPREVIOUS CANDIDATES ALREADY REJECTED IN THIS RUN: ${[...rejectedThisRun].join(", ")}\nDo not return any of them. Find a genuinely different candidate from the supplied snapshot.`
       : "";
 
-    const task1 = await generateJson(
-      `${await prompt("task-1.md")}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
+    const task1 = await generateJsonFn(
+      `${await prompt("task-1.md", promptsDir)}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
       task1Schema,
     );
 
@@ -508,10 +522,10 @@ async function run() {
           : "SELECT-MONTAGE",
       );
 
-      const task2 = await generateJson(
+      const task2 = await generateJsonFn(
         currentMontage
-          ? `${await prompt("task-2.md")}\n\nREVISION MODE: Preserve the proven candidate vector. You may add, remove, replace, or reorder source posts from the supplied snapshot when that is the smallest justified change. Do not leave the supplied snapshot.\n\nREVISION REQUIRED:\n${lastRevisionInstruction}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`
-          : `${await prompt("task-2.md")}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`,
+          ? `${await prompt("task-2.md", promptsDir)}\n\nREVISION MODE: Preserve the proven candidate vector. You may add, remove, replace, or reorder source posts from the supplied snapshot when that is the smallest justified change. Do not leave the supplied snapshot.\n\nREVISION REQUIRED:\n${lastRevisionInstruction}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`
+          : `${await prompt("task-2.md", promptsDir)}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`,
         task2Schema,
       );
 
@@ -570,8 +584,8 @@ async function run() {
         composition,
       };
 
-      const task3 = await generateJson(
-        `${await prompt("task-3.md")}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT JOURNAL MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nSOURCE TEXTS USED BY CURRENT MONTAGE:\n${sourcesFor(montageSourceIds)}`,
+      const task3 = await generateJsonFn(
+        `${await prompt("task-3.md", promptsDir)}\n\nTASK 1 CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT JOURNAL MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nSOURCE TEXTS USED BY CURRENT MONTAGE:\n${sourcesFor(montageSourceIds)}`,
         task3Schema,
       );
 
@@ -695,8 +709,8 @@ async function run() {
           const context = words.slice(0, 24).join(" ");
 
           try {
-            const result = await generateJson(
-              `${await prompt("title-cut.md")}${context}`,
+            const result = await generateJsonFn(
+              `${await prompt("title-cut.md", promptsDir)}${context}`,
               titleCutSchema,
             );
 
@@ -773,7 +787,7 @@ ${String(currentMontage.markdown).trim()}
 
         try {
           // "wx" makes the no-overwrite policy atomic if another writer races this check.
-          await writeFile(outputPath, markdown, {
+          await writeFileFn(outputPath, markdown, {
             encoding: "utf8",
             flag: "wx",
           });
@@ -870,7 +884,13 @@ ${String(currentMontage.markdown).trim()}
   }
 }
 
-run().catch((error) => {
-  console.error(error);
-  process.exit(1);
-});
+const isDirectExecution =
+  process.argv[1] !== undefined &&
+  resolve(process.argv[1]) === fileURLToPath(import.meta.url);
+
+if (isDirectExecution) {
+  runJournal().catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
+}
