@@ -1,5 +1,12 @@
 export type JsonSchema = Record<string, unknown>;
 
+export type GenerateJsonOptions = {
+  /** Return false to stop before starting another HTTP request. */
+  checkBudget?: () => boolean;
+  /** Internal test seam; production defaults to 60 seconds. */
+  timeoutMs?: number;
+};
+
 export class ProviderError extends Error {
   readonly retryable: boolean;
   readonly status: number | null;
@@ -11,6 +18,13 @@ export class ProviderError extends Error {
     this.retryable = options.retryable;
     this.status = options.status ?? null;
     this.model = options.model;
+  }
+}
+
+export class JournalBudgetExceededError extends Error {
+  constructor() {
+    super("JOURNAL_BUDGET_EXCEEDED before model request");
+    this.name = "JournalBudgetExceededError";
   }
 }
 
@@ -38,7 +52,18 @@ function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
-async function requestModel(model: string, prompt: string, schema: JsonSchema): Promise<unknown> {
+function checkBudget(options: GenerateJsonOptions) {
+  if (options.checkBudget && !options.checkBudget()) {
+    throw new JournalBudgetExceededError();
+  }
+}
+
+async function requestModel(
+  model: string,
+  prompt: string,
+  schema: JsonSchema,
+  options: GenerateJsonOptions,
+): Promise<unknown> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) throw new ProviderError("GEMINI_API_KEY is not configured.", { retryable: false, model });
 
@@ -55,34 +80,34 @@ async function requestModel(model: string, prompt: string, schema: JsonSchema): 
   let lastStatus: number | null = null;
 
   for (let attempt = 0; attempt < 3; attempt += 1) {
-    const response = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-goog-api-key": apiKey,
-      },
-      body: JSON.stringify(body),
-    });
+    checkBudget(options);
 
-    if (response.ok) {
-      const payload = await response.json() as any;
-      const text = payload?.candidates?.[0]?.content?.parts?.map((part: any) => part.text || "").join("")?.trim();
-      if (!text) throw new ProviderError(`Model ${model} returned no text.`, { retryable: false, model });
-      try {
-        return JSON.parse(text);
-      } catch {
-        throw new ProviderError(`Model ${model} returned invalid JSON.`, { retryable: false, model });
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-goog-api-key": apiKey,
+        },
+        body: JSON.stringify(body),
+        signal: AbortSignal.timeout(options.timeoutMs ?? 60_000),
+      });
+
+      if (response.ok) {
+        const payload = await response.json() as any;
+        const text = payload?.candidates?.[0]?.content?.parts?.map((part: any) => part.text || "").join("")?.trim();
+        if (!text) throw new ProviderError(`Model ${model} returned no text.`, { retryable: false, model });
+        try {
+          return JSON.parse(text);
+        } catch {
+          throw new ProviderError(`Model ${model} returned invalid JSON.`, { retryable: false, model });
+        }
       }
-    }
 
-    const errorText = await response.text();
-    lastError = errorText.slice(0, 1000);
-    lastStatus = response.status;
+      const errorText = await response.text();
+      lastError = errorText.slice(0, 1000);
+      lastStatus = response.status;
 
-    // Retry transient rate limits and server failures before moving to the next model.
-    const retryable = response.status === 429 || response.status >= 500;
-    if (!retryable) {
-      // A missing/deprecated model is a model-level failure: continue to the next fallback.
       if (response.status === 404) {
         throw new ProviderError(`Gemini model ${model} is unavailable: ${lastError}`, {
           retryable: true,
@@ -91,11 +116,26 @@ async function requestModel(model: string, prompt: string, schema: JsonSchema): 
         });
       }
 
-      throw new ProviderError(`Gemini ${model} failed with HTTP ${response.status}: ${lastError}`, {
-        retryable: false,
-        status: response.status,
-        model,
-      });
+      const retryable = response.status === 429 || response.status >= 500;
+      if (!retryable) {
+        throw new ProviderError(`Gemini ${model} failed with HTTP ${response.status}: ${lastError}`, {
+          retryable: false,
+          status: response.status,
+          model,
+        });
+      }
+    } catch (error) {
+      if (error instanceof JournalBudgetExceededError) throw error;
+      if (error instanceof ProviderError) throw error;
+
+      const name = error instanceof Error ? error.name : "";
+      // Caller cancellation is not a transient timeout and must never trigger retry/fallback.
+      if (name === "AbortError") throw error;
+
+      if (name !== "TimeoutError" && !(error instanceof TypeError)) throw error;
+
+      lastError = error instanceof Error ? error.message : String(error);
+      lastStatus = null;
     }
 
     if (attempt < 2) await sleep(1000 * 2 ** attempt);
@@ -108,13 +148,20 @@ async function requestModel(model: string, prompt: string, schema: JsonSchema): 
   });
 }
 
-export async function generateJson(prompt: string, schema: JsonSchema): Promise<any> {
+export async function generateJson(
+  prompt: string,
+  schema: JsonSchema,
+  options: GenerateJsonOptions = {},
+): Promise<any> {
   let lastError: unknown = null;
 
   for (const model of models()) {
+    checkBudget(options);
     try {
-      return await requestModel(model, prompt, schema);
+      return await requestModel(model, prompt, schema, options);
     } catch (error) {
+      if (error instanceof JournalBudgetExceededError) throw error;
+      if (error instanceof Error && error.name === "AbortError") throw error;
       lastError = error;
       if (error instanceof ProviderError && !error.retryable) throw error;
     }
