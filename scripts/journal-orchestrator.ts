@@ -429,7 +429,7 @@ export async function runJournal(options: JournalRunOptions = {}) {
   async function generateWithBudget(promptText: string, schema: Record<string, unknown>, stage: string) {
     try {
       return await generateJsonFn(promptText, schema, {
-        checkBudget: () => Date.now() - startedAt < RUN_BUDGET_MS,
+        checkBudget: () => RUN_BUDGET_MS - (Date.now() - startedAt) >= 60_000,
       });
     } catch (error) {
       if (error instanceof JournalBudgetExceededError) {
