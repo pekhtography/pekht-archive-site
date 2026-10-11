@@ -162,8 +162,9 @@ export async function generateJson(
     } catch (error) {
       if (error instanceof JournalBudgetExceededError) throw error;
       if (error instanceof Error && error.name === "AbortError") throw error;
+      if (!(error instanceof ProviderError)) throw error;
+      if (!error.retryable) throw error;
       lastError = error;
-      if (error instanceof ProviderError && !error.retryable) throw error;
     }
   }
 
