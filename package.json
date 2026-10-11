@@ -44,7 +44,8 @@
     "archive:collect": "tsx scripts/archive-collect.ts",
     "journal": "tsx scripts/journal-orchestrator.ts",
     "test:journal:validation": "tsx --test scripts/journal/montage-validation.test.ts scripts/journal/rejection-reasons.test.ts",
-    "test:journal:error-summary": "tsx --test scripts/journal/journal-error-summary.test.ts"
+    "test:journal:error-summary": "tsx --test scripts/journal/journal-error-summary.test.ts",
+    "journal:test": "tsx scripts/journal-testability-harness.ts"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.2",
