@@ -228,7 +228,13 @@ function timeoutFetch(): typeof fetch {
       reject(signal.reason);
       return;
     }
-    signal?.addEventListener("abort", () => reject(signal.reason), { once: true });
+    // AbortSignal.timeout() uses an unreferenced timer in Node; this guard keeps
+    // the mocked request alive long enough for the timeout signal to fire.
+    const guard = setTimeout(() => reject(new Error("Timeout signal did not fire.")), 100);
+    signal?.addEventListener("abort", () => {
+      clearTimeout(guard);
+      reject(signal?.reason);
+    }, { once: true });
   })) as typeof fetch;
 }
 
@@ -266,11 +272,7 @@ async function main() {
       const match = String(input).match(/models\/([^:]+)/);
       requestedModels.push(decodeURIComponent(match?.[1] ?? ""));
       if (requestedModels.at(-1) === "test-primary") {
-        const signal = init?.signal;
-        return await new Promise<Response>((_resolve, reject) => {
-          if (signal?.aborted) reject(signal.reason);
-          else signal?.addEventListener("abort", () => reject(signal.reason), { once: true });
-        });
+        return await timeoutFetch()(input, init);
       }
       return providerSuccessResponse();
     }) as typeof fetch;
@@ -296,13 +298,9 @@ async function main() {
   await run("T16.2 — exhausted budget prevents fallback after retries", async () => {
     let checks = 0;
     let calls = 0;
-    const fetchImpl = (async (_input: RequestInfo | URL, init?: RequestInit) => {
+    const fetchImpl = (async (input: RequestInfo | URL, init?: RequestInit) => {
       calls += 1;
-      const signal = init?.signal;
-      return await new Promise<Response>((_resolve, reject) => {
-        if (signal?.aborted) reject(signal.reason);
-        else signal?.addEventListener("abort", () => reject(signal.reason), { once: true });
-      });
+      return await timeoutFetch()(input, init);
     }) as typeof fetch;
     await withProviderEnvironment(fetchImpl, async () => {
       await assert.rejects(
