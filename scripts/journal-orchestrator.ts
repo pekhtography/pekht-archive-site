@@ -412,6 +412,7 @@ async function run() {
     }
   }
 
+  try {
   discoveryLoop: while (true) {
     ensureBudget("DISCOVER");
 
@@ -859,6 +860,14 @@ ${String(currentMontage.markdown).trim()}
   console.log(
     "NO_JOURNAL: all discovery/selection/validation paths exhausted.",
   );
+  } catch (error) {
+    try {
+      printRejectionSummary();
+    } catch {
+      // Preserve the original failure if summary output itself fails.
+    }
+    throw error;
+  }
 }
 
 run().catch((error) => {

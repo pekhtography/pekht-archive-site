@@ -43,7 +43,8 @@
     "prepare": "husky",
     "archive:collect": "tsx scripts/archive-collect.ts",
     "journal": "tsx scripts/journal-orchestrator.ts",
-    "test:journal:validation": "tsx --test scripts/journal/montage-validation.test.ts scripts/journal/rejection-reasons.test.ts"
+    "test:journal:validation": "tsx --test scripts/journal/montage-validation.test.ts scripts/journal/rejection-reasons.test.ts",
+    "test:journal:error-summary": "tsx --test scripts/journal/journal-error-summary.test.ts"
   },
   "dependencies": {
     "@astrojs/react": "^5.0.2",
