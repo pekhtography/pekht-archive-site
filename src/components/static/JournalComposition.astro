@@ -5,10 +5,6 @@ type SourceBlock = {
     type: "source";
     source_id: string;
     text: string;
-    // Kept in the schema for compatibility with published Journal entries.
-    image_side: "left" | "right";
-    image_size: "small" | "medium" | "large";
-    text_offset: "up" | "center" | "down";
 };
 
 type BridgeBlock = {
