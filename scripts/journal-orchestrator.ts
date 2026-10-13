@@ -199,7 +199,6 @@ const task2Schema = {
       type: "ARRAY",
       items: { type: "STRING" },
     },
-    markdown: { type: "STRING" },
     composition: {
       type: "ARRAY",
       items: {
@@ -227,7 +226,6 @@ const task2Schema = {
     "title",
     "description",
     "source_ids",
-    "markdown",
     "composition",
     "reason",
     "facets",
@@ -563,10 +561,12 @@ export async function runJournal(options: JournalRunOptions = {}) {
       const montageSourceIds = validation.sourceIds;
       const uniqueMontageSourceIds = montageSourceIds;
       const composition = validation.composition;
+      const compositionText = composition
+        .map((block) => block.text.trim())
+        .join("\n\n");
 
       const montageSignature = JSON.stringify({
         source_ids: uniqueMontageSourceIds.slice().sort(),
-        markdown: String(task2.markdown ?? "").trim(),
         composition,
       });
 
@@ -582,9 +582,14 @@ export async function runJournal(options: JournalRunOptions = {}) {
       seenMontages.add(montageSignature);
 
       currentMontage = {
-        ...task2,
+        status: task2.status,
+        candidate_id: task2.candidate_id,
+        title: task2.title,
+        description: task2.description,
         source_ids: uniqueMontageSourceIds,
         composition,
+        reason: task2.reason,
+        facets: task2.facets,
       };
 
       const task3 = await generateWithBudget(
@@ -741,23 +746,19 @@ export async function runJournal(options: JournalRunOptions = {}) {
           }
         }
 
-        const plainMarkdown = plainJournalText(
-          String(currentMontage.markdown),
-        );
-        const headingWords = plainMarkdown
+        const plainComposition = plainJournalText(compositionText);
+        const headingWords = plainComposition
           .split(" ")
           .filter(Boolean);
 
-        const titleCut = await chooseTitleCut(
-          String(currentMontage.markdown),
-        );
+        const titleCut = await chooseTitleCut(compositionText);
 
         ensureBudget("TITLE CUT response");
 
         const journalTitle =
           titleCut !== null
             ? headingWords.slice(0, titleCut).join(" ") + "…"
-            : journalHeading(String(currentMontage.markdown));
+            : journalHeading(compositionText);
 
         const markdown = `---
 draft: false
@@ -782,7 +783,7 @@ composition: ${JSON.stringify(
         )}
 ---
 
-${String(currentMontage.markdown).trim()}
+${compositionText}
 `;
 
         const outputPath = join(blogDir, `${slug}.md`);
