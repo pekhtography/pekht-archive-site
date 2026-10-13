@@ -71,24 +71,10 @@ For each source block return:
 - type: "source"
 - source_id: an exact SOURCE_ID from the supplied snapshot
 - text: the final text for that source fragment after only justified minimal editing
-- image_side: "left" or "right"
-- image_size: "small", "medium", or "large"
-- text_offset: "up", "center", or "down"
 
 For each bridge block return:
 - type: "bridge"
 - text: the short connecting text
-
-Visual rules:
-- A source's image must stay semantically close to its own text.
-- Text and image do not need to start or end at the same vertical position.
-- The text may sit slightly above or below its image.
-- Alternate sides when it improves rhythm, but do not follow a mechanical left/right pattern.
-- Two consecutive source blocks may use the same image side when that is visually better.
-- Do not use rotations, overlaps, decorative collage effects, or arbitrary visual tricks.
-- The visual composition should be calm, editorial and readable.
-- The composition should read as one work, not as a row of independent cards.
-- Bridge blocks should not look like separators or section headings.
 
 Return JSON matching the supplied schema.
 
