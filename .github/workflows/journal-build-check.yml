@@ -66,14 +66,6 @@ jobs:
           }
           NODE
 
-      - name: Upload full built site for inspection
-        uses: actions/upload-artifact@v4
-        with:
-          name: journal-dist-${{ github.event.pull_request.head.sha || github.sha }}
-          path: dist/
-          if-no-files-found: error
-          retention-days: 7
-
       - name: Preserve build log
         if: always()
         uses: actions/upload-artifact@v4
