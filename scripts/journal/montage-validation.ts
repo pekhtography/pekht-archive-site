@@ -119,5 +119,15 @@ export function validateMontage(
     };
   }
 
+  const orderMismatchIndex = sourceIds.findIndex(
+    (sourceId, index) => compositionSourceIds[index] !== sourceId,
+  );
+  if (orderMismatchIndex !== -1) {
+    return {
+      ok: false,
+      reason: `MONTAGE_COMPOSITION_ORDER_MISMATCH: task2.source_ids order must match composition source block order; expected [${sourceIds.join(", ")}], received [${compositionSourceIds.join(", ")}].`,
+    };
+  }
+
   return { ok: true, sourceIds: [...sourceIds], composition: composition as MontageBlock[] };
 }
