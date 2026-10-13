@@ -15,19 +15,31 @@ type Candidate = {
 };
 
 function waitForImage(image: HTMLImageElement): Promise<void> {
-    if (image.complete) return Promise.resolve();
+    // A lazy image can report complete before it has usable intrinsic
+    // dimensions. Do not calculate placement until its real dimensions exist.
+    if (image.complete && image.naturalWidth > 0 && image.naturalHeight > 0) {
+        return Promise.resolve();
+    }
 
     return new Promise((resolve) => {
-        const finish = () => resolve();
+        let settled = false;
+        const finish = () => {
+            if (settled) return;
+            settled = true;
+            resolve();
+        };
+
         image.addEventListener("load", finish, { once: true });
         image.addEventListener("error", finish, { once: true });
+
         // The side-selection algorithm needs real image proportions before
         // choosing sides, so load only the images belonging to this Journal.
         image.loading = "eager";
 
         if (typeof image.decode === "function") {
             image.decode().then(finish).catch(() => {
-                if (image.complete) finish();
+                // A decode rejection is not proof that a lazy image has
+                // finished loading; let its load/error event settle the wait.
             });
         }
     });
