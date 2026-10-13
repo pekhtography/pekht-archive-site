@@ -29,12 +29,66 @@ const { composition, archiveItems, useNewLayout = false } = Astro.props as {
     useNewLayout?: boolean;
 };
 
+type LegacyCandidate = {
+    sides: number[];
+    leftWeight: number;
+    rightWeight: number;
+    repeatedSides: number;
+};
+
+function chooseLegacySides(weights: number[]): number[] {
+    if (weights.length === 0) return [];
+
+    const compareCandidates = (a: LegacyCandidate, b: LegacyCandidate): number => {
+        const balanceA = Math.abs(a.leftWeight - a.rightWeight);
+        const balanceB = Math.abs(b.leftWeight - b.rightWeight);
+        if (Math.abs(balanceA - balanceB) > 0.001) return balanceA - balanceB;
+        if (a.repeatedSides !== b.repeatedSides) return a.repeatedSides - b.repeatedSides;
+        return a.sides.join("").localeCompare(b.sides.join(""));
+    };
+
+    const maxConsecutiveImages = Math.max(2, Math.ceil(weights.length / 3));
+    let candidates: LegacyCandidate[] = [{
+        sides: [],
+        leftWeight: 0,
+        rightWeight: 0,
+        repeatedSides: 0,
+    }];
+
+    weights.forEach((weight, index) => {
+        const next: LegacyCandidate[] = [];
+        for (const candidate of candidates) {
+            for (const side of [0, 1]) {
+                let consecutive = 1;
+                for (let i = candidate.sides.length - 1;
+                    i >= 0 && candidate.sides[i] === side;
+                    i--) consecutive++;
+                if (consecutive > maxConsecutiveImages) continue;
+
+                const previous = candidate.sides[candidate.sides.length - 1];
+                next.push({
+                    sides: [...candidate.sides, side],
+                    leftWeight: candidate.leftWeight + (side === 0 ? weight : 0),
+                    rightWeight: candidate.rightWeight + (side === 1 ? weight : 0),
+                    repeatedSides: candidate.repeatedSides + (index > 0 && previous === side ? 1 : 0),
+                });
+            }
+        }
+        next.sort(compareCandidates);
+        candidates = next.slice(0, weights.length <= 16 ? next.length : 4096);
+    });
+
+    candidates.sort(compareCandidates);
+    return candidates[0]?.sides ?? weights.map((_, index) => index % 2);
+}
+
 const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 const precomputedSides = new Map<string, "left" | "right">();
 
-if (useNewLayout) {
-    // Compute side placement during the Astro build, so the initial HTML
-    // already contains the final layout before client navigation.
+{
+    // Precompute every article's layout during the build. This preserves the
+    // legacy algorithm for existing articles while avoiding client-navigation
+    // races and the CSS fallback that places uninitialized images on the left.
     let run: Array<{ sourceId: string; imagePath: string }> = [];
 
     const finishRun = async () => {
@@ -51,15 +105,18 @@ if (useNewLayout) {
                 const imageClass: JournalImageClass =
                     width > 0 && height > width ? "V" :
                     width > 0 && height === width ? "S" : "H";
-                return { ...record, imageClass };
+                const weight = width > 0 && height > 0 ? height / width : 1;
+                return { ...record, imageClass, weight };
             } catch {
-                return { ...record, imageClass: "H" as const };
+                return { ...record, imageClass: "H" as const, weight: 1 };
             }
         }));
-        const sides = chooseJournalSides(
-            records.map((record) => record.imageClass),
-            { forceFirstLeft: true },
-        ).sides;
+        const sides = useNewLayout
+            ? chooseJournalSides(
+                records.map((record) => record.imageClass),
+                { forceFirstLeft: true },
+            ).sides
+            : chooseLegacySides(records.map((record) => record.weight));
         records.forEach((record, index) => {
             precomputedSides.set(record.sourceId, sides[index] === 0 ? "left" : "right");
         });
@@ -82,7 +139,7 @@ if (useNewLayout) {
     class="journal-composition"
     data-journal-composition
     data-journal-new-layout={useNewLayout ? "true" : undefined}
-    data-journal-layout-ready={useNewLayout ? "true" : undefined}
+    data-journal-layout-ready="true"
 >
     {composition.map((block) =>
         block.type === "source" ? (
