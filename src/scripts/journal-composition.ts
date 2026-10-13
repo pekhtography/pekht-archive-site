@@ -15,9 +15,11 @@ type Candidate = {
 };
 
 function waitForImage(image: HTMLImageElement): Promise<void> {
-    // A lazy image can report complete before it has usable intrinsic
-    // dimensions. Do not calculate placement until its real dimensions exist.
-    if (image.complete && image.naturalWidth > 0 && image.naturalHeight > 0) {
+    // "complete" is also true for an image whose request has already failed.
+    // In that case there will be no future load/error event, so waiting for
+    // intrinsic dimensions here would leave the entire composition uninitialized.
+    // A failed image falls back to the neutral H classification below.
+    if (image.complete) {
         return Promise.resolve();
     }
 
