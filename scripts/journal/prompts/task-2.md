@@ -67,6 +67,8 @@ Return a structured composition as well as the plain combined markdown.
 
 The composition must contain one source block for every selected source and may contain short bridge blocks between them.
 
+The `source_ids` array defines the exact order of source blocks in `composition`. List source IDs in their intended narrative sequence, and preserve that exact sequence in the composition. Bridge blocks may appear between source blocks and do not count toward this sequence.
+
 For each source block return:
 - type: "source"
 - source_id: an exact SOURCE_ID from the supplied snapshot
