@@ -42,6 +42,9 @@ const imageURL = image ? new URL(sitePath(image), Astro.site) : undefined;
     <link href={sitePath("/pagefind/pagefind-component-ui.css")} rel="stylesheet" />
     <script src={sitePath("/pagefind/pagefind-component-ui.js")} type="module"></script>
     <ClientRouter />
+    <script>
+        import "@/scripts/journal-composition";
+    </script>
     <link rel="canonical" href={canonicalURL} />
     <title>{title}</title>
     <meta name="title" content={title} />
