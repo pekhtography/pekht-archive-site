@@ -117,6 +117,9 @@ function getImageClass(image: HTMLImageElement): JournalImageClass {
 }
 
 async function initialize(root: HTMLElement) {
+    // The test article's layout is calculated at build time and emitted in
+    // the HTML. Do not recalculate it after Astro client-side navigation.
+    if (root.dataset.journalLayoutReady === "true") return;
     const nodes = Array.from(root.children);
     const runs: SourceRecord[][] = [];
     let run: SourceRecord[] = [];
