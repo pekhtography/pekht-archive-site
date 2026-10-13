@@ -48,11 +48,29 @@ jobs:
           set -o pipefail
           pnpm build 2>&1 | tee -a journal-build.log
 
-      - name: Upload isolated static site artifact
+      - name: Verify Winter Tulip side classes in generated HTML
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import { readFileSync } from 'node:fs';
+
+          const file = 'dist/blog/07-10-2026-the-winter-tulip-s-breakthrough/index.html';
+          const html = readFileSync(file, 'utf8');
+          const classAttributes = [...html.matchAll(/class=["']([^"']*\\bjournal-image-(left|right)\\b[^"']*)["']/g)];
+          const sides = classAttributes.map(([, , side]) => side === 'left' ? 'L' : 'R');
+          console.log(`Winter Tulip generated HTML: ${file}`);
+          console.log(`Photo side sequence: ${sides.join('-') || '(no side classes found)'}`);
+          if (sides.join('') !== 'LRR') {
+            console.error('Expected photo side sequence L-R-R in generated HTML.');
+            process.exit(1);
+          }
+          NODE
+
+      - name: Upload Winter Tulip HTML for inspection
         uses: actions/upload-artifact@v4
         with:
-          name: journal-pr26-dist-${{ github.event.pull_request.head.sha || github.sha }}
-          path: dist/
+          name: journal-tulip-html-${{ github.event.pull_request.head.sha || github.sha }}
+          path: dist/blog/07-10-2026-the-winter-tulip-s-breakthrough/index.html
           if-no-files-found: error
           retention-days: 7
 
