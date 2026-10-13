@@ -158,17 +158,30 @@ async function initialize(root: HTMLElement) {
     }
 }
 
-function initializeAllJournalCompositions() {
-    document.querySelectorAll<HTMLElement>(ROOT_SELECTOR).forEach((root) => {
-        void initialize(root);
-    });
+// Keep one initialization per DOM root. Astro can emit both after-swap and
+// page-load for the same client-side navigation; image decoding is asynchronous,
+// so starting twice could let an older pass overwrite the final placement.
+const initializationByRoot = new WeakMap<HTMLElement, Promise<void>>();
+
+function initializeOnce(root: HTMLElement) {
+    const existing = initializationByRoot.get(root);
+    if (existing) return;
+
+    const task = initialize(root);
+    initializationByRoot.set(root, task);
+    void task;
 }
 
-// This module is imported from the site-wide Head, so its listener is already
-// installed when ClientRouter navigates from a page without JournalComposition.
+function initializeAllJournalCompositions() {
+    document.querySelectorAll<HTMLElement>(ROOT_SELECTOR).forEach(initializeOnce);
+}
+
+// after-swap catches the newly inserted article as soon as Astro replaces the
+// document body. page-load remains as a fallback after the navigation settles.
+document.addEventListener("astro:after-swap", initializeAllJournalCompositions);
 document.addEventListener("astro:page-load", initializeAllJournalCompositions);
 
 // Also handle a composition that is already present when the module is evaluated.
 if (document.querySelector(ROOT_SELECTOR)) {
-    void initializeAllJournalCompositions();
+    initializeAllJournalCompositions();
 }
