@@ -56,7 +56,7 @@ jobs:
 
           const file = 'dist/blog/07-10-2026-the-winter-tulip-s-breakthrough/index.html';
           const html = readFileSync(file, 'utf8');
-          const classAttributes = [...html.matchAll(/class=["']([^"']*\\bjournal-image-(left|right)\\b[^"']*)["']/g)];
+          const classAttributes = [...html.matchAll(/class=["']([^"']*journal-image-(left|right)[^"']*)["']/g)];
           const sides = classAttributes.map(([, , side]) => side === 'left' ? 'L' : 'R');
           console.log(`Winter Tulip generated HTML: ${file}`);
           console.log(`Photo side sequence: ${sides.join('-') || '(no side classes found)'}`);
