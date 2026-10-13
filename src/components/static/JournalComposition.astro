@@ -217,8 +217,12 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         }
     }
 
-    document.querySelectorAll<HTMLElement>(ROOT_SELECTOR).forEach((root) => {
-        void initialize(root);
+    // ClientRouter swaps page content without re-executing this script.
+    // Re-run layout initialization after both the initial load and each navigation.
+    document.addEventListener("astro:page-load", () => {
+        document.querySelectorAll<HTMLElement>(ROOT_SELECTOR).forEach((root) => {
+            void initialize(root);
+        });
     });
 </script>
 
