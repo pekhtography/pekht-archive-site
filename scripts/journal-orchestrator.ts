@@ -560,9 +560,13 @@ export async function runJournal(options: JournalRunOptions = {}) {
 
       const montageSourceIds = validation.sourceIds;
       const uniqueMontageSourceIds = montageSourceIds;
-      const composition = validation.composition;
-      const compositionText = composition
-        .map((block) => block.text.trim())
+      const normalizedComposition = validation.composition.map((block) => ({
+        ...block,
+        text: block.text.trim(),
+      }));
+      const composition = normalizedComposition;
+      const compositionText = normalizedComposition
+        .map((block) => block.text)
         .join("\n\n");
 
       const montageSignature = JSON.stringify({
