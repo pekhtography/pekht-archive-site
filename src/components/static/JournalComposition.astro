@@ -1,4 +1,7 @@
 ---
+import { resolve } from "node:path";
+import sharp from "sharp";
+import { chooseJournalSides, type JournalImageClass } from "@/lib/journal-layout";
 import { sitePath } from "@/lib/site-url";
 
 type SourceBlock = {
@@ -27,12 +30,59 @@ const { composition, archiveItems, useNewLayout = false } = Astro.props as {
 };
 
 const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
+const precomputedSides = new Map<string, "left" | "right">();
+
+if (useNewLayout) {
+    // Compute side placement during the Astro build, so the initial HTML
+    // already contains the final layout before client navigation.
+    let run: Array<{ sourceId: string; imagePath: string }> = [];
+
+    const finishRun = async () => {
+        if (run.length === 0) return;
+        const records = await Promise.all(run.map(async (record) => {
+            try {
+                const relativePath = record.imagePath.startsWith("/")
+                    ? record.imagePath.slice(1)
+                    : record.imagePath;
+                const filePath = resolve(process.cwd(), "public", relativePath);
+                const metadata = await sharp(filePath).metadata();
+                const width = metadata.width ?? 0;
+                const height = metadata.height ?? 0;
+                const imageClass: JournalImageClass =
+                    width > 0 && height > width ? "V" :
+                    width > 0 && height === width ? "S" : "H";
+                return { ...record, imageClass };
+            } catch {
+                return { ...record, imageClass: "H" as const };
+            }
+        }));
+        const sides = chooseJournalSides(
+            records.map((record) => record.imageClass),
+            { forceFirstLeft: true },
+        ).sides;
+        records.forEach((record, index) => {
+            precomputedSides.set(record.sourceId, sides[index] === 0 ? "left" : "right");
+        });
+        run = [];
+    };
+
+    for (const block of composition) {
+        if (block.type === "bridge") {
+            await finishRun();
+            continue;
+        }
+        const archive = archiveMap.get(block.source_id);
+        if (archive) run.push({ sourceId: block.source_id, imagePath: archive.data.image });
+    }
+    await finishRun();
+}
 ---
 
 <div
     class="journal-composition"
     data-journal-composition
     data-journal-new-layout={useNewLayout ? "true" : undefined}
+    data-journal-layout-ready={useNewLayout ? "true" : undefined}
 >
     {composition.map((block) =>
         block.type === "source" ? (
@@ -41,7 +91,15 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
                 if (!archive) return null;
 
                 return (
-                    <section class="journal-source" data-journal-source aria-label={archive.data.title}>
+                    <section
+                        class:list={[
+                            "journal-source",
+                            precomputedSides.get(archive.id) === "left" && "journal-image-left",
+                            precomputedSides.get(archive.id) === "right" && "journal-image-right",
+                        ]}
+                        data-journal-source
+                        aria-label={archive.data.title}
+                    >
                         <div class="journal-text">
                             <div class="journal-source-text">{block.text}</div>
                         </div>
