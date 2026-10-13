@@ -211,18 +211,6 @@ const task2Schema = {
           },
           source_id: { type: "STRING" },
           text: { type: "STRING" },
-          image_side: {
-            type: "STRING",
-            enum: ["left", "right"],
-          },
-          image_size: {
-            type: "STRING",
-            enum: ["small", "medium", "large"],
-          },
-          text_offset: {
-            type: "STRING",
-            enum: ["up", "center", "down"],
-          },
         },
         required: ["type", "text"],
       },
