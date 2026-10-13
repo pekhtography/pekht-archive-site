@@ -20,15 +20,20 @@ type ArchiveItem = {
     };
 };
 
-const { composition, archiveItems } = Astro.props as {
+const { composition, archiveItems, useNewLayout = false } = Astro.props as {
     composition: Array<SourceBlock | BridgeBlock>;
     archiveItems: ArchiveItem[];
+    useNewLayout?: boolean;
 };
 
 const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 ---
 
-<div class="journal-composition" data-journal-composition>
+<div
+    class="journal-composition"
+    data-journal-composition
+    data-journal-new-layout={useNewLayout ? "true" : undefined}
+>
     {composition.map((block) =>
         block.type === "source" ? (
             (() => {
@@ -64,6 +69,8 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
 
 <script>
+    import { chooseJournalSides, type JournalImageClass } from "@/lib/journal-layout";
+
     const ROOT_SELECTOR = "[data-journal-composition]";
 
     type SourceRecord = {
@@ -112,7 +119,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         return a.sides.join("").localeCompare(b.sides.join(""));
     }
 
-    function chooseSides(records: SourceRecord[]): number[] {
+    function chooseLegacySides(records: SourceRecord[]): number[] {
         if (records.length === 0) return [];
 
         // Preserve the existing maximum-run rule: for the usual 3–6 source
@@ -156,6 +163,16 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         return candidates[0]?.sides ?? records.map((_, index) => index % 2);
     }
 
+    function getImageClass(image: HTMLImageElement): JournalImageClass {
+        if (image.naturalWidth > 0 && image.naturalHeight > image.naturalWidth) {
+            return "V";
+        }
+        if (image.naturalWidth > 0 && image.naturalHeight === image.naturalWidth) {
+            return "S";
+        }
+        return "H";
+    }
+
     async function initialize(root: HTMLElement) {
         const nodes = Array.from(root.children);
         const runs: SourceRecord[][] = [];
@@ -184,8 +201,15 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         // Bridges split the composition into independent runs, as before.
         await Promise.all(runs.flat().map(({ image }) => waitForImage(image)));
 
+        const useNewLayout = root.dataset.journalNewLayout === "true";
+
         for (const records of runs) {
-            const sides = chooseSides(records);
+            const sides = useNewLayout
+                ? chooseJournalSides(
+                    records.map(({ image }) => getImageClass(image)),
+                    { forceFirstLeft: true },
+                ).sides
+                : chooseLegacySides(records);
             records.forEach((record, index) => {
                 record.section.classList.toggle("journal-image-left", sides[index] === 0);
                 record.section.classList.toggle("journal-image-right", sides[index] === 1);
