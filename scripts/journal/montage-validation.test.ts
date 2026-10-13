@@ -18,9 +18,6 @@ function valid(overrides: Record<string, unknown> = {}) {
       type: "source",
       source_id,
       text: `Text for ${source_id}`,
-      image_side: "left",
-      image_size: "medium",
-      text_offset: "center",
     })),
     reason: "Valid montage",
     facets: [],
@@ -141,4 +138,29 @@ test("accepts six unique sources with a non-empty bridge block", () => {
   };
   const result = validateMontage(six, "candidate-1", sixSnapshot, sixImages);
   assert.equal(result.ok, true);
+});
+
+
+test("accepts composition source blocks without layout fields", () => {
+  const result = check(valid());
+  assert.equal(result.ok, true);
+});
+
+test("rejects a permutation of the declared source order", () => {
+  const composition = (valid().composition as Record<string, unknown>[]).map((block) => ({ ...block }));
+  [composition[0].source_id, composition[1].source_id] = [composition[1].source_id, composition[0].source_id];
+  const result = check(valid({ composition }));
+  assert.equal(result.ok, false);
+  if (!result.ok) assert.match(result.reason, /MONTAGE_COMPOSITION_ORDER_MISMATCH/);
+});
+
+test("bridge blocks do not participate in source order comparison", () => {
+  const composition = [
+    { type: "source", source_id: "a", text: "Text for a" },
+    { type: "bridge", text: "A short bridge." },
+    { type: "source", source_id: "b", text: "Text for b" },
+    { type: "source", source_id: "c", text: "Text for c" },
+    { type: "source", source_id: "d", text: "Text for d" },
+  ];
+  assert.equal(check(valid({ composition })).ok, true);
 });

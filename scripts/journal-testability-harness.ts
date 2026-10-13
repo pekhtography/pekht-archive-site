@@ -68,9 +68,6 @@ function montageResponse(candidateId = "candidate-a") {
       type: "source",
       source_id,
       text: `A fragment from ${source_id}.`,
-      image_side: "left",
-      image_size: "medium",
-      text_offset: "center",
     })),
     reason: "",
     facets: ["signals", "change"],
@@ -788,7 +785,6 @@ async function main() {
     montage.source_ids = [SOURCE_IDS[0], SOURCE_IDS[1], SOURCE_IDS[2], "not-in-snapshot"];
     montage.composition = montage.source_ids.map((source_id) => ({
       type: "source", source_id, text: `Fragment ${source_id}.`,
-      image_side: "left", image_size: "medium", text_offset: "center",
     }));
     const result = await execute([
       { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
@@ -807,7 +803,6 @@ async function main() {
     const montage = montageResponse();
     montage.composition[3] = {
       type: "source", source_id: "not-in-snapshot", text: "Invalid source block.",
-      image_side: "left", image_size: "medium", text_offset: "center",
     };
     const result = await execute([
       { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
@@ -826,7 +821,6 @@ async function main() {
     const montage = montageResponse();
     montage.composition[3] = {
       type: "source", source_id: SOURCE_IDS[4], text: "Different but valid source.",
-      image_side: "left", image_size: "medium", text_offset: "center",
     };
     const result = await execute([
       { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
