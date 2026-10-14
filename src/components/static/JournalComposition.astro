@@ -38,7 +38,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 
                 return (
                     <section
-                        class="journal-source"
+                        class={`journal-source ${block.image_side === "left" ? "journal-image-left" : block.image_side === "right" ? "journal-image-right" : ""}`}
                         data-journal-source
                         data-image-side={block.image_side}
                         aria-label={archive.data.title}
