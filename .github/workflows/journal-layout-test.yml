@@ -1,0 +1,39 @@
+name: Journal Layout Algorithm Test
+
+on:
+  push:
+    branches:
+      - journal-layout-algorithm
+    paths:
+      - "src/lib/journal-layout-algorithm.ts"
+      - "scripts/journal/layout-algorithm.test.ts"
+      - "src/content.config.ts"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/journal-layout-test.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-layout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout branch under test
+        uses: actions/checkout@v4
+        with:
+          ref: journal-layout-algorithm
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+      - name: Run isolated layout tests
+        run: pnpm test:journal:layout
