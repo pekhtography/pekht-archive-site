@@ -4,6 +4,7 @@ date: "07-10-2026"
 title: "That quiet promise you made to yourself, folded tight. It’s okay to keep it…"
 description: "A three-part sequence tracing the transformation of a winter tulip from quiet promise to transitional tension and open vulnerability."
 category: "journal"
+layout_algorithm_version: 1
 tags: ["archive"]
 author: "PEKHTOGRAPHY"
 source_ids: ["that-quiet-promise-you-made-to-yourself-folded-tight-its-oka", "the-awkward-phase-not-a-bud-not-a-bloom-just-you-caught-betw", "so-this-is-it-no-more-hiding-a-heart-wide-open-to-the-coming"]

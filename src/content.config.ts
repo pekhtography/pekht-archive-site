@@ -15,6 +15,7 @@ export const collections = {
       author: z.string().optional().default("Subhashis Hansda"),
       source_ids: z.array(z.string()).optional().default([]),
       facets: z.array(z.string()).optional().default([]),
+      layout_algorithm_version: z.literal(1).optional(),
       composition: z.array(
         z.union([
           z.object({

@@ -21,9 +21,10 @@ type ArchiveItem = {
     };
 };
 
-const { composition, archiveItems } = Astro.props as {
+const { composition, archiveItems, useSavedLayout = false } = Astro.props as {
     composition: Array<SourceBlock | BridgeBlock>;
     archiveItems: ArchiveItem[];
+    useSavedLayout?: boolean;
 };
 
 const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
@@ -193,6 +194,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         // authoritative layout data. This path does not reclassify images,
         // recalculate sides, or split the sequence at bridge blocks.
         const hasCompleteSavedLayout =
+            useSavedLayout &&
             allRecords.length > 0 &&
             allRecords.every(({ section }) =>
                 section.dataset.imageSide === "left" ||

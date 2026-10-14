@@ -4,6 +4,7 @@ date: "08-10-2026"
 title: "I watched Frost paint me on the window, as if I never left the…"
 description: "A meditation on creative sacrifice and cold permanence as frost etches across window glass, consuming the fading warmth of the sky to leave an enduring crystalline structure."
 category: "journal"
+layout_algorithm_version: 1
 tags: ["archive"]
 author: "PEKHTOGRAPHY"
 source_ids: ["i-watched-frost-paint-me-on-the-window-as-if-i-never-left-th", "i-fade-and-frost-keeps-drawing-turning-absence-into-pattern", "the-window-becomes-a-canvas-frost-moves-fast-stealing-color", "every-line-costs-light-each-pattern-burns-a-little-more-sky", "the-light-is-gone-only-the-patterns-remain-flawless-cold-com"]
