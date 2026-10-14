@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - journal/t6-montage-validation
+      - journal-layout-algorithm
   pull_request:
   workflow_dispatch:
 
