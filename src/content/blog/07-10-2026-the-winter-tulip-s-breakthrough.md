@@ -24,7 +24,7 @@ composition:
   - type: source
     source_id: "so-this-is-it-no-more-hiding-a-heart-wide-open-to-the-coming"
     text: "So this is it.\nNo more hiding.\nA heart wide open to the coming light, the frost, the unknown.\nThis vulnerable, ridiculous, perfect act is called being alive. ❤️🔥"
-    image_side: left
+    image_side: right
     image_size: medium
     text_offset: center
 ---
