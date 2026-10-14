@@ -21,6 +21,7 @@ export const collections = {
             type: z.literal("source"),
             source_id: z.string(),
             text: z.string(),
+            image_side: z.enum(["left", "right"]).optional(),
           }),
           z.object({
             type: z.literal("bridge"),
