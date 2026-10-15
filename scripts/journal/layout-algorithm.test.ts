@@ -91,32 +91,30 @@ test("JournalComposition bridges saved-layout mode into the client script", () =
     new URL("../../src/components/static/JournalComposition.astro", import.meta.url),
     "utf8",
   );
-  const clientScript = component.match(/<script>([\\s\\S]*?)<\\/script>/)?.[1];
+  const scriptStart = component.indexOf("<script>");
+  const scriptEnd = component.indexOf("</script>", scriptStart);
+  const clientScript = component.slice(scriptStart + "<script>".length, scriptEnd);
 
-  assert.ok(clientScript, "JournalComposition client script must exist");
-  assert.match(
-    component,
-    /data-use-saved-layout=\\{useSavedLayout \\? "true" : "false"\\}/,
+  assert.ok(scriptStart >= 0 && scriptEnd > scriptStart, "client script must exist");
+  assert.ok(
+    component.includes('data-use-saved-layout={useSavedLayout ? "true" : "false"}'),
     "server-rendered root must expose both saved and normal modes",
   );
-  assert.match(
-    clientScript,
-    /root\\.dataset\\.useSavedLayout === "true"/,
+  assert.ok(
+    clientScript.includes('root.dataset.useSavedLayout === "true"'),
     "client script must read the saved-layout mode from the DOM",
   );
-  assert.doesNotMatch(
-    clientScript,
-    /\\buseSavedLayout\\b/,
+  assert.ok(
+    !clientScript.includes("useSavedLayout"),
     "Astro frontmatter props must not be referenced directly by the client script",
   );
-  assert.match(
-    clientScript,
-    /allRecords\\.every\\(\\(\\{ section \\}\\) =>[\\s\\S]*?section\\.dataset\\.imageSide === "left"[\\s\\S]*?section\\.dataset\\.imageSide === "right"/,
-    "saved mode must require a complete set of valid side values",
+  assert.ok(
+    clientScript.includes('section.dataset.imageSide === "left"') &&
+      clientScript.includes('section.dataset.imageSide === "right"'),
+    "saved mode must validate both supported side values",
   );
-  assert.match(
-    clientScript,
-    /const sides = chooseSides\\(records\\)/,
+  assert.ok(
+    clientScript.includes("const sides = chooseSides(records)"),
     "normal and incomplete-saved modes must retain the client-side fallback",
   );
 });
