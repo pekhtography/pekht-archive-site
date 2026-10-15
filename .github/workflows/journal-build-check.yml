@@ -37,6 +37,10 @@ jobs:
           set -o pipefail
           pnpm install --frozen-lockfile 2>&1 | tee journal-build.log
 
+      - name: Test Journal layout algorithm and component contract
+        shell: bash
+        run: pnpm test:journal:layout
+
       - name: Build Astro site and run Pagefind
         shell: bash
         run: |
