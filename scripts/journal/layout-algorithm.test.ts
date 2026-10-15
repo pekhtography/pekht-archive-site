@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
+import { readFileSync } from "node:fs";
 import { calculateJournalLayout, calculateJournalLayoutWithCycle } from "../../src/lib/journal-layout-algorithm.ts";
 
 test("Tulip composition resolves to L-R-R with perfectly balanced image weight", () => {
@@ -82,4 +83,40 @@ test("six-article diagnostic preserves the fixed tulip and applies the 2x2 cycle
     assert.ok(result.validCandidates > 0);
     history.push({ sides: result.sides });
   }
+});
+
+
+test("JournalComposition bridges saved-layout mode into the client script", () => {
+  const component = readFileSync(
+    new URL("../../src/components/static/JournalComposition.astro", import.meta.url),
+    "utf8",
+  );
+  const clientScript = component.match(/<script>([\\s\\S]*?)<\\/script>/)?.[1];
+
+  assert.ok(clientScript, "JournalComposition client script must exist");
+  assert.match(
+    component,
+    /data-use-saved-layout=\\{useSavedLayout \\? "true" : "false"\\}/,
+    "server-rendered root must expose both saved and normal modes",
+  );
+  assert.match(
+    clientScript,
+    /root\\.dataset\\.useSavedLayout === "true"/,
+    "client script must read the saved-layout mode from the DOM",
+  );
+  assert.doesNotMatch(
+    clientScript,
+    /\\buseSavedLayout\\b/,
+    "Astro frontmatter props must not be referenced directly by the client script",
+  );
+  assert.match(
+    clientScript,
+    /allRecords\\.every\\(\\(\\{ section \\}\\) =>[\\s\\S]*?section\\.dataset\\.imageSide === "left"[\\s\\S]*?section\\.dataset\\.imageSide === "right"/,
+    "saved mode must require a complete set of valid side values",
+  );
+  assert.match(
+    clientScript,
+    /const sides = chooseSides\\(records\\)/,
+    "normal and incomplete-saved modes must retain the client-side fallback",
+  );
 });
