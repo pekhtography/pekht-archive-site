@@ -121,7 +121,10 @@ test("JournalComposition bridges saved-layout mode into the client script", () =
 
 
 test("history breaks equal-balance ties by preferring a different starting side", () => {
-  const history = [{ sides: ["left", "right"] as ("left" | "right")[] }];
+  const history = [
+    { sides: ["left", "right"] as ("left" | "right")[] },
+    { sides: ["left", "left"] as ("left" | "right")[] },
+  ];
   const result = calculateJournalLayout(["H", "H"], history);
 
   assert.equal(result.balance, 0);
