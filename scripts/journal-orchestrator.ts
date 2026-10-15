@@ -100,7 +100,7 @@ async function loadJournalLayoutState(blogDir = BLOG_DIR): Promise<JournalLayout
   const names = (await readdir(blogDir)).filter((name) =>
     name.endsWith(".md") || name.endsWith(".mdx"),
   );
-  const articles: Array<{ date: string; sides: ImageSide[] }> = [];
+  const articles: Array<{ name: string; date: string; sides: ImageSide[] }> = [];
 
   for (const name of names) {
     const raw = await readFile(join(blogDir, name), "utf8");
@@ -109,10 +109,10 @@ async function loadJournalLayoutState(blogDir = BLOG_DIR): Promise<JournalLayout
 
     const sides = [...raw.matchAll(/image_side["']?\s*:\s*["']?(left|right)/g)]
       .map((match) => match[1] as ImageSide);
-    articles.push({ date: String(fm.date ?? ""), sides });
+    articles.push({ name, date: String(fm.date ?? ""), sides });
   }
 
-  articles.sort((a, b) => journalDateKey(a.date) - journalDateKey(b.date));
+  articles.sort((a, b) => journalDateKey(a.date) - journalDateKey(b.date) || a.name.localeCompare(b.name));
   return {
     articleCount: articles.length,
     history: articles
