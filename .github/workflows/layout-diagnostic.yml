@@ -1,0 +1,50 @@
+name: Journal Layout Read-Only Image Diagnostic
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  inspect-target-images:
+    name: Inspect the 32 images used by seven Journal articles
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout diagnostic code
+        uses: actions/checkout@v4
+        with:
+          ref: journal-layout-algorithm
+          persist-credentials: false
+
+      - name: Checkout current main content and images
+        uses: actions/checkout@v4
+        with:
+          ref: main
+          path: data
+          persist-credentials: false
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Read dimensions without modifying repository content
+        run: node scripts/journal/layout-diagnostic.mjs
+
+      - name: Upload dimensions CSV
+        uses: actions/upload-artifact@v4
+        with:
+          name: layout-diagnostic-output
+          path: layout-diagnostic-output/layout-dimensions.csv
+          if-no-files-found: error
+          retention-days: 14
