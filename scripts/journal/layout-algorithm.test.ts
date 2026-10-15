@@ -118,3 +118,63 @@ test("JournalComposition bridges saved-layout mode into the client script", () =
     "normal and incomplete-saved modes must retain the client-side fallback",
   );
 });
+
+
+test("history breaks equal-balance ties by preferring a different starting side", () => {
+  const history = [{ sides: ["left", "right"] as ("left" | "right")[] }];
+  const result = calculateJournalLayout(["H", "H"], history);
+
+  assert.equal(result.balance, 0);
+  assert.deepEqual(result.sides, ["right", "left"]);
+});
+
+test("all short V/H/S orientation combinations satisfy the hard constraints", () => {
+  const orientations: ("V" | "H" | "S")[] = ["V", "H", "S"];
+  const cases: ("V" | "H" | "S")[][] = [];
+
+  const buildCases = (prefix: ("V" | "H" | "S")[], remaining: number): void => {
+    if (remaining === 0) {
+      cases.push(prefix);
+      return;
+    }
+    for (const orientation of orientations) {
+      buildCases([...prefix, orientation], remaining - 1);
+    }
+  };
+
+  for (let length = 1; length <= 4; length += 1) {
+    buildCases([], length);
+  }
+
+  for (const sequence of cases) {
+    const result = calculateJournalLayout(sequence);
+    assert.equal(result.sides.length, sequence.length, `side count for ${sequence.join("")}`);
+
+    for (let i = 0; i < sequence.length - 1; i += 1) {
+      if (sequence[i] === "V" || sequence[i + 1] === "V") {
+        assert.notEqual(
+          result.sides[i],
+          result.sides[i + 1],
+          `vertical adjacency constraint for ${sequence.join("")}`,
+        );
+      }
+
+      const currentIsHorizontal = sequence[i] !== "V";
+      const nextIsHorizontal = sequence[i + 1] !== "V";
+      if (
+        currentIsHorizontal &&
+        nextIsHorizontal &&
+        result.sides[i] === result.sides[i + 1] &&
+        i + 2 < sequence.length
+      ) {
+        assert.notEqual(
+          result.sides[i + 2],
+          result.sides[i + 1],
+          `horizontal-pair follow-up constraint for ${sequence.join("")}`,
+        );
+      }
+    }
+  }
+
+  assert.equal(cases.length, 120);
+});
