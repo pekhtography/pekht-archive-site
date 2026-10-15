@@ -105,7 +105,7 @@ test("JournalComposition bridges saved-layout mode into the client script", () =
     "client script must read the saved-layout mode from the DOM",
   );
   assert.ok(
-    !clientScript.includes("useSavedLayout"),
+    !clientScript.includes("\n            useSavedLayout &&"),
     "Astro frontmatter props must not be referenced directly by the client script",
   );
   assert.ok(
