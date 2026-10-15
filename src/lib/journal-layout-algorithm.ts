@@ -179,3 +179,51 @@ export function calculateJournalLayout(
 
   return { ...best, validCandidates };
 }
+
+
+export type JournalLayoutMode = "normal" | "random";
+
+export interface JournalLayoutCycleResult extends JournalLayoutResult {
+  mode: JournalLayoutMode;
+  inverted: boolean;
+}
+
+/**
+ * Set to false to disable the 2-normal / 2-random cycle without changing the
+ * optimizer. The optimizer still runs; only the cycle and random inversion stop.
+ */
+export const RANDOM_LAYOUT_CYCLE_ENABLED = true;
+
+/**
+ * Applies the article-level cycle after deterministic optimization.
+ * Article 1 is fixed separately and excluded from this counter:
+ * article 2–3 normal, 4–5 random, then repeat.
+ *
+ * The random callback is injectable so the cycle can be tested deterministically.
+ * The returned sides are intended to be persisted into the article composition;
+ * do not invoke this helper while rendering a page.
+ */
+export function calculateJournalLayoutWithCycle(
+  orientations: ImageOrientation[],
+  history: JournalLayoutArticle[],
+  articleNumber: number,
+  options: {
+    enabled?: boolean;
+    random?: () => number;
+  } = {},
+): JournalLayoutCycleResult {
+  if (!Number.isInteger(articleNumber) || articleNumber < 2) {
+    throw new Error("The layout cycle applies only to articles numbered 2 or later.");
+  }
+
+  const enabled = options.enabled ?? RANDOM_LAYOUT_CYCLE_ENABLED;
+  const isRandomSlot = enabled && ((articleNumber - 2) % 4) >= 2;
+  const mode: JournalLayoutMode = isRandomSlot ? "random" : "normal";
+  const optimized = calculateJournalLayout(orientations, history);
+  const inverted = isRandomSlot && (options.random ?? Math.random)() < 0.5;
+  const sides = inverted
+    ? optimized.sides.map((side) => side === "left" ? "right" as const : "left" as const)
+    : optimized.sides;
+
+  return { ...optimized, sides, mode, inverted };
+}
