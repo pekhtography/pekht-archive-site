@@ -30,7 +30,11 @@ const { composition, archiveItems, useSavedLayout = false } = Astro.props as {
 const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 ---
 
-<div class="journal-composition" data-journal-composition>
+<div
+    class="journal-composition"
+    data-journal-composition
+    data-use-saved-layout={useSavedLayout ? "true" : "false"}
+>
     {composition.map((block) =>
         block.type === "source" ? (
             (() => {
@@ -194,7 +198,7 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         // authoritative layout data. This path does not reclassify images,
         // recalculate sides, or split the sequence at bridge blocks.
         const hasCompleteSavedLayout =
-            useSavedLayout &&
+            root.dataset.useSavedLayout === "true" &&
             allRecords.length > 0 &&
             allRecords.every(({ section }) =>
                 section.dataset.imageSide === "left" ||
