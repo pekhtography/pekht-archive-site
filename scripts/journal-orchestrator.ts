@@ -91,7 +91,7 @@ type JournalLayoutState = {
 };
 
 function journalDateKey(value: string): number {
-  const match = value.match(/^(\\d{2})-(\\d{2})-(\\d{4})$/);
+  const match = value.match(/^(\d{2})-(\d{2})-(\d{4})$/);
   if (!match) return 0;
   return Date.UTC(Number(match[3]), Number(match[2]) - 1, Number(match[1]));
 }
@@ -107,7 +107,7 @@ async function loadJournalLayoutState(blogDir = BLOG_DIR): Promise<JournalLayout
     const fm = frontmatter(raw);
     if (fm.category !== "journal" || fm.draft === "true") continue;
 
-    const sides = [...raw.matchAll(/image_side["']?\\s*:\\s*["']?(left|right)/g)]
+    const sides = [...raw.matchAll(/image_side["']?\s*:\s*["']?(left|right)/g)]
       .map((match) => match[1] as ImageSide);
     articles.push({ date: String(fm.date ?? ""), sides });
   }
@@ -122,7 +122,7 @@ async function loadJournalLayoutState(blogDir = BLOG_DIR): Promise<JournalLayout
 }
 
 async function getImageOrientation(imagePath: string): Promise<ImageOrientation> {
-  const relativePath = imagePath.replace(/^\\/+/, "");
+  const relativePath = imagePath.replace(/^\/+/, "");
   const fullPath = join(ROOT, "public", relativePath);
   const metadata = await sharp(fullPath).metadata();
 
