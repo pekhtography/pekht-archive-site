@@ -61,3 +61,25 @@ test("disabling the cycle preserves the optimizer and prevents random inversion"
   assert.equal(disabled.inverted, false);
   assert.deepEqual(disabled.sides, baseline.sides);
 });
+
+
+test("six-article diagnostic preserves the fixed tulip and applies the 2x2 cycle", () => {
+  const history = [{ sides: ["left", "right", "right"] as ("left" | "right")[] }];
+  const cases = [
+    { number: 2, orientations: ["H", "H", "H", "H", "H"] as ("H" | "V" | "S")[], expected: ["right", "left", "left", "right", "right"], mode: "normal" },
+    { number: 3, orientations: ["H", "H", "H", "H", "H"] as ("H" | "V" | "S")[], expected: ["left", "right", "left", "right", "left"], mode: "normal" },
+    { number: 4, orientations: ["H", "H", "H", "H"] as ("H" | "V" | "S")[], expected: ["left", "right", "right", "left"], mode: "random" },
+    { number: 5, orientations: ["H", "H", "H", "H", "H"] as ("H" | "V" | "S")[], expected: ["right", "left", "left", "right", "right"], mode: "random" },
+    { number: 6, orientations: ["V", "H", "H", "V", "H"] as ("H" | "V" | "S")[], expected: ["right", "left", "right", "left", "right"], mode: "normal" },
+  ];
+
+  for (const item of cases) {
+    const result = calculateJournalLayoutWithCycle(item.orientations, history, item.number, {
+      random: () => item.number === 4 ? 0.1 : 0.9,
+    });
+    assert.equal(result.mode, item.mode);
+    assert.deepEqual(result.sides, item.expected);
+    assert.ok(result.validCandidates > 0);
+    history.push({ sides: result.sides });
+  }
+});
