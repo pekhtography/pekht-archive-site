@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3.25.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.25.0) | 2026-10-15
+
+### Features
+- publish Journal entry [af00a4e](https://github.com/pekhtography/pekht-archive-site/commit/af00a4e)
+### Other
+- journal: add read-only layout diagnostic workflow [fc03ec2](https://github.com/pekhtography/pekht-archive-site/commit/fc03ec2)
+
 ## [v3.24.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.24.0) | 2026-10-14
 
 ### Features
