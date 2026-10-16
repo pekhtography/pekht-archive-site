@@ -395,7 +395,7 @@ async function main() {
       assert.ok(result.logs.some((line) => line.includes("JOURNAL_BUDGET_EXCEEDED during DISCOVER")));
       assert.ok(result.logs.some((line) => line.includes("REJECTION SUMMARY")));
       assert.ok(result.logs.some((line) => line.includes("NO_JOURNAL: budget exhausted")));
-      assert.equal((await readdir(result.blogDir)).length, 0);
+      assert.equal((await readdir(result.blogDir)).length, 1, "No new Journal article may be published.");
     } finally {
       await cleanup(result.root);
     }
@@ -471,7 +471,7 @@ async function main() {
     try {
       assert.ok(result.logs.some((line) => line.includes("failed source validation")));
       assert.deepEqual(result.calls, ["DISCOVER", "DISCOVER"]);
-      assert.equal((await readdir(result.blogDir)).length, 0);
+      assert.equal((await readdir(result.blogDir)).length, 1, "No new Journal article may be published.");
     } finally {
       await cleanup(result.root);
     }
@@ -871,8 +871,8 @@ async function main() {
         "A montage with duplicate source_ids reached TEST");
       assert.ok(result.logs.some((line) => line.includes("duplicate")),
         "The duplicate source_ids rejection was not reported");
-      assert.equal((await readdir(result.blogDir)).length, 0,
-        "A rejected montage must not be published");
+      assert.equal((await readdir(result.blogDir)).length, 1,
+        "A rejected montage must not create a new publication");
     } finally { await cleanup(result.root); }
   });
 
