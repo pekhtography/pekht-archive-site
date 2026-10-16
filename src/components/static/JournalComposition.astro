@@ -5,6 +5,7 @@ type SourceBlock = {
     type: "source";
     source_id: string;
     text: string;
+    image_side?: "left" | "right";
 };
 
 type BridgeBlock = {
@@ -20,15 +21,22 @@ type ArchiveItem = {
     };
 };
 
-const { composition, archiveItems } = Astro.props as {
+const { composition, archiveItems, useSavedLayout = false, articleId = "unknown" } = Astro.props as {
     composition: Array<SourceBlock | BridgeBlock>;
     archiveItems: ArchiveItem[];
+    useSavedLayout?: boolean;
+    articleId?: string;
 };
 
 const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 ---
 
-<div class="journal-composition" data-journal-composition>
+<div
+    class="journal-composition"
+    data-journal-composition
+    data-article-id={articleId}
+    data-use-saved-layout={useSavedLayout ? "true" : "false"}
+>
     {composition.map((block) =>
         block.type === "source" ? (
             (() => {
@@ -36,7 +44,12 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
                 if (!archive) return null;
 
                 return (
-                    <section class="journal-source" data-journal-source aria-label={archive.data.title}>
+                    <section
+                        class={`journal-source ${useSavedLayout ? (block.image_side === "left" ? "journal-image-left" : block.image_side === "right" ? "journal-image-right" : "") : ""}`}
+                        data-journal-source
+                        data-image-side={useSavedLayout ? block.image_side : undefined}
+                        aria-label={archive.data.title}
+                    >
                         <div class="journal-text">
                             <div class="journal-source-text">{block.text}</div>
                         </div>
@@ -181,8 +194,37 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         }
         finishRun();
 
-        // Bridges split the composition into independent runs, as before.
-        await Promise.all(runs.flat().map(({ image }) => waitForImage(image)));
+        const allRecords = runs.flat();
+        const sourceSections = Array.from(root.querySelectorAll<HTMLElement>("[data-journal-source]"));
+
+        // A fully specified composition uses its saved image_side values as
+        // authoritative layout data. This path does not reclassify images,
+        // recalculate sides, or split the sequence at bridge blocks.
+        const hasCompleteSavedLayout =
+            root.dataset.useSavedLayout === "true" &&
+            sourceSections.length > 0 &&
+            sourceSections.every((section) => section.dataset.imageSide === "left" || section.dataset.imageSide === "right");
+
+        if (root.dataset.useSavedLayout === "true" && !hasCompleteSavedLayout) {
+            const missing = sourceSections.filter((section) => section.dataset.imageSide !== "left" && section.dataset.imageSide !== "right").length;
+            console.warn(
+                `Journal layout: article "${root.dataset.articleId || "unknown"}" marked with ` +
+                `layout_algorithm_version: 1 but ${missing} source block(s) have invalid image_side. Falling back to chooseSides().`,
+            );
+        }
+
+        if (hasCompleteSavedLayout) {
+            for (const section of sourceSections) {
+                const side = section.dataset.imageSide;
+                section.classList.toggle("journal-image-left", side === "left");
+                section.classList.toggle("journal-image-right", side === "right");
+            }
+            return;
+        }
+
+        // Articles without a complete saved layout
+        // client-side layout behavior, including bridge-separated runs.
+        await Promise.all(allRecords.map(({ image }) => waitForImage(image)));
 
         for (const records of runs) {
             const sides = chooseSides(records);
