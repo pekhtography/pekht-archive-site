@@ -597,11 +597,12 @@ export async function runJournal(options: JournalRunOptions = {}) {
 
       const montageSourceIds = validation.sourceIds;
       const uniqueMontageSourceIds = montageSourceIds;
-      let composition = validation.composition.map((block) => ({
+      const canonicalComposition = validation.composition.map((block) => ({
         ...block,
         text: block.text.trim(),
       }));
-      const compositionText = composition
+      let composition = canonicalComposition;
+      const compositionText = canonicalComposition
         .map((block) => block.text)
         .join("\n\n");
       const layoutState = await loadJournalLayoutState(blogDir);
@@ -621,7 +622,7 @@ export async function runJournal(options: JournalRunOptions = {}) {
 
       const montageSignature = JSON.stringify({
         source_ids: uniqueMontageSourceIds.slice().sort(),
-        composition,
+        composition: canonicalComposition,
       });
 
       if (seenMontages.has(montageSignature)) {
