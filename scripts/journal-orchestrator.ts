@@ -314,6 +314,8 @@ export type JournalRunOptions = {
   promptsDir?: string;
   generateJsonFn?: typeof generateJson;
   writeFileFn?: typeof writeFile;
+  /** Injectable orientation reader for deterministic orchestration tests. */
+  getImageOrientationFn?: (imagePath: string) => Promise<ImageOrientation>;
 };
 
 export async function runJournal(options: JournalRunOptions = {}) {
@@ -322,6 +324,7 @@ export async function runJournal(options: JournalRunOptions = {}) {
   const promptsDir = options.promptsDir ?? join(ROOT, "scripts/journal/prompts");
   const generateJsonFn = options.generateJsonFn ?? generateJson;
   const writeFileFn = options.writeFileFn ?? writeFile;
+  const getImageOrientationFn = options.getImageOrientationFn ?? getImageOrientation;
   const archive = await loadArchive(archiveDir);
   const used = await loadUsedSources(blogDir);
 
@@ -605,7 +608,7 @@ export async function runJournal(options: JournalRunOptions = {}) {
       const orientations = await Promise.all(sourceBlocks.map(async (block: any) => {
         const source = archiveById.get(String(block.source_id));
         if (!source) throw new Error(`JOURNAL_LAYOUT: missing archive source ${block.source_id}`);
-        return getImageOrientation(source.image);
+        return getImageOrientationFn(source.image);
       }));
       const layout = calculateJournalLayoutWithCycle(orientations, layoutState.history, articleNumber);
       let sourceIndex = 0;
