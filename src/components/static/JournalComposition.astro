@@ -28,7 +28,7 @@ const { composition, archiveItems } = Astro.props as {
 const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
 ---
 
-<div class="journal-composition" data-journal-composition>
+<div class="journal-composition journal-layout-pending" data-journal-composition>
     {composition.map((block) =>
         block.type === "source" ? (
             (() => {
@@ -193,9 +193,29 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         }
     }
 
-    document.querySelectorAll<HTMLElement>(ROOT_SELECTOR).forEach((root) => {
-        void initialize(root);
-    });
+    const initializedRoots = new WeakSet<HTMLElement>();
+
+    function initializeAll() {
+        document.querySelectorAll<HTMLElement>(ROOT_SELECTOR).forEach((root) => {
+            if (initializedRoots.has(root)) return;
+            initializedRoots.add(root);
+            root.classList.add("journal-layout-pending");
+
+            void initialize(root)
+                .catch((error) => {
+                    console.error("Journal composition layout failed:", error);
+                })
+                .finally(() => {
+                    root.classList.remove("journal-layout-pending");
+                    root.classList.add("journal-layout-ready");
+                });
+        });
+    }
+
+    // Astro View Transitions keep this module alive, so initialize new Journal
+    // compositions after every client-side navigation as well as on first load.
+    document.addEventListener("astro:page-load", initializeAll);
+    initializeAll();
 </script>
 
 <style is:global>
@@ -203,6 +223,15 @@ const archiveMap = new Map(archiveItems.map((item) => [item.id, item]));
         display: flex;
         flex-direction: column;
         gap: var(--journal-frame-inset, clamp(1rem, 3vw, 1.5rem));
+    }
+
+    /* Keep the uncalculated fallback from flashing before side selection. */
+    .journal-composition.journal-layout-pending {
+        visibility: hidden;
+    }
+
+    .journal-composition.journal-layout-ready {
+        visibility: visible;
     }
 
     /* Each source remains one intact photo + text block. */
