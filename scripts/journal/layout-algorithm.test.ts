@@ -302,8 +302,8 @@ test("all eight integrated Journal articles retain their browser-verified saved 
       new URL("../../src/content/blog/" + article.file, import.meta.url),
       "utf8",
     );
-    assert.match(source, /layout_algorithm_version:\\s*1/, article.file + " must opt into saved layout");
-    const savedSides = [...source.matchAll(/"?image_side"?\\s*:\\s*"?\\s*(left|right)/g)]
+    assert.match(source, /layout_algorithm_version:\s*1/, article.file + " must opt into saved layout");
+    const savedSides = [...source.matchAll(/"?image_side"?\s*:\s*"?\s*(left|right)/g)]
       .map((match) => match[1]);
     assert.deepEqual(savedSides, article.sides, article.file + " saved side sequence");
   }
