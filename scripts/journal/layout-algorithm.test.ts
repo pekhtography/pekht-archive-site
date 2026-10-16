@@ -283,3 +283,46 @@ test("orchestrator safe-write path writes a complete final layout", async () => 
     rmSync(directory, { recursive: true, force: true });
   }
 });
+
+test("all eight integrated Journal articles retain their browser-verified saved sides", () => {
+  const articles = [
+    { file: "07-10-2026-the-winter-tulip-s-breakthrough.md", sides: ["left", "right", "right"] },
+    { file: "08-10-2026-every-line-costs-light.md", sides: ["right", "left", "left", "right", "right"] },
+    { file: "09-10-2026-the-original-draft.md", sides: ["left", "right", "left", "right", "left"] },
+    { file: "09-10-2026-the-unkillable-king-a-hellebore-s-winter-gambit.md", sides: ["left", "right", "right", "left"] },
+    { file: "10-10-2026-the-percussion-engineer.md", sides: ["right", "left", "left", "right", "right"] },
+    { file: "11-10-2026-the-petunia-and-the-monolith.md", sides: ["right", "left", "right", "left", "right"] },
+    { file: "14-10-2026-the-water-under-the-cathedral-of-ice.md", sides: ["right", "left", "left", "right", "left"] },
+    { file: "15-10-2026-frost-s-ephemeral-cathedral.md", sides: ["left", "right", "right", "left", "left"] },
+  ];
+
+  assert.equal(articles.length, 8);
+  for (const article of articles) {
+    const source = readFileSync(
+      new URL("../../src/content/blog/" + article.file, import.meta.url),
+      "utf8",
+    );
+    assert.match(source, /layout_algorithm_version:\\s*1/, article.file + " must opt into saved layout");
+    const savedSides = [...source.matchAll(/"?image_side"?\\s*:\\s*"?\\s*(left|right)/g)]
+      .map((match) => match[1]);
+    assert.deepEqual(savedSides, article.sides, article.file + " saved side sequence");
+  }
+});
+
+test("saved-layout component reinitializes after Astro navigation without replacing saved sides", () => {
+  const component = readFileSync(
+    new URL("../../src/components/static/JournalComposition.astro", import.meta.url),
+    "utf8",
+  );
+  const scriptStart = component.indexOf("<script>");
+  const scriptEnd = component.indexOf("</script>", scriptStart);
+  const clientScript = component.slice(scriptStart + "<script>".length, scriptEnd);
+
+  assert.ok(clientScript.includes('document.addEventListener("astro:page-load", initializeAll)'));
+  assert.ok(clientScript.includes("const initializedRoots = new WeakSet<HTMLElement>()"));
+  assert.ok(component.includes(".journal-composition.journal-layout-pending"));
+  assert.ok(component.includes(".journal-composition.journal-layout-ready"));
+  assert.ok(clientScript.includes("if (hasCompleteSavedLayout)"));
+  assert.ok(clientScript.includes("section.classList.toggle(\"journal-image-left\", side === \"left\")"));
+  assert.ok(clientScript.includes("const sides = chooseSides(records)"));
+});
