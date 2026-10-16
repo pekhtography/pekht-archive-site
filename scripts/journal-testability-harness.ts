@@ -739,7 +739,10 @@ async function main() {
       ));
       assert.equal("markdown" in task3Montage, false,
         "TASK 3 must receive a whitelisted montage without markdown.");
-      assert.deepEqual(task3Montage.composition, montageResponse().composition,
+      const task3CompositionWithoutLayout = task3Montage.composition.map(
+        ({ image_side: _imageSide, ...block }: Record<string, unknown>) => block,
+      );
+      assert.deepEqual(task3CompositionWithoutLayout, montageResponse().composition,
         "TASK 3 must receive the complete ordered composition including bridges.");
     } finally {
       await cleanup(result.root);
