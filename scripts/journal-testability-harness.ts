@@ -106,6 +106,22 @@ async function createEnvironment() {
 
   await mkdir(blogDir, { recursive: true });
 
+  // The first published Journal article has a fixed layout and is excluded from
+  // the 2x2 cycle. Seed it in every harness environment so tests exercise the
+  // same article-number invariant as production.
+  await writeFile(join(blogDir, "01-01-2026-fixed-first-article.md"), [
+    "---",
+    'title: "Fixed first article fixture"',
+    'date: "01-01-2026"',
+    'category: "journal"',
+    'image_side: "left"',
+    "source_ids: []",
+    "---",
+    "",
+    "Harness fixture for the fixed first Journal article.",
+    "",
+  ].join("\\n"), "utf8");
+
   for (let i = 0; i < SOURCE_IDS.length; i += 1) {
     const id = SOURCE_IDS[i];
     const raw = [
@@ -165,6 +181,9 @@ async function execute(
         blogDir: environment.blogDir,
         promptsDir: resolve(process.cwd(), "scripts/journal/prompts"),
         generateJsonFn,
+        // Orchestration tests focus on pipeline behavior, not Sharp/file decoding.
+        // Layout algorithm behavior is covered by its dedicated tests.
+        getImageOrientationFn: async () => "H",
         ...options,
       });
     } catch (error) {
@@ -308,7 +327,7 @@ async function main() {
       assert.equal(result.thrown, undefined);
       assert.equal(result.calls.length, 0, "No model request may start with less than 60 seconds remaining.");
       assert.ok(result.logs.some((line) => line.includes("JOURNAL_BUDGET_EXCEEDED during DISCOVER")));
-      assert.equal((await readdir(result.blogDir)).length, 0);
+      assert.equal((await readdir(result.blogDir)).length, 1, "No new Journal article may be published.");
     } finally {
       await cleanup(result.root);
     }
@@ -413,7 +432,7 @@ async function main() {
     try {
       assert.equal(result.thrown, undefined);
       assert.deepEqual(result.calls, ["DISCOVER", "MONTAGE", "TEST", "TITLE"]);
-      assert.equal((await readdir(result.blogDir)).length, 1);
+      assert.equal((await readdir(result.blogDir)).length, 2, "One new Journal article should be published beside the fixed first-article fixture.");
     } finally {
       await cleanup(result.root);
     }
@@ -631,8 +650,8 @@ async function main() {
     ]);
     try {
       const files = await readdir(result.blogDir);
-      assert.deepEqual(files, [expectedFilename()]);
-      assert.ok((await readFile(join(result.blogDir, files[0]), "utf8")).includes('category: "journal"'));
+      assert.deepEqual(files, ["01-01-2026-fixed-first-article.md", expectedFilename()]);
+      assert.ok((await readFile(join(result.blogDir, expectedFilename()), "utf8")).includes('category: "journal"'));
     } finally {
       await cleanup(result.root);
     }
@@ -663,18 +682,20 @@ async function main() {
 
   // 12. An unrelated filesystem error is not mislabeled as an output conflict.
   await run("12 — unrelated write error propagates", async () => {
+    const unrelatedWriteError = Object.assign(new Error("simulated disk failure"), { code: "EIO" });
+    const writeFileFn: NonNullable<JournalRunOptions["writeFileFn"]> = async () => {
+      throw unrelatedWriteError;
+    };
     const result = await execute([
       { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
       { stage: "MONTAGE", response: montageResponse() },
       { stage: "TEST", response: strongResponse() },
       { stage: "TITLE", response: titleResponse() },
-    ], {}, async ({ root, blogDir }) => {
-      await rm(blogDir, { recursive: true, force: true });
-      await writeFile(blogDir, "this path is a file", "utf8");
-    });
+    ], { writeFileFn });
     try {
-      assert.ok(result.thrown instanceof Error);
-      assert.equal(result.thrown.message.includes("JOURNAL_OUTPUT_CONFLICT"), false);
+      assert.equal(result.thrown, unrelatedWriteError);
+      assert.equal((result.thrown as (Error & { code?: string }) | undefined)?.code, "EIO");
+      assert.equal((result.thrown as Error).message.includes("JOURNAL_OUTPUT_CONFLICT"), false);
     } finally {
       await cleanup(result.root);
     }
