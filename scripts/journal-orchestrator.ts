@@ -8,6 +8,7 @@ import { assertCompleteJournalLayout, calculateJournalLayoutWithCycle, type Imag
 import { writeJournalArticleSafely } from "./journal/safe-write.ts";
 import { generateJson, JournalBudgetExceededError } from "./journal/provider.ts";
 import { validateMontage } from "./journal/montage-validation.ts";
+import { createMontageSignature } from "./journal/montage-signature.ts";
 import {
   formatRejectionSummary,
   recordRejection,
@@ -615,11 +616,11 @@ export async function runJournal(options: JournalRunOptions = {}) {
       composition = composition.map((block: any) => block.type === "source" ? { ...block, image_side: layout.sides[sourceIndex++] } : block);
       console.log(`JOURNAL_LAYOUT: article ${articleNumber}; mode=${layout.mode}; B=${layout.balance}; K_total=${layout.kTotal.toFixed(6)}.`);
 
-      const montageSignature = JSON.stringify({
-        source_ids: uniqueMontageSourceIds.slice().sort(),
-        markdown: String(task2.markdown ?? "").trim(),
+      const montageSignature = createMontageSignature(
+        uniqueMontageSourceIds,
+        String(task2.markdown ?? ""),
         composition,
-      });
+      );
 
       if (seenMontages.has(montageSignature)) {
         reject(
