@@ -621,7 +621,7 @@ export async function runJournal(options: JournalRunOptions = {}) {
       const uniqueMontageSourceIds = montageSourceIds;
       let composition = validation.composition;
 
-      const layoutState = await loadJournalLayoutState();
+      const layoutState = await loadJournalLayoutState(blogDir);
       const articleNumber = layoutState.articleCount + 1;
       if (articleNumber < 2) {
         throw new Error(
