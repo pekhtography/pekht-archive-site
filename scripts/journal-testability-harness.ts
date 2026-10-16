@@ -969,7 +969,15 @@ async function main() {
 
   await run("T7.2 — revision limit rejection returns to discovery and is summarized", async () => {
     const revision = (instruction: string) => ({ verdict: "REVISION", reason: "Needs revision.", evidence: [], revision: instruction });
-    const montage = (variant: string) => ({ ...montageResponse(), markdown: LONG_MARKDOWN + " " + variant });
+    const montage = (variant: string) => {
+      const response = montageResponse();
+      return {
+        ...response,
+        composition: response.composition.map((block, index) =>
+          index === 0 ? { ...block, text: `${block.text} ${variant}` } : block,
+        ),
+      };
+    };
     const result = await execute([
       { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
       { stage: "MONTAGE", response: montage("variant one") },
@@ -991,8 +999,17 @@ async function main() {
 
   await run("T7.3 — repeated revision instruction rejects candidate and is summarized", async () => {
     const revision = { verdict: "REVISION", reason: "Needs revision.", evidence: [], revision: "same instruction" };
-    const first = { ...montageResponse(), markdown: LONG_MARKDOWN + " first version" };
-    const second = { ...montageResponse(), markdown: LONG_MARKDOWN + " second version" };
+    const withCompositionVariant = (variant: string) => {
+      const response = montageResponse();
+      return {
+        ...response,
+        composition: response.composition.map((block, index) =>
+          index === 0 ? { ...block, text: `${block.text} ${variant}` } : block,
+        ),
+      };
+    };
+    const first = withCompositionVariant("first version");
+    const second = withCompositionVariant("second version");
     const result = await execute([
       { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
       { stage: "MONTAGE", response: first },
