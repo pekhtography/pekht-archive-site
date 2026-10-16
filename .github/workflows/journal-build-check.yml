@@ -46,6 +46,15 @@ jobs:
           set -o pipefail
           pnpm build 2>&1 | tee -a journal-build.log
 
+      - name: Upload built dist for non-publishing diagnostics
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: journal-integration-dist
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Preserve build output
         if: always()
         uses: actions/upload-artifact@v4
