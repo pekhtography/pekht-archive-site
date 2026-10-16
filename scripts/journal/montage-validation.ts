@@ -30,7 +30,7 @@ export function validateMontage(
     };
   }
 
-  for (const field of ["title", "description", "markdown"] as const) {
+  for (const field of ["title", "description"] as const) {
     if (typeof value[field] !== "string" || !value[field].trim()) {
       return { ok: false, reason: `MONTAGE_FIELD_INVALID: ${field} must be a non-empty string.` };
     }
