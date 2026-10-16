@@ -5,6 +5,8 @@ export type GenerateJsonOptions = {
   checkBudget?: () => boolean;
   /** Internal test seam; production defaults to 60 seconds. */
   timeoutMs?: number;
+  /** Internal test seam for retry-delay tests; production uses real timers. */
+  sleepFn?: (ms: number) => Promise<void>;
 };
 
 export class ProviderError extends Error {
@@ -52,6 +54,21 @@ function sleep(ms: number) {
   return new Promise((resolve) => setTimeout(resolve, ms));
 }
 
+function parseRetryAfterMs(value: string | null): number | null {
+  if (!value) return null;
+  const trimmed = value.trim();
+
+  // Retry-After permits delta-seconds or an HTTP date.
+  if (/^\d+$/.test(trimmed)) {
+    const seconds = Number(trimmed);
+    return Number.isSafeInteger(seconds) ? seconds * 1000 : null;
+  }
+
+  const timestamp = Date.parse(trimmed);
+  if (!Number.isFinite(timestamp)) return null;
+  return Math.max(0, timestamp - Date.now());
+}
+
 function checkBudget(options: GenerateJsonOptions) {
   if (options.checkBudget && !options.checkBudget()) {
     throw new JournalBudgetExceededError();
@@ -81,6 +98,7 @@ async function requestModel(
 
   for (let attempt = 0; attempt < 3; attempt += 1) {
     checkBudget(options);
+    let retryDelayMs: number | null = null;
 
     try {
       const response = await fetch(url, {
@@ -117,6 +135,9 @@ async function requestModel(
       }
 
       const retryable = response.status === 429 || response.status >= 500;
+      if (response.status === 429) {
+        retryDelayMs = parseRetryAfterMs(response.headers.get("Retry-After"));
+      }
       if (!retryable) {
         throw new ProviderError(`Gemini ${model} failed with HTTP ${response.status}: ${lastError}`, {
           retryable: false,
@@ -138,7 +159,21 @@ async function requestModel(
       lastStatus = null;
     }
 
-    if (attempt < 2) await sleep(1000 * 2 ** attempt);
+    if (attempt < 2) {
+      const delayMs = retryDelayMs ?? 1000 * 2 ** attempt;
+      if (retryDelayMs !== null && !options.sleepFn) {
+        // Long Retry-After values must not block budget checks for the entire wait.
+        let remainingMs = delayMs;
+        while (remainingMs > 0) {
+          checkBudget(options);
+          const chunkMs = Math.min(remainingMs, 1000);
+          await sleep(chunkMs);
+          remainingMs -= chunkMs;
+        }
+      } else {
+        await (options.sleepFn ?? sleep)(delayMs);
+      }
+    }
   }
 
   throw new ProviderError(`Gemini ${model} exhausted retries: ${lastError}`, {

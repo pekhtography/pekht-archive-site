@@ -210,7 +210,17 @@ function providerSuccessResponse(): Response {
   return {
     ok: true,
     status: 200,
+    headers: new Headers(),
     json: async () => ({ candidates: [{ content: { parts: [{ text: '{"ok":true}' }] } }] }),
+  } as Response;
+}
+
+function providerErrorResponse(status: number, headers: Record<string, string> = {}): Response {
+  return {
+    ok: false,
+    status,
+    headers: new Headers(headers),
+    text: async () => `simulated HTTP ${status}`,
   } as Response;
 }
 
@@ -372,6 +382,94 @@ async function main() {
       const result = await generateJson("prompt", {}, { timeoutMs: 5 });
       assert.deepEqual(result, { ok: true });
       assert.equal(calls, 2);
+    });
+  });
+  
+  await run("T8.5 — HTTP 429 honors Retry-After delta-seconds", async () => {
+    let calls = 0;
+    const delays: number[] = [];
+    const fetchImpl = (async () => {
+      calls += 1;
+      return calls === 1
+        ? providerErrorResponse(429, { "Retry-After": "7" })
+        : providerSuccessResponse();
+    }) as typeof fetch;
+    await withProviderEnvironment(fetchImpl, async () => {
+      const result = await generateJson("prompt", {}, {
+        timeoutMs: 5,
+        sleepFn: async (ms) => { delays.push(ms); },
+      });
+      assert.deepEqual(result, { ok: true });
+      assert.equal(calls, 2);
+      assert.deepEqual(delays, [7000]);
+    });
+  });
+
+  await run("T8.5b — HTTP 429 honors Retry-After HTTP-date", async () => {
+    const originalNow = Date.now;
+    const fixedNow = Date.UTC(2030, 0, 1, 0, 0, 0);
+    Date.now = () => fixedNow;
+    let calls = 0;
+    const delays: number[] = [];
+    const retryAt = new Date(fixedNow + 5000).toUTCString();
+    const fetchImpl = (async () => {
+      calls += 1;
+      return calls === 1
+        ? providerErrorResponse(429, { "Retry-After": retryAt })
+        : providerSuccessResponse();
+    }) as typeof fetch;
+    try {
+      await withProviderEnvironment(fetchImpl, async () => {
+        const result = await generateJson("prompt", {}, {
+          timeoutMs: 5,
+          sleepFn: async (ms) => { delays.push(ms); },
+        });
+        assert.deepEqual(result, { ok: true });
+        assert.equal(calls, 2);
+        assert.deepEqual(delays, [5000]);
+      });
+    } finally {
+      Date.now = originalNow;
+    }
+  });
+
+  await run("T8.6 — HTTP 429 without Retry-After uses bounded exponential fallback", async () => {
+    let calls = 0;
+    const delays: number[] = [];
+    const fetchImpl = (async () => {
+      calls += 1;
+      return calls === 1
+        ? providerErrorResponse(429)
+        : providerSuccessResponse();
+    }) as typeof fetch;
+    await withProviderEnvironment(fetchImpl, async () => {
+      const result = await generateJson("prompt", {}, {
+        timeoutMs: 5,
+        sleepFn: async (ms) => { delays.push(ms); },
+      });
+      assert.deepEqual(result, { ok: true });
+      assert.equal(calls, 2);
+      assert.deepEqual(delays, [1000]);
+    });
+  });
+
+  await run("T8.7 — invalid Retry-After falls back to exponential delay", async () => {
+    let calls = 0;
+    const delays: number[] = [];
+    const fetchImpl = (async () => {
+      calls += 1;
+      return calls === 1
+        ? providerErrorResponse(429, { "Retry-After": "not-a-delay" })
+        : providerSuccessResponse();
+    }) as typeof fetch;
+    await withProviderEnvironment(fetchImpl, async () => {
+      const result = await generateJson("prompt", {}, {
+        timeoutMs: 5,
+        sleepFn: async (ms) => { delays.push(ms); },
+      });
+      assert.deepEqual(result, { ok: true });
+      assert.equal(calls, 2);
+      assert.deepEqual(delays, [1000]);
     });
   });
 
