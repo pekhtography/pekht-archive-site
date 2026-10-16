@@ -37,6 +37,45 @@ jobs:
           set -o pipefail
           pnpm install --frozen-lockfile 2>&1 | tee journal-build.log
 
+      - name: Report verified dimensions for Journal source images
+        shell: bash
+        run: |
+          node --input-type=module <<'NODE'
+          import { readdir, readFile } from "node:fs/promises";
+          import { join } from "node:path";
+          import sharp from "sharp";
+
+          const blogDir = "src/content/blog";
+          const archiveDir = "src/content/archive";
+          const imageRoot = "public";
+          const names = (await readdir(blogDir)).filter((name) => name.endsWith(".md") || name.endsWith(".mdx"));
+          const articles = [];
+          for (const name of names) {
+            const raw = await readFile(join(blogDir, name), "utf8");
+            const frontmatter = raw.match(/^---\\n([\\s\\S]*?)\\n---/);
+            if (!frontmatter || !/^category:\s*["']?journal["']?\s*$/m.test(frontmatter[1]) || /^draft:\s*true\s*$/m.test(frontmatter[1])) continue;
+            const compositionLine = frontmatter[1].split("\n").find((line) => line.startsWith("composition: "));
+            if (!compositionLine) continue;
+            const composition = JSON.parse(compositionLine.slice("composition: ".length));
+            articles.push({ name, composition });
+          }
+          articles.sort((a, b) => a.name.localeCompare(b.name));
+          for (const article of articles) {
+            console.log(`ARTICLE ${article.name}`);
+            for (const block of article.composition) {
+              if (block.type !== "source") continue;
+              const source = await readFile(join(archiveDir, `${block.source_id}.md`), "utf8");
+              const imageMatch = source.match(/^image:\s*["']?([^"'\n]+)["']?\s*$/m);
+              if (!imageMatch) throw new Error(`Missing image path for ${block.source_id}`);
+              const imagePath = imageMatch[1].trim();
+              const metadata = await sharp(join(imageRoot, imagePath.replace(/^\\/+/, ""))).metadata();
+              if (!metadata.width || !metadata.height) throw new Error(`Missing dimensions for ${block.source_id}`);
+              const orientation = metadata.height > metadata.width ? "V" : metadata.width > metadata.height ? "H" : "S";
+              console.log(`  ${block.source_id},${imagePath},${metadata.width}x${metadata.height},${orientation}`);
+            }
+          }
+          NODE
+
       - name: Test Journal layout algorithm and integrity contract
         run: pnpm test:journal:layout
 
