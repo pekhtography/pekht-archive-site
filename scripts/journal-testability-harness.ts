@@ -10,8 +10,6 @@ type Stage = "DISCOVER" | "MONTAGE" | "TEST" | "TITLE";
 type QueueItem = { stage: Stage; response: unknown };
 
 const SOURCE_IDS = ["source-a", "source-b", "source-c", "source-d", "source-e", "source-f", "source-g"];
-const LONG_MARKDOWN =
-  "One quiet signal moves through the archive and gathers several small details into a single continuous thought that changes its meaning before the final image arrives.";
 
 function stageFor(schema: unknown): Stage {
   const properties = (schema as { properties?: Record<string, unknown> }).properties ?? {};
@@ -63,12 +61,13 @@ function montageResponse(candidateId = "candidate-a") {
     title: "The Quiet Signal",
     description: "A signal changes as it moves between states.",
     source_ids: ids,
-    markdown: LONG_MARKDOWN,
-    composition: ids.map((source_id) => ({
-      type: "source",
-      source_id,
-      text: `A fragment from ${source_id}.`,
-    })),
+    composition: [
+      { type: "source", source_id: ids[0], text: `A fragment from ${ids[0]}.` },
+      { type: "source", source_id: ids[1], text: `A fragment from ${ids[1]}.` },
+      { type: "bridge", text: "Between signals, the meaning changes." },
+      { type: "source", source_id: ids[2], text: `A fragment from ${ids[2]}.` },
+      { type: "source", source_id: ids[3], text: `A fragment from ${ids[3]}.` },
+    ],
     reason: "",
     facets: ["signals", "change"],
   };
@@ -152,6 +151,7 @@ async function execute(
     if (setup) await setup(environment);
 
     const calls: Stage[] = [];
+    const requests: { stage: Stage; prompt: string; schema: unknown }[] = [];
     const logs: string[] = [];
     const originalLog = console.log;
     const originalWarn = console.warn;
@@ -162,12 +162,13 @@ async function execute(
 
     let thrown: unknown;
     const generateJsonFn: NonNullable<JournalRunOptions["generateJsonFn"]> =
-      async (_prompt, schema, providerOptions) => {
+      async (promptText, schema, providerOptions) => {
         if (providerOptions?.checkBudget && !providerOptions.checkBudget()) {
           throw new JournalBudgetExceededError();
         }
         const stage = stageFor(schema);
         calls.push(stage);
+        requests.push({ stage, prompt: promptText, schema });
         const next = queue.shift();
         assert.ok(next, `Unexpected ${stage} model call: mock queue is empty.`);
         assert.equal(next.stage, stage, `Expected ${next.stage}, received ${stage}.`);
@@ -194,7 +195,7 @@ async function execute(
       console.error = originalError;
     }
 
-    return { ...environment, calls, logs, thrown, remaining: queue };
+    return { ...environment, calls, requests, logs, thrown, remaining: queue };
   } catch (error) {
     await rm(environment.root, { recursive: true, force: true });
     throw error;
@@ -749,7 +750,24 @@ async function main() {
     try {
       const files = await readdir(result.blogDir);
       assert.deepEqual(files, ["01-01-2026-fixed-first-article.md", expectedFilename()]);
-      assert.ok((await readFile(join(result.blogDir, expectedFilename()), "utf8")).includes('category: "journal"'));
+      const published = await readFile(join(result.blogDir, expectedFilename()), "utf8");
+      assert.ok(published.includes('category: "journal"'));
+      const bodyMatch = published.match(/^---\n[\s\S]*?\n---\n\n([\s\S]*)$/);
+      assert.ok(bodyMatch, "Published frontmatter/body boundary is invalid.");
+      const expectedBody = montageResponse().composition
+        .map((block) => block.text.trim())
+        .join("\n\n");
+      assert.equal(bodyMatch[1].trimEnd(), expectedBody,
+        "Published body must be the ordered composition blocks separated by one blank line.");
+      assert.ok(bodyMatch[1].includes("Between signals, the meaning changes."),
+        "Published body omitted the bridge block.");
+      assert.ok(published.includes('title: "A fragment from source-a. A fragment from source-b. Between signals,…'),
+        "Title must be cut from the composition text, not a separate markdown field.");
+      const montageSchema = result.requests.find((request) => request.stage === "MONTAGE")?.schema as
+        { properties?: Record<string, unknown> } | undefined;
+      assert.ok(montageSchema?.properties);
+      assert.equal("markdown" in montageSchema.properties, false,
+        "TASK 2 schema must not request a markdown field.");
     } finally {
       await cleanup(result.root);
     }
@@ -810,6 +828,48 @@ async function main() {
     try {
       assert.ok(result.calls.includes("TEST"));
       assert.equal(result.thrown, undefined);
+      const task3Request = result.requests.find((request) => request.stage === "TEST");
+      assert.ok(task3Request, "TASK 3 request was not captured.");
+      const montageStart = task3Request.prompt.indexOf("CURRENT JOURNAL MONTAGE:\n");
+      const sourcesStart = task3Request.prompt.indexOf("\n\nSOURCE TEXTS USED BY CURRENT MONTAGE:");
+      assert.ok(montageStart >= 0 && sourcesStart > montageStart);
+      const task3Montage = JSON.parse(task3Request.prompt.slice(
+        montageStart + "CURRENT JOURNAL MONTAGE:\n".length,
+        sourcesStart,
+      ));
+      assert.equal("markdown" in task3Montage, false,
+        "TASK 3 must receive a whitelisted montage without markdown.");
+      const task3CompositionWithoutLayout = task3Montage.composition.map(
+        ({ image_side: _imageSide, ...block }: Record<string, unknown>) => block,
+      );
+      assert.deepEqual(task3CompositionWithoutLayout, montageResponse().composition,
+        "TASK 3 must receive the complete ordered composition including bridges.");
+    } finally {
+      await cleanup(result.root);
+    }
+  });
+
+  // 13b. Repeated composition is rejected without depending on a separate markdown field.
+  await run("13b — repeated composition signature is detected without markdown", async () => {
+    const revision = {
+      verdict: "REVISION",
+      reason: "The seam needs one more pass.",
+      evidence: SOURCE_IDS.slice(0, 4),
+      revision: "Try the same source sequence with a different seam.",
+    };
+    const result = await execute([
+      { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      { stage: "MONTAGE", response: montageResponse() },
+      { stage: "TEST", response: revision },
+      { stage: "MONTAGE", response: montageResponse() },
+      { stage: "DISCOVER", response: noJournalResponse() },
+    ]);
+    try {
+      assert.equal(result.thrown, undefined);
+      assert.equal(result.calls.filter((stage) => stage === "TEST").length, 1,
+        "Repeated composition should be rejected before a second TASK 3 call.");
+      assert.ok(result.logs.some((line) => line.includes("identical montage repeated")),
+        "Repeated composition signature was not detected.");
     } finally {
       await cleanup(result.root);
     }

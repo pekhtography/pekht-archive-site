@@ -8,7 +8,6 @@ import { assertCompleteJournalLayout, calculateJournalLayoutWithCycle, type Imag
 import { writeJournalArticleSafely } from "./journal/safe-write.ts";
 import { generateJson, JournalBudgetExceededError } from "./journal/provider.ts";
 import { validateMontage } from "./journal/montage-validation.ts";
-import { createMontageSignature } from "./journal/montage-signature.ts";
 import {
   formatRejectionSummary,
   recordRejection,
@@ -234,7 +233,6 @@ const task2Schema = {
       type: "ARRAY",
       items: { type: "STRING" },
     },
-    markdown: { type: "STRING" },
     composition: {
       type: "ARRAY",
       items: {
@@ -262,7 +260,6 @@ const task2Schema = {
     "title",
     "description",
     "source_ids",
-    "markdown",
     "composition",
     "reason",
     "facets",
@@ -600,7 +597,14 @@ export async function runJournal(options: JournalRunOptions = {}) {
 
       const montageSourceIds = validation.sourceIds;
       const uniqueMontageSourceIds = montageSourceIds;
-      let composition = validation.composition;
+      const canonicalComposition = validation.composition.map((block) => ({
+        ...block,
+        text: block.text.trim(),
+      }));
+      let composition = canonicalComposition;
+      const compositionText = canonicalComposition
+        .map((block) => block.text)
+        .join("\n\n");
       const layoutState = await loadJournalLayoutState(blogDir);
       const articleNumber = layoutState.articleCount + 1;
       if (articleNumber < 2) throw new Error("JOURNAL_LAYOUT: article 1 has a fixed layout and must remain outside the 2x2 cycle.");
@@ -616,11 +620,10 @@ export async function runJournal(options: JournalRunOptions = {}) {
       composition = composition.map((block: any) => block.type === "source" ? { ...block, image_side: layout.sides[sourceIndex++] } : block);
       console.log(`JOURNAL_LAYOUT: article ${articleNumber}; mode=${layout.mode}; B=${layout.balance}; K_total=${layout.kTotal.toFixed(6)}.`);
 
-      const montageSignature = createMontageSignature(
-        uniqueMontageSourceIds,
-        String(task2.markdown ?? ""),
-        composition,
-      );
+      const montageSignature = JSON.stringify({
+        source_ids: uniqueMontageSourceIds.slice().sort(),
+        composition: canonicalComposition,
+      });
 
       if (seenMontages.has(montageSignature)) {
         reject(
@@ -634,9 +637,14 @@ export async function runJournal(options: JournalRunOptions = {}) {
       seenMontages.add(montageSignature);
 
       currentMontage = {
-        ...task2,
+        status: task2.status,
+        candidate_id: task2.candidate_id,
+        title: task2.title,
+        description: task2.description,
         source_ids: uniqueMontageSourceIds,
         composition,
+        reason: task2.reason,
+        facets: task2.facets,
       };
 
       const task3 = await generateWithBudget(
@@ -793,23 +801,19 @@ export async function runJournal(options: JournalRunOptions = {}) {
           }
         }
 
-        const plainMarkdown = plainJournalText(
-          String(currentMontage.markdown),
-        );
-        const headingWords = plainMarkdown
+        const plainComposition = plainJournalText(compositionText);
+        const headingWords = plainComposition
           .split(" ")
           .filter(Boolean);
 
-        const titleCut = await chooseTitleCut(
-          String(currentMontage.markdown),
-        );
+        const titleCut = await chooseTitleCut(compositionText);
 
         ensureBudget("TITLE CUT response");
 
         const journalTitle =
           titleCut !== null
             ? headingWords.slice(0, titleCut).join(" ") + "…"
-            : journalHeading(String(currentMontage.markdown));
+            : journalHeading(compositionText);
         const finalComposition = Array.isArray(currentMontage.composition) ? currentMontage.composition as Array<{ type: string; image_side?: unknown }> : [];
 
         const markdown = `---
@@ -836,7 +840,7 @@ composition: ${JSON.stringify(
         )}
 ---
 
-${String(currentMontage.markdown).trim()}
+${compositionText}
 `;
 
         const outputPath = join(blogDir, `${slug}.md`);
