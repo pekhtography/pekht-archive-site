@@ -787,6 +787,86 @@ async function main() {
   });
 
 
+  // T7 — exercise rejection control flow through runJournal(), not source regexes.
+  await run("T7.1 — identical montage rejection returns to discovery and is summarized", async () => {
+    const revision = { verdict: "REVISION", reason: "Needs a change.", evidence: [], revision: "change the transition" };
+    const result = await execute([
+      { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      { stage: "MONTAGE", response: montageResponse() },
+      { stage: "TEST", response: revision },
+      // Same montage + same article/history produces the same post-layout signature.
+      { stage: "MONTAGE", response: montageResponse() },
+      { stage: "DISCOVER", response: noJournalResponse() },
+    ]);
+    try {
+      assert.equal(result.thrown, undefined);
+      assert.ok(result.logs.some((line) => line.includes("identical montage repeated")));
+      assert.ok(result.logs.some((line) => line.includes("- candidate-a [MONTAGE]: identical montage repeated")));
+      assert.deepEqual(result.calls, ["DISCOVER", "MONTAGE", "TEST", "MONTAGE", "DISCOVER"]);
+      assert.equal((await readdir(result.blogDir)).length, 1, "Rejected montage must not publish.");
+    } finally { await cleanup(result.root); }
+  });
+
+  await run("T7.2 — revision limit rejection returns to discovery and is summarized", async () => {
+    const revision = (instruction: string) => ({ verdict: "REVISION", reason: "Needs revision.", evidence: [], revision: instruction });
+    const montage = (variant: string) => ({ ...montageResponse(), markdown: LONG_MARKDOWN + " " + variant });
+    const result = await execute([
+      { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      { stage: "MONTAGE", response: montage("variant one") },
+      { stage: "TEST", response: revision("revision one") },
+      { stage: "MONTAGE", response: montage("variant two") },
+      { stage: "TEST", response: revision("revision two") },
+      { stage: "MONTAGE", response: montage("variant three") },
+      { stage: "TEST", response: revision("revision three") },
+      { stage: "DISCOVER", response: noJournalResponse() },
+    ]);
+    try {
+      assert.equal(result.thrown, undefined);
+      assert.ok(result.logs.some((line) => line.includes("revision limit exceeded")));
+      assert.ok(result.logs.some((line) => line.includes("- candidate-a [REVISION]: revision limit exceeded")));
+      assert.deepEqual(result.calls, ["DISCOVER", "MONTAGE", "TEST", "MONTAGE", "TEST", "MONTAGE", "TEST", "DISCOVER"]);
+      assert.equal((await readdir(result.blogDir)).length, 1, "Rejected candidate must not publish.");
+    } finally { await cleanup(result.root); }
+  });
+
+  await run("T7.3 — repeated revision instruction rejects candidate and is summarized", async () => {
+    const revision = { verdict: "REVISION", reason: "Needs revision.", evidence: [], revision: "same instruction" };
+    const first = { ...montageResponse(), markdown: LONG_MARKDOWN + " first version" };
+    const second = { ...montageResponse(), markdown: LONG_MARKDOWN + " second version" };
+    const result = await execute([
+      { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      { stage: "MONTAGE", response: first },
+      { stage: "TEST", response: revision },
+      { stage: "MONTAGE", response: second },
+      { stage: "TEST", response: revision },
+      { stage: "DISCOVER", response: noJournalResponse() },
+    ]);
+    try {
+      assert.equal(result.thrown, undefined);
+      assert.ok(result.logs.some((line) => line.includes("repeated revision instruction")));
+      assert.ok(result.logs.some((line) => line.includes("- candidate-a [REVISION]: repeated revision instruction")));
+      assert.deepEqual(result.calls, ["DISCOVER", "MONTAGE", "TEST", "MONTAGE", "TEST", "DISCOVER"]);
+      assert.equal((await readdir(result.blogDir)).length, 1, "Rejected candidate must not publish.");
+    } finally { await cleanup(result.root); }
+  });
+
+  await run("T7.4 — TEST rejection returns to discovery and is summarized", async () => {
+    const rejected = { verdict: "NO_JOURNAL", reason: "weak ending", evidence: [], revision: "" };
+    const result = await execute([
+      { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      { stage: "MONTAGE", response: montageResponse() },
+      { stage: "TEST", response: rejected },
+      { stage: "DISCOVER", response: noJournalResponse() },
+    ]);
+    try {
+      assert.equal(result.thrown, undefined);
+      assert.ok(result.logs.some((line) => line.includes("TEST rejected: weak ending")));
+      assert.ok(result.logs.some((line) => line.includes("- candidate-a [TEST]: TEST rejected: weak ending")));
+      assert.deepEqual(result.calls, ["DISCOVER", "MONTAGE", "TEST", "DISCOVER"]);
+      assert.equal((await readdir(result.blogDir)).length, 1, "Rejected candidate must not publish.");
+    } finally { await cleanup(result.root); }
+  });
+
   // T5 boundary probes. These assert the required behavior; on the pre-T5
   // orchestrator they should report the specific missing guards (Red).
   const t5Failures: string[] = [];
