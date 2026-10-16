@@ -222,12 +222,14 @@ test("ordinary articles retain the chooseSides fallback", () => {
   assert.ok(script.includes('root.dataset.useSavedLayout === "true" && !hasCompleteSavedLayout'));
 });
 
-test("orchestrator integrity gate precedes atomic write and persists version 1", () => {
+test("orchestrator routes final composition through the tested integrity-gated writer", () => {
   const orchestrator = readFileSync(new URL("../../scripts/journal-orchestrator.ts", import.meta.url), "utf8");
-  const gate = orchestrator.indexOf("assertCompleteJournalLayout(slug, finalComposition)");
-  const write = orchestrator.indexOf("await writeFileFn(outputPath, markdown, {");
+  const safeWriter = readFileSync(new URL("./safe-write.ts", import.meta.url), "utf8");
+  assert.ok(orchestrator.includes("writeJournalArticleSafely(slug, finalComposition, outputPath, markdown, writeFileFn)"));
+  const gate = safeWriter.indexOf("assertCompleteJournalLayout(articleId, composition)");
+  const write = safeWriter.indexOf("await writeFileFn(outputPath, markdown, { encoding: " + '"utf8"' + ', flag: "wx" });');
   assert.ok(gate >= 0 && write > gate);
-  assert.ok(orchestrator.includes('flag: "wx"'));
+  assert.ok(safeWriter.includes('flag: "wx"'));
   assert.ok(orchestrator.includes("layout_algorithm_version: 1"));
 });
 
