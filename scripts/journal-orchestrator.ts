@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 import { sortExploreItems } from "../src/lib/explore-sort.ts";
 import sharp from "sharp";
 import { assertCompleteJournalLayout, calculateJournalLayoutWithCycle, type ImageOrientation, type JournalLayoutArticle, type ImageSide } from "../src/lib/journal-layout-algorithm.ts";
+import { writeJournalArticleSafely } from "./journal/safe-write.ts";
 import { generateJson, JournalBudgetExceededError } from "./journal/provider.ts";
 import { validateMontage } from "./journal/montage-validation.ts";
 import {
@@ -806,7 +807,6 @@ export async function runJournal(options: JournalRunOptions = {}) {
             ? headingWords.slice(0, titleCut).join(" ") + "…"
             : journalHeading(String(currentMontage.markdown));
         const finalComposition = Array.isArray(currentMontage.composition) ? currentMontage.composition as Array<{ type: string; image_side?: unknown }> : [];
-        assertCompleteJournalLayout(slug, finalComposition);
 
         const markdown = `---
 draft: false
@@ -845,25 +845,7 @@ ${String(currentMontage.markdown).trim()}
           );
         }
 
-        try {
-          // "wx" makes the no-overwrite policy atomic if another writer races this check.
-          await writeFileFn(outputPath, markdown, {
-            encoding: "utf8",
-            flag: "wx",
-          });
-        } catch (error) {
-          if (
-            typeof error === "object" &&
-            error !== null &&
-            "code" in error &&
-            error.code === "EEXIST"
-          ) {
-            throw new Error(
-              `JOURNAL_OUTPUT_CONFLICT: refusing to overwrite existing publication ${slug}.md.`,
-            );
-          }
-          throw error;
-        }
+        await writeJournalArticleSafely(slug, finalComposition, outputPath, markdown, writeFileFn);
 
         console.log(
           `STRONG JOURNAL: ${slug}.md`,
