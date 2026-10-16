@@ -3,6 +3,9 @@ import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { sortExploreItems } from "../src/lib/explore-sort.ts";
+import sharp from "sharp";
+import { assertCompleteJournalLayout, calculateJournalLayoutWithCycle, type ImageOrientation, type JournalLayoutArticle, type ImageSide } from "../src/lib/journal-layout-algorithm.ts";
+import { writeJournalArticleSafely } from "./journal/safe-write.ts";
 import { generateJson, JournalBudgetExceededError } from "./journal/provider.ts";
 import { validateMontage } from "./journal/montage-validation.ts";
 import {
@@ -78,6 +81,37 @@ async function loadArchive(archiveDir = ARCHIVE_DIR): Promise<ArchivePost[]> {
   return posts;
 }
 
+type JournalLayoutState = { articleCount: number; history: JournalLayoutArticle[] };
+
+function journalDateKey(value: string): number {
+  const match = value.match(/^(\d{2})-(\d{2})-(\d{4})$/);
+  if (!match) return 0;
+  return Date.UTC(Number(match[3]), Number(match[2]) - 1, Number(match[1]));
+}
+
+async function loadJournalLayoutState(blogDir = BLOG_DIR): Promise<JournalLayoutState> {
+  const names = (await readdir(blogDir)).filter((name) => name.endsWith(".md") || name.endsWith(".mdx"));
+  const articles: Array<{ name: string; date: string; sides: ImageSide[] }> = [];
+  for (const name of names) {
+    const raw = await readFile(join(blogDir, name), "utf8");
+    const fm = frontmatter(raw);
+    if (fm.category !== "journal" || fm.draft === "true") continue;
+    const sides = [...raw.matchAll(/image_side[^a-z]*(left|right)/g)].map((match) => match[1] as ImageSide);
+    articles.push({ name, date: String(fm.date ?? ""), sides });
+  }
+  articles.sort((a, b) => journalDateKey(a.date) - journalDateKey(b.date) || a.name.localeCompare(b.name));
+  return { articleCount: articles.length, history: articles.filter((article) => article.sides.length > 0).map((article) => ({ sides: article.sides })) };
+}
+
+async function getImageOrientation(imagePath: string): Promise<ImageOrientation> {
+  const relativePath = imagePath.replace(/^\/+/, "");
+  const fullPath = join(ROOT, "public", relativePath);
+  const metadata = await sharp(fullPath).metadata();
+  if (!metadata.width || !metadata.height) throw new Error(`JOURNAL_LAYOUT: cannot read image dimensions for ${imagePath}`);
+  if (metadata.height > metadata.width) return "V";
+  if (metadata.width > metadata.height) return "H";
+  return "S";
+}
 async function loadUsedSources(blogDir = BLOG_DIR): Promise<Set<string>> {
   const used = new Set<string>();
   let names: string[] = [];
@@ -280,6 +314,8 @@ export type JournalRunOptions = {
   promptsDir?: string;
   generateJsonFn?: typeof generateJson;
   writeFileFn?: typeof writeFile;
+  /** Injectable orientation reader for deterministic orchestration tests. */
+  getImageOrientationFn?: (imagePath: string) => Promise<ImageOrientation>;
 };
 
 export async function runJournal(options: JournalRunOptions = {}) {
@@ -288,6 +324,7 @@ export async function runJournal(options: JournalRunOptions = {}) {
   const promptsDir = options.promptsDir ?? join(ROOT, "scripts/journal/prompts");
   const generateJsonFn = options.generateJsonFn ?? generateJson;
   const writeFileFn = options.writeFileFn ?? writeFile;
+  const getImageOrientationFn = options.getImageOrientationFn ?? getImageOrientation;
   const archive = await loadArchive(archiveDir);
   const used = await loadUsedSources(blogDir);
 
@@ -562,7 +599,21 @@ export async function runJournal(options: JournalRunOptions = {}) {
 
       const montageSourceIds = validation.sourceIds;
       const uniqueMontageSourceIds = montageSourceIds;
-      const composition = validation.composition;
+      let composition = validation.composition;
+      const layoutState = await loadJournalLayoutState(blogDir);
+      const articleNumber = layoutState.articleCount + 1;
+      if (articleNumber < 2) throw new Error("JOURNAL_LAYOUT: article 1 has a fixed layout and must remain outside the 2x2 cycle.");
+      const archiveById = new Map(archive.map((post) => [post.source_id, post]));
+      const sourceBlocks = composition.filter((block: any) => block.type === "source");
+      const orientations = await Promise.all(sourceBlocks.map(async (block: any) => {
+        const source = archiveById.get(String(block.source_id));
+        if (!source) throw new Error(`JOURNAL_LAYOUT: missing archive source ${block.source_id}`);
+        return getImageOrientationFn(source.image);
+      }));
+      const layout = calculateJournalLayoutWithCycle(orientations, layoutState.history, articleNumber);
+      let sourceIndex = 0;
+      composition = composition.map((block: any) => block.type === "source" ? { ...block, image_side: layout.sides[sourceIndex++] } : block);
+      console.log(`JOURNAL_LAYOUT: article ${articleNumber}; mode=${layout.mode}; B=${layout.balance}; K_total=${layout.kTotal.toFixed(6)}.`);
 
       const montageSignature = JSON.stringify({
         source_ids: uniqueMontageSourceIds.slice().sort(),
@@ -758,6 +809,7 @@ export async function runJournal(options: JournalRunOptions = {}) {
           titleCut !== null
             ? headingWords.slice(0, titleCut).join(" ") + "…"
             : journalHeading(String(currentMontage.markdown));
+        const finalComposition = Array.isArray(currentMontage.composition) ? currentMontage.composition as Array<{ type: string; image_side?: unknown }> : [];
 
         const markdown = `---
 draft: false
@@ -765,6 +817,7 @@ date: "${date}"
 title: "${journalTitle.replace(/"/g, "\\\"")}"
 description: "${String(currentMontage.description).replace(/"/g, "\\\"")}"
 category: "journal"
+layout_algorithm_version: 1
 tags: ["archive"]
 author: "PEKHTOGRAPHY"
 source_ids: [${uniqueMontageSourceIds
@@ -795,25 +848,7 @@ ${String(currentMontage.markdown).trim()}
           );
         }
 
-        try {
-          // "wx" makes the no-overwrite policy atomic if another writer races this check.
-          await writeFileFn(outputPath, markdown, {
-            encoding: "utf8",
-            flag: "wx",
-          });
-        } catch (error) {
-          if (
-            typeof error === "object" &&
-            error !== null &&
-            "code" in error &&
-            error.code === "EEXIST"
-          ) {
-            throw new Error(
-              `JOURNAL_OUTPUT_CONFLICT: refusing to overwrite existing publication ${slug}.md.`,
-            );
-          }
-          throw error;
-        }
+        await writeJournalArticleSafely(slug, finalComposition, outputPath, markdown, writeFileFn);
 
         console.log(
           `STRONG JOURNAL: ${slug}.md`,

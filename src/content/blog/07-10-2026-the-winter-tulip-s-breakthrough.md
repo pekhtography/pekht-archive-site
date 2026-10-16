@@ -6,6 +6,7 @@ description: "A three-part sequence tracing the transformation of a winter tulip
 category: "journal"
 tags: ["archive"]
 author: "PEKHTOGRAPHY"
+layout_algorithm_version: 1
 source_ids: ["that-quiet-promise-you-made-to-yourself-folded-tight-its-oka", "the-awkward-phase-not-a-bud-not-a-bloom-just-you-caught-betw", "so-this-is-it-no-more-hiding-a-heart-wide-open-to-the-coming"]
 facets: ["botanical transformation", "mindfulness", "vulnerability"]
 composition:
@@ -24,7 +25,7 @@ composition:
   - type: source
     source_id: "so-this-is-it-no-more-hiding-a-heart-wide-open-to-the-coming"
     text: "So this is it.\nNo more hiding.\nA heart wide open to the coming light, the frost, the unknown.\nThis vulnerable, ridiculous, perfect act is called being alive. ❤️🔥"
-    image_side: left
+    image_side: right
     image_size: medium
     text_offset: center
 ---

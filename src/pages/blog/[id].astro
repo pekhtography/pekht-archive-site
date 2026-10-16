@@ -75,7 +75,12 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
                         class="pointer-events-none absolute right-0 top-0 h-px w-[clamp(4rem,20%,14rem)] bg-border"
                         aria-hidden="true"
                     ></span>
-                    <JournalComposition composition={item.data.composition} archiveItems={archiveItems} />
+                    <JournalComposition
+                        composition={item.data.composition}
+                        archiveItems={archiveItems}
+                        useSavedLayout={item.data.layout_algorithm_version === 1}
+                        articleId={item.id}
+                    />
                 </div>
             ) : (
                 <div class={isJournal ? "journal-content" : "mt-10 prose border border-border p-6"}>
