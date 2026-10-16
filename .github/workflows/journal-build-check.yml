@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - journal/t6-montage-validation
+      - integrate/journal-layout-v1
   pull_request:
   workflow_dispatch:
 
@@ -35,6 +36,9 @@ jobs:
         run: |
           set -o pipefail
           pnpm install --frozen-lockfile 2>&1 | tee journal-build.log
+
+      - name: Test Journal layout algorithm and integrity contract
+        run: pnpm test:journal:layout
 
       - name: Build Astro site and run Pagefind
         shell: bash
