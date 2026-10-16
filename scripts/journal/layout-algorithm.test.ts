@@ -1,6 +1,9 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { readFileSync } from "node:fs";
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { tmpdir } from "node:os";
+import { join } from "node:path";
+import { writeJournalArticleSafely } from "./safe-write.ts";
 import { assertCompleteJournalLayout, calculateJournalLayout, calculateJournalLayoutWithCycle } from "../../src/lib/journal-layout-algorithm.ts";
 
 test("Tulip composition resolves to L-R-R with perfectly balanced image weight", () => {
@@ -226,4 +229,55 @@ test("orchestrator integrity gate precedes atomic write and persists version 1",
   assert.ok(gate >= 0 && write > gate);
   assert.ok(orchestrator.includes('flag: "wx"'));
   assert.ok(orchestrator.includes("layout_algorithm_version: 1"));
+});
+
+
+test("orchestrator safe-write path rejects an invalid final layout before creating a file", async () => {
+  const directory = mkdtempSync(join(tmpdir(), "journal-gate-new-"));
+  const outputPath = join(directory, "article.md");
+  try {
+    await assert.rejects(
+      writeJournalArticleSafely("article-gate-new", [
+        { type: "source", image_side: "left" },
+        { type: "source" },
+      ], outputPath, "must not be written"),
+      /Layout integrity violation for article "article-gate-new": 1 source block/,
+    );
+    assert.equal(existsSync(outputPath), false, "invalid article must not be created");
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+test("orchestrator safe-write path refuses to overwrite an existing article", async () => {
+  const directory = mkdtempSync(join(tmpdir(), "journal-gate-existing-"));
+  const outputPath = join(directory, "article.md");
+  try {
+    writeFileSync(outputPath, "original content", "utf8");
+    await assert.rejects(
+      writeJournalArticleSafely("article-existing", [
+        { type: "source", image_side: "left" },
+        { type: "source", image_side: "right" },
+      ], outputPath, "replacement content"),
+      /JOURNAL_OUTPUT_CONFLICT: refusing to overwrite existing publication article-existing\.md/,
+    );
+    assert.equal(readFileSync(outputPath, "utf8"), "original content");
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
+});
+
+test("orchestrator safe-write path writes a complete final layout", async () => {
+  const directory = mkdtempSync(join(tmpdir(), "journal-gate-valid-"));
+  const outputPath = join(directory, "article.md");
+  try {
+    await writeJournalArticleSafely("article-valid", [
+      { type: "source", image_side: "left" },
+      { type: "bridge" },
+      { type: "source", image_side: "right" },
+    ], outputPath, "valid markdown");
+    assert.equal(readFileSync(outputPath, "utf8"), "valid markdown");
+  } finally {
+    rmSync(directory, { recursive: true, force: true });
+  }
 });
