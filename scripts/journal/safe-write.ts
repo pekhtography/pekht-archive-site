@@ -1,8 +1,7 @@
 import { writeFile } from "node:fs/promises";
-import type { JournalRunOptions } from "../journal-orchestrator.ts";
 import { assertCompleteJournalLayout, type JournalCompositionSideBlock } from "../../src/lib/journal-layout-algorithm.ts";
 
-type WriteFileFunction = NonNullable<JournalRunOptions["writeFileFn"]>;
+type WriteFileFunction = typeof writeFile;
 
 /** Validate the final, post-inversion composition before the atomic Markdown write. */
 export async function writeJournalArticleSafely(
