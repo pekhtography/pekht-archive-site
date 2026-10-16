@@ -161,7 +161,18 @@ async function requestModel(
 
     if (attempt < 2) {
       const delayMs = retryDelayMs ?? 1000 * 2 ** attempt;
-      await (options.sleepFn ?? sleep)(delayMs);
+      if (retryDelayMs !== null && !options.sleepFn) {
+        // Long Retry-After values must not block budget checks for the entire wait.
+        let remainingMs = delayMs;
+        while (remainingMs > 0) {
+          checkBudget(options);
+          const chunkMs = Math.min(remainingMs, 1000);
+          await sleep(chunkMs);
+          remainingMs -= chunkMs;
+        }
+      } else {
+        await (options.sleepFn ?? sleep)(delayMs);
+      }
     }
   }
 
