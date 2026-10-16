@@ -663,6 +663,8 @@ async function main() {
         "Published body must be the ordered composition blocks separated by one blank line.");
       assert.ok(bodyMatch[1].includes("Between signals, the meaning changes."),
         "Published body omitted the bridge block.");
+      assert.ok(published.includes('title: "A fragment from source-a. A fragment from source-b. Between signals,…'),
+        "Title must be cut from the composition text, not a separate markdown field.");
       const montageSchema = result.requests.find((request) => request.stage === "MONTAGE")?.schema as
         { properties?: Record<string, unknown> } | undefined;
       assert.ok(montageSchema?.properties);
