@@ -47,6 +47,163 @@ jobs:
           set -o pipefail
           pnpm build 2>&1 | tee -a journal-build.log
 
+      - name: Prepare compact Journal diagnostic site
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          from urllib.parse import urlparse, unquote
+          import json
+          import re
+          import shutil
+
+          dist = Path("dist")
+          output = Path("journal-diagnostic")
+          site = output / "site"
+          base = "/pekht-archive-site"
+          output.mkdir(parents=True, exist_ok=True)
+          site.mkdir(parents=True, exist_ok=True)
+
+          class Assets(HTMLParser):
+              def __init__(self):
+                  super().__init__(convert_charrefs=True)
+                  self.urls = []
+              def handle_starttag(self, tag, attrs):
+                  attrs = dict(attrs)
+                  for key in ("src", "poster"):
+                      value = attrs.get(key)
+                      if value:
+                          self.urls.append(value)
+                  srcset = attrs.get("srcset")
+                  if srcset:
+                      for item in srcset.split(","):
+                          parts = item.strip().split()
+                          if parts:
+                              self.urls.append(parts[0])
+                  if tag == "link":
+                      rel = set((attrs.get("rel") or "").lower().split())
+                      if rel.intersection({"stylesheet", "icon", "manifest", "preload", "modulepreload"}):
+                          href = attrs.get("href")
+                          if href and ({"stylesheet", "icon", "manifest", "modulepreload"} & rel or attrs.get("as") in {"style", "script", "font"}):
+                              self.urls.append(href)
+                  if tag == "meta" and attrs.get("property") == "og:image":
+                      if attrs.get("content"):
+                          self.urls.append(attrs["content"])
+
+          def local_source(url, page_path):
+              parsed = urlparse(url)
+              if parsed.scheme or parsed.netloc or not parsed.path:
+                  return None
+              path = unquote(parsed.path)
+              if path == base:
+                  path = "/"
+              elif path.startswith(base + "/"):
+                  path = path[len(base):]
+              if path.startswith("/"):
+                  candidate = dist / path.lstrip("/")
+              else:
+                  candidate = (dist / page_path.parent / path).resolve()
+                  try:
+                      candidate.relative_to(dist.resolve())
+                  except ValueError:
+                      return None
+              return candidate
+
+          pages = []
+          for html in sorted((dist / "blog").rglob("*.html")):
+              text = html.read_text(encoding="utf-8", errors="replace")
+              if "journal-entry" in text:
+                  pages.append(html)
+
+          if not pages:
+              raise SystemExit("No rendered Journal pages found under dist/blog")
+
+          copied = set()
+          missing = set()
+          asset_queue = []
+
+          def copy_file(source):
+              if not source.exists() or not source.is_file():
+                  missing.add(str(source))
+                  return
+              try:
+                  rel = source.relative_to(dist)
+              except ValueError:
+                  return
+              destination = site / base.lstrip("/") / rel
+              destination.parent.mkdir(parents=True, exist_ok=True)
+              if str(rel) not in copied:
+                  shutil.copy2(source, destination)
+                  copied.add(str(rel))
+                  if source.suffix.lower() == ".css":
+                      css = source.read_text(encoding="utf-8", errors="replace")
+                      for match in re.finditer(r"url\(\s*(['\"]?)(.*?)\1\s*\)", css):
+                          value = match.group(2).strip()
+                          if value and not value.startswith("data:"):
+                              asset_queue.append((value, source))
+
+          # Preserve the generated JS/CSS/font bundle, but not the archive image directory.
+          astro_assets = dist / "_astro"
+          if astro_assets.exists():
+              for asset in astro_assets.rglob("*"):
+                  if asset.is_file():
+                      copy_file(asset)
+
+          for page in pages:
+              copy_file(page)
+              parser = Assets()
+              parser.feed(page.read_text(encoding="utf-8", errors="replace"))
+              for url in parser.urls:
+                  source = local_source(url, page.relative_to(dist))
+                  if source is not None:
+                      asset_queue.append((url, page))
+
+          # Copy only page-referenced public assets and CSS url() dependencies.
+          visited_urls = set()
+          while asset_queue:
+              url, origin = asset_queue.pop()
+              key = (url, str(origin))
+              if key in visited_urls:
+                  continue
+              visited_urls.add(key)
+              source = local_source(url, origin.relative_to(dist) if origin.is_relative_to(dist) else Path("."))
+              if source is None:
+                  continue
+              if source.is_dir():
+                  continue
+              before = len(copied)
+              copy_file(source)
+              # copy_file scans CSS and appends any CSS dependencies to asset_queue.
+          
+          manifest = {
+              "purpose": "Non-deployed diagnostic subset; not a deployable full-site build.",
+              "source": "dist/ generated by the successful Astro + Pagefind build",
+              "base_path": base,
+              "journal_pages": [str(p.relative_to(dist)) for p in pages],
+              "journal_page_count": len(pages),
+              "copied_asset_count": len(copied) - len(pages),
+              "copied_file_count": len(copied),
+              "copied_bytes": sum((site / base.lstrip("/") / rel).stat().st_size for rel in copied),
+              "missing_referenced_files": sorted(missing),
+              "archive_images_copied": sum(1 for rel in copied if rel.startswith("images/archive/")),
+              "note": "Only images referenced by the selected Journal pages are included; the full dist artifact remains unchanged."
+          }
+          (output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+          print(json.dumps(manifest, indent=2))
+          if missing:
+              raise SystemExit(f"{len(missing)} referenced files were missing; inspect manifest.json")
+          PY
+
+      - name: Upload compact Journal diagnostic artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: journal-diagnostic-site
+          path: journal-diagnostic/
+          if-no-files-found: error
+          retention-days: 7
+
       - name: Upload non-deployed Preview site artifact
         uses: actions/upload-artifact@v4
         with:
