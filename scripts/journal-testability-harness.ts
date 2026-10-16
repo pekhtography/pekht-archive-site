@@ -10,6 +10,8 @@ type Stage = "DISCOVER" | "MONTAGE" | "TEST" | "TITLE";
 type QueueItem = { stage: Stage; response: unknown };
 
 const SOURCE_IDS = ["source-a", "source-b", "source-c", "source-d", "source-e", "source-f", "source-g"];
+const LONG_MARKDOWN =
+  "One quiet signal moves through the archive and gathers several small details into a single continuous thought that changes its meaning before the final image arrives.";
 
 function stageFor(schema: unknown): Stage {
   const properties = (schema as { properties?: Record<string, unknown> }).properties ?? {};
