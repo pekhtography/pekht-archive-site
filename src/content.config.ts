@@ -14,6 +14,7 @@ export const collections = {
       tags: z.array(z.string()).optional().default([]),
       author: z.string().optional().default("Subhashis Hansda"),
       source_ids: z.array(z.string()).optional().default([]),
+      layout_algorithm_version: z.literal(1).optional(),
       facets: z.array(z.string()).optional().default([]),
       composition: z.array(
         z.union([
@@ -21,6 +22,7 @@ export const collections = {
             type: z.literal("source"),
             source_id: z.string(),
             text: z.string(),
+            image_side: z.enum(["left", "right"]).optional(),
           }),
           z.object({
             type: z.literal("bridge"),
