@@ -120,7 +120,7 @@ async function createEnvironment() {
     "",
     "Harness fixture for the fixed first Journal article.",
     "",
-  ].join("\\n"), "utf8");
+  ].join("\n"), "utf8");
 
   for (let i = 0; i < SOURCE_IDS.length; i += 1) {
     const id = SOURCE_IDS[i];
