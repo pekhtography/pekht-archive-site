@@ -63,7 +63,7 @@ TEXT PRESERVATION:
 - The text must remain coherent with images removed.
 
 COMPOSITION OUTPUT:
-Return a structured composition as well as the plain combined markdown.
+Return the structured composition as the single canonical representation of the completed Journal text.
 
 The composition must contain one source block for every selected source and may contain short bridge blocks between them.
 
