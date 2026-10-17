@@ -85,6 +85,87 @@ jobs:
           set -o pipefail
           pnpm build 2>&1 | tee -a journal-build.log
 
+      - name: Run real Chromium visual check for the Effigy article
+        if: success()
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/t15-browser /tmp/t15-browser-site/pekht-archive-site /tmp/t15-browser-results
+          cp -a dist/. /tmp/t15-browser-site/pekht-archive-site/
+          npm install --prefix /tmp/t15-browser playwright@1.56.1
+          /tmp/t15-browser/node_modules/.bin/playwright install --with-deps chromium
+          python3 -m http.server 4173 --directory /tmp/t15-browser-site >/tmp/t15-browser-http.log 2>&1 &
+          echo $! >/tmp/t15-browser-http.pid
+          trap 'kill "$(cat /tmp/t15-browser-http.pid)" 2>/dev/null || true' EXIT
+          for attempt in $(seq 1 30); do
+            if curl --fail --silent http://127.0.0.1:4173/pekht-archive-site/blog/16-10-2026-the-effigy-from-stitch-to-relic/ >/dev/null; then break; fi
+            sleep 1
+          done
+          node --input-type=module <<'NODE'
+          import { chromium } from "/tmp/t15-browser/node_modules/playwright/index.mjs";
+          import { writeFile } from "node:fs/promises";
+          const url = "http://127.0.0.1:4173/pekht-archive-site/blog/16-10-2026-the-effigy-from-stitch-to-relic/";
+          const browser = await chromium.launch({ headless: true });
+          const report = { url, viewports: [], errors: [] };
+          try {
+            for (const viewport of [{ name: "desktop", width: 1440, height: 1100 }, { name: "mobile", width: 390, height: 844 }]) {
+              const page = await browser.newPage({ viewport: { width: viewport.width, height: viewport.height }, deviceScaleFactor: 1 });
+              page.on("pageerror", error => report.errors.push(viewport.name + " pageerror: " + error.message));
+              page.on("console", message => { if (message.type() === "error") report.errors.push(viewport.name + " console: " + message.text()); });
+              await page.goto(url, { waitUntil: "networkidle", timeout: 60000 });
+              await page.locator("body").evaluate(async body => {
+                const step = Math.max(300, Math.floor(window.innerHeight * 0.8));
+                for (let y = 0; y < body.scrollHeight; y += step) {
+                  window.scrollTo(0, y);
+                  await new Promise(resolve => setTimeout(resolve, 100));
+                }
+                window.scrollTo(0, 0);
+                await new Promise(resolve => setTimeout(resolve, 500));
+              });
+              const data = await page.evaluate(() => ({
+                title: document.title,
+                h1: document.querySelector("h1")?.innerText ?? null,
+                bridges: [...document.querySelectorAll(".journal-bridge")].map(el => ({ text: el.innerText.trim(), textAlign: getComputedStyle(el).textAlign, width: Math.round(el.getBoundingClientRect().width) })),
+                images: [...document.querySelectorAll("main img, article img")].map(img => ({ src: img.currentSrc || img.src, loaded: img.complete && img.naturalWidth > 0, naturalWidth: img.naturalWidth, naturalHeight: img.naturalHeight })),
+                bodyWidth: document.body.scrollWidth,
+                viewportWidth: window.innerWidth
+              }));
+              await page.screenshot({ path: "/tmp/t15-browser-results/effigy-" + viewport.name + ".png", fullPage: true });
+              report.viewports.push({ ...viewport, ...data });
+              await page.close();
+            }
+          } finally {
+            await browser.close();
+          }
+          await writeFile("/tmp/t15-browser-results/report.json", JSON.stringify(report, null, 2) + "\n");
+          const issues = [];
+          if (report.viewports.length !== 2) issues.push("Both desktop and mobile viewports were not captured.");
+          for (const v of report.viewports) {
+            if (!v.h1) issues.push(v.name + ": missing h1");
+            if (v.bridges.length < 2) issues.push(v.name + ": expected at least two journal bridges, found " + v.bridges.length);
+            if (!v.images.length) issues.push(v.name + ": no article images found");
+            if (v.images.some(img => !img.loaded)) issues.push(v.name + ": one or more article images failed to load");
+            if (v.bodyWidth > v.viewportWidth) issues.push(v.name + ": horizontal overflow (" + v.bodyWidth + " > " + v.viewportWidth + ")");
+          }
+          if (report.errors.length) issues.push(...report.errors);
+          if (issues.length) {
+            console.error("T15 browser visual check failed:\n" + issues.join("\n"));
+            process.exitCode = 1;
+          } else {
+            console.log("T15 browser visual check passed: desktop/mobile screenshots, bridges, loaded article images, no horizontal overflow, no browser errors.");
+            for (const v of report.viewports) console.log(v.name + ": " + v.bridges.length + " bridges, " + v.images.length + " images, body width " + v.bodyWidth + "/" + v.viewportWidth);
+          }
+          NODE
+
+      - name: Upload T15 browser visual-check results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t15-effigy-browser-visual-check
+          path: /tmp/t15-browser-results/
+          if-no-files-found: warn
+          retention-days: 7
+
       - name: Package compact Journal visual-check artifact
         if: success()
         shell: bash
