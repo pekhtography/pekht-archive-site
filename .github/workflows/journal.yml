@@ -3,7 +3,7 @@ name: Journal
 on:
   workflow_dispatch:
   schedule:
-    - cron: "17 14 * * 5"
+    - cron: "27 18 * * 6"
 
 permissions:
   contents: write
