@@ -105,6 +105,7 @@ jobs:
             "11-10-2026-the-petunia-and-the-monolith",
             "14-10-2026-the-water-under-the-cathedral-of-ice",
             "15-10-2026-frost-s-ephemeral-cathedral",
+            "16-10-2026-the-effigy-from-stitch-to-relic",
           ];
           const assetExts = new Set([
             ".css", ".js", ".mjs", ".json", ".png", ".jpg", ".jpeg", ".webp",
