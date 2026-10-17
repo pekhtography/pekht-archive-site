@@ -605,6 +605,13 @@ export async function runJournal(options: JournalRunOptions = {}) {
       const compositionText = canonicalComposition
         .map((block) => block.text)
         .join("\n\n");
+      console.log("JOURNAL_MONTAGE_DIAGNOSTIC:", JSON.stringify({
+        candidate_id: selectedId,
+        revision_mode: lastRevisionInstruction.length > 0,
+        source_ids: uniqueMontageSourceIds,
+        composition_blocks: canonicalComposition.length,
+        composition_chars: compositionText.length,
+      }));
       const layoutState = await loadJournalLayoutState(blogDir);
       const articleNumber = layoutState.articleCount + 1;
       if (articleNumber < 2) throw new Error("JOURNAL_LAYOUT: article 1 has a fixed layout and must remain outside the 2x2 cycle.");
@@ -654,6 +661,17 @@ export async function runJournal(options: JournalRunOptions = {}) {
       );
 
       ensureBudget("TEST response");
+
+      console.log("JOURNAL_TASK3_DIAGNOSTIC:", JSON.stringify({
+        candidate_id: selectedId,
+        revision_mode: lastRevisionInstruction.length > 0,
+        verdict: task3?.verdict ?? "MISSING",
+        reason: typeof task3?.reason === "string" ? task3.reason.slice(0, 500) : "",
+        revision_instruction: typeof task3?.revision === "string" ? task3.revision.slice(0, 500) : "",
+        source_ids: uniqueMontageSourceIds,
+        composition_blocks: canonicalComposition.length,
+        composition_chars: compositionText.length,
+      }));
 
       if (task3.verdict === "STRONG") {
         const slugBase = String(
