@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3.27.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.27.0) | 2026-10-17
+
+### Features
+- publish Journal entry [9e9d961](https://github.com/pekhtography/pekht-archive-site/commit/9e9d961)
+### Other
+- schedule Journal weekly on Saturday [a47614f](https://github.com/pekhtography/pekht-archive-site/commit/a47614f)
+
 ## [v3.26.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.26.0) | 2026-10-16
 
 ### Features
