@@ -68,6 +68,7 @@ function montageResponse(candidateId = "candidate-a") {
       { type: "source", source_id: ids[1], text: `A fragment from ${ids[1]}.` },
       { type: "bridge", text: "Between signals, the meaning changes." },
       { type: "source", source_id: ids[2], text: `A fragment from ${ids[2]}.` },
+      { type: "bridge", text: "At the threshold, the signal becomes a choice." },
       { type: "source", source_id: ids[3], text: `A fragment from ${ids[3]}.` },
     ],
     reason: "",
@@ -761,8 +762,11 @@ async function main() {
         .join("\n\n");
       assert.equal(bodyMatch[1].trimEnd(), expectedBody,
         "Published body must be the ordered composition blocks separated by one blank line.");
-      assert.ok(bodyMatch[1].includes("Between signals, the meaning changes."),
-        "Published body omitted the bridge block.");
+      const firstBridge = bodyMatch[1].indexOf("Between signals, the meaning changes.");
+      const secondBridge = bodyMatch[1].indexOf("At the threshold, the signal becomes a choice.");
+      assert.ok(firstBridge >= 0, "Published body omitted the first bridge block.");
+      assert.ok(secondBridge >= 0, "Published body omitted the second bridge block.");
+      assert.ok(firstBridge < secondBridge, "Published body changed the order of bridge blocks.");
       assert.ok(published.includes('title: "A fragment from source-a. A fragment from source-b. Between signals,…'),
         "Title must be cut from the composition text, not a separate markdown field.");
       const montageSchema = result.requests.find((request) => request.stage === "MONTAGE")?.schema as
