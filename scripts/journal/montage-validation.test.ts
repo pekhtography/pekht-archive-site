@@ -13,7 +13,6 @@ function valid(overrides: Record<string, unknown> = {}) {
     title: "A title",
     description: "A description",
     source_ids: [...ids],
-    markdown: "A composed text.",
     composition: ids.map((source_id) => ({
       type: "source",
       source_id,
@@ -115,8 +114,13 @@ test("preserves T5 composition mismatch diagnostic and sorted symmetric differen
 test("blocks missing publication fields and invalid facets", () => {
   assert.equal(check(valid({ title: " " })).ok, false);
   assert.equal(check(valid({ description: "" })).ok, false);
-  assert.equal(check(valid({ markdown: "" })).ok, false);
   assert.equal(check(valid({ facets: ["", 42] })).ok, false);
+});
+
+test("accepts composition as the canonical text without markdown", () => {
+  const value = valid();
+  assert.equal("markdown" in value, false);
+  assert.equal(check(value).ok, true);
 });
 
 test("blocks candidate mismatch", () => {
