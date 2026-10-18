@@ -1,0 +1,67 @@
+name: Journal Scheduler
+
+on:
+  schedule:
+    - cron: "37 1 * * *"
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: journal-scheduler
+  cancel-in-progress: false
+
+jobs:
+  check-due:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check elapsed interval and dispatch Journal when due
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          runs="$(gh api "repos/${REPOSITORY}/actions/workflows/journal.yml/runs?per_page=100")"
+          latest="$(jq -c '[.workflow_runs[] | select(.head_branch == "main")] | sort_by(.run_number) | last // empty' <<< "$runs")"
+
+          if [[ -z "$latest" ]]; then
+            echo "No Journal run on main found; skipping automatic dispatch."
+            exit 0
+          fi
+
+          status="$(jq -r '.status' <<< "$latest")"
+          run_id="$(jq -r '.id' <<< "$latest")"
+          completed_at="$(jq -r '.completed_at // empty' <<< "$latest")"
+
+          if [[ "$status" != "completed" || -z "$completed_at" ]]; then
+            echo "Latest Journal run #$(jq -r '.run_number' <<< "$latest") is not completed; skipping to avoid overlapping runs."
+            exit 0
+          fi
+
+          # Map a stable hash of the last run ID uniformly to 5, 6, 7, or 8 days.
+          first_hex="$(printf '%s' "$run_id" | sha256sum | cut -c1)"
+          case "$first_hex" in
+            0|1|2|3) interval_days=5 ;;
+            4|5|6|7) interval_days=6 ;;
+            8|9|a|b) interval_days=7 ;;
+            c|d|e|f) interval_days=8 ;;
+          esac
+
+          completed_epoch="$(date -u -d "$completed_at" +%s)"
+          due_epoch=$((completed_epoch + interval_days * 86400))
+          now_epoch="$(date -u +%s)"
+
+          echo "Latest completed Journal run: #$(jq -r '.run_number' <<< "$latest") (run ID $run_id)"
+          echo "Selected interval: $interval_days full days"
+          echo "Due at: $(date -u -d "@$due_epoch" '+%Y-%m-%d %H:%M:%S UTC')"
+
+          if (( now_epoch < due_epoch )); then
+            echo "Interval has not elapsed; no dispatch."
+            exit 0
+          fi
+
+          echo "Interval elapsed; dispatching Journal on main."
+          gh workflow run journal.yml --ref main
