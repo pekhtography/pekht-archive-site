@@ -15,8 +15,8 @@ export async function getStaticPaths() {
     if (missingSources.length > 0) {
         const details = missingSources
             .map(({ articleId, sourceId }) => `- article="${articleId}" source_id="${sourceId}"`)
-            .join("\\n");
-        throw new Error(`Journal archive source validation failed during build:\\n${details}`);
+            .join("\n");
+        throw new Error(`Journal archive source validation failed during build:\n${details}`);
     }
     const legacySamples = items.filter(
         (item) =>
