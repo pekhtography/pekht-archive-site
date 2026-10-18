@@ -1,0 +1,63 @@
+name: Journal Scheduler
+
+on:
+  schedule:
+    - cron: "37 1 * * *"
+
+permissions:
+  actions: write
+  contents: read
+
+concurrency:
+  group: journal-scheduler
+  cancel-in-progress: false
+
+jobs:
+  check-due:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout scheduler logic
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Check elapsed interval and dispatch Journal when due
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPOSITORY: ${{ github.repository }}
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          runs="$(gh api "repos/${REPOSITORY}/actions/workflows/journal.yml/runs?branch=main&per_page=100")"
+          decision="$(printf '%s' "$runs" | node scripts/journal-scheduler.js)"
+
+          action="$(jq -r '.action' <<< "$decision")"
+          reason="$(jq -r '.reason' <<< "$decision")"
+          echo "Scheduler decision: $action ($reason)"
+
+          if [[ "$action" == "skip" ]]; then
+            echo "No dispatch: no eligible completed main run."
+            exit 0
+          fi
+
+          run_number="$(jq -r '.run_number' <<< "$decision")"
+          run_id="$(jq -r '.run_id' <<< "$decision")"
+          interval_days="$(jq -r '.interval_days' <<< "$decision")"
+          due_epoch="$(jq -r '.due_epoch' <<< "$decision")"
+          echo "Latest completed Journal run: #$run_number (run ID $run_id)"
+          echo "Selected interval: $interval_days full days"
+          echo "Due at: $(date -u -d "@$due_epoch" '+%Y-%m-%d %H:%M:%S UTC')"
+
+          if [[ "$action" == "wait" ]]; then
+            echo "Interval has not elapsed; no dispatch."
+            exit 0
+          fi
+
+          if [[ "$action" != "dispatch" ]]; then
+            echo "::error::Unexpected scheduler action: $action"
+            exit 1
+          fi
+
+          echo "Interval elapsed; dispatching Journal on main."
+          gh workflow run journal.yml --ref main
