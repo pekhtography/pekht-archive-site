@@ -4,10 +4,20 @@ import JournalComposition from "@/components/static/JournalComposition.astro";
 import IdLayout from "@/layouts/IdLayout.astro";
 import { getCollection, render } from "astro:content";
 import { parse } from "date-fns";
+import { findMissingJournalSources } from "@/lib/journal-source-validation";
 
 export async function getStaticPaths() {
     const items = await getCollection("blog");
+    const archiveItems = await getCollection("archive");
     const journalItems = items.filter((item) => !item.data.draft && item.data.category === "journal");
+    const missingSources = findMissingJournalSources(journalItems, archiveItems.map((item) => item.id));
+
+    if (missingSources.length > 0) {
+        const details = missingSources
+            .map(({ articleId, sourceId }) => `- article="${articleId}" source_id="${sourceId}"`)
+            .join("\n");
+        throw new Error(`Journal archive source validation failed during build:\n${details}`);
+    }
     const legacySamples = items.filter(
         (item) =>
             !item.data.draft &&
