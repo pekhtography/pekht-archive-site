@@ -1,20 +1,19 @@
 #!/usr/bin/env node
-"use strict";
+import { createHash } from "node:crypto";
+import { pathToFileURL } from "node:url";
 
-const crypto = require("node:crypto");
-
-function intervalFromHexNibble(nibble) {
+export function intervalFromHexNibble(nibble) {
   const value = String(nibble).toLowerCase();
   if (!/^[0-9a-f]$/.test(value)) throw new Error(`Invalid SHA-256 hex nibble: ${nibble}`);
   return 5 + Math.floor(parseInt(value, 16) / 4);
 }
 
-function intervalDaysForRunId(runId) {
-  const firstHex = crypto.createHash("sha256").update(String(runId)).digest("hex")[0];
+export function intervalDaysForRunId(runId) {
+  const firstHex = createHash("sha256").update(String(runId)).digest("hex")[0];
   return intervalFromHexNibble(firstHex);
 }
 
-function evaluateScheduler(runsPayload, nowEpoch = Math.floor(Date.now() / 1000)) {
+export function evaluateScheduler(runsPayload, nowEpoch = Math.floor(Date.now() / 1000)) {
   const runs = Array.isArray(runsPayload?.workflow_runs) ? runsPayload.workflow_runs : [];
   const latest = runs
     .filter((run) => run && run.head_branch === "main")
@@ -41,23 +40,18 @@ function evaluateScheduler(runsPayload, nowEpoch = Math.floor(Date.now() / 1000)
   return { action: "dispatch", reason: "interval-elapsed", ...common };
 }
 
-if (require.main === module) {
-  let input = "";
-  process.stdin.setEncoding("utf8");
-  process.stdin.on("data", (chunk) => { input += chunk; });
-  process.stdin.on("end", () => {
-    try {
-      const payload = JSON.parse(input);
-      const nowEpoch = process.env.SCHEDULER_NOW_EPOCH === undefined
-        ? Math.floor(Date.now() / 1000)
-        : Number(process.env.SCHEDULER_NOW_EPOCH);
-      if (!Number.isFinite(nowEpoch)) throw new Error("SCHEDULER_NOW_EPOCH must be a finite Unix timestamp");
-      process.stdout.write(JSON.stringify(evaluateScheduler(payload, nowEpoch)) + "\n");
-    } catch (error) {
-      process.stderr.write(`Journal scheduler error: ${error.message}\n`);
-      process.exitCode = 1;
-    }
-  });
+if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
+  try {
+    let input = "";
+    for await (const chunk of process.stdin) input += chunk;
+    const payload = JSON.parse(input);
+    const nowEpoch = process.env.SCHEDULER_NOW_EPOCH === undefined
+      ? Math.floor(Date.now() / 1000)
+      : Number(process.env.SCHEDULER_NOW_EPOCH);
+    if (!Number.isFinite(nowEpoch)) throw new Error("SCHEDULER_NOW_EPOCH must be a finite Unix timestamp");
+    process.stdout.write(JSON.stringify(evaluateScheduler(payload, nowEpoch)) + "\\n");
+  } catch (error) {
+    process.stderr.write(`Journal scheduler error: ${error.message}\\n`);
+    process.exitCode = 1;
+  }
 }
-
-module.exports = { intervalFromHexNibble, intervalDaysForRunId, evaluateScheduler };
