@@ -5,7 +5,10 @@ import { pathToFileURL } from "node:url";
 export function intervalFromHexNibble(nibble) {
   const value = String(nibble).toLowerCase();
   if (!/^[0-9a-f]$/.test(value)) throw new Error(`Invalid SHA-256 hex nibble: ${nibble}`);
-  return 5 + Math.floor(parseInt(value, 16) * 3 / 16);
+  const number = parseInt(value, 16);
+  if (number <= 4) return 5;
+  if (number <= 10) return 6;
+  return 7;
 }
 
 export function intervalDaysForRunId(runId) {
