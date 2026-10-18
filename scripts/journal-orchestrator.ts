@@ -149,7 +149,6 @@ function compactSnapshot(
     .map((p) =>
       [
         `SOURCE_ID: ${p.source_id}`,
-        `X_ID: ${p.x_id}`,
         `DATE: ${p.created_at}`,
         `TITLE: ${p.title}`,
         `HASHTAGS: ${p.hashtags.join(" ")}`,
