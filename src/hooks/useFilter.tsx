@@ -113,7 +113,12 @@ export function useFilter<T extends FilterType>(
       type === "blog"
         ? Array.from(
             new Set(items.flatMap(getItemFacets).filter(Boolean)),
-          ).sort()
+          ).sort((a, b) => {
+            const byAlphabet = a.localeCompare(b, undefined, {
+              sensitivity: "base",
+            });
+            return byAlphabet || a.localeCompare(b);
+          })
         : [],
     [items, type],
   );
