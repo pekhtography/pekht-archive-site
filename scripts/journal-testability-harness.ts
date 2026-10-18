@@ -281,6 +281,39 @@ async function main() {
   };
 
 
+  await run("S1 — discovery and montage snapshots omit X_ID without dropping archive fields", async () => {
+    const result = await execute([
+      { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      { stage: "MONTAGE", response: montageResponse() },
+      {
+        stage: "TEST",
+        response: {
+          verdict: "REVISION",
+          reason: "The seam needs one more pass.",
+          evidence: SOURCE_IDS.slice(0, 4),
+          revision: "Try the same source sequence with a different seam.",
+        },
+      },
+      { stage: "DISCOVER", response: noJournalResponse() },
+    ]);
+    try {
+      assert.equal(result.thrown, undefined);
+      const snapshotRequests = result.requests.filter(
+        (request) => request.stage === "DISCOVER" || request.stage === "MONTAGE",
+      );
+      assert.equal(snapshotRequests.length, 3, "Expected initial DISCOVER, MONTAGE, and return-to-DISCOVER requests.");
+      for (const request of snapshotRequests) {
+        assert.ok(request.prompt.includes("SOURCE_ID: source-a"), "Snapshot lost SOURCE_ID.");
+        assert.ok(request.prompt.includes("TITLE: Fixture source 1"), "Snapshot lost TITLE.");
+        assert.ok(request.prompt.includes("HASHTAGS: fixture journal"), "Snapshot lost HASHTAGS.");
+        assert.ok(request.prompt.includes("Fixture text for source-a"), "Snapshot lost source TEXT.");
+        assert.equal(request.prompt.includes("X_ID: x-1"), false, "Snapshot still includes X_ID.");
+      }
+    } finally {
+      await cleanup(result.root);
+    }
+  });
+
   // T8/T16 provider and controlled-budget acceptance scenarios.
   await run("T8.1 — request timeout retries the same model", async () => {
     let calls = 0;
