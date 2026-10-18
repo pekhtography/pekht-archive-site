@@ -1,12 +1,10 @@
-"use strict";
-
-const test = require("node:test");
-const assert = require("node:assert/strict");
-const {
+import test from "node:test";
+import assert from "node:assert/strict";
+import {
   intervalFromHexNibble,
   intervalDaysForRunId,
   evaluateScheduler,
-} = require("./journal-scheduler");
+} from "./journal-scheduler.js";
 
 const completedAt = "2026-01-01T00:00:00Z";
 const completedEpoch = Date.parse(completedAt) / 1000;
