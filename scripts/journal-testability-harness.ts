@@ -282,18 +282,14 @@ async function main() {
 
 
   await run("S1 — discovery and montage snapshots omit X_ID without dropping archive fields", async () => {
+    const invalidMontage = montageResponse();
+    invalidMontage.source_ids = [SOURCE_IDS[0], SOURCE_IDS[1], SOURCE_IDS[2], "not-in-snapshot"];
+    invalidMontage.composition = invalidMontage.source_ids.map((source_id) => ({
+      type: "source", source_id, text: `Fragment ${source_id}.`,
+    }));
     const result = await execute([
       { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
-      { stage: "MONTAGE", response: montageResponse() },
-      {
-        stage: "TEST",
-        response: {
-          verdict: "REVISION",
-          reason: "The seam needs one more pass.",
-          evidence: SOURCE_IDS.slice(0, 4),
-          revision: "Try the same source sequence with a different seam.",
-        },
-      },
+      { stage: "MONTAGE", response: invalidMontage },
       { stage: "DISCOVER", response: noJournalResponse() },
     ]);
     try {
