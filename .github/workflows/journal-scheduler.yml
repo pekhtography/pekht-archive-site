@@ -29,7 +29,7 @@ jobs:
         run: |
           set -euo pipefail
 
-          runs="$(gh api "repos/${REPOSITORY}/actions/workflows/journal.yml/runs?per_page=100")"
+          runs="$(gh api "repos/${REPOSITORY}/actions/workflows/journal.yml/runs?branch=main&per_page=100")"
           decision="$(printf '%s' "$runs" | node scripts/journal-scheduler.js)"
 
           action="$(jq -r '.action' <<< "$decision")"
