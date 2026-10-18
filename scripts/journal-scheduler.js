@@ -49,9 +49,9 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
       ? Math.floor(Date.now() / 1000)
       : Number(process.env.SCHEDULER_NOW_EPOCH);
     if (!Number.isFinite(nowEpoch)) throw new Error("SCHEDULER_NOW_EPOCH must be a finite Unix timestamp");
-    process.stdout.write(JSON.stringify(evaluateScheduler(payload, nowEpoch)) + "\\n");
+    process.stdout.write(JSON.stringify(evaluateScheduler(payload, nowEpoch)) + "\n");
   } catch (error) {
-    process.stderr.write(`Journal scheduler error: ${error.message}\\n`);
+    process.stderr.write(`Journal scheduler error: ${error.message}\n`);
     process.exitCode = 1;
   }
 }
