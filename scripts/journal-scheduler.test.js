@@ -18,7 +18,7 @@ const run = (overrides = {}) => ({
 });
 
 test("maps all SHA-256 hex nibbles to intervals 5–7 with a 5/6/5 split", () => {
-  const expected = "5555566666667777";
+  const expected = "5555566666677777";
   for (let i = 0; i < 16; i += 1) {
     assert.equal(intervalFromHexNibble(i.toString(16)), Number(expected[i]));
   }
