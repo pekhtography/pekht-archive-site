@@ -68,24 +68,14 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
     ) return;
 
     const setBounds = () => {
-      const cards = Array.from(list.children) as HTMLElement[];
       const listRect = list.getBoundingClientRect();
       const navRect = nav.getBoundingClientRect();
 
-      let left = listRect.left - navRect.left;
-      let right = listRect.right - navRect.left;
-
-      if (cards.length >= 3 && window.matchMedia("(min-width: 768px)").matches) {
-        const second = cards[1].getBoundingClientRect();
-        const third = cards[2].getBoundingClientRect();
-        const cardLeft = second.left - navRect.left;
-        const cardRight = third.right - navRect.left;
-
-        if (cardRight > cardLeft) {
-          left = cardLeft;
-          right = cardRight;
-        }
-      }
+      // Match Archive's centered navigation track; Journal cards are stacked vertically.
+      const contentLeft = listRect.left - navRect.left;
+      const contentWidth = listRect.width;
+      const left = contentLeft + contentWidth * 0.25;
+      const right = contentLeft + contentWidth * 0.75;
 
       nav.style.setProperty("--nav-left", `${(left / navRect.width) * 100}%`);
       nav.style.setProperty("--nav-right", `${(right / navRect.width) * 100}%`);
