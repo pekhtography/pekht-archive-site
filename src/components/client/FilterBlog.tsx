@@ -70,33 +70,19 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
     ) return;
 
     const setBounds = () => {
-      // Match Archive: derive endpoint positions from the content geometry,
-      // not from the Previous/Next controls or fixed percentages.
-      const cards = Array.from(list.children) as HTMLElement[];
       const navRect = nav.getBoundingClientRect();
-      const listRect = list.getBoundingClientRect();
+      if (navRect.width <= 0) return;
 
-      let left = listRect.left - navRect.left;
-      let right = listRect.right - navRect.left;
+      // Keep the pagination track centered and independent of the Previous/Next
+      // controls: 23% side zones, with the endpoint-to-endpoint track occupying
+      // the central 54% of the complete navigation frame.
+      const left = navRect.width * 0.23;
+      const right = navRect.width * 0.77;
 
-      // Journal is a single-column list, so use the actual card edges at every
-      // viewport width; Archive's desktop-only inner-column adjustment is
-      // specific to its four-column image grid.
-      if (cards.length > 0) {
-        const firstCard = cards[0].getBoundingClientRect();
-        const lastCard = cards[cards.length - 1].getBoundingClientRect();
-        if (lastCard.right > firstCard.left) {
-          left = firstCard.left - navRect.left;
-          right = lastCard.right - navRect.left;
-        }
-      }
-
-      nav.style.setProperty("--nav-left", `${(left / navRect.width) * 100}%`);
-      nav.style.setProperty("--nav-right", `${(right / navRect.width) * 100}%`);
-
-      // Same 44px line inset used by Archive.
-      nav.style.setProperty("--line-left", `${((left + 44) / navRect.width) * 100}%`);
-      nav.style.setProperty("--line-right", `${((right - 44) / navRect.width) * 100}%`);
+      nav.style.setProperty("--nav-left", "23%");
+      nav.style.setProperty("--nav-right", "77%");
+      nav.style.setProperty("--line-left", "23%");
+      nav.style.setProperty("--line-right", "77%");
       pageEngine.classList.remove("invisible");
     };
 
@@ -227,10 +213,10 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
           className="relative mt-7 flex min-h-16 items-center justify-between border border-border p-4"
           aria-label="Journal pages"
           style={{
-            "--nav-left": "0%",
-            "--nav-right": "100%",
-            "--line-left": "calc(0% + 44px)",
-            "--line-right": "calc(100% - 44px)",
+            "--nav-left": "23%",
+            "--nav-right": "77%",
+            "--line-left": "23%",
+            "--line-right": "77%",
           } as React.CSSProperties}
         >
           {currentPage > 1 ? (
