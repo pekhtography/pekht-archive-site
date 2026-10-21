@@ -80,14 +80,20 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       // controls so its endpoint squares and preview can never overlap them.
       const leftControlRect = leftControl.getBoundingClientRect();
       const rightControlRect = rightControl.getBoundingClientRect();
-      const sideInset = 24;
-      const left = Math.max(0, leftControlRect.right - navRect.left + sideInset);
-      const right = Math.min(navRect.width, rightControlRect.left - navRect.left - sideInset);
+
+      // Use the wider control on both sides so endpoint spacing stays symmetric
+      // on page 1 and later pages, when Previous and Next have different widths.
+      const leftControlWidth = leftControlRect.right - navRect.left;
+      const rightControlWidth = navRect.right - rightControlRect.left;
+      const sideInset = Math.max(leftControlWidth, rightControlWidth) + 8;
+      const left = sideInset;
+      const right = navRect.width - sideInset;
+      const lineInset = Math.min(44, Math.max(8, (right - left - 8) / 2));
 
       nav.style.setProperty("--nav-left", `${(left / navRect.width) * 100}%`);
       nav.style.setProperty("--nav-right", `${(right / navRect.width) * 100}%`);
-      nav.style.setProperty("--line-left", `${((left + 44) / navRect.width) * 100}%`);
-      nav.style.setProperty("--line-right", `${((right - 44) / navRect.width) * 100}%`);
+      nav.style.setProperty("--line-left", `${((left + lineInset) / navRect.width) * 100}%`);
+      nav.style.setProperty("--line-right", `${((right - lineInset) / navRect.width) * 100}%`);
       // Avoid showing the fallback 24%/76% track before measured bounds are ready.
       pageEngine.classList.remove("invisible");
     };
@@ -216,7 +222,7 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       {filteredAndSortedItems.length > 0 && (
         <nav
           ref={navRef}
-          className="relative mt-10 flex min-h-16 items-center justify-between border border-border p-4"
+          className="relative mt-7 flex min-h-16 items-center justify-between border border-border p-4"
           aria-label="Journal pages"
           style={{
             "--nav-left": "24%",
