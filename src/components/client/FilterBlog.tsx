@@ -76,9 +76,6 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       // Keep the pagination track centered and independent of the Previous/Next
       // controls: 23% side zones, with the endpoint-to-endpoint track occupying
       // the central 54% of the complete navigation frame.
-      const left = navRect.width * 0.23;
-      const right = navRect.width * 0.77;
-
       nav.style.setProperty("--nav-left", "23%");
       nav.style.setProperty("--nav-right", "77%");
       nav.style.setProperty("--line-left", "23%");
