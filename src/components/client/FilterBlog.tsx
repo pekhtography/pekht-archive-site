@@ -52,6 +52,7 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
     const currentTriangleBottom = currentTriangleBottomRef.current;
     const preview = previewRef.current;
     const list = listRef.current;
+    const pageEngine = nav?.querySelector<HTMLElement>(".journal-page-engine");
 
     if (
       !nav ||
@@ -64,7 +65,8 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       !currentTriangleTop ||
       !currentTriangleBottom ||
       !preview ||
-      !list
+      !list ||
+      !pageEngine
     ) return;
 
     const setBounds = () => {
@@ -86,6 +88,8 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       nav.style.setProperty("--nav-right", `${(right / navRect.width) * 100}%`);
       nav.style.setProperty("--line-left", `${((left + 44) / navRect.width) * 100}%`);
       nav.style.setProperty("--line-right", `${((right - 44) / navRect.width) * 100}%`);
+      // Avoid showing the fallback 24%/76% track before measured bounds are ready.
+      pageEngine.classList.remove("invisible");
     };
 
     const setPassive = () => {
@@ -230,7 +234,7 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
             </button>
           ) : <span className="size-8" />}
 
-          <div className="absolute inset-y-0 left-0 right-0">
+          <div className="journal-page-engine invisible absolute inset-y-0 left-0 right-0">
             <div className="pointer-events-none absolute left-[var(--line-left)] right-[calc(100%-var(--line-right))] top-1/2 h-px -translate-y-1/2 bg-foreground/35" />
             <a ref={firstEndpointRef} href="#page-1" aria-label="Journal page 1" className="archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"><span className="sr-only">1</span></a>
             <a ref={lastEndpointRef} href={`#page-${lastPage}`} aria-label={`Journal page ${lastPage}`} className="archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"><span className="sr-only">{lastPage}</span></a>
