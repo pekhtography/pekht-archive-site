@@ -70,31 +70,33 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
     ) return;
 
     const setBounds = () => {
+      // Match Archive: derive endpoint positions from the content geometry,
+      // not from the Previous/Next controls or fixed percentages.
+      const cards = Array.from(list.children) as HTMLElement[];
       const navRect = nav.getBoundingClientRect();
-      const leftControl = nav.children[0];
-      const rightControl = nav.children[nav.children.length - 1];
+      const listRect = list.getBoundingClientRect();
 
-      if (!(leftControl instanceof HTMLElement) || !(rightControl instanceof HTMLElement)) return;
+      let left = listRect.left - navRect.left;
+      let right = listRect.right - navRect.left;
 
-      // Keep the page track inside the space between the Previous and Next
-      // controls so its endpoint squares and preview can never overlap them.
-      const leftControlRect = leftControl.getBoundingClientRect();
-      const rightControlRect = rightControl.getBoundingClientRect();
-
-      // Use the wider control on both sides so endpoint spacing stays symmetric
-      // on page 1 and later pages, when Previous and Next have different widths.
-      const leftControlWidth = leftControlRect.right - navRect.left;
-      const rightControlWidth = navRect.right - rightControlRect.left;
-      const sideInset = Math.max(leftControlWidth, rightControlWidth) + 8;
-      const left = sideInset;
-      const right = navRect.width - sideInset;
-      const lineInset = Math.min(44, Math.max(8, (right - left - 8) / 2));
+      // Journal is a single-column list, so use the actual card edges at every
+      // viewport width; Archive's desktop-only inner-column adjustment is
+      // specific to its four-column image grid.
+      if (cards.length > 0) {
+        const firstCard = cards[0].getBoundingClientRect();
+        const lastCard = cards[cards.length - 1].getBoundingClientRect();
+        if (lastCard.right > firstCard.left) {
+          left = firstCard.left - navRect.left;
+          right = lastCard.right - navRect.left;
+        }
+      }
 
       nav.style.setProperty("--nav-left", `${(left / navRect.width) * 100}%`);
       nav.style.setProperty("--nav-right", `${(right / navRect.width) * 100}%`);
-      nav.style.setProperty("--line-left", `${((left + lineInset) / navRect.width) * 100}%`);
-      nav.style.setProperty("--line-right", `${((right - lineInset) / navRect.width) * 100}%`);
-      // Avoid showing the fallback 24%/76% track before measured bounds are ready.
+
+      // Same 44px line inset used by Archive.
+      nav.style.setProperty("--line-left", `${((left + 44) / navRect.width) * 100}%`);
+      nav.style.setProperty("--line-right", `${((right - 44) / navRect.width) * 100}%`);
       pageEngine.classList.remove("invisible");
     };
 
@@ -225,10 +227,10 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
           className="relative mt-7 flex min-h-16 items-center justify-between border border-border p-4"
           aria-label="Journal pages"
           style={{
-            "--nav-left": "24%",
-            "--nav-right": "76%",
-            "--line-left": "calc(24% + 44px)",
-            "--line-right": "calc(76% - 44px)",
+            "--nav-left": "0%",
+            "--nav-right": "100%",
+            "--line-left": "calc(0% + 44px)",
+            "--line-right": "calc(100% - 44px)",
           } as React.CSSProperties}
         >
           {currentPage > 1 ? (
