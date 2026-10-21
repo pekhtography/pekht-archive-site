@@ -52,6 +52,7 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
     const currentTriangleBottom = currentTriangleBottomRef.current;
     const preview = previewRef.current;
     const list = listRef.current;
+    const pageEngine = nav?.querySelector<HTMLElement>(".journal-page-engine");
 
     if (
       !nav ||
@@ -64,33 +65,31 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       !currentTriangleTop ||
       !currentTriangleBottom ||
       !preview ||
-      !list
+      !list ||
+      !pageEngine
     ) return;
 
     const setBounds = () => {
-      const cards = Array.from(list.children) as HTMLElement[];
-      const listRect = list.getBoundingClientRect();
       const navRect = nav.getBoundingClientRect();
+      const leftControl = nav.children[0];
+      const rightControl = nav.children[nav.children.length - 1];
 
-      let left = listRect.left - navRect.left;
-      let right = listRect.right - navRect.left;
+      if (!(leftControl instanceof HTMLElement) || !(rightControl instanceof HTMLElement)) return;
 
-      if (cards.length >= 3 && window.matchMedia("(min-width: 768px)").matches) {
-        const second = cards[1].getBoundingClientRect();
-        const third = cards[2].getBoundingClientRect();
-        const cardLeft = second.left - navRect.left;
-        const cardRight = third.right - navRect.left;
-
-        if (cardRight > cardLeft) {
-          left = cardLeft;
-          right = cardRight;
-        }
-      }
+      // Keep the page track inside the space between the Previous and Next
+      // controls so its endpoint squares and preview can never overlap them.
+      const leftControlRect = leftControl.getBoundingClientRect();
+      const rightControlRect = rightControl.getBoundingClientRect();
+      const sideInset = 24;
+      const left = Math.max(0, leftControlRect.right - navRect.left + sideInset);
+      const right = Math.min(navRect.width, rightControlRect.left - navRect.left - sideInset);
 
       nav.style.setProperty("--nav-left", `${(left / navRect.width) * 100}%`);
       nav.style.setProperty("--nav-right", `${(right / navRect.width) * 100}%`);
       nav.style.setProperty("--line-left", `${((left + 44) / navRect.width) * 100}%`);
       nav.style.setProperty("--line-right", `${((right - 44) / navRect.width) * 100}%`);
+      // Avoid showing the fallback 24%/76% track before measured bounds are ready.
+      pageEngine.classList.remove("invisible");
     };
 
     const setPassive = () => {
@@ -101,8 +100,8 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       currentTriangleBottom.classList.add("opacity-0");
       firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-foreground/45 bg-foreground/25 transition-all duration-200";
       lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-foreground/45 bg-foreground/25 transition-all duration-200";
-      firstEndpoint.textContent = "";
-      lastEndpoint.textContent = "";
+      firstEndpoint.innerHTML = '<span class="sr-only">1</span>';
+      lastEndpoint.innerHTML = `<span class="sr-only">${lastPage}</span>`;
     };
 
     const setActive = () => {
@@ -235,15 +234,15 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
             </button>
           ) : <span className="size-8" />}
 
-          <div className="absolute inset-y-0 left-0 right-0">
+          <div className="journal-page-engine invisible absolute inset-y-0 left-0 right-0">
             <div className="pointer-events-none absolute left-[var(--line-left)] right-[calc(100%-var(--line-right))] top-1/2 h-px -translate-y-1/2 bg-foreground/35" />
-            <a ref={firstEndpointRef} href="#page-1" aria-label="Journal page 1" className="archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none">1</a>
-            <a ref={lastEndpointRef} href={`#page-${lastPage}`} aria-label={`Journal page ${lastPage}`} className="archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none">{lastPage}</a>
+            <a ref={firstEndpointRef} href="#page-1" aria-label="Journal page 1" className="archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"><span className="sr-only">1</span></a>
+            <a ref={lastEndpointRef} href={`#page-${lastPage}`} aria-label={`Journal page ${lastPage}`} className="archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"><span className="sr-only">{lastPage}</span></a>
             <div ref={currentMarkerRef} className="pointer-events-none absolute left-0 top-1/2 z-10 size-0 -translate-y-1/2" style={{ left: `calc(var(--line-left) + (var(--line-right) - var(--line-left)) * ${lastPage === 1 ? 0 : (currentPage - 1) / (lastPage - 1)})` }}>
               <span ref={currentNumberRef} className="absolute left-1/2 top-1/2 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground transition-all duration-200">{currentPage}</span>
               <span ref={currentDotRef} className="absolute left-1/2 top-1/2 z-10 size-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground opacity-0 transition-opacity duration-200" />
-              <span ref={currentTriangleTopRef} className="absolute left-1/2 top-[calc(50%-10px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-t-[6px] border-t-foreground/60 opacity-0" />
-              <span ref={currentTriangleBottomRef} className="absolute left-1/2 top-[calc(50%+4px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-b-[6px] border-b-foreground/60 opacity-0" />
+              <span ref={currentTriangleTopRef} className="absolute left-1/2 top-[calc(50%-10px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-t-[6px] border-t-foreground/60 opacity-0 transition-opacity duration-200" />
+              <span ref={currentTriangleBottomRef} className="absolute left-1/2 top-[calc(50%+4px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-b-[6px] border-b-foreground/60 opacity-0 transition-opacity duration-200" />
             </div>
             <a ref={previewRef} href="#page-1" aria-label="Preview Journal page 1" className="pointer-events-none absolute top-1/2 z-20 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground opacity-0 shadow-xs transition-opacity duration-200">1</a>
             <div ref={hitAreaRef} className="absolute inset-y-0 cursor-pointer touch-none" style={{ left: "var(--line-left)", right: "calc(100% - var(--line-right))" }} aria-hidden="true" />
