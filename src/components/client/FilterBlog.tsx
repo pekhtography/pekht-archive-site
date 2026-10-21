@@ -101,8 +101,8 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       currentTriangleBottom.classList.add("opacity-0");
       firstEndpoint.className = "archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-foreground/45 bg-foreground/25 transition-all duration-200";
       lastEndpoint.className = "archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-foreground/45 bg-foreground/25 transition-all duration-200";
-      firstEndpoint.textContent = "";
-      lastEndpoint.textContent = "";
+      firstEndpoint.innerHTML = '<span class="sr-only">1</span>';
+      lastEndpoint.innerHTML = `<span class="sr-only">${lastPage}</span>`;
     };
 
     const setActive = () => {
@@ -237,8 +237,8 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
 
           <div className="absolute inset-y-0 left-0 right-0">
             <div className="pointer-events-none absolute left-[var(--line-left)] right-[calc(100%-var(--line-right))] top-1/2 h-px -translate-y-1/2 bg-foreground/35" />
-            <a ref={firstEndpointRef} href="#page-1" aria-label="Journal page 1" className="archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none">1</a>
-            <a ref={lastEndpointRef} href={`#page-${lastPage}`} aria-label={`Journal page ${lastPage}`} className="archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none">{lastPage}</a>
+            <a ref={firstEndpointRef} href="#page-1" aria-label="Journal page 1" className="archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"><span className="sr-only">1</span></a>
+            <a ref={lastEndpointRef} href={`#page-${lastPage}`} aria-label={`Journal page ${lastPage}`} className="archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"><span className="sr-only">{lastPage}</span></a>
             <div ref={currentMarkerRef} className="pointer-events-none absolute left-0 top-1/2 z-10 size-0 -translate-y-1/2" style={{ left: `calc(var(--line-left) + (var(--line-right) - var(--line-left)) * ${lastPage === 1 ? 0 : (currentPage - 1) / (lastPage - 1)})` }}>
               <span ref={currentNumberRef} className="absolute left-1/2 top-1/2 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground transition-all duration-200">{currentPage}</span>
               <span ref={currentDotRef} className="absolute left-1/2 top-1/2 z-10 size-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground opacity-0 transition-opacity duration-200" />
