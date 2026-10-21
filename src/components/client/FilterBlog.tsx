@@ -71,11 +71,14 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       const listRect = list.getBoundingClientRect();
       const navRect = nav.getBoundingClientRect();
 
-      // Match Archive's centered navigation track; Journal cards are stacked vertically.
+      // Mirror Archive's bounds: full content width on mobile, the two middle
+      // columns' span on desktop. Journal is a single column, so calculate that
+      // same four-column span from the list width instead of measuring cards.
       const contentLeft = listRect.left - navRect.left;
       const contentWidth = listRect.width;
-      const left = contentLeft + contentWidth * 0.25;
-      const right = contentLeft + contentWidth * 0.75;
+      const desktop = window.matchMedia("(min-width: 768px)").matches;
+      const left = contentLeft + (desktop ? contentWidth * 0.25 + 6 : 0);
+      const right = contentLeft + (desktop ? contentWidth * 0.75 - 6 : contentWidth);
 
       nav.style.setProperty("--nav-left", `${(left / navRect.width) * 100}%`);
       nav.style.setProperty("--nav-right", `${(right / navRect.width) * 100}%`);
@@ -232,8 +235,8 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
             <div ref={currentMarkerRef} className="pointer-events-none absolute left-0 top-1/2 z-10 size-0 -translate-y-1/2" style={{ left: `calc(var(--line-left) + (var(--line-right) - var(--line-left)) * ${lastPage === 1 ? 0 : (currentPage - 1) / (lastPage - 1)})` }}>
               <span ref={currentNumberRef} className="absolute left-1/2 top-1/2 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground transition-all duration-200">{currentPage}</span>
               <span ref={currentDotRef} className="absolute left-1/2 top-1/2 z-10 size-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground opacity-0 transition-opacity duration-200" />
-              <span ref={currentTriangleTopRef} className="absolute left-1/2 top-[calc(50%-10px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-t-[6px] border-t-foreground/60 opacity-0" />
-              <span ref={currentTriangleBottomRef} className="absolute left-1/2 top-[calc(50%+4px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-b-[6px] border-b-foreground/60 opacity-0" />
+              <span ref={currentTriangleTopRef} className="absolute left-1/2 top-[calc(50%-10px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-t-[6px] border-t-foreground/60 opacity-0 transition-opacity duration-200" />
+              <span ref={currentTriangleBottomRef} className="absolute left-1/2 top-[calc(50%+4px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-b-[6px] border-b-foreground/60 opacity-0 transition-opacity duration-200" />
             </div>
             <a ref={previewRef} href="#page-1" aria-label="Preview Journal page 1" className="pointer-events-none absolute top-1/2 z-20 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground opacity-0 shadow-xs transition-opacity duration-200">1</a>
             <div ref={hitAreaRef} className="absolute inset-y-0 cursor-pointer touch-none" style={{ left: "var(--line-left)", right: "calc(100% - var(--line-right))" }} aria-hidden="true" />
