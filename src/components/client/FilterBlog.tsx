@@ -70,13 +70,33 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
     ) return;
 
     const setBounds = () => {
-      // Keep the page endpoints at exactly 25% and 75% of the full navigation
-      // width on every page; the central track occupies the remaining 50%.
-      nav.style.setProperty("--nav-left", "25%");
-      nav.style.setProperty("--nav-right", "75%");
-      nav.style.setProperty("--line-left", "calc(25% + 44px)");
-      nav.style.setProperty("--line-right", "calc(75% - 44px)");
-      // Avoid showing the fallback track before the fixed bounds are applied.
+      // Match Archive: derive endpoint positions from the content geometry,
+      // not from the Previous/Next controls or fixed percentages.
+      const cards = Array.from(list.children) as HTMLElement[];
+      const navRect = nav.getBoundingClientRect();
+      const listRect = list.getBoundingClientRect();
+
+      let left = listRect.left - navRect.left;
+      let right = listRect.right - navRect.left;
+
+      // Journal is a single-column list, so use the actual card edges at every
+      // viewport width; Archive's desktop-only inner-column adjustment is
+      // specific to its four-column image grid.
+      if (cards.length > 0) {
+        const firstCard = cards[0].getBoundingClientRect();
+        const lastCard = cards[cards.length - 1].getBoundingClientRect();
+        if (lastCard.right > firstCard.left) {
+          left = firstCard.left - navRect.left;
+          right = lastCard.right - navRect.left;
+        }
+      }
+
+      nav.style.setProperty("--nav-left", `${(left / navRect.width) * 100}%`);
+      nav.style.setProperty("--nav-right", `${(right / navRect.width) * 100}%`);
+
+      // Same 44px line inset used by Archive.
+      nav.style.setProperty("--line-left", `${((left + 44) / navRect.width) * 100}%`);
+      nav.style.setProperty("--line-right", `${((right - 44) / navRect.width) * 100}%`);
       pageEngine.classList.remove("invisible");
     };
 
@@ -207,10 +227,10 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
           className="relative mt-7 flex min-h-16 items-center justify-between border border-border p-4"
           aria-label="Journal pages"
           style={{
-            "--nav-left": "25%",
-            "--nav-right": "75%",
-            "--line-left": "calc(25% + 44px)",
-            "--line-right": "calc(75% - 44px)",
+            "--nav-left": "0%",
+            "--nav-right": "100%",
+            "--line-left": "calc(0% + 44px)",
+            "--line-right": "calc(100% - 44px)",
           } as React.CSSProperties}
         >
           {currentPage > 1 ? (
