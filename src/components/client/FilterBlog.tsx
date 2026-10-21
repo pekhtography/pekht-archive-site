@@ -70,31 +70,13 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
     ) return;
 
     const setBounds = () => {
-      const navRect = nav.getBoundingClientRect();
-      const leftControl = nav.children[0];
-      const rightControl = nav.children[nav.children.length - 1];
-
-      if (!(leftControl instanceof HTMLElement) || !(rightControl instanceof HTMLElement)) return;
-
-      // Keep the page track inside the space between the Previous and Next
-      // controls so its endpoint squares and preview can never overlap them.
-      const leftControlRect = leftControl.getBoundingClientRect();
-      const rightControlRect = rightControl.getBoundingClientRect();
-
-      // Use the wider control on both sides so endpoint spacing stays symmetric
-      // on page 1 and later pages, when Previous and Next have different widths.
-      const leftControlWidth = leftControlRect.right - navRect.left;
-      const rightControlWidth = navRect.right - rightControlRect.left;
-      const sideInset = Math.max(leftControlWidth, rightControlWidth) + 8;
-      const left = sideInset;
-      const right = navRect.width - sideInset;
-      const lineInset = Math.min(44, Math.max(8, (right - left - 8) / 2));
-
-      nav.style.setProperty("--nav-left", `${(left / navRect.width) * 100}%`);
-      nav.style.setProperty("--nav-right", `${(right / navRect.width) * 100}%`);
-      nav.style.setProperty("--line-left", `${((left + lineInset) / navRect.width) * 100}%`);
-      nav.style.setProperty("--line-right", `${((right - lineInset) / navRect.width) * 100}%`);
-      // Avoid showing the fallback 24%/76% track before measured bounds are ready.
+      // Keep the page endpoints at exactly 25% and 75% of the full navigation
+      // width on every page; the central track occupies the remaining 50%.
+      nav.style.setProperty("--nav-left", "25%");
+      nav.style.setProperty("--nav-right", "75%");
+      nav.style.setProperty("--line-left", "calc(25% + 44px)");
+      nav.style.setProperty("--line-right", "calc(75% - 44px)");
+      // Avoid showing the fallback track before the fixed bounds are applied.
       pageEngine.classList.remove("invisible");
     };
 
@@ -225,10 +207,10 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
           className="relative mt-7 flex min-h-16 items-center justify-between border border-border p-4"
           aria-label="Journal pages"
           style={{
-            "--nav-left": "24%",
-            "--nav-right": "76%",
-            "--line-left": "calc(24% + 44px)",
-            "--line-right": "calc(76% - 44px)",
+            "--nav-left": "25%",
+            "--nav-right": "75%",
+            "--line-left": "calc(25% + 44px)",
+            "--line-right": "calc(75% - 44px)",
           } as React.CSSProperties}
         >
           {currentPage > 1 ? (
