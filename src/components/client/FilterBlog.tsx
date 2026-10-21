@@ -68,17 +68,19 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
     ) return;
 
     const setBounds = () => {
-      const listRect = list.getBoundingClientRect();
       const navRect = nav.getBoundingClientRect();
+      const leftControl = nav.children[0];
+      const rightControl = nav.children[nav.children.length - 1];
 
-      // Mirror Archive's bounds: full content width on mobile, the two middle
-      // columns' span on desktop. Journal is a single column, so calculate that
-      // same four-column span from the list width instead of measuring cards.
-      const contentLeft = listRect.left - navRect.left;
-      const contentWidth = listRect.width;
-      const desktop = window.matchMedia("(min-width: 768px)").matches;
-      const left = contentLeft + (desktop ? contentWidth * 0.25 + 6 : 0);
-      const right = contentLeft + (desktop ? contentWidth * 0.75 - 6 : contentWidth);
+      if (!(leftControl instanceof HTMLElement) || !(rightControl instanceof HTMLElement)) return;
+
+      // Keep the page track inside the space between the Previous and Next
+      // controls so its endpoint squares and preview can never overlap them.
+      const leftControlRect = leftControl.getBoundingClientRect();
+      const rightControlRect = rightControl.getBoundingClientRect();
+      const sideInset = 24;
+      const left = Math.max(0, leftControlRect.right - navRect.left + sideInset);
+      const right = Math.min(navRect.width, rightControlRect.left - navRect.left - sideInset);
 
       nav.style.setProperty("--nav-left", `${(left / navRect.width) * 100}%`);
       nav.style.setProperty("--nav-right", `${(right / navRect.width) * 100}%`);
