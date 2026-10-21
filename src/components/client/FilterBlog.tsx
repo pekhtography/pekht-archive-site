@@ -73,13 +73,12 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       const navRect = nav.getBoundingClientRect();
       if (navRect.width <= 0) return;
 
-      // Keep the pagination track centered and independent of the Previous/Next
-      // controls: 23% side zones, with the endpoint-to-endpoint track occupying
-      // the central 54% of the complete navigation frame.
+      // Match Archive: endpoint dots stay at 23%/77%, while the line is inset
+      // by 44px from each endpoint.
       nav.style.setProperty("--nav-left", "23%");
       nav.style.setProperty("--nav-right", "77%");
-      nav.style.setProperty("--line-left", "23%");
-      nav.style.setProperty("--line-right", "77%");
+      nav.style.setProperty("--line-left", "calc(23% + 44px)");
+      nav.style.setProperty("--line-right", "calc(77% - 44px)");
       pageEngine.classList.remove("invisible");
     };
 
@@ -212,8 +211,8 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
           style={{
             "--nav-left": "23%",
             "--nav-right": "77%",
-            "--line-left": "23%",
-            "--line-right": "77%",
+            "--line-left": "calc(23% + 44px)",
+            "--line-right": "calc(77% - 44px)",
           } as React.CSSProperties}
         >
           {currentPage > 1 ? (
