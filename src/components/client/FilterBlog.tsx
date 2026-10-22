@@ -1,6 +1,7 @@
 "use client";
 
 import * as React from "react";
+import { createPortal } from "react-dom";
 import { BlogCard } from "@/components/client/BlogCard";
 import type { blogConfig } from "@/lib/types";
 import { FilterControls, useFilter } from "@/hooks/useFilter";
@@ -12,6 +13,11 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
   const filter = useFilter(items, "blog");
   const { filteredAndSortedItems } = filter;
   const [page, setPage] = React.useState(1);
+  const [paginationTarget, setPaginationTarget] = React.useState<HTMLElement | null>(null);
+
+  React.useEffect(() => {
+    setPaginationTarget(document.getElementById("journal-pagination-root"));
+  }, []);
 
   React.useEffect(() => {
     setPage(1);
@@ -185,7 +191,7 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       hitArea.removeEventListener("pointercancel", onPointerCancel);
       hitArea.removeEventListener("click", onPointerClick);
     };
-  }, [currentPage, lastPage]);
+  }, [currentPage, lastPage, paginationTarget]);
 
   return (
     <div className="flex flex-col gap-3 animation">
@@ -203,10 +209,10 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
         </div>
       )}
 
-      {filteredAndSortedItems.length > 0 && (
+      {filteredAndSortedItems.length > 0 && paginationTarget && createPortal(
         <nav
           ref={navRef}
-          className="relative mt-7 flex min-h-16 items-center justify-between border border-border p-4"
+          className="relative mt-10 flex min-h-16 items-center justify-between border border-border p-4"
           aria-label="Journal pages"
           style={{
             "--nav-left": "23%",
@@ -246,7 +252,8 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
               </span>
             </button>
           ) : <span className="size-8" />}
-        </nav>
+        </nav>,
+        paginationTarget,
       )}
     </div>
   );
