@@ -70,110 +70,7 @@ const pageUrl = (pageNumber: number) =>
             }
         </div>
 
-        <nav
-            id="archive-pagination"
-            class="relative mt-10 flex min-h-16 items-center justify-between border border-border p-4"
-            aria-label="Archive pages"
-            data-current-page={currentPage}
-            data-last-page={lastPage}
-        >
-            {
-                page.url.prev ? (
-                    <a
-                        href={page.url.prev}
-                        aria-label="Previous archive page"
-                        class="group z-20 inline-flex items-center gap-2"
-                    >
-                        <span class="inline-flex size-8 shrink-0 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background shadow-xs group-hover:bg-muted group-hover:text-foreground transition-all active:scale-95">
-                            <RiArrowLeftSLine className="size-5 fill-muted-foreground" />
-                        </span>
-                        <span class="pointer-events-none text-sm text-muted-foreground opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all">
-                            previous
-                        </span>
-                    </a>
-                ) : (
-                    <span class="size-8" />
-                )
-            }
 
-            <div
-                id="archive-page-engine"
-                class="absolute inset-y-0 left-0 right-0"
-                style="--nav-left: 24%; --nav-right: 76%; --line-left: calc(24% + 44px); --line-right: calc(76% - 44px);"
-            >
-                <div
-                    class="pointer-events-none absolute left-[var(--line-left)] right-[calc(100%-var(--line-right))] top-1/2 h-px -translate-y-1/2 bg-foreground/35"
-                    aria-hidden="true"
-                ></div>
-
-                <a
-                    id="archive-page-first"
-                    href={pageUrl(1)}
-                    aria-label="Archive page 1"
-                    class="archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"
-                >
-                    <span class="sr-only">1</span>
-                </a>
-
-                <a
-                    id="archive-page-last"
-                    href={pageUrl(lastPage)}
-                    aria-label={`Archive page ${lastPage}`}
-                    class="archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"
-                >
-                    <span class="sr-only">{lastPage}</span>
-                </a>
-
-                <div
-                    id="archive-page-current"
-                    class="pointer-events-none absolute left-0 top-1/2 z-10 size-0 -translate-y-1/2"
-                    style={`left: calc(var(--line-left) + (var(--line-right) - var(--line-left)) * ${lastPage === 1 ? 0 : (currentPage - 1) / (lastPage - 1)});`}
-                    aria-hidden="true"
-                >
-                    <span id="archive-page-current-number" class="absolute left-1/2 top-1/2 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground transition-all duration-200">
-                        {currentPage}
-                    </span>
-                    <span id="archive-page-current-dot" class="archive-page-current-dot absolute left-1/2 top-1/2 z-10 size-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground opacity-0 transition-opacity duration-200"></span>
-                    <span id="archive-page-current-triangle-top" class="archive-page-current-triangle absolute left-1/2 top-[calc(50%-10px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-t-[6px] border-t-foreground/60 opacity-0 transition-opacity duration-200"></span>
-                    <span id="archive-page-current-triangle-bottom" class="archive-page-current-triangle absolute left-1/2 top-[calc(50%+4px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-b-[6px] border-b-foreground/60 opacity-0 transition-opacity duration-200"></span>
-                </div>
-
-                <a
-                    id="archive-page-preview"
-                    href="#"
-                    aria-label={`Preview archive page ${currentPage}`}
-                    class="pointer-events-none absolute top-1/2 z-20 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground opacity-0 shadow-xs transition-opacity duration-200"
-                >
-                    {currentPage}
-                </a>
-
-                <div
-                    id="archive-page-hit-area"
-                    class="absolute inset-y-0 cursor-pointer touch-none"
-                    style="left: var(--line-left); right: calc(100% - var(--line-right));"
-                    aria-hidden="true"
-                ></div>
-            </div>
-
-            {
-                page.url.next ? (
-                    <a
-                        href={page.url.next}
-                        aria-label="Next archive page"
-                        class="group z-20 inline-flex items-center gap-2"
-                    >
-                        <span class="pointer-events-none text-sm text-muted-foreground opacity-0 translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all">
-                            next
-                        </span>
-                        <span class="inline-flex size-8 shrink-0 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background shadow-xs group-hover:bg-muted group-hover:text-foreground transition-all active:scale-95">
-                            <RiArrowRightSLine className="size-5 fill-muted-foreground" />
-                        </span>
-                    </a>
-                ) : (
-                    <span class="size-8" />
-                )
-            }
-        </nav>
 
         <script>
             const initArchiveNavigator = () => {
@@ -385,4 +282,110 @@ const pageUrl = (pageNumber: number) =>
             document.addEventListener("astro:page-load", initArchiveNavigator);
         </script>
     </div>
+    <Fragment slot="footer-navigation">
+        <nav
+            id="archive-pagination"
+            class="relative mt-10 flex min-h-16 items-center justify-between border border-border p-4"
+            aria-label="Archive pages"
+            data-current-page={currentPage}
+            data-last-page={lastPage}
+        >
+            {
+                page.url.prev ? (
+                    <a
+                        href={page.url.prev}
+                        aria-label="Previous archive page"
+                        class="group z-20 inline-flex items-center gap-2"
+                    >
+                        <span class="inline-flex size-8 shrink-0 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background shadow-xs group-hover:bg-muted group-hover:text-foreground transition-all active:scale-95">
+                            <RiArrowLeftSLine className="size-5 fill-muted-foreground" />
+                        </span>
+                        <span class="pointer-events-none text-sm text-muted-foreground opacity-0 -translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all">
+                            previous
+                        </span>
+                    </a>
+                ) : (
+                    <span class="size-8" />
+                )
+            }
+
+            <div
+                id="archive-page-engine"
+                class="absolute inset-y-0 left-0 right-0"
+                style="--nav-left: 24%; --nav-right: 76%; --line-left: calc(24% + 44px); --line-right: calc(76% - 44px);"
+            >
+                <div
+                    class="pointer-events-none absolute left-[var(--line-left)] right-[calc(100%-var(--line-right))] top-1/2 h-px -translate-y-1/2 bg-foreground/35"
+                    aria-hidden="true"
+                ></div>
+
+                <a
+                    id="archive-page-first"
+                    href={pageUrl(1)}
+                    aria-label="Archive page 1"
+                    class="archive-page-endpoint pointer-events-none absolute left-[var(--nav-left)] top-1/2 z-10 size-2 -translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"
+                >
+                    <span class="sr-only">1</span>
+                </a>
+
+                <a
+                    id="archive-page-last"
+                    href={pageUrl(lastPage)}
+                    aria-label={`Archive page ${lastPage}`}
+                    class="archive-page-endpoint pointer-events-none absolute right-[calc(100%-var(--nav-right))] top-1/2 z-10 size-2 translate-x-1/2 -translate-y-1/2 border border-border bg-background transition-none"
+                >
+                    <span class="sr-only">{lastPage}</span>
+                </a>
+
+                <div
+                    id="archive-page-current"
+                    class="pointer-events-none absolute left-0 top-1/2 z-10 size-0 -translate-y-1/2"
+                    style={`left: calc(var(--line-left) + (var(--line-right) - var(--line-left)) * ${lastPage === 1 ? 0 : (currentPage - 1) / (lastPage - 1)});`}
+                    aria-hidden="true"
+                >
+                    <span id="archive-page-current-number" class="absolute left-1/2 top-1/2 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground transition-all duration-200">
+                        {currentPage}
+                    </span>
+                    <span id="archive-page-current-dot" class="archive-page-current-dot absolute left-1/2 top-1/2 z-10 size-1 -translate-x-1/2 -translate-y-1/2 rounded-full bg-foreground opacity-0 transition-opacity duration-200"></span>
+                    <span id="archive-page-current-triangle-top" class="archive-page-current-triangle absolute left-1/2 top-[calc(50%-10px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-t-[6px] border-t-foreground/60 opacity-0 transition-opacity duration-200"></span>
+                    <span id="archive-page-current-triangle-bottom" class="archive-page-current-triangle absolute left-1/2 top-[calc(50%+4px)] size-0 -translate-x-1/2 border-x-[6px] border-x-transparent border-b-[6px] border-b-foreground/60 opacity-0 transition-opacity duration-200"></span>
+                </div>
+
+                <a
+                    id="archive-page-preview"
+                    href="#"
+                    aria-label={`Preview archive page ${currentPage}`}
+                    class="pointer-events-none absolute top-1/2 z-20 flex size-8 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-secondary text-sm text-secondary-foreground opacity-0 shadow-xs transition-opacity duration-200"
+                >
+                    {currentPage}
+                </a>
+
+                <div
+                    id="archive-page-hit-area"
+                    class="absolute inset-y-0 cursor-pointer touch-none"
+                    style="left: var(--line-left); right: calc(100% - var(--line-right));"
+                    aria-hidden="true"
+                ></div>
+            </div>
+
+            {
+                page.url.next ? (
+                    <a
+                        href={page.url.next}
+                        aria-label="Next archive page"
+                        class="group z-20 inline-flex items-center gap-2"
+                    >
+                        <span class="pointer-events-none text-sm text-muted-foreground opacity-0 translate-x-2 group-hover:translate-x-0 group-hover:opacity-100 transition-all">
+                            next
+                        </span>
+                        <span class="inline-flex size-8 shrink-0 items-center justify-center rounded-[min(var(--radius-md),10px)] border border-border bg-background shadow-xs group-hover:bg-muted group-hover:text-foreground transition-all active:scale-95">
+                            <RiArrowRightSLine className="size-5 fill-muted-foreground" />
+                        </span>
+                    </a>
+                ) : (
+                    <span class="size-8" />
+                )
+            }
+        </nav>
+    </Fragment>
 </IndexLayout>
