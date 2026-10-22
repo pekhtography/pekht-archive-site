@@ -75,4 +75,7 @@ const allItems = journalItems.map((item) => {
             <FilterBlog client:load items={allItems} />
         </div>
     </div>
+    <Fragment slot="footer-navigation">
+        <div id="journal-pagination-root"></div>
+    </Fragment>
 </IndexLayout>
