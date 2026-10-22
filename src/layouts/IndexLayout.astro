@@ -21,7 +21,7 @@ const section = Astro.url.pathname.startsWith("/archive")
     <body class="mx-auto">
         <Header />
         {/* Content */}
-        <main class:list={["max-w-4xl mx-auto", section === "Journal" && "min-h-0"]} data-pagefind-body>
+        <main class="max-w-4xl mx-auto" data-pagefind-body>
             <span data-pagefind-meta={"section:" + section} class="sr-only">{section}</span>
             <slot />
         </main>

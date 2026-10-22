@@ -1,10 +1,8 @@
 ---
 import site_config from "@/site-config.json";
-
-const isJournal = Astro.url.pathname.startsWith("/blog");
 ---
 
-<footer class:list={["mx-auto font-mono antialiased bg-background max-w-4xl text-foreground select-none z-0", !isJournal && "sticky bottom-0"]}>
+<footer class="mx-auto font-mono antialiased bg-background max-w-4xl text-foreground select-none z-0 sticky bottom-0">
     <slot />
     <div class="flex items-center justify-between px-3 py-2">
         <div class="flex items-center gap-4">
