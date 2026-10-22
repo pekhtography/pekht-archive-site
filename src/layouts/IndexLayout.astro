@@ -25,7 +25,7 @@ const section = Astro.url.pathname.startsWith("/archive")
             <span data-pagefind-meta={"section:" + section} class="sr-only">{section}</span>
             <slot />
         </main>
-        <Footer />
+        <Footer><slot name="footer-navigation" /></Footer>
         <pagefind-modal reset-on-close></pagefind-modal>
     </body>
 </html>
