@@ -6,8 +6,9 @@ export function intervalFromHexNibble(nibble) {
   const value = String(nibble).toLowerCase();
   if (!/^[0-9a-f]$/.test(value)) throw new Error(`Invalid SHA-256 hex nibble: ${nibble}`);
   const number = parseInt(value, 16);
-  if (number <= 4) return 5;
-  if (number <= 10) return 6;
+  if (number <= 3) return 4;
+  if (number <= 7) return 5;
+  if (number <= 11) return 6;
   return 7;
 }
 
