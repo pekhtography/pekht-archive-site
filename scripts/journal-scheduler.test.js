@@ -41,6 +41,24 @@ test("skips while the latest main run is still active", () => {
   assert.equal(result.reason, "latest-run-not-completed");
 });
 
+test("uses updated_at when a completed GitHub run omits completed_at", () => {
+  const updatedAt = "2026-01-02T03:04:05Z";
+  const updatedEpoch = Date.parse(updatedAt) / 1000;
+  const apiRun = run({ completed_at: undefined, updated_at: updatedAt });
+  delete apiRun.completed_at;
+
+  const interval = intervalDaysForRunId(apiRun.id);
+  const result = evaluateScheduler(
+    { workflow_runs: [apiRun] },
+    updatedEpoch + interval * 86400 - 1,
+  );
+
+  assert.equal(result.action, "wait");
+  assert.equal(result.reason, "interval-not-elapsed");
+  assert.equal(result.interval_days, interval);
+  assert.equal(result.due_epoch, updatedEpoch + interval * 86400);
+});
+
 test("waits until the full selected interval has elapsed", () => {
   const interval = intervalDaysForRunId(12345);
   const result = evaluateScheduler({ workflow_runs: [run()] }, completedEpoch + interval * 86400 - 1);
