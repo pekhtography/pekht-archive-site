@@ -17,11 +17,15 @@ const run = (overrides = {}) => ({
   ...overrides,
 });
 
-test("maps all SHA-256 hex nibbles to intervals 5–7 with a 5/6/5 split", () => {
-  const expected = "5555566666677777";
+test("maps all SHA-256 hex nibbles to intervals 4–7 with an equal 4/4/4/4 split", () => {
+  const expected = "4444555566667777";
+  const counts = { 4: 0, 5: 0, 6: 0, 7: 0 };
   for (let i = 0; i < 16; i += 1) {
-    assert.equal(intervalFromHexNibble(i.toString(16)), Number(expected[i]));
+    const interval = intervalFromHexNibble(i.toString(16));
+    assert.equal(interval, Number(expected[i]));
+    counts[interval] += 1;
   }
+  assert.deepEqual(counts, { 4: 4, 5: 4, 6: 4, 7: 4 });
 });
 
 test("rejects invalid hash nibbles", () => {
