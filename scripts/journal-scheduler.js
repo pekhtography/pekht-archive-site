@@ -6,8 +6,9 @@ export function intervalFromHexNibble(nibble) {
   const value = String(nibble).toLowerCase();
   if (!/^[0-9a-f]$/.test(value)) throw new Error(`Invalid SHA-256 hex nibble: ${nibble}`);
   const number = parseInt(value, 16);
-  if (number <= 4) return 5;
-  if (number <= 10) return 6;
+  if (number <= 3) return 4;
+  if (number <= 7) return 5;
+  if (number <= 11) return 6;
   return 7;
 }
 
@@ -27,11 +28,18 @@ export function evaluateScheduler(runsPayload, nowEpoch = Math.floor(Date.now() 
 
   const runId = latest.id;
   const runNumber = latest.run_number;
-  if (latest.status !== "completed" || !latest.completed_at) {
+  if (latest.status !== "completed") {
     return { action: "skip", reason: "latest-run-not-completed", run_id: runId, run_number: runNumber };
   }
 
-  const completedEpoch = Math.floor(Date.parse(latest.completed_at) / 1000);
+  // GitHub workflow-run payloads may omit completed_at; updated_at is the
+  // completion timestamp for a completed run and is the safe fallback.
+  const completedAt = latest.completed_at ?? latest.updated_at;
+  if (!completedAt) {
+    return { action: "skip", reason: "latest-run-not-completed", run_id: runId, run_number: runNumber };
+  }
+
+  const completedEpoch = Math.floor(Date.parse(completedAt) / 1000);
   if (!Number.isFinite(completedEpoch)) {
     return { action: "skip", reason: "invalid-completed-at", run_id: runId, run_number: runNumber };
   }
