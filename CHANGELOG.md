@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## [v3.28.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.28.0) | 2026-10-25
+
+### Features
+- publish Journal entry [3311da7](https://github.com/pekhtography/pekht-archive-site/commit/3311da7)
+### Other
+- Merge pull request #58 from pekhtography/fix/journal-scheduler-completed-at-fallback [3e60920](https://github.com/pekhtography/pekht-archive-site/commit/3e60920)
+
 ## [v3.27.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.27.0) | 2026-10-17
 
 ### Features
