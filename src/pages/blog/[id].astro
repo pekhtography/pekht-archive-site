@@ -64,6 +64,7 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
 >
     <article
         transition:animate="fade"
+        data-journal-article={isJournal ? item.id : undefined}
         class={
             isJournal
                 ? item.data.composition.length > 0
@@ -100,6 +101,50 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
         }
     </article>
 </IdLayout>
+
+<script>
+    const syncJournalContextLinks = () => {
+        const article = document.querySelector("[data-journal-article]");
+        if (!article) return;
+
+        const articleId = article.getAttribute("data-journal-article");
+        if (!articleId) return;
+
+        const currentParams = new URLSearchParams(window.location.search);
+        const contextKeys = ["j_facet", "j_sort", "j_page"];
+        const hasContext = contextKeys.some((key) => currentParams.has(key));
+        const backLink = document.querySelector<HTMLAnchorElement>("[data-journal-back]");
+
+        if (backLink && hasContext) {
+            const backUrl = new URL(backLink.href, window.location.href);
+            const backParams = new URLSearchParams();
+            currentParams.getAll("j_facet").forEach((facet) => backParams.append("j_facet", facet));
+            if (currentParams.has("j_sort")) backParams.set("j_sort", currentParams.get("j_sort"));
+            if (currentParams.has("j_page")) backParams.set("j_page", currentParams.get("j_page"));
+            backParams.set("j_return", articleId);
+            backUrl.search = backParams.toString();
+            backLink.href = backUrl.toString();
+        }
+
+        document.querySelectorAll<HTMLAnchorElement>("[data-journal-nav]").forEach((link) => {
+            const navUrl = new URL(link.href, window.location.href);
+            contextKeys.forEach((key) => navUrl.searchParams.delete(key));
+            navUrl.searchParams.delete("j_return");
+
+            if (hasContext) {
+                currentParams.getAll("j_facet").forEach((facet) => navUrl.searchParams.append("j_facet", facet));
+                if (currentParams.has("j_sort")) navUrl.searchParams.set("j_sort", currentParams.get("j_sort"));
+                if (currentParams.has("j_page")) navUrl.searchParams.set("j_page", currentParams.get("j_page"));
+            }
+
+            link.href = navUrl.toString();
+        });
+    };
+
+    document.addEventListener("astro:page-load", syncJournalContextLinks);
+    syncJournalContextLinks();
+</script>
+
 
 
 <style>
