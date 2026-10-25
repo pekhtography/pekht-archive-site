@@ -44,7 +44,12 @@ const enriched = await Promise.all(
 
 <IndexLayout title="Portfolio - Ryze" description="A curated selection of projects spanning robotics, analytics, gameplay, software, AI, and hardware" image="/og/default.png">
     <div transition:animate="fade">
-        <IndexHeader url="/" heading="Portfolio" />
+        <IndexHeader
+            url="/"
+            heading="Portfolio"
+            description={"A little beauty. A little absurdity.\nNothing quite adds up. Somehow, everything does. Jun 2024 — Oct 2026"}
+            variant="portfolio"
+        />
 
         <div class="mt-3">
             <FilterPortfolio client:load items={enriched} />
