@@ -4,14 +4,33 @@ import { RiArrowRightUpLine } from "@remixicon/react";
 import { format, parse } from "date-fns";
 import { sitePath } from "@/lib/site-url";
 
-export function BlogCard({ item }: { item: blogConfig }) {
+export function BlogCard({
+  item,
+  journalContext,
+}: {
+  item: blogConfig;
+  journalContext?: {
+    facets: string[];
+    sortOrder: "asc" | "desc";
+    page: number;
+  };
+}) {
   const parsedDate = parse(item.data.date, "dd-MM-yyyy", new Date());
   const formattedDate = format(parsedDate, "MMM d, yyyy");
   const isJournal = item.data.category === "journal";
+  const articleUrl = new URL(sitePath(`/blog/${item.id}`), "https://journal-context.invalid");
+
+  if (isJournal && journalContext) {
+    journalContext.facets.forEach((facet) => articleUrl.searchParams.append("j_facet", facet));
+    articleUrl.searchParams.set("j_sort", journalContext.sortOrder);
+    articleUrl.searchParams.set("j_page", String(journalContext.page));
+  }
 
   return (
     <a
-      href={sitePath(`/blog/${item.id}`)}
+      href={articleUrl.origin === "https://journal-context.invalid"
+        ? `${articleUrl.pathname}${articleUrl.search}`
+        : articleUrl.toString()}
       className={`group flex border border-border/50 hover:border-border hover:bg-muted active:border-border animation hover:scale-102 active:scale-100 select-none ${isJournal ? "flex-row gap-0 overflow-hidden p-0" : "flex-col gap-2 p-3"}`}
     >
       {isJournal && item.previewImage && (
