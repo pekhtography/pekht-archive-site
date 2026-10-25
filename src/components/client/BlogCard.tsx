@@ -18,19 +18,19 @@ export function BlogCard({
   const parsedDate = parse(item.data.date, "dd-MM-yyyy", new Date());
   const formattedDate = format(parsedDate, "MMM d, yyyy");
   const isJournal = item.data.category === "journal";
-  const articleUrl = new URL(sitePath(`/blog/${item.id}`), "https://journal-context.invalid");
+  const journalParams = new URLSearchParams();
 
   if (isJournal && journalContext) {
-    journalContext.facets.forEach((facet) => articleUrl.searchParams.append("j_facet", facet));
-    articleUrl.searchParams.set("j_sort", journalContext.sortOrder);
-    articleUrl.searchParams.set("j_page", String(journalContext.page));
+    journalContext.facets.forEach((facet) => journalParams.append("j_facet", facet));
+    journalParams.set("j_sort", journalContext.sortOrder);
+    journalParams.set("j_page", String(journalContext.page));
   }
+
+  const articleHref = `${sitePath(`/blog/${item.id}`)}${journalParams.size ? `?${journalParams.toString()}` : ""}`;
 
   return (
     <a
-      href={articleUrl.origin === "https://journal-context.invalid"
-        ? `${articleUrl.pathname}${articleUrl.search}`
-        : articleUrl.toString()}
+      href={articleHref}
       className={`group flex border border-border/50 hover:border-border hover:bg-muted active:border-border animation hover:scale-102 active:scale-100 select-none ${isJournal ? "flex-row gap-0 overflow-hidden p-0" : "flex-col gap-2 p-3"}`}
     >
       {isJournal && item.previewImage && (
