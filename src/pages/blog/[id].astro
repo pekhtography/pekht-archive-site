@@ -113,7 +113,7 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
         const currentParams = new URLSearchParams(window.location.search);
         const contextKeys = ["j_facet", "j_sort", "j_page"];
         const hasContext = contextKeys.some((key) => currentParams.has(key));
-        const backLink = document.querySelector("[data-journal-back]");
+        const backLink = document.querySelector<HTMLAnchorElement>("[data-journal-back]");
 
         if (backLink && hasContext) {
             const backUrl = new URL(backLink.href, window.location.href);
@@ -126,7 +126,7 @@ const pubDate = parse(item.data.date, "dd-MM-yyyy", new Date());
             backLink.href = backUrl.toString();
         }
 
-        document.querySelectorAll("[data-journal-nav]").forEach((link) => {
+        document.querySelectorAll<HTMLAnchorElement>("[data-journal-nav]").forEach((link) => {
             const navUrl = new URL(link.href, window.location.href);
             contextKeys.forEach((key) => navUrl.searchParams.delete(key));
             navUrl.searchParams.delete("j_return");
