@@ -14,14 +14,77 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
   const { filteredAndSortedItems } = filter;
   const [page, setPage] = React.useState(1);
   const [paginationTarget, setPaginationTarget] = React.useState<HTMLElement | null>(null);
+  const [contextReady, setContextReady] = React.useState(false);
+  const [returnArticleId, setReturnArticleId] = React.useState<string | null>(null);
+  const fallbackPageRef = React.useRef(1);
+  const skipFilterResetRef = React.useRef(false);
+  const previousFilterStateRef = React.useRef({
+    facets: filter.selectedFacets,
+    sortOrder: filter.sortOrder,
+  });
 
   React.useEffect(() => {
     setPaginationTarget(document.getElementById("journal-pagination-root"));
+
+    const params = new URLSearchParams(window.location.search);
+    const requestedFacets = params.getAll("j_facet");
+    const restoredFacets = requestedFacets.filter(
+      (facet, index) =>
+        filter.allFacets.includes(facet) && requestedFacets.indexOf(facet) === index,
+    );
+    const requestedSort = params.get("j_sort");
+    const restoredSort: "asc" | "desc" = requestedSort === "asc" ? "asc" : "desc";
+    const requestedPage = Number(params.get("j_page"));
+    const restoredPage =
+      Number.isInteger(requestedPage) && requestedPage > 0 ? requestedPage : 1;
+
+    skipFilterResetRef.current =
+      restoredSort !== filter.sortOrder ||
+      restoredFacets.length !== filter.selectedFacets.length ||
+      restoredFacets.some((facet, index) => facet !== filter.selectedFacets[index]);
+
+    fallbackPageRef.current = restoredPage;
+    filter.setSelectedFacets(restoredFacets);
+    filter.setSortOrder(restoredSort);
+    setPage(restoredPage);
+    setReturnArticleId(params.get("j_return"));
+    setContextReady(true);
   }, []);
 
   React.useEffect(() => {
+    const previous = previousFilterStateRef.current;
+    const facetsChanged =
+      previous.facets.length !== filter.selectedFacets.length ||
+      previous.facets.some((facet, index) => facet !== filter.selectedFacets[index]);
+    const sortChanged = previous.sortOrder !== filter.sortOrder;
+
+    if (!facetsChanged && !sortChanged) return;
+
+    previousFilterStateRef.current = {
+      facets: filter.selectedFacets,
+      sortOrder: filter.sortOrder,
+    };
+
+    if (skipFilterResetRef.current) {
+      skipFilterResetRef.current = false;
+      return;
+    }
+
     setPage(1);
   }, [filter.selectedFacets, filter.sortOrder]);
+
+  React.useEffect(() => {
+    if (!contextReady || !returnArticleId) return;
+
+    const articleIndex = filteredAndSortedItems.findIndex(
+      (item) => item.id === returnArticleId,
+    );
+    setPage(
+      articleIndex >= 0
+        ? Math.floor(articleIndex / PAGE_SIZE) + 1
+        : fallbackPageRef.current,
+    );
+  }, [contextReady, returnArticleId, filteredAndSortedItems]);
 
   const lastPage = Math.max(1, Math.ceil(filteredAndSortedItems.length / PAGE_SIZE));
   const currentPage = Math.min(page, lastPage);
@@ -204,7 +267,15 @@ export default function FilterBlog({ items }: { items: blogConfig[] }) {
       ) : (
         <div ref={listRef} className="space-y-3 border border-border p-6">
           {pageItems.map((item) => (
-            <BlogCard key={item.id} item={item as blogConfig} />
+            <BlogCard
+              key={item.id}
+              item={item as blogConfig}
+              journalContext={{
+                facets: filter.selectedFacets,
+                sortOrder: filter.sortOrder,
+                page: currentPage,
+              }}
+            />
           ))}
         </div>
       )}
