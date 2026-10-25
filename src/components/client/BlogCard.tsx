@@ -26,7 +26,8 @@ export function BlogCard({
     journalParams.set("j_page", String(journalContext.page));
   }
 
-  const articleHref = `${sitePath(`/blog/${item.id}`)}${journalParams.size ? `?${journalParams.toString()}` : ""}`;
+  const journalQuery = journalParams.toString();
+  const articleHref = `${sitePath(`/blog/${item.id}`)}${journalQuery ? `?${journalQuery}` : ""}`;
 
   return (
     <a
