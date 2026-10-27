@@ -1,0 +1,8 @@
+[
+  { "id": "t1", "title": "Test Gallery 1", "facets": ["Time", "Contrast"], "layout": 1 },
+  { "id": "t2", "title": "Test Gallery 2", "facets": ["Scale", "Threshold"], "layout": 3 },
+  { "id": "t3", "title": "Test Gallery 3", "facets": ["Observation", "Material"], "layout": 5 },
+  { "id": "t4", "title": "Test Gallery 4", "facets": ["Time", "Agency"], "layout": 2 },
+  { "id": "t5", "title": "Test Gallery 5", "facets": ["Contrast", "Reframing"], "layout": 4 },
+  { "id": "t6", "title": "Test Gallery 6", "facets": ["Vector", "Scale"], "layout": 6 }
+]
