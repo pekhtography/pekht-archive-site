@@ -13,7 +13,7 @@ const sourceImages = Object.entries(imageModules)
   .map(([, module]) => module.default);
 
 const photos = await Promise.all(
-  sourceImages.slice(0, 6).map(async (src) => (await getImage({ src, width: 1000 })).src),
+  sourceImages.slice(0, 6).map(async (src) => (await getImage({ src, width: 1400 })).src),
 );
 
 const templates: Record<number, { x: number; y: number; w: number; h: number; photo: boolean }[]> = {
@@ -75,13 +75,27 @@ const orderedGalleries = testGalleries;
       .gallery { min-width: 0; }
       .mosaic { position: relative; width: 100%; aspect-ratio: 2 / 3; overflow: hidden; }
       .cell { position: absolute; box-sizing: border-box; padding: 1%; }
+      .mosaic-photo { display: block; width: 100%; height: 100%; border: 0; padding: 0; background: transparent; cursor: zoom-in; }
       .cell img { display: block; width: 100%; height: 100%; object-fit: cover; }
       .gallery h2 { font-size: 1rem; font-weight: 500; margin: .8rem 0 .5rem; }
+      .gallery-title { color: inherit; text-decoration: none; }
+      .gallery-title:hover { text-decoration: underline; }
       .facets { display: flex; flex-wrap: wrap; gap: .35rem; }
       .facet { font-size: .7rem; border: 1px solid #8886; padding: .2rem .45rem; }
       .notice { color: #777; font-size: .8rem; margin: 1.5rem 0; }
+      #lightbox { width: auto; max-width: 94vw; max-height: 94vh; box-sizing: border-box; border: 0; padding: 1rem; background: #111; color: #fff; }
+      #lightbox::backdrop { background: rgb(0 0 0 / 82%); }
+      #lightbox-image { display: block; max-width: 90vw; max-height: 78vh; width: auto; height: auto; object-fit: contain; margin: 0 auto; }
+      .viewer-controls { display: flex; align-items: center; justify-content: space-between; gap: .75rem; margin-top: .75rem; }
+      .viewer-controls button { border: 1px solid #777; padding: .5rem .7rem; color: inherit; background: #222; cursor: pointer; }
+      #counter { font-size: .85rem; white-space: nowrap; }
       @media (max-width: 760px) { main { padding: 1.25rem .9rem 3rem; } .gallery-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.5rem .8rem; } }
-      @media (max-width: 480px) { .gallery-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; } }
+      @media (max-width: 480px) {
+        .gallery-grid { grid-template-columns: minmax(0, 1fr); gap: 2rem; }
+        #lightbox { padding: .5rem; }
+        .viewer-controls { gap: .35rem; }
+        .viewer-controls button { padding: .45rem; }
+      }
     </style>
   </head>
   <body>
@@ -90,22 +104,70 @@ const orderedGalleries = testGalleries;
       <p class="notice">Prototype only. Placeholder titles and facets; current production portfolio is unchanged.</p>
       <section class="gallery-grid" aria-label="Test gallery mosaics">
         {orderedGalleries.map((gallery) => (
-          <article class="gallery">
-            <a href={`/pekht-archive-site/portfolio/test/${gallery.id}/`} aria-label={`Open ${gallery.title}`} style="display:block;color:inherit;text-decoration:none">
-              <div class="mosaic">
-                {templateFor(gallery.layout).map((cell, index) => cell.photo && photos.length > 0 ? (
-                  <div class="cell" style={`left:${cell.x / 3 * 100}%;top:${cell.y / 4.5 * 100}%;width:${cell.w / 3 * 100}%;height:${cell.h / 4.5 * 100}%`}>
+          <article class="gallery" data-gallery={gallery.id}>
+            <div class="mosaic" aria-label={`${gallery.title} mosaic`}>
+              {templateFor(gallery.layout).filter((cell) => cell.photo).map((cell, index) => photos.length > 0 ? (
+                <div class="cell" style={`left:${cell.x / 3 * 100}%;top:${cell.y / 4.5 * 100}%;width:${cell.w / 3 * 100}%;height:${cell.h / 4.5 * 100}%`}>
+                  <button type="button" class="mosaic-photo" data-index={index} aria-label={`Open photograph ${index + 1} in ${gallery.title}`}>
                     <img src={photos[index % photos.length]} alt="" loading="lazy" />
-                  </div>
-                ) : null)}
-              </div>
-              <h2>{gallery.title}</h2>
-            </a>
+                  </button>
+                </div>
+              ) : null)}
+            </div>
+            <h2><a class="gallery-title" href={`/pekht-archive-site/portfolio/test/${gallery.id}/`}>{gallery.title}</a></h2>
             <div class="facets">{gallery.facets.map((facet) => <span class="facet">{facet}</span>)}</div>
           </article>
         ))}
       </section>
       {photos.length < 6 && <p class="notice">Only {photos.length} portfolio source images were found. Add or select more images before visual acceptance.</p>}
     </main>
+    <dialog id="lightbox" aria-label="Large photograph viewer">
+      <img id="lightbox-image" src="" alt="Selected photograph" />
+      <div class="viewer-controls">
+        <button id="previous" type="button" aria-label="Previous photograph">←</button>
+        <span id="counter"></span>
+        <button id="next" type="button" aria-label="Next photograph">→</button>
+        <button id="close" type="button" aria-label="Close photograph viewer">Close</button>
+      </div>
+    </dialog>
+    <script>
+      const dialog = document.querySelector<HTMLDialogElement>("#lightbox");
+      const image = document.querySelector<HTMLImageElement>("#lightbox-image");
+      const counter = document.querySelector<HTMLElement>("#counter");
+      const photoButtons = Array.from(document.querySelectorAll<HTMLButtonElement>(".mosaic-photo"));
+      let gallerySources: string[] = [];
+      let currentIndex = 0;
+
+      const showPhoto = (requestedIndex: number) => {
+        if (!gallerySources.length || !image || !counter) return;
+        currentIndex = (requestedIndex + gallerySources.length) % gallerySources.length;
+        image.src = gallerySources[currentIndex];
+        image.alt = `Photograph ${currentIndex + 1} of ${gallerySources.length}`;
+        counter.textContent = `${currentIndex + 1} / ${gallerySources.length}`;
+      };
+
+      photoButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          const gallery = button.closest<HTMLElement>(".gallery");
+          if (!gallery) return;
+          gallerySources = Array.from(gallery.querySelectorAll<HTMLImageElement>(".mosaic-photo img"))
+            .map((photo) => photo.currentSrc || photo.src);
+          showPhoto(Number(button.dataset.index ?? 0));
+          dialog?.showModal();
+        });
+      });
+
+      document.querySelector("#previous")?.addEventListener("click", () => showPhoto(currentIndex - 1));
+      document.querySelector("#next")?.addEventListener("click", () => showPhoto(currentIndex + 1));
+      document.querySelector("#close")?.addEventListener("click", () => dialog?.close());
+      dialog?.addEventListener("click", (event) => {
+        if (event.target === dialog) dialog.close();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (!dialog?.open) return;
+        if (event.key === "ArrowLeft") showPhoto(currentIndex - 1);
+        if (event.key === "ArrowRight") showPhoto(currentIndex + 1);
+      });
+    </script>
   </body>
 </html>
