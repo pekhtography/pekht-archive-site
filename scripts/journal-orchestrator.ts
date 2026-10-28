@@ -2,7 +2,7 @@ import { existsSync } from "node:fs";
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { sortExploreItems } from "../src/lib/explore-sort.ts";
+import { stratifiedSample } from "../src/lib/stratified-sample.ts";
 import sharp from "sharp";
 import { assertCompleteJournalLayout, calculateJournalLayoutWithCycle, type ImageOrientation, type JournalLayoutArticle, type ImageSide } from "../src/lib/journal-layout-algorithm.ts";
 import { writeJournalArticleSafely } from "./journal/safe-write.ts";
@@ -343,45 +343,6 @@ export async function runJournal(options: JournalRunOptions = {}) {
     if (Date.now() - startedAt >= RUN_BUDGET_MS) {
       throw new Error(`JOURNAL_BUDGET_EXCEEDED during ${stage}`);
     }
-  }
-
-  function stratifiedSample(
-    posts: ArchivePost[],
-    target: number,
-  ): ArchivePost[] {
-    const exploreInput = posts.map((post) => ({
-      id: post.source_id,
-      body: post.body,
-      data: { tags: post.hashtags },
-      post,
-    }));
-
-    const explored = sortExploreItems(exploreInput).map(
-      (item) => item.post,
-    );
-
-    const sampleSize = Math.min(target, explored.length);
-    const sampled: ArchivePost[] = [];
-
-    for (let i = 0; i < sampleSize; i += 1) {
-      const start = Math.floor(
-        (i * explored.length) / sampleSize,
-      );
-      const end = Math.floor(
-        ((i + 1) * explored.length) / sampleSize,
-      );
-
-      const zone = explored.slice(
-        start,
-        Math.max(start + 1, end),
-      );
-
-      sampled.push(
-        zone[Math.floor(Math.random() * zone.length)],
-      );
-    }
-
-    return sampled;
   }
 
   const eligibleArchive = archive.filter(
