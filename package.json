@@ -44,6 +44,7 @@
     "archive:collect": "tsx scripts/archive-collect.ts",
     "journal": "tsx scripts/journal-orchestrator.ts",
     "test:journal:validation": "tsx --test scripts/journal/montage-validation.test.ts scripts/journal/montage-signature.test.ts scripts/journal/rejection-reasons.test.ts scripts/journal/journal-source-validation.test.ts",
+    "test:journal:sample": "tsx --test scripts/journal/stratified-sample.test.ts",
     "test:journal:layout": "tsx --test scripts/journal/layout-algorithm.test.ts",
     "test:journal:error-summary": "tsx --test scripts/journal/journal-error-summary.test.ts",
     "journal:test": "tsx scripts/journal-testability-harness.ts"
