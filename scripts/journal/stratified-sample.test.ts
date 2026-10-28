@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { test } from "node:test";
+import { sortExploreItems } from "../../src/lib/explore-sort.ts";
 import { stratifiedSample, type StratifiedSamplePost } from "../../src/lib/stratified-sample.ts";
 
 type TestPost = StratifiedSamplePost & { marker: number };
@@ -42,4 +43,40 @@ test("returns target posts when more than target remain", () => {
   assert.equal(sample.length, 6);
   assert.equal(new Set(sample.map((post) => post.source_id)).size, 6);
   assert.ok(sample.every((post) => posts.includes(post)));
+});
+
+
+test("selects one representative from each contiguous Explore zone", () => {
+  const posts = makePosts(24);
+  const target = 6;
+  const explored = sortExploreItems(
+    posts.map((post) => ({
+      id: post.source_id,
+      body: post.body,
+      data: { tags: post.hashtags },
+      post,
+    })),
+  ).map((item) => item.post);
+
+  const originalRandom = Math.random;
+  let sample: TestPost[];
+
+  try {
+    // Select the first item in each zone so zone boundaries are testable.
+    Math.random = () => 0;
+    sample = stratifiedSample(posts, target);
+  } finally {
+    Math.random = originalRandom;
+  }
+
+  const expected = Array.from(
+    { length: target },
+    (_, index) => explored[Math.floor((index * explored.length) / target)],
+  );
+
+  assert.deepEqual(
+    sample.map((post) => post.source_id),
+    expected.map((post) => post.source_id),
+  );
+  assert.equal(new Set(sample.map((post) => post.source_id)).size, target);
 });
