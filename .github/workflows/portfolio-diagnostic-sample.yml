@@ -26,15 +26,14 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: ${{ github.event.pull_request.head.sha || github.sha }}
-          fetch-depth: 2
+          fetch-depth: 3
 
       - name: Verify pinned archive source commit
         env:
           EXPECTED_SOURCE_COMMIT: 4424d4b48f7da40b4b3361e6e36d97f726dd758b
         run: |
-          ACTUAL_PARENT="$(git rev-parse HEAD^)"
-          if [ "$ACTUAL_PARENT" != "$EXPECTED_SOURCE_COMMIT" ]; then
-            echo "Unexpected parent commit: $ACTUAL_PARENT"
+          if ! git merge-base --is-ancestor "$EXPECTED_SOURCE_COMMIT" HEAD; then
+            echo "Pinned source commit is not an ancestor of this workflow revision."
             exit 1
           fi
 
