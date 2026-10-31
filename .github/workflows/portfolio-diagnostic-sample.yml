@@ -69,7 +69,7 @@ jobs:
           const SOURCE_COMMIT = process.env.SOURCE_COMMIT!;
           const TARGET = 1000;
           const EXPLORE_SOURCE_BLOB = "c58d4bf8307e6544514f294dcc175d51eee35b75";
-          const CLEANING_VERSION = "portfolio-body-clean-v2";
+          const CLEANING_VERSION = "portfolio-body-clean-v3";
           const SAMPLER_VERSION = "sha256-zone-representative-v1";
 
           type Post = {
@@ -93,35 +93,28 @@ jobs:
               if (!m) continue;
               fm[m[1]] = m[2].trim().replace(/^["']|["']$/g, "");
             }
-            return { fm, body: match[2].trim() };
+            return { fm, body: match[2] };
           }
 
           function cleanBody(original: string): string {
-            const cleanedLines = original.split(/\r?\n/).map((line) => {
-              // Preserve Markdown ATX heading markers, but still remove hashtags in heading text.
-              const heading = line.match(/^(\s{0,3}#{1,6}\s+)(.*)$/);
-              const prefix = heading?.[1] ?? "";
-              const content = heading?.[2] ?? line;
-              // Remove every hashtag token, including adjacent forms such as "#charm#love".
-              const cleaned = content.replace(/#[\p{L}\p{N}_]+/gu, "");
-              return { original: line, cleaned: prefix + cleaned };
-            });
-
-            return cleanedLines
-              .filter(({ original, cleaned }) => original.trim() === "" || cleaned.trim() !== "")
-              .map(({ cleaned }) => cleaned)
-              .join("\n")
-              .trim();
+            // v3: remove only the hash character. Preserve every word, space, line break, and punctuation mark.
+            return original.replace(/#/g, "");
           }
 
           // Guard the cleaning contract against regressions before processing the archive.
           const cleaningCases: Array<[string, string]> = [
-            ["A rose #rose #beauty", "A rose"],
-            ["charm#love", "charm"],
-            ["#charm#love", ""],
-            ["#hashtag-only", ""],
-            ["## Markdown heading", "## Markdown heading"],
-            ["### Heading with #tag", "### Heading with"],
+            ["A rose #flower in the garden", "A rose flower in the garden"],
+            ["#doll-making", "doll-making"],
+            ["#hide-and-#seek", "hide-and-seek"],
+            ["A beautiful day. #Nature #Light", "A beautiful day. Nature Light"],
+            ["#Photography #Nature #Light", "Photography Nature Light"],
+            ["charm#love", "charmlove"],
+            ["#charm#love", "charmlove"],
+            ["#hashtag-only", "hashtag-only"],
+            ["## Markdown heading", " Markdown heading"],
+            ["### Heading with #tag", " Heading with tag"],
+            ["  leading spaces\nbody\ntrailing spaces  ", "  leading spaces\nbody\ntrailing spaces  "],
+            ["line one\r\nline two\r\n", "line one\r\nline two\r\n"],
           ];
           for (const [input, expected] of cleaningCases) {
             const actual = cleanBody(input);
@@ -243,7 +236,7 @@ jobs:
               seed,
               seed_material: seedMaterial,
               explore_input: "analysis_body only; data.tags=[]",
-              hashtag_policy: "Remove every inline hashtag token, including adjacent tokens; remove hashtag-only lines; preserve Markdown heading markers and all remaining wording.",
+              hashtag_policy: "Remove only the # character globally; preserve all words, punctuation, whitespace, line breaks, and Markdown markers in analysis_body. original_body is preserved exactly as extracted.",
               empty_policy: "Exclude from eligible search pool; retain in excluded_empty_after_cleaning.",
               journal_exclusion: false,
             },
@@ -265,7 +258,7 @@ jobs:
             excluded_empty_after_cleaning: empty.map((post) => ({
               source_id: post.source_id,
               original_sha256: post.original_sha256,
-              reason: "EMPTY_AFTER_HASHTAG_REMOVAL",
+              reason: "EMPTY_BODY",
               original_body: post.original_body,
             })),
           };
@@ -278,7 +271,7 @@ jobs:
             `- Source commit: ${SOURCE_COMMIT}`,
             `- Archive Markdown files: ${names.length}`,
             `- Parsed posts: ${all.length}`,
-            `- Excluded after hashtag removal: ${empty.length}`,
+            `- Excluded empty bodies: ${empty.length}`,
             `- Eligible posts: ${eligible.length}`,
             `- Explore-sorted posts: ${first.explored.length}`,
             `- Selected sample: ${first.sampled.length}`,
