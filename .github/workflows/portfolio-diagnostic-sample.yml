@@ -69,7 +69,7 @@ jobs:
           const SOURCE_COMMIT = process.env.SOURCE_COMMIT!;
           const TARGET = 1000;
           const EXPLORE_SOURCE_BLOB = "c58d4bf8307e6544514f294dcc175d51eee35b75";
-          const CLEANING_VERSION = "portfolio-body-clean-v1";
+          const CLEANING_VERSION = "portfolio-body-clean-v2";
           const SAMPLER_VERSION = "sha256-zone-representative-v1";
 
           type Post = {
@@ -97,16 +97,37 @@ jobs:
           }
 
           function cleanBody(original: string): string {
-            return original
-              .split(/\r?\n/)
-              .map((line) => {
-                // Preserve ordinary Markdown ATX headings such as "# A title".
-                if (/^\s{0,3}#{1,6}\s/.test(line)) return line;
-                return line.replace(/(^|[^\p{L}\p{N}_])#[\p{L}\p{N}_]+/gu, "$1");
-              })
-              .filter((line) => line.trim().length > 0 || line.length === 0)
+            const cleanedLines = original.split(/\r?\n/).map((line) => {
+              // Preserve Markdown ATX heading markers, but still remove hashtags in heading text.
+              const heading = line.match(/^(\s{0,3}#{1,6}\s+)(.*)$/);
+              const prefix = heading?.[1] ?? "";
+              const content = heading?.[2] ?? line;
+              // Remove every hashtag token, including adjacent forms such as "#charm#love".
+              const cleaned = content.replace(/#[\p{L}\p{N}_]+/gu, "");
+              return { original: line, cleaned: prefix + cleaned };
+            });
+
+            return cleanedLines
+              .filter(({ original, cleaned }) => original.trim() === "" || cleaned.trim() !== "")
+              .map(({ cleaned }) => cleaned)
               .join("\n")
               .trim();
+          }
+
+          // Guard the cleaning contract against regressions before processing the archive.
+          const cleaningCases: Array<[string, string]> = [
+            ["A rose #rose #beauty", "A rose"],
+            ["charm#love", "charm"],
+            ["#charm#love", ""],
+            ["#hashtag-only", ""],
+            ["## Markdown heading", "## Markdown heading"],
+            ["### Heading with #tag", "### Heading with "],
+          ];
+          for (const [input, expected] of cleaningCases) {
+            const actual = cleanBody(input);
+            if (actual !== expected) {
+              throw new Error(\`Hashtag cleaning regression: \${JSON.stringify(input)} => \${JSON.stringify(actual)}; expected \${JSON.stringify(expected)}\`);
+            }
           }
 
           function sha256(value: string): string {
@@ -222,7 +243,7 @@ jobs:
               seed,
               seed_material: seedMaterial,
               explore_input: "analysis_body only; data.tags=[]",
-              hashtag_policy: "Remove inline hashtag tokens and hashtag-only lines; preserve ordinary Markdown headings and all remaining wording.",
+              hashtag_policy: "Remove every inline hashtag token, including adjacent tokens; remove hashtag-only lines; preserve Markdown heading markers and all remaining wording.",
               empty_policy: "Exclude from eligible search pool; retain in excluded_empty_after_cleaning.",
               journal_exclusion: false,
             },
