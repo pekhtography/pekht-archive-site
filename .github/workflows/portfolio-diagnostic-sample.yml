@@ -1,0 +1,304 @@
+name: Portfolio Diagnostic Sample
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    paths:
+      - ".github/workflows/portfolio-diagnostic-sample.yml"
+      - "src/content/archive/**"
+      - "src/lib/explore-sort.ts"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-diagnostic-sample
+  cancel-in-progress: true
+
+jobs:
+  sample:
+    name: Build reproducible Explore-stratified sample
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout exact diagnostic branch head
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Verify pinned archive source commit
+        env:
+          EXPECTED_SOURCE_COMMIT: 4424d4b48f7da40b4b3361e6e36d97f726dd758b
+        run: |
+          if ! git merge-base --is-ancestor "$EXPECTED_SOURCE_COMMIT" HEAD; then
+            echo "Pinned source commit is not an ancestor of this workflow revision."
+            exit 1
+          fi
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: pnpm
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Clean archive, run Explore sort, sample twice, and write report
+        env:
+          SOURCE_COMMIT: 4424d4b48f7da40b4b3361e6e36d97f726dd758b
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat > .portfolio-diagnostic-sample.ts <<'TS'
+          import { createHash } from "node:crypto";
+          import { readdir, readFile, mkdir, writeFile } from "node:fs/promises";
+          import { join } from "node:path";
+          import { sortExploreItems } from "./src/lib/explore-sort.ts";
+
+          const ROOT = process.cwd();
+          const ARCHIVE = join(ROOT, "src/content/archive");
+          const OUT = join(ROOT, "portfolio-diagnostic-output");
+          const SOURCE_COMMIT = process.env.SOURCE_COMMIT!;
+          const TARGET = 1000;
+          const EXPLORE_SOURCE_BLOB = "c58d4bf8307e6544514f294dcc175d51eee35b75";
+          const CLEANING_VERSION = "portfolio-body-clean-v3";
+          const SAMPLER_VERSION = "sha256-zone-representative-v1";
+
+          type Post = {
+            source_id: string;
+            title: string;
+            x_id: string;
+            created_at: string;
+            image: string;
+            original_body: string;
+            analysis_body: string;
+            original_sha256: string;
+            analysis_sha256: string;
+          };
+
+          function parseArchive(raw: string, source_id: string) {
+            const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
+            if (!match) throw new Error(`Invalid frontmatter: ${source_id}`);
+            const fm: Record<string, string> = {};
+            for (const line of match[1].split(/\r?\n/)) {
+              const m = line.match(/^([A-Za-z0-9_]+):\s*(.*)$/);
+              if (!m) continue;
+              fm[m[1]] = m[2].trim().replace(/^["']|["']$/g, "");
+            }
+            return { fm, body: match[2] };
+          }
+
+          function cleanBody(original: string): string {
+            // v3: remove only the hash character. Preserve every word, space, line break, and punctuation mark.
+            return original.replace(/#/g, "");
+          }
+
+          // Guard the cleaning contract against regressions before processing the archive.
+          const cleaningCases: Array<[string, string]> = [
+            ["A rose #flower in the garden", "A rose flower in the garden"],
+            ["#doll-making", "doll-making"],
+            ["#hide-and-#seek", "hide-and-seek"],
+            ["A beautiful day. #Nature #Light", "A beautiful day. Nature Light"],
+            ["#Photography #Nature #Light", "Photography Nature Light"],
+            ["charm#love", "charmlove"],
+            ["#charm#love", "charmlove"],
+            ["#hashtag-only", "hashtag-only"],
+            ["## Markdown heading", " Markdown heading"],
+            ["### Heading with #tag", " Heading with tag"],
+            ["  leading spaces\nbody\ntrailing spaces  ", "  leading spaces\nbody\ntrailing spaces  "],
+            ["line one\r\nline two\r\n", "line one\r\nline two\r\n"],
+          ];
+          for (const [input, expected] of cleaningCases) {
+            const actual = cleanBody(input);
+            if (actual !== expected) {
+              throw new Error(`Hashtag cleaning regression: \${JSON.stringify(input)} => \${JSON.stringify(actual)}; expected \${JSON.stringify(expected)}`);
+            }
+          }
+
+          function sha256(value: string): string {
+            return createHash("sha256").update(value, "utf8").digest("hex");
+          }
+
+          function parsePost(raw: string, source_id: string): Post {
+            const { fm, body } = parseArchive(raw, source_id);
+            const analysis_body = cleanBody(body);
+            return {
+              source_id,
+              title: fm.title ?? source_id,
+              x_id: fm.x_id ?? "",
+              created_at: fm.x_created_at ?? "",
+              image: fm.image ?? "",
+              original_body: body,
+              analysis_body,
+              original_sha256: sha256(body),
+              analysis_sha256: sha256(analysis_body),
+            };
+          }
+
+          function seededIndex(seed: string, zoneIndex: number, zoneLength: number): number {
+            const digest = createHash("sha256").update(`${seed}:zone:${zoneIndex}`).digest();
+            const value = digest.readUInt32BE(0);
+            return value % zoneLength;
+          }
+
+          function makeSample(eligible: Post[], seed: string) {
+            const exploreInput = eligible.map((post) => ({
+              id: post.source_id,
+              body: post.analysis_body,
+              data: { tags: [] as string[] },
+              post,
+            }));
+            const explored = sortExploreItems(exploreInput).map((item) => item.post);
+            const sampleSize = Math.min(TARGET, explored.length);
+            const sampled: Post[] = [];
+            const zones: Array<{ zone: number; start: number; endExclusive: number; chosenIndex: number; chosenSourceId: string }> = [];
+
+            for (let i = 0; i < sampleSize; i += 1) {
+              const start = Math.floor((i * explored.length) / sampleSize);
+              const endExclusive = Math.floor(((i + 1) * explored.length) / sampleSize);
+              const length = endExclusive - start;
+              if (length < 1) throw new Error(`Empty sampling zone: ${i}`);
+              const chosenIndex = start + seededIndex(seed, i, length);
+              const chosen = explored[chosenIndex];
+              sampled.push(chosen);
+              zones.push({ zone: i, start, endExclusive, chosenIndex, chosenSourceId: chosen.source_id });
+            }
+
+            return { explored, sampled, zones };
+          }
+
+          const names = (await readdir(ARCHIVE)).filter((name) => name.endsWith(".md")).sort((a,b) => a.localeCompare(b));
+          const all: Post[] = [];
+          for (const name of names) {
+            const source_id = name.replace(/\.md$/, "");
+            all.push(parsePost(await readFile(join(ARCHIVE, name), "utf8"), source_id));
+          }
+
+          const empty = all.filter((post) => !post.analysis_body.trim());
+          const eligible = all.filter((post) => post.analysis_body.trim().length > 0);
+          const target = Math.min(TARGET, eligible.length);
+          const seedMaterial = [
+            SOURCE_COMMIT,
+            `explore-source-blob:${EXPLORE_SOURCE_BLOB}`,
+            `cleaning:${CLEANING_VERSION}`,
+            `sampler:${SAMPLER_VERSION}`,
+            `target:${target}`,
+          ].join("|");
+          const seed = sha256(seedMaterial);
+
+          const first = makeSample(eligible, seed);
+          const second = makeSample(eligible, seed);
+          const firstIds = first.sampled.map((post) => post.source_id);
+          const secondIds = second.sampled.map((post) => post.source_id);
+          const reproducible = JSON.stringify(firstIds) === JSON.stringify(secondIds);
+          const unique = new Set(firstIds).size === firstIds.length;
+
+          if (!reproducible) throw new Error("Reproducibility check failed: two runs differ.");
+          if (!unique) throw new Error("Sample contains duplicate source_id values.");
+          if (first.sampled.length !== target) throw new Error("Unexpected sample size.");
+          if (first.explored.length !== eligible.length) throw new Error("Explore sort lost eligible posts.");
+
+          const selected = first.sampled.map((post, index) => ({
+            sample_position: index + 1,
+            source_id: post.source_id,
+            original_sha256: post.original_sha256,
+            analysis_sha256: post.analysis_sha256,
+            title: post.title,
+            created_at: post.created_at,
+            image: post.image,
+            original_body: post.original_body,
+            analysis_body: post.analysis_body,
+            zone: first.zones[index],
+          }));
+
+          const manifest = {
+            schema_version: "portfolio-diagnostic-sample-v1",
+            source: {
+              repository: "pekhtography/pekht-archive-site",
+              commit: SOURCE_COMMIT,
+              archive_path: "src/content/archive",
+              explore_sort_path: "src/lib/explore-sort.ts",
+              explore_sort_blob_sha: EXPLORE_SOURCE_BLOB,
+            },
+            parameters: {
+              target_requested: TARGET,
+              target_actual: target,
+              cleaning_version: CLEANING_VERSION,
+              sampler_version: SAMPLER_VERSION,
+              seed,
+              seed_material: seedMaterial,
+              explore_input: "analysis_body only; data.tags=[]",
+              hashtag_policy: "Remove only the # character globally; preserve all words, punctuation, whitespace, line breaks, and Markdown markers in analysis_body. original_body is preserved exactly as extracted.",
+              empty_policy: "Exclude from eligible search pool; retain in excluded_empty_after_cleaning.",
+              journal_exclusion: false,
+            },
+            counts: {
+              archive_markdown_files: names.length,
+              parsed_posts: all.length,
+              excluded_empty_after_cleaning: empty.length,
+              eligible_posts: eligible.length,
+              explore_sorted_posts: first.explored.length,
+              sampled_posts: first.sampled.length,
+            },
+            reproducibility: {
+              two_independent_in_process_runs_identical: reproducible,
+              unique_sample_ids: unique,
+              sample_ids_sha256: sha256(firstIds.join("\n")),
+            },
+            explore_order_source_ids: first.explored.map((post) => post.source_id),
+            selected,
+            excluded_empty_after_cleaning: empty.map((post) => ({
+              source_id: post.source_id,
+              original_sha256: post.original_sha256,
+              reason: "EMPTY_BODY",
+              original_body: post.original_body,
+            })),
+          };
+
+          await mkdir(OUT, { recursive: true });
+          await writeFile(join(OUT, "manifest.json"), JSON.stringify(manifest, null, 2) + "\n");
+          const report = [
+            "# Portfolio diagnostic sample",
+            "",
+            `- Source commit: ${SOURCE_COMMIT}`,
+            `- Archive Markdown files: ${names.length}`,
+            `- Parsed posts: ${all.length}`,
+            `- Excluded empty bodies: ${empty.length}`,
+            `- Eligible posts: ${eligible.length}`,
+            `- Explore-sorted posts: ${first.explored.length}`,
+            `- Selected sample: ${first.sampled.length}`,
+            `- Seed: ${seed}`,
+            `- Sample IDs SHA-256: ${sha256(firstIds.join("\n"))}`,
+            `- Reproducibility check: ${reproducible ? "PASS" : "FAIL"}`,
+            `- Unique IDs: ${unique ? "PASS" : "FAIL"}`,
+            "",
+            "## Sample by Explore zone",
+            "",
+            "| Position | Zone | Explore range | Selected source_id |",
+            "|---:|---:|---:|---|",
+            ...first.zones.map((zone, i) => `| ${i+1} | ${zone.zone+1} | ${zone.start}–${zone.endExclusive-1} | ${zone.chosenSourceId} |`),
+            "",
+            "Full source texts, exact Explore order, cleaning hashes, and excluded records are in manifest.json.",
+          ].join("\n");
+          await writeFile(join(OUT, "REPORT.md"), report + "\n");
+          console.log(report);
+          console.log(`Manifest bytes: ${(await readFile(join(OUT, "manifest.json"))).byteLength}`);
+          TS
+          pnpm exec tsx .portfolio-diagnostic-sample.ts
+          rm .portfolio-diagnostic-sample.ts
+
+      - name: Upload diagnostic manifest
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-diagnostic-sample
+          path: portfolio-diagnostic-output/
+          if-no-files-found: error
+          retention-days: 7
