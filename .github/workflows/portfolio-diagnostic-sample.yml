@@ -121,7 +121,7 @@ jobs:
             ["#charm#love", ""],
             ["#hashtag-only", ""],
             ["## Markdown heading", "## Markdown heading"],
-            ["### Heading with #tag", "### Heading with "],
+            ["### Heading with #tag", "### Heading with"],
           ];
           for (const [input, expected] of cleaningCases) {
             const actual = cleanBody(input);
