@@ -126,7 +126,7 @@ jobs:
           for (const [input, expected] of cleaningCases) {
             const actual = cleanBody(input);
             if (actual !== expected) {
-              throw new Error(\`Hashtag cleaning regression: \${JSON.stringify(input)} => \${JSON.stringify(actual)}; expected \${JSON.stringify(expected)}\`);
+              throw new Error(`Hashtag cleaning regression: \${JSON.stringify(input)} => \${JSON.stringify(actual)}; expected \${JSON.stringify(expected)}`);
             }
           }
 
