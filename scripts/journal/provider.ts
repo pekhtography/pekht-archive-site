@@ -69,6 +69,36 @@ function parseRetryAfterMs(value: string | null): number | null {
   return Math.max(0, timestamp - Date.now());
 }
 
+function parseRetryDelayFromError(errorText: string): number | null {
+  const match =
+    errorText.match(/Please retry in\\s+([\\d.]+)\\s*s/i) ??
+    errorText.match(/"retryDelay"\\s*:\\s*"([\\d.]+)s"/i);
+
+  if (!match) return null;
+  const seconds = Number(match[1]);
+  return Number.isFinite(seconds) && seconds >= 0
+    ? Math.ceil(seconds * 1000)
+    : null;
+}
+
+function errorSummary(errorText: string, maxLength = 800): string {
+  try {
+    const parsed = JSON.parse(errorText);
+    const apiError = parsed?.error;
+    if (apiError && typeof apiError === "object") {
+      const parts = [
+        apiError.code != null ? `code=${apiError.code}` : null,
+        typeof apiError.status === "string" ? `status=${apiError.status}` : null,
+        typeof apiError.message === "string" ? apiError.message : null,
+      ].filter(Boolean);
+      if (parts.length > 0) return parts.join(" | ").slice(0, maxLength);
+    }
+  } catch {
+    // Keep a bounded plain-text summary for non-JSON responses.
+  }
+  return errorText.slice(0, maxLength);
+}
+
 function checkBudget(options: GenerateJsonOptions) {
   if (options.checkBudget && !options.checkBudget()) {
     throw new JournalBudgetExceededError();
@@ -127,6 +157,14 @@ async function requestModel(
       lastStatus = response.status;
 
       if (response.status === 404) {
+        console.warn("[Gemini] model unavailable", {
+          model,
+          attempt: attempt + 1,
+          maxAttempts: 3,
+          status: response.status,
+          retryable: true,
+          error: errorSummary(errorText),
+        });
         throw new ProviderError(`Gemini model ${model} is unavailable: ${lastError}`, {
           retryable: true,
           status: response.status,
@@ -135,9 +173,24 @@ async function requestModel(
       }
 
       const retryable = response.status === 429 || response.status >= 500;
+      let retryDelaySource: "header" | "body" | "backoff" = "backoff";
       if (response.status === 429) {
         retryDelayMs = parseRetryAfterMs(response.headers.get("Retry-After"));
+        if (retryDelayMs !== null) {
+          retryDelaySource = "header";
+        } else {
+          retryDelayMs = parseRetryDelayFromError(errorText);
+          if (retryDelayMs !== null) retryDelaySource = "body";
+        }
       }
+      console.warn("[Gemini] HTTP request failed", {
+        model,
+        attempt: attempt + 1,
+        maxAttempts: 3,
+        status: response.status,
+        retryable,
+        error: errorSummary(errorText),
+      });
       if (!retryable) {
         throw new ProviderError(`Gemini ${model} failed with HTTP ${response.status}: ${lastError}`, {
           retryable: false,
@@ -145,6 +198,8 @@ async function requestModel(
           model,
         });
       }
+      // Keep the source available for the retry log below.
+      (options as GenerateJsonOptions & { __retryDelaySource?: string }).__retryDelaySource = retryDelaySource;
     } catch (error) {
       if (error instanceof JournalBudgetExceededError) throw error;
       if (error instanceof ProviderError) throw error;
@@ -157,10 +212,30 @@ async function requestModel(
 
       lastError = error instanceof Error ? error.message : String(error);
       lastStatus = null;
+      console.warn("[Gemini] network request failed", {
+        model,
+        attempt: attempt + 1,
+        maxAttempts: 3,
+        status: "none",
+        errorType: name || "UnknownError",
+        error: lastError.slice(0, 800),
+        retryable: true,
+      });
     }
 
     if (attempt < 2) {
       const delayMs = retryDelayMs ?? 1000 * 2 ** attempt;
+      const retryDelaySource =
+        (options as GenerateJsonOptions & { __retryDelaySource?: string }).__retryDelaySource ??
+        (retryDelayMs !== null ? "header" : "backoff");
+      (options as GenerateJsonOptions & { __retryDelaySource?: string }).__retryDelaySource = undefined;
+      console.info("[Gemini] retry scheduled", {
+        model,
+        attempt: attempt + 1,
+        nextAttempt: attempt + 2,
+        waitMs: delayMs,
+        waitSource: retryDelaySource,
+      });
       if (retryDelayMs !== null && !options.sleepFn) {
         // Long Retry-After values must not block budget checks for the entire wait.
         let remainingMs = delayMs;
@@ -190,16 +265,32 @@ export async function generateJson(
 ): Promise<any> {
   let lastError: unknown = null;
 
-  for (const model of models()) {
+  const modelList = models();
+  for (let index = 0; index < modelList.length; index += 1) {
+    const model = modelList[index];
     checkBudget(options);
     try {
-      return await requestModel(model, prompt, schema, options);
+      const result = await requestModel(model, prompt, schema, options);
+      console.info("[Gemini] model succeeded", { model });
+      return result;
     } catch (error) {
       if (error instanceof JournalBudgetExceededError) throw error;
       if (error instanceof Error && error.name === "AbortError") throw error;
       if (!(error instanceof ProviderError)) throw error;
       if (!error.retryable) throw error;
       lastError = error;
+      console.warn("[Gemini] model exhausted; fallback required", {
+        model,
+        retryable: error.retryable,
+        status: error.status,
+      });
+      const nextModel = modelList[index + 1];
+      if (nextModel) {
+        console.info("[Gemini] falling back to next model", {
+          from: model,
+          to: nextModel,
+        });
+      }
     }
   }
 
