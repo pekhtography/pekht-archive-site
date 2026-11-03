@@ -201,6 +201,6 @@ test("checks the budget again after a retry wait and before another request", as
 
     assert.equal(calls.length, 1);
     assert.deepEqual(waits, [1_000]);
-    assert.equal(budgetChecks, 2);
+    assert.equal(budgetChecks, 3);
   });
 });
