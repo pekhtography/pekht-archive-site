@@ -34,17 +34,18 @@ export function validatePortfolioProcess(audit: ProcessAudit): ValidationResult 
   if (new Set(candidates).size !== candidates.length) errors.push("CANDIDATE_IDS_DUPLICATED");
   if (candidates.some((id) => !isNonEmptyString(id))) errors.push("CANDIDATE_ID_INVALID");
   for (const candidateId of candidates) {
-    const sourceIds = audit.candidateSourceIdsById[candidateId];
+    const sourceIds = audit.candidateSourceIdsById?.[candidateId];
     if (!Array.isArray(sourceIds) || sourceIds.length !== 6 || new Set(sourceIds).size !== 6) errors.push(`CANDIDATE_SOURCE_SET_INVALID: candidate_id=${candidateId} must contain six unique source_ids`);
     else if (sourceIds.some((id) => !snapshot.includes(id))) errors.push(`CANDIDATE_SOURCE_OUTSIDE_SNAPSHOT: candidate_id=${candidateId}`);
   }
-  for (const [candidateId,cycles] of Object.entries(audit.revisionCyclesByCandidate)) {
+  for (const [candidateId,cycles] of Object.entries(audit.revisionCyclesByCandidate ?? {})) {
     if (!candidates.includes(candidateId)) errors.push(`REVISION_UNKNOWN_CANDIDATE: ${candidateId}`);
     if (!Number.isInteger(cycles) || cycles < 0 || cycles > 2) errors.push(`REVISION_LIMIT_INVALID: candidate_id=${candidateId}, cycles=${cycles}`);
   }
   for (const call of audit.modelCalls) {
     if (!isNonEmptyString(call.call_id) || !isNonEmptyString(call.model)) errors.push("MODEL_CALL_ID_OR_MODEL_INVALID");
     if (!Number.isInteger(call.attempts) || call.attempts < 1) errors.push(`MODEL_ATTEMPTS_INVALID: call_id=${call.call_id}`);
+    if (!["SUCCESS","FALLBACK","FAILED"].includes(call.outcome)) errors.push(`MODEL_OUTCOME_INVALID: call_id=${call.call_id}`);
     if (!Number.isInteger(call.fallback_index) || call.fallback_index < 0) errors.push(`MODEL_FALLBACK_INDEX_INVALID: call_id=${call.call_id}`);
     if (call.stage === "DISCOVER" && call.candidate_id !== null) errors.push(`DISCOVER_CANDIDATE_ID_MUST_BE_NULL: call_id=${call.call_id}`);
     if (call.stage !== "DISCOVER" && (!call.candidate_id || !candidates.includes(call.candidate_id))) errors.push(`MODEL_CALL_UNKNOWN_CANDIDATE: call_id=${call.call_id}`);
