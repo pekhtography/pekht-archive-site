@@ -129,6 +129,7 @@ async function requestModel(
   for (let attempt = 0; attempt < 3; attempt += 1) {
     checkBudget(options);
     let retryDelayMs: number | null = null;
+    let retryDelaySource: "header" | "body" | "backoff" = "backoff";
 
     try {
       const response = await fetch(url, {
@@ -173,7 +174,6 @@ async function requestModel(
       }
 
       const retryable = response.status === 429 || response.status >= 500;
-      let retryDelaySource: "header" | "body" | "backoff" = "backoff";
       if (response.status === 429) {
         retryDelayMs = parseRetryAfterMs(response.headers.get("Retry-After"));
         if (retryDelayMs !== null) {
@@ -198,8 +198,6 @@ async function requestModel(
           model,
         });
       }
-      // Keep the source available for the retry log below.
-      (options as GenerateJsonOptions & { __retryDelaySource?: string }).__retryDelaySource = retryDelaySource;
     } catch (error) {
       if (error instanceof JournalBudgetExceededError) throw error;
       if (error instanceof ProviderError) throw error;
@@ -225,10 +223,6 @@ async function requestModel(
 
     if (attempt < 2) {
       const delayMs = retryDelayMs ?? 1000 * 2 ** attempt;
-      const retryDelaySource =
-        (options as GenerateJsonOptions & { __retryDelaySource?: string }).__retryDelaySource ??
-        (retryDelayMs !== null ? "header" : "backoff");
-      (options as GenerateJsonOptions & { __retryDelaySource?: string }).__retryDelaySource = undefined;
       console.info("[Gemini] retry scheduled", {
         model,
         attempt: attempt + 1,
