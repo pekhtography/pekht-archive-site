@@ -71,8 +71,8 @@ function parseRetryAfterMs(value: string | null): number | null {
 
 function parseRetryDelayFromError(errorText: string): number | null {
   const match =
-    errorText.match(/Please retry in\\s+([\\d.]+)\\s*s/i) ??
-    errorText.match(/"retryDelay"\\s*:\\s*"([\\d.]+)s"/i);
+    errorText.match(/Please retry in\s+([\d.]+)\s*s/i) ??
+    errorText.match(/"retryDelay"\s*:\s*"([\d.]+)s"/i);
 
   if (!match) return null;
   const seconds = Number(match[1]);
