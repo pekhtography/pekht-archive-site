@@ -41,6 +41,10 @@ export interface ProcessAudit {
   snapshotSourceIds: readonly string[]; processedSourceIds: readonly string[];
   /** Globally deduplicated shortlist; intermediate batch notes are excluded. */
   candidateIds: readonly string[];
+  /** Candidate compositions compared against the complete corpus-wide shortlist. */
+  candidateSourceIdsById: Readonly<Record<string, readonly string[]>>;
+  /** Must be true only after all batch outputs have been merged and compared globally. */
+  globalComparisonCompleted: boolean;
   revisionCyclesByCandidate: Readonly<Record<string, number>>;
   modelCalls: readonly ModelCallRecord[];
 }
