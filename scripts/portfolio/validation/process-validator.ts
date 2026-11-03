@@ -29,9 +29,15 @@ export function validatePortfolioProcess(audit: ProcessAudit): ValidationResult 
   if (processed.length !== new Set(processed).size) errors.push("PROCESSED_DUPLICATE_SOURCE_IDS");
   if (processed.length !== snapshot.length || snapshot.some((id) => !processed.includes(id))) errors.push("PROCESS_COVERAGE_INCOMPLETE: all 1000 snapshot source_ids must be accounted for");
   if (processed.some((id) => !snapshot.includes(id))) errors.push("PROCESSED_SOURCE_OUTSIDE_SNAPSHOT");
+  if (audit.globalComparisonCompleted !== true) errors.push("GLOBAL_COMPARISON_NOT_COMPLETED");
   if (candidates.length > 10) errors.push(`CANDIDATE_LIMIT_EXCEEDED: maximum 10, received ${candidates.length}`);
   if (new Set(candidates).size !== candidates.length) errors.push("CANDIDATE_IDS_DUPLICATED");
   if (candidates.some((id) => !isNonEmptyString(id))) errors.push("CANDIDATE_ID_INVALID");
+  for (const candidateId of candidates) {
+    const sourceIds = audit.candidateSourceIdsById[candidateId];
+    if (!Array.isArray(sourceIds) || sourceIds.length !== 6 || new Set(sourceIds).size !== 6) errors.push(`CANDIDATE_SOURCE_SET_INVALID: candidate_id=${candidateId} must contain six unique source_ids`);
+    else if (sourceIds.some((id) => !snapshot.includes(id))) errors.push(`CANDIDATE_SOURCE_OUTSIDE_SNAPSHOT: candidate_id=${candidateId}`);
+  }
   for (const [candidateId,cycles] of Object.entries(audit.revisionCyclesByCandidate)) {
     if (!candidates.includes(candidateId)) errors.push(`REVISION_UNKNOWN_CANDIDATE: ${candidateId}`);
     if (!Number.isInteger(cycles) || cycles < 0 || cycles > 2) errors.push(`REVISION_LIMIT_INVALID: candidate_id=${candidateId}, cycles=${cycles}`);
