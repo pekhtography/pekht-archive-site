@@ -193,7 +193,7 @@ test("checks the budget again after a retry wait and before another request", as
 
     await assert.rejects(
       generateJson("test prompt", {}, {
-        checkBudget: () => ++budgetChecks === 1,
+        checkBudget: () => ++budgetChecks <= 2,
         sleepFn: async (ms) => { waits.push(ms); },
       }),
       (error: unknown) => error instanceof JournalBudgetExceededError,
