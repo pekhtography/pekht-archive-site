@@ -299,8 +299,8 @@ async function main() {
       const montagePrompt = result.requests.find((request) => request.stage === "MONTAGE")?.prompt ?? "";
       assert.ok(discoverPrompt.includes("SOURCE_ID: source-a"));
       assert.ok(montagePrompt.includes("SOURCE_ID: source-a"));
-      assert.doesNotMatch(discoverPrompt, /\\bX_ID:/);
-      assert.doesNotMatch(montagePrompt, /\\bX_ID:/);
+      assert.doesNotMatch(discoverPrompt, /X_ID:/);
+      assert.doesNotMatch(montagePrompt, /X_ID:/);
       assert.doesNotMatch(discoverPrompt, /x-1/);
       assert.match(discoverPrompt, /SOURCE ID RULE — STRICT/);
       assert.match(discoverPrompt, /Never use X_ID/);
