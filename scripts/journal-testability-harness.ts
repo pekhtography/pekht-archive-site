@@ -478,7 +478,7 @@ async function main() {
     });
   });
 
-  await run("T16.3 — budget exhaustion logs NO_JOURNAL and does not publish", async () => {
+  await run("T16.3 — budget exhaustion returns INCOMPLETE and does not publish", async () => {
     const originalNow = Date.now;
     const times = [0, 1, 2, 3, 105 * 60 * 1000];
     let index = 0;
@@ -499,7 +499,6 @@ async function main() {
       assert.equal(result.outcome, "INCOMPLETE");
       assert.ok(result.logs.some((line) => line.includes("REJECTION SUMMARY")));
       assert.ok(result.logs.some((line) => line.includes("INCOMPLETE: run budget exhausted")));
-      assert.equal(result.outcome, "INCOMPLETE");
       assert.equal((await readdir(result.blogDir)).length, 1, "No new Journal article may be published.");
     } finally {
       await cleanup(result.root);
@@ -1060,6 +1059,7 @@ async function main() {
       assert.equal(result.thrown, undefined);
       assert.ok(result.logs.some((line) => line.includes("TEST rejected: weak ending")));
       assert.ok(result.logs.some((line) => line.includes("- candidate-a [TEST]: TEST rejected: weak ending")));
+      assert.equal(result.outcome, "NO_JOURNAL");
       assert.deepEqual(result.calls, ["DISCOVER", "MONTAGE", "TEST", "DISCOVER"]);
       assert.equal((await readdir(result.blogDir)).length, 1, "Rejected candidate must not publish.");
     } finally { await cleanup(result.root); }
