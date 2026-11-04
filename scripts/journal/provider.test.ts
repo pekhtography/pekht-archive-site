@@ -37,6 +37,7 @@ async function withProviderHarness(
   process.env.GEMINI_API_KEY = "provider-test-key";
   process.env.GEMINI_MODEL = "provider-test-primary";
   for (const key of envKeys.slice(2)) delete process.env[key];
+  process.env.GEMINI_FALLBACK_1 = "provider-test-fallback";
 
   console.info = (message?: unknown, details?: unknown) => {
     logs.push({ level: "info", message: String(message), details });
@@ -155,7 +156,7 @@ test("retries transient server errors three times, then falls back to the next m
     assert.deepEqual(result, { model: "fallback" });
     assert.equal(calls.length, 4);
     assert.match(calls[0], /provider-test-primary/);
-    assert.match(calls[3], /gemini-3\.8-flash/);
+    assert.match(calls[3], /provider-test-fallback/);
     assert.deepEqual(waits, [1_000, 2_000]);
     assert.ok(logs.some((entry) =>
       entry.message === "[Gemini] model exhausted; fallback required"
@@ -202,5 +203,46 @@ test("checks the budget again after a retry wait and before another request", as
     assert.equal(calls.length, 1);
     assert.deepEqual(waits, [1_000]);
     assert.equal(budgetChecks, 3);
+  });
+});
+
+
+test("skips a model immediately when Google explicitly reports a daily request quota", async () => {
+  await withProviderHarness(async ({ calls, waits, logs, setFetch }) => {
+    setFetch(async () => {
+      if (calls.length === 1) {
+        return new Response(JSON.stringify({
+          error: {
+            code: 429,
+            status: "RESOURCE_EXHAUSTED",
+            message: "Generate content requests per day limit exceeded on Free Tier. Please retry in 13h.",
+          },
+        }), { status: 429, headers: { "content-type": "application/json" } });
+      }
+      return successResponse({ model: "fallback" });
+    });
+    const result = await generateJson("test prompt", {}, { sleepFn: async (ms) => { waits.push(ms); } });
+    assert.deepEqual(result, { model: "fallback" });
+    assert.equal(calls.length, 2);
+    assert.deepEqual(waits, []);
+    assert.ok(logs.some((entry) => entry.message === "[Gemini] falling back to next model"));
+  });
+});
+
+test("retries a short RPM limit on the same model", async () => {
+  await withProviderHarness(async ({ calls, waits, setFetch }) => {
+    setFetch(async () => {
+      if (calls.length === 1) {
+        return new Response(JSON.stringify({
+          error: { code: 429, status: "RESOURCE_EXHAUSTED", message: "Requests per minute quota exceeded. Please retry in 2s" },
+        }), { status: 429, headers: { "content-type": "application/json" } });
+      }
+      return successResponse();
+    });
+    await generateJson("test prompt", {}, { sleepFn: async (ms) => { waits.push(ms); } });
+    assert.equal(calls.length, 2);
+    assert.deepEqual(waits, [2_000]);
+    assert.match(calls[0], /provider-test-primary/);
+    assert.match(calls[1], /provider-test-primary/);
   });
 });
