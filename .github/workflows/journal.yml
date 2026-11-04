@@ -35,6 +35,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Generate Journal
+        id: generate
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
@@ -42,10 +43,23 @@ jobs:
           GEMINI_FALLBACK_2: ${{ vars.GEMINI_FALLBACK_2 }}
           GEMINI_FALLBACK_3: ${{ vars.GEMINI_FALLBACK_3 }}
           GEMINI_FALLBACK_4: ${{ vars.GEMINI_FALLBACK_4 }}
-        run: pnpm journal
+        run: |
+          if pnpm journal; then
+            echo "outcome=COMPLETED" >> "$GITHUB_OUTPUT"
+          else
+            status=$?
+            if [ "$status" -eq 2 ]; then
+              echo "outcome=INCOMPLETE" >> "$GITHUB_OUTPUT"
+              echo "::warning::Journal orchestration ended without a complete result."
+            else
+              echo "outcome=ERROR" >> "$GITHUB_OUTPUT"
+              exit "$status"
+            fi
+          fi
 
       - name: Commit Journal entry
         id: publish
+        if: steps.generate.outputs.outcome == 'COMPLETED'
         run: |
           if [ -z "$(git status --porcelain -- src/content/blog)" ]; then
             echo "No new Journal entry."
@@ -82,6 +96,41 @@ jobs:
 
           echo "::error::Could not publish Journal after $max_attempts attempts. No force-push was used."
           exit 1
+
+      - name: Summarize Journal outcome
+        if: always()
+        env:
+          GENERATE_OUTCOME: ${{ steps.generate.outputs.outcome }}
+          GENERATE_STEP_OUTCOME: ${{ steps.generate.outcome }}
+          PUBLISH_STEP_OUTCOME: ${{ steps.publish.outcome }}
+          PUBLISHED: ${{ steps.publish.outputs.published }}
+        run: |
+          if [ "$GENERATE_OUTCOME" = "INCOMPLETE" ]; then
+            echo "## INCOMPLETE" >> "$GITHUB_STEP_SUMMARY"
+            echo "Journal generation could not complete. No partial material was published." >> "$GITHUB_STEP_SUMMARY"
+            echo "::error::Journal run is INCOMPLETE (model chain or orchestration budget exhausted)."
+            exit 1
+          fi
+
+          if [ "$GENERATE_STEP_OUTCOME" = "failure" ]; then
+            echo "## ERROR" >> "$GITHUB_STEP_SUMMARY"
+            echo "Journal generation failed due to an unexpected technical error." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+          if [ "$PUBLISH_STEP_OUTCOME" = "failure" ]; then
+            echo "## PUBLISH_ERROR" >> "$GITHUB_STEP_SUMMARY"
+            echo "Journal entry was generated but could not be committed and pushed." >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi
+
+          if [ "$PUBLISHED" = "true" ]; then
+            echo "## PUBLISHED" >> "$GITHUB_STEP_SUMMARY"
+            echo "A new Journal entry was committed to main." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "## NO_JOURNAL" >> "$GITHUB_STEP_SUMMARY"
+            echo "The run completed normally, but no publishable Journal entry was selected." >> "$GITHUB_STEP_SUMMARY"
+          fi
 
       - name: Trigger site deployment
         if: steps.publish.outputs.published == 'true'
