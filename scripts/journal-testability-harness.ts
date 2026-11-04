@@ -292,7 +292,6 @@ async function main() {
     const result = await execute([
       { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
       { stage: "MONTAGE", response: invalidMontage },
-      { stage: "DISCOVER", response: noJournalResponse() },
     ]);
     try {
       const discoverPrompt = result.requests.find((request) => request.stage === "DISCOVER")?.prompt ?? "";
@@ -305,7 +304,8 @@ async function main() {
       assert.match(discoverPrompt, /SOURCE ID RULE — STRICT/);
       assert.match(discoverPrompt, /Never use X_ID/);
       assert.match(discoverPrompt, /source_ids, entry_id, exit_id/);
-      assert.ok(result.logs.some((line) => line.includes("failed source validation")));
+      assert.equal(result.calls.includes("TEST"), false,
+        "Invalid MONTAGE must not proceed to TASK 3");
     } finally {
       await cleanup(result.root);
     }
