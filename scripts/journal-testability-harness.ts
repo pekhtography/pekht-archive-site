@@ -4,7 +4,7 @@ import { mkdtemp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promis
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { runJournal, type JournalRunOptions } from "./journal-orchestrator.ts";
-import { generateJson, JournalBudgetExceededError } from "./journal/provider.ts";
+import { generateJson, JournalBudgetExceededError, ProviderModelsExhaustedError } from "./journal/provider.ts";
 
 type Stage = "DISCOVER" | "MONTAGE" | "TEST" | "TITLE";
 type QueueItem = { stage: Stage; response: unknown };
@@ -164,6 +164,7 @@ async function execute(
     console.error = (...args: unknown[]) => logs.push(args.map(String).join(" "));
 
     let thrown: unknown;
+    let outcome: Awaited<ReturnType<typeof runJournal>> | undefined;
     const generateJsonFn: NonNullable<JournalRunOptions["generateJsonFn"]> =
       async (promptText, schema, providerOptions) => {
         if (providerOptions?.checkBudget && !providerOptions.checkBudget()) {
@@ -180,7 +181,7 @@ async function execute(
       };
 
     try {
-      await runJournal({
+      outcome = await runJournal({
         archiveDir: environment.archiveDir,
         blogDir: environment.blogDir,
         promptsDir: resolve(process.cwd(), "scripts/journal/prompts"),
@@ -198,7 +199,7 @@ async function execute(
       console.error = originalError;
     }
 
-    return { ...environment, calls, requests, logs, thrown, remaining: queue };
+    return { ...environment, calls, requests, logs, thrown, outcome, remaining: queue };
   } catch (error) {
     await rm(environment.root, { recursive: true, force: true });
     throw error;
@@ -477,7 +478,7 @@ async function main() {
     });
   });
 
-  await run("T16.3 — budget exhaustion logs NO_JOURNAL and does not publish", async () => {
+  await run("T16.3 — budget exhaustion returns INCOMPLETE and does not publish", async () => {
     const originalNow = Date.now;
     const times = [0, 1, 2, 3, 105 * 60 * 1000];
     let index = 0;
@@ -495,9 +496,24 @@ async function main() {
     try {
       assert.equal(result.thrown, undefined);
       assert.ok(result.logs.some((line) => line.includes("JOURNAL_BUDGET_EXCEEDED during DISCOVER")));
+      assert.equal(result.outcome, "INCOMPLETE");
       assert.ok(result.logs.some((line) => line.includes("REJECTION SUMMARY")));
-      assert.ok(result.logs.some((line) => line.includes("NO_JOURNAL: budget exhausted")));
+      assert.ok(result.logs.some((line) => line.includes("INCOMPLETE: run budget exhausted")));
       assert.equal((await readdir(result.blogDir)).length, 1, "No new Journal article may be published.");
+    } finally {
+      await cleanup(result.root);
+    }
+  });
+
+  await run("T16.4 — exhausted Gemini model chain returns INCOMPLETE and does not publish", async () => {
+    const result = await execute([
+      { stage: "DISCOVER", response: new ProviderModelsExhaustedError(["test-primary", "test-fallback"]) },
+    ]);
+    try {
+      assert.equal(result.thrown, undefined);
+      assert.equal(result.outcome, "INCOMPLETE");
+      assert.ok(result.logs.some((line) => line.includes("INCOMPLETE: Gemini model chain exhausted")));
+      assert.equal((await readdir(result.blogDir)).length, 1, "No incomplete Journal article may be published.");
     } finally {
       await cleanup(result.root);
     }
@@ -752,6 +768,7 @@ async function main() {
     ]);
     try {
       const files = await readdir(result.blogDir);
+      assert.equal(result.outcome, "PUBLISHED");
       assert.deepEqual(files, ["01-01-2026-fixed-first-article.md", expectedFilename()]);
       const published = await readFile(join(result.blogDir, expectedFilename()), "utf8");
       assert.ok(published.includes('category: "journal"'));
@@ -1043,6 +1060,7 @@ async function main() {
       assert.equal(result.thrown, undefined);
       assert.ok(result.logs.some((line) => line.includes("TEST rejected: weak ending")));
       assert.ok(result.logs.some((line) => line.includes("- candidate-a [TEST]: TEST rejected: weak ending")));
+      assert.equal(result.outcome, "NO_JOURNAL");
       assert.deepEqual(result.calls, ["DISCOVER", "MONTAGE", "TEST", "DISCOVER"]);
       assert.equal((await readdir(result.blogDir)).length, 1, "Rejected candidate must not publish.");
     } finally { await cleanup(result.root); }
