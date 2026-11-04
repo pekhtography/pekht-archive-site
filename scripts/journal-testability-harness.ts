@@ -768,6 +768,7 @@ async function main() {
     ]);
     try {
       const files = await readdir(result.blogDir);
+      assert.equal(result.outcome, "PUBLISHED");
       assert.deepEqual(files, ["01-01-2026-fixed-first-article.md", expectedFilename()]);
       const published = await readFile(join(result.blogDir, expectedFilename()), "utf8");
       assert.ok(published.includes('category: "journal"'));
