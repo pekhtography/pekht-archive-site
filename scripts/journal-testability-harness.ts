@@ -164,6 +164,7 @@ async function execute(
     console.error = (...args: unknown[]) => logs.push(args.map(String).join(" "));
 
     let thrown: unknown;
+    let outcome: Awaited<ReturnType<typeof runJournal>> | undefined;
     const generateJsonFn: NonNullable<JournalRunOptions["generateJsonFn"]> =
       async (promptText, schema, providerOptions) => {
         if (providerOptions?.checkBudget && !providerOptions.checkBudget()) {
@@ -180,7 +181,7 @@ async function execute(
       };
 
     try {
-      await runJournal({
+      outcome = await runJournal({
         archiveDir: environment.archiveDir,
         blogDir: environment.blogDir,
         promptsDir: resolve(process.cwd(), "scripts/journal/prompts"),
@@ -198,7 +199,7 @@ async function execute(
       console.error = originalError;
     }
 
-    return { ...environment, calls, requests, logs, thrown, remaining: queue };
+    return { ...environment, calls, requests, logs, thrown, outcome, remaining: queue };
   } catch (error) {
     await rm(environment.root, { recursive: true, force: true });
     throw error;
@@ -495,8 +496,10 @@ async function main() {
     try {
       assert.equal(result.thrown, undefined);
       assert.ok(result.logs.some((line) => line.includes("JOURNAL_BUDGET_EXCEEDED during DISCOVER")));
+      assert.equal(result.outcome, "INCOMPLETE");
       assert.ok(result.logs.some((line) => line.includes("REJECTION SUMMARY")));
-      assert.ok(result.logs.some((line) => line.includes("NO_JOURNAL: budget exhausted")));
+      assert.ok(result.logs.some((line) => line.includes("INCOMPLETE: run budget exhausted")));
+      assert.equal(result.outcome, "INCOMPLETE");
       assert.equal((await readdir(result.blogDir)).length, 1, "No new Journal article may be published.");
     } finally {
       await cleanup(result.root);
