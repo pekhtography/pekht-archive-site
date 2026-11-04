@@ -282,6 +282,35 @@ async function main() {
   };
 
 
+  // Snapshot identity contract: model requests expose SOURCE_ID only, and DISCOVER states the rule explicitly.
+  await run("S-ID — snapshot exposes SOURCE_ID only and DISCOVER enforces its use", async () => {
+    const invalidMontage = montageResponse();
+    invalidMontage.source_ids = [SOURCE_IDS[0], SOURCE_IDS[1], SOURCE_IDS[2], "not-in-snapshot"];
+    invalidMontage.composition = invalidMontage.source_ids.map((source_id) => ({
+      type: "source", source_id, text: `Fragment ${source_id}.`,
+    }));
+    const result = await execute([
+      { stage: "DISCOVER", response: discoverResponse(candidate("candidate-a")) },
+      { stage: "MONTAGE", response: invalidMontage },
+      { stage: "DISCOVER", response: noJournalResponse() },
+    ]);
+    try {
+      const discoverPrompt = result.requests.find((request) => request.stage === "DISCOVER")?.prompt ?? "";
+      const montagePrompt = result.requests.find((request) => request.stage === "MONTAGE")?.prompt ?? "";
+      assert.ok(discoverPrompt.includes("SOURCE_ID: source-a"));
+      assert.ok(montagePrompt.includes("SOURCE_ID: source-a"));
+      assert.doesNotMatch(discoverPrompt, /\\bX_ID:/);
+      assert.doesNotMatch(montagePrompt, /\\bX_ID:/);
+      assert.doesNotMatch(discoverPrompt, /x-1/);
+      assert.match(discoverPrompt, /SOURCE ID RULE — STRICT/);
+      assert.match(discoverPrompt, /Never use X_ID/);
+      assert.match(discoverPrompt, /source_ids, entry_id, exit_id/);
+      assert.ok(result.logs.some((line) => line.includes("failed source validation")));
+    } finally {
+      await cleanup(result.root);
+    }
+  });
+
   // T8/T16 provider and controlled-budget acceptance scenarios.
   await run("T8.1 — request timeout retries the same model", async () => {
     let calls = 0;
