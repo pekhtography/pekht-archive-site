@@ -316,7 +316,9 @@ export type JournalRunOptions = {
   getImageOrientationFn?: (imagePath: string) => Promise<ImageOrientation>;
 };
 
-export async function runJournal(options: JournalRunOptions = {}) {
+export type JournalRunOutcome = "PUBLISHED" | "NO_JOURNAL" | "INCOMPLETE";
+
+export async function runJournal(options: JournalRunOptions = {}): Promise<JournalRunOutcome> {
   const archiveDir = options.archiveDir ?? ARCHIVE_DIR;
   const blogDir = options.blogDir ?? BLOG_DIR;
   const promptsDir = options.promptsDir ?? join(ROOT, "scripts/journal/prompts");
@@ -328,7 +330,7 @@ export async function runJournal(options: JournalRunOptions = {}) {
 
   if (!archive.length) {
     console.log("NO_JOURNAL: archive is empty.");
-    return;
+    return "NO_JOURNAL";
   }
 
   // Journal discovery uses the current Explore sequence, not the public A–Z archive order.
@@ -360,7 +362,7 @@ export async function runJournal(options: JournalRunOptions = {}) {
     console.log(
       "NO_JOURNAL: sampled archive snapshot is empty.",
     );
-    return;
+    return "NO_JOURNAL";
   }
 
   const snapshotIds = new Set(
@@ -448,7 +450,7 @@ export async function runJournal(options: JournalRunOptions = {}) {
         "NO_JOURNAL: discovery found no viable candidate.",
       );
       printRejectionSummary();
-      return;
+      return "NO_JOURNAL";
     }
 
     const selected = task1.candidate;
@@ -853,7 +855,7 @@ ${compositionText}
           `STRONG JOURNAL: ${slug}.md`,
         );
 
-        return;
+        return "PUBLISHED";
       }
 
       if (task3.verdict === "REVISION") {
@@ -927,7 +929,7 @@ ${compositionText}
       } catch (summaryError) {
         console.error("REJECTION SUMMARY: failed to print summary after provider exhaustion.", summaryError);
       }
-      return;
+      return "INCOMPLETE";
     }
 
     if (error instanceof Error && error.message.startsWith("JOURNAL_BUDGET_EXCEEDED")) {
@@ -937,8 +939,8 @@ ${compositionText}
       } catch (summaryError) {
         console.error("REJECTION SUMMARY: failed to print summary; preserving budget-exhaustion outcome.", summaryError);
       }
-      console.log("NO_JOURNAL: budget exhausted; incomplete material was not published.");
-      return;
+      console.log("INCOMPLETE: run budget exhausted; incomplete material was not published.");
+      return "INCOMPLETE";
     }
 
     try {
@@ -948,6 +950,8 @@ ${compositionText}
     }
     throw error;
   }
+
+  return "NO_JOURNAL";
 }
 
 const isDirectExecution =
@@ -955,7 +959,9 @@ const isDirectExecution =
   resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 
 if (isDirectExecution) {
-  runJournal().catch((error) => {
+  runJournal().then((outcome) => {
+    if (outcome === "INCOMPLETE") process.exitCode = 2;
+  }).catch((error) => {
     console.error(error);
     process.exit(1);
   });
