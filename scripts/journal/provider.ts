@@ -13,14 +13,32 @@ export class ProviderError extends Error {
   readonly retryable: boolean;
   readonly status: number | null;
   readonly model: string;
+  readonly quotaType: "daily" | "transient" | "unknown" | null;
 
-  constructor(message: string, options: { retryable: boolean; status?: number | null; model: string }) {
+  constructor(message: string, options: { retryable: boolean; status?: number | null; model: string; quotaType?: "daily" | "transient" | "unknown" | null }) {
     super(message);
     this.name = "ProviderError";
     this.retryable = options.retryable;
     this.status = options.status ?? null;
     this.model = options.model;
+    this.quotaType = options.quotaType ?? null;
   }
+}
+
+export class ProviderModelsExhaustedError extends Error {
+  readonly models: string[];
+
+  constructor(models: string[], cause?: unknown) {
+    super(`INCOMPLETE: all configured Gemini models were exhausted (${models.join(", ")}).`, { cause });
+    this.name = "ProviderModelsExhaustedError";
+    this.models = models;
+  }
+}
+
+function classifyQuota(errorText: string): "daily" | "transient" | "unknown" {
+  if (/requests?\s+per\s+day|per-day\s+(?:request\s+)?quota|daily\s+(?:request\s+)?quota|RPD|generate\s+content\s+requests\s+per\s+day/i.test(errorText)) return "daily";
+  if (/requests?\s+per\s+minute|tokens?\s+per\s+minute|RPM|TPM|per-minute\s+quota/i.test(errorText)) return "transient";
+  return "unknown";
 }
 
 export class JournalBudgetExceededError extends Error {
@@ -47,7 +65,10 @@ function models(): string[] {
     "gemini-3.5-flash-lite",
   ];
 
-  return [...configured, ...defaults].filter((model, index, list) => list.indexOf(model) === index);
+  // Explicit configuration is authoritative; otherwise use the default chain.
+  // gemini-3.5-flash-lite intentionally remains the final default fallback.
+  const selected = configured.length > 0 ? configured : defaults;
+  return selected.filter((model, index, list) => list.indexOf(model) === index);
 }
 
 function sleep(ms: number) {
@@ -175,12 +196,22 @@ async function requestModel(
 
       const retryable = response.status === 429 || response.status >= 500;
       if (response.status === 429) {
+        const quotaType = classifyQuota(errorText);
         retryDelayMs = parseRetryAfterMs(response.headers.get("Retry-After"));
         if (retryDelayMs !== null) {
           retryDelaySource = "header";
         } else {
           retryDelayMs = parseRetryDelayFromError(errorText);
           if (retryDelayMs !== null) retryDelaySource = "body";
+        }
+
+        // A confirmed daily quota cannot recover during this run. For an unknown
+        // quota with a very long Retry-After, avoid blocking the entire run.
+        if (quotaType === "daily" || (quotaType === "unknown" && retryDelayMs !== null && retryDelayMs > 120_000)) {
+          throw new ProviderError(
+            `Gemini ${model} quota exhausted (${quotaType}); skipping to the next model.`,
+            { retryable: true, status: response.status, model, quotaType },
+          );
         }
       }
       console.warn("[Gemini] HTTP request failed", {
@@ -288,5 +319,5 @@ export async function generateJson(
     }
   }
 
-  throw lastError instanceof Error ? lastError : new Error("No AI provider model succeeded.");
+  throw new ProviderModelsExhaustedError(modelList, lastError);
 }

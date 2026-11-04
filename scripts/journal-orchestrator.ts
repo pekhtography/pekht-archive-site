@@ -6,7 +6,7 @@ import { stratifiedSample } from "../src/lib/stratified-sample.ts";
 import sharp from "sharp";
 import { assertCompleteJournalLayout, calculateJournalLayoutWithCycle, type ImageOrientation, type JournalLayoutArticle, type ImageSide } from "../src/lib/journal-layout-algorithm.ts";
 import { writeJournalArticleSafely } from "./journal/safe-write.ts";
-import { generateJson, JournalBudgetExceededError } from "./journal/provider.ts";
+import { generateJson, JournalBudgetExceededError, ProviderModelsExhaustedError } from "./journal/provider.ts";
 import { validateMontage } from "./journal/montage-validation.ts";
 import {
   formatRejectionSummary,
@@ -501,6 +501,21 @@ export async function runJournal(options: JournalRunOptions = {}) {
       uniqueCandidateSourceIds.has(exitId);
 
     if (!candidateSourcesValid) {
+      const duplicateIds = candidateSourceIds.filter((id, index) => candidateSourceIds.indexOf(id) !== index);
+      const missingSnapshotIds = [...new Set(candidateSourceIds.filter((id) => id.length > 0 && !snapshotIds.has(id)))];
+      console.warn("DISCOVER_SOURCE_VALIDATION:", JSON.stringify({
+        candidate_id: selectedId,
+        source_id_count: candidateSourceIds.length,
+        source_ids: candidateSourceIds,
+        duplicate_ids: [...new Set(duplicateIds)],
+        missing_snapshot_ids: missingSnapshotIds,
+        empty_source_ids: candidateSourceIds.filter((id) => id.length === 0).length,
+        entry_id_present: entryId.length > 0,
+        entry_id_in_sources: uniqueCandidateSourceIds.has(entryId),
+        exit_id_present: exitId.length > 0,
+        exit_id_in_sources: uniqueCandidateSourceIds.has(exitId),
+        valid_count: candidateSourceIds.length >= 4 && candidateSourceIds.length <= 6,
+      }));
       reject(
         selectedId,
         "DISCOVER",
@@ -904,6 +919,17 @@ ${compositionText}
     "NO_JOURNAL: all discovery/selection/validation paths exhausted.",
   );
   } catch (error) {
+    if (error instanceof ProviderModelsExhaustedError) {
+      console.error(error.message);
+      console.log("INCOMPLETE: Gemini model chain exhausted; no incomplete material was published.");
+      try {
+        printRejectionSummary();
+      } catch (summaryError) {
+        console.error("REJECTION SUMMARY: failed to print summary after provider exhaustion.", summaryError);
+      }
+      return;
+    }
+
     if (error instanceof Error && error.message.startsWith("JOURNAL_BUDGET_EXCEEDED")) {
       console.error(error.message);
       try {
