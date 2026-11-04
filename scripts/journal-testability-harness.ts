@@ -4,7 +4,7 @@ import { mkdtemp, mkdir, readFile, readdir, rm, writeFile } from "node:fs/promis
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import { runJournal, type JournalRunOptions } from "./journal-orchestrator.ts";
-import { generateJson, JournalBudgetExceededError } from "./journal/provider.ts";
+import { generateJson, JournalBudgetExceededError, ProviderModelsExhaustedError } from "./journal/provider.ts";
 
 type Stage = "DISCOVER" | "MONTAGE" | "TEST" | "TITLE";
 type QueueItem = { stage: Stage; response: unknown };
@@ -501,6 +501,20 @@ async function main() {
       assert.ok(result.logs.some((line) => line.includes("INCOMPLETE: run budget exhausted")));
       assert.equal(result.outcome, "INCOMPLETE");
       assert.equal((await readdir(result.blogDir)).length, 1, "No new Journal article may be published.");
+    } finally {
+      await cleanup(result.root);
+    }
+  });
+
+  await run("T16.4 — exhausted Gemini model chain returns INCOMPLETE and does not publish", async () => {
+    const result = await execute([
+      { stage: "DISCOVER", response: new ProviderModelsExhaustedError(["test-primary", "test-fallback"]) },
+    ]);
+    try {
+      assert.equal(result.thrown, undefined);
+      assert.equal(result.outcome, "INCOMPLETE");
+      assert.ok(result.logs.some((line) => line.includes("INCOMPLETE: Gemini model chain exhausted")));
+      assert.equal((await readdir(result.blogDir)).length, 1, "No incomplete Journal article may be published.");
     } finally {
       await cleanup(result.root);
     }
