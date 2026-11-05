@@ -6,7 +6,7 @@ import { stratifiedSample } from "../src/lib/stratified-sample.ts";
 import sharp from "sharp";
 import { assertCompleteJournalLayout, calculateJournalLayoutWithCycle, type ImageOrientation, type JournalLayoutArticle, type ImageSide } from "../src/lib/journal-layout-algorithm.ts";
 import { writeJournalArticleSafely } from "./journal/safe-write.ts";
-import { generateJson, JournalBudgetExceededError, ProviderModelsExhaustedError } from "./journal/provider.ts";
+import { generateJson, JournalBudgetExceededError, ProviderModelsExhaustedError, type ProviderDiagnostic, type JournalStage } from "./journal/provider.ts";
 import { validateMontage } from "./journal/montage-validation.ts";
 import {
   formatRejectionSummary,
@@ -329,7 +329,8 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
 
   if (!archive.length) {
     console.log("NO_JOURNAL: archive is empty.");
-    return "NO_JOURNAL";
+    printDiagnosticSummary("NO_JOURNAL");
+  return "NO_JOURNAL";
   }
 
   // Journal discovery uses the current Explore sequence, not the public A–Z archive order.
@@ -339,6 +340,22 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
   const TARGET_SAMPLE_SIZE = 1000;
   const RUN_BUDGET_MS = 105 * 60 * 1000;
   const startedAt = Date.now();
+  const runId = process.env.GITHUB_RUN_ID || crypto.randomUUID();
+  const stageStats = new Map<JournalStage, { requests: number; input_tokens: number; output_tokens: number; total_tokens: number; cached_input_tokens: number; measured_input_requests: number; measured_output_requests: number }>();
+  const diagnosticTotals = { requests: 0, input_tokens: 0, output_tokens: 0, total_tokens: 0, cached_input_tokens: 0 };
+  function recordProviderDiagnostic(metric: ProviderDiagnostic) {
+    diagnosticTotals.requests += 1;
+    const stats = stageStats.get(metric.stage as JournalStage) ?? { requests: 0, input_tokens: 0, output_tokens: 0, total_tokens: 0, cached_input_tokens: 0, measured_input_requests: 0, measured_output_requests: 0 };
+    stats.requests += 1;
+    if (metric.input_tokens !== null) { stats.input_tokens += metric.input_tokens; stats.measured_input_requests += 1; }
+    if (metric.output_tokens !== null) { stats.output_tokens += metric.output_tokens; stats.measured_output_requests += 1; }
+    if (metric.total_tokens !== null) stats.total_tokens += metric.total_tokens;
+    if (metric.cached_input_tokens !== null) stats.cached_input_tokens += metric.cached_input_tokens;
+    stageStats.set(metric.stage as JournalStage, stats);
+  }
+  function printDiagnosticSummary(outcome: JournalRunOutcome) {
+    console.log("JOURNAL_DIAGNOSTIC_SUMMARY:", JSON.stringify({ run_id: runId, outcome, requests: diagnosticTotals.requests, totals: diagnosticTotals, stages: Object.fromEntries(stageStats) }));
+  }
 
   function ensureBudget(stage: string) {
     if (Date.now() - startedAt >= RUN_BUDGET_MS) {
@@ -415,6 +432,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
     try {
       return await generateJsonFn(promptText, schema, {
         checkBudget: () => RUN_BUDGET_MS - (Date.now() - startedAt) >= 60_000,
+        runId, stage: stage as JournalStage, onDiagnostic: recordProviderDiagnostic,
       });
     } catch (error) {
       if (error instanceof JournalBudgetExceededError) {
@@ -854,6 +872,7 @@ ${compositionText}
           `STRONG JOURNAL: ${slug}.md`,
         );
 
+        printDiagnosticSummary("PUBLISHED");
         return "PUBLISHED";
       }
 
@@ -928,6 +947,7 @@ ${compositionText}
       } catch (summaryError) {
         console.error("REJECTION SUMMARY: failed to print summary after provider exhaustion.", summaryError);
       }
+      printDiagnosticSummary("INCOMPLETE");
       return "INCOMPLETE";
     }
 
