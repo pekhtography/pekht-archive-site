@@ -329,8 +329,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
 
   if (!archive.length) {
     console.log("NO_JOURNAL: archive is empty.");
-    printDiagnosticSummary("NO_JOURNAL");
-  return "NO_JOURNAL";
+    return "NO_JOURNAL";
   }
 
   // Journal discovery uses the current Explore sequence, not the public A–Z archive order.
@@ -959,6 +958,7 @@ ${compositionText}
         console.error("REJECTION SUMMARY: failed to print summary; preserving budget-exhaustion outcome.", summaryError);
       }
       console.log("INCOMPLETE: run budget exhausted; incomplete material was not published.");
+      printDiagnosticSummary("INCOMPLETE");
       return "INCOMPLETE";
     }
 
