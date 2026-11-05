@@ -1,5 +1,9 @@
 import test from "node:test";
 import assert from "node:assert/strict";
+import { mkdtemp, mkdir, writeFile, rm } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import { join, resolve } from "node:path";
+import { runJournal, createJournalDiagnosticAccumulator } from "../journal-orchestrator.ts";
 import {
   generateJson,
   JournalBudgetExceededError,
@@ -244,5 +248,197 @@ test("retries a short RPM limit on the same model", async () => {
     assert.deepEqual(waits, [2_000]);
     assert.match(calls[0], /provider-test-primary/);
     assert.match(calls[1], /provider-test-primary/);
+  });
+});
+
+
+test("records provider usage metadata and request diagnostics without estimating missing token counts", async () => {
+  await withProviderHarness(async ({ logs, setFetch }) => {
+    setFetch(async () => new Response(JSON.stringify({
+      candidates: [{ content: { parts: [{ text: JSON.stringify({ ok: true }) }] } }],
+      usageMetadata: { promptTokenCount: 123, candidatesTokenCount: 45, totalTokenCount: 168, cachedContentTokenCount: 12 },
+    }), { status: 200, headers: { "content-type": "application/json" } }));
+    await generateJson("diagnostic prompt", {}, { runId: "run-123", stage: "DISCOVER" });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    const metric = JSON.parse(String((entry.details as any)));
+    assert.equal(metric.run_id, "run-123");
+    assert.equal(metric.stage, "DISCOVER");
+    assert.equal(metric.input_tokens, 123);
+    assert.equal(metric.output_tokens, 45);
+    assert.equal(metric.total_tokens, 168);
+    assert.equal(metric.cached_input_tokens, 12);
+    assert.equal(metric.prompt_chars, "diagnostic prompt".length);
+    assert.equal(metric.prompt_bytes, Buffer.byteLength("diagnostic prompt", "utf8"));
+  });
+});
+
+test("leaves token metrics null when usageMetadata is absent", async () => {
+  await withProviderHarness(async ({ logs, setFetch }) => {
+    setFetch(async () => successResponse());
+    await generateJson("no usage metadata", {}, { stage: "TEST" });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    const metric = JSON.parse(String((entry.details as any)));
+    assert.equal(metric.input_tokens, null);
+    assert.equal(metric.output_tokens, null);
+    assert.equal(metric.total_tokens, null);
+  });
+});
+
+test("classifies structured input_token_count quota details as TPM", async () => {
+  await withProviderHarness(async ({ calls, logs, setFetch }) => {
+    setFetch(async () => {
+      if (calls.length === 1) return new Response(JSON.stringify({
+        error: { code: 429, status: "RESOURCE_EXHAUSTED", details: [{ reason: "RATE_LIMIT_EXCEEDED", metadata: { quota_metric: "generativelanguage.googleapis.com/generate_content_input_token_count" } }], message: "Quota exceeded" },
+      }), { status: 429, headers: { "content-type": "application/json" } });
+      return successResponse({ fallback: true });
+    });
+    await generateJson("test prompt", {}, { sleepFn: async () => {} });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    assert.equal(JSON.parse(String((entry.details as any))).quota_type, "tpm");
+  });
+});
+
+test("classifies structured requests-per-minute quota details as RPM", async () => {
+  await withProviderHarness(async ({ calls, logs, setFetch }) => {
+    setFetch(async () => {
+      if (calls.length === 1) return new Response(JSON.stringify({
+        error: { code: 429, status: "RESOURCE_EXHAUSTED", details: [{ metadata: { quota_metric: "generativelanguage.googleapis.com/generate_content_requests" } }], message: "Quota exceeded" },
+      }), { status: 429, headers: { "content-type": "application/json" } });
+      return successResponse({ fallback: true });
+    });
+    await generateJson("test prompt", {}, { sleepFn: async () => {} });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    assert.equal(JSON.parse(String((entry.details as any))).quota_type, "rpm");
+  });
+});
+
+
+test("classifies structured generate_content_requests_per_day as DAILY and leaves ambiguous 429 as unknown", async () => {
+  await withProviderHarness(async ({ calls, logs, setFetch }) => {
+    setFetch(async () => {
+      if (calls.length === 1) return new Response(JSON.stringify({
+        error: {
+          code: 429,
+          status: "RESOURCE_EXHAUSTED",
+          details: [{ metadata: { quota_metric: "generativelanguage.googleapis.com/generate_content_requests_per_day" } }],
+          message: "Quota exceeded",
+        },
+      }), { status: 429, headers: { "content-type": "application/json" } });
+      return successResponse({ fallback: true });
+    });
+    await generateJson("test prompt", {}, { sleepFn: async () => {} });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    assert.equal(JSON.parse(String((entry.details as any))).quota_type, "daily");
+  });
+  await withProviderHarness(async ({ calls, logs, setFetch }) => {
+    setFetch(async () => {
+      if (calls.length === 1) return new Response(JSON.stringify({
+        error: { code: 429, status: "RESOURCE_EXHAUSTED", message: "Quota exceeded" },
+      }), { status: 429, headers: { "content-type": "application/json" } });
+      return successResponse({ fallback: true });
+    });
+    await generateJson("test prompt", {}, { sleepFn: async () => {} });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    assert.equal(JSON.parse(String((entry.details as any))).quota_type, "unknown");
+  });
+});
+
+test("aggregates global token totals as the sum of stage totals and preserves zero-request TITLE CUT", () => {
+  const accumulator = createJournalDiagnosticAccumulator();
+  const metric = (stage: "DISCOVER" | "TEST", input: number | null, output: number | null, total: number | null, cached: number | null) => ({
+    run_id: "run-test", stage, model: "test-model", attempt: 1,
+    prompt_chars: 10, prompt_bytes: 10, request_bytes: 20, duration_ms: 5,
+    http_status: 200, input_tokens: input, output_tokens: output,
+    total_tokens: total, cached_input_tokens: cached, quota_type: null,
+  } as const);
+  accumulator.record(metric("DISCOVER", 100, 20, 120, 10));
+  accumulator.record(metric("DISCOVER", null, 5, null, null));
+  accumulator.record(metric("TEST", 40, 15, 55, 0));
+  const summary = accumulator.snapshot();
+  const stages = Object.values(summary.stages);
+  for (const key of ["input_tokens", "output_tokens", "total_tokens", "cached_input_tokens"] as const) {
+    assert.equal(summary.totals[key], stages.reduce((sum, stage) => sum + stage[key], 0), key);
+  }
+  assert.equal(summary.requests, 3);
+  assert.equal(summary.stages["TITLE CUT"].requests, 0);
+  assert.equal(summary.stages["TITLE CUT"].input_tokens, 0);
+  assert.equal(summary.stages["TITLE CUT"].output_tokens, 0);
+  assert.equal(summary.stages["TITLE CUT"].total_tokens, 0);
+});
+
+test("prints diagnostic summary for model-backed NO_JOURNAL with measured usage", async () => {
+  const root = await mkdtemp(join(tmpdir(), "journal-no-journal-diagnostics-"));
+  const archiveDir = join(root, "archive");
+  const blogDir = join(root, "blog");
+  await mkdir(archiveDir, { recursive: true });
+  await mkdir(blogDir, { recursive: true });
+  await writeFile(join(archiveDir, "fixture-source.md"), [
+    "---",
+    'title: "Fixture source"',
+    'x_id: "fixture-x-id"',
+    'x_created_at: "2026-01-01T00:00:00Z"',
+    'image: "/images/fixture.jpg"',
+    "---",
+    "",
+    "A complete fixture body with enough text for a non-empty archive snapshot.",
+  ].join(String.fromCharCode(10)), "utf8");
+  const logs: string[] = [];
+  const originalLog = console.log;
+  console.log = (...args: unknown[]) => logs.push(args.map(String).join(" "));
+  try {
+    const outcome = await runJournal({
+      archiveDir, blogDir,
+      promptsDir: resolve(process.cwd(), "scripts/journal/prompts"),
+      generateJsonFn: async (_promptText, _schema, options) => {
+        options?.onDiagnostic?.({
+          run_id: options.runId ?? "test-run",
+          stage: options.stage ?? "DISCOVER",
+          model: "test-model", attempt: 1,
+          prompt_chars: 100, prompt_bytes: 100, request_bytes: 200, duration_ms: 25,
+          http_status: 200, input_tokens: 321, output_tokens: 12,
+          total_tokens: 333, cached_input_tokens: 7, quota_type: null,
+        });
+        return { status: "NO_JOURNAL", candidate: null };
+      },
+    });
+    assert.equal(outcome, "NO_JOURNAL");
+    const line = logs.find((entry) => entry.startsWith("JOURNAL_DIAGNOSTIC_SUMMARY:"));
+    assert.ok(line, "NO_JOURNAL must emit a diagnostic summary");
+    const summary = JSON.parse(line.slice(line.indexOf("{")));
+    assert.equal(summary.outcome, "NO_JOURNAL");
+    assert.equal(summary.requests, 1);
+    assert.equal(summary.totals.input_tokens, 321);
+    assert.equal(summary.totals.output_tokens, 12);
+    assert.equal(summary.totals.total_tokens, 333);
+    assert.equal(summary.totals.cached_input_tokens, 7);
+    assert.equal(summary.stages.DISCOVER.input_tokens, 321);
+  } finally {
+    console.log = originalLog;
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("classifies the legacy per-day request quota wording as DAILY", async () => {
+  await withProviderHarness(async ({ calls, logs, setFetch }) => {
+    setFetch(async () => {
+      if (calls.length === 1) return new Response(JSON.stringify({
+        error: {
+          code: 429,
+          status: "RESOURCE_EXHAUSTED",
+          message: "Per-day request quota exceeded.",
+        },
+      }), { status: 429, headers: { "content-type": "application/json" } });
+      return successResponse({ fallback: true });
+    });
+    await generateJson("test prompt", {}, { sleepFn: async () => {} });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    assert.equal(JSON.parse(String((entry.details as any))).quota_type, "daily");
   });
 });

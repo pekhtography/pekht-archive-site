@@ -1,8 +1,19 @@
 export type JsonSchema = Record<string, unknown>;
 
+export type JournalStage = "DISCOVER" | "SELECT-MONTAGE" | "TEST" | "TITLE CUT";
+export type ProviderDiagnostic = {
+  run_id: string; stage: JournalStage | "UNSPECIFIED"; model: string; attempt: number;
+  prompt_chars: number; prompt_bytes: number; request_bytes: number; duration_ms: number;
+  http_status: number | null; input_tokens: number | null; output_tokens: number | null;
+  total_tokens: number | null; cached_input_tokens: number | null;
+  quota_type: "daily" | "tpm" | "rpm" | "unknown" | null;
+};
 export type GenerateJsonOptions = {
   /** Return false to stop before starting another HTTP request. */
   checkBudget?: () => boolean;
+  runId?: string;
+  stage?: JournalStage;
+  onDiagnostic?: (metric: ProviderDiagnostic) => void;
   /** Internal test seam; production defaults to 60 seconds. */
   timeoutMs?: number;
   /** Internal test seam for retry-delay tests; production uses real timers. */
@@ -13,9 +24,9 @@ export class ProviderError extends Error {
   readonly retryable: boolean;
   readonly status: number | null;
   readonly model: string;
-  readonly quotaType: "daily" | "transient" | "unknown" | null;
+  readonly quotaType: "daily" | "tpm" | "rpm" | "unknown" | null;
 
-  constructor(message: string, options: { retryable: boolean; status?: number | null; model: string; quotaType?: "daily" | "transient" | "unknown" | null }) {
+  constructor(message: string, options: { retryable: boolean; status?: number | null; model: string; quotaType?: "daily" | "tpm" | "rpm" | "unknown" | null }) {
     super(message);
     this.name = "ProviderError";
     this.retryable = options.retryable;
@@ -35,9 +46,16 @@ export class ProviderModelsExhaustedError extends Error {
   }
 }
 
-function classifyQuota(errorText: string): "daily" | "transient" | "unknown" {
-  if (/requests?\s+per\s+day|per-day\s+(?:request\s+)?quota|daily\s+(?:request\s+)?quota|RPD|generate\s+content\s+requests\s+per\s+day/i.test(errorText)) return "daily";
-  if (/requests?\s+per\s+minute|tokens?\s+per\s+minute|RPM|TPM|per-minute\s+quota/i.test(errorText)) return "transient";
+function classifyQuota(errorText: string): "daily" | "tpm" | "rpm" | "unknown" {
+  let searchable = errorText;
+  try {
+    const parsed = JSON.parse(errorText);
+    searchable += " " + JSON.stringify(parsed?.error?.details ?? parsed?.error?.status ?? "");
+  } catch { /* classify the bounded plain-text response */ }
+  const normalized = searchable.replace(/[_-]+/g, " ");
+  if (/requests?\s+per\s+day|per\s+day\s+(?:request\s+)?quota|daily\s+(?:request\s+)?quota|\bRPD\b|generate\s+content\s+requests\s+per\s+day/i.test(normalized)) return "daily";
+  if (/tokens?\s+per\s+minute|\bTPM\b|input[_\s-]*token[_\s-]*count|tokens_per_minute|generate_content_input_token/i.test(searchable)) return "tpm";
+  if (/requests?\s+per\s+minute|\bRPM\b|requests_per_minute|generate_content_requests/i.test(searchable)) return "rpm";
   return "unknown";
 }
 
@@ -143,6 +161,15 @@ async function requestModel(
       responseSchema: schema,
     },
   };
+  const serializedBody = JSON.stringify(body);
+  const runId = options.runId ?? process.env.GITHUB_RUN_ID ?? "local";
+  const stage = options.stage ?? "UNSPECIFIED";
+  const emitDiagnostic = (metric: ProviderDiagnostic) => {
+    console.info("JOURNAL_PROVIDER_DIAGNOSTIC:", JSON.stringify(metric));
+    try { options.onDiagnostic?.(metric); } catch (error) {
+      console.warn("[Gemini] diagnostic callback failed", error);
+    }
+  };
 
   let lastError = "";
   let lastStatus: number | null = null;
@@ -152,6 +179,20 @@ async function requestModel(
     let retryDelayMs: number | null = null;
     let retryDelaySource: "header" | "body" | "backoff" = "backoff";
 
+    const requestStartedAt = Date.now();
+    let metricEmitted = false;
+    const emitAttempt = (values: Partial<ProviderDiagnostic>) => {
+      if (metricEmitted) return;
+      metricEmitted = true;
+      emitDiagnostic({
+        run_id: runId, stage, model, attempt: attempt + 1,
+        prompt_chars: prompt.length, prompt_bytes: Buffer.byteLength(prompt, "utf8"),
+        request_bytes: Buffer.byteLength(serializedBody, "utf8"),
+        duration_ms: Date.now() - requestStartedAt, http_status: null,
+        input_tokens: null, output_tokens: null, total_tokens: null,
+        cached_input_tokens: null, quota_type: null, ...values,
+      });
+    };
     try {
       const response = await fetch(url, {
         method: "POST",
@@ -159,12 +200,20 @@ async function requestModel(
           "Content-Type": "application/json",
           "x-goog-api-key": apiKey,
         },
-        body: JSON.stringify(body),
+        body: serializedBody,
         signal: AbortSignal.timeout(options.timeoutMs ?? 60_000),
       });
 
       if (response.ok) {
         const payload = await response.json() as any;
+        const usage = payload?.usageMetadata ?? {};
+        emitAttempt({
+          http_status: response.status,
+          input_tokens: Number.isFinite(usage.promptTokenCount) ? usage.promptTokenCount : null,
+          output_tokens: Number.isFinite(usage.candidatesTokenCount) ? usage.candidatesTokenCount : null,
+          total_tokens: Number.isFinite(usage.totalTokenCount) ? usage.totalTokenCount : null,
+          cached_input_tokens: Number.isFinite(usage.cachedContentTokenCount) ? usage.cachedContentTokenCount : null,
+        });
         const text = payload?.candidates?.[0]?.content?.parts?.map((part: any) => part.text || "").join("")?.trim();
         if (!text) throw new ProviderError(`Model ${model} returned no text.`, { retryable: false, model });
         try {
@@ -175,6 +224,7 @@ async function requestModel(
       }
 
       const errorText = await response.text();
+      emitAttempt({ http_status: response.status, quota_type: response.status === 429 ? classifyQuota(errorText) : null });
       lastError = errorText.slice(0, 1000);
       lastStatus = response.status;
 
@@ -241,6 +291,7 @@ async function requestModel(
 
       lastError = error instanceof Error ? error.message : String(error);
       lastStatus = null;
+      emitAttempt({ http_status: null });
       console.warn("[Gemini] network request failed", {
         model,
         attempt: attempt + 1,
