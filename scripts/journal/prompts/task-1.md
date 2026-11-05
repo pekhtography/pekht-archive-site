@@ -25,6 +25,13 @@ Hard rules:
 - Do not rely on generic transition words as evidence of a relationship.
 - A valid relation should carry a state, action, image, object, sensation, scale, function, space, time, or meaning from one source into the next.
 
+SOURCE ID RULE — STRICT:
+- Use only the exact literal value from a SOURCE_ID field in the supplied snapshot.
+- Never use X_ID, dates, titles, reconstructed filenames, or any other identifier.
+- Copy every SOURCE_ID verbatim, without modification.
+- This applies to source_ids, entry_id, exit_id, and every source reference in evidence.
+- Every returned source ID must be present as a SOURCE_ID in the supplied snapshot.
+
 Return JSON matching the supplied schema. Evidence must be concrete and source-linked.
 
 DISCOVERY INPUT:
