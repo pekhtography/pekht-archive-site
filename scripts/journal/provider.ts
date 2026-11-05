@@ -52,7 +52,8 @@ function classifyQuota(errorText: string): "daily" | "tpm" | "rpm" | "unknown" {
     const parsed = JSON.parse(errorText);
     searchable += " " + JSON.stringify(parsed?.error?.details ?? parsed?.error?.status ?? "");
   } catch { /* classify the bounded plain-text response */ }
-  if (/requests?\s+per\s+day|per-day\s+(?:request\s+)?quota|daily\s+(?:request\s+)?quota|RPD|generate\s+content\s+requests\s+per\s+day/i.test(searchable)) return "daily";
+  const normalized = searchable.replace(/[_-]+/g, " ");
+  if (/requests?\s+per\s+day|per-day\s+(?:request\s+)?quota|daily\s+(?:request\s+)?quota|\bRPD\b|generate\s+content\s+requests\s+per\s+day/i.test(normalized)) return "daily";
   if (/tokens?\s+per\s+minute|\bTPM\b|input[_\s-]*token[_\s-]*count|tokens_per_minute|generate_content_input_token/i.test(searchable)) return "tpm";
   if (/requests?\s+per\s+minute|\bRPM\b|requests_per_minute|generate_content_requests/i.test(searchable)) return "rpm";
   return "unknown";

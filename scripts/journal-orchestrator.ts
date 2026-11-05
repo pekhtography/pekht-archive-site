@@ -318,6 +318,40 @@ export type JournalRunOptions = {
 
 export type JournalRunOutcome = "PUBLISHED" | "NO_JOURNAL" | "INCOMPLETE";
 
+type JournalDiagnosticStageStats = {
+  requests: number; input_tokens: number; output_tokens: number; total_tokens: number;
+  cached_input_tokens: number; measured_input_requests: number; measured_output_requests: number;
+};
+const JOURNAL_DIAGNOSTIC_STAGES: JournalStage[] = ["DISCOVER", "SELECT-MONTAGE", "TEST", "TITLE CUT"];
+
+export function createJournalDiagnosticAccumulator() {
+  const totals = { requests: 0, input_tokens: 0, output_tokens: 0, total_tokens: 0, cached_input_tokens: 0 };
+  const stages = new Map<JournalStage, JournalDiagnosticStageStats>(
+    JOURNAL_DIAGNOSTIC_STAGES.map((stage) => [stage, {
+      requests: 0, input_tokens: 0, output_tokens: 0, total_tokens: 0,
+      cached_input_tokens: 0, measured_input_requests: 0, measured_output_requests: 0,
+    }]),
+  );
+  function record(metric: ProviderDiagnostic) {
+    totals.requests += 1;
+    const stats = stages.get(metric.stage as JournalStage);
+    if (!stats) return;
+    stats.requests += 1;
+    if (metric.input_tokens !== null) { totals.input_tokens += metric.input_tokens; stats.input_tokens += metric.input_tokens; stats.measured_input_requests += 1; }
+    if (metric.output_tokens !== null) { totals.output_tokens += metric.output_tokens; stats.output_tokens += metric.output_tokens; stats.measured_output_requests += 1; }
+    if (metric.total_tokens !== null) { totals.total_tokens += metric.total_tokens; stats.total_tokens += metric.total_tokens; }
+    if (metric.cached_input_tokens !== null) { totals.cached_input_tokens += metric.cached_input_tokens; stats.cached_input_tokens += metric.cached_input_tokens; }
+  }
+  function snapshot() {
+    return {
+      requests: totals.requests,
+      totals: { ...totals },
+      stages: Object.fromEntries([...stages.entries()].map(([stage, stats]) => [stage, { ...stats }])),
+    };
+  }
+  return { record, snapshot };
+}
+
 export async function runJournal(options: JournalRunOptions = {}): Promise<JournalRunOutcome> {
   const archiveDir = options.archiveDir ?? ARCHIVE_DIR;
   const blogDir = options.blogDir ?? BLOG_DIR;
@@ -341,20 +375,14 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
   const RUN_BUDGET_MS = 105 * 60 * 1000;
   const startedAt = Date.now();
   const runId = process.env.GITHUB_RUN_ID || randomUUID();
-  const stageStats = new Map<JournalStage, { requests: number; input_tokens: number; output_tokens: number; total_tokens: number; cached_input_tokens: number; measured_input_requests: number; measured_output_requests: number }>();
-  const diagnosticTotals = { requests: 0, input_tokens: 0, output_tokens: 0, total_tokens: 0, cached_input_tokens: 0 };
-  function recordProviderDiagnostic(metric: ProviderDiagnostic) {
-    diagnosticTotals.requests += 1;
-    const stats = stageStats.get(metric.stage as JournalStage) ?? { requests: 0, input_tokens: 0, output_tokens: 0, total_tokens: 0, cached_input_tokens: 0, measured_input_requests: 0, measured_output_requests: 0 };
-    stats.requests += 1;
-    if (metric.input_tokens !== null) { stats.input_tokens += metric.input_tokens; stats.measured_input_requests += 1; }
-    if (metric.output_tokens !== null) { stats.output_tokens += metric.output_tokens; stats.measured_output_requests += 1; }
-    if (metric.total_tokens !== null) stats.total_tokens += metric.total_tokens;
-    if (metric.cached_input_tokens !== null) stats.cached_input_tokens += metric.cached_input_tokens;
-    stageStats.set(metric.stage as JournalStage, stats);
-  }
+  const diagnosticAccumulator = createJournalDiagnosticAccumulator();
+  const recordProviderDiagnostic = diagnosticAccumulator.record;
   function printDiagnosticSummary(outcome: JournalRunOutcome) {
-    console.log("JOURNAL_DIAGNOSTIC_SUMMARY:", JSON.stringify({ run_id: runId, outcome, requests: diagnosticTotals.requests, totals: diagnosticTotals, stages: Object.fromEntries(stageStats) }));
+    console.log("JOURNAL_DIAGNOSTIC_SUMMARY:", JSON.stringify({
+      run_id: runId,
+      outcome,
+      ...diagnosticAccumulator.snapshot(),
+    }));
   }
 
   function ensureBudget(stage: string) {
@@ -467,6 +495,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
         "NO_JOURNAL: discovery found no viable candidate.",
       );
       printRejectionSummary();
+      printDiagnosticSummary("NO_JOURNAL");
       return "NO_JOURNAL";
     }
 
@@ -938,6 +967,7 @@ ${compositionText}
   console.log(
     "NO_JOURNAL: all discovery/selection/validation paths exhausted.",
   );
+  printDiagnosticSummary("NO_JOURNAL");
   } catch (error) {
     if (error instanceof ProviderModelsExhaustedError) {
       console.error(error.message);
