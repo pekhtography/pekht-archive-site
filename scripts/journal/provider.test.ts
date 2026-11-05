@@ -246,3 +246,68 @@ test("retries a short RPM limit on the same model", async () => {
     assert.match(calls[1], /provider-test-primary/);
   });
 });
+
+
+test("records provider usage metadata and request diagnostics without estimating missing token counts", async () => {
+  await withProviderHarness(async ({ logs, setFetch }) => {
+    setFetch(async () => new Response(JSON.stringify({
+      candidates: [{ content: { parts: [{ text: JSON.stringify({ ok: true }) }] } }],
+      usageMetadata: { promptTokenCount: 123, candidatesTokenCount: 45, totalTokenCount: 168, cachedContentTokenCount: 12 },
+    }), { status: 200, headers: { "content-type": "application/json" } }));
+    await generateJson("diagnostic prompt", {}, { runId: "run-123", stage: "DISCOVER" });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    const metric = JSON.parse(String((entry.details as any)));
+    assert.equal(metric.run_id, "run-123");
+    assert.equal(metric.stage, "DISCOVER");
+    assert.equal(metric.input_tokens, 123);
+    assert.equal(metric.output_tokens, 45);
+    assert.equal(metric.total_tokens, 168);
+    assert.equal(metric.cached_input_tokens, 12);
+    assert.equal(metric.prompt_chars, "diagnostic prompt".length);
+    assert.equal(metric.prompt_bytes, Buffer.byteLength("diagnostic prompt", "utf8"));
+  });
+});
+
+test("leaves token metrics null when usageMetadata is absent", async () => {
+  await withProviderHarness(async ({ logs, setFetch }) => {
+    setFetch(async () => successResponse());
+    await generateJson("no usage metadata", {}, { stage: "TEST" });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    const metric = JSON.parse(String((entry.details as any)));
+    assert.equal(metric.input_tokens, null);
+    assert.equal(metric.output_tokens, null);
+    assert.equal(metric.total_tokens, null);
+  });
+});
+
+test("classifies structured input_token_count quota details as TPM", async () => {
+  await withProviderHarness(async ({ calls, logs, setFetch }) => {
+    setFetch(async () => {
+      if (calls.length === 1) return new Response(JSON.stringify({
+        error: { code: 429, status: "RESOURCE_EXHAUSTED", details: [{ reason: "RATE_LIMIT_EXCEEDED", metadata: { quota_metric: "generativelanguage.googleapis.com/generate_content_input_token_count" } }], message: "Quota exceeded" },
+      }), { status: 429, headers: { "content-type": "application/json" } });
+      return successResponse({ fallback: true });
+    });
+    await generateJson("test prompt", {}, { sleepFn: async () => {} });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    assert.equal(JSON.parse(String((entry.details as any))).quota_type, "tpm");
+  });
+});
+
+test("classifies structured requests-per-minute quota details as RPM", async () => {
+  await withProviderHarness(async ({ calls, logs, setFetch }) => {
+    setFetch(async () => {
+      if (calls.length === 1) return new Response(JSON.stringify({
+        error: { code: 429, status: "RESOURCE_EXHAUSTED", details: [{ metadata: { quota_metric: "generativelanguage.googleapis.com/generate_content_requests" } }], message: "Quota exceeded" },
+      }), { status: 429, headers: { "content-type": "application/json" } });
+      return successResponse({ fallback: true });
+    });
+    await generateJson("test prompt", {}, { sleepFn: async () => {} });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    assert.equal(JSON.parse(String((entry.details as any))).quota_type, "rpm");
+  });
+});
