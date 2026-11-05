@@ -423,3 +423,22 @@ test("prints diagnostic summary for model-backed NO_JOURNAL with measured usage"
     await rm(root, { recursive: true, force: true });
   }
 });
+
+test("classifies the legacy per-day request quota wording as DAILY", async () => {
+  await withProviderHarness(async ({ calls, logs, setFetch }) => {
+    setFetch(async () => {
+      if (calls.length === 1) return new Response(JSON.stringify({
+        error: {
+          code: 429,
+          status: "RESOURCE_EXHAUSTED",
+          message: "Per-day request quota exceeded.",
+        },
+      }), { status: 429, headers: { "content-type": "application/json" } });
+      return successResponse({ fallback: true });
+    });
+    await generateJson("test prompt", {}, { sleepFn: async () => {} });
+    const entry = logs.find((item) => item.message === "JOURNAL_PROVIDER_DIAGNOSTIC:");
+    assert.ok(entry);
+    assert.equal(JSON.parse(String((entry.details as any))).quota_type, "daily");
+  });
+});
