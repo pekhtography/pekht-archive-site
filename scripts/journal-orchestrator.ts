@@ -2,6 +2,7 @@ import { existsSync } from "node:fs";
 import { readdir, readFile, writeFile } from "node:fs/promises";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { randomUUID } from "node:crypto";
 import { stratifiedSample } from "../src/lib/stratified-sample.ts";
 import sharp from "sharp";
 import { assertCompleteJournalLayout, calculateJournalLayoutWithCycle, type ImageOrientation, type JournalLayoutArticle, type ImageSide } from "../src/lib/journal-layout-algorithm.ts";
@@ -339,7 +340,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
   const TARGET_SAMPLE_SIZE = 1000;
   const RUN_BUDGET_MS = 105 * 60 * 1000;
   const startedAt = Date.now();
-  const runId = process.env.GITHUB_RUN_ID || crypto.randomUUID();
+  const runId = process.env.GITHUB_RUN_ID || randomUUID();
   const stageStats = new Map<JournalStage, { requests: number; input_tokens: number; output_tokens: number; total_tokens: number; cached_input_tokens: number; measured_input_requests: number; measured_output_requests: number }>();
   const diagnosticTotals = { requests: 0, input_tokens: 0, output_tokens: 0, total_tokens: 0, cached_input_tokens: 0 };
   function recordProviderDiagnostic(metric: ProviderDiagnostic) {
