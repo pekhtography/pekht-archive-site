@@ -612,7 +612,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
             `FULL TEXTS OF SELECTED DISCOVER SOURCES:\n${currentSourceTexts}`,
             "Do not request additional sources in the initial montage. Set additional_source_ids and deferred_source_ids to empty arrays."
           ].join("\n\n");
-      const promptMetrics = { stage: currentMontage ? "REVISION" : "SELECT-MONTAGE", catalog_chars: currentMontage ? (revisionAttempt === 1 ? catalog.length : deferredCatalog.length) : catalog.length, full_source_chars: currentSourceTexts.length + acceptedSourceTexts.length + deferredSourceTexts.length, snapshot_chars: 0, requested_source_count: revisionSourceState.requested_source_ids.size, revision_attempt: revisionAttempt, prompt_bytes: Buffer.byteLength(task2Prompt, "utf8") };
+      const promptMetrics = { stage: currentMontage ? "REVISION" : "SELECT-MONTAGE", catalog_chars: currentMontage ? (revisionAttempt === 1 ? catalog.length : 0) : catalog.length, full_source_chars: currentSourceTexts.length + acceptedSourceTexts.length + deferredSourceTexts.length, snapshot_chars: 0, requested_source_count: revisionSourceState.requested_source_ids.size, revision_attempt: revisionAttempt, prompt_bytes: Buffer.byteLength(task2Prompt, "utf8") };
       console.log("JOURNAL_PROMPT_DIAGNOSTIC:", JSON.stringify(promptMetrics));
       const task2 = await generateWithBudget(task2Prompt, task2Schema, currentMontage ? "REVISION" : "SELECT-MONTAGE");
 
