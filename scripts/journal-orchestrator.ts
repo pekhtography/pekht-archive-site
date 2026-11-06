@@ -587,6 +587,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
       const allowedRevisionIds = revisionAttempt === 1 ? catalogIds : new Set<string>();
       const revisionStateText = JSON.stringify(serializeRevisionSourceState(revisionSourceState, revisionAttempt), null, 2);
       const currentSourceTexts = currentMontage ? sourcesFor(currentMontage.source_ids) : sourcesFor(candidateSourceIds);
+      const suppliedFullTextIds = new Set([...candidateSourceIds, ...revisionSourceState.accepted_source_ids, ...(revisionAttempt === 2 ? revisionSourceState.deferred_source_ids : [])]);
       const currentMontageIds = new Set<string>(currentMontage?.source_ids ?? candidateSourceIds);
       const acceptedSourceTexts = sourcesFor([...revisionSourceState.accepted_source_ids].filter((id) => !currentMontageIds.has(id)));
       const deferredSourceTexts = revisionAttempt === 2 ? sourcesFor(revisionSourceState.deferred_source_ids) : "";
@@ -651,9 +652,8 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
         break;
       }
 
-      const availableFullTextIds = new Set([...candidateSourceIds, ...revisionSourceState.accepted_source_ids, ...(revisionAttempt === 2 ? revisionSourceState.deferred_source_ids : [])]);
       const requestedMontageIds = Array.isArray(task2?.source_ids) ? task2.source_ids : [];
-      const unavailableFullTextId = requestedMontageIds.find((id: unknown) => typeof id !== "string" || !availableFullTextIds.has(id));
+      const unavailableFullTextId = requestedMontageIds.find((id: unknown) => typeof id !== "string" || !suppliedFullTextIds.has(id));
       if (unavailableFullTextId !== undefined) {
         const reason = typeof unavailableFullTextId === "string" && !snapshotIds.has(unavailableFullTextId)
           ? "MONTAGE_SOURCE_NOT_IN_SNAPSHOT: stage=MONTAGE source_id=" + unavailableFullTextId + " is not in the DISCOVER snapshot."
