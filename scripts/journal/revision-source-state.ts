@@ -25,6 +25,7 @@ export type RevisionSourceState = {
   rejected_source_ids: Set<string>;
   deferred_source_ids: string[];
   deferred_initialized: boolean;
+  deferred_rejections: Array<{ source_id: string; status: SourceRequestStatus }>;
 };
 
 export function createRevisionSourceState(includedSourceIds: string[]): RevisionSourceState {
@@ -35,6 +36,7 @@ export function createRevisionSourceState(includedSourceIds: string[]): Revision
     rejected_source_ids: new Set(),
     deferred_source_ids: [],
     deferred_initialized: false,
+    deferred_rejections: [],
   };
 }
 
@@ -59,12 +61,22 @@ export function initializeDeferredSourceIds(
   const accepted: string[] = [];
   const seen = new Set<string>();
   for (const raw of proposedIds) {
-    if (typeof raw !== "string" || !raw.trim() || seen.has(raw)) continue;
+    if (typeof raw !== "string" || !raw.trim()) continue;
+    let status: SourceRequestStatus | null = null;
+    if (seen.has(raw)) status = "DUPLICATE_REQUEST";
+    else if (!catalogIds.has(raw) || !snapshotIds.has(raw)) status = "NOT_IN_SNAPSHOT";
+    else if (!sourceMap.has(raw)) status = "SOURCE_MAP_MISSING";
+    else if (state.included_source_ids.has(raw)) status = "ALREADY_INCLUDED";
+    else if (state.requested_source_ids.has(raw) || state.accepted_source_ids.has(raw)) status = "ALREADY_REQUESTED";
+    else if (state.rejected_source_ids.has(raw)) status = "ALREADY_REJECTED";
+    else if (accepted.length >= 3) status = "LIMIT_EXCEEDED";
     seen.add(raw);
-    if (accepted.length >= 3) break;
-    if (!catalogIds.has(raw) || !snapshotIds.has(raw)) continue;
-    if (!sourceMap.has(raw)) throw new Error(`SOURCE_MAP_MISSING: deferred source_id=${raw} exists in catalog/snapshot but is missing from sourceMap.`);
-    if (state.included_source_ids.has(raw) || state.requested_source_ids.has(raw) || state.rejected_source_ids.has(raw)) continue;
+    if (status) {
+      state.deferred_rejections.push({ source_id: raw, status });
+      if (status === "SOURCE_MAP_MISSING") throw new Error(`SOURCE_MAP_MISSING: deferred source_id=${raw} exists in catalog/snapshot but is missing from sourceMap.`);
+      if (status !== "DUPLICATE_REQUEST") state.rejected_source_ids.add(raw);
+      continue;
+    }
     accepted.push(raw);
   }
   state.deferred_source_ids = accepted;
@@ -119,6 +131,7 @@ export function serializeRevisionSourceState(state: RevisionSourceState, revisio
     accepted_source_ids: [...state.accepted_source_ids],
     rejected_source_ids: [...state.rejected_source_ids],
     deferred_source_ids: [...state.deferred_source_ids],
+    deferred_rejections: [...state.deferred_rejections],
     revision_attempt: revisionAttempt,
   };
 }
