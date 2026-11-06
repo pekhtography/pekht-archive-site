@@ -584,7 +584,6 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
       );
 
       const revisionAttempt = revisionAttempts.get(selectedId) ?? 0;
-      const deferredCatalog = buildSourceCatalog(sampled.filter((post) => revisionSourceState.deferred_source_ids.includes(post.source_id)).map((post) => ({ source_id: post.source_id, title: post.title, hashtags: post.hashtags })));
       const allowedRevisionIds = revisionAttempt === 1 ? catalogIds : new Set<string>();
       const revisionStateText = JSON.stringify(serializeRevisionSourceState(revisionSourceState, revisionAttempt), null, 2);
       const currentSourceTexts = currentMontage ? sourcesFor(currentMontage.source_ids) : sourcesFor(candidateSourceIds);
