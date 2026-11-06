@@ -38,7 +38,7 @@ test("formats the rejection summary as ID [STAGE]: reason", () => {
   ]);
 });
 
-test("assigns the approved stage at all eight orchestrator rejection call sites", async () => {
+test("assigns the approved stage at all nine orchestrator rejection call sites", async () => {
   const orchestratorPath = fileURLToPath(
     new URL("../journal-orchestrator.ts", import.meta.url),
   );
@@ -52,9 +52,10 @@ test("assigns the approved stage at all eight orchestrator rejection call sites"
     /reject\(\s*selectedId,\s*"MONTAGE",\s*reason\s*\)/s,
     /reject\(\s*selectedId,\s*"REVISION",\s*"repeated revision instruction",?\s*\)/s,
     /reject\(\s*selectedId,\s*"TEST",[\s\S]{0,100}TEST rejected: \$\{task3\.reason\}/s,
+    /reject\(\s*selectedId,\s*currentMontage \? "REVISION" : "SELECT-MONTAGE",[\s\S]{0,240}SOURCE_REQUEST_CONTRACT_VIOLATION/s,
   ];
 
-  assert.equal(source.match(/^\s*reject\(/gm)?.length, 8);
+  assert.equal(source.match(/^\s*reject\(/gm)?.length, 9);
   for (const pattern of callPatterns) {
     assert.match(source, pattern);
   }

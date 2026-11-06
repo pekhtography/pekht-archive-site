@@ -9,7 +9,7 @@ import { assertCompleteJournalLayout, calculateJournalLayoutWithCycle, type Imag
 import { writeJournalArticleSafely } from "./journal/safe-write.ts";
 import { generateJson, JournalBudgetExceededError, ProviderModelsExhaustedError, type ProviderDiagnostic, type JournalStage } from "./journal/provider.ts";
 import { validateMontage } from "./journal/montage-validation.ts";
-import { buildSourceCatalog, createRevisionSourceState, initializeDeferredSourceIds, resolveAdditionalSourceRequests, serializeRevisionSourceState } from "./journal/revision-source-state.ts";
+import { buildSourceCatalog, createRevisionSourceState, initializeDeferredSourceIds, resolveAdditionalSourceRequests, serializeRevisionSourceState, validateSourceRequestContract } from "./journal/revision-source-state.ts";
 import {
   formatRejectionSummary,
   recordRejection,
@@ -670,6 +670,45 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
           `SELECT-MONTAGE candidate_id mismatch (expected ${selectedId}, received ${montageCandidateId || "<missing>"})`,
         );
         break;
+      }
+
+      const sourceRequestContractStage = !currentMontage
+        ? "INITIAL_SELECT_MONTAGE"
+        : revisionAttempt === 2
+          ? "SECOND_REVISION"
+          : null;
+      if (sourceRequestContractStage) {
+        const violations = validateSourceRequestContract({
+          stage: sourceRequestContractStage,
+          additionalSourceIds: task2?.additional_source_ids,
+          deferredSourceIds: task2?.deferred_source_ids,
+        });
+        if (violations.length > 0) {
+          console.error("JOURNAL_SOURCE_REQUEST_DIAGNOSTIC:", JSON.stringify({
+            stage: sourceRequestContractStage,
+            revision_attempt: revisionAttempt,
+            requested_source_count: revisionSourceState.requested_source_ids.size,
+            new_requested_source_count: 0,
+            accepted_source_ids: [],
+            rejected: violations.flatMap((violation) => violation.source_ids.map((source_id) => ({
+              source_id,
+              status: violation.status,
+              field: violation.field,
+            }))),
+            rejected_source_ids: [...revisionSourceState.rejected_source_ids],
+            rejection_reasons: revisionSourceState.rejection_reasons,
+            deferred_source_ids: revisionSourceState.deferred_source_ids,
+            deferred_rejections: revisionSourceState.deferred_rejections,
+            consistency_error: false,
+            contract_violation: true,
+          }));
+          reject(
+            selectedId,
+            currentMontage ? "REVISION" : "SELECT-MONTAGE",
+            `SOURCE_REQUEST_CONTRACT_VIOLATION: ${violations.map((violation) => violation.status).join(", ")} at ${sourceRequestContractStage}.`,
+          );
+          break;
+        }
       }
 
       if (currentMontage) {

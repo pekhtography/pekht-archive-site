@@ -18,6 +18,37 @@ export type SourceRequestResult = {
   rejected: Array<{ source_id: string; status: SourceRequestStatus }>;
 };
 
+export type SourceRequestContractStage = "INITIAL_SELECT_MONTAGE" | "SECOND_REVISION";
+export type SourceRequestContractViolation = {
+  field: "additional_source_ids" | "deferred_source_ids";
+  status: "UNEXPECTED_ADDITIONAL_IDS" | "UNEXPECTED_DEFERRED_IDS";
+  source_ids: string[];
+};
+
+/** Reject source-ID expansion fields on stages whose contract requires both arrays to be empty. */
+export function validateSourceRequestContract(args: {
+  stage: SourceRequestContractStage;
+  additionalSourceIds: unknown;
+  deferredSourceIds: unknown;
+}): SourceRequestContractViolation[] {
+  const violations: SourceRequestContractViolation[] = [];
+  if (Array.isArray(args.additionalSourceIds) && args.additionalSourceIds.length > 0) {
+    violations.push({
+      field: "additional_source_ids",
+      status: "UNEXPECTED_ADDITIONAL_IDS",
+      source_ids: args.additionalSourceIds.map((id) => String(id)),
+    });
+  }
+  if (Array.isArray(args.deferredSourceIds) && args.deferredSourceIds.length > 0) {
+    violations.push({
+      field: "deferred_source_ids",
+      status: "UNEXPECTED_DEFERRED_IDS",
+      source_ids: args.deferredSourceIds.map((id) => String(id)),
+    });
+  }
+  return violations;
+}
+
 export type RevisionSourceState = {
   included_source_ids: Set<string>;
   requested_source_ids: Set<string>;

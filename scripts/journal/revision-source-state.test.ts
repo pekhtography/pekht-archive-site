@@ -6,6 +6,7 @@ import {
   initializeDeferredSourceIds,
   resolveAdditionalSourceRequests,
   serializeRevisionSourceState,
+  validateSourceRequestContract,
 } from "./revision-source-state.ts";
 
 const ids = ["a", "b", "c", "d", "e", "f", "g", "h"];
@@ -170,4 +171,29 @@ test("deferred SOURCE_MAP_MISSING is recorded and diagnosed before aborting", ()
     },
   ), /SOURCE_MAP_MISSING/);
   assert.deepEqual(diagnostics, [{ source_id: "e", status: "SOURCE_MAP_MISSING" }]);
+});
+
+
+test("initial SELECT-MONTAGE rejects non-empty additional and deferred source arrays", () => {
+  const violations = validateSourceRequestContract({
+    stage: "INITIAL_SELECT_MONTAGE",
+    additionalSourceIds: ["e"],
+    deferredSourceIds: ["f", "g"],
+  });
+  assert.deepEqual(violations, [
+    { field: "additional_source_ids", status: "UNEXPECTED_ADDITIONAL_IDS", source_ids: ["e"] },
+    { field: "deferred_source_ids", status: "UNEXPECTED_DEFERRED_IDS", source_ids: ["f", "g"] },
+  ]);
+});
+
+test("second REVISION rejects non-empty additional and deferred source arrays", () => {
+  const violations = validateSourceRequestContract({
+    stage: "SECOND_REVISION",
+    additionalSourceIds: ["outside"],
+    deferredSourceIds: ["unapproved"],
+  });
+  assert.deepEqual(violations, [
+    { field: "additional_source_ids", status: "UNEXPECTED_ADDITIONAL_IDS", source_ids: ["outside"] },
+    { field: "deferred_source_ids", status: "UNEXPECTED_DEFERRED_IDS", source_ids: ["unapproved"] },
+  ]);
 });

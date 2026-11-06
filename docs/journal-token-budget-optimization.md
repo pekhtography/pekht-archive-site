@@ -26,6 +26,11 @@ SELECT-MONTAGE additionally receives the complete text of the 4–6 source IDs s
 
 Additional source requests are made during REVISION, not the initial montage.
 
+The source-request response contract is stage-specific and enforced at runtime:
+- Initial SELECT-MONTAGE must return empty `additional_source_ids` and `deferred_source_ids` arrays. Any non-empty array rejects the candidate with `UNEXPECTED_ADDITIONAL_IDS` and/or `UNEXPECTED_DEFERRED_IDS` in `JOURNAL_SOURCE_REQUEST_DIAGNOSTIC`; neither array is processed.
+- The second REVISION must also return both arrays empty. Any non-empty array is rejected with the same field-specific diagnostic statuses; neither array is processed.
+- These contract violations are candidate-level rejections, not source-map consistency errors. The diagnostic marks `contract_violation: true` and `consistency_error: false`. The existing full-text allowlist and source-request state are not changed by the rejected response.
+
 - Maximum 3 additional source IDs per REVISION cycle.
 - Maximum 2 REVISION cycles.
 - Maximum 6 accepted additional source IDs over one candidate's revision flow.
