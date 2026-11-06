@@ -86,3 +86,14 @@ PUBLIC JOURNAL FILTER FACETS:
 - Derive facets from the assembled whole and source evidence.
 - Avoid near-duplicates, synonyms and overly specific one-off details.
 - If no meaningful public facet is justified, return an empty array.
+
+
+ADDITIONAL SOURCE REQUEST CONTRACT (REVISION ONLY):
+- The JSON response must include both `additional_source_ids` and `deferred_source_ids` arrays.
+- The initial SELECT-MONTAGE response must return both arrays empty.
+- On REVISION attempt 1, you may request up to 3 additional source IDs from the visible metadata catalog. You may separately place up to 3 other unique IDs from that same visible catalog into `deferred_source_ids` for the second revision attempt.
+- Never invent, infer, recall, or fabricate a SOURCE_ID. Every ID must be copied exactly from the catalog visible in the current request.
+- On REVISION attempt 2, `additional_source_ids` may contain only IDs from the supplied `deferred_source_ids`; return `deferred_source_ids: []`. No other IDs are permitted.
+- Additional source IDs are requests, not permission to write their text. Use them only after their complete archive text is supplied in a subsequent request.
+- The orchestrator validates every requested ID against the DISCOVER snapshot and sourceMap. Requests may be rejected for duplicate, already included/requested/rejected, out-of-scope, or limit reasons.
+- Do not use an additional source unless its full text is present in the current request.
