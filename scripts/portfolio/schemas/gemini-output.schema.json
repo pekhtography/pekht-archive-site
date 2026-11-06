@@ -197,6 +197,29 @@
           }
         }
       }
+    },
+    {
+      "if": {
+        "properties": {
+          "gallery": {
+            "type": "object"
+          }
+        },
+        "required": [
+          "gallery"
+        ]
+      },
+      "then": {
+        "properties": {
+          "test": {
+            "properties": {
+              "decision": {
+                "const": "APPROVE"
+              }
+            }
+          }
+        }
+      }
     }
   ]
 }
