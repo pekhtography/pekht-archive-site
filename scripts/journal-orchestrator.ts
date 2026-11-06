@@ -371,11 +371,42 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
   const runId = process.env.GITHUB_RUN_ID || randomUUID();
   const diagnosticAccumulator = createJournalDiagnosticAccumulator();
   const recordProviderDiagnostic = diagnosticAccumulator.record;
+  type PromptDiagnostic = {
+    stage: "DISCOVER" | "SELECT-MONTAGE" | "REVISION";
+    catalog_chars: number;
+    full_source_chars: number;
+    snapshot_chars: number;
+    requested_source_count: number;
+    revision_attempt: number;
+    prompt_bytes: number;
+  };
+  const promptDiagnosticStages = ["DISCOVER", "SELECT-MONTAGE", "REVISION"] as const;
+  const promptDiagnosticTotals = new Map(promptDiagnosticStages.map((stage) => [stage, {
+    requests: 0, catalog_chars: 0, full_source_chars: 0, snapshot_chars: 0,
+    requested_source_count: 0, prompt_bytes: 0, revision_attempts: [] as number[],
+  }]));
+  function recordPromptDiagnostic(metric: PromptDiagnostic) {
+    const stats = promptDiagnosticTotals.get(metric.stage);
+    if (!stats) return;
+    stats.requests += 1;
+    stats.catalog_chars += metric.catalog_chars;
+    stats.full_source_chars += metric.full_source_chars;
+    stats.snapshot_chars += metric.snapshot_chars;
+    stats.requested_source_count += metric.requested_source_count;
+    stats.prompt_bytes += metric.prompt_bytes;
+    stats.revision_attempts.push(metric.revision_attempt);
+  }
+  function promptDiagnosticSnapshot() {
+    return Object.fromEntries([...promptDiagnosticTotals.entries()].map(([stage, stats]) => [stage, {
+      ...stats, revision_attempts: [...stats.revision_attempts],
+    }]));
+  }
   function printDiagnosticSummary(outcome: JournalRunOutcome) {
     console.log("JOURNAL_DIAGNOSTIC_SUMMARY:", JSON.stringify({
       run_id: runId,
       outcome,
       ...diagnosticAccumulator.snapshot(),
+      prompt_diagnostics: promptDiagnosticSnapshot(),
     }));
   }
 
@@ -474,7 +505,14 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
       ? `\n\nPREVIOUS CANDIDATES ALREADY REJECTED IN THIS RUN: ${[...rejectedThisRun].join(", ")}\nDo not return any of them. Find a genuinely different candidate from the supplied snapshot.`
       : "";
 
-    console.log("JOURNAL_PROMPT_DIAGNOSTIC:", JSON.stringify({ stage: "DISCOVER", catalog_chars: 0, full_source_chars: 0, snapshot_chars: snapshot.length, requested_source_count: 0, revision_attempt: 0, prompt_bytes: Buffer.byteLength(`${await prompt("task-1.md", promptsDir)}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`, "utf8") }));
+    const task1Prompt = `${await prompt("task-1.md", promptsDir)}${discoveryInstruction}\\n\\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\\n${snapshot}`;
+    const discoverPromptMetrics: PromptDiagnostic = {
+      stage: "DISCOVER", catalog_chars: 0, full_source_chars: 0,
+      snapshot_chars: snapshot.length, requested_source_count: 0,
+      revision_attempt: 0, prompt_bytes: Buffer.byteLength(task1Prompt, "utf8"),
+    };
+    recordPromptDiagnostic(discoverPromptMetrics);
+    console.log("JOURNAL_PROMPT_DIAGNOSTIC:", JSON.stringify(discoverPromptMetrics));
 
     const task1 = await generateWithBudget(
       `${await prompt("task-1.md", promptsDir)}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
@@ -614,6 +652,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
             "Do not request additional sources in the initial montage. Set additional_source_ids and deferred_source_ids to empty arrays."
           ].join("\n\n");
       const promptMetrics = { stage: currentMontage ? "REVISION" : "SELECT-MONTAGE", catalog_chars: currentMontage ? (revisionAttempt === 1 ? catalog.length : 0) : catalog.length, full_source_chars: currentSourceTexts.length + acceptedSourceTexts.length + deferredSourceTexts.length, snapshot_chars: 0, requested_source_count: revisionSourceState.requested_source_ids.size, revision_attempt: revisionAttempt, prompt_bytes: Buffer.byteLength(task2Prompt, "utf8") };
+      recordPromptDiagnostic(promptMetrics);
       console.log("JOURNAL_PROMPT_DIAGNOSTIC:", JSON.stringify(promptMetrics));
       const task2 = await generateWithBudget(task2Prompt, task2Schema, currentMontage ? "REVISION" : "SELECT-MONTAGE");
 
