@@ -2,7 +2,9 @@ import { isNonEmptyString, isRecord, result } from "./shared.ts";
 import type { PortfolioSnapshot, ValidationResult } from "./types.ts";
 export function validatePortfolioSemantics(output: unknown, snapshot: PortfolioSnapshot): ValidationResult {
   const errors: string[] = [];
-  if (!isRecord(output) || !isRecord(output.gallery)) return { ok: false, errors: ["semantic: a gallery object is required"] };
+  if (!isRecord(output)) return { ok: false, errors: ["semantic: expected a Gemini output object"] };
+  if (output.gallery === null) return result(errors);
+  if (!isRecord(output.gallery)) return { ok: false, errors: ["semantic: gallery must be an object or null"] };
   const gallery = output.gallery;
   if (!Array.isArray(snapshot.posts)) return { ok: false, errors: ["snapshot.posts: expected an array"] };
   const posts = new Map<string,string>();
