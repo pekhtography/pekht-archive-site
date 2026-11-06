@@ -10,6 +10,10 @@ function validOutput() {
   }, test: { decision: "APPROVE", findings: [], revision_cycles: 0 } };
 }
 test("accepts a complete six-source gallery", () => assert.deepEqual(validateGeminiOutput(validOutput()),{ok:true,errors:[]}));
+test("rejects a non-null gallery with REJECT", () => {
+  const rejected:any=validOutput(); rejected.test.decision="REJECT";
+  assert.equal(validateGeminiOutput(rejected).ok,false);
+});
 test("accepts null gallery only with REJECT", () => {
   assert.equal(validateGeminiOutput({gallery:null,test:{decision:"REJECT",findings:[],revision_cycles:0}}).ok,true);
   assert.equal(validateGeminiOutput({gallery:null,test:{decision:"APPROVE",findings:[],revision_cycles:0}}).ok,false);
