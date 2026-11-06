@@ -651,7 +651,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
         break;
       }
 
-      const availableFullTextIds = new Set([...candidateSourceIds, ...revisionSourceState.accepted_source_ids, ...revisionSourceState.deferred_source_ids]);
+      const availableFullTextIds = new Set([...candidateSourceIds, ...revisionSourceState.accepted_source_ids, ...(revisionAttempt === 2 ? revisionSourceState.deferred_source_ids : [])]);
       const requestedMontageIds = Array.isArray(task2?.source_ids) ? task2.source_ids : [];
       const unavailableFullTextId = requestedMontageIds.find((id: unknown) => typeof id !== "string" || !availableFullTextIds.has(id));
       if (unavailableFullTextId !== undefined) {
