@@ -100,6 +100,7 @@ test("second revision receives only deferred IDs, while state remains serializab
     accepted_source_ids: ["g"],
     rejected_source_ids: [],
     deferred_source_ids: ["e", "f"],
+    deferred_rejections: [],
     revision_attempt: 2,
   });
 });
@@ -116,4 +117,11 @@ test("the deferred queue is an explicit whitelist for second-cycle source candid
   });
   assert.deepEqual(result.accepted_source_ids, ["e"]);
   assert.deepEqual(result.rejected, [{ source_id: "g", status: "NOT_IN_SNAPSHOT" }]);
+});
+
+test("deferred candidates enforce the three-ID cap and record over-limit IDs", () => {
+  const state = createRevisionSourceState(["a", "b", "c", "d"]);
+  const accepted = initializeDeferredSourceIds(["e", "f", "g", "h"], new Set(ids), snapshot, sourceMap, state);
+  assert.deepEqual(accepted, ["e", "f", "g"]);
+  assert.deepEqual(state.deferred_rejections, [{ source_id: "h", status: "LIMIT_EXCEEDED" }]);
 });
