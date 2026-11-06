@@ -1,0 +1,11 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { validatePortfolioSemantics } from "./semantic-validator.ts";
+const ids=["a","b","c","d","e","f"];
+const snapshot:any={schema_version:"1.0",repository_commit:"a".repeat(40),generated_at:"2026-11-03T10:00:00Z",sampled_count:1000,content_sha256:"b".repeat(64),posts:ids.map((source_id)=>({source_id,body:`A full body for ${source_id} with a distinctive sentence.`}))};
+const output=()=>({gallery:{source_ids:ids,roles:ids.map((source_id)=>({source_id,evidence:[{quote:"distinctive sentence",interpretation:"Evidence"}]}))}});
+test("accepts null gallery for a completed NO_GALLERY semantic result",()=>assert.equal(validatePortfolioSemantics({gallery:null},snapshot).ok,true));
+test("accepts exact quotes from corresponding source",()=>assert.equal(validatePortfolioSemantics(output(),snapshot).ok,true));
+test("rejects source outside snapshot",()=>{const v:any=output();v.gallery.source_ids[0]="outside";assert.equal(validatePortfolioSemantics(v,snapshot).ok,false);});
+test("rejects non-verbatim quote",()=>{const v:any=output();v.gallery.roles[2].evidence[0].quote="distinctive Sentence";assert.equal(validatePortfolioSemantics(v,snapshot).ok,false);});
+test("rejects role/source set mismatch",()=>{const v:any=output();v.gallery.roles[0].source_id="b";assert.equal(validatePortfolioSemantics(v,snapshot).ok,false);});

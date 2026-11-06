@@ -1,0 +1,13 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { validateRunResult } from "./run-result-validator.ts";
+const snapshot={schema_version:"1.0",repository_commit:"a".repeat(40),generated_at:"2026-11-03T10:00:00Z",sampled_count:1000,content_sha256:"b".repeat(64)};
+const gallery={source_ids:["a","b","c","d","e","f"],title:"Title",statement:"Statement",facets:["One","Two"],roles:["a","b","c","d","e","f"].map((source_id)=>({source_id,role:"Role",operation:"Operation",evidence:[{quote:"q",interpretation:"i"}],necessity:"Necessary"})),composition_rationale:"Rationale",alternatives_considered:[],doubts:[]};
+const output=(galleryValue:unknown,decision:"APPROVE"|"REJECT")=>({gallery:galleryValue,test:{decision,findings:[],revision_cycles:0}});
+const validation={status:"PASS",structural:"PASS",semantic:"PASS",process:"PASS",findings:[]};
+const base={input_snapshot:snapshot,validation,model_used:[]};
+test("accepts APPROVED with all validation levels passing",()=>assert.equal(validateRunResult({...base,status:"APPROVED",gemini_output:output(gallery,"APPROVE")}).ok,true));
+test("accepts NO_GALLERY only after completed rejection",()=>assert.equal(validateRunResult({...base,status:"NO_GALLERY",gemini_output:output(null,"REJECT")}).ok,true));
+test("rejects APPROVED when semantic validation failed",()=>assert.equal(validateRunResult({...base,validation:{...validation,semantic:"FAIL"},status:"APPROVED",gemini_output:output(gallery,"APPROVE")}).ok,false));
+test("accepts INCOMPLETE with failed validation and preserved Gemini output",()=>assert.equal(validateRunResult({...base,validation:{...validation,status:"FAIL",process:"FAIL"},status:"INCOMPLETE",gemini_output:output(gallery,"APPROVE")}).ok,true));
+test("rejects malformed snapshot metadata",()=>assert.equal(validateRunResult({...base,input_snapshot:{...snapshot,content_sha256:"bad"},status:"NO_GALLERY",gemini_output:output(null,"REJECT")}).ok,false));
