@@ -9,6 +9,7 @@ import { assertCompleteJournalLayout, calculateJournalLayoutWithCycle, type Imag
 import { writeJournalArticleSafely } from "./journal/safe-write.ts";
 import { generateJson, JournalBudgetExceededError, ProviderModelsExhaustedError, type ProviderDiagnostic, type JournalStage } from "./journal/provider.ts";
 import { validateMontage } from "./journal/montage-validation.ts";
+import { buildSourceCatalog, createRevisionSourceState, initializeDeferredSourceIds, resolveAdditionalSourceRequests, serializeRevisionSourceState } from "./journal/revision-source-state.ts";
 import {
   formatRejectionSummary,
   recordRejection,
@@ -253,17 +254,10 @@ const task2Schema = {
       type: "ARRAY",
       items: { type: "STRING" },
     },
+    additional_source_ids: { type: "ARRAY", items: { type: "STRING" } },
+    deferred_source_ids: { type: "ARRAY", items: { type: "STRING" } },
   },
-  required: [
-    "status",
-    "candidate_id",
-    "title",
-    "description",
-    "source_ids",
-    "composition",
-    "reason",
-    "facets",
-  ],
+  required: ["status", "candidate_id", "title", "description", "source_ids", "composition", "reason", "facets", "additional_source_ids", "deferred_source_ids"],
 };
 
 const titleCutSchema = {
@@ -322,7 +316,7 @@ type JournalDiagnosticStageStats = {
   requests: number; input_tokens: number; output_tokens: number; total_tokens: number;
   cached_input_tokens: number; measured_input_requests: number; measured_output_requests: number;
 };
-const JOURNAL_DIAGNOSTIC_STAGES: JournalStage[] = ["DISCOVER", "SELECT-MONTAGE", "TEST", "TITLE CUT"];
+const JOURNAL_DIAGNOSTIC_STAGES: JournalStage[] = ["DISCOVER", "SELECT-MONTAGE", "REVISION", "TEST", "TITLE CUT"];
 
 export function createJournalDiagnosticAccumulator() {
   const totals = { requests: 0, input_tokens: 0, output_tokens: 0, total_tokens: 0, cached_input_tokens: 0 };
@@ -401,6 +395,8 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
   );
 
   const snapshot = compactSnapshot(sampled, used);
+  const catalog = buildSourceCatalog(sampled.map((post) => ({ source_id: post.source_id, title: post.title, hashtags: post.hashtags })));
+  const catalogIds = new Set(sampled.map((post) => post.source_id));
 
   if (!snapshot.trim()) {
     console.log(
@@ -574,6 +570,8 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
 
     let currentMontage: any = null;
     let lastRevisionInstruction = "";
+    let lastTestContext = "";
+    const revisionSourceState = createRevisionSourceState(candidateSourceIds);
     const seenMontages = new Set<string>();
 
     while (true) {
@@ -583,13 +581,37 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
           : "SELECT-MONTAGE",
       );
 
-      const task2 = await generateWithBudget(
-        currentMontage
-          ? `${await prompt("task-2.md", promptsDir)}\n\nREVISION MODE: Preserve the proven candidate vector. You may add, remove, replace, or reorder source posts from the supplied snapshot when that is the smallest justified change. Do not leave the supplied snapshot.\n\nREVISION REQUIRED:\n${lastRevisionInstruction}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nCURRENT MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`
-          : `${await prompt("task-2.md", promptsDir)}\n\nSELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}\n\nAVAILABLE SOURCE TEXTS FROM THIS DISCOVERY SNAPSHOT:\n${snapshot}`,
-        task2Schema,
-        "SELECT-MONTAGE",
-      );
+      const revisionAttempt = revisionAttempts.get(selectedId) ?? 0;
+      const deferredCatalog = buildSourceCatalog(sampled.filter((post) => revisionSourceState.deferred_source_ids.includes(post.source_id)).map((post) => ({ source_id: post.source_id, title: post.title, hashtags: post.hashtags })));
+      const allowedRevisionIds = revisionAttempt === 1 ? catalogIds : new Set(revisionSourceState.deferred_source_ids);
+      const revisionStateText = JSON.stringify(serializeRevisionSourceState(revisionSourceState, revisionAttempt), null, 2);
+      const currentSourceTexts = currentMontage ? sourcesFor(currentMontage.source_ids) : sourcesFor(candidateSourceIds);
+      const acceptedSourceTexts = sourcesFor([...revisionSourceState.accepted_source_ids]);
+      const task2Prompt = currentMontage
+        ? [
+            await prompt("task-2.md", promptsDir),
+            "REVISION MODE: Preserve the proven candidate vector. Work only with the supplied current montage, supplied full source texts, and the explicitly permitted source-ID scope. Never invent or recall source IDs.",
+            `REVISION ATTEMPT: ${revisionAttempt}/2`,
+            `REVISION REQUIRED:\n${lastRevisionInstruction}`,
+            `PREVIOUS TEST CONTEXT:\n${lastTestContext}`,
+            `SELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}`,
+            `CURRENT MONTAGE:\n${JSON.stringify(currentMontage, null, 2)}`,
+            `SOURCE REQUEST STATE:\n${revisionStateText}`,
+            revisionAttempt === 1 ? `AVAILABLE SOURCE CATALOG (SOURCE_ID + TITLE + HASHTAGS; no TEXT or DATE):\n${catalog}` : `DEFERRED SOURCE CATALOG (only IDs exposed in REVISION attempt 1):\n${deferredCatalog}`,
+            `FULL TEXTS OF CURRENT MONTAGE SOURCES:\n${currentSourceTexts}`,
+            acceptedSourceTexts ? `FULL TEXTS OF ACCEPTED ADDITIONAL SOURCES:\n${acceptedSourceTexts}` : "",
+            revisionAttempt === 2 ? "On this second revision, additional_source_ids may contain only IDs in deferred_source_ids. deferred_source_ids must be an empty array." : "On this first revision, deferred_source_ids may contain up to three unique IDs copied only from the visible catalog."
+          ].filter(Boolean).join("\n\n")
+        : [
+            await prompt("task-2.md", promptsDir),
+            `SELECTED CANDIDATE:\n${JSON.stringify(selected, null, 2)}`,
+            `AVAILABLE SOURCE CATALOG (SOURCE_ID + TITLE + HASHTAGS; no TEXT or DATE):\n${catalog}`,
+            `FULL TEXTS OF SELECTED DISCOVER SOURCES:\n${currentSourceTexts}`,
+            "Do not request additional sources in the initial montage. Set additional_source_ids and deferred_source_ids to empty arrays."
+          ].join("\n\n");
+      const promptMetrics = { stage: currentMontage ? "REVISION" : "SELECT-MONTAGE", catalog_chars: currentMontage ? (revisionAttempt === 1 ? catalog.length : deferredCatalog.length) : catalog.length, full_source_chars: currentSourceTexts.length + acceptedSourceTexts.length, snapshot_chars: 0, requested_source_count: revisionSourceState.requested_source_ids.size, revision_attempt: revisionAttempt, prompt_bytes: Buffer.byteLength(task2Prompt, "utf8") };
+      console.log("JOURNAL_PROMPT_DIAGNOSTIC:", JSON.stringify(promptMetrics));
+      const task2 = await generateWithBudget(task2Prompt, task2Schema, currentMontage ? "REVISION" : "SELECT-MONTAGE");
 
       ensureBudget("SELECT-MONTAGE response");
 
@@ -605,6 +627,13 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
           `SELECT-MONTAGE candidate_id mismatch (expected ${selectedId}, received ${montageCandidateId || "<missing>"})`,
         );
         break;
+      }
+
+      if (currentMontage) {
+        const requested = resolveAdditionalSourceRequests({ requestedIds: task2?.additional_source_ids, allowedIds: allowedRevisionIds, snapshotIds, sourceMap, state: revisionSourceState, limit: 3 });
+        if (revisionAttempt === 1) initializeDeferredSourceIds(task2?.deferred_source_ids, catalogIds, snapshotIds, sourceMap, revisionSourceState);
+        else if (Array.isArray(task2?.deferred_source_ids) && task2.deferred_source_ids.length > 0) console.warn("REVISION_DEFERRED_IDS_IGNORED: second revision cannot expand deferred_source_ids.");
+        console.log("JOURNAL_SOURCE_REQUEST_DIAGNOSTIC:", JSON.stringify({ revision_attempt: revisionAttempt, accepted_source_ids: requested.accepted_source_ids, rejected: requested.rejected, deferred_source_ids: revisionSourceState.deferred_source_ids }));
       }
 
       const validation = validateMontage(
@@ -667,6 +696,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
 
       seenMontages.add(montageSignature);
 
+      revisionSourceState.included_source_ids = new Set(uniqueMontageSourceIds);
       currentMontage = {
         status: task2.status,
         candidate_id: task2.candidate_id,
@@ -906,6 +936,7 @@ ${compositionText}
       }
 
       if (task3.verdict === "REVISION") {
+        lastTestContext = JSON.stringify({ verdict: task3.verdict, reason: task3.reason, evidence: task3.evidence, revision: task3.revision });
         const attempts =
           (revisionAttempts.get(selectedId) ?? 0) + 1;
 
