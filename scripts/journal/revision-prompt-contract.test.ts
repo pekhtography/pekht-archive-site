@@ -14,12 +14,12 @@ test("REVISION attempt 1 gets the catalog; attempt 2 gets only deferred full tex
   const source = await readFile(new URL("../journal-orchestrator.ts", import.meta.url), "utf8");
   const revisionPrompt = source.slice(source.indexOf("const task2Prompt"), source.indexOf('ensureBudget("SELECT-MONTAGE response")'));
   assert.match(revisionPrompt, /revisionAttempt === 1 \? `AVAILABLE SOURCE CATALOG/);
-  assert.match(revisionPrompt, /revisionAttempt === 2 \? `FULL TEXTS OF DEFERRED SOURCES/);
+  assert.match(revisionPrompt, /revisionAttempt === 1 \? `AVAILABLE SOURCE CATALOG[\s\S]*: `FULL TEXTS OF DEFERRED SOURCES/);
   assert.match(revisionPrompt, /sourcesFor\(revisionSourceState\.deferred_source_ids\)/);
   assert.match(revisionPrompt, /FULL TEXTS OF ACCEPTED ADDITIONAL SOURCES/);
   assert.match(revisionPrompt, /PREVIOUS TEST CONTEXT/);
   assert.match(revisionPrompt, /SOURCE REQUEST STATE/);
-  assert.match(revisionPrompt, /revisionAttempt === 2 \? `FULL TEXTS OF DEFERRED SOURCES[\s\S]*?`/);
+  assert.match(revisionPrompt, /revisionAttempt === 1 \? `AVAILABLE SOURCE CATALOG[\s\S]*: `FULL TEXTS OF DEFERRED SOURCES/);
 });
 
 test("every montage source must have a locally supplied full text", async () => {
