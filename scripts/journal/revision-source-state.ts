@@ -26,6 +26,7 @@ export type RevisionSourceState = {
   deferred_source_ids: string[];
   deferred_initialized: boolean;
   deferred_rejections: Array<{ source_id: string; status: SourceRequestStatus }>;
+  rejection_reasons: Array<{ source_id: string; status: SourceRequestStatus }>;
 };
 
 export function createRevisionSourceState(includedSourceIds: string[]): RevisionSourceState {
@@ -37,6 +38,7 @@ export function createRevisionSourceState(includedSourceIds: string[]): Revision
     deferred_source_ids: [],
     deferred_initialized: false,
     deferred_rejections: [],
+    rejection_reasons: [],
   };
 }
 
@@ -73,6 +75,7 @@ export function initializeDeferredSourceIds(
     seen.add(raw);
     if (status) {
       state.deferred_rejections.push({ source_id: raw, status });
+      state.rejection_reasons.push({ source_id: raw, status });
       if (status === "SOURCE_MAP_MISSING") throw new Error(`SOURCE_MAP_MISSING: deferred source_id=${raw} exists in catalog/snapshot but is missing from sourceMap.`);
       if (status !== "DUPLICATE_REQUEST") state.rejected_source_ids.add(raw);
       continue;
@@ -111,6 +114,7 @@ export function resolveAdditionalSourceRequests(args: {
     seen.add(id);
     if (status) {
       result.rejected.push({ source_id: id, status });
+      state.rejection_reasons.push({ source_id: id, status });
       if (status === "SOURCE_MAP_MISSING") {
         throw new Error(`SOURCE_MAP_MISSING: source_id=${id} exists in snapshot/catalog but is missing from sourceMap.`);
       }
@@ -132,6 +136,7 @@ export function serializeRevisionSourceState(state: RevisionSourceState, revisio
     rejected_source_ids: [...state.rejected_source_ids],
     deferred_source_ids: [...state.deferred_source_ids],
     deferred_rejections: [...state.deferred_rejections],
+    rejection_reasons: [...state.rejection_reasons],
     revision_attempt: revisionAttempt,
   };
 }
