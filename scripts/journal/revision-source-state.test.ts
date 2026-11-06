@@ -70,6 +70,7 @@ test("all refusal statuses are enforced", () => {
     { source_id: "f", status: "ALREADY_REJECTED" },
     { source_id: "g", status: "DUPLICATE_REQUEST" },
   ]);
+  assert.deepEqual(state.rejection_reasons, result.rejected);
 });
 
 test("a missing sourceMap entry is a consistency error, not a silent partial acceptance", () => {
@@ -101,6 +102,7 @@ test("second revision receives only deferred IDs, while state remains serializab
     rejected_source_ids: [],
     deferred_source_ids: ["e", "f"],
     deferred_rejections: [],
+    rejection_reasons: [],
     revision_attempt: 2,
   });
 });
@@ -124,4 +126,5 @@ test("deferred candidates enforce the three-ID cap and record over-limit IDs", (
   const accepted = initializeDeferredSourceIds(["e", "f", "g", "h"], new Set(ids), snapshot, sourceMap, state);
   assert.deepEqual(accepted, ["e", "f", "g"]);
   assert.deepEqual(state.deferred_rejections, [{ source_id: "h", status: "LIMIT_EXCEEDED" }]);
+  assert.deepEqual(state.rejection_reasons, [{ source_id: "h", status: "LIMIT_EXCEEDED" }]);
 });
