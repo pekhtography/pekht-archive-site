@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [v3.30.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.30.0) | 2026-11-06
+
+### Features
+- publish Journal entry [004f8c6](https://github.com/pekhtography/pekht-archive-site/commit/004f8c6)
+- journal: optimize SELECT-MONTAGE and REVISION token budget (#72) [f92dfbc](https://github.com/pekhtography/pekht-archive-site/commit/f92dfbc)
+
 ## [v3.29.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.29.0) | 2026-10-30
 
 ### Features
