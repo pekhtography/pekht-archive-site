@@ -45,3 +45,13 @@ test("REVISION is represented as its own provider diagnostic stage", async () =>
   assert.match(provider, /"SELECT-MONTAGE" \| "REVISION" \| "TEST"/);
   assert.match(orchestrator, /"SELECT-MONTAGE", "REVISION", "TEST"/);
 });
+
+test("prompt size metrics are measured in UTF-8 bytes and aggregated by stage", async () => {
+  const source = await readFile(new URL("../journal-orchestrator.ts", import.meta.url), "utf8");
+  assert.match(source, /Buffer\.byteLength\(task1Prompt, "utf8"\)/);
+  assert.match(source, /Buffer\.byteLength\(task2Prompt, "utf8"\)/);
+  assert.match(source, /promptDiagnosticTotals/);
+  assert.match(source, /promptDiagnosticSnapshot/);
+  assert.match(source, /prompt_diagnostics: promptDiagnosticSnapshot\(\)/);
+  assert.match(source, /stats\.prompt_bytes \+= metric\.prompt_bytes/);
+});
