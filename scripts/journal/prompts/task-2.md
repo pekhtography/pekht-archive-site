@@ -47,7 +47,7 @@ Use the following repair order for every significant seam A → B:
 1. First preserve the original texts and test whether the natural EXIT of A can meet the ENTRY of B.
 2. If the seam is small, minimally adjust the beginning/entry of B or ending/exit of A. Preserve the author's wording, voice, oddness and concrete detail wherever possible.
 3. If a small semantic gap remains, add a very short bridge in the style and register of the surrounding text. The bridge must carry a real state/image/action/meaning forward. It must not explain the montage to the reader.
-4. If the bridge feels artificial or becomes substantial prose, do NOT force it. Search the supplied discovery snapshot for a source that naturally represents the missing intermediate state and add that source.
+4. If the bridge feels artificial or becomes substantial prose, do NOT force it. On a REVISION request, inspect the supplied metadata catalog and request the full text of a source that naturally represents the missing intermediate state. Do not use a catalog-only source until its full text is supplied.
 5. Re-test the complete arc after adding the intermediate source.
 6. If a seam still cannot become natural without substantial invention, return RETURN rather than writing around the problem.
 
