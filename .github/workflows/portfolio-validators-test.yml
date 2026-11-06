@@ -1,6 +1,12 @@
 name: Portfolio Validators Test
 
 on:
+  push:
+    branches:
+      - portfolio/validators-v1
+    paths:
+      - 'scripts/portfolio/**'
+      - '.github/workflows/portfolio-validators-test.yml'
   pull_request:
     branches:
       - main
