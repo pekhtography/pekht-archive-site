@@ -673,10 +673,26 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
       }
 
       if (currentMontage) {
-        const requested = resolveAdditionalSourceRequests({ requestedIds: task2?.additional_source_ids, allowedIds: allowedRevisionIds, snapshotIds, sourceMap, state: revisionSourceState, limit: 3 });
-        if (revisionAttempt === 1) initializeDeferredSourceIds(task2?.deferred_source_ids, catalogIds, snapshotIds, sourceMap, revisionSourceState);
+        const requestedBefore = new Set(revisionSourceState.requested_source_ids);
+        const onSourceMapMissing = (rejection: { source_id: string; status: "SOURCE_MAP_MISSING" }) => {
+          const newlyRequested = [...revisionSourceState.requested_source_ids].filter((id) => !requestedBefore.has(id));
+          console.error("JOURNAL_SOURCE_REQUEST_DIAGNOSTIC:", JSON.stringify({
+            revision_attempt: revisionAttempt,
+            requested_source_count: revisionSourceState.requested_source_ids.size,
+            new_requested_source_count: newlyRequested.length,
+            accepted_source_ids: newlyRequested,
+            rejected: [rejection],
+            rejected_source_ids: [...revisionSourceState.rejected_source_ids],
+            rejection_reasons: revisionSourceState.rejection_reasons,
+            deferred_source_ids: revisionSourceState.deferred_source_ids,
+            deferred_rejections: revisionSourceState.deferred_rejections,
+            consistency_error: true,
+          }));
+        };
+        const requested = resolveAdditionalSourceRequests({ requestedIds: task2?.additional_source_ids, allowedIds: allowedRevisionIds, snapshotIds, sourceMap, state: revisionSourceState, limit: 3, onSourceMapMissing });
+        if (revisionAttempt === 1) initializeDeferredSourceIds(task2?.deferred_source_ids, catalogIds, snapshotIds, sourceMap, revisionSourceState, onSourceMapMissing);
         else if (Array.isArray(task2?.deferred_source_ids) && task2.deferred_source_ids.length > 0) console.warn("REVISION_DEFERRED_IDS_IGNORED: second revision cannot expand deferred_source_ids.");
-        console.log("JOURNAL_SOURCE_REQUEST_DIAGNOSTIC:", JSON.stringify({ revision_attempt: revisionAttempt, accepted_source_ids: requested.accepted_source_ids, rejected: requested.rejected, deferred_source_ids: revisionSourceState.deferred_source_ids, deferred_rejections: revisionSourceState.deferred_rejections }));
+        console.log("JOURNAL_SOURCE_REQUEST_DIAGNOSTIC:", JSON.stringify({ revision_attempt: revisionAttempt, requested_source_count: revisionSourceState.requested_source_ids.size, new_requested_source_count: requested.accepted_source_ids.length, accepted_source_ids: requested.accepted_source_ids, rejected: requested.rejected, rejected_source_ids: [...revisionSourceState.rejected_source_ids], rejection_reasons: revisionSourceState.rejection_reasons, deferred_source_ids: revisionSourceState.deferred_source_ids, deferred_rejections: revisionSourceState.deferred_rejections, consistency_error: false }));
       }
 
       const validation = validateMontage(

@@ -31,7 +31,7 @@ Additional source requests are made during REVISION, not the initial montage.
 - Maximum 6 accepted additional source IDs over one candidate's revision flow.
 - An accepted request makes the complete archive text available in a subsequent REVISION request; it does not itself add that source to the montage.
 - Every ID is checked against both the DISCOVER `snapshotIds` set and the local `sourceMap`.
-- A source-map inconsistency is a hard consistency error (`SOURCE_MAP_MISSING`), not a silently ignored partial result.
+- A source-map inconsistency is a hard consistency error (`SOURCE_MAP_MISSING`), not a silently ignored partial result. Before aborting, the resolver records the ID in `rejected_source_ids` and `rejection_reasons`, emits `JOURNAL_SOURCE_REQUEST_DIAGNOSTIC` with `consistency_error: true`, and only then throws. Ordinary per-ID refusals remain partial: valid sibling IDs continue to be processed.
 
 The request state is local to one Journal run and one candidate. It is not persisted between runs.
 
@@ -75,7 +75,7 @@ The per-candidate state records:
 - `rejection_reasons` (source ID paired with its refusal status)
 - `revision_attempt`
 
-The state is included in subsequent REVISION prompts. Repeated requests and already included/rejected sources are not silently accepted.
+The state is included in subsequent REVISION prompts. Repeated requests and already included/rejected sources are not silently accepted. Ordinary refusal statuses are recorded and processing continues for valid sibling IDs. For `SOURCE_MAP_MISSING`, the resolver first records the status and ID in state, then emits the source-request diagnostic, and only then aborts the operation as a consistency failure.
 
 Refusal statuses:
 - `NOT_IN_SNAPSHOT` — ID is absent from the DISCOVER snapshot or is outside the permitted ID scope for this revision.
@@ -123,7 +123,8 @@ Keep per-stage data separate for DISCOVER, SELECT-MONTAGE and REVISION; aggregat
 - `catalog_chars`
 - `full_source_chars`
 - `snapshot_chars`
-- `requested_source_count`
+- `requested_source_count` — cumulative count of IDs accepted for retrieval up to this point in the candidate's revision flow.
+- `new_requested_source_count` — count of newly accepted IDs in the current REVISION response; reported in `JOURNAL_SOURCE_REQUEST_DIAGNOSTIC` (the prompt-size diagnostic is emitted before the model response and therefore cannot contain this response-derived delta).
 - `revision_attempt`
 - `prompt_bytes`
 

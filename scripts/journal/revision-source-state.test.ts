@@ -128,3 +128,46 @@ test("deferred candidates enforce the three-ID cap and record over-limit IDs", (
   assert.deepEqual(state.deferred_rejections, [{ source_id: "h", status: "LIMIT_EXCEEDED" }]);
   assert.deepEqual(state.rejection_reasons, [{ source_id: "h", status: "LIMIT_EXCEEDED" }]);
 });
+
+
+test("SOURCE_MAP_MISSING is recorded and diagnosed before the consistency error aborts", () => {
+  const state = createRevisionSourceState(["a", "b", "c", "d"]);
+  const diagnostics: Array<{ source_id: string; status: string }> = [];
+  assert.throws(() => resolveAdditionalSourceRequests({
+    requestedIds: ["h"], allowedIds: new Set(["h"]), snapshotIds: snapshot,
+    sourceMap: new Map(), state,
+    onSourceMapMissing: (rejection) => {
+      diagnostics.push(rejection);
+      assert.equal(state.rejected_source_ids.has("h"), true);
+      assert.deepEqual(state.rejection_reasons.at(-1), rejection);
+    },
+  }), /SOURCE_MAP_MISSING/);
+  assert.equal(state.rejected_source_ids.has("h"), true);
+  assert.deepEqual(state.rejection_reasons, [{ source_id: "h", status: "SOURCE_MAP_MISSING" }]);
+  assert.deepEqual(diagnostics, [{ source_id: "h", status: "SOURCE_MAP_MISSING" }]);
+});
+
+test("ordinary refusal does not prevent valid sibling IDs from being accepted", () => {
+  const state = createRevisionSourceState(["a", "b", "c", "d"]);
+  const result = resolveAdditionalSourceRequests({
+    requestedIds: ["outside", "e", "f"], allowedIds: new Set(["e", "f"]),
+    snapshotIds: snapshot, sourceMap, state,
+  });
+  assert.deepEqual(result.rejected, [{ source_id: "outside", status: "NOT_IN_SNAPSHOT" }]);
+  assert.deepEqual(result.accepted_source_ids, ["e", "f"]);
+  assert.deepEqual([...state.requested_source_ids], ["e", "f"]);
+});
+
+test("deferred SOURCE_MAP_MISSING is recorded and diagnosed before aborting", () => {
+  const state = createRevisionSourceState(["a", "b", "c", "d"]);
+  const diagnostics: Array<{ source_id: string; status: string }> = [];
+  assert.throws(() => initializeDeferredSourceIds(
+    ["e"], new Set(["a", "b", "c", "d", "e"]), snapshot, new Map(), state,
+    (rejection) => {
+      diagnostics.push(rejection);
+      assert.equal(state.rejected_source_ids.has("e"), true);
+      assert.deepEqual(state.rejection_reasons.at(-1), rejection);
+    },
+  ), /SOURCE_MAP_MISSING/);
+  assert.deepEqual(diagnostics, [{ source_id: "e", status: "SOURCE_MAP_MISSING" }]);
+});

@@ -56,6 +56,7 @@ export function initializeDeferredSourceIds(
   snapshotIds: ReadonlySet<string>,
   sourceMap: ReadonlyMap<string, unknown>,
   state: RevisionSourceState,
+  onSourceMapMissing?: (rejection: { source_id: string; status: "SOURCE_MAP_MISSING" }) => void,
 ): string[] {
   if (state.deferred_initialized) return [...state.deferred_source_ids];
   state.deferred_initialized = true;
@@ -76,8 +77,11 @@ export function initializeDeferredSourceIds(
     if (status) {
       state.deferred_rejections.push({ source_id: raw, status });
       state.rejection_reasons.push({ source_id: raw, status });
-      if (status === "SOURCE_MAP_MISSING") throw new Error(`SOURCE_MAP_MISSING: deferred source_id=${raw} exists in catalog/snapshot but is missing from sourceMap.`);
       if (status !== "DUPLICATE_REQUEST") state.rejected_source_ids.add(raw);
+      if (status === "SOURCE_MAP_MISSING") {
+        onSourceMapMissing?.({ source_id: raw, status });
+        throw new Error(`SOURCE_MAP_MISSING: deferred source_id=${raw} exists in catalog/snapshot but is missing from sourceMap.`);
+      }
       continue;
     }
     accepted.push(raw);
@@ -93,6 +97,7 @@ export function resolveAdditionalSourceRequests(args: {
   sourceMap: ReadonlyMap<string, unknown>;
   state: RevisionSourceState;
   limit?: number;
+  onSourceMapMissing?: (rejection: { source_id: string; status: "SOURCE_MAP_MISSING" }) => void;
 }): SourceRequestResult {
   const { requestedIds, allowedIds, snapshotIds, sourceMap, state } = args;
   const limit = args.limit ?? 3;
@@ -115,10 +120,11 @@ export function resolveAdditionalSourceRequests(args: {
     if (status) {
       result.rejected.push({ source_id: id, status });
       state.rejection_reasons.push({ source_id: id, status });
+      if (status !== "DUPLICATE_REQUEST") state.rejected_source_ids.add(id);
       if (status === "SOURCE_MAP_MISSING") {
+        args.onSourceMapMissing?.({ source_id: id, status });
         throw new Error(`SOURCE_MAP_MISSING: source_id=${id} exists in snapshot/catalog but is missing from sourceMap.`);
       }
-      if (status !== "DUPLICATE_REQUEST") state.rejected_source_ids.add(id);
       continue;
     }
     result.accepted_source_ids.push(id);
