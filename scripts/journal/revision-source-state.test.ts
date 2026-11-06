@@ -104,7 +104,7 @@ test("second revision receives only deferred IDs, while state remains serializab
   });
 });
 
-test("second-cycle request scope is the deferred queue, not the full snapshot", () => {
+test("the deferred queue is an explicit whitelist for second-cycle source candidates", () => {
   const state = createRevisionSourceState(["a", "b", "c", "d"]);
   initializeDeferredSourceIds(["e", "f"], new Set(ids), snapshot, sourceMap, state);
   const result = resolveAdditionalSourceRequests({
