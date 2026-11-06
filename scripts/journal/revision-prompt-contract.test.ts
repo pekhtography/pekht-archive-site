@@ -25,7 +25,7 @@ test("REVISION attempt 1 gets the catalog; attempt 2 gets only deferred full tex
 
 test("every montage source must have a locally supplied full text", async () => {
   const source = await readFile(new URL("../journal-orchestrator.ts", import.meta.url), "utf8");
-  assert.match(source, /availableFullTextIds = new Set\(\[\.\.\.candidateSourceIds, \.\.\.revisionSourceState\.accepted_source_ids, \.\.\.\(revisionAttempt === 2 \? revisionSourceState\.deferred_source_ids : \[\]\)\]\)/);
+  assert.match(source, /suppliedFullTextIds = new Set\(\[\.\.\.candidateSourceIds, \.\.\.revisionSourceState\.accepted_source_ids, \.\.\.\(revisionAttempt === 2 \? revisionSourceState\.deferred_source_ids : \[\]\)\]\)/);
   assert.match(source, /SOURCE_TEXT_NOT_SUPPLIED/);
   assert.match(source, /snapshotIds,\s*sourceMap,\s*state: revisionSourceState/);
 });
