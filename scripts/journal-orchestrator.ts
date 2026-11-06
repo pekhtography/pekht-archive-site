@@ -636,15 +636,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
         const requested = resolveAdditionalSourceRequests({ requestedIds: task2?.additional_source_ids, allowedIds: allowedRevisionIds, snapshotIds, sourceMap, state: revisionSourceState, limit: 3 });
         if (revisionAttempt === 1) initializeDeferredSourceIds(task2?.deferred_source_ids, catalogIds, snapshotIds, sourceMap, revisionSourceState);
         else if (Array.isArray(task2?.deferred_source_ids) && task2.deferred_source_ids.length > 0) console.warn("REVISION_DEFERRED_IDS_IGNORED: second revision cannot expand deferred_source_ids.");
-        console.log("JOURNAL_SOURCE_REQUEST_DIAGNOSTIC:", JSON.stringify({ revision_attempt: revisionAttempt, accepted_source_ids: requested.accepted_source_ids, rejected: requested.rejected, deferred_source_ids: revisionSourceState.deferred_source_ids }));
-      }
-
-      const availableFullTextIds = new Set([...candidateSourceIds, ...revisionSourceState.accepted_source_ids, ...revisionSourceState.deferred_source_ids]);
-      const requestedMontageIds = Array.isArray(task2?.source_ids) ? task2.source_ids : [];
-      const unavailableFullTextId = requestedMontageIds.find((id: unknown) => typeof id !== "string" || !availableFullTextIds.has(id));
-      if (unavailableFullTextId !== undefined) {
-        reject(selectedId, "MONTAGE", `SOURCE_TEXT_NOT_SUPPLIED: source_id=${String(unavailableFullTextId)} has no full text in this request.`);
-        break;
+        console.log("JOURNAL_SOURCE_REQUEST_DIAGNOSTIC:", JSON.stringify({ revision_attempt: revisionAttempt, accepted_source_ids: requested.accepted_source_ids, rejected: requested.rejected, deferred_source_ids: revisionSourceState.deferred_source_ids, deferred_rejections: revisionSourceState.deferred_rejections }));
       }
 
       const validation = validateMontage(
@@ -656,6 +648,17 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
 
       if (!validation.ok) {
         reject(selectedId, "MONTAGE", validation.reason);
+        break;
+      }
+
+      const availableFullTextIds = new Set([...candidateSourceIds, ...revisionSourceState.accepted_source_ids, ...revisionSourceState.deferred_source_ids]);
+      const requestedMontageIds = Array.isArray(task2?.source_ids) ? task2.source_ids : [];
+      const unavailableFullTextId = requestedMontageIds.find((id: unknown) => typeof id !== "string" || !availableFullTextIds.has(id));
+      if (unavailableFullTextId !== undefined) {
+        const reason = typeof unavailableFullTextId === "string" && !snapshotIds.has(unavailableFullTextId)
+          ? "MONTAGE_SOURCE_NOT_IN_SNAPSHOT: stage=MONTAGE source_id=" + unavailableFullTextId + " is not in the DISCOVER snapshot."
+          : "SOURCE_TEXT_NOT_SUPPLIED: source_id=" + String(unavailableFullTextId) + " has no full text in this request.";
+        reject(selectedId, "MONTAGE", reason);
         break;
       }
 
