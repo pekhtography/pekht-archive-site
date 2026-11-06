@@ -71,7 +71,7 @@ The `source_ids` array defines the exact order of source blocks in `composition`
 
 For each source block return:
 - type: "source"
-- source_id: an exact SOURCE_ID from the supplied snapshot
+- source_id: an exact SOURCE_ID whose complete text is supplied in this request
 - text: the final text for that source fragment after only justified minimal editing
 
 For each bridge block return:
