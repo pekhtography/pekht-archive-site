@@ -72,6 +72,7 @@ The per-candidate state records:
 - `accepted_source_ids`
 - `rejected_source_ids`
 - `deferred_source_ids`
+- `rejection_reasons` (source ID paired with its refusal status)
 - `revision_attempt`
 
 The state is included in subsequent REVISION prompts. Repeated requests and already included/rejected sources are not silently accepted.
