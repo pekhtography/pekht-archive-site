@@ -62,7 +62,8 @@ export function initializeDeferredSourceIds(
     if (typeof raw !== "string" || !raw.trim() || seen.has(raw)) continue;
     seen.add(raw);
     if (accepted.length >= 3) break;
-    if (!catalogIds.has(raw) || !snapshotIds.has(raw) || !sourceMap.has(raw)) continue;
+    if (!catalogIds.has(raw) || !snapshotIds.has(raw)) continue;
+    if (!sourceMap.has(raw)) throw new Error(`SOURCE_MAP_MISSING: deferred source_id=${raw} exists in catalog/snapshot but is missing from sourceMap.`);
     if (state.included_source_ids.has(raw) || state.requested_source_ids.has(raw) || state.rejected_source_ids.has(raw)) continue;
     accepted.push(raw);
   }
