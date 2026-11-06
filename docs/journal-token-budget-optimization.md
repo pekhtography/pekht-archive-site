@@ -53,11 +53,13 @@ It may return up to 3 `additional_source_ids` from that visible catalog and sepa
 The second REVISION receives:
 - current montage and its full source texts;
 - full text for accepted additional sources from the previous cycle;
+- full archive texts resolved locally for only the saved deferred IDs;
 - TEST context and previous revision instruction;
-- request state;
-- only the saved deferred IDs and their catalog metadata.
+- request state.
 
-It does not receive the full catalog or full DISCOVER snapshot. Its `additional_source_ids` may contain only IDs in the saved `deferred_source_ids`; it must return an empty `deferred_source_ids` array.
+The deferred IDs are resolved locally through `snapshotIds` and `sourceMap`; the model sees no full catalog and no unrelated source text.
+
+It does not receive the full catalog or full DISCOVER snapshot. It may use the supplied deferred source texts directly in its final montage. It must return empty `additional_source_ids` and `deferred_source_ids` arrays; there is no third revision request.
 
 The model cannot expand the candidate universe in the second cycle by recalling, inventing, or generating arbitrary IDs. A locally existing ID is not eligible merely because it exists: it must also belong to the permitted first-cycle catalog scope or second-cycle deferred queue.
 
