@@ -18,6 +18,7 @@ export function validateGeminiOutput(value: unknown): ValidationResult {
   }
   const gallery = value.gallery;
   if (!isRecord(gallery)) { errors.push("gallery: expected an object or null"); return result(errors); }
+  if (isRecord(test) && test.decision !== "APPROVE") errors.push("gallery: non-null gallery requires test.decision APPROVE");
   exactKeys(gallery, ["source_ids","title","statement","facets","roles","composition_rationale","alternatives_considered","doubts"], "gallery", errors);
   if (!Array.isArray(gallery.source_ids) || gallery.source_ids.length !== 6 || !gallery.source_ids.every(isNonEmptyString)) errors.push("gallery.source_ids: expected exactly six non-empty strings");
   else if (new Set(gallery.source_ids).size !== 6) errors.push("gallery.source_ids: duplicate identifiers");
