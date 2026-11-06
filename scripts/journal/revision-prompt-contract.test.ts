@@ -2,7 +2,6 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
-
 test("DISCOVER still receives the full snapshot while SELECT-MONTAGE uses metadata plus selected full texts", async () => {
   const source = await readFile(new URL("../journal-orchestrator.ts", import.meta.url), "utf8");
   assert.match(source, /ARCHIVE SNAPSHOT \(EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE\):\\n\$\{snapshot\}/);
@@ -27,6 +26,7 @@ test("every montage source must have a locally supplied full text", async () => 
   const source = await readFile(new URL("../journal-orchestrator.ts", import.meta.url), "utf8");
   assert.match(source, /suppliedFullTextIds = new Set\(\[\.\.\.candidateSourceIds, \.\.\.revisionSourceState\.accepted_source_ids, \.\.\.\(revisionAttempt === 2 \? revisionSourceState\.deferred_source_ids : \[\]\)\]\)/);
   assert.match(source, /SOURCE_TEXT_NOT_SUPPLIED/);
+  assert.ok(source.indexOf("const suppliedFullTextIds") < source.indexOf("const task2 = await generateWithBudget"), "full-text allowlist must be frozen before the model response");
   assert.match(source, /snapshotIds,\s*sourceMap,\s*state: revisionSourceState/);
 });
 
