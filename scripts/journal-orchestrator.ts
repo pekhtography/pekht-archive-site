@@ -474,6 +474,8 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
       ? `\n\nPREVIOUS CANDIDATES ALREADY REJECTED IN THIS RUN: ${[...rejectedThisRun].join(", ")}\nDo not return any of them. Find a genuinely different candidate from the supplied snapshot.`
       : "";
 
+    console.log("JOURNAL_PROMPT_DIAGNOSTIC:", JSON.stringify({ stage: "DISCOVER", catalog_chars: 0, full_source_chars: 0, snapshot_chars: snapshot.length, requested_source_count: 0, revision_attempt: 0, prompt_bytes: Buffer.byteLength(`${await prompt("task-1.md", promptsDir)}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`, "utf8") }));
+
     const task1 = await generateWithBudget(
       `${await prompt("task-1.md", promptsDir)}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
       task1Schema,
@@ -636,6 +638,14 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
         console.log("JOURNAL_SOURCE_REQUEST_DIAGNOSTIC:", JSON.stringify({ revision_attempt: revisionAttempt, accepted_source_ids: requested.accepted_source_ids, rejected: requested.rejected, deferred_source_ids: revisionSourceState.deferred_source_ids }));
       }
 
+      const availableFullTextIds = new Set([...candidateSourceIds, ...revisionSourceState.accepted_source_ids]);
+      const requestedMontageIds = Array.isArray(task2?.source_ids) ? task2.source_ids : [];
+      const unavailableFullTextId = requestedMontageIds.find((id: unknown) => typeof id !== "string" || !availableFullTextIds.has(id));
+      if (unavailableFullTextId !== undefined) {
+        reject(selectedId, "MONTAGE", `SOURCE_TEXT_NOT_SUPPLIED: source_id=${String(unavailableFullTextId)} has no full text in this request.`);
+        break;
+      }
+
       const validation = validateMontage(
         task2,
         selectedId,
@@ -696,7 +706,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
 
       seenMontages.add(montageSignature);
 
-      revisionSourceState.included_source_ids = new Set(uniqueMontageSourceIds);
+      revisionSourceState.included_source_ids = new Set([...revisionSourceState.included_source_ids, ...uniqueMontageSourceIds]);
       currentMontage = {
         status: task2.status,
         candidate_id: task2.candidate_id,
