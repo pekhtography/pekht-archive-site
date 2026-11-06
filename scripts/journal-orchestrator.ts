@@ -505,7 +505,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
       ? `\n\nPREVIOUS CANDIDATES ALREADY REJECTED IN THIS RUN: ${[...rejectedThisRun].join(", ")}\nDo not return any of them. Find a genuinely different candidate from the supplied snapshot.`
       : "";
 
-    const task1Prompt = `${await prompt("task-1.md", promptsDir)}${discoveryInstruction}\\n\\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\\n${snapshot}`;
+    const task1Prompt = `${await prompt("task-1.md", promptsDir)}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`;
     const discoverPromptMetrics: PromptDiagnostic = {
       stage: "DISCOVER", catalog_chars: 0, full_source_chars: 0,
       snapshot_chars: snapshot.length, requested_source_count: 0,
@@ -515,7 +515,7 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
     console.log("JOURNAL_PROMPT_DIAGNOSTIC:", JSON.stringify(discoverPromptMetrics));
 
     const task1 = await generateWithBudget(
-      `${await prompt("task-1.md", promptsDir)}${discoveryInstruction}\n\nARCHIVE SNAPSHOT (EXPLORE-ORDERED STRATIFIED SAMPLE OF CURRENT ARCHIVE):\n${snapshot}`,
+      task1Prompt,
       task1Schema,
       "DISCOVER",
     );
