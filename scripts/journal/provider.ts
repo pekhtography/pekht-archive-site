@@ -1,6 +1,6 @@
 export type JsonSchema = Record<string, unknown>;
 
-export type JournalStage = "DISCOVER" | "SELECT-MONTAGE" | "TEST" | "TITLE CUT";
+export type JournalStage = "DISCOVER" | "SELECT-MONTAGE" | "REVISION" | "TEST" | "TITLE CUT";
 export type ProviderDiagnostic = {
   run_id: string; stage: JournalStage | "UNSPECIFIED"; model: string; attempt: number;
   prompt_chars: number; prompt_bytes: number; request_bytes: number; duration_ms: number;
