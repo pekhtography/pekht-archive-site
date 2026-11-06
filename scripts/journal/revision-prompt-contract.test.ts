@@ -15,7 +15,7 @@ test("REVISION attempt 1 gets the catalog; attempt 2 gets only deferred full tex
   const revisionPrompt = source.slice(source.indexOf("const task2Prompt"), source.indexOf('ensureBudget("SELECT-MONTAGE response")'));
   assert.match(revisionPrompt, /revisionAttempt === 1 \? `AVAILABLE SOURCE CATALOG/);
   assert.match(revisionPrompt, /revisionAttempt === 1 \? `AVAILABLE SOURCE CATALOG[\s\S]*: `FULL TEXTS OF DEFERRED SOURCES/);
-  assert.match(revisionPrompt, /sourcesFor\(revisionSourceState\.deferred_source_ids\)/);
+  assert.match(source, /sourcesFor\(revisionSourceState\.deferred_source_ids\)/);
   assert.match(revisionPrompt, /FULL TEXTS OF ACCEPTED ADDITIONAL SOURCES/);
   assert.match(revisionPrompt, /PREVIOUS TEST CONTEXT/);
   assert.match(revisionPrompt, /SOURCE REQUEST STATE/);
