@@ -59,7 +59,7 @@ The second REVISION receives:
 
 The deferred IDs are resolved locally through `snapshotIds` and `sourceMap`; the model sees no full catalog and no unrelated source text.
 
-It does not receive the full catalog or full DISCOVER snapshot. It may use the supplied deferred source texts directly in its final montage. It must return empty `additional_source_ids` and `deferred_source_ids` arrays; there is no third revision request.
+It does not receive the full catalog or full DISCOVER snapshot. It may use the supplied deferred source texts directly in its final montage. It must return empty `additional_source_ids` and `deferred_source_ids` arrays; there is no third revision request. Together, the first-cycle accepted requests (up to 3) and the second-cycle deferred candidates (up to 3) cap the additional source universe at 6.
 
 The model cannot expand the candidate universe in the second cycle by recalling, inventing, or generating arbitrary IDs. A locally existing ID is not eligible merely because it exists: it must also belong to the permitted first-cycle catalog scope or second-cycle deferred queue.
 
