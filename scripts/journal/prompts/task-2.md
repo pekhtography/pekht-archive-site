@@ -47,7 +47,7 @@ Use the following repair order for every significant seam A → B:
 1. First preserve the original texts and test whether the natural EXIT of A can meet the ENTRY of B.
 2. If the seam is small, minimally adjust the beginning/entry of B or ending/exit of A. Preserve the author's wording, voice, oddness and concrete detail wherever possible.
 3. If a small semantic gap remains, add a very short bridge in the style and register of the surrounding text. The bridge must carry a real state/image/action/meaning forward. It must not explain the montage to the reader.
-4. If the bridge feels artificial or becomes substantial prose, do NOT force it. Search the supplied discovery snapshot for a source that naturally represents the missing intermediate state and add that source.
+4. If the bridge feels artificial or becomes substantial prose, do NOT force it. On a REVISION request, inspect the supplied metadata catalog and request the full text of a source that naturally represents the missing intermediate state. Do not use a catalog-only source until its full text is supplied.
 5. Re-test the complete arc after adding the intermediate source.
 6. If a seam still cannot become natural without substantial invention, return RETURN rather than writing around the problem.
 
@@ -71,7 +71,7 @@ The `source_ids` array defines the exact order of source blocks in `composition`
 
 For each source block return:
 - type: "source"
-- source_id: an exact SOURCE_ID from the supplied snapshot
+- source_id: an exact SOURCE_ID whose complete text is supplied in this request
 - text: the final text for that source fragment after only justified minimal editing
 
 For each bridge block return:
@@ -86,3 +86,14 @@ PUBLIC JOURNAL FILTER FACETS:
 - Derive facets from the assembled whole and source evidence.
 - Avoid near-duplicates, synonyms and overly specific one-off details.
 - If no meaningful public facet is justified, return an empty array.
+
+
+ADDITIONAL SOURCE REQUEST CONTRACT (REVISION ONLY):
+- The JSON response must include both `additional_source_ids` and `deferred_source_ids` arrays.
+- The initial SELECT-MONTAGE response must return both arrays empty.
+- On REVISION attempt 1, you may request up to 3 additional source IDs from the visible metadata catalog. You may separately place up to 3 other unique IDs from that same visible catalog into `deferred_source_ids` for the second revision attempt.
+- Never invent, infer, recall, or fabricate a SOURCE_ID. Every ID must be copied exactly from the catalog visible in the current request.
+- On REVISION attempt 2, the orchestrator resolves and supplies the complete texts for the saved `deferred_source_ids` (and any accepted sources from attempt 1). You may use those texts directly in the montage. Return `additional_source_ids: []` and `deferred_source_ids: []`; no new IDs may be requested or introduced.
+- Additional source IDs are requests, not permission to write their text. Use them only after their complete archive text is supplied in a subsequent request.
+- The orchestrator validates every requested ID against the DISCOVER snapshot and sourceMap. Requests may be rejected for duplicate, already included/requested/rejected, out-of-scope, or limit reasons.
+- Do not use an additional source unless its full text is present in the current request.
