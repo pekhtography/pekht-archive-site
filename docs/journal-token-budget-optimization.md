@@ -119,7 +119,7 @@ This is a TEXT-vs-TITLE comparison, not a claim of 57.9% end-to-end pipeline sav
 
 ## 9. Diagnostics
 
-Keep per-stage data separate for SELECT-MONTAGE and REVISION:
+Keep per-stage data separate for DISCOVER, SELECT-MONTAGE and REVISION; aggregate prompt-size metrics by stage in the run summary:
 - `catalog_chars`
 - `full_source_chars`
 - `snapshot_chars`
