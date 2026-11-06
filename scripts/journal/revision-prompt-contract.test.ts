@@ -2,7 +2,6 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
-const root = new URL("../../", import.meta.url);
 
 test("DISCOVER still receives the full snapshot while SELECT-MONTAGE uses metadata plus selected full texts", async () => {
   const source = await readFile(new URL("../journal-orchestrator.ts", import.meta.url), "utf8");
@@ -21,7 +20,7 @@ test("REVISION attempt 1 gets the catalog; attempt 2 gets only deferred full tex
   assert.match(revisionPrompt, /FULL TEXTS OF ACCEPTED ADDITIONAL SOURCES/);
   assert.match(revisionPrompt, /PREVIOUS TEST CONTEXT/);
   assert.match(revisionPrompt, /SOURCE REQUEST STATE/);
-  assert.doesNotMatch(revisionPrompt, /AVAILABLE SOURCE CATALOG[\s\S]*revisionAttempt === 2/);
+  assert.match(revisionPrompt, /revisionAttempt === 2 \? `FULL TEXTS OF DEFERRED SOURCES[\s\S]*?`/);
 });
 
 test("every montage source must have a locally supplied full text", async () => {
