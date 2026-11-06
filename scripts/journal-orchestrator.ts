@@ -587,7 +587,8 @@ export async function runJournal(options: JournalRunOptions = {}): Promise<Journ
       const allowedRevisionIds = revisionAttempt === 1 ? catalogIds : new Set<string>();
       const revisionStateText = JSON.stringify(serializeRevisionSourceState(revisionSourceState, revisionAttempt), null, 2);
       const currentSourceTexts = currentMontage ? sourcesFor(currentMontage.source_ids) : sourcesFor(candidateSourceIds);
-      const acceptedSourceTexts = sourcesFor([...revisionSourceState.accepted_source_ids]);
+      const currentMontageIds = new Set<string>(currentMontage?.source_ids ?? candidateSourceIds);
+      const acceptedSourceTexts = sourcesFor([...revisionSourceState.accepted_source_ids].filter((id) => !currentMontageIds.has(id)));
       const deferredSourceTexts = revisionAttempt === 2 ? sourcesFor(revisionSourceState.deferred_source_ids) : "";
       const task2Prompt = currentMontage
         ? [
