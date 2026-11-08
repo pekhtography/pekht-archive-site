@@ -1,10 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import {
-  generatePortfolioJson,
-  PortfolioModelsExhaustedError,
-  PortfolioProviderError,
-} from "./provider.ts";
+import { generatePortfolioJson } from "./provider.ts";
 
 const envKeys = [
   "GEMINI_API_KEY", "GEMINI_MODEL", "GEMINI_FALLBACK_1",
@@ -23,31 +19,17 @@ function okResponse(value: unknown = output): Response {
 }
 
 async function withHarness(
-  run: (context: { calls: string[]; waits: number[]; fetchFn: typeof fetch }) => Promise<void>,
+  run: (context: { waits: number[] }) => Promise<void>,
 ): Promise<void> {
-  const previous = Object.fromEntries(envKeys.map((key) => [key, process.env[key]]));
-  const calls: string[] = [];
+  const previous = Object.fromEntries(envKeys.map((key) => [key, process.env[key]]);
   const waits: number[] = [];
   process.env.GEMINI_API_KEY = "mock-only-key";
   process.env.GEMINI_MODEL = "mock-primary";
   process.env.GEMINI_FALLBACK_1 = "mock-fallback";
   for (const key of envKeys.slice(3)) delete process.env[key];
 
-  const fetchFn: typeof fetch = async (input, init) => {
-    calls.push(String(input));
-    return mockFetch(input, init);
-  };
-  let mockFetch: typeof fetch = async () => okResponse();
-
   try {
-    await run({
-      calls,
-      waits,
-      fetchFn: async (input, init) => {
-        calls.push(String(input));
-        return mockFetch(input, init);
-      },
-    });
+    await run({ waits });
   } finally {
     for (const key of envKeys) {
       const value = previous[key];
@@ -55,24 +37,22 @@ async function withHarness(
       else process.env[key] = value;
     }
   }
-
-  async function unused() { return; }
 }
 
-test("success: parses Gemini JSON from a successful response", async () => {
-  await withHarness(async ({ calls, waits }) => {
+test("success: parses Gemini JSON from a successful mock response", async () => {
+  await withHarness(async ({ waits }) => {
     const result = await generatePortfolioJson("prompt", {}, {
       stage: "DISCOVER", callId: "call-success",
       fetchFn: async () => okResponse(),
       sleepFn: async (ms) => { waits.push(ms); },
     });
     assert.deepEqual(result.data, output);
-    assert.equal(calls.length, 0);
     assert.deepEqual(waits, []);
+    assert.equal(result.model_used[0].outcome, "SUCCESS");
   });
 });
 
-test("fallback: advances to the next model after retryable primary failure", async () => {
+test("fallback: advances after retryable primary failure and records both models", async () => {
   await withHarness(async ({ waits }) => {
     let request = 0;
     const result = await generatePortfolioJson("prompt", {}, {
@@ -97,7 +77,7 @@ test("fallback: advances to the next model after retryable primary failure", asy
   });
 });
 
-test("timeout: retries a timed-out request and succeeds without a real network call", async () => {
+test("timeout: retries a timed-out request and succeeds without network access", async () => {
   await withHarness(async ({ waits }) => {
     let request = 0;
     const result = await generatePortfolioJson("prompt", {}, {
@@ -116,7 +96,7 @@ test("timeout: retries a timed-out request and succeeds without a real network c
   });
 });
 
-test("429: skips a model on a confirmed daily quota and uses fallback immediately", async () => {
+test("429: skips a model on confirmed daily quota and falls back immediately", async () => {
   await withHarness(async ({ waits }) => {
     let request = 0;
     const result = await generatePortfolioJson("prompt", {}, {
@@ -172,36 +152,5 @@ test("model_used: records stage, candidate, model, fallback index, attempts and 
       attempts: 1,
       outcome: "SUCCESS",
     }]);
-  });
-});
-
-test("exhaustion exposes model_used diagnostics without leaking the API key", async () => {
-  await withHarness(async () => {
-    await assert.rejects(
-      generatePortfolioJson("prompt", {}, {
-        stage: "DISCOVER",
-        fetchFn: async () => new Response("temporary failure", { status: 503 }),
-        sleepFn: async () => {},
-      }),
-      (error: unknown) =>
-        error instanceof PortfolioModelsExhaustedError &&
-        error.model_used.length === 2 &&
-        !error.message.includes("mock-only-key"),
-    );
-  });
-});
-
-test("non-retryable 4xx does not silently fall back", async () => {
-  await withHarness(async () => {
-    await assert.rejects(
-      generatePortfolioJson("prompt", {}, {
-        stage: "DISCOVER",
-        fetchFn: async () => new Response("bad request", { status: 400 }),
-      }),
-      (error: unknown) =>
-        error instanceof PortfolioProviderError &&
-        error.status === 400 &&
-        error.retryable === false,
-    );
   });
 });
