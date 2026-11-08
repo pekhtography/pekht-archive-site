@@ -9,7 +9,6 @@ import {
 import type {
   ModelCallRecord,
   PortfolioRunResult,
-  PortfolioStage,
   ProcessAudit,
   ValidationFinding,
   ValidationStatus,
@@ -23,6 +22,8 @@ import { readPortfolioSnapshot, type LoadedPortfolioSnapshot } from "./snapshot.
 
 export interface PortfolioOrchestratorInput {
   snapshotPath: string;
+  /** Existing globally shortlisted candidate; omit for a corpus-level NO_GALLERY decision. */
+  candidateId?: string;
   /** Instruction text. Snapshot publication content is appended by the orchestrator. */
   prompt: string;
   /**
@@ -130,8 +131,8 @@ export async function runPortfolioOrchestrator(
   try {
     generated = await generate(completePrompt, schema, {
       ...input.providerOptions,
-      stage: "DISCOVER" satisfies PortfolioStage,
-      candidateId: null,
+      stage: input.candidateId ? "TEST" : "DISCOVER",
+      candidateId: input.candidateId ?? null,
     });
   } catch (error) {
     const result = buildIncompleteResult(
