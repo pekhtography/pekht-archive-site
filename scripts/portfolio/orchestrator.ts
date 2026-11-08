@@ -159,10 +159,23 @@ export async function runPortfolioOrchestrator(
     ...generated.model_used,
   ];
   const structural = validateGeminiOutput(generated.data);
-  const semantic = validatePortfolioSemantics(generated.data, loaded.snapshot);
+  const expectedCandidateSourceIds = input.candidateId
+    ? input.processAudit.candidateSourceIdsById[input.candidateId]
+    : undefined;
+  const semantic = validatePortfolioSemantics(
+    generated.data,
+    loaded.snapshot,
+    expectedCandidateSourceIds,
+  );
   const process = validatePortfolioProcess({
     ...input.processAudit,
     modelCalls: modelUsed,
+  }, {
+    actualSnapshotSourceIds: loaded.snapshot.posts.map((post) => post.source_id),
+    selectedCandidateId: input.candidateId ?? null,
+    reportedRevisionCycles: input.candidateId
+      ? generated.data.test.revision_cycles
+      : undefined,
   });
 
   const findings = [
