@@ -137,7 +137,10 @@ export async function runPortfolioOrchestrator(
   } catch (error) {
     const result = buildIncompleteResult(
       loaded.input_snapshot,
-      diagnosticsFromError(error),
+      [
+        ...(input.processAudit.modelCalls ?? []),
+        ...diagnosticsFromError(error),
+      ],
       [{
         check_id: "PROVIDER_ERROR",
         severity: "ERROR",
