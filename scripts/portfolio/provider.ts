@@ -242,7 +242,22 @@ async function requestModel(
 
     if (attempt < maxAttempts) {
       const waitMs = delayMs ?? 1_000 * 2 ** (attempt - 1);
-      await (options.sleepFn ?? sleep)(waitMs);
+      try {
+        await (options.sleepFn ?? sleep)(waitMs);
+      } catch (cause) {
+        // The request above did happen; a failed backoff must not erase its attempt count.
+        throw new PortfolioProviderError(
+          `Gemini retry backoff for ${model} failed after attempt ${attempt}: ${cause instanceof Error ? cause.message : String(cause)}`,
+          {
+            retryable: true,
+            model,
+            attempts: attempt,
+            status: lastStatus,
+            quotaType: lastQuota,
+            cause,
+          },
+        );
+      }
     }
   }
 
