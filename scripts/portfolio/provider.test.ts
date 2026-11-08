@@ -329,7 +329,7 @@ test("429 Retry-After over 120 seconds: skips current model without sleeping and
 
 test("model policy: built-in chain is explicit and Lite is the final fallback only", async () => {
   await withHarness(async () => {
-    for (const key of envKeys.slice(2)) delete process.env[key];
+    for (const key of envKeys.slice(1)) delete process.env[key];
     const requestedModels: string[] = [];
     let caught: unknown;
     try {
