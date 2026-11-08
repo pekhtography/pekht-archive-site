@@ -7,7 +7,6 @@ import {
 import type {
   GeminiOutput,
   ModelCallRecord,
-  PortfolioSnapshot,
   ProcessAudit,
 } from "./validation/types.ts";
 import type {
@@ -15,7 +14,7 @@ import type {
   PortfolioProviderOptions,
   PortfolioProviderResult,
 } from "./provider.ts";
-import type { LoadedPortfolioSnapshot } from "./snapshot.ts";
+import type { LoadedPortfolioSnapshot, PortfolioSnapshot } from "./snapshot.ts";
 
 const posts = Array.from({ length: 1000 }, (_, index) => ({
   source_id: `source-${index}`,
