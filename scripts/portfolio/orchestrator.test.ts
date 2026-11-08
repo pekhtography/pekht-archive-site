@@ -177,7 +177,7 @@ test("NO_GALLERY: preserves a valid Gemini rejection as a non-error result", asy
     gallery: null,
     test: { decision: "REJECT", findings: ["No coherent composition"], revision_cycles: 0 },
   };
-  const harness = dependencies(output);
+  const harness = dependencies(output, [modelCall({ stage: "DISCOVER", candidate_id: null })]);
   const result = await runPortfolioOrchestrator(
     makeInput({ candidateId: undefined, processAudit: makeAudit({ candidateIds: [], candidateSourceIdsById: {}, revisionCyclesByCandidate: {} }) }),
     harness.dependencies,
