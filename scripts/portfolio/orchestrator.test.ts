@@ -28,8 +28,8 @@ const posts = Array.from({ length: 1000 }, (_, index) => ({
 }));
 
 const snapshot = {
-  schema_version: 1,
-  purpose: "PEKHTography Portfolio Gemini v1.0 input snapshot",
+  schema_version: 1 as const,
+  purpose: "PEKHTography Portfolio Gemini v1.0 input snapshot" as const,
   generated_at: "2026-11-01T17:22:19.232Z",
   repository_commit: "a".repeat(40),
   sampler: {
@@ -45,7 +45,7 @@ const snapshot = {
   active_gallery_exclusions: [],
   cooldown_exclusions: [],
   eligible_archive_count: 3240,
-  sampled_count: 1000,
+  sampled_count: 1000 as const,
   sampled_source_ids: posts.map((post) => post.source_id),
   content_sha256: "b".repeat(64),
   posts,
