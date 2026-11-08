@@ -107,8 +107,8 @@ function makeAudit(
 function modelCall(overrides: Partial<ModelCallRecord> = {}): ModelCallRecord {
   return {
     call_id: "mock-call",
-    stage: "DISCOVER",
-    candidate_id: null,
+    stage: "TEST",
+    candidate_id: "candidate-1",
     model: "mock-model",
     fallback_index: 0,
     attempts: 1,
@@ -124,6 +124,7 @@ function makeInput(
     snapshotPath: "/unused/snapshot.json",
     prompt: "Apply the Portfolio curatorial instruction.",
     processAudit: makeAudit(),
+    candidateId: "candidate-1",
     ...overrides,
   };
 }
@@ -167,8 +168,8 @@ test("approved: runs provider and all validators, returning APPROVED", async () 
   });
   assert.equal(result.model_used.length, 1);
   assert.match(harness.capturedPrompt, /Exact publication text 0 #meaning/);
-  assert.equal(harness.capturedOptions?.stage, "DISCOVER");
-  assert.equal(harness.capturedOptions?.candidateId, null);
+  assert.equal(harness.capturedOptions?.stage, "TEST");
+  assert.equal(harness.capturedOptions?.candidateId, "candidate-1");
 });
 
 test("NO_GALLERY: preserves a valid Gemini rejection as a non-error result", async () => {
@@ -178,7 +179,7 @@ test("NO_GALLERY: preserves a valid Gemini rejection as a non-error result", asy
   };
   const harness = dependencies(output);
   const result = await runPortfolioOrchestrator(
-    makeInput({ processAudit: makeAudit({ candidateIds: [], candidateSourceIdsById: {}, revisionCyclesByCandidate: {} }) }),
+    makeInput({ candidateId: undefined, processAudit: makeAudit({ candidateIds: [], candidateSourceIdsById: {}, revisionCyclesByCandidate: {} }) }),
     harness.dependencies,
   );
 
