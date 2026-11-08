@@ -224,9 +224,20 @@ test("process failure: requires complete corpus processing and global comparison
   assert.ok(result.validation.findings.some((finding) => finding.message === "GLOBAL_COMPARISON_NOT_COMPLETED"));
 });
 
-test("provider error: returns INCOMPLETE and preserves diagnostics supplied by Provider", async () => {
+test("provider error: merges prior process audit records with Provider diagnostics", async () => {
+  const providerRecord = modelCall({
+    call_id: "provider-call",
+    outcome: "FAILED",
+    attempts: 3,
+  });
+  const auditRecord = modelCall({
+    call_id: "prior-discover-call",
+    stage: "DISCOVER",
+    candidate_id: null,
+    outcome: "SUCCESS",
+  });
   const providerError = Object.assign(new Error("mock provider failure"), {
-    model_used: [modelCall({ outcome: "FAILED", attempts: 3 })],
+    model_used: [providerRecord],
   });
   const harness = dependencies();
   const failingDependencies = {
@@ -239,15 +250,24 @@ test("provider error: returns INCOMPLETE and preserves diagnostics supplied by P
       throw providerError;
     },
   };
-  const result = await runPortfolioOrchestrator(makeInput(), failingDependencies);
+  const result = await runPortfolioOrchestrator(
+    makeInput({ processAudit: { ...makeAudit(), modelCalls: [auditRecord] } }),
+    failingDependencies,
+  );
 
   assert.equal(result.status, "INCOMPLETE");
   assert.equal(result.validation.status, "NOT_RUN");
-  assert.deepEqual(result.model_used, [modelCall({ outcome: "FAILED", attempts: 3 })]);
+  assert.deepEqual(result.model_used, [auditRecord, providerRecord]);
   assert.equal(result.validation.findings[0].check_id, "PROVIDER_ERROR");
 });
 
-test("provider error without diagnostics does not fabricate model call records", async () => {
+test("provider error without diagnostics preserves prior audit records and invents none", async () => {
+  const auditRecord = modelCall({
+    call_id: "prior-discover-call",
+    stage: "DISCOVER",
+    candidate_id: null,
+    outcome: "SUCCESS",
+  });
   const harness = dependencies();
   const failingDependencies = {
     ...harness.dependencies,
@@ -259,8 +279,11 @@ test("provider error without diagnostics does not fabricate model call records",
       throw new Error("failure before a model attempt");
     },
   };
-  const result = await runPortfolioOrchestrator(makeInput(), failingDependencies);
+  const result = await runPortfolioOrchestrator(
+    makeInput({ processAudit: { ...makeAudit(), modelCalls: [auditRecord] } }),
+    failingDependencies,
+  );
 
   assert.equal(result.status, "INCOMPLETE");
-  assert.deepEqual(result.model_used, []);
+  assert.deepEqual(result.model_used, [auditRecord]);
 });
