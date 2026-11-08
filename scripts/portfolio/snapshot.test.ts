@@ -131,7 +131,7 @@ test("rejects changes to every hashed content field", () => {
     const snapshot = fixture();
     const post = snapshot.posts[0];
     if (field === "hashtags") post.hashtags = ["changed"];
-    else post[field] = "changed";
+    else (post as unknown as Record<string, unknown>)[field] = "changed";
     assert.throws(
       () => validatePortfolioSnapshot(snapshot),
       /content_sha256: mismatch/,
