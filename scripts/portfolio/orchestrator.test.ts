@@ -287,3 +287,48 @@ test("provider error without diagnostics preserves prior audit records and inven
   assert.equal(result.status, "INCOMPLETE");
   assert.deepEqual(result.model_used, [auditRecord]);
 });
+
+test("snapshot binding: rejects process audit IDs that differ from the loaded snapshot", async () => {
+  const harness = dependencies();
+  const mismatchedAudit = makeAudit({
+    snapshotSourceIds: [...posts.slice(1).map((post) => post.source_id), "outside-snapshot"],
+  });
+  const result = await runPortfolioOrchestrator(
+    makeInput({ processAudit: mismatchedAudit }),
+    harness.dependencies,
+  );
+  assert.equal(result.status, "INCOMPLETE");
+  assert.equal(result.validation.process, "FAIL");
+  assert.ok(result.validation.findings.some((finding) => finding.message.startsWith("AUDIT_SNAPSHOT_MISMATCH")));
+});
+
+test("candidate binding: rejects a valid six-post gallery from a different candidate", async () => {
+  const harness = dependencies();
+  const otherCandidateSources = posts.slice(6, 12).map((post) => post.source_id);
+  const result = await runPortfolioOrchestrator(
+    makeInput({
+      processAudit: makeAudit({
+        candidateSourceIdsById: { "candidate-1": otherCandidateSources },
+      }),
+    }),
+    harness.dependencies,
+  );
+  assert.equal(result.status, "INCOMPLETE");
+  assert.equal(result.validation.semantic, "FAIL");
+  assert.ok(result.validation.findings.some((finding) => finding.message.startsWith("GALLERY_CANDIDATE_MISMATCH")));
+});
+
+test("revision binding: rejects Gemini revision count that differs from process audit", async () => {
+  const harness = dependencies();
+  const result = await runPortfolioOrchestrator(
+    makeInput({
+      processAudit: makeAudit({
+        revisionCyclesByCandidate: { "candidate-1": 1 },
+      }),
+    }),
+    harness.dependencies,
+  );
+  assert.equal(result.status, "INCOMPLETE");
+  assert.equal(result.validation.process, "FAIL");
+  assert.ok(result.validation.findings.some((finding) => finding.message.startsWith("REVISION_CYCLE_MISMATCH")));
+});
