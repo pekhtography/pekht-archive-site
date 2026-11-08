@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 import type { PortfolioInputSnapshot } from "./validation/types.ts";
 
@@ -48,6 +49,21 @@ export interface PortfolioSnapshot {
 export interface LoadedPortfolioSnapshot {
   snapshot: PortfolioSnapshot;
   input_snapshot: PortfolioInputSnapshot;
+}
+
+/**
+ * Computes the producer-compatible digest over the ordered content payload.
+ * Keep the object shape and insertion order identical to create-snapshot.ts.
+ */
+export function computePortfolioSnapshotContentHash(
+  snapshot: Pick<PortfolioSnapshot, "sampled_source_ids" | "posts">,
+): string {
+  const contentForHash = JSON.stringify({
+    sampled_source_ids: snapshot.sampled_source_ids,
+    posts: snapshot.posts,
+  });
+
+  return createHash("sha256").update(contentForHash, "utf8").digest("hex");
 }
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -232,6 +248,15 @@ export function validatePortfolioSnapshot(
 
   if (errors.length > 0) {
     throw new Error(`Invalid Portfolio snapshot:\n- ${errors.join("\n- ")}`);
+  }
+
+  const actualContentHash = computePortfolioSnapshotContentHash(
+    value as unknown as Pick<PortfolioSnapshot, "sampled_source_ids" | "posts">,
+  );
+  if (actualContentHash !== value.content_sha256) {
+    throw new Error(
+      `Invalid Portfolio snapshot:\n- content_sha256: mismatch (expected ${String(value.content_sha256)}, computed ${actualContentHash})`,
+    );
   }
 
   return true;
