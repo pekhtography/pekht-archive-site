@@ -67,7 +67,12 @@ export class PortfolioModelsExhaustedError extends PortfolioProviderError {
   }
 }
 
-const DEFAULT_MODELS = [
+/**
+ * Explicit built-in fallback policy, aligned with the accepted Journal provider
+ * ordering. Lite is retained only as the final built-in fallback; a configured
+ * environment chain replaces this list completely and is never extended.
+ */
+const FALLBACK_MODEL_CHAIN = [
   "gemini-3.8-flash",
   "gemini-3.7-flash",
   "gemini-3.6-flash",
@@ -84,7 +89,8 @@ function configuredModels(): string[] {
     process.env.GEMINI_FALLBACK_4,
   ].filter((value): value is string => Boolean(value?.trim()));
 
-  const selected = configured.length > 0 ? configured : [...DEFAULT_MODELS];
+  // A caller-supplied chain is authoritative: do not append built-ins or Lite.
+  const selected = configured.length > 0 ? configured : [...FALLBACK_MODEL_CHAIN];
   return selected.filter((model, index) => selected.indexOf(model) === index);
 }
 
