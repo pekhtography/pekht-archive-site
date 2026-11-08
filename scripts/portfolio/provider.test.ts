@@ -234,3 +234,95 @@ test("model-chain exhaustion: exposes accumulated diagnostics through the common
     assert.ok(caught.cause instanceof PortfolioProviderError);
   });
 });
+
+
+test("network and backoff failures: retries network errors and preserves attempts when sleepFn fails", async () => {
+  await withHarness(async ({ waits }) => {
+    let request = 0;
+    const result = await generatePortfolioJson("prompt", {}, {
+      stage: "TEST", callId: "call-network-retry",
+      fetchFn: async () => {
+        request += 1;
+        if (request === 1) throw new TypeError("fetch failed");
+        return okResponse();
+      },
+      sleepFn: async (ms) => { waits.push(ms); },
+    });
+    assert.equal(request, 2);
+    assert.deepEqual(waits, [1_000]);
+    assert.equal(result.model_used[0].attempts, 2);
+  });
+
+  await withHarness(async () => {
+    let request = 0;
+    const result = await generatePortfolioJson("prompt", {}, {
+      stage: "TEST", callId: "call-sleep-failure",
+      fetchFn: async () => {
+        request += 1;
+        if (request === 1) throw new TypeError("fetch failed");
+        return okResponse();
+      },
+      sleepFn: async () => { throw new Error("mock backoff failure"); },
+    });
+    assert.equal(request, 2);
+    assert.equal(result.model_used.length, 2);
+    assert.equal(result.model_used[0].model, "mock-primary");
+    assert.equal(result.model_used[0].outcome, "FALLBACK");
+    assert.equal(result.model_used[0].attempts, 1);
+    assert.equal(result.model_used[1].outcome, "SUCCESS");
+  });
+});
+
+test("429 TPM/RPM: classifies token and request rate limits", async () => {
+  await withHarness(async () => {
+    for (const [quotaMessage, expectedQuota] of [
+      ["Quota exceeded for metric: generate_content_input_token_count", "tpm"],
+      ["Quota exceeded for metric: generate_content_requests", "rpm"],
+    ] as const) {
+      process.env.GEMINI_FALLBACK_1 = "";
+      let caught: unknown;
+      try {
+        await generatePortfolioJson("prompt", {}, {
+          stage: "DISCOVER", callId: `call-${expectedQuota}`,
+          maxAttemptsPerModel: 1,
+          fetchFn: async () => new Response(JSON.stringify({
+            error: { code: 429, message: quotaMessage },
+          }), { status: 429 }),
+          sleepFn: async () => {},
+        });
+      } catch (error) {
+        caught = error;
+      }
+      assert.ok(caught instanceof PortfolioModelsExhaustedError);
+      assert.ok(caught.cause instanceof PortfolioProviderError);
+      assert.equal(caught.cause.quotaType, expectedQuota);
+      assert.equal(caught.model_used.length, 1);
+      assert.equal(caught.model_used[0].attempts, 1);
+    }
+  });
+});
+
+test("429 Retry-After over 120 seconds: skips current model without sleeping and falls back", async () => {
+  await withHarness(async ({ waits }) => {
+    let request = 0;
+    const result = await generatePortfolioJson("prompt", {}, {
+      stage: "COMPOSE", callId: "call-long-retry-after",
+      fetchFn: async () => {
+        request += 1;
+        if (request === 1) {
+          return new Response(JSON.stringify({
+            error: { code: 429, message: "Too many requests" },
+          }), { status: 429, headers: { "Retry-After": "121" } });
+        }
+        return okResponse();
+      },
+      sleepFn: async (ms) => { waits.push(ms); },
+    });
+    assert.equal(request, 2);
+    assert.deepEqual(waits, []);
+    assert.equal(result.model_used.length, 2);
+    assert.equal(result.model_used[0].outcome, "FALLBACK");
+    assert.equal(result.model_used[0].attempts, 1);
+    assert.equal(result.model_used[1].outcome, "SUCCESS");
+  });
+});
