@@ -174,7 +174,7 @@ export async function runPortfolioOrchestrator(
   const result: PortfolioRunResult = {
     status: statusValue,
     input_snapshot: loaded.input_snapshot,
-    gemini_output: generated.data,
+    // Preserve output only when it satisfies the declared Gemini output contract.\n    gemini_output: structural.ok ? generated.data : null,
     validation: {
       status: status(allPassed),
       structural: status(structural.ok),
