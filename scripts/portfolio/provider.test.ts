@@ -21,7 +21,7 @@ function okResponse(value: unknown = output): Response {
 async function withHarness(
   run: (context: { waits: number[] }) => Promise<void>,
 ): Promise<void> {
-  const previous = Object.fromEntries(envKeys.map((key) => [key, process.env[key]]);
+  const previous = Object.fromEntries(envKeys.map((key) => [key, process.env[key]]));
   const waits: number[] = [];
   process.env.GEMINI_API_KEY = "mock-only-key";
   process.env.GEMINI_MODEL = "mock-primary";
