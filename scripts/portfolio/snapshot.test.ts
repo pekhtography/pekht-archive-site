@@ -4,6 +4,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import test from "node:test";
 import {
+  computePortfolioSnapshotContentHash,
   PORTFOLIO_SNAPSHOT_POST_COUNT,
   PORTFOLIO_SNAPSHOT_PURPOSE,
   readPortfolioSnapshot,
@@ -21,7 +22,7 @@ function fixture() {
     created_at: "2025-01-01T00:00:00Z",
     original_markdown: `---\ntitle: Title ${index}\n---\nFull text ${index} #meaning`,
   }));
-  return {
+  const snapshot = {
     schema_version: 1,
     purpose: PORTFOLIO_SNAPSHOT_PURPOSE,
     generated_at: "2026-11-01T17:22:19.232Z",
@@ -41,9 +42,11 @@ function fixture() {
     eligible_archive_count: 3240,
     sampled_count: 1000,
     sampled_source_ids: posts.map((post) => post.source_id),
-    content_sha256: "b".repeat(64),
+    content_sha256: "",
     posts,
   };
+  snapshot.content_sha256 = computePortfolioSnapshotContentHash(snapshot);
+  return snapshot;
 }
 
 test("accepts a complete 1000-post snapshot and maps run metadata", async () => {
@@ -61,7 +64,7 @@ test("accepts a complete 1000-post snapshot and maps run metadata", async () => 
     assert.equal(loaded.input_snapshot.schema_version, "1");
     assert.equal(loaded.input_snapshot.repository_commit, "a".repeat(40));
     assert.equal(loaded.input_snapshot.sampled_count, 1000);
-    assert.equal(loaded.input_snapshot.content_sha256, "b".repeat(64));
+    assert.equal(loaded.input_snapshot.content_sha256, snapshot.content_sha256);
   } finally {
     await rm(dir, { recursive: true, force: true });
   }
@@ -101,4 +104,52 @@ test("rejects malformed snapshot metadata", () => {
   snapshot.repository_commit = "not-a-commit";
   snapshot.content_sha256 = "bad";
   assert.throws(() => validatePortfolioSnapshot(snapshot), /repository_commit/);
+});
+
+test("matches the deterministic producer-compatible SHA-256 test vector", () => {
+  const vector = {
+    sampled_source_ids: ["alpha-001"],
+    posts: [{
+      source_id: "alpha-001",
+      x_id: "1900000000000000001",
+      title: "Свет и тень",
+      body: 'Rain says "hello".\nA quiet street.',
+      hashtags: ["NightWalk", "город"],
+      image: "images/alpha-001.jpg",
+      created_at: "2026-11-01T12:34:56.000Z",
+      original_markdown: '---\ntitle: "Свет и тень"\n---\n# Rain\n\nТихая улица.',
+    }],
+  };
+  assert.equal(
+    computePortfolioSnapshotContentHash(vector as never),
+    "8b9d2a22366b63b66e20db5fd920ed3a582f0123898aac40cccf431247f99a52",
+  );
+});
+
+test("rejects changes to every hashed content field", () => {
+  for (const field of ["body", "original_markdown", "hashtags", "image"] as const) {
+    const snapshot = fixture();
+    const post = snapshot.posts[0];
+    if (field === "hashtags") post.hashtags = ["changed"];
+    else post[field] = "changed";
+    assert.throws(
+      () => validatePortfolioSnapshot(snapshot),
+      /content_sha256: mismatch/,
+      `expected a hash mismatch after changing ${field}`,
+    );
+  }
+});
+
+test("does not include operational metadata in the content digest", () => {
+  const snapshot = fixture();
+  snapshot.generated_at = "2026-11-02T00:00:00.000Z";
+  snapshot.repository_commit = "c".repeat(40);
+  snapshot.sampler.reproducibility = "Updated operational note.";
+  assert.equal(validatePortfolioSnapshot(snapshot), true);
+});
+
+test("rejects a changed digest even when its format remains valid", () => {
+  const snapshot = fixture();
+  snapshot.content_sha256 = "d".repeat(64);
+  assert.throws(() => validatePortfolioSnapshot(snapshot), /content_sha256: mismatch/);
 });
