@@ -17,3 +17,7 @@ test("rejects when global comparison has not completed",()=>assert.equal(validat
 test("rejects candidate composition with fewer than six sources",()=>assert.equal(validatePortfolioProcess(audit({candidateSourceIdsById:{"candidate-1":["source-1"]}})).ok,false));
 test("rejects more than two artistic revisions",()=>assert.equal(validatePortfolioProcess(audit({revisionCyclesByCandidate:{"candidate-1":3}})).ok,false));
 test("rejects broken fallback accounting",()=>{const v=audit();v.modelCalls[0].outcome="SUCCESS";assert.equal(validatePortfolioProcess(v).ok,false);});
+
+test("rejects process audit source IDs that differ from the loaded snapshot",()=>assert.equal(validatePortfolioProcess(audit(),{actualSnapshotSourceIds:[...ids.slice(1),"outside"]}).ok,false));
+test("rejects a selected candidate absent from the global shortlist",()=>assert.equal(validatePortfolioProcess(audit(),{selectedCandidateId:"candidate-unknown"}).ok,false));
+test("rejects revision count that differs from the selected candidate audit",()=>assert.equal(validatePortfolioProcess(audit(),{selectedCandidateId:"candidate-1",reportedRevisionCycles:1}).ok,false));
