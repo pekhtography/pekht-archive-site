@@ -173,7 +173,7 @@ export async function runPortfolioOrchestrator(
   }, {
     actualSnapshotSourceIds: loaded.snapshot.posts.map((post) => post.source_id),
     selectedCandidateId: input.candidateId ?? null,
-    reportedRevisionCycles: input.candidateId
+    reportedRevisionCycles: input.candidateId && structural.ok
       ? generated.data.test.revision_cycles
       : undefined,
   });
