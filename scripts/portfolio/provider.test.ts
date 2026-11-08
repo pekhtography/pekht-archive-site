@@ -326,3 +326,61 @@ test("429 Retry-After over 120 seconds: skips current model without sleeping and
     assert.equal(result.model_used[1].outcome, "SUCCESS");
   });
 });
+
+test("model policy: built-in chain is explicit and Lite is the final fallback only", async () => {
+  await withHarness(async () => {
+    for (const key of envKeys.slice(2)) delete process.env[key];
+    const requestedModels: string[] = [];
+    let caught: unknown;
+    try {
+      await generatePortfolioJson("prompt", {}, {
+        stage: "DISCOVER",
+        maxAttemptsPerModel: 1,
+        fetchFn: async (input) => {
+          const url = new URL(String(input));
+          requestedModels.push(decodeURIComponent(url.pathname.split("/models/")[1].split(":")[0]));
+          return new Response("temporary", { status: 503 });
+        },
+        sleepFn: async () => {},
+      });
+    } catch (error) {
+      caught = error;
+    }
+    assert.ok(caught instanceof PortfolioModelsExhaustedError);
+    assert.deepEqual(requestedModels, [
+      "gemini-3.8-flash",
+      "gemini-3.7-flash",
+      "gemini-3.6-flash",
+      "gemini-3.5-flash",
+      "gemini-3.5-flash-lite",
+    ]);
+    assert.equal(caught.model_used.at(-1)?.outcome, "FAILED");
+  });
+});
+
+test("model policy: an explicit custom chain replaces built-ins without auto-appending Lite", async () => {
+  await withHarness(async () => {
+    process.env.GEMINI_MODEL = "custom-primary";
+    process.env.GEMINI_FALLBACK_1 = "custom-secondary";
+    for (const key of envKeys.slice(3)) delete process.env[key];
+    const requestedModels: string[] = [];
+    let caught: unknown;
+    try {
+      await generatePortfolioJson("prompt", {}, {
+        stage: "DISCOVER",
+        maxAttemptsPerModel: 1,
+        fetchFn: async (input) => {
+          const url = new URL(String(input));
+          requestedModels.push(decodeURIComponent(url.pathname.split("/models/")[1].split(":")[0]));
+          return new Response("temporary", { status: 503 });
+        },
+        sleepFn: async () => {},
+      });
+    } catch (error) {
+      caught = error;
+    }
+    assert.ok(caught instanceof PortfolioModelsExhaustedError);
+    assert.deepEqual(requestedModels, ["custom-primary", "custom-secondary"]);
+    assert.ok(!requestedModels.includes("gemini-3.5-flash-lite"));
+  });
+});
