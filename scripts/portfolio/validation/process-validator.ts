@@ -21,11 +21,32 @@ function validateCallChains(calls: readonly ModelCallRecord[], errors: string[])
     if (last?.outcome === "FALLBACK") errors.push(`MODEL_FALLBACK_CHAIN_UNRESOLVED: call_id=${callId}`);
   }
 }
-export function validatePortfolioProcess(audit: ProcessAudit): ValidationResult {
+export interface PortfolioProcessValidationContext {
+  /** Source IDs read from the actual, verified input snapshot. */
+  actualSnapshotSourceIds?: readonly string[];
+  /** Candidate selected for this composition/test invocation. */
+  selectedCandidateId?: string | null;
+  /** Revision count reported by Gemini for the selected candidate. */
+  reportedRevisionCycles?: number;
+}
+
+function sameIds(left: readonly string[], right: readonly string[]): boolean {
+  return left.length === right.length &&
+    new Set(left).size === new Set(right).size &&
+    [...left].every((id) => right.includes(id));
+}
+
+export function validatePortfolioProcess(
+  audit: ProcessAudit,
+  context: PortfolioProcessValidationContext = {},
+): ValidationResult {
   const errors: string[] = [];
   const snapshot = audit.snapshotSourceIds, processed = audit.processedSourceIds, candidates = audit.candidateIds;
   if (snapshot.length !== 1000) errors.push(`SNAPSHOT_COUNT_INVALID: expected 1000, received ${snapshot.length}`);
   if (new Set(snapshot).size !== snapshot.length) errors.push("SNAPSHOT_DUPLICATE_SOURCE_IDS");
+  if (context.actualSnapshotSourceIds && !sameIds(snapshot, context.actualSnapshotSourceIds)) {
+    errors.push("AUDIT_SNAPSHOT_MISMATCH: process audit source_ids do not match the loaded snapshot");
+  }
   if (processed.length !== new Set(processed).size) errors.push("PROCESSED_DUPLICATE_SOURCE_IDS");
   if (processed.length !== snapshot.length || snapshot.some((id) => !processed.includes(id))) errors.push("PROCESS_COVERAGE_INCOMPLETE: all 1000 snapshot source_ids must be accounted for");
   if (processed.some((id) => !snapshot.includes(id))) errors.push("PROCESSED_SOURCE_OUTSIDE_SNAPSHOT");
@@ -33,6 +54,16 @@ export function validatePortfolioProcess(audit: ProcessAudit): ValidationResult 
   if (candidates.length > 10) errors.push(`CANDIDATE_LIMIT_EXCEEDED: maximum 10, received ${candidates.length}`);
   if (new Set(candidates).size !== candidates.length) errors.push("CANDIDATE_IDS_DUPLICATED");
   if (candidates.some((id) => !isNonEmptyString(id))) errors.push("CANDIDATE_ID_INVALID");
+  const selectedCandidateId = context.selectedCandidateId ?? null;
+  if (selectedCandidateId !== null && !candidates.includes(selectedCandidateId)) {
+    errors.push(`SELECTED_CANDIDATE_NOT_IN_GLOBAL_SHORTLIST: ${selectedCandidateId}`);
+  }
+  if (selectedCandidateId !== null && context.reportedRevisionCycles !== undefined) {
+    const auditedCycles = audit.revisionCyclesByCandidate?.[selectedCandidateId];
+    if (auditedCycles === undefined || auditedCycles !== context.reportedRevisionCycles) {
+      errors.push(`REVISION_CYCLE_MISMATCH: candidate_id=${selectedCandidateId}, audit=${auditedCycles ?? "missing"}, gemini=${context.reportedRevisionCycles}`);
+    }
+  }
   for (const candidateId of candidates) {
     const sourceIds = audit.candidateSourceIdsById?.[candidateId];
     if (!Array.isArray(sourceIds) || sourceIds.length !== 6 || new Set(sourceIds).size !== 6) errors.push(`CANDIDATE_SOURCE_SET_INVALID: candidate_id=${candidateId} must contain six unique source_ids`);
