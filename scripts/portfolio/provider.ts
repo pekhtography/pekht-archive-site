@@ -20,43 +20,50 @@ export interface PortfolioProviderResult {
   model_used: ModelCallRecord[];
 }
 
+export interface PortfolioProviderErrorOptions {
+  retryable: boolean;
+  model: string;
+  attempts: number;
+  status?: number | null;
+  quotaType?: "daily" | "tpm" | "rpm" | "unknown" | null;
+  model_used?: ModelCallRecord[];
+  cause?: unknown;
+}
+
 export class PortfolioProviderError extends Error {
   readonly retryable: boolean;
   readonly status: number | null;
   readonly model: string;
   readonly attempts: number;
   readonly quotaType: "daily" | "tpm" | "rpm" | "unknown" | null;
+  readonly model_used: ModelCallRecord[];
 
-  constructor(
-    message: string,
-    options: {
-      retryable: boolean;
-      model: string;
-      attempts: number;
-      status?: number | null;
-      quotaType?: "daily" | "tpm" | "rpm" | "unknown" | null;
-    },
-  ) {
-    super(message);
+  constructor(message: string, options: PortfolioProviderErrorOptions) {
+    super(message, { cause: options.cause });
     this.name = "PortfolioProviderError";
     this.retryable = options.retryable;
     this.status = options.status ?? null;
     this.model = options.model;
     this.attempts = options.attempts;
     this.quotaType = options.quotaType ?? null;
+    this.model_used = [...(options.model_used ?? [])];
   }
 }
 
-export class PortfolioModelsExhaustedError extends Error {
-  readonly model_used: ModelCallRecord[];
-
+export class PortfolioModelsExhaustedError extends PortfolioProviderError {
   constructor(modelUsed: ModelCallRecord[], cause?: unknown) {
+    const last = modelUsed.at(-1);
     super(
       `INCOMPLETE: all configured Portfolio Gemini models were exhausted (${modelUsed.map((entry) => entry.model).join(", ")}).`,
-      { cause },
+      {
+        retryable: true,
+        model: last?.model ?? "unknown",
+        attempts: last?.attempts ?? 0,
+        model_used: modelUsed,
+        cause,
+      },
     );
     this.name = "PortfolioModelsExhaustedError";
-    this.model_used = modelUsed;
   }
 }
 
@@ -194,7 +201,7 @@ async function requestModel(
           return { data: JSON.parse(text) as GeminiOutput, attempts: attempt };
         } catch (error) {
           throw new PortfolioProviderError(`Gemini model ${model} returned invalid JSON: ${error instanceof Error ? error.message : String(error)}`, {
-            retryable: false, model, attempts: attempt, status: response.status,
+            retryable: false, model, attempts: attempt, status: response.status, cause: error,
           });
         }
       }
@@ -222,7 +229,11 @@ async function requestModel(
       }
     } catch (error) {
       if (error instanceof PortfolioProviderError) throw error;
-      if (isAbort(error)) throw error;
+      if (isAbort(error)) {
+        throw new PortfolioProviderError(`Gemini request for ${model} was aborted: ${error.message}`, {
+          retryable: false, model, attempts: attempt, cause: error,
+        });
+      }
       if (!isTimeout(error) && !(error instanceof TypeError)) throw error;
       lastError = error instanceof Error ? error.message : String(error);
       lastStatus = null;
@@ -270,18 +281,49 @@ export async function generatePortfolioJson(
       });
       return { data: result.data, model_used: modelUsed };
     } catch (error) {
-      if (isAbort(error)) throw error;
-      if (!(error instanceof PortfolioProviderError)) throw error;
-      if (!error.retryable) throw error;
-      lastError = error;
+      if (error instanceof PortfolioProviderError) {
+        if (error.attempts > 0) {
+          modelUsed.push({
+            call_id: callId,
+            stage: options.stage,
+            candidate_id: candidateId,
+            model,
+            fallback_index: fallbackIndex,
+            attempts: error.attempts,
+            outcome: error.retryable && fallbackIndex < modelList.length - 1 ? "FALLBACK" : "FAILED",
+          });
+        }
+        if (!error.retryable) {
+          throw new PortfolioProviderError(error.message, {
+            retryable: false,
+            model: error.model,
+            attempts: error.attempts,
+            status: error.status,
+            quotaType: error.quotaType,
+            model_used: modelUsed,
+            cause: error,
+          });
+        }
+        lastError = error;
+        continue;
+      }
+
+      const message = error instanceof Error ? error.message : String(error);
       modelUsed.push({
         call_id: callId,
         stage: options.stage,
         candidate_id: candidateId,
         model,
         fallback_index: fallbackIndex,
-        attempts: error.attempts,
-        outcome: fallbackIndex < modelList.length - 1 ? "FALLBACK" : "FAILED",
+        attempts: 1,
+        outcome: "FAILED",
+      });
+      throw new PortfolioProviderError(`Unexpected Gemini provider failure for ${model}: ${message}`, {
+        retryable: false,
+        model,
+        attempts: 1,
+        model_used: modelUsed,
+        cause: error,
       });
     }
   }
