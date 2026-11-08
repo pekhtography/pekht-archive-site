@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { generatePortfolioJson } from "./provider.ts";
+import { generatePortfolioJson, PortfolioProviderError, PortfolioModelsExhaustedError } from "./provider.ts";
 
 const envKeys = [
   "GEMINI_API_KEY", "GEMINI_MODEL", "GEMINI_FALLBACK_1",
@@ -152,5 +152,85 @@ test("model_used: records stage, candidate, model, fallback index, attempts and 
       attempts: 1,
       outcome: "SUCCESS",
     }]);
+  });
+});
+
+
+test("non-retryable failure: retains earlier fallback and failed model diagnostics with cause", async () => {
+  await withHarness(async () => {
+    let request = 0;
+    let caught: unknown;
+    try {
+      await generatePortfolioJson("prompt", {}, {
+        stage: "TEST", candidateId: "candidate-1", callId: "call-non-retryable",
+        fetchFn: async () => {
+          request += 1;
+          if (request <= 3) return new Response("temporary", { status: 503 });
+          return new Response("bad request", { status: 400 });
+        },
+        sleepFn: async () => {},
+      });
+    } catch (error) {
+      caught = error;
+    }
+
+    assert.ok(caught instanceof PortfolioProviderError);
+    assert.equal(caught.model_used.length, 2);
+    assert.deepEqual(caught.model_used.map((record) => ({
+      model: record.model,
+      outcome: record.outcome,
+      attempts: record.attempts,
+    })), [
+      { model: "mock-primary", outcome: "FALLBACK", attempts: 3 },
+      { model: "mock-fallback", outcome: "FAILED", attempts: 1 },
+    ]);
+    assert.ok(caught.cause instanceof PortfolioProviderError);
+    assert.equal(request, 4);
+  });
+});
+
+test("missing API key: exposes an empty model_used array without fabricating an attempt", async () => {
+  await withHarness(async () => {
+    delete process.env.GEMINI_API_KEY;
+    let fetchCalled = false;
+    let caught: unknown;
+    try {
+      await generatePortfolioJson("prompt", {}, {
+        stage: "DISCOVER",
+        fetchFn: async () => {
+          fetchCalled = true;
+          return okResponse();
+        },
+      });
+    } catch (error) {
+      caught = error;
+    }
+
+    assert.ok(caught instanceof PortfolioProviderError);
+    assert.deepEqual(caught.model_used, []);
+    assert.equal(caught.attempts, 0);
+    assert.equal(fetchCalled, false);
+  });
+});
+
+test("model-chain exhaustion: exposes accumulated diagnostics through the common Provider error", async () => {
+  await withHarness(async () => {
+    let caught: unknown;
+    try {
+      await generatePortfolioJson("prompt", {}, {
+        stage: "COMPOSE", callId: "call-exhausted",
+        maxAttemptsPerModel: 1,
+        fetchFn: async () => new Response("unavailable", { status: 503 }),
+        sleepFn: async () => {},
+      });
+    } catch (error) {
+      caught = error;
+    }
+
+    assert.ok(caught instanceof PortfolioModelsExhaustedError);
+    assert.ok(caught instanceof PortfolioProviderError);
+    assert.equal(caught.model_used.length, 2);
+    assert.deepEqual(caught.model_used.map((record) => record.outcome), ["FALLBACK", "FAILED"]);
+    assert.ok(caught.cause instanceof PortfolioProviderError);
   });
 });
