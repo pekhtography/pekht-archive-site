@@ -6,7 +6,6 @@ on:
       - portfolio/validators-0.2.1
     paths:
       - "validation/portfolio-validation-0.2.1-local-reconstruction.zip"
-      - ".github/workflows/validation-0.2.1.yml"
 
 permissions:
   contents: read
