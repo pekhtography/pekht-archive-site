@@ -1,0 +1,99 @@
+name: Portfolio Validation 0.2.1
+
+on:
+  push:
+    branches:
+      - portfolio/validators-0.2.1
+    paths:
+      - "validation/portfolio-validation-0.2.1-local-reconstruction.zip"
+      - ".github/workflows/validation-0.2.1.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-validation-0.2.1-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate Portfolio Validation 0.2.1
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.16.0"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Extract validation package
+        shell: bash
+        run: |
+          test -f validation/portfolio-validation-0.2.1-local-reconstruction.zip
+          mkdir -p "$RUNNER_TEMP/portfolio-validation"
+          unzip -q validation/portfolio-validation-0.2.1-local-reconstruction.zip -d "$RUNNER_TEMP/portfolio-validation"
+          test -d "$RUNNER_TEMP/portfolio-validation/portfolio-validation-0.2.1-reconstructed"
+          test -d "$RUNNER_TEMP/portfolio-validation/portfolio-validation-0.2.0-baseline"
+          echo "PACKAGE_DIR=$RUNNER_TEMP/portfolio-validation/portfolio-validation-0.2.1-reconstructed" >> "$GITHUB_ENV"
+          echo "BASELINE_DIR=$RUNNER_TEMP/portfolio-validation/portfolio-validation-0.2.0-baseline" >> "$GITHUB_ENV"
+
+      - name: Verify unchanged 0.2.0 baseline
+        shell: bash
+        run: |
+          python - <<'PY'
+          import hashlib
+          import os
+          from pathlib import Path
+
+          baseline = Path(os.environ["BASELINE_DIR"])
+          manifest = Path(os.environ["PACKAGE_DIR"]) / "BASELINE-0.2.0-SHA256.txt"
+          failures = []
+          for line in manifest.read_text(encoding="utf-8").splitlines():
+              parts = line.split()
+              if len(parts) < 2:
+                  failures.append(f"Malformed manifest line: {line}")
+                  continue
+              expected, relative_path = parts[0], parts[1]
+              target = baseline / relative_path
+              if not target.is_file():
+                  failures.append(f"Missing baseline file: {relative_path}")
+                  continue
+              actual = hashlib.sha256(target.read_bytes()).hexdigest()
+              if actual != expected:
+                  failures.append(f"Hash mismatch: {relative_path}")
+          if failures:
+              print("\n".join(failures))
+              raise SystemExit(1)
+          print("PASS: all baseline 0.2.0 hashes match")
+          PY
+
+      - name: Install Node dependencies
+        working-directory: ${{ env.PACKAGE_DIR }}
+        run: npm install --no-audit --no-fund
+
+      - name: Validate schemas
+        working-directory: ${{ env.PACKAGE_DIR }}
+        run: npm run validate:schema
+
+      - name: Run full runtime and Ajv tests
+        working-directory: ${{ env.PACKAGE_DIR }}
+        run: npm run test:full
+
+      - name: TypeScript typecheck
+        working-directory: ${{ env.PACKAGE_DIR }}
+        run: npm run typecheck
+
+      - name: Install Python validation dependency
+        working-directory: ${{ env.PACKAGE_DIR }}
+        run: python -m pip install -r requirements-validation.txt
+
+      - name: Validate schemas and fixtures with Python
+        working-directory: ${{ env.PACKAGE_DIR }}
+        run: python scripts/validate-python.py
