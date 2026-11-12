@@ -103,10 +103,12 @@
               "evidence_integrity": {
                 "const": 5
               }
-            }
+            },
+            "type": "object"
           },
           "blocking_issues": {
-            "maxItems": 0
+            "maxItems": 0,
+            "type": "array"
           }
         }
       }
@@ -125,7 +127,8 @@
       "then": {
         "properties": {
           "blocking_issues": {
-            "minItems": 1
+            "minItems": 1,
+            "type": "array"
           }
         }
       }
