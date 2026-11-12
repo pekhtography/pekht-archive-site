@@ -2,14 +2,14 @@
 
 ## Preservation
 
-The 0.2.0 source package is retained separately as an immutable baseline. No original file is silently overwritten. `candidate.schema.json`, `test-result.schema.json`, the three TestResult fixtures, and `tsconfig.json` are unchanged in 0.2.1.
+The 0.2.0 source package is retained separately as an immutable baseline. No original file is silently overwritten. `candidate.schema.json`, the three original TestResult fixtures, and `tsconfig.json` are byte-for-byte unchanged in 0.2.1. `test-result.schema.json` is semantically unchanged: its formatting was normalized and explicit, redundant `type: object` guards were added to the conditional branches; the accepted/rejected TestResult contract is unchanged.
 
 ## File migration matrix
 
 | File | 0.2.1 disposition | Change |
 |---|---|---|
 | `schemas/candidate.schema.json` | UNCHANGED | Original Candidate schema retained |
-| `schemas/test-result.schema.json` | UNCHANGED | Original TestResult schema retained |
+| `schemas/test-result.schema.json` | SEMANTICALLY UNCHANGED | Formatting normalized; explicit redundant `type: object` guards added to conditional branches; validation contract retained |
 | `schemas/snapshot.schema.json` | NEW | Snapshot structural schema |
 | `schemas/discovery-record.schema.json` | NEW | DiscoveryRecord structural schema |
 | `src/types.ts` | CHANGED | Adds DiscoveryResult and TestDecision types; existing data contracts retained |
