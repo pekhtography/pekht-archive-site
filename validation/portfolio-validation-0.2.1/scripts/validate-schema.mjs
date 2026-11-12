@@ -25,6 +25,7 @@ const fixtureExpectations=[
   ['discovery-record','discovery.valid.json',true],
   ['independent-test-response','independent-test-response.approve.valid.json',true],
   ['independent-test-response','independent-test-response.approve.invalid-low-score.json',false],
+  ['independent-test-response','independent-test-response.approve.invalid-evidence.json',false],
   ['independent-test-response','independent-test-response.reject.valid.json',true],
   ['independent-test-response','independent-test-response.reject.invalid-no-blocking.json',false],
 ];
