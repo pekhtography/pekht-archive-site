@@ -45,6 +45,8 @@ export interface IndependentTestResponseV132 {
 }
 
 export interface GeminiOutput { gallery: GeminiGallery | null; test: GeminiTest }
+/** Standalone COMPOSE/REVISION response, deliberately separate from TEST. */
+export type GeminiGalleryResponse = GeminiGallery;
 export interface PortfolioInputSnapshot {
   schema_version: string; repository_commit: string; generated_at: string;
   sampled_count: 1000; content_sha256: string;

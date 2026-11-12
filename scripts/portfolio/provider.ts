@@ -1,6 +1,7 @@
 import { randomUUID } from "node:crypto";
-import type { GeminiOutput, IndependentTestResponseV132, ModelCallRecord, PortfolioStage } from "./validation/types.ts";
+import type { GeminiGalleryResponse, GeminiOutput, IndependentTestResponseV132, ModelCallRecord, PortfolioStage } from "./validation/types.ts";
 import { validateIndependentTestResponseV132, type IndependentTestValidationContextV132 } from "./validation/test-response-v132-validator.ts";
+import { validateGeminiGallery } from "./validation/gemini-output-validator.ts";
 
 export type JsonSchema = Record<string, unknown>;
 export type ProviderFetch = typeof fetch;
@@ -15,6 +16,8 @@ export interface PortfolioProviderOptions {
   sleepFn?: (ms: number) => Promise<void>;
   fetchFn?: ProviderFetch;
 }
+
+export interface GalleryProviderResult { data: GeminiGalleryResponse; model_used: ModelCallRecord[] }
 
 export interface PortfolioProviderResult {
   data: GeminiOutput;
@@ -363,6 +366,54 @@ export async function generatePortfolioJson(
   throw new PortfolioModelsExhaustedError(modelUsed, lastError);
 }
 
+
+
+/** Standalone COMPOSE/REVISION call; no embedded TEST contract is accepted. */
+export async function generatePortfolioGallery(
+  prompt: string,
+  schema: JsonSchema,
+  options: Omit<PortfolioProviderOptions, "stage"> & { stage: "COMPOSE" | "REVISION" },
+): Promise<GalleryProviderResult> {
+  const models = configuredModels();
+  const callId = options.callId ?? randomUUID();
+  const candidateId = options.candidateId ?? null;
+  const modelUsed: ModelCallRecord[] = [];
+  let lastError: unknown = null;
+  for (let fallbackIndex = 0; fallbackIndex < models.length; fallbackIndex += 1) {
+    const model = models[fallbackIndex];
+    try {
+      const response = await requestModel(model, prompt, schema, options);
+      const validation = validateGeminiGallery(response.data);
+      if (!validation.ok) {
+        modelUsed.push({ call_id: callId, stage: options.stage, candidate_id: candidateId, model, fallback_index: fallbackIndex, attempts: response.attempts, outcome: "FAILED" });
+        throw new PortfolioProviderError("Invalid standalone gallery: " + validation.errors.join("; "), {
+          retryable: false, model, attempts: response.attempts, status: 200, model_used: modelUsed,
+        });
+      }
+      modelUsed.push({ call_id: callId, stage: options.stage, candidate_id: candidateId, model, fallback_index: fallbackIndex, attempts: response.attempts, outcome: "SUCCESS" });
+      return { data: response.data as GeminiGalleryResponse, model_used: modelUsed };
+    } catch (error) {
+      if (error instanceof PortfolioProviderError) {
+        if (error.model_used.length) throw error;
+        if (error.attempts > 0) modelUsed.push({
+          call_id: callId, stage: options.stage, candidate_id: candidateId, model, fallback_index: fallbackIndex,
+          attempts: error.attempts, outcome: error.retryable && fallbackIndex < models.length - 1 ? "FALLBACK" : "FAILED",
+        });
+        if (!error.retryable) throw new PortfolioProviderError(error.message, {
+          retryable: false, model: error.model, attempts: error.attempts, status: error.status,
+          quotaType: error.quotaType, model_used: modelUsed, cause: error,
+        });
+        lastError = error; continue;
+      }
+      const message = error instanceof Error ? error.message : String(error);
+      modelUsed.push({ call_id: callId, stage: options.stage, candidate_id: candidateId, model, fallback_index: fallbackIndex, attempts: 1, outcome: "FAILED" });
+      throw new PortfolioProviderError("Unexpected gallery provider failure for " + model + ": " + message, {
+        retryable: false, model, attempts: 1, model_used: modelUsed, cause: error,
+      });
+    }
+  }
+  throw new PortfolioModelsExhaustedError(modelUsed, lastError);
+}
 
 /**
  * Performs one independent v1.3.2 TEST invocation. A call_id is generated once

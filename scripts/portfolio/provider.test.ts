@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { generatePortfolioJson, PortfolioProviderError, PortfolioModelsExhaustedError } from "./provider.ts";
+import { generatePortfolioJson, generatePortfolioGallery, PortfolioProviderError, PortfolioModelsExhaustedError } from "./provider.ts";
 
 const envKeys = [
   "GEMINI_API_KEY", "GEMINI_MODEL", "GEMINI_FALLBACK_1",
@@ -600,4 +600,34 @@ test("independent TEST: missing API key makes no request and does not fabricate 
     assert.deepEqual(caught.model_used, []);
     assert.equal(called, false);
   });
+});
+
+const standaloneGalleryFixture = {"source_ids":["s1","s2","s3","s4","s5","s6"],"title":"Test gallery","statement":"A coherent statement","facets":["Light","Shadow"],"roles":[{"source_id":"s1","role":"Role 0","operation":"Contrast","evidence":[{"quote":"Exact source quote","interpretation":"Supports the role"}],"necessity":"Necessary"},{"source_id":"s2","role":"Role 1","operation":"Contrast","evidence":[{"quote":"Exact source quote","interpretation":"Supports the role"}],"necessity":"Necessary"},{"source_id":"s3","role":"Role 2","operation":"Contrast","evidence":[{"quote":"Exact source quote","interpretation":"Supports the role"}],"necessity":"Necessary"},{"source_id":"s4","role":"Role 3","operation":"Contrast","evidence":[{"quote":"Exact source quote","interpretation":"Supports the role"}],"necessity":"Necessary"},{"source_id":"s5","role":"Role 4","operation":"Contrast","evidence":[{"quote":"Exact source quote","interpretation":"Supports the role"}],"necessity":"Necessary"},{"source_id":"s6","role":"Role 5","operation":"Contrast","evidence":[{"quote":"Exact source quote","interpretation":"Supports the role"}],"necessity":"Necessary"}],"composition_rationale":"The sequence develops a coherent visual argument.","alternatives_considered":[],"doubts":[]};
+test("standalone gallery Provider: COMPOSE returns gallery and stage diagnostics", async () => {
+ await withHarness(async () => {
+  const result=await generatePortfolioGallery("compose",{}, {stage:"COMPOSE",candidateId:"candidate-gallery",fetchFn:async()=>okResponse(standaloneGalleryFixture)});
+  assert.deepEqual(result.data,standaloneGalleryFixture);
+  assert.equal(result.model_used[0].stage,"COMPOSE");
+  assert.equal(result.model_used[0].candidate_id,"candidate-gallery");
+  assert.equal(result.model_used[0].outcome,"SUCCESS");
+ });
+});
+test("standalone gallery Provider: REVISION fallback attempts share one call_id", async () => {
+ await withHarness(async () => {
+  let requests=0;
+  const result=await generatePortfolioGallery("revision",{}, {stage:"REVISION",candidateId:"candidate-gallery",fetchFn:async()=>{requests++;return requests<=3?new Response("temporary",{status:503}):okResponse(standaloneGalleryFixture);},sleepFn:async()=>{}});
+  assert.equal(requests,4);
+  assert.deepEqual(result.model_used.map(x=>x.outcome),["FALLBACK","SUCCESS"]);
+  assert.equal(result.model_used[0].call_id,result.model_used[1].call_id);
+  assert.ok(result.model_used.every(x=>x.stage==="REVISION"));
+ });
+});
+test("standalone gallery Provider: rejects embedded TEST and malformed gallery fields", async () => {
+ await withHarness(async () => {
+  let caught:unknown;
+  try { await generatePortfolioGallery("compose",{}, {stage:"COMPOSE",fetchFn:async()=>okResponse({...standaloneGalleryFixture,test:{decision:"APPROVE"}})}); } catch(e) {caught=e;}
+  assert.ok(caught instanceof PortfolioProviderError);
+  assert.equal(caught.retryable,false);
+  assert.equal(caught.model_used[0].outcome,"FAILED");
+ });
 });
