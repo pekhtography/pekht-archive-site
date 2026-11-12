@@ -50,8 +50,8 @@ The path is a non-root RFC 6901 JSON Pointer into the actual composition object.
 
 Ajv validates the versioned response structure and decision-dependent constraints. The TypeScript runtime validator additionally receives the six source texts and composition object, verifies the context has exactly six complete source texts, resolves evidence references, and checks exact quote occurrence.
 
-The validator does not perform provider invocation, model selection, Revision, Orchestrator status transitions, or Process Audit integration. Those belong to later v1.3.2 stages.
+The independent TEST provider invocation is implemented in stage v1.3.2-B. It returns the versioned response only after runtime structural, decision, candidate-ID, and exact-evidence validation. Model selection and fallback attempts are recorded under one call_id per logical TEST invocation. Revision, Orchestrator status transitions, and Process Audit integration remain out of scope for stage B.
 
 ## Scope
 
-This stage changes only response types, the new versioned schema, runtime evidence validation, fixtures, tests, and CI wiring. It does not modify the v1.3.1 schema, integrate a live provider, change Orchestrator execution, run Gemini, read live archive data, create a PR, merge, or deploy.
+Stage A/A.1 established the response types, versioned schema, runtime evidence validation, fixtures, tests, and CI wiring. Stage B adds an independent mock-testable Gemini TEST provider while preserving the legacy generatePortfolioJson() contract and existing model chain. It does not modify the v1.3.1 schema, wire the provider into Orchestrator execution, change Revision or run-status transitions, run live Gemini, read live archive data, create a PR, merge, or deploy.

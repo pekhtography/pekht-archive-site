@@ -1,5 +1,6 @@
 import { randomUUID } from "node:crypto";
-import type { GeminiOutput, ModelCallRecord, PortfolioStage } from "./validation/types.ts";
+import type { GeminiOutput, IndependentTestResponseV132, ModelCallRecord, PortfolioStage } from "./validation/types.ts";
+import { validateIndependentTestResponseV132, type IndependentTestValidationContextV132 } from "./validation/test-response-v132-validator.ts";
 
 export type JsonSchema = Record<string, unknown>;
 export type ProviderFetch = typeof fetch;
@@ -17,6 +18,16 @@ export interface PortfolioProviderOptions {
 
 export interface PortfolioProviderResult {
   data: GeminiOutput;
+  model_used: ModelCallRecord[];
+}
+
+export interface IndependentTestProviderOptions extends Omit<PortfolioProviderOptions, "stage" | "candidateId" | "callId"> {
+  candidateId: string;
+  validationContext: IndependentTestValidationContextV132;
+}
+
+export interface IndependentTestProviderResult {
+  data: IndependentTestResponseV132;
   model_used: ModelCallRecord[];
 }
 
@@ -164,7 +175,7 @@ async function requestModel(
   prompt: string,
   schema: JsonSchema,
   options: PortfolioProviderOptions,
-): Promise<{ data: GeminiOutput; attempts: number }> {
+): Promise<{ data: unknown; attempts: number }> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     throw new PortfolioProviderError("GEMINI_API_KEY is not configured.", {
@@ -204,7 +215,7 @@ async function requestModel(
           });
         }
         try {
-          return { data: JSON.parse(text) as GeminiOutput, attempts: attempt };
+          return { data: JSON.parse(text) as unknown, attempts: attempt };
         } catch (error) {
           throw new PortfolioProviderError(`Gemini model ${model} returned invalid JSON: ${error instanceof Error ? error.message : String(error)}`, {
             retryable: false, model, attempts: attempt, status: response.status, cause: error,
@@ -300,7 +311,7 @@ export async function generatePortfolioJson(
         attempts: result.attempts,
         outcome: "SUCCESS",
       });
-      return { data: result.data, model_used: modelUsed };
+      return { data: result.data as GeminiOutput, model_used: modelUsed };
     } catch (error) {
       if (error instanceof PortfolioProviderError) {
         if (error.attempts > 0) {
@@ -340,6 +351,137 @@ export async function generatePortfolioJson(
         outcome: "FAILED",
       });
       throw new PortfolioProviderError(`Unexpected Gemini provider failure for ${model}: ${message}`, {
+        retryable: false,
+        model,
+        attempts: 1,
+        model_used: modelUsed,
+        cause: error,
+      });
+    }
+  }
+
+  throw new PortfolioModelsExhaustedError(modelUsed, lastError);
+}
+
+
+/**
+ * Performs one independent v1.3.2 TEST invocation. A call_id is generated once
+ * per logical invocation and is shared by all model fallback attempts.
+ *
+ * This method deliberately does not alter the legacy generatePortfolioJson()
+ * contract and is not wired into the Orchestrator in stage B.
+ */
+export async function evaluateIndependentTest(
+  prompt: string,
+  schema: JsonSchema,
+  options: IndependentTestProviderOptions,
+): Promise<IndependentTestProviderResult> {
+  const modelList = configuredModels();
+  const callId = randomUUID();
+  const candidateId = options.candidateId;
+  const modelUsed: ModelCallRecord[] = [];
+  let lastError: unknown = null;
+  const requestOptions: PortfolioProviderOptions = {
+    ...options,
+    stage: "TEST",
+    candidateId,
+    callId,
+  };
+
+  for (let fallbackIndex = 0; fallbackIndex < modelList.length; fallbackIndex += 1) {
+    const model = modelList[fallbackIndex];
+    try {
+      const result = await requestModel(model, prompt, schema, requestOptions);
+      const validation = validateIndependentTestResponseV132(result.data, options.validationContext);
+      const responseCandidateId = result.data && typeof result.data === "object"
+        ? (result.data as { candidate_id?: unknown }).candidate_id
+        : undefined;
+      if (responseCandidateId !== candidateId) {
+        validation.errors.push("test_response.candidate_id: response does not match the requested candidate");
+      }
+      if (!validation.ok) {
+        const invalidResponse = new PortfolioProviderError(
+          "Gemini returned an invalid independent TEST response: " + validation.errors.join("; "),
+          {
+            retryable: false,
+            model,
+            attempts: result.attempts,
+            status: 200,
+          },
+        );
+        modelUsed.push({
+          call_id: callId,
+          stage: "TEST",
+          candidate_id: candidateId,
+          model,
+          fallback_index: fallbackIndex,
+          attempts: result.attempts,
+          outcome: "FAILED",
+        });
+        throw new PortfolioProviderError(invalidResponse.message, {
+          retryable: false,
+          model,
+          attempts: result.attempts,
+          status: 200,
+          model_used: modelUsed,
+          cause: invalidResponse,
+        });
+      }
+
+      modelUsed.push({
+        call_id: callId,
+        stage: "TEST",
+        candidate_id: candidateId,
+        model,
+        fallback_index: fallbackIndex,
+        attempts: result.attempts,
+        outcome: "SUCCESS",
+      });
+      return {
+        data: result.data as IndependentTestResponseV132,
+        model_used: modelUsed,
+      };
+    } catch (error) {
+      if (error instanceof PortfolioProviderError) {
+        // Validation failures already carry the current model's complete diagnostics.
+        if (error.model_used.length > 0) throw error;
+        if (error.attempts > 0) {
+          modelUsed.push({
+            call_id: callId,
+            stage: "TEST",
+            candidate_id: candidateId,
+            model,
+            fallback_index: fallbackIndex,
+            attempts: error.attempts,
+            outcome: error.retryable && fallbackIndex < modelList.length - 1 ? "FALLBACK" : "FAILED",
+          });
+        }
+        if (!error.retryable) {
+          throw new PortfolioProviderError(error.message, {
+            retryable: false,
+            model: error.model,
+            attempts: error.attempts,
+            status: error.status,
+            quotaType: error.quotaType,
+            model_used: modelUsed,
+            cause: error,
+          });
+        }
+        lastError = error;
+        continue;
+      }
+
+      const message = error instanceof Error ? error.message : String(error);
+      modelUsed.push({
+        call_id: callId,
+        stage: "TEST",
+        candidate_id: candidateId,
+        model,
+        fallback_index: fallbackIndex,
+        attempts: 1,
+        outcome: "FAILED",
+      });
+      throw new PortfolioProviderError("Unexpected independent TEST provider failure for " + model + ": " + message, {
         retryable: false,
         model,
         attempts: 1,
