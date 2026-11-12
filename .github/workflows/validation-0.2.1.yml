@@ -8,6 +8,13 @@ on:
       - "validation/portfolio-validation-0.2.1/**"
       - "validation/portfolio-validation-0.2.0-baseline/**"
       - ".github/workflows/validation-0.2.1.yml"
+  pull_request:
+    branches:
+      - portfolio/orchestrator-v1
+    paths:
+      - "validation/portfolio-validation-0.2.1/**"
+      - "validation/portfolio-validation-0.2.0-baseline/**"
+      - ".github/workflows/validation-0.2.1.yml"
 
 permissions:
   contents: read
