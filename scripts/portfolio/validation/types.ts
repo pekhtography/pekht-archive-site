@@ -12,9 +12,38 @@ export interface GeminiGallery {
 }
 export interface GeminiTest { decision: GeminiDecision; findings: string[]; revision_cycles: number }
 
-/** Independent model-evaluated TEST response; separate from normalized TestResult. */
+/** Independent model-evaluated TEST response v1.3.1; separate from normalized TestResult. */
 export interface IndependentTestScores { semantic_coherence: number; curatorial_originality: number; narrative_integrity: number; visual_composition: number; evidence_integrity: number; }
 export interface IndependentTestResponse { candidate_id: string; decision: GeminiDecision; scores: IndependentTestScores; findings: string[]; blocking_issues: string[]; }
+
+/** Evidence reference for the versioned structured TEST response contract v1.3.2. */
+export type TestEvidenceReferenceV132 =
+  | { kind: "SOURCE"; source_id: string; quote: string }
+  | { kind: "COMPOSITION"; path: string; quote: string };
+
+export type IndependentTestCriterionV132 =
+  | "semantic_coherence"
+  | "curatorial_originality"
+  | "narrative_integrity"
+  | "visual_composition"
+  | "evidence_integrity";
+
+export interface IndependentTestFindingV132 {
+  criterion: IndependentTestCriterionV132;
+  issue: string;
+  blocking: boolean;
+  evidence: TestEvidenceReferenceV132;
+}
+
+/** Versioned v1.3.2 response; does not replace the historical v1.3.1 response type. */
+export interface IndependentTestResponseV132 {
+  candidate_id: string;
+  decision: GeminiDecision;
+  scores: IndependentTestScores;
+  findings: IndependentTestFindingV132[];
+  blocking_issues: string[];
+}
+
 export interface GeminiOutput { gallery: GeminiGallery | null; test: GeminiTest }
 export interface PortfolioInputSnapshot {
   schema_version: string; repository_commit: string; generated_at: string;
