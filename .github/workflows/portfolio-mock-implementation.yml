@@ -1,0 +1,69 @@
+name: Portfolio Mock Implementation
+
+on:
+  push:
+    branches:
+      - portfolio/mock-implementation-v1
+    paths:
+      - "scripts/portfolio/mock/**"
+      - "scripts/portfolio/orchestrator.ts"
+      - "scripts/portfolio/validation/**"
+      - "validation/portfolio-validation-0.2.1/**"
+      - ".github/workflows/portfolio-mock-implementation.yml"
+  pull_request:
+    branches:
+      - portfolio/orchestrator-v1
+    paths:
+      - "scripts/portfolio/mock/**"
+      - "scripts/portfolio/orchestrator.ts"
+      - "scripts/portfolio/validation/**"
+      - "validation/portfolio-validation-0.2.1/**"
+      - ".github/workflows/portfolio-mock-implementation.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-mock-implementation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  mock-implementation:
+    name: Portfolio mock implementation (synthetic data only)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.16.0"
+          cache: pnpm
+
+      - name: Install repository dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install locked Validation 0.2.1 dependencies
+        working-directory: validation/portfolio-validation-0.2.1
+        run: npm ci --no-audit --no-fund
+
+      - name: Re-run Validation 0.2.1 gates
+        working-directory: validation/portfolio-validation-0.2.1
+        run: |
+          npm run validate:schema
+          npm run test:full
+          npm run typecheck
+
+      - name: Run mock implementation and existing orchestrator tests
+        run: >-
+          pnpm exec tsx --test
+          scripts/portfolio/mock/implementation.test.ts
+          scripts/portfolio/provider.test.ts
+          scripts/portfolio/orchestrator.test.ts
