@@ -450,6 +450,9 @@ async function runMockPipeline(
   dependencies: MockPipelineDependencies,
   minimumPublishScore: number,
 ): Promise<MockPortfolioReport> {
+  if (!Number.isFinite(minimumPublishScore) || minimumPublishScore < 0 || minimumPublishScore > 1) {
+    throw new Error("minimumPublishScore must be a finite number between 0 and 1.");
+  }
   const fixture = createMockPortfolioFixture();
   const snapshot = fixture.snapshot;
   const validationSnapshot = fixture.validationSnapshot;
