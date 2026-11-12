@@ -70,12 +70,13 @@
       "then": {
         "properties": {
           "scores": {
+            "type": "object",
             "properties": {
-              "semantic_coherence": { "minimum": 4 },
-              "curatorial_originality": { "minimum": 4 },
-              "narrative_integrity": { "minimum": 4 },
-              "visual_composition": { "minimum": 4 },
-              "evidence_integrity": { "const": 5 }
+              "semantic_coherence": { "type": "integer", "minimum": 4 },
+              "curatorial_originality": { "type": "integer", "minimum": 4 },
+              "narrative_integrity": { "type": "integer", "minimum": 4 },
+              "visual_composition": { "type": "integer", "minimum": 4 },
+              "evidence_integrity": { "type": "integer", "const": 5 }
             }
           },
           "blocking_issues": { "maxItems": 0 },
