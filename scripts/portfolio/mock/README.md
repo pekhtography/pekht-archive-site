@@ -25,7 +25,7 @@ mock model-call records.
 7. Final validation (structure, exact quotations, Candidate binding and process).
 8. Process Audit (complete 1,000-source coverage, candidate shortlist and mock
    model-call records).
-9. Result (APPROVED only when all validation layers pass).
+9. Result (APPROVED only when all validation layers pass; a separate negative scenario confirms NO_GALLERY when no candidate is selected).
 
 Candidate, Discovery, evidence and TestResult checks reuse the authoritative
 runtime validators from Validation 0.2.1. The existing Portfolio Orchestrator

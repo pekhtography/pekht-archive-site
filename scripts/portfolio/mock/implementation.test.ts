@@ -3,6 +3,7 @@ import testRunner from "node:test";
 import {
   createMockPortfolioFixture,
   runMockPortfolioImplementation,
+  runMockNoGalleryScenario,
 } from "./implementation.ts";
 import {
   validateCandidate,
@@ -79,4 +80,17 @@ testRunner("mock validation rejects missing Discovery, altered evidence and inva
     scores: { ...fixture.testResults[0].scores, evidence_integrity: 4 },
   };
   assert.ok(validateTestDecision(invalidPass).some((issue) => issue.code === "PASS_EVIDENCE_SCORE"));
+});
+
+testRunner("mock NO_GALLERY returns a validated no-change result when no candidate is selected", async () => {
+  const result = await runMockNoGalleryScenario();
+  assert.equal(result.status, "NO_GALLERY");
+  assert.equal(result.gemini_output?.gallery, null);
+  assert.equal(result.validation.status, "PASS");
+  assert.equal(result.validation.structural, "PASS");
+  assert.equal(result.validation.semantic, "PASS");
+  assert.equal(result.validation.process, "PASS");
+  assert.equal(result.model_used.length, 1);
+  assert.equal(result.model_used[0].stage, "DISCOVER");
+  assert.equal(result.model_used[0].candidate_id, null);
 });

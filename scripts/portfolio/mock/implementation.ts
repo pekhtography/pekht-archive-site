@@ -2,7 +2,7 @@ import { createHash } from "node:crypto";
 import { runPortfolioOrchestrator } from "../orchestrator.ts";
 import { validatePortfolioSnapshot, type LoadedPortfolioSnapshot, type PortfolioSnapshot } from "../snapshot.ts";
 import { validateGeminiOutput, validatePortfolioSemantics, validatePortfolioProcess } from "../validation/index.ts";
-import type { GeminiOutput, ModelCallRecord, ProcessAudit, TestResult as LegacyTestResult } from "../validation/types.ts";
+import type { GeminiOutput, ModelCallRecord, ProcessAudit } from "../validation/types.ts";
 import {
   computeCandidateId,
   validateCandidate,
@@ -105,7 +105,7 @@ function buildDiscovery(snapshot: PortfolioSnapshot): DiscoveryRecord[] {
     });
   }));
 
-  return snapshot.posts.map((post) => {
+  return snapshot.posts.map((post): DiscoveryRecord => {
     const signal = signalById.get(post.source_id);
     if (!signal) return { source_id: post.source_id, result: "NO_SIGNAL", observations: [] };
     return {
@@ -368,4 +368,54 @@ export async function runMockPortfolioImplementation(): Promise<MockPortfolioRep
     model_used: result.model_used,
     result,
   };
+}
+
+
+/** Exercises the conservative NO_GALLERY outcome when global comparison finds
+ * no publishable composition. The Snapshot is still synthetic and in-memory. */
+export async function runMockNoGalleryScenario(): Promise<Awaited<ReturnType<typeof runPortfolioOrchestrator>>> {
+  const fixture = createMockPortfolioFixture();
+  const loaded: LoadedPortfolioSnapshot = {
+    snapshot: fixture.snapshot,
+    input_snapshot: {
+      schema_version: "1",
+      repository_commit: fixture.snapshot.repository_commit,
+      generated_at: fixture.snapshot.generated_at,
+      sampled_count: POST_COUNT,
+      content_sha256: fixture.snapshot.content_sha256,
+    },
+  };
+  const discoveryCall = modelCall("mock-no-gallery-discover", "DISCOVER", null);
+  return runPortfolioOrchestrator({
+    snapshotPath: "MOCK_ONLY_NO_FILE_READ",
+    prompt: "Return NO_GALLERY when global comparison finds no convincing composition.",
+    processAudit: {
+      snapshotSourceIds: fixture.snapshot.sampled_source_ids,
+      processedSourceIds: fixture.discovery.map((record) => record.source_id),
+      candidateIds: [],
+      candidateSourceIdsById: {},
+      globalComparisonCompleted: true,
+      revisionCyclesByCandidate: {},
+      modelCalls: [],
+    },
+  }, {
+    readSnapshot: async () => loaded,
+    schema: {},
+    generate: async (_prompt, _schema, options) => {
+      if (options.stage !== "DISCOVER" || options.candidateId !== null) {
+        throw new Error("Mock NO_GALLERY provider received an unexpected stage or candidate.");
+      }
+      return {
+        data: {
+          gallery: null,
+          test: {
+            decision: "REJECT",
+            findings: ["No convincing six-source composition survived global comparison."],
+            revision_cycles: 0,
+          },
+        },
+        model_used: [discoveryCall],
+      };
+    },
+  });
 }
