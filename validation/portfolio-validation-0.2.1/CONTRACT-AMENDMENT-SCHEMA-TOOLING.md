@@ -1,6 +1,7 @@
 # Contract Amendment — Schema Tooling
 
-**Status:** APPROVED — 2026-11-09
+**Status:** APPROVED — 2026-11-09  
+**Operational tooling update:** 2026-11-12
 
 ## 1. Schema ownership
 
@@ -10,14 +11,25 @@ The package validates four Draft 2020-12 schemas: Candidate, TestResult, Snapsho
 
 Structural parsing and runtime validation are separate. Runtime validators receive typed structures that have already passed schema validation. `parseAndValidateInput` is validator-agnostic; Ajv is integrated through `InputValidator<T>` using `createAjvValidator<T>`.
 
-## 3. Dependency boundaries
+## 3. Authoritative schema validator
 
-`test:no-npm` runs tests that do not import Ajv. `test:full` and `npm test` include the Ajv adapter tests and require installed pinned npm dependencies. Python validation is a separate gate and does not replace Ajv validation.
+Ajv 8.17.1 is the authoritative and only JSON Schema validation engine in the 0.2.1 package and its required GitHub Actions workflow. It validates the Draft 2020-12 schemas and the explicit fixture matrix.
 
-## 4. Fixture matrix
+## 4. Superseded interim Python path
+
+On 2026-11-09, Python `jsonschema==4.26.0` was accepted as an interim independent Draft 2020-12 validator. On 2026-11-12, the project owner chose to remove that supplementary path to simplify local development and CI and avoid a separate Python dependency/runtime.
+
+Accordingly:
+- Python validation is not a required gate and is not part of the 0.2.1 package commands.
+- `scripts/validate-python.py` and `requirements-validation.txt` are removed.
+- GitHub Actions does not install or invoke Python.
+- This tooling change does not waive Ajv schema validation, runtime tests, or TypeScript type checking.
+- The historical acceptance of Python as an interim independent validator is superseded operationally for this package; it must not be reported as a current PASS or required gate.
+
+## 5. Fixture matrix
 
 The schema script explicitly checks all four schemas and nine fixtures. Missing schemas or fixtures are failures, not silent omissions.
 
-## 5. Test registration
+## 6. Test registration
 
 Every new `tests/*.test.mjs` file must be explicitly added to `test:full`. If it does not require Ajv, it must also be added to `test:no-npm`. No test glob is used.
