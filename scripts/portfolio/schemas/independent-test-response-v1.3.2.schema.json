@@ -80,7 +80,7 @@
             }
           },
           "blocking_issues": { "type": "array", "maxItems": 0 },
-          "findings": { "type": "array", "not": { "contains": { "properties": { "blocking": { "const": true } }, "required": ["blocking"] } } }
+          "findings": { "type": "array", "not": { "contains": { "type": "object", "properties": { "blocking": { "const": true } }, "required": ["blocking"] } } }
         }
       }
     },
