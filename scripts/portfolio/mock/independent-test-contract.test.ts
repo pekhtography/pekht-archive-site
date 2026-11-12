@@ -7,8 +7,14 @@ const reject = { candidate_id, decision: "REJECT", scores: { semantic_coherence:
 test("APPROVE passes with required scores", () => assert.equal(validateIndependentTestResponse(approve).ok, true));
 test("REJECT requires a blocking issue", () => assert.equal(validateIndependentTestResponse(reject).ok, true));
 test("APPROVE below threshold fails", () => assert.equal(validateIndependentTestResponse({ ...approve, scores: { ...approve.scores, visual_composition: 3 } }).ok, false));
-test("Evidence integrity below five fails", () => assert.equal(validateIndependentTestResponse({ ...approve, scores: { ...approve.scores, evidence_integrity: 4 } }).ok, false));
+test("APPROVE with evidence integrity below five fails", () => assert.equal(validateIndependentTestResponse({ ...approve, scores: { ...approve.scores, evidence_integrity: 4 } }).ok, false));
+test("REJECT with evidence integrity below five passes when blocked", () => assert.equal(validateIndependentTestResponse({ ...reject, scores: { ...reject.scores, evidence_integrity: 2 } }).ok, true));
+test("Evidence score outside 1–5 fails for either decision", () => {
+  assert.equal(validateIndependentTestResponse({ ...reject, scores: { ...reject.scores, evidence_integrity: 0 } }).ok, false);
+  assert.equal(validateIndependentTestResponse({ ...reject, scores: { ...reject.scores, evidence_integrity: 6 } }).ok, false);
+});
 test("APPROVE with blocking issue fails", () => assert.equal(validateIndependentTestResponse({ ...approve, blocking_issues: ["unsupported"] }).ok, false));
 test("REJECT without blocking issue fails", () => assert.equal(validateIndependentTestResponse({ ...reject, blocking_issues: [] }).ok, false));
+test("Whitespace-only blocking issue fails", () => assert.equal(validateIndependentTestResponse({ ...reject, blocking_issues: ["   "] }).ok, false));
 test("Unexpected keys and malformed candidate ID fail", () => assert.equal(validateIndependentTestResponse({ ...approve, candidate_id: "bad", extra: true }).ok, false));
 test("INCOMPLETE is not a TEST decision", () => assert.equal(validateIndependentTestResponse({ ...approve, decision: "INCOMPLETE" }).ok, false));
