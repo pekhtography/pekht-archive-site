@@ -1,6 +1,6 @@
 # PEKHTOGRAPHY Portfolio Orchestrator v2 — validation package 0.2.0
 
-This is an isolated validation artifact retained in the PEKHTOGRAPHY repository as a reference baseline under `validation/portfolio-validation-0.2.0-baseline/`. It is not integrated into the site runtime or production application.
+This is an isolated validation artifact. It is not installed into or committed to the PEKHTOGRAPHY repository.
 
 ## Scope
 - JSON Schema Draft 2020-12 validation for Candidate and TEST result contracts.
