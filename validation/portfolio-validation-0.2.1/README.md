@@ -13,15 +13,17 @@ This is an isolated validation package inside the repository. It is not integrat
 Candidate ID canonicalization is **APPROVED 2026-11-09** under Contract Freeze v2, Amendment 1. The algorithm and canonical vector are unchanged from the 0.2.0 source. See `CONTRACT-AMENDMENT-CANDIDATE-ID.md`.
 
 ## Run
+Use Node.js 22.16.0 (or a compatible Node.js release meeting the package engine requirement) and npm. The committed `package-lock.json` pins the complete dependency tree; use `npm ci` for reproducible installation.
+
 ```sh
-npm install
+npm ci
 npm run validate:schema
 npm run test:no-npm
 npm run test:full
 npm run typecheck
 ```
 
-`npm test` is an alias for `npm run test:full`. `test:no-npm` is a limited test tier and does not replace the full suite. `schema-adapter.test.mjs` requires Ajv; when pinned npm dependencies are unavailable, the Ajv-dependent gate is **BLOCKED**, not PASS.
+`npm test` is an alias for `npm run test:full`. `test:no-npm` is a limited test tier and does not replace the full suite. The Ajv-dependent schema gate requires the locked npm dependencies to be installed; when dependencies cannot be installed, that gate is **BLOCKED**, not PASS.
 
 ## Test registration rule
 Every new `tests/*.test.mjs` file must be explicitly listed in `test:full`. If it does not require Ajv, it must also be listed in `test:no-npm`. Test globs are not used.
@@ -38,4 +40,4 @@ Every new `tests/*.test.mjs` file must be explicitly listed in `test:full`. If i
 A `BLOCKED`, `NOT RUN`, or historical result is not a PASS. Passing this package does not validate the live Snapshot, GitHub branch, Preview deployment, or Gemini run. Mock Implementation and Gemini must not run until all seven gates pass.
 
 ## GitHub development workflow
-The package is maintained as ordinary, reviewable files in the feature branch. GitHub Actions validates those files directly; no ZIP extraction or Python setup is involved. Development uses small commits and a Pull Request, with Preview only where relevant. No changes to the live site runtime, deployment, or `main` are authorized by this validation package. `main` remains the production source of truth and merge/deploy require separate explicit approval.
+The package is maintained as ordinary, reviewable files in the feature branch. GitHub Actions verifies the unchanged 0.2.0 baseline, installs the exact dependency tree with `npm ci`, and validates the package directly; no ZIP extraction or Python setup is involved. Development uses small commits and a Pull Request, with Preview only where relevant. No changes to the live site runtime, deployment, or `main` are authorized by this validation package. `main` remains the production source of truth and merge/deploy require separate explicit approval.
