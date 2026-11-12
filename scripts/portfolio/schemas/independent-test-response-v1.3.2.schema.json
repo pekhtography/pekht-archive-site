@@ -89,7 +89,7 @@
       "then": {
         "properties": {
           "blocking_issues": { "type": "array", "minItems": 1 },
-          "findings": { "type": "array", "contains": { "properties": { "blocking": { "const": true } }, "required": ["blocking"] } }
+          "findings": { "type": "array", "contains": { "type": "object", "properties": { "blocking": { "const": true } }, "required": ["blocking"] } }
         }
       }
     }
