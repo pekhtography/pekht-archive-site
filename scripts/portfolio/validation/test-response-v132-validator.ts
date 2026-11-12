@@ -9,7 +9,7 @@ export interface IndependentTestValidationContextV132 {
 }
 
 function resolveJsonPointer(root: unknown, pointer: string): unknown {
-  if (!pointer.startsWith("/") || pointer.length < 2) return undefined;
+  if (!pointer.startsWith("/")) return undefined;
   const segments = pointer.slice(1).split("/").map((part) => {
     if (/~(?![01])/.test(part)) return null;
     return part.replace(/~1/g, "/").replace(/~0/g, "~");
