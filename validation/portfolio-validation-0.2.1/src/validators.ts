@@ -21,6 +21,46 @@ export function validateSetEquality(expected: readonly string[], actual: readonl
   return a.every((value, index) => value === b[index]) ? [] : [fail('SET_MISMATCH', 'The source ID sets differ')];
 }
 
+export function validateDiscoveryCoverage(snapshot: Snapshot, records: readonly DiscoveryRecord[]): ValidationIssue[] {
+  const issues: ValidationIssue[] = [];
+  const snapshotCounts = new Map<string, number>();
+  for (const post of snapshot.posts) {
+    const sourceId: unknown = post?.source_id;
+    if (!isNonEmptyString(sourceId) || sourceId.length > 128) {
+      issues.push(fail('SNAPSHOT_SOURCE_INVALID', 'Snapshot source_id must be a non-empty string of at most 128 characters'));
+      continue;
+    }
+    snapshotCounts.set(sourceId, (snapshotCounts.get(sourceId) ?? 0) + 1);
+  }
+  for (const [sourceId, count] of snapshotCounts) {
+    if (count > 1) issues.push(fail('SNAPSHOT_SOURCE_DUPLICATE', `Snapshot source_id ${sourceId} occurs ${count} times`));
+  }
+
+  const recordCounts = new Map<string, number>();
+  const validRecordCounts = new Map<string, number>();
+  for (const record of records) {
+    if (record === null || typeof record !== 'object' || !isNonEmptyString(record.source_id) || record.source_id.length > 128) continue;
+    const sourceId = record.source_id;
+    recordCounts.set(sourceId, (recordCounts.get(sourceId) ?? 0) + 1);
+    if (validateDiscoveryRecords([record]).length === 0) {
+      validRecordCounts.set(sourceId, (validRecordCounts.get(sourceId) ?? 0) + 1);
+    }
+    if (!snapshotCounts.has(sourceId)) issues.push(fail('DISCOVERY_SOURCE_UNEXPECTED', `Discovery source_id ${sourceId} is not present in Snapshot`));
+  }
+  for (const [sourceId, count] of recordCounts) {
+    if (count > 1) issues.push(fail('DISCOVERY_SOURCE_DUPLICATE', `Discovery source_id ${sourceId} occurs ${count} times`));
+  }
+  for (const [sourceId, snapshotCount] of snapshotCounts) {
+    const total = recordCounts.get(sourceId) ?? 0;
+    const valid = validRecordCounts.get(sourceId) ?? 0;
+    if (snapshotCount !== 1 || total !== 1 || valid !== 1) {
+      issues.push(fail('DISCOVERY_SOURCE_MISSING', `Snapshot source ${sourceId} requires exactly one valid Discovery record; found ${total} record(s), ${valid} valid`));
+    }
+  }
+  if (issues.length > 0) issues.push(fail('DISCOVERY_COVERAGE_INCOMPLETE', 'Snapshot-to-Discovery coverage is invalid; Candidate validation is blocked'));
+  return issues;
+}
+
 export function validateCandidateSourcesPresent(candidate: Candidate, records: readonly DiscoveryRecord[]): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
   if (candidate.source_ids.length !== 6) issues.push(fail('CANDIDATE_SOURCE_COUNT', 'Candidate must contain exactly six source IDs'));
@@ -44,11 +84,24 @@ export function validateDiscoveryRecords(records: readonly DiscoveryRecord[]): V
   const issues: ValidationIssue[] = [];
   const sourceCounts = new Map<string, number>();
   for (const record of records) {
-    if (!isNonEmptyString(record.source_id)) issues.push(fail('DISCOVERY_SOURCE_INVALID', 'Discovery source_id must be a non-empty string'));
+    if (record === null || typeof record !== 'object') {
+      issues.push(fail('DISCOVERY_RECORD_STRUCTURE', 'Discovery record must be an object'));
+      continue;
+    }
+    if (!isNonEmptyString(record.source_id) || record.source_id.length > 128) issues.push(fail('DISCOVERY_SOURCE_INVALID', 'Discovery source_id must be a non-empty string of at most 128 characters'));
     else sourceCounts.set(record.source_id, (sourceCounts.get(record.source_id) ?? 0) + 1);
+    if (record.result !== 'SIGNALS_FOUND' && record.result !== 'NO_SIGNAL') {
+      issues.push(fail('DISCOVERY_RESULT_INVALID', `Discovery result for ${String(record.source_id)} is invalid`));
+    }
     if (!Array.isArray(record.observations)) {
       issues.push(fail('DISCOVERY_OBSERVATION_STRUCTURE', `Observations for ${String(record.source_id)} must be an array`));
       continue;
+    }
+    if (record.result === 'SIGNALS_FOUND' && record.observations.length === 0) {
+      issues.push(fail('DISCOVERY_RESULT_OBSERVATION_MISMATCH', `SIGNALS_FOUND requires at least one observation for ${record.source_id}`));
+    }
+    if (record.result === 'NO_SIGNAL' && record.observations.length !== 0) {
+      issues.push(fail('DISCOVERY_RESULT_OBSERVATION_MISMATCH', `NO_SIGNAL requires zero observations for ${record.source_id}`));
     }
     const fingerprints = new Set<string>();
     record.observations.forEach((observation, index) => {
@@ -83,7 +136,12 @@ export function validateObservationRefs(candidate: Candidate, records: readonly 
   for (const record of records) record.observations.forEach((_, index) => byId.set(`${record.source_id}:${index}`, record.source_id));
   const issues: ValidationIssue[] = [];
   const candidateObservationIds = new Set(candidate.observation_ids);
-  for (const id of candidate.observation_ids) if (!byId.has(id)) issues.push(fail('UNKNOWN_OBSERVATION', `Unknown observation reference ${id}`));
+  const candidateSources = new Set(candidate.source_ids);
+  for (const id of candidate.observation_ids) {
+    const sourceId = byId.get(id);
+    if (!sourceId) issues.push(fail('UNKNOWN_OBSERVATION', `Unknown observation reference ${id}`));
+    else if (!candidateSources.has(sourceId)) issues.push(fail('CANDIDATE_OBSERVATION_SOURCE_MISMATCH', `Observation ${id} belongs to source ${sourceId}, outside Candidate source_ids`));
+  }
   for (const edge of candidate.relationships) {
     if (edge.source_a === edge.source_b) issues.push(fail('SELF_LOOP', `Self-loop at ${edge.source_a}`));
     if (!candidate.source_ids.includes(edge.source_a) || !candidate.source_ids.includes(edge.source_b)) issues.push(fail('EDGE_ENDPOINT', `Relationship endpoint is outside candidate: ${edge.source_a}/${edge.source_b}`));
@@ -163,6 +221,8 @@ export function validateTestDecision(result: TestResult): ValidationIssue[] {
 }
 
 export function validateCandidate(candidate: Candidate, snapshot: Snapshot, records: readonly DiscoveryRecord[]): ValidationIssue[] {
+  const coverageIssues = validateDiscoveryCoverage(snapshot, records);
+  if (coverageIssues.length > 0) return coverageIssues;
   const discoveryIssues = validateDiscoveryRecords(records);
   const safeRecords = buildUnambiguousDiscoveryRecords(records);
   const issues: ValidationIssue[] = [...discoveryIssues];
