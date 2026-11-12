@@ -503,8 +503,16 @@ export async function runMockNoGalleryScenario(): Promise<MockPortfolioReport> {
   // A deliberately conservative comparison policy excludes all candidates.
   // This is an explicit no-selection outcome, not a fabricated gallery result.
   const comparisons = compareCandidates(fixture.candidates, fixture.discovery, fixture.snapshot);
-  const shortlist: CandidateComparison[] = [];
-  appendStage(log, "GLOBAL_COMPARISON", comparisons.length, shortlist.length, "NO_CANDIDATE", "No Candidate met the configured mock publication threshold.");
+  const minimumPublishScore = 1.01;
+  const shortlist = comparisons.filter((candidate) => candidate.score >= minimumPublishScore);
+  appendStage(
+    log,
+    "GLOBAL_COMPARISON",
+    comparisons.length,
+    shortlist.length,
+    "NO_CANDIDATE",
+    `No Candidate met the conservative mock publication threshold of ${minimumPublishScore.toFixed(2)}.`,
+  );
 
   const audit = buildProcessAudit(fixture, shortlist, {}, []);
   const result = await runPortfolioOrchestrator({
