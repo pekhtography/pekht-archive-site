@@ -1,10 +1,67 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { computeCandidateId, validateCandidate, validateCandidateGraph, validateCandidateSourcesPresent, validateDistinctEdges, validateDiscoveryRecords, validateEvidenceAgainstSnapshot, validateObservationRefs, validateSetEquality, validateTestDecision, buildUnambiguousDiscoveryRecords } from '../src/validators.ts';
+import { computeCandidateId, validateCandidate, validateCandidateGraph, validateCandidateSourcesPresent, validateDistinctEdges, validateDiscoveryCoverage, validateDiscoveryRecords, validateEvidenceAgainstSnapshot, validateObservationRefs, validateSetEquality, validateTestDecision, buildUnambiguousDiscoveryRecords } from '../src/validators.ts';
 const fixture = (name) => JSON.parse(readFileSync(new URL(`../fixtures/${name}`, import.meta.url), 'utf8'));
 const candidate = fixture('candidate.pass.valid.json'); const snapshot = fixture('snapshot.valid.json'); const records = [fixture('discovery.valid.json'), ...fixture('candidate.pass.valid.json').source_ids.slice(1).map((sourceId) => ({source_id:sourceId,result:'SIGNALS_FOUND',observations:[{prism:'Material',signal:'blue detail',interpretation:`A textual blue detail in source ${sourceId}`,evidence:[{source:'BODY',quote:'distinctive blue detail'}]}]}))];
 const ids = candidate.source_ids;
+
+
+test('COV-01 Snapshot and Discovery coverage accepts the same complete set in any order', () => {
+  assert.deepEqual(validateDiscoveryCoverage(snapshot, [...records].reverse()), []);
+});
+
+test('COV-02 missing Snapshot source is rejected', () => {
+  assert.equal(validateDiscoveryCoverage(snapshot, records.slice(1)).some(x => x.code === 'DISCOVERY_SOURCE_MISSING'), true);
+});
+
+test('COV-03 duplicate Discovery record is rejected', () => {
+  const issues = validateDiscoveryCoverage(snapshot, [...records, structuredClone(records[0])]);
+  assert.equal(issues.some(x => x.code === 'DISCOVERY_SOURCE_DUPLICATE'), true);
+  assert.equal(issues.some(x => x.code === 'DISCOVERY_COVERAGE_INCOMPLETE'), true);
+});
+
+test('COV-04 unexpected Discovery source is rejected', () => {
+  const extra = { source_id: 'outside-snapshot', result: 'NO_SIGNAL', observations: [] };
+  assert.equal(validateDiscoveryCoverage(snapshot, [...records, extra]).some(x => x.code === 'DISCOVERY_SOURCE_UNEXPECTED'), true);
+});
+
+test('COV-05 duplicate and empty Snapshot source IDs are rejected', () => {
+  const duplicate = { ...snapshot, posts: [...snapshot.posts, structuredClone(snapshot.posts[0])] };
+  assert.equal(validateDiscoveryCoverage(duplicate, records).some(x => x.code === 'SNAPSHOT_SOURCE_DUPLICATE'), true);
+  const empty = { ...snapshot, posts: [...snapshot.posts, { ...snapshot.posts[0], source_id: '  ' }] };
+  assert.equal(validateDiscoveryCoverage(empty, records).some(x => x.code === 'SNAPSHOT_SOURCE_INVALID'), true);
+});
+
+test('COV-06 full-size 3,240-to-3,239 coverage gap is rejected', () => {
+  const largeSnapshot = { ...snapshot, posts: Array.from({ length: 3240 }, (_, i) => ({ source_id: String(i), body: '', original_markdown: '' })) };
+  const almostComplete = Array.from({ length: 3239 }, (_, i) => ({ source_id: String(i), result: 'NO_SIGNAL', observations: [] }));
+  assert.equal(validateDiscoveryCoverage(largeSnapshot, almostComplete).some(x => x.code === 'DISCOVERY_SOURCE_MISSING'), true);
+});
+
+test('COV-07 malformed Discovery records do not satisfy coverage', () => {
+  const malformed = records.map(record => ({ ...record }));
+  malformed[0] = { ...malformed[0], result: 'SIGNALS_FOUND', observations: [] };
+  const issues = validateDiscoveryCoverage(snapshot, malformed);
+  assert.equal(issues.some(x => x.code === 'DISCOVERY_RESULT_OBSERVATION_MISMATCH'), true);
+  assert.equal(issues.some(x => x.code === 'DISCOVERY_SOURCE_MISSING'), true);
+});
+
+test('DISC-01 to DISC-05 Discovery result and observations are consistent', () => {
+  const validSignals = { source_id: 'a', result: 'SIGNALS_FOUND', observations: [{ prism: 'Motif', signal: 'signal', interpretation: 'meaning', evidence: [{ source: 'BODY', quote: 'quote' }] }] };
+  const validNone = { source_id: 'b', result: 'NO_SIGNAL', observations: [] };
+  assert.deepEqual(validateDiscoveryRecords([validSignals]), []);
+  assert.deepEqual(validateDiscoveryRecords([validNone]), []);
+  assert.equal(validateDiscoveryRecords([{ ...validSignals, observations: [] }]).some(x => x.code === 'DISCOVERY_RESULT_OBSERVATION_MISMATCH'), true);
+  assert.equal(validateDiscoveryRecords([{ ...validNone, observations: [validSignals.observations[0]] }]).some(x => x.code === 'DISCOVERY_RESULT_OBSERVATION_MISMATCH'), true);
+  assert.equal(validateDiscoveryRecords([{ ...validNone, result: 'UNKNOWN' }]).some(x => x.code === 'DISCOVERY_RESULT_INVALID'), true);
+});
+
+test('CANDIDATE observation ownership rejects an observation from a seventh source', () => {
+  const outside = { source_id: 'seventh', result: 'SIGNALS_FOUND', observations: [{ prism: 'Motif', signal: 'signal', interpretation: 'meaning', evidence: [{ source: 'BODY', quote: 'quote' }] }] };
+  const altered = { ...candidate, observation_ids: [...candidate.observation_ids, 'seventh:0'] };
+  assert.equal(validateObservationRefs(altered, [...records, outside]).some(x => x.code === 'CANDIDATE_OBSERVATION_SOURCE_MISMATCH'), true);
+});
 
 test('T-01 candidate source coverage requires exactly six unique sources present once', () => {
   assert.deepEqual(validateCandidateSourcesPresent(candidate, records), []);
