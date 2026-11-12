@@ -355,7 +355,7 @@ function emitEvent(
   callback?.(entry);
 }
 
-function executeStage<T>(
+async function executeStage<T>(
   log: StageExecution[],
   events: MockStageEvent[],
   callback: MockPipelineDependencies["onStageEvent"],
@@ -363,11 +363,11 @@ function executeStage<T>(
   inputCount: number,
   outcome: StageExecution["outcome"],
   detail: string,
-  work: () => T,
+  work: () => T | Promise<T>,
   outputCount: (value: T) => number,
-): T {
+): Promise<T> {
   emitEvent(events, callback, stage, "START");
-  const value = work();
+  const value = await work();
   appendStage(log, stage, inputCount, outputCount(value), outcome, detail);
   emitEvent(events, callback, stage, "COMPLETE");
   return value;
@@ -466,12 +466,12 @@ async function runMockPipeline(
   const compare = dependencies.compareCandidates ?? compareCandidates;
   const compose = dependencies.buildGallery ?? buildGallery;
 
-  executeStage(log, events, dependencies.onStageEvent, "SNAPSHOT_VALIDATION", POST_COUNT, "PASS",
+  await executeStage(log, events, dependencies.onStageEvent, "SNAPSHOT_VALIDATION", POST_COUNT, "PASS",
     "The synthetic Snapshot passed the existing Snapshot validator.",
     () => { validateSnapshot(snapshot); return snapshot; },
     (value) => value.posts.length);
 
-  const discovery = executeStage(log, events, dependencies.onStageEvent, "DISCOVER", POST_COUNT, "PASS",
+  const discovery = await executeStage(log, events, dependencies.onStageEvent, "DISCOVER", POST_COUNT, "PASS",
     "One deterministic Discovery result was produced for every Snapshot publication.",
     () => {
       const records = snapshot.posts.map(discover);
@@ -481,12 +481,12 @@ async function runMockPipeline(
     },
     (records) => records.length);
 
-  const candidates = executeStage(log, events, dependencies.onStageEvent, "CANDIDATE_GENERATION", discovery.length, "PASS",
+  const candidates = await executeStage(log, events, dependencies.onStageEvent, "CANDIDATE_GENERATION", discovery.length, "PASS",
     "Candidates were generated only from the validated Discovery records and individually validated.",
     () => generateCandidates(snapshot, discovery, validationSnapshot),
     (value) => value.length);
 
-  const comparison = executeStage(log, events, dependencies.onStageEvent, "GLOBAL_COMPARISON", candidates.length, "PASS",
+  const comparison = await executeStage(log, events, dependencies.onStageEvent, "GLOBAL_COMPARISON", candidates.length, "PASS",
     "Global Comparison ranked the Candidates using evidence, signal, lexical-diversity and graph features.",
     () => compare(candidates, discovery, snapshot),
     (value) => value.length);
@@ -508,14 +508,14 @@ async function runMockPipeline(
 
   if (selected) {
     const selectedIds = [...selected.source_ids];
-    draft = executeStage(log, events, dependencies.onStageEvent, "COMPOSE", selectedIds.length, "PASS",
+    draft = await executeStage(log, events, dependencies.onStageEvent, "COMPOSE", selectedIds.length, "PASS",
       "Composition was assembled from the globally selected Candidate and exact source text.",
       () => compose(snapshot, selectedIds),
       (value) => value.roles.length);
 
     // The first TEST receives a deliberately corrupted quotation so the rejection path is exercised.
     draft.roles[0].evidence[0].quote = "A deliberately altered quotation that is absent from the source.";
-    const firstTest = executeStage(log, events, dependencies.onStageEvent, "TEST", 1, "REJECT",
+    const firstTest = await executeStage(log, events, dependencies.onStageEvent, "TEST", 1, "REJECT",
       "TEST rejected the deliberately altered, non-verbatim quotation.",
       () => {
         const semantic = validatePortfolioSemantics(
@@ -534,11 +534,11 @@ async function runMockPipeline(
     let accepted = firstTest.testResult.decision === "PASS";
     while (!accepted && revisionCycles < MAX_REVISION_ATTEMPTS) {
       revisionCycles += 1;
-      draft = executeStage(log, events, dependencies.onStageEvent, "REVISION", 1, "PASS",
+      draft = await executeStage(log, events, dependencies.onStageEvent, "REVISION", 1, "PASS",
         `REVISION ${revisionCycles} rebuilt the draft from the selected Candidate.`,
         () => compose(snapshot, selectedIds),
         (value) => value.roles.length);
-      const revisedTest = executeStage(log, events, dependencies.onStageEvent, "TEST", 1, "PASS",
+      const revisedTest = await executeStage(log, events, dependencies.onStageEvent, "TEST", 1, "PASS",
         "TEST revalidated the revised draft and accepted exact source evidence.",
         () => {
           const semantic = validatePortfolioSemantics(
@@ -568,7 +568,7 @@ async function runMockPipeline(
     const audit = buildProcessAudit(snapshot, discovery, shortlist, revisionMap);
     const finalTestCall = modelCall("mock-final-validation-test", "TEST", selected.candidate_id);
 
-    result = executeStage(log, events, dependencies.onStageEvent, "FINAL_VALIDATION", 1, "PASS",
+    result = await executeStage(log, events, dependencies.onStageEvent, "FINAL_VALIDATION", 1, "PASS",
       "The existing Orchestrator independently validated structure, semantics and process evidence.",
       () => runPortfolioOrchestrator({
         snapshotPath: "MOCK_ONLY_NO_FILE_READ",
@@ -588,7 +588,7 @@ async function runMockPipeline(
       (value) => value.status === "APPROVED" ? 1 : 0);
     if (result.status !== "APPROVED") throw new Error(`Orchestrator final result was ${result.status}`);
 
-    executeStage(log, events, dependencies.onStageEvent, "PROCESS_AUDIT", snapshot.posts.length, "PASS",
+    await executeStage(log, events, dependencies.onStageEvent, "PROCESS_AUDIT", snapshot.posts.length, "PASS",
       "Process Audit compared the completed stage log with the independently recorded invocation trace and revalidated actual model-call records.",
       () => {
         assertTraceMatchesLog(log, events);
@@ -608,7 +608,7 @@ async function runMockPipeline(
     if (shortlist.length !== 0) throw new Error("A shortlist exists but no matching Candidate was available.");
     const audit = buildProcessAudit(snapshot, discovery, shortlist, {});
     const noGalleryCall = modelCall("mock-no-gallery-decision", "DISCOVER", null);
-    result = executeStage(log, events, dependencies.onStageEvent, "FINAL_VALIDATION", 1, "NO_GALLERY",
+    result = await executeStage(log, events, dependencies.onStageEvent, "FINAL_VALIDATION", 1, "NO_GALLERY",
       "The Orchestrator validated the explicit no-selection result; no gallery composition was requested.",
       () => runPortfolioOrchestrator({
         snapshotPath: "MOCK_ONLY_NO_FILE_READ",
@@ -633,7 +633,7 @@ async function runMockPipeline(
       (value) => value.status === "NO_GALLERY" ? 0 : 1);
     if (result.status !== "NO_GALLERY") throw new Error(`NO_GALLERY scenario returned ${result.status}`);
 
-    executeStage(log, events, dependencies.onStageEvent, "PROCESS_AUDIT", snapshot.posts.length, "PASS",
+    await executeStage(log, events, dependencies.onStageEvent, "PROCESS_AUDIT", snapshot.posts.length, "PASS",
       "Process Audit verified the actual Snapshot, Discovery, Candidate Generation and Global Comparison execution trace.",
       () => {
         assertTraceMatchesLog(log, events);
@@ -650,7 +650,7 @@ async function runMockPipeline(
       (value) => value.ok ? 1 : 0);
   }
 
-  executeStage(log, events, dependencies.onStageEvent, "RESULT", 1,
+  await executeStage(log, events, dependencies.onStageEvent, "RESULT", 1,
     result.status === "NO_GALLERY" ? "NO_GALLERY" : "APPROVED",
     result.status === "NO_GALLERY"
       ? "No Candidate passed Global Comparison; no gallery was composed."
