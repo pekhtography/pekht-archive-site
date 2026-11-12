@@ -1,0 +1,37 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pekhtography.local/schemas/discovery-record.schema.json",
+  "title": "Portfolio v2 Discovery Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["source_id", "result", "observations"],
+  "properties": {
+    "source_id": {"type": "string", "minLength": 1, "maxLength": 128},
+    "result": {"enum": ["SIGNALS_FOUND", "NO_SIGNAL"]},
+    "observations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["prism", "signal", "interpretation", "evidence"],
+        "properties": {
+          "prism": {"type": "string", "minLength": 1},
+          "signal": {"type": "string", "minLength": 1},
+          "interpretation": {"type": "string", "minLength": 1},
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["source", "quote"],
+              "properties": {
+                "source": {"enum": ["BODY", "ORIGINAL_MARKDOWN"]},
+                "quote": {"type": "string", "minLength": 1}
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
