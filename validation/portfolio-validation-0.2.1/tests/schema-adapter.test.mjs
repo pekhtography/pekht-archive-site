@@ -27,9 +27,9 @@ test('T-11d DiscoveryRecord schema accepts the valid single-record fixture',()=>
 test('T-11e Discovery result controls observation cardinality in Draft 2020-12 schema',()=>{
   const validate=createAjvValidator(readJson('schemas/discovery-record.schema.json'));
   const base=readJson('fixtures/discovery.valid.json');
-  assert.equal(validate(base),true,'SIGNALS_FOUND with observations must pass');
-  assert.equal(validate({...base,observations:[]}),false,'SIGNALS_FOUND with no observations must fail');
-  assert.equal(validate({...base,result:'NO_SIGNAL',observations:[]}),true,'NO_SIGNAL with no observations must pass');
-  assert.equal(validate({...base,result:'NO_SIGNAL'}),false,'NO_SIGNAL with observations must fail');
-  assert.equal(validate({...base,result:'UNKNOWN'}),false,'unknown result must fail');
+  assert.equal(validate(base).success,true,'SIGNALS_FOUND with observations must pass');
+  assert.equal(validate({...base,observations:[]}).success,false,'SIGNALS_FOUND with no observations must fail');
+  assert.equal(validate({...base,result:'NO_SIGNAL',observations:[]}).success,true,'NO_SIGNAL with no observations must pass');
+  assert.equal(validate({...base,result:'NO_SIGNAL'}).success,false,'NO_SIGNAL with observations must fail');
+  assert.equal(validate({...base,result:'UNKNOWN'}).success,false,'unknown result must fail');
 });
