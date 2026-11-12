@@ -30,10 +30,11 @@ The 0.2.0 source package is retained separately as an immutable baseline. No ori
 | `fixtures/candidate.fail.candidate-id.json` | NEW | Structurally valid but runtime ID mismatch fixture; schema-valid by design |
 | `fixtures/snapshot.valid.json` | NEW | Snapshot fixture |
 | `fixtures/discovery.valid.json` | NEW | Discovery fixture |
-| `package.json` | CHANGED | Version 0.2.1 and explicit test tiers; pinned dependencies unchanged |
+| `package.json` | CHANGED | Version 0.2.1 and explicit test tiers; direct dependency versions pinned |
+| `package-lock.json` | NEW | npm lockfile v3; pins the complete resolved dependency tree for `npm ci` |
 | `tsconfig.json` | UNCHANGED | Original compiler configuration retained |
 | `requirements-validation.txt` | REMOVED 2026-11-12 | No Python dependency in the package or CI |
-| `README.md` | CHANGED | 0.2.1 scope, gates, commands and migration guidance |
+| `README.md` | CHANGED | 0.2.1 scope, gates, commands and migration guidance; documents `npm ci` |
 | `CONTRACT-AMENDMENT-CANDIDATE-ID.md` | CHANGED | Approval status added; canonical algorithm/vector unchanged |
 | `CONTRACT-AMENDMENT-SCHEMA-TOOLING.md` | NEW | Approved tooling policy |
 | `VALIDATION-0.2.1-MIGRATION.md` | NEW | This migration record |
@@ -48,4 +49,4 @@ The 0.2.0 source package is retained separately as an immutable baseline. No ori
 
 ## Gate interpretation
 
-`BLOCKED` and `NOT RUN` are not `PASS`. `test:no-npm` is partial coverage only. Ajv is the authoritative JSON Schema validator; Python validation was a temporary supplementary path and was retired by the 2026-11-12 tooling decision. Mock Implementation and Gemini remain prohibited until all seven mandatory gates pass.
+`BLOCKED` and `NOT RUN` are not `PASS`. `test:no-npm` is partial coverage only. Ajv is the authoritative JSON Schema validator; Python validation was a temporary supplementary path and was retired by the 2026-11-12 tooling decision. The package lockfile records the complete npm dependency tree, and the required workflow uses `npm ci` for deterministic installation. Mock Implementation and Gemini remain prohibited until all seven mandatory gates pass.
