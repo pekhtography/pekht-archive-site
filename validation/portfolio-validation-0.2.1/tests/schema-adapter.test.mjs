@@ -23,3 +23,13 @@ test('T-11c Snapshot schema accepts the valid Snapshot fixture',()=>{
 test('T-11d DiscoveryRecord schema accepts the valid single-record fixture',()=>{
   assert.equal(check('schemas/discovery-record.schema.json','fixtures/discovery.valid.json').success,true);
 });
+
+test('T-11e Discovery result controls observation cardinality in Draft 2020-12 schema',()=>{
+  const validate=createAjvValidator(readJson('schemas/discovery-record.schema.json'));
+  const base=readJson('fixtures/discovery.valid.json');
+  assert.equal(validate(base),true,'SIGNALS_FOUND with observations must pass');
+  assert.equal(validate({...base,observations:[]}),false,'SIGNALS_FOUND with no observations must fail');
+  assert.equal(validate({...base,result:'NO_SIGNAL',observations:[]}),true,'NO_SIGNAL with no observations must pass');
+  assert.equal(validate({...base,result:'NO_SIGNAL'}),false,'NO_SIGNAL with observations must fail');
+  assert.equal(validate({...base,result:'UNKNOWN'}),false,'unknown result must fail');
+});
