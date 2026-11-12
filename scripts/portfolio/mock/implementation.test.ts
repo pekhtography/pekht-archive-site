@@ -91,6 +91,9 @@ testRunner("NO_GALLERY follows Discovery and Global Comparison with no selected 
   ]);
   assert.equal(report.selected_candidate_id, null);
   assert.equal(report.execution_log[2].outcome, "NO_CANDIDATE");
+  assert.equal(report.execution_log[2].input_count, 2);
+  assert.equal(report.execution_log[2].output_count, 0);
+  assert.ok(report.comparisons.every((candidate) => candidate.score < 1.01));
   assert.equal(report.model_used.length, 1);
   assert.equal(report.model_used[0].stage, "DISCOVER");
 });
