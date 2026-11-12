@@ -36,4 +36,18 @@ for(const [schemaName,fixtureName,expected] of fixtureExpectations){
   if(actual!==expected) throw new Error(`${fixtureName}: expected ${expected?'VALID':'INVALID'}; ${ajv.errorsText(validate.errors)}`);
   process.stdout.write(`FIXTURE ${actual?'VALID': 'INVALID AS EXPECTED'} ${fixtureName}\n`);
 }
-process.stdout.write(`SCHEMA VALIDATION PASS (${schemaFiles.length} schemas, ${fixtureExpectations.length} fixtures)\n`);
+const discoveryValidator=validators.get('discovery-record');
+const discoveryFixture=JSON.parse(fs.readFileSync(path.join(root,'fixtures','discovery.valid.json'),'utf8'));
+const discoveryCases=[
+  ['SIGNALS_FOUND with observations',discoveryFixture,true],
+  ['SIGNALS_FOUND without observations',{...discoveryFixture,observations:[]},false],
+  ['NO_SIGNAL without observations',{...discoveryFixture,result:'NO_SIGNAL',observations:[]},true],
+  ['NO_SIGNAL with observations',{...discoveryFixture,result:'NO_SIGNAL'},false],
+  ['unknown result',{...discoveryFixture,result:'UNKNOWN'},false],
+];
+for(const [label,data,expected] of discoveryCases){
+  const actual=Boolean(discoveryValidator(data));
+  if(actual!==expected) throw new Error(`Discovery conditional: ${label}; expected ${expected?'VALID':'INVALID'}; ${ajv.errorsText(discoveryValidator.errors)}`);
+  process.stdout.write(`DISCOVERY CONDITIONAL ${actual?'VALID':'INVALID AS EXPECTED'} ${label}\n`);
+}
+process.stdout.write(`SCHEMA VALIDATION PASS (${schemaFiles.length} schemas, ${fixtureExpectations.length} fixtures, ${discoveryCases.length} conditional cases)\n`);
