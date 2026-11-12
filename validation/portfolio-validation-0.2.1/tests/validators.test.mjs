@@ -122,7 +122,7 @@ test('T-08 integration applies discovery, safe lookup, source coverage, refs, ed
   const dup=[...records,structuredClone(records[0])];
   const issues=validateCandidate(candidate,snapshot,dup);
   assert.equal(issues.some(x=>x.code==='DISCOVERY_SOURCE_DUPLICATE'),true);
-  assert.equal(issues.some(x=>x.code==='CANDIDATE_SOURCE_MISSING'),true);
+  assert.equal(issues.some(x=>x.code==='DISCOVERY_SOURCE_MISSING'),true);
 });
 
 test('T-09 PASS decision invariants remain enforced', () => {
