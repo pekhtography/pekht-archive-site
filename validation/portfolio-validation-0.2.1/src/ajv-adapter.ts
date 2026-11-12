@@ -1,13 +1,8 @@
-import * as Ajv2020Module from 'ajv/dist/2020.js';
+import Ajv2020 from 'ajv/dist/2020.js';
 import type { AnySchema, ErrorObject } from 'ajv/dist/2020.js';
-import * as addFormatsModule from 'ajv-formats';
+import addFormats from 'ajv-formats';
 import type { InputValidator, ParseResult } from './parse.js';
 import type { ValidationIssue } from './types.js';
-
-// Ajv and ajv-formats expose CommonJS packages. Under NodeNext, their
-// ESM namespace imports expose the declared default exports explicitly.
-const Ajv2020 = Ajv2020Module.default;
-const addFormats = addFormatsModule.default;
 
 function toIssues(errors: ErrorObject[] | null | undefined): ValidationIssue[] {
   return (errors ?? []).map((error) => ({
