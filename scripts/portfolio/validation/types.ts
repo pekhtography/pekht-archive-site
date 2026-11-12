@@ -36,7 +36,11 @@ export interface PortfolioRunResult {
   gemini_output: GeminiOutput | null; validation: PortfolioValidation; model_used: ModelCallRecord[];
 }
 export interface SnapshotPost { source_id: string; body: string }
-export interface PortfolioSnapshot extends PortfolioInputSnapshot { posts: SnapshotPost[] }
+export interface PortfolioSnapshot extends Omit<PortfolioInputSnapshot, "schema_version"> {
+  /** The persisted Snapshot schema uses numeric version 1; input_snapshot is normalized to a string. */
+  schema_version: number;
+  posts: SnapshotPost[];
+}
 export interface ProcessAudit {
   snapshotSourceIds: readonly string[]; processedSourceIds: readonly string[];
   /** Globally deduplicated shortlist; intermediate batch notes are excluded. */
