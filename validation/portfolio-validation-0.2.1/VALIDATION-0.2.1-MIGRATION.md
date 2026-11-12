@@ -45,7 +45,7 @@ The 0.2.0 source package is retained separately as an immutable baseline. No ori
 2. Evidence validation is restricted to observations declared by the Candidate. Evidence in unrelated Discovery records is not evaluated for this Candidate.
 3. `validateCandidate` now runs Discovery diagnostics, creates an unambiguous source lookup, checks Candidate source coverage, observation references, distinct edges, graph connectivity, Candidate-scoped evidence, and Candidate ID in the agreed T-08 order.
 4. All records sharing a duplicate `source_id` are excluded from the safe lookup. The implementation never chooses first or last.
-5. Discovery `result`/`observations` consistency remains an output-contract responsibility and is not duplicated by runtime validators.
+5. Discovery `result`/`observations` consistency is enforced by both JSON Schema and runtime validation. `SIGNALS_FOUND` requires at least one observation; `NO_SIGNAL` requires zero observations. Invalid result values and contradictory result/observation combinations are rejected.
 
 ## Gate interpretation
 
