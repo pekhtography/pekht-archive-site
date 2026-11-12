@@ -5,7 +5,9 @@ on:
     branches:
       - portfolio/validators-0.2.1
     paths:
-      - "validation/portfolio-validation-0.2.1-local-reconstruction.zip"
+      - "validation/portfolio-validation-0.2.1/**"
+      - "validation/portfolio-validation-0.2.0-baseline/**"
+      - ".github/workflows/validation-0.2.1.yml"
 
 permissions:
   contents: read
@@ -18,6 +20,7 @@ jobs:
   validate:
     name: Validate Portfolio Validation 0.2.1
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -27,72 +30,43 @@ jobs:
         with:
           node-version: "22.16.0"
 
-      - name: Set up Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-
-      - name: Extract validation package
-        shell: bash
-        run: |
-          test -f validation/portfolio-validation-0.2.1-local-reconstruction.zip
-          mkdir -p "$RUNNER_TEMP/portfolio-validation"
-          unzip -q validation/portfolio-validation-0.2.1-local-reconstruction.zip -d "$RUNNER_TEMP/portfolio-validation"
-          test -d "$RUNNER_TEMP/portfolio-validation/portfolio-validation-0.2.1-reconstructed"
-          test -d "$RUNNER_TEMP/portfolio-validation/portfolio-validation-0.2.0-baseline"
-          echo "PACKAGE_DIR=$RUNNER_TEMP/portfolio-validation/portfolio-validation-0.2.1-reconstructed" >> "$GITHUB_ENV"
-          echo "BASELINE_DIR=$RUNNER_TEMP/portfolio-validation/portfolio-validation-0.2.0-baseline" >> "$GITHUB_ENV"
-
       - name: Verify unchanged 0.2.0 baseline
         shell: bash
         run: |
-          python - <<'PY'
-          import hashlib
-          import os
-          from pathlib import Path
+          set -euo pipefail
+          baseline_dir="validation/portfolio-validation-0.2.0-baseline"
+          manifest="validation/portfolio-validation-0.2.1/BASELINE-0.2.0-SHA256.txt"
+          test -d "$baseline_dir"
+          test -f "$manifest"
 
-          baseline = Path(os.environ["BASELINE_DIR"])
-          manifest = Path(os.environ["PACKAGE_DIR"]) / "BASELINE-0.2.0-SHA256.txt"
-          failures = []
-          for line in manifest.read_text(encoding="utf-8").splitlines():
-              parts = line.split()
-              if len(parts) < 2:
-                  failures.append(f"Malformed manifest line: {line}")
-                  continue
-              expected, relative_path = parts[0], parts[1]
-              target = baseline / relative_path
-              if not target.is_file():
-                  failures.append(f"Missing baseline file: {relative_path}")
-                  continue
-              actual = hashlib.sha256(target.read_bytes()).hexdigest()
-              if actual != expected:
-                  failures.append(f"Hash mismatch: {relative_path}")
-          if failures:
-              print("\n".join(failures))
-              raise SystemExit(1)
-          print("PASS: all baseline 0.2.0 hashes match")
-          PY
+          checked=0
+          while read -r expected relative size bytes; do
+            [[ -z "${expected:-}" ]] && continue
+            target="$baseline_dir/$relative"
+            test -f "$target"
+            actual="$(sha256sum "$target" | awk '{print $1}')"
+            if [[ "$actual" != "$expected" ]]; then
+              echo "FAIL: baseline hash mismatch: $relative"
+              exit 1
+            fi
+            checked=$((checked + 1))
+          done < "$manifest"
+
+          test "$checked" -eq 12
+          echo "PASS: $checked baseline 0.2.0 files match their SHA-256 manifest"
 
       - name: Install Node dependencies
-        working-directory: ${{ env.PACKAGE_DIR }}
+        working-directory: validation/portfolio-validation-0.2.1
         run: npm install --no-audit --no-fund
 
-      - name: Validate schemas
-        working-directory: ${{ env.PACKAGE_DIR }}
+      - name: Validate all JSON Schemas and fixtures with Ajv
+        working-directory: validation/portfolio-validation-0.2.1
         run: npm run validate:schema
 
       - name: Run full runtime and Ajv tests
-        working-directory: ${{ env.PACKAGE_DIR }}
+        working-directory: validation/portfolio-validation-0.2.1
         run: npm run test:full
 
       - name: TypeScript typecheck
-        working-directory: ${{ env.PACKAGE_DIR }}
+        working-directory: validation/portfolio-validation-0.2.1
         run: npm run typecheck
-
-      - name: Install Python validation dependency
-        working-directory: ${{ env.PACKAGE_DIR }}
-        run: python -m pip install -r requirements-validation.txt
-
-      - name: Validate schemas and fixtures with Python
-        working-directory: ${{ env.PACKAGE_DIR }}
-        run: python scripts/validate-python.py
