@@ -236,7 +236,7 @@ async function requestModel(
     } catch (error) {
       if (error instanceof PortfolioProviderError) throw error;
       if (isAbort(error)) {
-        throw new PortfolioProviderError(`Gemini request for ${model} was aborted: ${error.message}`, {
+        throw new PortfolioProviderError(`Gemini request for ${model} was aborted: ${error instanceof Error ? error.message : String(error)}`, {
           retryable: false, model, attempts: attempt, cause: error,
         });
       }
