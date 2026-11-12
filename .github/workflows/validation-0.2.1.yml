@@ -52,7 +52,7 @@ jobs:
             checked=$((checked + 1))
           done < "$manifest"
 
-          test "$checked" -eq 12
+          test "$checked" -eq 13
           echo "PASS: $checked baseline 0.2.0 files match their SHA-256 manifest"
 
       - name: Install Node dependencies
