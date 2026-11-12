@@ -415,7 +415,7 @@ export async function runMockPortfolioImplementation(): Promise<MockPortfolioRep
   appendStage(log, "TEST", 1, 0, "REJECT", "Initial Test rejected a non-verbatim quotation.");
 
   let revisionCycles = 0;
-  let finalSemantic = firstSemantic;
+  let finalSemantic: ReturnType<typeof validatePortfolioSemantics> = firstSemantic;
   while (!finalSemantic.ok && revisionCycles < MAX_REVISION_ATTEMPTS) {
     revisionCycles += 1;
     callRecords.push(modelCall(`mock-revision-${revisionCycles}`, "REVISION", selected.candidate_id));
