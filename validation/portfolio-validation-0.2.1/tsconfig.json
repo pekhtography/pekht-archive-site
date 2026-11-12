@@ -13,6 +13,7 @@
   },
   "include": [
     "src/**/*.ts",
-    "../../scripts/portfolio/mock/**/*.ts"
+    "../../scripts/portfolio/mock/**/*.ts",
+    "../../scripts/portfolio/validation/test-response-validator.ts"
   ]
 }
