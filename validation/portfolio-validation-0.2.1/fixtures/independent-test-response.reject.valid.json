@@ -6,12 +6,12 @@
     "curatorial_originality": 2,
     "narrative_integrity": 3,
     "visual_composition": 4,
-    "evidence_integrity": 5
+    "evidence_integrity": 2
   },
   "findings": [
-    "Insufficient originality."
+    "Source text does not support the proposed interpretation."
   ],
   "blocking_issues": [
-    "Originality below threshold."
+    "Evidence integrity is below the approval threshold."
   ]
 }
