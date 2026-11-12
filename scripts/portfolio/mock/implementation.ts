@@ -379,7 +379,7 @@ export function assertTraceMatchesLog(
 ): void {
   const completed = events.filter((event) => event.event === "COMPLETE");
   const started = events.filter((event) => event.event === "START");
-  if (completed.length !== log.length || started.length !== log.length) {
+  if (completed.length !== log.length || started.length < log.length || started.length > log.length + 1) {
     throw new Error("Process audit found a stage event/log count mismatch.");
   }
   if (completed.some((event, index) => event.stage !== log[index]?.stage)) {
@@ -389,6 +389,7 @@ export function assertTraceMatchesLog(
     if (events[index].sequence !== index + 1) throw new Error("Stage event trace sequence is not contiguous.");
     if (events[index].event === "START") {
       const next = events[index + 1];
+      if (!next && index === events.length - 1 && started.length === completed.length + 1) continue;
       if (!next || next.event !== "COMPLETE" || next.stage !== events[index].stage) {
         throw new Error(`Process audit found an incomplete or reordered stage: ${events[index].stage}`);
       }
@@ -646,7 +647,8 @@ async function runMockPipeline(
       (value) => value.ok ? 1 : 0);
   }
 
-  executeStage(log, events, dependencies.onStageEvent, "RESULT", 1, "APPROVED",
+  executeStage(log, events, dependencies.onStageEvent, "RESULT", 1,
+    result.status === "NO_GALLERY" ? "NO_GALLERY" : "APPROVED",
     result.status === "NO_GALLERY"
       ? "No Candidate passed Global Comparison; no gallery was composed."
       : "The mock Orchestrator returned APPROVED after all validation gates passed.",
