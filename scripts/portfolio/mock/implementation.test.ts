@@ -166,6 +166,14 @@ testRunner("mock execution is deterministic across repeated runs", async () => {
   assert.deepEqual(await runMockNoGalleryScenario(), await runMockNoGalleryScenario());
 });
 
+
+testRunner("mock comparison threshold must remain within the normalized score range", async () => {
+  await assert.rejects(
+    runMockPortfolioImplementation({ minimumPublishScore: 1.01 }),
+    /minimumPublishScore must be a finite number between 0 and 1/,
+  );
+});
+
 testRunner("Candidate identity matches the frozen golden vector", () => {
   assert.equal(
     computeCandidateId("a".repeat(64), ["305", "355", "655", "805", "749", "524"]),
