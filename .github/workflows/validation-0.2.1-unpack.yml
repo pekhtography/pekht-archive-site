@@ -1,0 +1,62 @@
+name: Unpack Portfolio Validation 0.2.1
+
+on:
+  push:
+    branches:
+      - portfolio/validators-0.2.1
+    paths:
+      - ".github/workflows/validation-0.2.1-unpack.yml"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: portfolio-validation-0.2.1-unpack
+  cancel-in-progress: false
+
+jobs:
+  unpack:
+    name: Unpack validation sources into repository
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout feature branch
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref_name }}
+
+      - name: Extract source package
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="validation/portfolio-validation-0.2.1-local-reconstruction.zip"
+          test -f "$archive"
+          workdir="$RUNNER_TEMP/portfolio-validation-unpack"
+          mkdir -p "$workdir"
+          unzip -q "$archive" -d "$workdir"
+
+          test -d "$workdir/portfolio-validation-0.2.0-baseline"
+          test -d "$workdir/portfolio-validation-0.2.1-reconstructed"
+
+          mkdir -p validation/portfolio-validation-0.2.0-baseline
+          mkdir -p validation/portfolio-validation-0.2.1
+          cp -a "$workdir/portfolio-validation-0.2.0-baseline/." validation/portfolio-validation-0.2.0-baseline/
+          cp -a "$workdir/portfolio-validation-0.2.1-reconstructed/." validation/portfolio-validation-0.2.1/
+
+          echo "Extracted baseline and 0.2.1 source trees:"
+          find validation/portfolio-validation-0.2.0-baseline validation/portfolio-validation-0.2.1 -type f -print | sort
+
+      - name: Commit unpacked source files
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add validation/portfolio-validation-0.2.0-baseline validation/portfolio-validation-0.2.1
+          if git diff --cached --quiet; then
+            echo "No extracted source changes to commit."
+            exit 0
+          fi
+          git commit -m "chore(portfolio): unpack validation 0.2.1 sources"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
