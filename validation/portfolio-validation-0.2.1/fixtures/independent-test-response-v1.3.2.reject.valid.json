@@ -1,0 +1,26 @@
+{
+  "candidate_id": "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "decision": "REJECT",
+  "scores": {
+    "semantic_coherence": 3,
+    "curatorial_originality": 2,
+    "narrative_integrity": 3,
+    "visual_composition": 4,
+    "evidence_integrity": 2
+  },
+  "findings": [
+    {
+      "criterion": "evidence_integrity",
+      "issue": "The interpretation is unsupported.",
+      "blocking": true,
+      "evidence": {
+        "kind": "SOURCE",
+        "source_id": "source-1",
+        "quote": "The river carries yesterday"
+      }
+    }
+  ],
+  "blocking_issues": [
+    "The interpretation is unsupported."
+  ]
+}
