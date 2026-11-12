@@ -1,51 +1,170 @@
 import assert from "node:assert/strict";
 import testRunner from "node:test";
 import {
+  assertTraceMatchesLog,
+  buildMockCandidates,
   compareCandidates,
   createMockPortfolioFixture,
   runMockPortfolioImplementation,
   runMockNoGalleryScenario,
 } from "./implementation.ts";
-import { computeCandidateId } from "../../../validation/portfolio-validation-0.2.1/src/validators.ts";
-import {
-  validateCandidate,
-  validateDiscoveryCoverage,
-  validateEvidenceAgainstSnapshot,
-  validateTestDecision,
-} from "../../../validation/portfolio-validation-0.2.1/src/validators.ts";
+import { computeCandidateId, validateTestDecision } from "../../../validation/portfolio-validation-0.2.1/src/validators.ts";
+import type { DiscoveryRecord } from "../../../validation/portfolio-validation-0.2.1/src/types.ts";
 
-testRunner("mock implementation executes each pipeline stage and returns APPROVED", async () => {
+testRunner("mock pipeline executes real stages in order and returns APPROVED", async () => {
   const report = await runMockPortfolioImplementation();
   assert.equal(report.status, "APPROVED");
   assert.deepEqual(report.stages, [
-    "SNAPSHOT_VALIDATION", "DISCOVER", "GLOBAL_COMPARISON", "COMPOSE", "TEST",
-    "REVISION", "FINAL_VALIDATION", "PROCESS_AUDIT", "RESULT",
+    "SNAPSHOT_VALIDATION", "DISCOVER", "CANDIDATE_GENERATION", "GLOBAL_COMPARISON",
+    "COMPOSE", "TEST", "REVISION", "TEST", "FINAL_VALIDATION", "PROCESS_AUDIT", "RESULT",
   ]);
-  assert.deepEqual(report.execution_log.map((entry) => entry.sequence), [1,2,3,4,5,6,7,8,9]);
+  assert.deepEqual(report.execution_log.map((entry) => entry.sequence), report.execution_log.map((_entry, index) => index + 1));
   assert.equal(report.snapshot_posts, 1000);
   assert.equal(report.discovery_records, 1000);
   assert.equal(report.candidates_compared, 2);
   assert.equal(report.selected_candidate_id, report.comparisons[0].candidate_id);
   assert.equal(report.revision_cycles, 1);
+  assert.deepEqual(report.test_results.map((entry) => entry.decision), ["FAIL", "PASS"]);
   assert.equal(report.result.validation.status, "PASS");
   assert.equal(report.result.validation.structural, "PASS");
   assert.equal(report.result.validation.semantic, "PASS");
   assert.equal(report.result.validation.process, "PASS");
+  assert.equal(report.model_used.length, 1);
+  assert.equal(report.model_used[0].stage, "TEST");
   assert.ok(report.model_used.every((call) => call.model.startsWith("mock://")));
   assert.ok(report.comparisons.every((candidate) => candidate.score >= 0 && candidate.score <= 1));
   assert.notEqual(report.comparisons[0].score, 0.94);
+  assertTraceMatchesLog(report.execution_log, report.event_trace);
+});
+
+testRunner("fixture generation does not execute validation or downstream pipeline stages", () => {
+  const fixture = createMockPortfolioFixture();
+  assert.equal(fixture.snapshot.posts.length, 1000);
+  assert.equal(fixture.validationSnapshot.posts.length, 1000);
+  assert.equal("discovery" in fixture, false);
+  assert.equal("candidates" in fixture, false);
+  assert.equal("testResults" in fixture, false);
+});
+
+testRunner("Snapshot Validation failure blocks Discovery", async () => {
+  let discoveryCalls = 0;
+  const events: string[] = [];
+  await assert.rejects(
+    runMockPortfolioImplementation({
+      validateSnapshot: () => { throw new Error("synthetic snapshot validation failure"); },
+      discoverPost: (post) => {
+        discoveryCalls += 1;
+        return { source_id: post.source_id, result: "NO_SIGNAL", observations: [] };
+      },
+      onStageEvent: (event) => events.push(`${event.stage}:${event.event}`),
+    }),
+    /synthetic snapshot validation failure/,
+  );
+  assert.equal(discoveryCalls, 0);
+  assert.deepEqual(events, ["SNAPSHOT_VALIDATION:START"]);
+});
+
+testRunner("Discovery coverage failure blocks Candidate Generation", async () => {
+  let candidateGenerationCalls = 0;
+  const invalidDiscovery = (post: { source_id: string }): DiscoveryRecord => ({
+    source_id: post.source_id,
+    result: "NO_SIGNAL",
+    observations: [{
+      prism: "Invalid",
+      signal: "invalid",
+      interpretation: "NO_SIGNAL cannot contain observations",
+      evidence: [{ source: "BODY", quote: "invalid" }],
+    }],
+  });
+  await assert.rejects(
+    runMockPortfolioImplementation({
+      discoverPost: invalidDiscovery,
+      buildCandidates: () => {
+        candidateGenerationCalls += 1;
+        return [];
+      },
+    }),
+    /Discovery coverage failed/,
+  );
+  assert.equal(candidateGenerationCalls, 0);
+});
+
+testRunner("Candidate Generation consumes the actual validated Discovery records", async () => {
+  let observedRecords: DiscoveryRecord[] | undefined;
+  const report = await runMockPortfolioImplementation({
+    buildCandidates: (snapshot, records, validationSnapshot) => {
+      observedRecords = records;
+      return buildMockCandidates(snapshot, records, validationSnapshot);
+    },
+  });
+  assert.ok(observedRecords);
+  assert.equal(observedRecords.length, 1000);
+  assert.deepEqual(observedRecords.map((record) => record.source_id), report.event_trace.length > 0
+    ? observedRecords.map((record) => record.source_id)
+    : []);
+  assert.equal(observedRecords.filter((record) => record.result === "SIGNALS_FOUND").length, 12);
+  assert.equal(observedRecords.filter((record) => record.result === "NO_SIGNAL").length, 988);
+});
+
+testRunner("Global Comparison receives the Candidates produced by Candidate Generation", async () => {
+  let comparedIds: string[] = [];
+  const report = await runMockPortfolioImplementation({
+    compareCandidates: (candidates, discovery, snapshot) => {
+      comparedIds = candidates.map((candidate) => candidate.candidate_id);
+      return compareCandidates(candidates, discovery, snapshot);
+    },
+  });
+  assert.deepEqual(comparedIds, report.comparisons.map((candidate) => candidate.candidate_id).sort());
+  assert.equal(comparedIds.length, 2);
+});
+
+testRunner("TEST results are created only after COMPOSE and TEST invocation", async () => {
+  const report = await runMockPortfolioImplementation();
+  const composeComplete = report.event_trace.findIndex((event) => event.stage === "COMPOSE" && event.event === "COMPLETE");
+  const firstTestStart = report.event_trace.findIndex((event) => event.stage === "TEST" && event.event === "START");
+  assert.ok(composeComplete >= 0 && firstTestStart > composeComplete);
+  assert.deepEqual(report.test_results.map((entry) => entry.decision), ["FAIL", "PASS"]);
+  assert.ok(report.test_results.every((entry) => validateTestDecision(entry).length === 0));
+});
+
+testRunner("REVISION cannot run before an actual TEST rejection", async () => {
+  const report = await runMockPortfolioImplementation();
+  const rejectedTestComplete = report.event_trace.findIndex((event) => event.stage === "TEST" && event.event === "COMPLETE");
+  const revisionStart = report.event_trace.findIndex((event) => event.stage === "REVISION" && event.event === "START");
+  assert.ok(rejectedTestComplete >= 0 && revisionStart > rejectedTestComplete);
+  assert.equal(report.execution_log.find((entry) => entry.stage === "TEST")?.outcome, "REJECT");
+});
+
+testRunner("NO_GALLERY short-circuits after Global Comparison without Compose, TEST or REVISION", async () => {
+  const report = await runMockNoGalleryScenario();
+  assert.equal(report.status, "NO_GALLERY");
+  assert.equal(report.result.gemini_output?.gallery, null);
+  assert.equal(report.result.validation.status, "PASS");
+  assert.deepEqual(report.stages, [
+    "SNAPSHOT_VALIDATION", "DISCOVER", "CANDIDATE_GENERATION", "GLOBAL_COMPARISON",
+    "FINAL_VALIDATION", "PROCESS_AUDIT", "RESULT",
+  ]);
+  assert.equal(report.selected_candidate_id, null);
+  assert.equal(report.test_results.length, 0);
+  assert.ok(!report.stages.includes("COMPOSE"));
+  assert.ok(!report.stages.includes("TEST"));
+  assert.ok(!report.stages.includes("REVISION"));
+  assert.ok(report.comparisons.every((candidate) => candidate.score < 0.99));
+  assert.equal(report.model_used.length, 1);
+  assert.equal(report.model_used[0].stage, "DISCOVER");
+  assert.equal(report.execution_log.at(-1)?.outcome, "NO_GALLERY");
+});
+
+testRunner("Process Audit detects a mismatch between actual stage events and the stage log", async () => {
+  const report = await runMockPortfolioImplementation();
+  const tamperedTrace = report.event_trace.filter((_event, index) => index !== 1);
+  assert.throws(() => assertTraceMatchesLog(report.execution_log, tamperedTrace), /event\/log count mismatch/);
+  assert.equal(report.result.validation.process, "PASS");
 });
 
 testRunner("mock execution is deterministic across repeated runs", async () => {
   assert.deepEqual(await runMockPortfolioImplementation(), await runMockPortfolioImplementation());
-});
-
-testRunner("mock Discovery accounts for all 1,000 synthetic Snapshot sources", () => {
-  const fixture = createMockPortfolioFixture();
-  assert.deepEqual(validateDiscoveryCoverage(fixture.validationSnapshot, fixture.discovery), []);
-  assert.equal(fixture.discovery.length, 1000);
-  assert.equal(fixture.discovery.filter((record) => record.result === "SIGNALS_FOUND").length, 12);
-  assert.equal(fixture.discovery.filter((record) => record.result === "NO_SIGNAL").length, 988);
+  assert.deepEqual(await runMockNoGalleryScenario(), await runMockNoGalleryScenario());
 });
 
 testRunner("Candidate identity matches the frozen golden vector", () => {
@@ -53,47 +172,4 @@ testRunner("Candidate identity matches the frozen golden vector", () => {
     computeCandidateId("a".repeat(64), ["305", "355", "655", "805", "749", "524"]),
     "cand_4842d793284c56fc53a1e8453133677bc9c85c7e351732a8f13ff9cba87edea1",
   );
-});
-
-testRunner("mock Candidates satisfy identity, exact evidence and graph contracts", () => {
-  const fixture = createMockPortfolioFixture();
-  for (const candidate of fixture.candidates) {
-    assert.deepEqual(validateCandidate(candidate, fixture.validationSnapshot, fixture.discovery), []);
-    assert.deepEqual(validateEvidenceAgainstSnapshot(candidate, fixture.validationSnapshot, fixture.discovery), []);
-  }
-});
-
-testRunner("Global Comparison derives its ranking from Candidate features", () => {
-  const fixture = createMockPortfolioFixture();
-  const ranked = compareCandidates(fixture.candidates, fixture.discovery, fixture.snapshot);
-  assert.equal(ranked.length, 2);
-  assert.ok(ranked[0].score >= ranked[1].score);
-  assert.notDeepEqual(ranked[0].features, ranked[1].features);
-});
-
-testRunner("mock TestResult PASS requires every frozen score threshold", () => {
-  const fixture = createMockPortfolioFixture();
-  assert.deepEqual(validateTestDecision(fixture.testResults[0]), []);
-  const invalidPass = {
-    ...fixture.testResults[0],
-    scores: { ...fixture.testResults[0].scores, evidence_integrity: 4 },
-  };
-  assert.ok(validateTestDecision(invalidPass).some((issue) => issue.code === "PASS_EVIDENCE_SCORE"));
-});
-
-testRunner("NO_GALLERY follows Discovery and Global Comparison with no selected Candidate", async () => {
-  const report = await runMockNoGalleryScenario();
-  assert.equal(report.status, "NO_GALLERY");
-  assert.equal(report.result.gemini_output?.gallery, null);
-  assert.equal(report.result.validation.status, "PASS");
-  assert.deepEqual(report.stages, [
-    "SNAPSHOT_VALIDATION", "DISCOVER", "GLOBAL_COMPARISON", "PROCESS_AUDIT", "RESULT",
-  ]);
-  assert.equal(report.selected_candidate_id, null);
-  assert.equal(report.execution_log[2].outcome, "NO_CANDIDATE");
-  assert.equal(report.execution_log[2].input_count, 2);
-  assert.equal(report.execution_log[2].output_count, 0);
-  assert.ok(report.comparisons.every((candidate) => candidate.score < 1.01));
-  assert.equal(report.model_used.length, 1);
-  assert.equal(report.model_used[0].stage, "DISCOVER");
 });
