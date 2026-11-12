@@ -22,7 +22,7 @@ export function validateSetEquality(expected: readonly string[], actual: readonl
 }
 
 export function validateDiscoveryCoverage(snapshot: Snapshot, records: readonly DiscoveryRecord[]): ValidationIssue[] {
-  const issues: ValidationIssue[] = [];
+  const issues: ValidationIssue[] = [...validateDiscoveryRecords(records)];
   const snapshotCounts = new Map<string, number>();
   for (const post of snapshot.posts) {
     const sourceId: unknown = post?.source_id;
