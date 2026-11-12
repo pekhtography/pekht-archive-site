@@ -80,6 +80,21 @@ test("COMPOSITION quote must occur at the pointed-to element", () => {
   }] };
   assert.equal(validateIndependentTestResponseV132(value, context).ok, false);
 });
+test("COMPOSITION JSON Pointer resolves a root-level empty property name", () => {
+  const emptyKeyContext = { sourceTexts, composition: { "": "Evidence stored under an empty property name." } };
+  const value = { ...approve, findings: [{
+    criterion: "visual_composition", issue: "Empty-key property is directly inspectable.", blocking: false,
+    evidence: { kind: "COMPOSITION", path: "/", quote: "Evidence stored under an empty property name" }
+  }] };
+  assert.equal(validateIndependentTestResponseV132(value, emptyKeyContext).ok, true);
+});
+test("COMPOSITION JSON Pointer rejects a missing root-level empty property", () => {
+  const value = { ...approve, findings: [{
+    criterion: "visual_composition", issue: "Empty-key property does not exist.", blocking: false,
+    evidence: { kind: "COMPOSITION", path: "/", quote: "not present" }
+  }] };
+  assert.equal(validateIndependentTestResponseV132(value, context).ok, false);
+});
 test("COMPOSITION JSON Pointer supports escaped slash and tilde", () => {
   const escapedContext = { sourceTexts, composition: { "a/b": { "~key": "Exact nested passage." } } };
   const value = { ...approve, findings: [{
