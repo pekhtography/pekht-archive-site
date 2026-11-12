@@ -52,6 +52,7 @@ test('DISC-01 to DISC-05 Discovery result and observations are consistent', () =
   const validNone = { source_id: 'b', result: 'NO_SIGNAL', observations: [] };
   assert.deepEqual(validateDiscoveryRecords([validSignals]), []);
   assert.deepEqual(validateDiscoveryRecords([validNone]), []);
+  assert.equal(validateDiscoveryRecords([{ ...validSignals, observations: [{ ...validSignals.observations[0], evidence: [] }] }]).some(x => x.code === 'DISCOVERY_OBSERVATION_STRUCTURE'), true);
   assert.equal(validateDiscoveryRecords([{ ...validSignals, observations: [] }]).some(x => x.code === 'DISCOVERY_RESULT_OBSERVATION_MISMATCH'), true);
   assert.equal(validateDiscoveryRecords([{ ...validNone, observations: [validSignals.observations[0]] }]).some(x => x.code === 'DISCOVERY_RESULT_OBSERVATION_MISMATCH'), true);
   assert.equal(validateDiscoveryRecords([{ ...validNone, result: 'UNKNOWN' }]).some(x => x.code === 'DISCOVERY_RESULT_INVALID'), true);
