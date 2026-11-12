@@ -7,8 +7,13 @@ on:
     paths:
       - "scripts/portfolio/mock/**"
       - "scripts/portfolio/orchestrator.ts"
+      - "scripts/portfolio/snapshot.ts"
+      - "scripts/portfolio/provider.ts"
       - "scripts/portfolio/validation/**"
+      - "scripts/portfolio/schemas/**"
       - "validation/portfolio-validation-0.2.1/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
       - ".github/workflows/portfolio-mock-implementation.yml"
   pull_request:
     branches:
@@ -16,8 +21,13 @@ on:
     paths:
       - "scripts/portfolio/mock/**"
       - "scripts/portfolio/orchestrator.ts"
+      - "scripts/portfolio/snapshot.ts"
+      - "scripts/portfolio/provider.ts"
       - "scripts/portfolio/validation/**"
+      - "scripts/portfolio/schemas/**"
       - "validation/portfolio-validation-0.2.1/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
       - ".github/workflows/portfolio-mock-implementation.yml"
 
 permissions:
@@ -54,7 +64,7 @@ jobs:
         working-directory: validation/portfolio-validation-0.2.1
         run: npm ci --no-audit --no-fund
 
-      - name: Re-run Validation 0.2.1 gates
+      - name: Re-run Validation 0.2.1 gates and mock TypeScript check
         working-directory: validation/portfolio-validation-0.2.1
         run: |
           npm run validate:schema
