@@ -13,7 +13,7 @@ export interface GeminiGallery {
 export interface GeminiTest { decision: GeminiDecision; findings: string[]; revision_cycles: number }
 export interface GeminiOutput { gallery: GeminiGallery | null; test: GeminiTest }
 export interface PortfolioInputSnapshot {
-  schema_version: string; repository_commit: string; generated_at: string;
+  schema_version: string | number; repository_commit: string; generated_at: string;
   sampled_count: 1000; content_sha256: string;
 }
 export interface ValidationFinding {
