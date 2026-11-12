@@ -12,6 +12,7 @@ const schemaFiles=[
   {name:'snapshot.schema.json',fullPath:path.join(root,'schemas','snapshot.schema.json')},
   {name:'discovery-record.schema.json',fullPath:path.join(root,'schemas','discovery-record.schema.json')},
   {name:'independent-test-response.schema.json',fullPath:path.resolve(root,'../../scripts/portfolio/schemas/independent-test-response.schema.json')},
+  {name:'independent-test-response-v1.3.2.schema.json',fullPath:path.resolve(root,'../../scripts/portfolio/schemas/independent-test-response-v1.3.2.schema.json')},
 ];
 const fixtureExpectations=[
   ['test-result','test-result.pass.valid.json',true],
@@ -28,6 +29,12 @@ const fixtureExpectations=[
   ['independent-test-response','independent-test-response.approve.invalid-evidence.json',false],
   ['independent-test-response','independent-test-response.reject.valid.json',true],
   ['independent-test-response','independent-test-response.reject.invalid-no-blocking.json',false],
+  ['independent-test-response-v1.3.2','independent-test-response-v1.3.2.approve.valid.json',true],
+  ['independent-test-response-v1.3.2','independent-test-response-v1.3.2.approve.composition.valid.json',true],
+  ['independent-test-response-v1.3.2','independent-test-response-v1.3.2.reject.valid.json',true],
+  ['independent-test-response-v1.3.2','independent-test-response-v1.3.2.approve.invalid-blocking.json',false],
+  ['independent-test-response-v1.3.2','independent-test-response-v1.3.2.reject.invalid-no-blocking.json',false],
+  ['independent-test-response-v1.3.2','independent-test-response-v1.3.2.invalid-evidence-shape.json',false],
 ];
 const validators=new Map();
 for(const {name,fullPath} of schemaFiles){
