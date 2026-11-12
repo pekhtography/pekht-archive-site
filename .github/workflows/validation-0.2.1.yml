@@ -55,9 +55,9 @@ jobs:
           test "$checked" -eq 13
           echo "PASS: $checked baseline 0.2.0 files match their SHA-256 manifest"
 
-      - name: Install Node dependencies
+      - name: Install locked Node dependencies
         working-directory: validation/portfolio-validation-0.2.1
-        run: npm install --no-audit --no-fund
+        run: npm ci --no-audit --no-fund
 
       - name: Validate all JSON Schemas and fixtures with Ajv
         working-directory: validation/portfolio-validation-0.2.1
