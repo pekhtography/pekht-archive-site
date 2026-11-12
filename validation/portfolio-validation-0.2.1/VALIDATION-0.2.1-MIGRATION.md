@@ -22,7 +22,7 @@ The 0.2.0 source package is retained separately as an immutable baseline. No ori
 | `tests/decide.test.mjs` | NEW | Decision tests |
 | `tests/schema-adapter.test.mjs` | NEW | Ajv adapter tests |
 | `scripts/validate-schema.mjs` | CHANGED | Explicit four-schema/nine-fixture matrix |
-| `scripts/validate-python.py` | NEW | Python Draft 2020-12 validation |
+| `scripts/validate-python.py` | REMOVED 2026-11-12 | Temporary independent Python validator retired; Ajv remains the authoritative schema validator |
 | `fixtures/test-result.pass.*.json` | UNCHANGED | Original three TestResult fixtures |
 | `fixtures/candidate.pass.valid.json` | NEW | Valid Candidate fixture |
 | `fixtures/candidate.fail.source-count.json` | NEW | Candidate cardinality failure |
@@ -32,7 +32,7 @@ The 0.2.0 source package is retained separately as an immutable baseline. No ori
 | `fixtures/discovery.valid.json` | NEW | Discovery fixture |
 | `package.json` | CHANGED | Version 0.2.1 and explicit test tiers; pinned dependencies unchanged |
 | `tsconfig.json` | UNCHANGED | Original compiler configuration retained |
-| `requirements-validation.txt` | NEW | Pinned Python jsonschema dependency |
+| `requirements-validation.txt` | REMOVED 2026-11-12 | No Python dependency in the package or CI |
 | `README.md` | CHANGED | 0.2.1 scope, gates, commands and migration guidance |
 | `CONTRACT-AMENDMENT-CANDIDATE-ID.md` | CHANGED | Approval status added; canonical algorithm/vector unchanged |
 | `CONTRACT-AMENDMENT-SCHEMA-TOOLING.md` | NEW | Approved tooling policy |
@@ -48,4 +48,4 @@ The 0.2.0 source package is retained separately as an immutable baseline. No ori
 
 ## Gate interpretation
 
-`BLOCKED` and `NOT RUN` are not `PASS`. `test:no-npm` is partial coverage only. Python validation does not substitute for Ajv. Mock Implementation and Gemini remain prohibited until all eight mandatory gates pass.
+`BLOCKED` and `NOT RUN` are not `PASS`. `test:no-npm` is partial coverage only. Ajv is the authoritative JSON Schema validator; Python validation was a temporary supplementary path and was retired by the 2026-11-12 tooling decision. Mock Implementation and Gemini remain prohibited until all seven mandatory gates pass.
