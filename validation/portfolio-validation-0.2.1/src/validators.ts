@@ -108,7 +108,7 @@ export function validateDiscoveryRecords(records: readonly DiscoveryRecord[]): V
       const structurallyValid = observation !== null && typeof observation === 'object'
         && isNonEmptyString(observation.prism) && isNonEmptyString(observation.signal)
         && isNonEmptyString(observation.interpretation) && Array.isArray(observation.evidence)
-        && observation.evidence.every((item) => item !== null && typeof item === 'object'
+        && observation.evidence.length > 0 && observation.evidence.every((item) => item !== null && typeof item === 'object'
           && (item.source === 'BODY' || item.source === 'ORIGINAL_MARKDOWN') && isNonEmptyString(item.quote));
       if (!structurallyValid) {
         issues.push(fail('DISCOVERY_OBSERVATION_STRUCTURE', `Observation ${record.source_id}:${index} has an invalid structure`));
