@@ -1,0 +1,14 @@
+import test from "node:test";
+import assert from "node:assert/strict";
+import { validateIndependentTestResponse } from "../validation/test-response-validator.ts";
+const candidate_id = "cand_" + "a".repeat(64);
+const approve = { candidate_id, decision: "APPROVE", scores: { semantic_coherence: 5, curatorial_originality: 4, narrative_integrity: 4, visual_composition: 4, evidence_integrity: 5 }, findings: ["Coherent progression."], blocking_issues: [] };
+const reject = { candidate_id, decision: "REJECT", scores: { semantic_coherence: 3, curatorial_originality: 2, narrative_integrity: 3, visual_composition: 4, evidence_integrity: 5 }, findings: ["Insufficient originality."], blocking_issues: ["Originality below threshold."] };
+test("APPROVE passes with required scores", () => assert.equal(validateIndependentTestResponse(approve).ok, true));
+test("REJECT requires a blocking issue", () => assert.equal(validateIndependentTestResponse(reject).ok, true));
+test("APPROVE below threshold fails", () => assert.equal(validateIndependentTestResponse({ ...approve, scores: { ...approve.scores, visual_composition: 3 } }).ok, false));
+test("Evidence integrity below five fails", () => assert.equal(validateIndependentTestResponse({ ...approve, scores: { ...approve.scores, evidence_integrity: 4 } }).ok, false));
+test("APPROVE with blocking issue fails", () => assert.equal(validateIndependentTestResponse({ ...approve, blocking_issues: ["unsupported"] }).ok, false));
+test("REJECT without blocking issue fails", () => assert.equal(validateIndependentTestResponse({ ...reject, blocking_issues: [] }).ok, false));
+test("Unexpected keys and malformed candidate ID fail", () => assert.equal(validateIndependentTestResponse({ ...approve, candidate_id: "bad", extra: true }).ok, false));
+test("INCOMPLETE is not a TEST decision", () => assert.equal(validateIndependentTestResponse({ ...approve, decision: "INCOMPLETE" }).ok, false));
