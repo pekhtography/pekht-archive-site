@@ -33,5 +33,15 @@
         }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "result": { "const": "SIGNALS_FOUND" } }, "required": ["result"] },
+      "then": { "properties": { "observations": { "minItems": 1 } } }
+    },
+    {
+      "if": { "properties": { "result": { "const": "NO_SIGNAL" } }, "required": ["result"] },
+      "then": { "properties": { "observations": { "maxItems": 0 } } }
+    }
+  ]
 }
