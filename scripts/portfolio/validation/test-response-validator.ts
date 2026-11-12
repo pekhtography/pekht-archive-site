@@ -13,9 +13,14 @@ export function validateIndependentTestResponse(value: unknown): ValidationResul
   if (!isRecord(value.scores)) errors.push("test_response.scores: expected an object");
   else {
     for (const key of Object.keys(value.scores)) if (!scoreKeys.includes(key)) errors.push("test_response.scores." + key + ": unexpected property");
-    for (const key of scoreKeys) { const score = value.scores[key]; if (!Number.isInteger(score) || (score as number) < 1 || (score as number) > 5) errors.push("test_response.scores." + key + ": expected integer 1–5"); }
-    if (value.scores.evidence_integrity !== 5) errors.push("test_response.scores.evidence_integrity: must equal 5");
-    if (value.decision === "APPROVE") for (const key of scoreKeys.slice(0, 4)) if (typeof value.scores[key] === "number" && value.scores[key] < 4) errors.push("test_response.scores." + key + ": APPROVE requires at least 4");
+    for (const key of scoreKeys) {
+      const score = value.scores[key];
+      if (!Number.isInteger(score) || (score as number) < 1 || (score as number) > 5) errors.push("test_response.scores." + key + ": expected integer 1–5");
+    }
+    if (value.decision === "APPROVE") {
+      for (const key of scoreKeys.slice(0, 4)) if (typeof value.scores[key] === "number" && value.scores[key] < 4) errors.push("test_response.scores." + key + ": APPROVE requires at least 4");
+      if (value.scores.evidence_integrity !== 5) errors.push("test_response.scores.evidence_integrity: APPROVE requires exactly 5");
+    }
   }
   if (!Array.isArray(value.findings) || !value.findings.every((item) => typeof item === "string")) errors.push("test_response.findings: expected an array of strings");
   if (!Array.isArray(value.blocking_issues) || !value.blocking_issues.every(isNonEmptyString)) errors.push("test_response.blocking_issues: expected an array of non-empty strings");
