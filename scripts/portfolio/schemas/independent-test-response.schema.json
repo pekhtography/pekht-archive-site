@@ -4,23 +4,14 @@
   "title": "Portfolio Independent TEST Response v1.0",
   "type": "object",
   "additionalProperties": false,
-  "required": [
-    "candidate_id",
-    "decision",
-    "scores",
-    "findings",
-    "blocking_issues"
-  ],
+  "required": ["candidate_id", "decision", "scores", "findings", "blocking_issues"],
   "properties": {
     "candidate_id": {
       "type": "string",
       "pattern": "^cand_[a-f0-9]{64}$"
     },
     "decision": {
-      "enum": [
-        "APPROVE",
-        "REJECT"
-      ]
+      "enum": ["APPROVE", "REJECT"]
     },
     "scores": {
       "type": "object",
@@ -33,107 +24,56 @@
         "evidence_integrity"
       ],
       "properties": {
-        "semantic_coherence": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 5
-        },
-        "curatorial_originality": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 5
-        },
-        "narrative_integrity": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 5
-        },
-        "visual_composition": {
-          "type": "integer",
-          "minimum": 1,
-          "maximum": 5
-        },
-        "evidence_integrity": {
-          "const": 5
-        }
+        "semantic_coherence": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "curatorial_originality": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "narrative_integrity": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "visual_composition": { "type": "integer", "minimum": 1, "maximum": 5 },
+        "evidence_integrity": { "type": "integer", "minimum": 1, "maximum": 5 }
       }
     },
     "findings": {
       "type": "array",
-      "items": {
-        "type": "string"
-      }
+      "items": { "type": "string" }
     },
     "blocking_issues": {
       "type": "array",
       "items": {
         "type": "string",
-        "minLength": 1
+        "minLength": 1,
+        "pattern": "\\S"
       }
     }
   },
   "allOf": [
     {
       "if": {
-        "properties": {
-          "decision": {
-            "const": "APPROVE"
-          }
-        },
-        "required": [
-          "decision"
-        ]
+        "properties": { "decision": { "const": "APPROVE" } },
+        "required": ["decision"]
       },
       "then": {
         "properties": {
           "scores": {
+            "type": "object",
             "properties": {
-              "semantic_coherence": {
-                "minimum": 4,
-                "type": "integer"
-              },
-              "curatorial_originality": {
-                "minimum": 4,
-                "type": "integer"
-              },
-              "narrative_integrity": {
-                "minimum": 4,
-                "type": "integer"
-              },
-              "visual_composition": {
-                "minimum": 4,
-                "type": "integer"
-              },
-              "evidence_integrity": {
-                "const": 5
-              }
-            },
-            "type": "object"
+              "semantic_coherence": { "type": "integer", "minimum": 4 },
+              "curatorial_originality": { "type": "integer", "minimum": 4 },
+              "narrative_integrity": { "type": "integer", "minimum": 4 },
+              "visual_composition": { "type": "integer", "minimum": 4 },
+              "evidence_integrity": { "const": 5 }
+            }
           },
-          "blocking_issues": {
-            "maxItems": 0,
-            "type": "array"
-          }
+          "blocking_issues": { "type": "array", "maxItems": 0 }
         }
       }
     },
     {
       "if": {
-        "properties": {
-          "decision": {
-            "const": "REJECT"
-          }
-        },
-        "required": [
-          "decision"
-        ]
+        "properties": { "decision": { "const": "REJECT" } },
+        "required": ["decision"]
       },
       "then": {
         "properties": {
-          "blocking_issues": {
-            "minItems": 1,
-            "type": "array"
-          }
+          "blocking_issues": { "type": "array", "minItems": 1 }
         }
       }
     }
