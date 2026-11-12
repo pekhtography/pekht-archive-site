@@ -308,11 +308,8 @@ const EXPECTED_STAGES: MockStage[] = [
   "REVISION", "FINAL_VALIDATION", "PROCESS_AUDIT", "RESULT",
 ];
 
-function assertExecutionLog(log: StageExecution[], allowNoGallery: boolean): void {
+function assertExecutionPrefix(log: StageExecution[], expected: readonly MockStage[]): void {
   const stages = log.map((entry) => entry.stage);
-  const expected = allowNoGallery
-    ? ["SNAPSHOT_VALIDATION", "DISCOVER", "GLOBAL_COMPARISON", "PROCESS_AUDIT", "RESULT"]
-    : EXPECTED_STAGES;
   if (JSON.stringify(stages) !== JSON.stringify(expected)) {
     throw new Error(`Stage execution order mismatch: ${stages.join(" -> ")}`);
   }
@@ -320,6 +317,13 @@ function assertExecutionLog(log: StageExecution[], allowNoGallery: boolean): voi
     if (entry.sequence !== index + 1) throw new Error("Stage execution log sequence is not contiguous");
     if (entry.input_count < 0 || entry.output_count < 0) throw new Error("Stage execution counts cannot be negative");
   });
+}
+
+function assertExecutionLog(log: StageExecution[], allowNoGallery: boolean): void {
+  const expected: MockStage[] = allowNoGallery
+    ? ["SNAPSHOT_VALIDATION", "DISCOVER", "GLOBAL_COMPARISON", "PROCESS_AUDIT", "RESULT"]
+    : EXPECTED_STAGES;
+  assertExecutionPrefix(log, expected);
 }
 
 function makeLoadedSnapshot(snapshot: PortfolioSnapshot): LoadedPortfolioSnapshot {
@@ -456,7 +460,8 @@ export async function runMockPortfolioImplementation(): Promise<MockPortfolioRep
     reportedRevisionCycles: revisionCycles,
   });
   if (!processCheck.ok) throw new Error(`Process audit failed: ${processCheck.errors.join("; ")}`);
-  appendStage(log, "PROCESS_AUDIT", fixture.snapshot.posts.length, auditBeforeFinalCall.processedSourceIds.length, "PASS", "Audit checked the executed stage log, complete source coverage, shortlist, model calls and revision count.");
+  assertExecutionPrefix(log, EXPECTED_STAGES.slice(0, 7));
+  appendStage(log, "PROCESS_AUDIT", fixture.snapshot.posts.length, auditBeforeFinalCall.processedSourceIds.length, "PASS", "Audit checked the executed stage prefix, complete source coverage, shortlist, model calls and revision count.");
 
   const finalTestCall = modelCall("mock-orchestrator-final-test", "TEST", selected.candidate_id);
   const finalAudit = buildProcessAudit(fixture, shortlist, auditBeforeFinalCall.revisionCyclesByCandidate as Record<string, number>, callRecords);
@@ -536,7 +541,8 @@ export async function runMockNoGalleryScenario(): Promise<MockPortfolioReport> {
     },
   });
   if (result.status !== "NO_GALLERY") throw new Error(`NO_GALLERY scenario returned ${result.status}`);
-  appendStage(log, "PROCESS_AUDIT", fixture.snapshot.posts.length, audit.processedSourceIds.length, "PASS", "Audit verified complete Discovery coverage and an empty globally compared shortlist.");
+  assertExecutionPrefix(log, ["SNAPSHOT_VALIDATION", "DISCOVER", "GLOBAL_COMPARISON"]);
+  appendStage(log, "PROCESS_AUDIT", fixture.snapshot.posts.length, audit.processedSourceIds.length, "PASS", "Audit verified the executed stage prefix, complete Discovery coverage and an empty globally compared shortlist.");
   appendStage(log, "RESULT", 1, 0, "NO_GALLERY", "No Candidate was selected; no gallery was created or published.");
   assertExecutionLog(log, true);
 
