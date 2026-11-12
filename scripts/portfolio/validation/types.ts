@@ -11,6 +11,10 @@ export interface GeminiGallery {
   composition_rationale: string; alternatives_considered: string[]; doubts: string[];
 }
 export interface GeminiTest { decision: GeminiDecision; findings: string[]; revision_cycles: number }
+
+/** Independent model-evaluated TEST response; separate from normalized TestResult. */
+export interface IndependentTestScores { semantic_coherence: number; curatorial_originality: number; narrative_integrity: number; visual_composition: number; evidence_integrity: 5; }
+export interface IndependentTestResponse { candidate_id: string; decision: GeminiDecision; scores: IndependentTestScores; findings: string[]; blocking_issues: string[]; }
 export interface GeminiOutput { gallery: GeminiGallery | null; test: GeminiTest }
 export interface PortfolioInputSnapshot {
   schema_version: string; repository_commit: string; generated_at: string;
