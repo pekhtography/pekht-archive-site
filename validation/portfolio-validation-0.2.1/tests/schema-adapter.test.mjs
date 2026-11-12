@@ -32,4 +32,5 @@ test('T-11e Discovery result controls observation cardinality in Draft 2020-12 s
   assert.equal(validate({...base,result:'NO_SIGNAL',observations:[]}).success,true,'NO_SIGNAL with no observations must pass');
   assert.equal(validate({...base,result:'NO_SIGNAL'}).success,false,'NO_SIGNAL with observations must fail');
   assert.equal(validate({...base,result:'UNKNOWN'}).success,false,'unknown result must fail');
+  assert.equal(validate({...base,observations:[{...base.observations[0],evidence:[]}]}).success,false,'an observation without textual evidence must fail');
 });
