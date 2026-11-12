@@ -1,0 +1,15 @@
+{
+  "candidate_id": "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "decision": "APPROVE",
+  "scores": {
+    "semantic_coherence": 5,
+    "curatorial_originality": 4,
+    "narrative_integrity": 4,
+    "visual_composition": 3,
+    "evidence_integrity": 5
+  },
+  "findings": [
+    "Coherent progression."
+  ],
+  "blocking_issues": []
+}

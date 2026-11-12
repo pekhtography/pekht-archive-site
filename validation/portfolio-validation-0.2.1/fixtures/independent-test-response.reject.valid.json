@@ -1,0 +1,17 @@
+{
+  "candidate_id": "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "decision": "REJECT",
+  "scores": {
+    "semantic_coherence": 3,
+    "curatorial_originality": 2,
+    "narrative_integrity": 3,
+    "visual_composition": 4,
+    "evidence_integrity": 5
+  },
+  "findings": [
+    "Insufficient originality."
+  ],
+  "blocking_issues": [
+    "Originality below threshold."
+  ]
+}

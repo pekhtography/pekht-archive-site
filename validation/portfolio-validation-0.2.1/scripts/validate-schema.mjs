@@ -6,7 +6,13 @@ import addFormats from 'ajv-formats';
 const root=process.cwd();
 const ajv=new Ajv2020({allErrors:true,strict:true});
 addFormats(ajv);
-const schemaFiles=['candidate.schema.json','test-result.schema.json','snapshot.schema.json','discovery-record.schema.json'];
+const schemaFiles=[
+  {name:'candidate.schema.json',fullPath:path.join(root,'schemas','candidate.schema.json')},
+  {name:'test-result.schema.json',fullPath:path.join(root,'schemas','test-result.schema.json')},
+  {name:'snapshot.schema.json',fullPath:path.join(root,'schemas','snapshot.schema.json')},
+  {name:'discovery-record.schema.json',fullPath:path.join(root,'schemas','discovery-record.schema.json')},
+  {name:'independent-test-response.schema.json',fullPath:path.resolve(root,'../../scripts/portfolio/schemas/independent-test-response.schema.json')},
+];
 const fixtureExpectations=[
   ['test-result','test-result.pass.valid.json',true],
   ['test-result','test-result.pass.invalid-low-score.json',false],
@@ -17,15 +23,18 @@ const fixtureExpectations=[
   ['candidate','candidate.fail.candidate-id.json',true],
   ['snapshot','snapshot.valid.json',true],
   ['discovery-record','discovery.valid.json',true],
+  ['independent-test-response','independent-test-response.approve.valid.json',true],
+  ['independent-test-response','independent-test-response.approve.invalid-low-score.json',false],
+  ['independent-test-response','independent-test-response.reject.valid.json',true],
+  ['independent-test-response','independent-test-response.reject.invalid-no-blocking.json',false],
 ];
 const validators=new Map();
-for(const file of schemaFiles){
-  const full=path.join(root,'schemas',file);
-  if(!fs.existsSync(full)) throw new Error(`Missing required schema: ${file}`);
-  const schema=JSON.parse(fs.readFileSync(full,'utf8'));
-  if(!ajv.validateSchema(schema)) throw new Error(`${file}: ${ajv.errorsText()}`);
-  validators.set(file.replace('.schema.json',''),ajv.compile(schema));
-  process.stdout.write(`SCHEMA OK ${file}\n`);
+for(const {name,fullPath} of schemaFiles){
+  if(!fs.existsSync(fullPath)) throw new Error(`Missing required schema: ${name} at ${fullPath}`);
+  const schema=JSON.parse(fs.readFileSync(fullPath,'utf8'));
+  if(!ajv.validateSchema(schema)) throw new Error(`${name}: ${ajv.errorsText()}`);
+  validators.set(name.replace('.schema.json',''),ajv.compile(schema));
+  process.stdout.write(`SCHEMA OK ${name}\n`);
 }
 for(const [schemaName,fixtureName,expected] of fixtureExpectations){
   const validate=validators.get(schemaName);
