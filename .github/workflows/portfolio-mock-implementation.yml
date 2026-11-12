@@ -77,5 +77,6 @@ jobs:
           pnpm exec tsx --test
           scripts/portfolio/mock/implementation.test.ts
           scripts/portfolio/mock/independent-test-contract.test.ts
+          scripts/portfolio/mock/independent-test-response-v132.test.ts
           scripts/portfolio/provider.test.ts
           scripts/portfolio/orchestrator.test.ts
