@@ -11,7 +11,7 @@ The 0.2.0 source package is retained separately as an immutable baseline. No ori
 | `schemas/candidate.schema.json` | UNCHANGED | Original Candidate schema retained |
 | `schemas/test-result.schema.json` | SEMANTICALLY UNCHANGED | Formatting normalized; explicit redundant `type: object` guards added to conditional branches; validation contract retained |
 | `schemas/snapshot.schema.json` | NEW | Snapshot structural schema |
-| `schemas/discovery-record.schema.json` | NEW | DiscoveryRecord structural schema |
+| `schemas/discovery-record.schema.json` | NEW | DiscoveryRecord structural schema; every Observation requires at least one textual evidence item |
 | `src/types.ts` | CHANGED | Adds DiscoveryResult and TestDecision types; existing data contracts retained |
 | `src/validators.ts` | CHANGED | Adds D-01/D-03 validators and safe lookup; integrates T-08 sequence; narrows evidence scope |
 | `src/parse.ts` | NEW | Generic parser/validator boundary |
@@ -46,6 +46,7 @@ The 0.2.0 source package is retained separately as an immutable baseline. No ori
 3. `validateCandidate` now runs Discovery diagnostics, creates an unambiguous source lookup, checks Candidate source coverage, observation references, distinct edges, graph connectivity, Candidate-scoped evidence, and Candidate ID in the agreed T-08 order.
 4. All records sharing a duplicate `source_id` are excluded from the safe lookup. The implementation never chooses first or last.
 5. Discovery `result`/`observations` consistency is enforced by both JSON Schema and runtime validation. `SIGNALS_FOUND` requires at least one observation; `NO_SIGNAL` requires zero observations. Invalid result values and contradictory result/observation combinations are rejected.
+6. Every Discovery Observation must contain at least one evidence item. Evidence must identify `BODY` or `ORIGINAL_MARKDOWN` and include a non-empty exact quote; empty evidence arrays are rejected by both JSON Schema and runtime validation.
 
 ## Gate interpretation
 
