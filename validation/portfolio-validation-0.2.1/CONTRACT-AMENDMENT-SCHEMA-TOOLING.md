@@ -5,7 +5,7 @@
 
 ## 1. Schema ownership
 
-The package validates four Draft 2020-12 schemas: Candidate, TestResult, Snapshot, and DiscoveryRecord. Candidate and TestResult schemas are retained unchanged from 0.2.0. Snapshot and DiscoveryRecord schemas are introduced in 0.2.1.
+The package validates four Draft 2020-12 schemas: Candidate, TestResult, Snapshot, and DiscoveryRecord. The Candidate schema is retained byte-for-byte unchanged from 0.2.0. The TestResult schema is semantically unchanged: formatting was normalized and explicit redundant `type: object` guards were added to conditional branches; the accepted/rejected contract is unchanged. Snapshot and DiscoveryRecord schemas are introduced in 0.2.1.
 
 ## 2. Validation layers
 
