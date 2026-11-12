@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - portfolio/mock-implementation-v1
+      - portfolio/test-contract-v1.3
     paths:
       - "scripts/portfolio/mock/**"
       - "scripts/portfolio/orchestrator.ts"
@@ -75,5 +76,6 @@ jobs:
         run: >-
           pnpm exec tsx --test
           scripts/portfolio/mock/implementation.test.ts
+          scripts/portfolio/mock/independent-test-contract.test.ts
           scripts/portfolio/provider.test.ts
           scripts/portfolio/orchestrator.test.ts
