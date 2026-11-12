@@ -459,7 +459,7 @@ export async function runMockPortfolioImplementation(): Promise<MockPortfolioRep
   appendStage(log, "PROCESS_AUDIT", fixture.snapshot.posts.length, auditBeforeFinalCall.processedSourceIds.length, "PASS", "Audit checked the executed stage log, complete source coverage, shortlist, model calls and revision count.");
 
   const finalTestCall = modelCall("mock-orchestrator-final-test", "TEST", selected.candidate_id);
-  const finalAudit = buildProcessAudit(fixture, shortlist, auditBeforeFinalCall.revisionCyclesByCandidate as Record<string, number>, [...callRecords, finalTestCall]);
+  const finalAudit = buildProcessAudit(fixture, shortlist, auditBeforeFinalCall.revisionCyclesByCandidate as Record<string, number>, callRecords);
   const result = await runPortfolioOrchestrator({
     snapshotPath: "MOCK_ONLY_NO_FILE_READ",
     prompt: "Validate the already composed deterministic mock Portfolio output.",
