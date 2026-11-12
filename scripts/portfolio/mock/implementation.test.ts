@@ -18,7 +18,7 @@ testRunner("mock pipeline executes real stages in order and returns APPROVED", a
     "SNAPSHOT_VALIDATION", "DISCOVER", "CANDIDATE_GENERATION", "GLOBAL_COMPARISON",
     "COMPOSE", "TEST", "REVISION", "TEST", "FINAL_VALIDATION", "PROCESS_AUDIT", "RESULT",
   ]);
-  assert.deepEqual(report.execution_log.map((entry) => entry.sequence), report.execution_log.map((_entry, index) => index + 1));
+  assert.deepEqual(report.execution_log.map((entry) => entry.sequence), Array.from({ length: report.execution_log.length }, (_, index) => index + 1));
   assert.equal(report.snapshot_posts, 1000);
   assert.equal(report.discovery_records, 1000);
   assert.equal(report.candidates_compared, 2);
@@ -99,9 +99,8 @@ testRunner("Candidate Generation consumes the actual validated Discovery records
   });
   assert.ok(observedRecords);
   assert.equal(observedRecords.length, 1000);
-  assert.deepEqual(observedRecords.map((record) => record.source_id), report.event_trace.length > 0
-    ? observedRecords.map((record) => record.source_id)
-    : []);
+  assert.equal(observedRecords[0].source_id, "mock-source-0001");
+  assert.equal(observedRecords.at(-1)?.source_id, "mock-source-1000");
   assert.equal(observedRecords.filter((record) => record.result === "SIGNALS_FOUND").length, 12);
   assert.equal(observedRecords.filter((record) => record.result === "NO_SIGNAL").length, 988);
 });
@@ -110,7 +109,7 @@ testRunner("Global Comparison receives the Candidates produced by Candidate Gene
   let comparedIds: string[] = [];
   const report = await runMockPortfolioImplementation({
     compareCandidates: (candidates, discovery, snapshot) => {
-      comparedIds = candidates.map((candidate) => candidate.candidate_id);
+      comparedIds = candidates.map((candidate) => candidate.candidate_id).sort();
       return compareCandidates(candidates, discovery, snapshot);
     },
   });
