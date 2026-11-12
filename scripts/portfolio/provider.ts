@@ -396,12 +396,13 @@ export async function evaluateIndependentTest(
       const responseCandidateId = result.data && typeof result.data === "object"
         ? (result.data as { candidate_id?: unknown }).candidate_id
         : undefined;
+      const validationErrors: string[] = validation.ok ? [] : [...validation.errors];
       if (responseCandidateId !== candidateId) {
-        validation.errors.push("test_response.candidate_id: response does not match the requested candidate");
+        validationErrors.push("test_response.candidate_id: response does not match the requested candidate");
       }
-      if (!validation.ok) {
+      if (validationErrors.length > 0) {
         const invalidResponse = new PortfolioProviderError(
-          "Gemini returned an invalid independent TEST response: " + validation.errors.join("; "),
+          "Gemini returned an invalid independent TEST response: " + validationErrors.join("; "),
           {
             retryable: false,
             model,
