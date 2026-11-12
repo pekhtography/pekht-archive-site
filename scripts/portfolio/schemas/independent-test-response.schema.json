@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pekhtography.local/schemas/independent-test-response.schema.json",
+  "title": "Portfolio Independent TEST Response v1.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["candidate_id", "decision", "scores", "findings", "blocking_issues"],
+  "properties": {
+    "candidate_id": {"type": "string", "pattern": "^cand_[a-f0-9]{64}$"},
+    "decision": {"enum": ["APPROVE", "REJECT"]},
+    "scores": {"type": "object", "additionalProperties": false, "required": ["semantic_coherence", "curatorial_originality", "narrative_integrity", "visual_composition", "evidence_integrity"], "properties": {
+      "semantic_coherence": {"type": "integer", "minimum": 1, "maximum": 5},
+      "curatorial_originality": {"type": "integer", "minimum": 1, "maximum": 5},
+      "narrative_integrity": {"type": "integer", "minimum": 1, "maximum": 5},
+      "visual_composition": {"type": "integer", "minimum": 1, "maximum": 5},
+      "evidence_integrity": {"const": 5}
+    }},
+    "findings": {"type": "array", "items": {"type": "string"}},
+    "blocking_issues": {"type": "array", "items": {"type": "string", "minLength": 1}}
+  },
+  "allOf": [
+    {"if": {"properties": {"decision": {"const": "APPROVE"}}, "required": ["decision"]}, "then": {"properties": {"scores": {"properties": {"semantic_coherence": {"minimum": 4}, "curatorial_originality": {"minimum": 4}, "narrative_integrity": {"minimum": 4}, "visual_composition": {"minimum": 4}, "evidence_integrity": {"const": 5}}}, "blocking_issues": {"maxItems": 0}}},
+    {"if": {"properties": {"decision": {"const": "REJECT"}}, "required": ["decision"]}, "then": {"properties": {"blocking_issues": {"minItems": 1}}}}
+  ]
+}
