@@ -107,3 +107,10 @@ A negative integration test changes an evidence quote while keeping the Candidat
 Run with `npm run test:full` under Node 22. The command enables Node's TypeScript type stripping so the harness imports the authoritative 0.2.1 TypeScript validator without building or copying it.
 
 This harness is test-only. It does not call Gemini, write production data, modify the production Orchestrator, alter Validation 0.2.1, or change the meaning of the current ProcessAudit.
+
+
+### Negative integration outcomes
+
+The integration suite additionally proves that a structurally valid but semantically rejected proposal remains in the Candidate Validation Report with explicit reasons and is not admitted to the Candidate Pool. If all proposals are rejected, a completed, hash-consistent empty pool with `NOT_APPLICABLE_EMPTY_POOL` is accepted as a content outcome.
+
+A technical Candidate Generation failure is not an empty-pool outcome: the runtime gate rejects a pool whose `generation_status` is not `COMPLETE`. The runtime validator does not itself assign the overall Run Result (`NO_GALLERY` versus `INCOMPLETE`); that mapping belongs to the Orchestrator and remains deliberately unimplemented and unverified by this harness. These tests therefore verify the artifact-level distinction, not end-to-end orchestration status behavior.
