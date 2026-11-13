@@ -1,0 +1,76 @@
+{
+  "schema_version": "1.0",
+  "snapshot_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "candidate_pool_ids": [
+    "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  ],
+  "evaluations": [
+    {
+      "candidate_id": "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "criteria": [
+        {
+          "criterion": "semantic_coherence",
+          "score": 6,
+          "rationale": "Supported by the referenced source evidence.",
+          "evidence": [
+            {
+              "kind": "OBSERVATION",
+              "observation_id": "src-001:0"
+            }
+          ]
+        },
+        {
+          "criterion": "curatorial_originality",
+          "score": 4,
+          "rationale": "Supported by the referenced source evidence.",
+          "evidence": [
+            {
+              "kind": "OBSERVATION",
+              "observation_id": "src-002:0"
+            }
+          ]
+        },
+        {
+          "criterion": "narrative_integrity",
+          "score": 4,
+          "rationale": "Supported by the referenced source evidence.",
+          "evidence": [
+            {
+              "kind": "OBSERVATION",
+              "observation_id": "src-003:0"
+            }
+          ]
+        },
+        {
+          "criterion": "evidence_integrity",
+          "score": 4,
+          "rationale": "Supported by the referenced source evidence.",
+          "evidence": [
+            {
+              "kind": "OBSERVATION",
+              "observation_id": "src-004:0"
+            }
+          ]
+        },
+        {
+          "criterion": "visual_composition_potential",
+          "score": 4,
+          "rationale": "Supported by the referenced source evidence.",
+          "evidence": [
+            {
+              "kind": "SOURCE_IMAGE",
+              "source_id": "src-005"
+            }
+          ]
+        }
+      ],
+      "blocking_issues": []
+    }
+  ],
+  "stage1_ranking": [
+    "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  ],
+  "preliminary_finalists": [
+    "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  ]
+}
