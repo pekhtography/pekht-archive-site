@@ -148,7 +148,8 @@
                           },
                           "required": [
                             "kind"
-                          ]
+                          ],
+                          "type": "object"
                         }
                       }
                     }
@@ -182,7 +183,8 @@
                           },
                           "required": [
                             "kind"
-                          ]
+                          ],
+                          "type": "object"
                         }
                       }
                     }
