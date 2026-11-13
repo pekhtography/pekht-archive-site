@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pekhtography.local/portfolio-lifecycle-amendment-1/schemas/global-comparison-stage2.schema.json",
+  "title": "Portfolio Lifecycle Amendment 1 Global Comparison Stage 2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "snapshot_sha256", "finalists", "comparisons", "standings", "final_ranking", "shortlist"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "snapshot_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "finalists": {
+      "type": "array",
+      "maxItems": 10,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" }
+    },
+    "comparisons": {
+      "type": "array",
+      "maxItems": 45,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_a_id", "candidate_b_id", "outcome", "rationale", "evidence_observation_ids"],
+        "properties": {
+          "candidate_a_id": { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" },
+          "candidate_b_id": { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" },
+          "outcome": { "enum": ["A_WINS", "B_WINS", "DRAW"] },
+          "rationale": { "type": "string", "minLength": 1 },
+          "evidence_observation_ids": {
+            "type": "array",
+            "minItems": 1,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1, "maxLength": 260 }
+          }
+        }
+      }
+    },
+    "standings": {
+      "type": "array",
+      "maxItems": 10,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_id", "wins", "losses", "draws", "copeland_score"],
+        "properties": {
+          "candidate_id": { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" },
+          "wins": { "type": "integer", "minimum": 0, "maximum": 9 },
+          "losses": { "type": "integer", "minimum": 0, "maximum": 9 },
+          "draws": { "type": "integer", "minimum": 0, "maximum": 9 },
+          "copeland_score": { "type": "integer", "minimum": -9, "maximum": 9 }
+        }
+      }
+    },
+    "final_ranking": {
+      "type": "array",
+      "maxItems": 10,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" }
+    },
+    "shortlist": {
+      "type": "array",
+      "maxItems": 10,
+      "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" }
+    }
+  }
+}
