@@ -82,3 +82,4 @@ jobs:
           scripts/portfolio/mock/independent-test-response-v132.test.ts
           scripts/portfolio/provider.test.ts
           scripts/portfolio/orchestrator.test.ts
+          scripts/portfolio/validation/run-result-validator.test.ts

@@ -276,7 +276,66 @@
             "minLength": 1
           }
         }
-      }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "APPROVED"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "composition": {
+                "type": "object"
+              },
+              "independent_test": {
+                "type": "object",
+                "properties": {
+                  "decision": {
+                    "const": "APPROVE"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "REVISION_EXHAUSTED"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "composition": {
+                "type": "object"
+              },
+              "independent_test": {
+                "type": "object",
+                "properties": {
+                  "decision": {
+                    "const": "REJECT"
+                  }
+                }
+              },
+              "revision_cycles": {
+                "const": 2
+              }
+            }
+          }
+        }
+      ]
     }
   },
   "allOf": [
@@ -292,22 +351,59 @@
         ]
       },
       "then": {
-        "properties": {
-          "gemini_output": {
-            "type": "object",
+        "anyOf": [
+          {
             "properties": {
-              "gallery": {
-                "type": "object"
-              },
-              "test": {
+              "gemini_output": {
+                "type": "object",
                 "properties": {
-                  "decision": {
-                    "const": "APPROVE"
+                  "gallery": {
+                    "type": "object"
+                  },
+                  "test": {
+                    "properties": {
+                      "decision": {
+                        "const": "APPROVE"
+                      }
+                    }
                   }
                 }
               }
             }
           },
+          {
+            "required": [
+              "composition",
+              "independent_test",
+              "candidate_results"
+            ],
+            "properties": {
+              "gemini_output": {
+                "type": "null"
+              },
+              "composition": {
+                "$ref": "gemini-gallery.schema.json"
+              },
+              "independent_test": {
+                "$ref": "independent-test-response-v1.3.2.schema.json"
+              },
+              "candidate_results": {
+                "type": "array",
+                "contains": {
+                  "properties": {
+                    "status": {
+                      "const": "APPROVED"
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "properties": {
           "validation": {
             "properties": {
               "status": {
@@ -339,22 +435,60 @@
         ]
       },
       "then": {
-        "properties": {
-          "gemini_output": {
-            "type": "object",
+        "anyOf": [
+          {
             "properties": {
-              "gallery": {
-                "type": "null"
-              },
-              "test": {
+              "gemini_output": {
+                "type": "object",
                 "properties": {
-                  "decision": {
-                    "const": "REJECT"
+                  "gallery": {
+                    "type": "null"
+                  },
+                  "test": {
+                    "properties": {
+                      "decision": {
+                        "const": "REJECT"
+                      }
+                    }
                   }
                 }
               }
             }
           },
+          {
+            "required": [
+              "candidate_results"
+            ],
+            "properties": {
+              "gemini_output": {
+                "type": "null"
+              },
+              "composition": {
+                "type": "null"
+              },
+              "independent_test": {
+                "type": "null"
+              },
+              "candidate_results": {
+                "type": "array",
+                "items": {
+                  "properties": {
+                    "status": {
+                      "enum": [
+                        "REJECTED",
+                        "REVISION_EXHAUSTED"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "status"
+                  ]
+                }
+              }
+            }
+          }
+        ],
+        "properties": {
           "validation": {
             "properties": {
               "status": {
