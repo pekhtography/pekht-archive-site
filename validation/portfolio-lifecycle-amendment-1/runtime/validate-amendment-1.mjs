@@ -331,12 +331,12 @@ export function validateLifecycleAmendment1(input) {
       errors.push(`model calls: corpus stage ${call.stage} must have candidate_id=null`);
     }
     if (CANDIDATE_STAGES.has(call.stage) &&
-        (!poolIds.includes(call.candidate_id) || typeof call.candidate_id !== "string")) {
+        (!(audit?.shortlist_ids ?? []).includes(call.candidate_id) || typeof call.candidate_id !== "string")) {
       errors.push(`model calls: candidate stage ${call.stage} must reference a Candidate in the pool`);
     }
   }
   for (const [id, cycles] of Object.entries(audit?.revision_cycles_by_candidate ?? {})) {
-    if (!poolIds.includes(id) || !Number.isInteger(cycles) || cycles < 0 || cycles > 2) {
+    if (!(audit?.shortlist_ids ?? []).includes(id) || !Number.isInteger(cycles) || cycles < 0 || cycles > 2) {
       errors.push(`audit: invalid revision cycle count for ${id}`);
     }
   }
