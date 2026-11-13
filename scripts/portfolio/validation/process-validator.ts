@@ -26,8 +26,10 @@ export interface PortfolioProcessValidationContext {
   actualSnapshotSourceIds?: readonly string[];
   /** Candidate selected for this composition/test invocation. */
   selectedCandidateId?: string | null;
-  /** Revision count reported by Gemini for the selected candidate. */
+  /** Revision count reported by the independent Orchestrator lifecycle. */
   reportedRevisionCycles?: number;
+  /** Require the standalone COMPOSE → TEST → (REVISION → TEST)* call sequence. */
+  requireCandidateLifecycle?: boolean;
 }
 
 function sameIds(left: readonly string[], right: readonly string[]): boolean {
@@ -82,5 +84,50 @@ export function validatePortfolioProcess(
     if (call.stage !== "DISCOVER" && (!call.candidate_id || !candidates.includes(call.candidate_id))) errors.push(`MODEL_CALL_UNKNOWN_CANDIDATE: call_id=${call.call_id}`);
   }
   validateCallChains(audit.modelCalls,errors);
+  if (context.requireCandidateLifecycle) {
+    // Collapse fallback attempts into logical calls while preserving first-seen order.
+    const logicalCalls: ModelCallRecord[] = [];
+    const seenCallIds = new Set<string>();
+    for (const call of audit.modelCalls) {
+      if (seenCallIds.has(call.call_id)) continue;
+      seenCallIds.add(call.call_id);
+      logicalCalls.push(call);
+    }
+    for (const candidateId of candidates) {
+      const calls = logicalCalls.filter((call) => call.candidate_id === candidateId);
+      if (calls.length === 0) continue;
+      const stages = calls.map((call) => call.stage);
+      if (stages[0] !== "COMPOSE") {
+        errors.push(`CANDIDATE_LIFECYCLE_MUST_START_WITH_COMPOSE: candidate_id=${candidateId}`);
+        continue;
+      }
+      let index = 1;
+      let revisions = 0;
+      if (stages[index] !== "TEST") {
+        errors.push(`CANDIDATE_LIFECYCLE_COMPOSE_MUST_BE_FOLLOWED_BY_TEST: candidate_id=${candidateId}`);
+        continue;
+      }
+      index += 1;
+      while (index < stages.length) {
+        if (stages[index] !== "REVISION") {
+          errors.push(`CANDIDATE_LIFECYCLE_EXPECTED_REVISION: candidate_id=${candidateId}, index=${index}`);
+          break;
+        }
+        revisions += 1;
+        if (revisions > 2) {
+          errors.push(`CANDIDATE_LIFECYCLE_REVISION_LIMIT_EXCEEDED: candidate_id=${candidateId}`);
+          break;
+        }
+        index += 1;
+        if (stages[index] !== "TEST") {
+          errors.push(`CANDIDATE_LIFECYCLE_REVISION_MUST_BE_FOLLOWED_BY_TEST: candidate_id=${candidateId}`);
+          break;
+        }
+        index += 1;
+      }
+      const auditedCycles = audit.revisionCyclesByCandidate?.[candidateId];
+      if (auditedCycles !== revisions) errors.push(`CANDIDATE_LIFECYCLE_REVISION_COUNT_MISMATCH: candidate_id=${candidateId}, calls=${revisions}, audit=${auditedCycles ?? "missing"}`);
+    }
+  }
   return result(errors);
 }

@@ -21,3 +21,26 @@ test("rejects broken fallback accounting",()=>{const v=audit();v.modelCalls[0].o
 test("rejects process audit source IDs that differ from the loaded snapshot",()=>assert.equal(validatePortfolioProcess(audit(),{actualSnapshotSourceIds:[...ids.slice(1),"outside"]}).ok,false));
 test("rejects a selected candidate absent from the global shortlist",()=>assert.equal(validatePortfolioProcess(audit(),{selectedCandidateId:"candidate-unknown"}).ok,false));
 test("rejects revision count that differs from the selected candidate audit",()=>assert.equal(validatePortfolioProcess(audit(),{selectedCandidateId:"candidate-1",reportedRevisionCycles:1}).ok,false));
+
+
+function lifecycleCalls(stages: string[]) {
+  return stages.map((stage, index) => ({
+    call_id: `logical-${index}`, stage, candidate_id: "candidate-1",
+    model: "model-a", fallback_index: 0, attempts: 1, outcome: "SUCCESS",
+  }));
+}
+test("strict lifecycle accepts COMPOSE → TEST → REVISION → TEST", () => {
+  const value = audit({ revisionCyclesByCandidate: { "candidate-1": 1 }, modelCalls: lifecycleCalls(["COMPOSE", "TEST", "REVISION", "TEST"]) });
+  assert.deepEqual(validatePortfolioProcess(value, { requireCandidateLifecycle: true }), { ok: true, errors: [] });
+});
+test("strict lifecycle rejects TEST before COMPOSE", () => {
+  const checked = validatePortfolioProcess(audit({ modelCalls: lifecycleCalls(["TEST", "COMPOSE"]) }), { requireCandidateLifecycle: true });
+  assert.equal(checked.ok, false);
+  assert.ok(checked.errors.some((error) => error.startsWith("CANDIDATE_LIFECYCLE_MUST_START_WITH_COMPOSE")));
+});
+test("strict lifecycle rejects REVISION without a following TEST", () => {
+  const value = audit({ revisionCyclesByCandidate: { "candidate-1": 1 }, modelCalls: lifecycleCalls(["COMPOSE", "TEST", "REVISION"]) });
+  const checked = validatePortfolioProcess(value, { requireCandidateLifecycle: true });
+  assert.equal(checked.ok, false);
+  assert.ok(checked.errors.some((error) => error.startsWith("CANDIDATE_LIFECYCLE_REVISION_MUST_BE_FOLLOWED_BY_TEST")));
+});
