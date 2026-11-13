@@ -332,3 +332,44 @@ test("revision binding: rejects Gemini revision count that differs from process 
   assert.equal(result.validation.process, "FAIL");
   assert.ok(result.validation.findings.some((finding) => finding.message.startsWith("REVISION_CYCLE_MISMATCH")));
 });
+
+
+test("standalone lifecycle: COMPOSE is followed by an independent TEST and returns separated result fields", async () => {
+  const candidateId = "cand_" + "a".repeat(64);
+  const sourceIds = posts.slice(0, 6).map((post) => post.source_id);
+  const gallery = makeOutput().gallery!;
+  const approvedTest = {
+    candidate_id: candidateId,
+    decision: "APPROVE" as const,
+    scores: { semantic_coherence: 4, curatorial_originality: 4, narrative_integrity: 4, visual_composition: 4, evidence_integrity: 5 },
+    findings: [],
+    blocking_issues: [],
+  };
+  const result = await runPortfolioOrchestrator(makeInput({
+    candidateId,
+    processAudit: makeAudit({
+      candidateIds: [candidateId],
+      candidateSourceIdsById: { [candidateId]: sourceIds },
+      revisionCyclesByCandidate: { [candidateId]: 0 },
+    }),
+  }), {
+    readSnapshot: async () => loadedSnapshot,
+    gallerySchema: {},
+    independentTestSchema: {},
+    compose: async (_prompt, _schema, options) => ({
+      data: gallery,
+      model_used: [modelCall({ call_id: "standalone-compose", stage: options.stage, candidate_id: candidateId })],
+    }),
+    evaluateTest: async (_prompt, _schema, options) => ({
+      data: approvedTest,
+      model_used: [modelCall({ call_id: "standalone-test", stage: "TEST", candidate_id: options.candidateId })],
+    }),
+  });
+
+  assert.equal(result.status, "APPROVED");
+  assert.equal(result.gemini_output, null);
+  assert.deepEqual(result.composition, gallery);
+  assert.deepEqual(result.independent_test, approvedTest);
+  assert.equal(result.candidate_results?.[0].status, "APPROVED");
+  assert.deepEqual(result.model_used.map((call) => call.stage), ["COMPOSE", "TEST"]);
+});

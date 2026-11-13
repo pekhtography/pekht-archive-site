@@ -25,7 +25,7 @@ export function validateRunResult(value: unknown): ValidationResult {
     if (!checked.ok) errors.push(...checked.errors.map((e) => `gemini_output: ${e}`));
   }
   if ("composition" in value && value.composition !== null) {
-    const checked = validateGeminiOutput({ gallery: value.composition, test: { decision: "REJECT", findings: [], revision_cycles: 0 } });
+    const checked = validateGeminiOutput({ gallery: value.composition, test: { decision: "APPROVE", findings: [], revision_cycles: 0 } });
     if (!checked.ok) errors.push(...checked.errors.map((e) => `composition: ${e}`));
   }
   if ("independent_test" in value && value.independent_test !== null) {
@@ -47,7 +47,7 @@ export function validateRunResult(value: unknown): ValidationResult {
       if (!isNonEmptyString(candidate.candidate_id)) errors.push(`${path}.candidate_id: required`);
       if (!["APPROVED","REJECTED","REVISION_EXHAUSTED","INCOMPLETE"].includes(String(candidate.status))) errors.push(`${path}.status: invalid candidate status`);
       if (candidate.composition !== null) {
-        const checked = validateGeminiOutput({ gallery: candidate.composition, test: { decision: "REJECT", findings: [], revision_cycles: 0 } });
+        const checked = validateGeminiOutput({ gallery: candidate.composition, test: { decision: "APPROVE", findings: [], revision_cycles: 0 } });
         if (!checked.ok) errors.push(...checked.errors.map((e) => `${path}.composition: ${e}`));
       }
       if (candidate.independent_test !== null && !isRecord(candidate.independent_test)) errors.push(`${path}.independent_test: expected an object or null`);
@@ -95,7 +95,7 @@ export function validateRunResult(value: unknown): ValidationResult {
     }
     if (value.status === "NO_GALLERY") {
       const legacy = isRecord(output) && output.gallery === null && isRecord(output.test) && output.test.decision === "REJECT";
-      const standalone = Array.isArray(value.candidate_results) && value.candidate_results.length === 0 && value.composition === null && value.independent_test === null;
+      const standalone = Array.isArray(value.candidate_results) && value.composition === null && value.independent_test === null\n        && value.candidate_results.every((candidate) => isRecord(candidate) && (candidate.status === "REJECTED" || candidate.status === "REVISION_EXHAUSTED"));
       if (!legacy && !standalone) errors.push("status NO_GALLERY requires no approved composition and no candidate TEST");
       if (validation.status !== "PASS" || validation.structural !== "PASS" || validation.semantic !== "PASS" || validation.process !== "PASS") errors.push("status NO_GALLERY requires all validation levels PASS");
     }
