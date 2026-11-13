@@ -8,6 +8,8 @@ on:
     paths:
       - "scripts/portfolio/mock/**"
       - "scripts/portfolio/orchestrator.ts"
+      - "scripts/portfolio/orchestrator-lifecycle.ts"
+      - "scripts/portfolio/orchestrator.test.ts"
       - "scripts/portfolio/snapshot.ts"
       - "scripts/portfolio/provider.ts"
       - "scripts/portfolio/validation/**"

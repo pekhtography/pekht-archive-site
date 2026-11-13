@@ -460,7 +460,7 @@ test("standalone lifecycle: malformed independent TEST is INCOMPLETE and stops c
   assert.equal(result.candidate_results?.[0].status, "INCOMPLETE");
   assert.equal(result.independent_test, null);
   assert.equal(result.validation.status, "FAIL");
-  assert.ok(result.validation.findings.some((finding) => finding.message.includes("candidate_id")));
+  assert.ok(result.candidate_results?.[0].findings.some((finding) => finding.includes("candidate_id")));
 });
 
 test("standalone lifecycle: provider fallback exhaustion preserves real diagnostics and returns INCOMPLETE", async () => {
