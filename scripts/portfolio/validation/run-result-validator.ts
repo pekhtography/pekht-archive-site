@@ -95,7 +95,8 @@ export function validateRunResult(value: unknown): ValidationResult {
     }
     if (value.status === "NO_GALLERY") {
       const legacy = isRecord(output) && output.gallery === null && isRecord(output.test) && output.test.decision === "REJECT";
-      const standalone = Array.isArray(value.candidate_results) && value.composition === null && value.independent_test === null\n        && value.candidate_results.every((candidate) => isRecord(candidate) && (candidate.status === "REJECTED" || candidate.status === "REVISION_EXHAUSTED"));
+      const standalone = Array.isArray(value.candidate_results) && value.composition === null && value.independent_test === null
+        && value.candidate_results.every((candidate) => isRecord(candidate) && (candidate.status === "REJECTED" || candidate.status === "REVISION_EXHAUSTED"));
       if (!legacy && !standalone) errors.push("status NO_GALLERY requires no approved composition and no candidate TEST");
       if (validation.status !== "PASS" || validation.structural !== "PASS" || validation.semantic !== "PASS" || validation.process !== "PASS") errors.push("status NO_GALLERY requires all validation levels PASS");
     }
