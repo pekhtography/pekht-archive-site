@@ -87,13 +87,14 @@ function makeValidInput() {
   };
   const audit = {
     schema_version: "2.0", snapshot_source_ids: ids, processed_source_ids: ids,
-    discovery_artifact: { ...contents.discovery, record_count: 1000 },
-    candidate_pool_artifact: contents.candidate_pool,
-    candidate_validation_artifact: contents.candidate_validation,
+    discovery_artifact: { artifact_ref: contents.discovery.artifact_ref, content_sha256: hash(contents.discovery.content), record_count: 1000 },
+    candidate_pool_artifact: { artifact_ref: contents.candidate_pool.artifact_ref, content_sha256: hash(contents.candidate_pool.content) },
+    candidate_validation_artifact: { artifact_ref: contents.candidate_validation.artifact_ref, content_sha256: hash(contents.candidate_validation.content) },
     candidate_pool_ids: [candidateA, candidateB], shortlist_ids: [candidateA],
     candidate_source_ids_by_id: { [candidateA]: sourceA, [candidateB]: sourceB },
     global_comparison: { status: "COMPLETED",
-      stage1_artifact: contents.stage1, stage2_artifact: contents.stage2 },
+      stage1_artifact: { artifact_ref: contents.stage1.artifact_ref, content_sha256: hash(contents.stage1.content) },
+      stage2_artifact: { artifact_ref: contents.stage2.artifact_ref, content_sha256: hash(contents.stage2.content) } },
     revision_cycles_by_candidate: {}, model_calls: [],
   };
   return {
