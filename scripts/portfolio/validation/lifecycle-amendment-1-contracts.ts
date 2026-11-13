@@ -178,6 +178,7 @@ export interface PortfolioProcessAuditV2 {
  *   against every already selected Candidate;
  * - an empty Candidate pool uses NOT_APPLICABLE_EMPTY_POOL and has no Stage 1/2
  *   artifacts; a non-empty pool requires completed Stage 1 and Stage 2 artifacts;
- * - corpus-level stages have candidate_id=null; candidate-level stages do not;
- * - fallback chains and lifecycle call ordering follow the existing rules.
+ * - corpus-level stages have candidate_id=null; candidate-level stages reference shortlist IDs;
+ * - provider fallback-chain policy and full lifecycle call ordering remain separate
+ *   Provider/Orchestrator gates and are not implemented by this cross-artifact validator.
  */
