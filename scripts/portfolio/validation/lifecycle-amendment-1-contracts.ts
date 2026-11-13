@@ -33,8 +33,8 @@ export interface LifecycleCandidatePoolEntry extends LifecycleArtifactReference 
 export interface LifecycleCandidatePoolV1 {
   schema_version: "1.0";
   snapshot_sha256: string;
-  generation_status: "COMPLETE" | "NO_CANDIDATES";
-  /** Validated, deduplicated Candidate set; never more than 100. */
+  generation_status: "COMPLETE";
+  /** Validated, deduplicated Candidate set; may be empty and never exceeds 100. */
   candidates: LifecycleCandidatePoolEntry[];
 }
 
@@ -96,7 +96,7 @@ export interface LifecyclePairwiseComparison {
   candidate_b_id: string;
   outcome: LifecyclePairwiseOutcome;
   rationale: string;
-  evidence_observation_ids: string[];
+  evidence: LifecycleEvaluationEvidence[];
 }
 
 export interface LifecycleCopelandStanding {
@@ -122,6 +122,16 @@ export interface LifecycleGlobalComparisonStage2V1 {
   shortlist: string[];
 }
 
+export type LifecycleGlobalComparisonStatus =
+  | "COMPLETED"
+  | "NOT_APPLICABLE_EMPTY_POOL";
+
+export interface LifecycleGlobalComparisonAuditV1 {
+  status: LifecycleGlobalComparisonStatus;
+  stage1_artifact?: LifecycleArtifactReference;
+  stage2_artifact?: LifecycleArtifactReference;
+}
+
 export interface LifecycleAmendment1ModelCallRecord {
   call_id: string;
   stage: LifecycleAmendment1Stage;
@@ -133,17 +143,11 @@ export interface LifecycleAmendment1ModelCallRecord {
   outcome: LifecycleAmendment1ModelOutcome;
 }
 
-export interface LifecycleGlobalComparisonAuditV1 {
-  stage1_artifact: LifecycleArtifactReference;
-  stage2_artifact: LifecycleArtifactReference;
-  completed: boolean;
-}
-
 export interface PortfolioProcessAuditV2 {
   schema_version: "2.0";
   snapshot_source_ids: string[];
   processed_source_ids: string[];
-  discovery_artifact: LifecycleArtifactReference;
+  discovery_artifact: LifecycleDiscoveryArtifact;
   candidate_pool_artifact: LifecycleArtifactReference;
   candidate_validation_artifact: LifecycleArtifactReference;
   candidate_pool_ids: string[];
@@ -163,7 +167,7 @@ export interface PortfolioProcessAuditV2 {
  * - each Candidate has exactly six source IDs from the verified Snapshot;
  * - Stage 1 has one unique evaluation per pool Candidate and five unique criteria;
  * - visual_composition_potential evidence uses SOURCE_IMAGE only; all other
- *   criteria use OBSERVATION evidence;
+ *   Stage 1 criteria use OBSERVATION evidence;
  * - Stage 1 ranking is the eligible Candidate set sorted by the lexicographic
  *   tuple: semantic_coherence, curatorial_originality, narrative_integrity,
  *   evidence_integrity, visual_composition_potential (descending), then ID
@@ -172,6 +176,8 @@ export interface PortfolioProcessAuditV2 {
  * - Copeland totals and final_ranking are recomputed, not trusted;
  * - shortlist is the greedy scan of final_ranking with <= 3 shared source IDs
  *   against every already selected Candidate;
+ * - an empty Candidate pool uses NOT_APPLICABLE_EMPTY_POOL and has no Stage 1/2
+ *   artifacts; a non-empty pool requires completed Stage 1 and Stage 2 artifacts;
  * - corpus-level stages have candidate_id=null; candidate-level stages do not;
  * - fallback chains and lifecycle call ordering follow the existing rules.
  */
