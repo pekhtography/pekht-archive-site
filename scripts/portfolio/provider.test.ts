@@ -118,6 +118,56 @@ test("429: skips a model on confirmed daily quota and falls back immediately", a
   });
 });
 
+test("429 unknown quota without Retry-After: skips current model and falls back immediately", async () => {
+  await withHarness(async ({ waits }) => {
+    let request = 0;
+    const result = await generatePortfolioJson("prompt", {}, {
+      stage: "COMPOSE", callId: "call-unknown-quota-no-header",
+      fetchFn: async () => {
+        request += 1;
+        if (request === 1) {
+          return new Response(JSON.stringify({
+            error: { code: 429, message: "Too many requests" },
+          }), { status: 429 });
+        }
+        return okResponse();
+      },
+      sleepFn: async (ms) => { waits.push(ms); },
+    });
+    assert.equal(request, 2);
+    assert.deepEqual(waits, []);
+    assert.equal(result.model_used.length, 2);
+    assert.equal(result.model_used[0].outcome, "FALLBACK");
+    assert.equal(result.model_used[0].attempts, 1);
+    assert.equal(result.model_used[1].outcome, "SUCCESS");
+  });
+});
+
+test("429 unknown quota with short Retry-After: skips current model without sleeping", async () => {
+  await withHarness(async ({ waits }) => {
+    let request = 0;
+    const result = await generatePortfolioJson("prompt", {}, {
+      stage: "COMPOSE", callId: "call-unknown-quota-short-header",
+      fetchFn: async () => {
+        request += 1;
+        if (request === 1) {
+          return new Response(JSON.stringify({
+            error: { code: 429, message: "Too many requests" },
+          }), { status: 429, headers: { "Retry-After": "30" } });
+        }
+        return okResponse();
+      },
+      sleepFn: async (ms) => { waits.push(ms); },
+    });
+    assert.equal(request, 2);
+    assert.deepEqual(waits, []);
+    assert.equal(result.model_used.length, 2);
+    assert.equal(result.model_used[0].outcome, "FALLBACK");
+    assert.equal(result.model_used[0].attempts, 1);
+    assert.equal(result.model_used[1].outcome, "SUCCESS");
+  });
+});
+
 test("5xx: retries transient server errors with exponential backoff", async () => {
   await withHarness(async ({ waits }) => {
     let request = 0;
