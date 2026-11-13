@@ -150,3 +150,49 @@ test("global lifecycle rejects results that skip or reorder the global shortlist
   assert.equal(checked.ok, false);
   assert.ok(checked.errors.some((error) => error.startsWith("CANDIDATE_RESULT_ORDER_MISMATCH")));
 });
+
+test("global lifecycle rejects an empty result list when shortlisted candidates exist", () => {
+  const value = audit();
+  const checked = validatePortfolioProcess(value, { requireCandidateLifecycle: true, candidateResults: [] });
+  assert.equal(checked.ok, false);
+  assert.ok(checked.errors.includes("CANDIDATE_RESULTS_MISSING"));
+});
+
+test("global lifecycle rejects stopping after REVISION_EXHAUSTED while candidates remain", () => {
+  const first = "candidate-1";
+  const second = "candidate-2";
+  const calls = [
+    candidateCall(first, "COMPOSE", 0), candidateCall(first, "TEST", 1),
+    candidateCall(first, "REVISION", 2), candidateCall(first, "TEST", 3),
+    candidateCall(first, "REVISION", 4), candidateCall(first, "TEST", 5),
+  ];
+  const value = audit({
+    candidateIds: [first, second],
+    candidateSourceIdsById: { [first]: ids.slice(0, 6), [second]: ids.slice(6, 12) },
+    revisionCyclesByCandidate: { [first]: 2, [second]: 0 },
+    modelCalls: calls,
+  });
+  const checked = validatePortfolioProcess(value, {
+    requireCandidateLifecycle: true,
+    candidateResults: [candidateResult(first, "REVISION_EXHAUSTED", 2, "REJECT")],
+  });
+  assert.equal(checked.ok, false);
+  assert.ok(checked.errors.includes("CANDIDATE_PROCESSING_STOPPED_BEFORE_SHORTLIST_END"));
+});
+
+test("global lifecycle rejects terminal REJECTED result without a composition", () => {
+  const value = audit({
+    revisionCyclesByCandidate: { "candidate-1": 0 },
+    modelCalls: lifecycleCalls(["COMPOSE", "TEST"]),
+  });
+  const rejected = {
+    ...candidateResult("candidate-1", "REJECTED", 0, "REJECT"),
+    composition: null,
+  };
+  const checked = validatePortfolioProcess(value, {
+    requireCandidateLifecycle: true,
+    candidateResults: [rejected],
+  });
+  assert.equal(checked.ok, false);
+  assert.ok(checked.errors.includes("CANDIDATE_TERMINAL_RESULT_MISSING_COMPOSITION: candidate_id=candidate-1"));
+});

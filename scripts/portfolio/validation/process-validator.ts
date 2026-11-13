@@ -139,7 +139,14 @@ export function validatePortfolioProcess(
     const resultIds = candidateResults.map((candidate) => candidate.candidate_id);
 
     if (new Set(resultIds).size !== resultIds.length) errors.push("CANDIDATE_RESULT_IDS_DUPLICATED");
+    if (expectedCandidates.length > 0 && resultIds.length === 0) errors.push("CANDIDATE_RESULTS_MISSING");
     if (resultIds.length > expectedCandidates.length) errors.push("CANDIDATE_RESULT_COUNT_EXCEEDS_SELECTED_CANDIDATES");
+    if (resultIds.length < expectedCandidates.length) {
+      const lastResult = candidateResults[candidateResults.length - 1];
+      if (!lastResult || (lastResult.status !== "APPROVED" && lastResult.status !== "INCOMPLETE")) {
+        errors.push("CANDIDATE_PROCESSING_STOPPED_BEFORE_SHORTLIST_END");
+      }
+    }
     resultIds.forEach((candidateId, index) => {
       if (expectedCandidates[index] !== candidateId) {
         errors.push(`CANDIDATE_RESULT_ORDER_MISMATCH: index=${index}, expected=${expectedCandidates[index] ?? "none"}, received=${candidateId}`);
@@ -152,6 +159,9 @@ export function validatePortfolioProcess(
       }
       if (candidate.revision_cycles !== (audit.revisionCyclesByCandidate?.[candidate.candidate_id] ?? 0)) {
         errors.push(`CANDIDATE_RESULT_REVISION_COUNT_MISMATCH: candidate_id=${candidate.candidate_id}`);
+      }
+      if ((candidate.status === "APPROVED" || candidate.status === "REJECTED" || candidate.status === "REVISION_EXHAUSTED") && candidate.composition === null) {
+        errors.push(`CANDIDATE_TERMINAL_RESULT_MISSING_COMPOSITION: candidate_id=${candidate.candidate_id}`);
       }
       if (candidate.status === "APPROVED" && candidate.independent_test?.decision !== "APPROVE") {
         errors.push(`CANDIDATE_APPROVED_WITHOUT_APPROVE_TEST: candidate_id=${candidate.candidate_id}`);
