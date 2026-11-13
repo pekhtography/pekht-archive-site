@@ -124,7 +124,11 @@
             "required": [
               "stage1_artifact",
               "stage2_artifact"
-            ]
+            ],
+            "properties": {
+              "stage1_artifact": {},
+              "stage2_artifact": {}
+            }
           }
         },
         {
@@ -144,12 +148,20 @@
                 {
                   "required": [
                     "stage1_artifact"
-                  ]
+                  ],
+                  "properties": {
+                    "stage1_artifact": {},
+                    "stage2_artifact": {}
+                  }
                 },
                 {
                   "required": [
                     "stage2_artifact"
-                  ]
+                  ],
+                  "properties": {
+                    "stage1_artifact": {},
+                    "stage2_artifact": {}
+                  }
                 }
               ]
             }
