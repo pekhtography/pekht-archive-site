@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pekhtography.local/portfolio-lifecycle-amendment-1/schemas/candidate-pool.schema.json",
+  "title": "Portfolio Lifecycle Amendment 1 Candidate Pool",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "snapshot_sha256", "generation_status", "candidates"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "snapshot_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "generation_status": { "enum": ["COMPLETE", "NO_CANDIDATES"] },
+    "candidates": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_id", "source_ids", "artifact_ref", "content_sha256"],
+        "properties": {
+          "candidate_id": { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" },
+          "source_ids": {
+            "type": "array",
+            "minItems": 6,
+            "maxItems": 6,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1, "maxLength": 128 }
+          },
+          "artifact_ref": { "type": "string", "minLength": 1 },
+          "content_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "generation_status": { "const": "NO_CANDIDATES" } }, "required": ["generation_status"] },
+      "then": { "properties": { "candidates": { "maxItems": 0 } } }
+    },
+    {
+      "if": { "properties": { "generation_status": { "const": "COMPLETE" } }, "required": ["generation_status"] },
+      "then": { "properties": { "candidates": { "minItems": 1 } } }
+    }
+  ]
+}
