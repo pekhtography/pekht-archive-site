@@ -327,6 +327,7 @@
       "if": {
         "properties": {
           "candidate_pool_ids": {
+            "type": "array",
             "minItems": 1
           }
         },
@@ -353,6 +354,7 @@
       "if": {
         "properties": {
           "candidate_pool_ids": {
+            "type": "array",
             "maxItems": 0
           }
         },
