@@ -8,7 +8,7 @@
   },
   "scripts": {
     "validate:schema": "node scripts/validate-schemas.mjs",
-    "test:full": "node --test tests/contracts.test.mjs",
+    "test:full": "node --test tests/contracts.test.mjs tests/runtime.test.mjs",
     "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
