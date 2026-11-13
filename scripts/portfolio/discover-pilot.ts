@@ -9,8 +9,9 @@ const outputPath = process.env.PORTFOLIO_DISCOVER_RESULT_PATH ?? "portfolio-disc
 const PILOT_SIZE = 20;
 
 const responseSchema = {
+  // Gemini responseSchema supports a restricted schema subset; strict extra-key rejection
+  // is enforced locally by validateDiscoveryRecords after generation, not sent to Gemini.
   type: "object",
-  additionalProperties: false,
   required: ["records"],
   properties: {
     records: {
@@ -19,7 +20,6 @@ const responseSchema = {
       maxItems: PILOT_SIZE,
       items: {
         type: "object",
-        additionalProperties: false,
         required: ["source_id", "result", "observations"],
         properties: {
           source_id: { type: "string", minLength: 1, maxLength: 128 },
@@ -28,7 +28,6 @@ const responseSchema = {
             type: "array",
             items: {
               type: "object",
-              additionalProperties: false,
               required: ["prism", "signal", "interpretation", "evidence"],
               properties: {
                 prism: { type: "string", minLength: 1 },
@@ -39,7 +38,6 @@ const responseSchema = {
                   minItems: 1,
                   items: {
                     type: "object",
-                    additionalProperties: false,
                     required: ["source", "quote"],
                     properties: {
                       source: { enum: ["BODY", "ORIGINAL_MARKDOWN"] },
