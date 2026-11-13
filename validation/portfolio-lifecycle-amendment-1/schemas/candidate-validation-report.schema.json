@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pekhtography.local/portfolio-lifecycle-amendment-1/schemas/candidate-validation-report.schema.json",
+  "title": "Portfolio Lifecycle Amendment 1 Candidate Validation Report",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "snapshot_sha256", "results"],
+  "properties": {
+    "schema_version": { "const": "1.0" },
+    "snapshot_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "results": {
+      "type": "array",
+      "maxItems": 100,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["candidate_id", "source_ids", "status", "errors"],
+        "properties": {
+          "candidate_id": { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" },
+          "source_ids": {
+            "type": "array",
+            "minItems": 6,
+            "maxItems": 6,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1, "maxLength": 128 }
+          },
+          "status": { "enum": ["PASS", "REJECTED"] },
+          "errors": {
+            "type": "array",
+            "items": { "type": "string", "minLength": 1 }
+          }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "status": { "const": "PASS" } }, "required": ["status"] },
+            "then": { "properties": { "errors": { "maxItems": 0 } } }
+          },
+          {
+            "if": { "properties": { "status": { "const": "REJECTED" } }, "required": ["status"] },
+            "then": { "properties": { "errors": { "minItems": 1 } } }
+          }
+        ]
+      }
+    }
+  }
+}
