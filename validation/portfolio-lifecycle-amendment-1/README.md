@@ -25,7 +25,7 @@ Status: additive contract draft prepared from the approved Amendment 1 decisions
 
 The generation stage may emit no more than 100 proposals. The validation report records every proposal and its PASS/REJECTED result. The Candidate Pool contains only PASS proposals, deduplicated by canonical Candidate ID. A duplicate ID with byte-identical canonical content is deduplicated; the same ID with different content is an identity conflict and makes the run INCOMPLETE. A response exceeding 100 proposals is not truncated: the run is INCOMPLETE.
 
-A valid empty pool after a completed generation and validation stage is a content outcome and yields NO_GALLERY. A provider, quota, timeout, parse, or schema failure is technical and yields INCOMPLETE.
+A completed Candidate Generation stage emits at most 100 proposals; a response exceeding 100 is not truncated and yields INCOMPLETE. The Candidate Pool artifact always has generation_status=COMPLETE and contains only PASS proposals. Its candidates array may be empty: this covers both no proposals and the case where every proposal was rejected, which are distinguished by the validation report. A valid empty pool is a content outcome and yields NO_GALLERY. A provider, quota, timeout, parse, or schema failure is technical and yields INCOMPLETE.
 
 Each Candidate remains subject to the existing Candidate schema, canonical Candidate ID function, and Validation 0.2.1 runtime validators. Those contracts are reused, not copied or redefined here.
 
@@ -49,7 +49,7 @@ Every unordered pair among the Stage 1 finalists is compared exactly once. Pair 
 
 Copeland score is wins minus losses; draws contribute zero. Final ranking is Copeland score descending, then the Stage 1 five-score tuple descending, then `candidate_id` ascending. This produces a deterministic ranking even if pairwise preferences contain cycles.
 
-For zero finalists, Stage 2 contains empty comparisons, standings, ranking, and shortlist. For one finalist, it contains one standing and no pairwise comparisons.
+For a non-empty Candidate pool but zero eligible finalists, Stage 2 contains empty comparisons, standings, ranking, and shortlist. For one finalist, it contains one standing and no pairwise comparisons. If the Candidate pool itself is empty, Global Comparison is NOT_APPLICABLE_EMPTY_POOL: no Stage 1 or Stage 2 artifacts are fabricated, and the completed upstream pipeline yields NO_GALLERY.
 
 ### Shortlist
 
@@ -59,7 +59,7 @@ Scan the final ranking from top to bottom. Add a Candidate only if its source-ID
 
 JSON Schema checks individual artifact structure. Independent runtime validation must additionally reconcile artifact contents and hashes, enforce set equality and ordering, verify all pair combinations, recompute Copeland scores, recompute both rankings, and verify the greedy overlap-constrained shortlist. A schema PASS alone is not a Global Comparison PASS.
 
-The process audit's `global_comparison.completed` may be true only after both stages, all comparisons, ranking, shortlist, artifact persistence, and cross-artifact validation have completed.
+The process audit uses `global_comparison.status`. `COMPLETED` is allowed only after both stages, all comparisons, ranking, shortlist, artifact persistence, and cross-artifact validation have completed. `NOT_APPLICABLE_EMPTY_POOL` is allowed only when the validated Candidate pool is empty; it has no Stage 1 or Stage 2 artifact references.
 
 ## Compatibility and migration boundary
 
