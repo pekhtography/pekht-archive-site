@@ -168,3 +168,12 @@ test("accepts a validated empty Candidate Pool without fabricated comparison art
   const result = validateLifecycleAmendment1(input);
   assert.deepEqual(result, { valid: true, errors: [] });
 });
+
+test("rejects parsed audit artifact content that differs from the supplied object", () => {
+  const input = makeValidInput();
+  input.stage2.shortlist = [];
+  const result = validateLifecycleAmendment1(input);
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((error) =>
+    error.includes("parsed artifact content does not match the supplied validated object")));
+});
