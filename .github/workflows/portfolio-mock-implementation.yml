@@ -84,6 +84,10 @@ jobs:
           python -m pip install --disable-pip-version-check jsonschema==4.26.0
           python scripts/portfolio/validation/validate-run-result-schema.py
 
+      - name: Validate Portfolio run-result JSON Schema with Ajv
+        working-directory: validation/portfolio-validation-0.2.1
+        run: node scripts/validate-portfolio-run-result.mjs
+
       - name: Run mock implementation and existing orchestrator tests
         run: >-
           pnpm exec tsx --test
