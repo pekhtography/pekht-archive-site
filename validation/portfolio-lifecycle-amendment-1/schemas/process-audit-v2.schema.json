@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pekhtography.local/portfolio-lifecycle-amendment-1/schemas/process-audit-v2.schema.json",
+  "title": "Portfolio Lifecycle Amendment 1 Process Audit V2",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "snapshot_source_ids", "processed_source_ids",
+    "discovery_artifact", "candidate_pool_artifact", "candidate_validation_artifact",
+    "candidate_pool_ids", "shortlist_ids", "candidate_source_ids_by_id",
+    "global_comparison", "revision_cycles_by_candidate", "model_calls"
+  ],
+  "properties": {
+    "schema_version": { "const": "2.0" },
+    "snapshot_source_ids": {
+      "type": "array", "minItems": 1000, "maxItems": 1000, "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "maxLength": 128 }
+    },
+    "processed_source_ids": {
+      "type": "array", "minItems": 1000, "maxItems": 1000, "uniqueItems": true,
+      "items": { "type": "string", "minLength": 1, "maxLength": 128 }
+    },
+    "discovery_artifact": { "$ref": "#/$defs/artifact" },
+    "candidate_pool_artifact": { "$ref": "#/$defs/artifact" },
+    "candidate_validation_artifact": { "$ref": "#/$defs/artifact" },
+    "candidate_pool_ids": {
+      "type": "array", "maxItems": 100, "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" }
+    },
+    "shortlist_ids": {
+      "type": "array", "maxItems": 10, "uniqueItems": true,
+      "items": { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" }
+    },
+    "candidate_source_ids_by_id": {
+      "type": "object",
+      "propertyNames": { "pattern": "^cand_[a-f0-9]{64}$" },
+      "additionalProperties": {
+        "type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true,
+        "items": { "type": "string", "minLength": 1, "maxLength": 128 }
+      }
+    },
+    "global_comparison": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stage1_artifact", "stage2_artifact", "completed"],
+      "properties": {
+        "stage1_artifact": { "$ref": "#/$defs/artifact" },
+        "stage2_artifact": { "$ref": "#/$defs/artifact" },
+        "completed": { "type": "boolean" }
+      }
+    },
+    "revision_cycles_by_candidate": {
+      "type": "object",
+      "propertyNames": { "pattern": "^cand_[a-f0-9]{64}$" },
+      "additionalProperties": { "type": "integer", "minimum": 0, "maximum": 2 }
+    },
+    "model_calls": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["call_id", "stage", "candidate_id", "model", "fallback_index", "attempts", "outcome"],
+        "properties": {
+          "call_id": { "type": "string", "minLength": 1 },
+          "stage": { "enum": ["DISCOVER", "CANDIDATE_GENERATION", "GLOBAL_COMPARISON", "COMPOSE", "TEST", "REVISION"] },
+          "candidate_id": {
+            "oneOf": [
+              { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" },
+              { "type": "null" }
+            ]
+          },
+          "model": { "type": "string", "minLength": 1 },
+          "fallback_index": { "type": "integer", "minimum": 0 },
+          "attempts": { "type": "integer", "minimum": 1 },
+          "outcome": { "enum": ["SUCCESS", "FALLBACK", "FAILED"] }
+        },
+        "allOf": [
+          {
+            "if": { "properties": { "stage": { "enum": ["DISCOVER", "CANDIDATE_GENERATION", "GLOBAL_COMPARISON"] } }, "required": ["stage"] },
+            "then": { "properties": { "candidate_id": { "type": "null" } } }
+          },
+          {
+            "if": { "properties": { "stage": { "enum": ["COMPOSE", "TEST", "REVISION"] } }, "required": ["stage"] },
+            "then": { "properties": { "candidate_id": { "type": "string", "pattern": "^cand_[a-f0-9]{64}$" } } }
+          }
+        ]
+      }
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["artifact_ref", "content_sha256"],
+      "properties": {
+        "artifact_ref": { "type": "string", "minLength": 1 },
+        "content_sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" }
+      }
+    }
+  }
+}
