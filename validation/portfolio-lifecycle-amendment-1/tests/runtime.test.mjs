@@ -141,3 +141,30 @@ test("rejects a shortlist that violates the maximum-three-source overlap rule", 
   assert.equal(result.valid, false);
   assert.ok(result.errors.some((error) => error.includes("greedy overlap-constrained")));
 });
+
+test("accepts a validated empty Candidate Pool without fabricated comparison artifacts", () => {
+  const input = makeValidInput();
+  input.candidatePool.candidates = [];
+  input.candidateValidationReport.results = [];
+  input.candidateArtifacts = {};
+  input.stage1 = null;
+  input.stage2 = null;
+  input.audit.candidate_pool_ids = [];
+  input.audit.shortlist_ids = [];
+  input.audit.candidate_source_ids_by_id = {};
+  input.audit.global_comparison = { status: "NOT_APPLICABLE_EMPTY_POOL" };
+  input.artifactContents.candidate_pool = artifact(input.candidatePool);
+  input.artifactContents.candidate_validation = artifact(input.candidateValidationReport);
+  input.audit.candidate_pool_artifact = {
+    artifact_ref: input.artifactContents.candidate_pool.artifact_ref,
+    content_sha256: hash(input.artifactContents.candidate_pool.content),
+  };
+  input.audit.candidate_validation_artifact = {
+    artifact_ref: input.artifactContents.candidate_validation.artifact_ref,
+    content_sha256: hash(input.artifactContents.candidate_validation.content),
+  };
+  delete input.artifactContents.stage1;
+  delete input.artifactContents.stage2;
+  const result = validateLifecycleAmendment1(input);
+  assert.deepEqual(result, { valid: true, errors: [] });
+});
