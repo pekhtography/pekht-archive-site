@@ -5,7 +5,9 @@ import {
   type PortfolioOrchestratorInput,
 } from "./orchestrator.ts";
 import type {
+  GeminiGallery,
   GeminiOutput,
+  IndependentTestResponseV132,
   ModelCallRecord,
   ProcessAudit,
 } from "./validation/types.ts";
@@ -427,7 +429,7 @@ function standaloneDependencies(options: {
         const stage = providerOptions.stage as "COMPOSE" | "REVISION";
         const data = options.compose ? options.compose(stage, call) : standaloneGallery;
         return {
-          data,
+          data: data as GeminiGallery,
           model_used: [modelCall({
             call_id: `compose-${call}`,
             stage,
@@ -439,7 +441,7 @@ function standaloneDependencies(options: {
         const call = ++testCount;
         const data = options.evaluate ? options.evaluate(call) : independentTest("APPROVE");
         return {
-          data,
+          data: data as IndependentTestResponseV132,
           model_used: [modelCall({
             call_id: `test-${call}`,
             stage: "TEST",
