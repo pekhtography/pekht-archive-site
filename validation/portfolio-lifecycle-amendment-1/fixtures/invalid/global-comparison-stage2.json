@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "snapshot_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+  "finalists": [
+    "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  ],
+  "candidate_source_ids_by_id": {
+    "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa": [
+      "src-001",
+      "src-002",
+      "src-003",
+      "src-004",
+      "src-005",
+      "src-006"
+    ]
+  },
+  "comparisons": [],
+  "standings": [
+    {
+      "candidate_id": "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "wins": 0,
+      "losses": 0,
+      "draws": 0,
+      "copeland_score": 10
+    }
+  ],
+  "final_ranking": [
+    "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  ],
+  "shortlist": [
+    "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  ]
+}
