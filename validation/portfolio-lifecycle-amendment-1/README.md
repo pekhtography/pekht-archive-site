@@ -89,3 +89,21 @@ Run from this directory:
 - `npm run typecheck` — typecheck the additive TypeScript contracts.
 
 The branch-scoped workflow runs these three gates on pushes to `portfolio/lifecycle-amendment-1-contracts` and can also be started manually. Fixture tests prove structural schema acceptance/rejection only. Cross-artifact ordering, ranking, Copeland calculations, pair completeness, hash verification, and overlap rules remain runtime invariants and are not claimed as Ajv guarantees.
+
+
+## Sequential integration harness
+
+`tests/integration.test.mjs` is a branch-local integration harness. It imports the existing Validation 0.2.1 Candidate validator implementation directly; it does not copy or fork those rules.
+
+For one shared synthetic 1000-source Snapshot and its complete Discovery corpus, the harness runs the gates in this order:
+
+1. Validate Discovery record structure and complete Snapshot coverage with Validation 0.2.1.
+2. Validate each Candidate against the existing Candidate JSON Schema.
+3. Validate each Candidate with the existing Validation 0.2.1 runtime validator, including six-source membership, observation ownership, endpoint evidence, exact Snapshot substring evidence, distinct edges, graph connectivity, and canonical Candidate ID.
+4. Only after those checks pass, run `validateLifecycleAmendment1` against the same Discovery records, Candidate artifacts, Candidate Pool, validation report, comparison artifacts, and Process Audit.
+
+A negative integration test changes an evidence quote while keeping the Candidate structurally schema-valid; the existing runtime Candidate validator must reject it as `EVIDENCE_NOT_FOUND`.
+
+Run with `npm run test:full` under Node 22. The command enables Node's TypeScript type stripping so the harness imports the authoritative 0.2.1 TypeScript validator without building or copying it.
+
+This harness is test-only. It does not call Gemini, write production data, modify the production Orchestrator, alter Validation 0.2.1, or change the meaning of the current ProcessAudit.
