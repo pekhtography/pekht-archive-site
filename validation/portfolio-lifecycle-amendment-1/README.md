@@ -20,7 +20,7 @@ Status: additive contract draft prepared from the approved Amendment 1 decisions
 - `scripts/portfolio/validation/lifecycle-amendment-1-contracts.ts`: TypeScript types corresponding to the new artifact contracts.
 - `package.json` / `package-lock.json`: isolated, locked Ajv 8.17.1 and TypeScript 5.8.3 validation toolchain.
 - `fixtures/valid/` and `fixtures/invalid/`: positive and negative fixture matrix.
-- `tests/contracts.test.mjs`: Ajv fixture tests.
+- `tests/contracts.test.mjs`: Ajv fixture tests.\n- `runtime/validate-amendment-1.mjs`: independent cross-artifact and algorithmic invariant validator.\n- `tests/runtime.test.mjs`: runtime invariant tests covering valid lifecycle reconciliation, pair completeness, deterministic ranking, Candidate hashes, and shortlist overlap.
 - `.github/workflows/portfolio-lifecycle-amendment-1.yml`: branch-scoped CI for schema compilation, fixtures, and typecheck.
 
 ## Stage definitions
@@ -63,7 +63,7 @@ Scan the final ranking from top to bottom. Add a Candidate only if its source-ID
 
 JSON Schema checks individual artifact structure. Independent runtime validation must additionally reconcile artifact contents and hashes, enforce set equality and ordering, verify all pair combinations, recompute Copeland scores, recompute both rankings, and verify the greedy overlap-constrained shortlist. A schema PASS alone is not a Global Comparison PASS.
 
-The process audit uses `global_comparison.status`. `COMPLETED` is allowed only after both stages, all comparisons, ranking, shortlist, artifact persistence, and cross-artifact validation have completed. `NOT_APPLICABLE_EMPTY_POOL` is allowed only when the validated Candidate pool is empty; it has no Stage 1 or Stage 2 artifact references.
+The executable runtime gate is exposed as `validateLifecycleAmendment1(input)` from `runtime/validate-amendment-1.mjs`. It accepts parsed Snapshot/Discovery/Candidate/Comparison artifacts, the Process Audit, and the exact UTF-8 artifact contents keyed by `discovery`, `candidate_pool`, `candidate_validation`, `stage1`, and `stage2`. Candidate artifact contents are supplied by Candidate ID. The validator recomputes SHA-256 from those exact strings; it does not trust hashes copied into metadata. It verifies 1000-source Discovery coverage, Candidate Pool/report reconciliation, source ownership, Stage 1 evidence and ranking, Stage 2 pair completeness and outcomes, Copeland standings, final ranking, greedy overlap shortlist, audit mappings, and model-call stage/candidate rules.\n\nThe validator returns `{ valid, errors }`; callers must treat any non-empty error list as a hard validation failure. It is deliberately not wired into the production Orchestrator in this stage.\n\nThe process audit uses `global_comparison.status`. `COMPLETED` is allowed only after both stages, all comparisons, ranking, shortlist, artifact persistence, and cross-artifact validation have completed. `NOT_APPLICABLE_EMPTY_POOL` is allowed only when the validated Candidate pool is empty; it has no Stage 1 or Stage 2 artifact references.
 
 ## Compatibility and migration boundary
 
@@ -85,7 +85,7 @@ Run from this directory:
 
 - `npm ci --no-audit --no-fund`
 - `npm run validate:schema` — compile all five Draft 2020-12 schemas with Ajv 8.17.1.
-- `npm run test:full` — run positive and negative fixture tests.
+- `npm run test:full` — run positive and negative schema fixtures plus runtime invariant tests.
 - `npm run typecheck` — typecheck the additive TypeScript contracts.
 
 The branch-scoped workflow runs these three gates on pushes to `portfolio/lifecycle-amendment-1-contracts` and can also be started manually. Fixture tests prove structural schema acceptance/rejection only. Cross-artifact ordering, ranking, Copeland calculations, pair completeness, hash verification, and overlap rules remain runtime invariants and are not claimed as Ajv guarantees.
