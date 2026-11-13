@@ -548,3 +548,88 @@ test("standalone lifecycle: fallback attempts share one TEST call_id; post-REVIS
   assert.equal(testCalls[2].call_id, testCalls[3].call_id);
   assert.notEqual(testCalls[0].call_id, testCalls[2].call_id);
 });
+
+test("standalone lifecycle: all shortlisted candidates exhausted yields NO_GALLERY with PASS", async () => {
+  const candidateIds = [
+    standaloneCandidateId,
+    "cand_" + "b".repeat(64),
+  ];
+  const sourceIdsByCandidate = {
+    [candidateIds[0]]: posts.slice(0, 6).map((post) => post.source_id),
+    [candidateIds[1]]: posts.slice(6, 12).map((post) => post.source_id),
+  };
+  const galleryFor = (sourceIds: string[]): GeminiGallery => ({
+    ...standaloneGallery,
+    source_ids: sourceIds,
+    roles: standaloneGallery.roles.map((role, index) => ({
+      ...role,
+      source_id: sourceIds[index],
+      evidence: role.evidence.map((evidence) => ({
+        ...evidence,
+        quote: posts.find((post) => post.source_id === sourceIds[index])!.body,
+      })),
+    })),
+  });
+
+  let composeCount = 0;
+  let testCount = 0;
+  const result = await runPortfolioOrchestrator(standaloneInput(candidateIds), {
+    readSnapshot: async () => loadedSnapshot,
+    gallerySchema: {},
+    independentTestSchema: {},
+    compose: async (_prompt, _schema, options) => {
+      composeCount += 1;
+      const candidateId = options.candidateId as string;
+      const stage = options.stage as "COMPOSE" | "REVISION";
+      return {
+        data: galleryFor(sourceIdsByCandidate[candidateId]),
+        model_used: [modelCall({
+          call_id: `compose-${candidateId}-${composeCount}`,
+          stage,
+          candidate_id: candidateId,
+        })],
+      };
+    },
+    evaluateTest: async (_prompt, _schema, options) => {
+      testCount += 1;
+      const candidateId = options.candidateId as string;
+      const sourceId = sourceIdsByCandidate[candidateId][0];
+      const source = posts.find((post) => post.source_id === sourceId)!;
+      const rejected = independentTest("REJECT", candidateId);
+      rejected.findings[0].evidence = {
+        kind: "SOURCE",
+        source_id: sourceId,
+        quote: source.body,
+      };
+      return {
+        data: rejected,
+        model_used: [modelCall({
+          call_id: `test-${candidateId}-${testCount}`,
+          stage: "TEST",
+          candidate_id: candidateId,
+        })],
+      };
+    },
+  });
+
+  assert.equal(composeCount, 6);
+  assert.equal(testCount, 6);
+  assert.deepEqual(result.candidate_results?.map((candidate) => candidate.status), [
+    "REVISION_EXHAUSTED",
+    "REVISION_EXHAUSTED",
+  ]);
+  assert.deepEqual(result.candidate_results?.map((candidate) => candidate.revision_cycles), [2, 2]);
+  assert.equal(result.status, "NO_GALLERY");
+  assert.equal(result.validation.status, "PASS");
+  assert.equal(result.validation.structural, "PASS");
+  assert.equal(result.validation.semantic, "PASS");
+  assert.equal(result.validation.process, "PASS");
+  assert.deepEqual(result.validation.findings, []);
+  assert.equal(result.composition, null);
+  assert.equal(result.independent_test, null);
+  assert.deepEqual(
+    result.model_used.map((call) => call.stage),
+    ["COMPOSE", "TEST", "REVISION", "TEST", "REVISION", "TEST",
+      "COMPOSE", "TEST", "REVISION", "TEST", "REVISION", "TEST"],
+  );
+});
