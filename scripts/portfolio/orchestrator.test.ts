@@ -573,7 +573,9 @@ test("standalone lifecycle: all shortlisted candidates exhausted yields NO_GALLE
 
   let composeCount = 0;
   let testCount = 0;
-  const result = await runPortfolioOrchestrator(standaloneInput(candidateIds), {
+  const input = standaloneInput(candidateIds);
+  input.processAudit.candidateSourceIdsById = sourceIdsByCandidate;
+  const result = await runPortfolioOrchestrator(input, {
     readSnapshot: async () => loadedSnapshot,
     gallerySchema: {},
     independentTestSchema: {},
