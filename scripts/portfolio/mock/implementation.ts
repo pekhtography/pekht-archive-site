@@ -130,7 +130,9 @@ export interface MockPipelineDependencies {
   compareCandidates?: (candidates: Candidate[], discovery: DiscoveryRecord[], snapshot: PortfolioSnapshot) => CandidateComparison[];
   buildGallery?: (snapshot: PortfolioSnapshot, sourceIds: string[]) => NonNullable<GeminiOutput["gallery"]>;
   onStageEvent?: (event: MockStageEvent) => void;
-  minimumPublishScore?: number;\n  /** Deterministic independent TEST decisions, consumed in invocation order. */\n  testDecisions?: readonly ("APPROVE" | "REJECT")[];
+  minimumPublishScore?: number;
+  /** Deterministic independent TEST decisions, consumed in invocation order. */
+  testDecisions?: readonly ("APPROVE" | "REJECT")[];
 }
 
 function hashSnapshot(posts: PortfolioSnapshot["posts"], ids: string[]): string {
