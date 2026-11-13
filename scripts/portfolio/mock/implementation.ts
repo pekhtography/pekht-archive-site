@@ -599,6 +599,7 @@ async function runMockPipeline(
         actualSnapshotSourceIds: snapshot.sampled_source_ids,
         selectedCandidateId: null,
         requireCandidateLifecycle: true,
+        candidateResults: result.candidate_results ?? [],
       });
       if (!checked.ok) throw new Error(`Process audit failed: ${checked.errors.join("; ")}`);
       return checked;

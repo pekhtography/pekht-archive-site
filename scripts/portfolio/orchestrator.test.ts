@@ -457,9 +457,10 @@ test("standalone lifecycle: malformed independent TEST is INCOMPLETE and stops c
   const harness = standaloneDependencies({
     evaluate: () => ({ ...independentTest("APPROVE"), candidate_id: "cand_" + "b".repeat(64) }),
   });
-  const result = await runPortfolioOrchestrator(standaloneInput(), harness.dependencies);
+  const result = await runPortfolioOrchestrator(standaloneInput([standaloneCandidateId, "cand_" + "b".repeat(64)]), harness.dependencies);
   assert.equal(result.status, "INCOMPLETE");
   assert.equal(result.candidate_results?.[0].status, "INCOMPLETE");
+  assert.equal(result.candidate_results?.length, 1);
   assert.equal(result.independent_test, null);
   assert.equal(result.validation.status, "FAIL");
   assert.ok(result.candidate_results?.[0].findings.some((finding) => finding.includes("candidate_id")));

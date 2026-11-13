@@ -97,7 +97,7 @@ export async function runStandalonePortfolioLifecycle(
   if (candidateStatus==="INCOMPLETE") break;
  }
  const audit:ProcessAudit={...input.processAudit,revisionCyclesByCandidate:revisionMap,modelCalls:baseCalls};
- const process=validatePortfolioProcess(audit,{actualSnapshotSourceIds:loaded.snapshot.posts.map((p)=>p.source_id),selectedCandidateId:input.candidateId??null,requireCandidateLifecycle:true});
+ const process=validatePortfolioProcess(audit,{actualSnapshotSourceIds:loaded.snapshot.posts.map((p)=>p.source_id),selectedCandidateId:input.candidateId??null,requireCandidateLifecycle:true,candidateResults});
  const allFindings=[...findings("STRUCTURAL_VALIDATION",structuralErrors),...findings("SEMANTIC_VALIDATION",semanticErrors),...findings("PROCESS_VALIDATION",process.errors)];
  const pass=structuralErrors.length===0 && semanticErrors.length===0 && process.ok && !providerError && !candidateResults.some((c)=>c.status==="INCOMPLETE");
  const noCandidates=input.processAudit.candidateIds.length===0;

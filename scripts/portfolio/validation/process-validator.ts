@@ -1,5 +1,5 @@
 import { isNonEmptyString, result } from "./shared.ts";
-import type { ModelCallRecord, ProcessAudit, ValidationResult } from "./types.ts";
+import type { ModelCallRecord, PortfolioCandidateResult, ProcessAudit, ValidationResult } from "./types.ts";
 function validateCallChains(calls: readonly ModelCallRecord[], errors: string[]) {
   const groups = new Map<string,ModelCallRecord[]>();
   for (const call of calls) {
@@ -30,6 +30,8 @@ export interface PortfolioProcessValidationContext {
   reportedRevisionCycles?: number;
   /** Require the standalone COMPOSE → TEST → (REVISION → TEST)* call sequence. */
   requireCandidateLifecycle?: boolean;
+  /** Candidate results in actual Orchestrator processing order; used to audit global stop/continue semantics. */
+  candidateResults?: readonly PortfolioCandidateResult[];
 }
 
 function sameIds(left: readonly string[], right: readonly string[]): boolean {
@@ -127,6 +129,93 @@ export function validatePortfolioProcess(
       }
       const auditedCycles = audit.revisionCyclesByCandidate?.[candidateId];
       if (auditedCycles !== revisions) errors.push(`CANDIDATE_LIFECYCLE_REVISION_COUNT_MISMATCH: candidate_id=${candidateId}, calls=${revisions}, audit=${auditedCycles ?? "missing"}`);
+    }
+  }
+  if (context.candidateResults) {
+    const candidateResults = context.candidateResults;
+    const expectedCandidates = context.selectedCandidateId !== null && context.selectedCandidateId !== undefined
+      ? [context.selectedCandidateId]
+      : [...candidates];
+    const resultIds = candidateResults.map((candidate) => candidate.candidate_id);
+
+    if (new Set(resultIds).size !== resultIds.length) errors.push("CANDIDATE_RESULT_IDS_DUPLICATED");
+    if (resultIds.length > expectedCandidates.length) errors.push("CANDIDATE_RESULT_COUNT_EXCEEDS_SELECTED_CANDIDATES");
+    resultIds.forEach((candidateId, index) => {
+      if (expectedCandidates[index] !== candidateId) {
+        errors.push(`CANDIDATE_RESULT_ORDER_MISMATCH: index=${index}, expected=${expectedCandidates[index] ?? "none"}, received=${candidateId}`);
+      }
+    });
+
+    candidateResults.forEach((candidate, index) => {
+      if ((candidate.status === "APPROVED" || candidate.status === "INCOMPLETE") && index !== candidateResults.length - 1) {
+        errors.push(`CANDIDATE_PROCESSING_CONTINUED_AFTER_TERMINAL_STATUS: candidate_id=${candidate.candidate_id}, status=${candidate.status}`);
+      }
+      if (candidate.revision_cycles !== (audit.revisionCyclesByCandidate?.[candidate.candidate_id] ?? 0)) {
+        errors.push(`CANDIDATE_RESULT_REVISION_COUNT_MISMATCH: candidate_id=${candidate.candidate_id}`);
+      }
+      if (candidate.status === "APPROVED" && candidate.independent_test?.decision !== "APPROVE") {
+        errors.push(`CANDIDATE_APPROVED_WITHOUT_APPROVE_TEST: candidate_id=${candidate.candidate_id}`);
+      }
+      if ((candidate.status === "REJECTED" || candidate.status === "REVISION_EXHAUSTED") &&
+          candidate.independent_test?.decision !== "REJECT") {
+        errors.push(`CANDIDATE_REJECTED_WITHOUT_REJECT_TEST: candidate_id=${candidate.candidate_id}`);
+      }
+      if (candidate.status === "REVISION_EXHAUSTED" && candidate.revision_cycles !== 2) {
+        errors.push(`CANDIDATE_REVISION_EXHAUSTED_WITHOUT_TWO_REVISIONS: candidate_id=${candidate.candidate_id}`);
+      }
+    });
+
+    const logicalCalls: ModelCallRecord[] = [];
+    const seenCallIds = new Set<string>();
+    for (const call of audit.modelCalls) {
+      if (seenCallIds.has(call.call_id)) continue;
+      seenCallIds.add(call.call_id);
+      logicalCalls.push(call);
+    }
+    const callsByCandidate = new Map<string, ModelCallRecord[]>();
+    const callCandidateOrder: string[] = [];
+    const closedCandidates = new Set<string>();
+    let activeCandidate: string | null = null;
+    for (const call of logicalCalls) {
+      if (call.candidate_id === null) continue;
+      const candidateId = call.candidate_id;
+      const group = callsByCandidate.get(candidateId) ?? [];
+      group.push(call);
+      callsByCandidate.set(candidateId, group);
+      if (!resultIds.includes(candidateId)) {
+        errors.push(`MODEL_CALL_FOR_UNPROCESSED_CANDIDATE: candidate_id=${candidateId}`);
+      }
+      if (candidateId !== activeCandidate) {
+        if (closedCandidates.has(candidateId)) {
+          errors.push(`CANDIDATE_CALL_SEQUENCE_REVISITED: candidate_id=${candidateId}`);
+        }
+        if (activeCandidate !== null) closedCandidates.add(activeCandidate);
+        activeCandidate = candidateId;
+        callCandidateOrder.push(candidateId);
+      }
+    }
+
+    const expectedCallOrder = resultIds.filter((candidateId) => callsByCandidate.has(candidateId));
+    if (callCandidateOrder.length !== expectedCallOrder.length ||
+        callCandidateOrder.some((candidateId, index) => candidateId !== expectedCallOrder[index])) {
+      errors.push("CANDIDATE_MODEL_CALL_ORDER_MISMATCH");
+    }
+
+    for (const candidate of candidateResults) {
+      const calls = callsByCandidate.get(candidate.candidate_id) ?? [];
+      if (calls.length === 0 && candidate.status !== "INCOMPLETE") {
+        errors.push(`CANDIDATE_RESULT_MISSING_MODEL_LIFECYCLE: candidate_id=${candidate.candidate_id}`);
+        continue;
+      }
+      if (calls.length > 0) {
+        const finalStage = calls[calls.length - 1].stage;
+        if (candidate.status === "APPROVED" && finalStage !== "TEST") {
+          errors.push(`APPROVED_CANDIDATE_DID_NOT_END_WITH_TEST: candidate_id=${candidate.candidate_id}`);
+        }
+        if ((candidate.status === "REJECTED" || candidate.status === "REVISION_EXHAUSTED") && finalStage !== "TEST") {
+          errors.push(`REJECTED_CANDIDATE_DID_NOT_END_WITH_TEST: candidate_id=${candidate.candidate_id}`);
+        }
+      }
     }
   }
   return result(errors);

@@ -213,3 +213,12 @@ testRunner("Candidate identity matches the frozen golden vector", () => {
     "cand_4842d793284c56fc53a1e8453133677bc9c85c7e351732a8f13ff9cba87edea1",
   );
 });
+
+testRunner("an APPROVED candidate stops processing the global shortlist", async () => {
+  const report = await runMockPortfolioImplementation({ testDecisions: ["APPROVE"] });
+  assert.equal(report.status, "APPROVED");
+  assert.equal(report.result.candidate_results?.length, 1);
+  assert.equal(report.result.candidate_results?.[0].status, "APPROVED");
+  assert.deepEqual(report.model_used.map((call) => call.stage), ["COMPOSE", "TEST"]);
+  assert.equal(report.result.validation.process, "PASS");
+});
