@@ -1,4 +1,5 @@
 import { createHash } from "node:crypto";
+import { isDeepStrictEqual } from "node:util";
 
 const CRITERIA = [
   "semantic_coherence",
@@ -163,18 +164,18 @@ export function validateLifecycleAmendment1(input) {
     }
   }
 
-  const checkArtifact = (key, reference, expectedHash) => {
+  const checkArtifact = (key, reference, expectedHash, expectedValue) => {
     const stored = artifactContents?.[key];
     if (!stored || !reference || stored.artifact_ref !== reference.artifact_ref ||
         sha256(stored.content ?? "") !== (expectedHash ?? reference.content_sha256)) {
       errors.push(`artifact ${key}: missing content or reference/hash mismatch`);
       return null;
     }
-    return jsonParse(stored.content, `artifact ${key}`, errors);
+    const parsed = jsonParse(stored.content, `artifact ${key}`, errors);\n    if (parsed !== null && expectedValue !== undefined && !isDeepStrictEqual(parsed, expectedValue)) {\n      errors.push(`artifact ${key}: parsed artifact content does not match the supplied validated object`);\n    }\n    return parsed;
   };
-  checkArtifact("discovery", audit?.discovery_artifact, audit?.discovery_artifact?.content_sha256);
-  checkArtifact("candidate_pool", audit?.candidate_pool_artifact, audit?.candidate_pool_artifact?.content_sha256);
-  checkArtifact("candidate_validation", audit?.candidate_validation_artifact, audit?.candidate_validation_artifact?.content_sha256);
+  checkArtifact("discovery", audit?.discovery_artifact, audit?.discovery_artifact?.content_sha256, discoveryRecords);
+  checkArtifact("candidate_pool", audit?.candidate_pool_artifact, audit?.candidate_pool_artifact?.content_sha256, candidatePool);
+  checkArtifact("candidate_validation", audit?.candidate_validation_artifact, audit?.candidate_validation_artifact?.content_sha256, candidateValidationReport);
   if (audit?.discovery_artifact?.record_count !== 1000) errors.push("audit: Discovery artifact record_count must equal 1000");
 
   const comparison = audit?.global_comparison;
@@ -192,8 +193,8 @@ export function validateLifecycleAmendment1(input) {
     if (stage1 && stage2) {
       const stage1Hash = comparison?.stage1_artifact?.content_sha256;
       const stage2Hash = comparison?.stage2_artifact?.content_sha256;
-      checkArtifact("stage1", comparison?.stage1_artifact, stage1Hash);
-      checkArtifact("stage2", comparison?.stage2_artifact, stage2Hash);
+      checkArtifact("stage1", comparison?.stage1_artifact, stage1Hash, stage1);
+      checkArtifact("stage2", comparison?.stage2_artifact, stage2Hash, stage2);
       if (stage1.snapshot_sha256 !== snapshot?.content_sha256 ||
           stage2.snapshot_sha256 !== snapshot?.content_sha256) {
         errors.push("global comparison: stage artifacts must identify the exact Snapshot hash");
