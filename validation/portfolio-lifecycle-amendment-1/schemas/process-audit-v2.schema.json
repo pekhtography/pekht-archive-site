@@ -345,7 +345,8 @@
             },
             "required": [
               "status"
-            ]
+            ],
+            "type": "object"
           }
         }
       }
@@ -372,7 +373,8 @@
             },
             "required": [
               "status"
-            ]
+            ],
+            "type": "object"
           }
         }
       }
