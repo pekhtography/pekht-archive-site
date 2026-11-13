@@ -265,3 +265,107 @@ test("the integrated Candidate gate rejects evidence that is not an exact Snapsh
   const issues = validateCandidate(invalidCandidate, snapshot, invalidRecordSet);
   assert.ok(issues.some((issue) => issue.code === "EVIDENCE_NOT_FOUND"));
 });
+
+
+function makeRejectedProposal() {
+  const rejectedSourceIds = sourceIds.slice(8, 14);
+  const candidate = makeCandidate(rejectedSourceIds);
+  const records = structuredClone(discoveryRecords);
+  for (const sourceId of rejectedSourceIds) {
+    const record = records.find((item) => item.source_id === sourceId);
+    record.result = "SIGNALS_FOUND";
+    record.observations = [{
+      prism: "Motif",
+      signal: "recurring textual detail",
+      interpretation: "A publication-level textual observation",
+      evidence: [{ source: "BODY", quote: "A fabricated quote absent from the Snapshot." }],
+    }];
+  }
+  return { candidate, records, rejectedSourceIds };
+}
+
+test("preserves rejected proposals in the report without admitting them to the Candidate Pool", () => {
+  const input = makeIntegratedInput();
+  const { candidate, records } = makeRejectedProposal();
+  const candidateIssues = validateCandidate(candidate, snapshot, records);
+
+  assert.ok(candidateIssues.some((issue) => issue.code === "EVIDENCE_NOT_FOUND"));
+  assert.equal(validateCandidateSchema(candidate), true);
+
+  input.discoveryRecords = records;
+  input.artifactContents.discovery = artifact(records);
+  input.audit.discovery_artifact = {
+    artifact_ref: input.artifactContents.discovery.artifact_ref,
+    content_sha256: hash(input.artifactContents.discovery.content),
+    record_count: 1000,
+  };
+  input.candidateValidationReport.results.push({
+    candidate_id: candidate.candidate_id,
+    source_ids: candidate.source_ids,
+    status: "REJECTED",
+    errors: candidateIssues.map((issue) => `${issue.code}: ${issue.message}`),
+  });
+  input.artifactContents.candidate_validation = artifact(input.candidateValidationReport);
+  input.audit.candidate_validation_artifact = {
+    artifact_ref: input.artifactContents.candidate_validation.artifact_ref,
+    content_sha256: hash(input.artifactContents.candidate_validation.content),
+  };
+
+  assert.deepEqual(validateLifecycleAmendment1(input), { valid: true, errors: [] });
+  assert.equal(input.candidatePool.candidates.some((entry) =>
+    entry.candidate_id === candidate.candidate_id), false);
+});
+
+test("a completed run with every proposal rejected is a valid empty-pool content outcome", () => {
+  const input = makeIntegratedInput();
+  const { candidate, records } = makeRejectedProposal();
+  const candidateIssues = validateCandidate(candidate, snapshot, records);
+
+  input.discoveryRecords = records;
+  input.artifactContents.discovery = artifact(records);
+  input.audit.discovery_artifact = {
+    artifact_ref: input.artifactContents.discovery.artifact_ref,
+    content_sha256: hash(input.artifactContents.discovery.content),
+    record_count: 1000,
+  };
+  input.candidatePool.candidates = [];
+  input.candidateValidationReport.results = [{
+    candidate_id: candidate.candidate_id,
+    source_ids: candidate.source_ids,
+    status: "REJECTED",
+    errors: candidateIssues.map((issue) => `${issue.code}: ${issue.message}`),
+  }];
+  input.candidateArtifacts = {};
+  input.stage1 = null;
+  input.stage2 = null;
+  input.audit.candidate_pool_ids = [];
+  input.audit.shortlist_ids = [];
+  input.audit.candidate_source_ids_by_id = {};
+  input.audit.global_comparison = { status: "NOT_APPLICABLE_EMPTY_POOL" };
+  input.artifactContents.candidate_pool = artifact(input.candidatePool);
+  input.artifactContents.candidate_validation = artifact(input.candidateValidationReport);
+  input.audit.candidate_pool_artifact = {
+    artifact_ref: input.artifactContents.candidate_pool.artifact_ref,
+    content_sha256: hash(input.artifactContents.candidate_pool.content),
+  };
+  input.audit.candidate_validation_artifact = {
+    artifact_ref: input.artifactContents.candidate_validation.artifact_ref,
+    content_sha256: hash(input.artifactContents.candidate_validation.content),
+  };
+  delete input.artifactContents.stage1;
+  delete input.artifactContents.stage2;
+
+  assert.ok(candidateIssues.some((issue) => issue.code === "EVIDENCE_NOT_FOUND"));
+  assert.deepEqual(validateLifecycleAmendment1(input), { valid: true, errors: [] });
+});
+
+test("does not accept a technical Candidate Generation failure as a completed empty pool", () => {
+  const input = makeIntegratedInput();
+  input.candidatePool.candidates = [];
+  input.candidatePool.generation_status = "FAILED";
+  const result = validateLifecycleAmendment1(input);
+
+  assert.equal(result.valid, false);
+  assert.ok(result.errors.some((error) =>
+    error.includes("generation_status must be COMPLETE")));
+});
