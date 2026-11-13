@@ -74,6 +74,16 @@ jobs:
           npm run test:full
           npm run typecheck
 
+      - name: Set up Python for independent Draft 2020-12 validation
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate standalone run-result JSON Schema independently
+        run: |
+          python -m pip install --disable-pip-version-check jsonschema==4.26.0
+          python scripts/portfolio/validation/validate-run-result-schema.py
+
       - name: Run mock implementation and existing orchestrator tests
         run: >-
           pnpm exec tsx --test
