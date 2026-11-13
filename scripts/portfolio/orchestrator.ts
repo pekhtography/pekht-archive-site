@@ -19,6 +19,7 @@ import {
   type PortfolioProviderOptions,
 } from "./provider.ts";
 import { readPortfolioSnapshot, type LoadedPortfolioSnapshot } from "./snapshot.ts";
+import { runStandalonePortfolioLifecycle } from "./orchestrator-lifecycle.ts";
 
 export interface PortfolioOrchestratorInput {
   snapshotPath: string;
@@ -39,6 +40,10 @@ export interface PortfolioOrchestratorInput {
 export interface PortfolioOrchestratorDependencies {
   readSnapshot?: (path: string) => Promise<LoadedPortfolioSnapshot>;
   generate?: typeof generatePortfolioJson;
+  compose?: typeof import("./provider.ts").generatePortfolioGallery;
+  evaluateTest?: typeof import("./provider.ts").evaluateIndependentTest;
+  gallerySchema?: JsonSchema;
+  independentTestSchema?: JsonSchema;
   schema?: JsonSchema;
 }
 
@@ -113,6 +118,7 @@ export async function runPortfolioOrchestrator(
   const generate = dependencies.generate ?? generatePortfolioJson;
 
   const loaded = await loadSnapshot(input.snapshotPath);
+  if (!dependencies.generate) return runStandalonePortfolioLifecycle(input, dependencies, loaded);
   const schema = dependencies.schema ?? await readDefaultSchema();
   const publicationContext = loaded.snapshot.posts.map((post) => ({
     source_id: post.source_id,

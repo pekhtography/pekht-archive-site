@@ -86,11 +86,17 @@ export function validateRunResult(value: unknown): ValidationResult {
   });
   if (isRecord(validation)) {
     if (value.status === "APPROVED") {
-      if (!isRecord(output) || !isRecord(output.gallery) || !isRecord(output.test) || output.test.decision !== "APPROVE") errors.push("status APPROVED requires a gallery and Gemini decision APPROVE");
+      const legacy = isRecord(output) && isRecord(output.gallery) && isRecord(output.test) && output.test.decision === "APPROVE";
+      const standalone = Array.isArray(value.candidate_results) && isRecord(value.composition) && isRecord(value.independent_test)
+        && value.independent_test.decision === "APPROVE"
+        && value.candidate_results.some((candidate) => isRecord(candidate) && candidate.status === "APPROVED");
+      if (!legacy && !standalone) errors.push("status APPROVED requires an approved composition and independent TEST");
       if (validation.status !== "PASS" || validation.structural !== "PASS" || validation.semantic !== "PASS" || validation.process !== "PASS") errors.push("status APPROVED requires all validation levels PASS");
     }
     if (value.status === "NO_GALLERY") {
-      if (!isRecord(output) || output.gallery !== null || !isRecord(output.test) || output.test.decision !== "REJECT") errors.push("status NO_GALLERY requires gallery null and Gemini decision REJECT");
+      const legacy = isRecord(output) && output.gallery === null && isRecord(output.test) && output.test.decision === "REJECT";
+      const standalone = Array.isArray(value.candidate_results) && value.candidate_results.length === 0 && value.composition === null && value.independent_test === null;
+      if (!legacy && !standalone) errors.push("status NO_GALLERY requires no approved composition and no candidate TEST");
       if (validation.status !== "PASS" || validation.structural !== "PASS" || validation.semantic !== "PASS" || validation.process !== "PASS") errors.push("status NO_GALLERY requires all validation levels PASS");
     }
     if (value.status === "INCOMPLETE" && validation.status !== "FAIL" && validation.status !== "NOT_RUN") errors.push("status INCOMPLETE requires validation status FAIL or NOT_RUN");
