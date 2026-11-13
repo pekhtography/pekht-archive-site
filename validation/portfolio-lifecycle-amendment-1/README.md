@@ -18,6 +18,10 @@ Status: additive contract draft prepared from the approved Amendment 1 decisions
 - `schemas/global-comparison-stage2.schema.json`: complete pairwise results, Copeland standings, final ranking, and overlap-constrained shortlist.
 - `schemas/process-audit-v2.schema.json`: additive process audit that distinguishes the 100-Candidate pool from the 10-Candidate shortlist.
 - `scripts/portfolio/validation/lifecycle-amendment-1-contracts.ts`: TypeScript types corresponding to the new artifact contracts.
+- `package.json` / `package-lock.json`: isolated, locked Ajv 8.17.1 and TypeScript 5.8.3 validation toolchain.
+- `fixtures/valid/` and `fixtures/invalid/`: positive and negative fixture matrix.
+- `tests/contracts.test.mjs`: Ajv fixture tests.
+- `.github/workflows/portfolio-lifecycle-amendment-1.yml`: branch-scoped CI for schema compilation, fixtures, and typecheck.
 
 ## Stage definitions
 
@@ -75,6 +79,13 @@ The existing `ProcessAudit.candidateIds` remains the maximum-10 shortlist in the
 
 The existing Discovery Record and Candidate schemas are reused by reference at the validation boundary. Ajv integration must register the existing Discovery Record and Candidate schemas before validating dependent artifacts.
 
-## Validation status
+## Validation commands
 
-The JSON documents were syntax-parsed before writing. This is not an Ajv PASS, TypeScript typecheck, runtime-validator PASS, CI PASS, or production integration test. Those gates belong to the next implementation/test step.
+Run from this directory:
+
+- `npm ci --no-audit --no-fund`
+- `npm run validate:schema` — compile all five Draft 2020-12 schemas with Ajv 8.17.1.
+- `npm run test:full` — run positive and negative fixture tests.
+- `npm run typecheck` — typecheck the additive TypeScript contracts.
+
+The branch-scoped workflow runs these three gates on pushes to `portfolio/lifecycle-amendment-1-contracts` and can also be started manually. Fixture tests prove structural schema acceptance/rejection only. Cross-artifact ordering, ranking, Copeland calculations, pair completeness, hash verification, and overlap rules remain runtime invariants and are not claimed as Ajv guarantees.
