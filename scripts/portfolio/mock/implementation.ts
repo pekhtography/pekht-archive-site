@@ -414,21 +414,6 @@ function makeLoadedSnapshot(snapshot: PortfolioSnapshot): LoadedPortfolioSnapsho
   };
 }
 
-function makeTestResult(
-  candidateId: string,
-  semanticErrors: readonly string[],
-): TestResult {
-  const passed = semanticErrors.length === 0;
-  return {
-    candidate_id: candidateId,
-    decision: passed ? "PASS" : "FAIL",
-    scores: passed
-      ? { semantic_coherence: 5, curatorial_originality: 4, narrative_integrity: 5, visual_composition: 4, evidence_integrity: 5 }
-      : { semantic_coherence: 3, curatorial_originality: 3, narrative_integrity: 3, visual_composition: 3, evidence_integrity: 4 },
-    blocking_issues: passed ? [] : [...semanticErrors],
-  };
-}
-
 function buildProcessAudit(
   snapshot: PortfolioSnapshot,
   discovery: DiscoveryRecord[],
@@ -639,7 +624,7 @@ async function runMockPipeline(
     discovery_records: discovery.length,
     candidates_compared: comparison.length,
     comparisons: comparison,
-    selected_candidate_id: selected?.candidate_id ?? null,
+    selected_candidate_id: selectedCandidateId,
     revision_cycles: revisionCycles,
     test_results: testResults,
     model_used: result.model_used,
