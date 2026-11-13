@@ -29,8 +29,9 @@ testRunner("mock pipeline executes real stages in order and returns APPROVED", a
   assert.equal(report.result.validation.structural, "PASS");
   assert.equal(report.result.validation.semantic, "PASS");
   assert.equal(report.result.validation.process, "PASS");
-  assert.equal(report.model_used.length, 1);
-  assert.equal(report.model_used[0].stage, "TEST");
+  assert.deepEqual(report.model_used.map((call) => call.stage), ["COMPOSE", "TEST", "REVISION", "TEST"]);
+  assert.equal(new Set(report.model_used.filter((call) => call.stage === "TEST").map((call) => call.call_id)).size, 2);
+  assert.ok(report.result.candidate_results?.some((candidate) => candidate.status === "APPROVED"));
   assert.ok(report.model_used.every((call) => call.model.startsWith("mock://")));
   assert.ok(report.comparisons.every((candidate) => candidate.score >= 0 && candidate.score <= 1));
   assert.notEqual(report.comparisons[0].score, 0.94);
@@ -137,7 +138,9 @@ testRunner("REVISION cannot run before an actual TEST rejection", async () => {
 testRunner("NO_GALLERY short-circuits after Global Comparison without Compose, TEST or REVISION", async () => {
   const report = await runMockNoGalleryScenario();
   assert.equal(report.status, "NO_GALLERY");
-  assert.equal(report.result.gemini_output?.gallery, null);
+  assert.equal(report.result.gemini_output, null);
+  assert.equal(report.result.composition, null);
+  assert.equal(report.result.independent_test, null);
   assert.equal(report.result.validation.status, "PASS");
   assert.deepEqual(report.stages, [
     "SNAPSHOT_VALIDATION", "DISCOVER", "CANDIDATE_GENERATION", "GLOBAL_COMPARISON",
@@ -149,9 +152,39 @@ testRunner("NO_GALLERY short-circuits after Global Comparison without Compose, T
   assert.ok(!report.stages.includes("TEST"));
   assert.ok(!report.stages.includes("REVISION"));
   assert.ok(report.comparisons.every((candidate) => candidate.score < 0.99));
-  assert.equal(report.model_used.length, 1);
-  assert.equal(report.model_used[0].stage, "DISCOVER");
+  assert.equal(report.model_used.length, 0);
   assert.equal(report.execution_log.at(-1)?.outcome, "NO_GALLERY");
+});
+
+testRunner("two rejected revisions exhaust the first Candidate and continue to the next", async () => {
+  const report = await runMockPortfolioImplementation({
+    testDecisions: ["REJECT", "REJECT", "REJECT", "APPROVE"],
+  });
+  assert.equal(report.status, "APPROVED");
+  assert.equal(report.result.candidate_results?.[0].status, "REVISION_EXHAUSTED");
+  assert.equal(report.result.candidate_results?.[0].revision_cycles, 2);
+  assert.equal(report.result.candidate_results?.[1].status, "APPROVED");
+  assert.equal(report.selected_candidate_id, report.result.candidate_results?.[1].candidate_id);
+  assert.deepEqual(report.model_used.map((call) => call.stage), [
+    "COMPOSE", "TEST", "REVISION", "TEST", "REVISION", "TEST", "COMPOSE", "TEST",
+  ]);
+  assert.equal(report.result.validation.process, "PASS");
+});
+
+testRunner("all shortlisted Candidates exhausted by independent TEST produce NO_GALLERY", async () => {
+  const report = await runMockPortfolioImplementation({
+    testDecisions: ["REJECT", "REJECT", "REJECT", "REJECT", "REJECT", "REJECT"],
+  });
+  assert.equal(report.status, "NO_GALLERY");
+  assert.equal(report.result.composition, null);
+  assert.equal(report.result.independent_test, null);
+  assert.deepEqual(report.result.candidate_results?.map((candidate) => candidate.status), [
+    "REVISION_EXHAUSTED", "REVISION_EXHAUSTED",
+  ]);
+  assert.equal(report.result.validation.status, "PASS");
+  assert.equal(report.result.validation.process, "PASS");
+  assert.equal(report.model_used.filter((call) => call.stage === "TEST").length, 6);
+  assert.equal(new Set(report.model_used.filter((call) => call.stage === "TEST").map((call) => call.call_id)).size, 6);
 });
 
 testRunner("Process Audit detects a mismatch between actual stage events and the stage log", async () => {
