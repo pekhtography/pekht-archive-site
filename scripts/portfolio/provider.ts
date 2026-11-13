@@ -234,7 +234,7 @@ async function requestModel(
       if (response.status === 429) {
         lastQuota = classifyQuota(errorText);
         delayMs = retryAfterMs(response, errorText);
-        if (lastQuota === "daily" || (delayMs !== null && delayMs > maxRetryDelayMs)) {
+        if (lastQuota === "daily" || lastQuota === "unknown" || (delayMs !== null && delayMs > maxRetryDelayMs)) {
           throw new PortfolioProviderError(
             `Gemini ${model} quota/delay requires model fallback (${lastQuota}).`,
             { retryable: true, model, attempts: attempt, status: response.status, quotaType: lastQuota },
