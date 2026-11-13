@@ -66,9 +66,24 @@ export interface ModelCallRecord {
   /** HTTP/API attempts made against this model. */
   attempts: number; outcome: ModelCallOutcome;
 }
+export type PortfolioCandidateStatus = "APPROVED" | "REJECTED" | "REVISION_EXHAUSTED" | "INCOMPLETE";
+export interface PortfolioCandidateResult {
+  candidate_id: string;
+  status: PortfolioCandidateStatus;
+  composition: GeminiGallery | null;
+  independent_test: IndependentTestResponseV132 | null;
+  revision_cycles: number;
+  findings: string[];
+}
 export interface PortfolioRunResult {
   status: PortfolioRunStatus; input_snapshot: PortfolioInputSnapshot;
-  gemini_output: GeminiOutput | null; validation: PortfolioValidation; model_used: ModelCallRecord[];
+  /** Legacy combined provider output retained only during the staged Orchestrator migration. */
+  gemini_output: GeminiOutput | null;
+  /** Canonical standalone composition and independent TEST; populated by the Stage C Orchestrator. */
+  composition?: GeminiGallery | null;
+  independent_test?: IndependentTestResponseV132 | null;
+  candidate_results?: PortfolioCandidateResult[];
+  validation: PortfolioValidation; model_used: ModelCallRecord[];
 }
 export interface SnapshotPost { source_id: string; body: string }
 export interface PortfolioSnapshot extends Omit<PortfolioInputSnapshot, "schema_version"> {

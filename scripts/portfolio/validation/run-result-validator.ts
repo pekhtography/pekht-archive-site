@@ -6,7 +6,8 @@ const outcomes = new Set(["SUCCESS","FALLBACK","FAILED"]);
 export function validateRunResult(value: unknown): ValidationResult {
   const errors: string[] = [];
   if (!isRecord(value)) return { ok: false, errors: ["run_result: expected an object"] };
-  exactKeys(value, ["status","input_snapshot","gemini_output","validation","model_used"], "run_result", errors);
+  const allowedKeys = ["status","input_snapshot","gemini_output","validation","model_used","composition","independent_test","candidate_results"];
+  exactKeys(value, allowedKeys.filter((key) => key in value), "run_result", errors);
   if (!["APPROVED","NO_GALLERY","INCOMPLETE"].includes(String(value.status))) errors.push("status: invalid run status");
   const snapshot = value.input_snapshot;
   if (!isRecord(snapshot)) errors.push("input_snapshot: expected an object");
@@ -22,6 +23,37 @@ export function validateRunResult(value: unknown): ValidationResult {
   if (output !== null) {
     const checked = validateGeminiOutput(output);
     if (!checked.ok) errors.push(...checked.errors.map((e) => `gemini_output: ${e}`));
+  }
+  if ("composition" in value && value.composition !== null) {
+    const checked = validateGeminiOutput({ gallery: value.composition, test: { decision: "REJECT", findings: [], revision_cycles: 0 } });
+    if (!checked.ok) errors.push(...checked.errors.map((e) => `composition: ${e}`));
+  }
+  if ("independent_test" in value && value.independent_test !== null) {
+    const test = value.independent_test;
+    if (!isRecord(test)) errors.push("independent_test: expected an object or null");
+    else {
+      exactKeys(test, ["candidate_id","decision","scores","findings","blocking_issues"], "independent_test", errors);
+      if (!isNonEmptyString(test.candidate_id) || !/^cand_[a-f0-9]{64}$/.test(test.candidate_id)) errors.push("independent_test.candidate_id: expected canonical Candidate ID");
+      if (test.decision !== "APPROVE" && test.decision !== "REJECT") errors.push("independent_test.decision: invalid decision");
+      if (!isRecord(test.scores) || !Array.isArray(test.findings) || !Array.isArray(test.blocking_issues)) errors.push("independent_test: malformed structured TEST payload");
+    }
+  }
+  if ("candidate_results" in value) {
+    if (!Array.isArray(value.candidate_results)) errors.push("candidate_results: expected an array");
+    else value.candidate_results.forEach((candidate, index) => {
+      const path = `candidate_results[${index}]`;
+      if (!isRecord(candidate)) { errors.push(`${path}: expected an object`); return; }
+      exactKeys(candidate, ["candidate_id","status","composition","independent_test","revision_cycles","findings"], path, errors);
+      if (!isNonEmptyString(candidate.candidate_id)) errors.push(`${path}.candidate_id: required`);
+      if (!["APPROVED","REJECTED","REVISION_EXHAUSTED","INCOMPLETE"].includes(String(candidate.status))) errors.push(`${path}.status: invalid candidate status`);
+      if (candidate.composition !== null) {
+        const checked = validateGeminiOutput({ gallery: candidate.composition, test: { decision: "REJECT", findings: [], revision_cycles: 0 } });
+        if (!checked.ok) errors.push(...checked.errors.map((e) => `${path}.composition: ${e}`));
+      }
+      if (candidate.independent_test !== null && !isRecord(candidate.independent_test)) errors.push(`${path}.independent_test: expected an object or null`);
+      if (!Number.isInteger(candidate.revision_cycles) || (candidate.revision_cycles as number) < 0 || (candidate.revision_cycles as number) > 2) errors.push(`${path}.revision_cycles: expected integer 0–2`);
+      if (!Array.isArray(candidate.findings) || !candidate.findings.every(isNonEmptyString)) errors.push(`${path}.findings: expected an array of non-empty strings`);
+    });
   }
   const validation = value.validation;
   if (!isRecord(validation)) errors.push("validation: expected an object");

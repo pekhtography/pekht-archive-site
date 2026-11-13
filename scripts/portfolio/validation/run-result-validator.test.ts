@@ -11,3 +11,16 @@ test("accepts NO_GALLERY only after completed rejection",()=>assert.equal(valida
 test("rejects APPROVED when semantic validation failed",()=>assert.equal(validateRunResult({...base,validation:{...validation,semantic:"FAIL"},status:"APPROVED",gemini_output:output(gallery,"APPROVE")}).ok,false));
 test("accepts INCOMPLETE with failed validation and preserved Gemini output",()=>assert.equal(validateRunResult({...base,validation:{...validation,status:"FAIL",process:"FAIL"},status:"INCOMPLETE",gemini_output:output(gallery,"APPROVE")}).ok,true));
 test("rejects malformed snapshot metadata",()=>assert.equal(validateRunResult({...base,input_snapshot:{...snapshot,content_sha256:"bad"},status:"NO_GALLERY",gemini_output:output(null,"REJECT")}).ok,false));
+
+test("accepts separately stored composition, independent TEST and candidate lifecycle result",()=>{
+  const candidateId="cand_"+"c".repeat(64);
+  const independentTest={candidate_id:candidateId,decision:"APPROVE",scores:{semantic_coherence:4,curatorial_originality:4,narrative_integrity:4,visual_composition:4,evidence_integrity:5},findings:[],blocking_issues:[]};
+  const candidate={candidate_id:candidateId,status:"APPROVED",composition:gallery,independent_test:independentTest,revision_cycles:1,findings:[]};
+  const result=validateRunResult({...base,status:"APPROVED",gemini_output:output(gallery,"APPROVE"),composition:gallery,independent_test:independentTest,candidate_results:[candidate]});
+  assert.equal(result.ok,true);
+});
+test("rejects candidate revision count above the two-revision limit",()=>{
+  const candidate={candidate_id:"candidate-x",status:"REVISION_EXHAUSTED",composition:gallery,independent_test:null,revision_cycles:3,findings:["exhausted"]};
+  const result=validateRunResult({...base,status:"INCOMPLETE",gemini_output:output(gallery,"APPROVE"),validation:{...validation,status:"FAIL"},candidate_results:[candidate]});
+  assert.equal(result.ok,false);
+});

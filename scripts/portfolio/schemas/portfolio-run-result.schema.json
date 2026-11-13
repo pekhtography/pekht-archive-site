@@ -39,6 +39,32 @@
       "items": {
         "$ref": "#/$defs/modelCall"
       }
+    },
+    "composition": {
+      "oneOf": [
+        {
+          "$ref": "gemini-gallery.schema.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "independent_test": {
+      "oneOf": [
+        {
+          "$ref": "independent-test-response-v1.3.2.schema.json"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "candidate_results": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/candidateResult"
+      }
     }
   },
   "$defs": {
@@ -191,6 +217,64 @@
             "FALLBACK",
             "FAILED"
           ]
+        }
+      }
+    },
+    "candidateResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "candidate_id",
+        "status",
+        "composition",
+        "independent_test",
+        "revision_cycles",
+        "findings"
+      ],
+      "properties": {
+        "candidate_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "enum": [
+            "APPROVED",
+            "REJECTED",
+            "REVISION_EXHAUSTED",
+            "INCOMPLETE"
+          ]
+        },
+        "composition": {
+          "oneOf": [
+            {
+              "$ref": "gemini-gallery.schema.json"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "independent_test": {
+          "oneOf": [
+            {
+              "$ref": "independent-test-response-v1.3.2.schema.json"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "revision_cycles": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2
+        },
+        "findings": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
         }
       }
     }
