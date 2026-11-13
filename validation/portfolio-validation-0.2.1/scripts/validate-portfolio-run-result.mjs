@@ -19,7 +19,10 @@ const schemaNames = [
   "portfolio-run-result.schema.json",
 ];
 
-const ajv = new Ajv2020({ allErrors: true, strict: true });
+// Draft 2020-12 permits "properties" inside conditional applicators without
+// restating "type": "object". Keep Ajv strict mode enabled, but disable only
+// strictTypes so these valid schemas are checked by their normative semantics.
+const ajv = new Ajv2020({ allErrors: true, strict: true, strictTypes: false });
 addFormats(ajv);
 
 const schemas = new Map();
