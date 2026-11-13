@@ -171,7 +171,11 @@ export function validateLifecycleAmendment1(input) {
       errors.push(`artifact ${key}: missing content or reference/hash mismatch`);
       return null;
     }
-    const parsed = jsonParse(stored.content, `artifact ${key}`, errors);\n    if (parsed !== null && expectedValue !== undefined && !isDeepStrictEqual(parsed, expectedValue)) {\n      errors.push(`artifact ${key}: parsed artifact content does not match the supplied validated object`);\n    }\n    return parsed;
+    const parsed = jsonParse(stored.content, `artifact ${key}`, errors);
+    if (parsed !== null && expectedValue !== undefined && !isDeepStrictEqual(parsed, expectedValue)) {
+      errors.push(`artifact ${key}: parsed artifact content does not match the supplied validated object`);
+    }
+    return parsed;
   };
   checkArtifact("discovery", audit?.discovery_artifact, audit?.discovery_artifact?.content_sha256, discoveryRecords);
   checkArtifact("candidate_pool", audit?.candidate_pool_artifact, audit?.candidate_pool_artifact?.content_sha256, candidatePool);
