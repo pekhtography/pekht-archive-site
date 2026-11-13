@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import { readPortfolioSnapshot } from "./snapshot.ts";
@@ -8,8 +9,9 @@ import type { IndependentTestValidationContextV132 } from "./validation/test-res
 
 const snapshotPath = process.env.PORTFOLIO_SNAPSHOT_PATH ?? "portfolio-snapshot.json";
 const outputPath = process.env.PORTFOLIO_RESULT_PATH ?? "portfolio-real-gemini-smoke-result.json";
-const candidateId = process.env.PORTFOLIO_CANDIDATE_ID ?? "";
+const suppliedCandidateId = process.env.PORTFOLIO_CANDIDATE_ID?.trim() ?? "";
 const sourceIds = (process.env.PORTFOLIO_SOURCE_IDS ?? "").split(",").map((id) => id.trim()).filter(Boolean);
+const candidateId = suppliedCandidateId || "cand_" + createHash("sha256").update(JSON.stringify([...sourceIds].sort())).digest("hex");
 const gallerySchemaPath = fileURLToPath(new URL("./schemas/gemini-gallery.schema.json", import.meta.url));
 const testSchemaPath = fileURLToPath(new URL("./schemas/independent-test-response-v1.3.2.schema.json", import.meta.url));
 
@@ -26,7 +28,8 @@ function diagnostics(error: unknown): ModelCallRecord[] {
 
 const result: Record<string, unknown> = {
   status: "INCOMPLETE",
-  candidate_id: candidateId || null,
+  candidate_id: candidateId,
+  candidate_id_origin: suppliedCandidateId ? "provided" : "derived_for_smoke_test_from_sorted_source_ids",
   source_ids: sourceIds,
   model_used: [] as ModelCallRecord[],
   stages_completed: [],
@@ -34,8 +37,8 @@ const result: Record<string, unknown> = {
 };
 
 try {
-  if (!/^cand_[a-f0-9]{64}$/.test(candidateId)) throw new Error("PORTFOLIO_CANDIDATE_ID must be cand_ followed by 64 lowercase hexadecimal characters.");
   if (sourceIds.length !== 6 || new Set(sourceIds).size !== 6) throw new Error("PORTFOLIO_SOURCE_IDS must contain exactly six unique comma-separated source IDs.");
+  if (!/^cand_[a-f0-9]{64}$/.test(candidateId)) throw new Error("Candidate ID must be cand_ followed by 64 lowercase hexadecimal characters.");
 
   const loaded = await readPortfolioSnapshot(snapshotPath);
   const postById = new Map(loaded.snapshot.posts.map((post) => [post.source_id, post]));
