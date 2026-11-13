@@ -130,7 +130,7 @@ export interface MockPipelineDependencies {
   compareCandidates?: (candidates: Candidate[], discovery: DiscoveryRecord[], snapshot: PortfolioSnapshot) => CandidateComparison[];
   buildGallery?: (snapshot: PortfolioSnapshot, sourceIds: string[]) => NonNullable<GeminiOutput["gallery"]>;
   onStageEvent?: (event: MockStageEvent) => void;
-  minimumPublishScore?: number;
+  minimumPublishScore?: number;\n  /** Deterministic independent TEST decisions, consumed in invocation order. */\n  testDecisions?: readonly ("APPROVE" | "REJECT")[];
 }
 
 function hashSnapshot(posts: PortfolioSnapshot["posts"], ids: string[]): string {
@@ -502,153 +502,124 @@ async function runMockPipeline(
     : null;
   if (selectedComparison && !selected) throw new Error("Global Comparison selected an unknown Candidate.");
 
-  let draft: NonNullable<GeminiOutput["gallery"]> | null = null;
   let revisionCycles = 0;
-  let result: PortfolioRunResult;
+  const candidateIds = shortlist.map((candidate) => candidate.candidate_id);
+  const revisionMap = Object.fromEntries(candidateIds.map((id) => [id, 0]));
+  const audit = buildProcessAudit(snapshot, discovery, shortlist, revisionMap);
+  let testInvocation = 0;
+  const decisions = dependencies.testDecisions ?? ["REJECT", "APPROVE"];
+  const orchestratorInput = {
+    snapshotPath: "MOCK_ONLY_NO_FILE_READ",
+    prompt: "Run the deterministic synthetic Portfolio lifecycle.",
+    processAudit: audit,
+  };
 
-  if (selected) {
-    const selectedIds = [...selected.source_ids];
-    draft = await executeStage(log, events, dependencies.onStageEvent, "COMPOSE", selectedIds.length, "PASS",
-      "Composition was assembled from the globally selected Candidate and exact source text.",
-      () => compose(snapshot, selectedIds),
-      (value) => value.roles.length);
-
-    // The first TEST receives a deliberately corrupted quotation so the rejection path is exercised.
-    draft.roles[0].evidence[0].quote = "A deliberately altered quotation that is absent from the source.";
-    const firstTest = await executeStage(log, events, dependencies.onStageEvent, "TEST", 1, "REJECT",
-      "TEST rejected the deliberately altered, non-verbatim quotation.",
-      () => {
-        const semantic = validatePortfolioSemantics(
-          { gallery: draft },
-          snapshot as unknown as Parameters<typeof validatePortfolioSemantics>[1],
-          selectedIds,
-        );
-        const testResult = makeTestResult(selected.candidate_id, semantic.errors);
-        const issues = validateTestDecision(testResult);
-        if (issues.length) throw new Error(`TestResult validation failed: ${issues.map((issue) => issue.code).join(", ")}`);
-        testResults.push(testResult);
-        return { testResult, semantic };
-      },
-      (value) => value.testResult.decision === "PASS" ? 1 : 0);
-
-    let accepted = firstTest.testResult.decision === "PASS";
-    while (!accepted && revisionCycles < MAX_REVISION_ATTEMPTS) {
-      revisionCycles += 1;
-      draft = await executeStage(log, events, dependencies.onStageEvent, "REVISION", 1, "PASS",
-        `REVISION ${revisionCycles} rebuilt the draft from the selected Candidate.`,
-        () => compose(snapshot, selectedIds),
-        (value) => value.roles.length);
-      const revisedTest = await executeStage(log, events, dependencies.onStageEvent, "TEST", 1, "PASS",
-        "TEST revalidated the revised draft and accepted exact source evidence.",
-        () => {
-          const semantic = validatePortfolioSemantics(
-            { gallery: draft },
-            snapshot as unknown as Parameters<typeof validatePortfolioSemantics>[1],
-            selectedIds,
-          );
-          const testResult = makeTestResult(selected.candidate_id, semantic.errors);
-          const issues = validateTestDecision(testResult);
-          if (issues.length) throw new Error(`Revised TestResult validation failed: ${issues.map((issue) => issue.code).join(", ")}`);
-          testResults.push(testResult);
-          return { testResult, semantic };
-        },
-        (value) => value.testResult.decision === "PASS" ? 1 : 0);
-      accepted = revisedTest.testResult.decision === "PASS";
-    }
-    if (!accepted || !draft) throw new Error("Revision limit exhausted without a passing TEST result.");
-
-    const finalOutput: GeminiOutput = {
-      gallery: draft,
-      test: { decision: "APPROVE", findings: [], revision_cycles: revisionCycles },
-    };
-    const revisionMap = Object.fromEntries(shortlist.map((candidate) => [
-      candidate.candidate_id,
-      candidate.candidate_id === selected.candidate_id ? revisionCycles : 0,
-    ]));
-    const audit = buildProcessAudit(snapshot, discovery, shortlist, revisionMap);
-    const finalTestCall = modelCall("mock-final-validation-test", "TEST", selected.candidate_id);
-
-    result = await executeStage(log, events, dependencies.onStageEvent, "FINAL_VALIDATION", 1, "PASS",
-      "The existing Orchestrator independently validated structure, semantics and process evidence.",
-      () => runPortfolioOrchestrator({
-        snapshotPath: "MOCK_ONLY_NO_FILE_READ",
-        prompt: "Validate the already composed deterministic mock Portfolio output.",
-        candidateId: selected.candidate_id,
-        processAudit: audit,
-      }, {
-        readSnapshot: async () => makeLoadedSnapshot(snapshot),
-        schema: {},
-        generate: async (_prompt, _schema, options) => {
-          if (options.stage !== "TEST" || options.candidateId !== selected.candidate_id) {
-            throw new Error("Mock final validator received an unexpected Provider stage or Candidate.");
-          }
-          return { data: finalOutput, model_used: [finalTestCall] };
-        },
+  const result = await runPortfolioOrchestrator(orchestratorInput, {
+    readSnapshot: async () => makeLoadedSnapshot(snapshot),
+    gallerySchema: {},
+    independentTestSchema: {},
+    compose: async (_prompt, _schema, options) => executeStage(
+      log,
+      events,
+      dependencies.onStageEvent,
+      options.stage,
+      6,
+      "PASS",
+      options.stage === "COMPOSE"
+        ? "Standalone COMPOSE generated a gallery for the current synthetic Candidate."
+        : "Standalone REVISION regenerated the gallery after independent TEST findings.",
+      async () => ({
+        data: compose(snapshot, audit.candidateSourceIdsById[options.candidateId!] ?? []),
+        model_used: [modelCall(
+          `mock-${options.stage.toLowerCase()}-${options.candidateId}-${testInvocation}`,
+          options.stage,
+          options.candidateId ?? null,
+        )],
       }),
-      (value) => value.status === "APPROVED" ? 1 : 0);
-    if (result.status !== "APPROVED") throw new Error(`Orchestrator final result was ${result.status}`);
+      (value) => value.data.roles.length,
+    ),
+    evaluateTest: async (_prompt, _schema, options) => {
+      const invocation = testInvocation++;
+      const decision = decisions[invocation] ?? "APPROVE";
+      const sourceId = audit.candidateSourceIdsById[options.candidateId][0];
+      const sourceText = snapshot.posts.find((post) => post.source_id === sourceId)!.body;
+      const rejected = decision === "REJECT";
+      const response: IndependentTestResponseV132 = {
+        candidate_id: options.candidateId,
+        decision,
+        scores: rejected
+          ? { semantic_coherence: 3, curatorial_originality: 3, narrative_integrity: 3, visual_composition: 3, evidence_integrity: 4 }
+          : { semantic_coherence: 4, curatorial_originality: 4, narrative_integrity: 4, visual_composition: 4, evidence_integrity: 5 },
+        findings: rejected ? [{
+          criterion: "evidence_integrity",
+          issue: "Synthetic TEST requires a clearer relationship between the source and its assigned role.",
+          blocking: true,
+          evidence: { kind: "SOURCE", source_id: sourceId, quote: sourceText },
+        }] : [],
+        blocking_issues: rejected ? ["Clarify the source-to-role relationship."] : [],
+      };
+      const wrapped = await executeStage(
+        log,
+        events,
+        dependencies.onStageEvent,
+        "TEST",
+        1,
+        rejected ? "REJECT" : "APPROVED",
+        rejected
+          ? "Independent TEST returned a structured blocking finding."
+          : "Independent TEST approved the revised or initial composition.",
+        async () => ({
+          data: response,
+          model_used: [modelCall(`mock-test-${invocation + 1}`, "TEST", options.candidateId)],
+        }),
+        (value) => value.data.decision === "APPROVE" ? 1 : 0,
+      );
+      testResults.push({
+        candidate_id: options.candidateId,
+        decision: rejected ? "FAIL" : "PASS",
+        scores: wrapped.data.scores,
+        blocking_issues: wrapped.data.blocking_issues,
+      });
+      return wrapped;
+    },
+  });
 
-    await executeStage(log, events, dependencies.onStageEvent, "PROCESS_AUDIT", snapshot.posts.length, "PASS",
-      "Process Audit compared the completed stage log with the independently recorded invocation trace and revalidated actual model-call records.",
-      () => {
-        assertTraceMatchesLog(log, events);
-        const checked = validatePortfolioProcess({
-          ...audit,
-          modelCalls: result.model_used,
-        }, {
-          actualSnapshotSourceIds: snapshot.sampled_source_ids,
-          selectedCandidateId: selected.candidate_id,
-          reportedRevisionCycles: revisionCycles,
-        });
-        if (!checked.ok) throw new Error(`Process audit failed: ${checked.errors.join("; ")}`);
-        return checked;
-      },
-      (value) => value.ok ? 1 : 0);
+  if (result.status === "APPROVED") {
+    const approved = result.candidate_results?.find((candidate) => candidate.status === "APPROVED");
+    revisionCycles = approved?.revision_cycles ?? 0;
   } else {
-    if (shortlist.length !== 0) throw new Error("A shortlist exists but no matching Candidate was available.");
-    const audit = buildProcessAudit(snapshot, discovery, shortlist, {});
-    const noGalleryCall = modelCall("mock-no-gallery-decision", "DISCOVER", null);
-    result = await executeStage(log, events, dependencies.onStageEvent, "FINAL_VALIDATION", 1, "NO_GALLERY",
-      "The Orchestrator validated the explicit no-selection result; no gallery composition was requested.",
-      () => runPortfolioOrchestrator({
-        snapshotPath: "MOCK_ONLY_NO_FILE_READ",
-        prompt: "Return NO_GALLERY because Global Comparison selected no publishable Candidate.",
-        processAudit: audit,
-      }, {
-        readSnapshot: async () => makeLoadedSnapshot(snapshot),
-        schema: {},
-        generate: async (_prompt, _schema, options) => {
-          if (options.stage !== "DISCOVER" || options.candidateId !== null) {
-            throw new Error("Mock NO_GALLERY provider received an unexpected stage or Candidate.");
-          }
-          return {
-            data: {
-              gallery: null,
-              test: { decision: "REJECT", findings: ["Global Comparison selected no Candidate."], revision_cycles: 0 },
-            },
-            model_used: [noGalleryCall],
-          };
-        },
-      }),
-      (value) => value.status === "NO_GALLERY" ? 0 : 1);
-    if (result.status !== "NO_GALLERY") throw new Error(`NO_GALLERY scenario returned ${result.status}`);
-
-    await executeStage(log, events, dependencies.onStageEvent, "PROCESS_AUDIT", snapshot.posts.length, "PASS",
-      "Process Audit verified the actual Snapshot, Discovery, Candidate Generation and Global Comparison execution trace.",
-      () => {
-        assertTraceMatchesLog(log, events);
-        const checked = validatePortfolioProcess({
-          ...audit,
-          modelCalls: result.model_used,
-        }, {
-          actualSnapshotSourceIds: snapshot.sampled_source_ids,
-          selectedCandidateId: null,
-        });
-        if (!checked.ok) throw new Error(`NO_GALLERY process audit failed: ${checked.errors.join("; ")}`);
-        return checked;
-      },
-      (value) => value.ok ? 1 : 0);
+    revisionCycles = result.candidate_results?.reduce((sum, candidate) => sum + candidate.revision_cycles, 0) ?? 0;
   }
+  const selectedCandidateId = result.candidate_results?.find((candidate) => candidate.status === "APPROVED")?.candidate_id
+    ?? result.candidate_results?.[0]?.candidate_id
+    ?? null;
+
+  await executeStage(log, events, dependencies.onStageEvent, "FINAL_VALIDATION", 1,
+    result.status === "APPROVED" ? "PASS" : result.status === "NO_GALLERY" ? "NO_GALLERY" : "REJECT",
+    "The standalone Orchestrator completed structural, semantic, independent TEST and Process Audit validation.",
+    () => result,
+    (value) => value.status === "APPROVED" ? 1 : 0);
+
+  await executeStage(log, events, dependencies.onStageEvent, "PROCESS_AUDIT", snapshot.posts.length, "PASS",
+    "Process Audit revalidated the actual COMPOSE → TEST → (REVISION → TEST)* provider call sequence.",
+    () => {
+      assertTraceMatchesLog(log, events);
+      const checked = validatePortfolioProcess({
+        ...audit,
+        revisionCyclesByCandidate: Object.fromEntries((result.candidate_results ?? []).map((candidate) => [
+          candidate.candidate_id,
+          candidate.revision_cycles,
+        ])),
+        modelCalls: result.model_used,
+      }, {
+        actualSnapshotSourceIds: snapshot.sampled_source_ids,
+        selectedCandidateId: null,
+        requireCandidateLifecycle: true,
+      });
+      if (!checked.ok) throw new Error(`Process audit failed: ${checked.errors.join("; ")}`);
+      return checked;
+    },
+    (value) => value.ok ? 1 : 0);
 
   await executeStage(log, events, dependencies.onStageEvent, "RESULT", 1,
     result.status === "NO_GALLERY" ? "NO_GALLERY" : "APPROVED",
