@@ -1,0 +1,75 @@
+name: Portfolio Real Gemini DISCOVER Pilot
+
+on:
+  push:
+    branches:
+      - portfolio/lifecycle-amendment-1-integration-harness
+    paths:
+      - "scripts/portfolio/discover-pilot.ts"
+      - ".github/workflows/portfolio-discover-pilot.yml"
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: portfolio-real-discover-pilot
+  cancel-in-progress: false
+
+jobs:
+  discover-pilot:
+    name: DISCOVER 20 Snapshot publications (live Gemini)
+    runs-on: ubuntu-latest
+    timeout-minutes: 35
+    steps:
+      - name: Checkout isolated integration branch
+        uses: actions/checkout@v4
+        with:
+          ref: portfolio/lifecycle-amendment-1-integration-harness
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: pnpm
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download approved immutable Snapshot Run #2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p snapshot
+          gh run download 41331070359 \
+            --repo "$GITHUB_REPOSITORY" \
+            --name "pekhtography-portfolio-snapshot-41331070359" \
+            --dir snapshot
+          test -s snapshot/portfolio-snapshot.json
+          echo "Downloaded approved Snapshot Run #2."
+
+      - name: Run 20-publication live DISCOVER pilot
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_FALLBACK_1: ${{ vars.GEMINI_FALLBACK_1 }}
+          GEMINI_FALLBACK_2: ${{ vars.GEMINI_FALLBACK_2 }}
+          GEMINI_FALLBACK_3: ${{ vars.GEMINI_FALLBACK_3 }}
+          GEMINI_FALLBACK_4: ${{ vars.GEMINI_FALLBACK_4 }}
+          PORTFOLIO_SNAPSHOT_PATH: snapshot/portfolio-snapshot.json
+          PORTFOLIO_DISCOVER_RESULT_PATH: portfolio-discover-pilot-result.json
+        run: pnpm exec tsx scripts/portfolio/discover-pilot.ts
+
+      - name: Upload DISCOVER records and model-call audit
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-discover-pilot-${{ github.run_id }}
+          path: portfolio-discover-pilot-result.json
+          if-no-files-found: error
+          retention-days: 30
