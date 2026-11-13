@@ -12,12 +12,14 @@ on:
       - "scripts/portfolio/orchestrator.test.ts"
       - "scripts/portfolio/snapshot.ts"
       - "scripts/portfolio/provider.ts"
+      - "scripts/portfolio/real-gemini-smoke.ts"
       - "scripts/portfolio/validation/**"
       - "scripts/portfolio/schemas/**"
       - "validation/portfolio-validation-0.2.1/**"
       - "package.json"
       - "pnpm-lock.yaml"
       - ".github/workflows/portfolio-mock-implementation.yml"
+      - ".github/workflows/portfolio-real-gemini-smoke.yml"
   pull_request:
     branches:
       - portfolio/orchestrator-v1
