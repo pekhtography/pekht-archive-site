@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - portfolio/lifecycle-amendment-1-contracts
+      - portfolio/lifecycle-amendment-1-integration-harness
     paths:
       - "validation/portfolio-lifecycle-amendment-1/**"
       - "scripts/portfolio/validation/lifecycle-amendment-1-contracts.ts"
