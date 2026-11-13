@@ -5,12 +5,10 @@ import {
   type LoadedPortfolioSnapshot,
   type PortfolioSnapshot,
 } from "../snapshot.ts";
-import {
-  validatePortfolioSemantics,
-  validatePortfolioProcess,
-} from "../validation/index.ts";
+import { validatePortfolioProcess } from "../validation/index.ts";
 import type {
   GeminiOutput,
+  IndependentTestResponseV132,
   ModelCallRecord,
   ProcessAudit,
   PortfolioRunResult,
@@ -19,7 +17,6 @@ import {
   computeCandidateId,
   validateCandidate,
   validateDiscoveryCoverage,
-  validateTestDecision,
 } from "../../../validation/portfolio-validation-0.2.1/src/validators.ts";
 import type {
   Candidate,
