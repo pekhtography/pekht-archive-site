@@ -9,9 +9,10 @@ on:
         type: string
         default: "41331070359"
       candidate_id:
-        description: "Canonical candidate ID: cand_ followed by 64 lowercase hexadecimal characters"
-        required: true
+        description: "Optional existing canonical ID; leave blank to derive a smoke-only ID from the six source IDs"
+        required: false
         type: string
+        default: ""
       source_ids:
         description: "Exactly six comma-separated source IDs present in the Snapshot"
         required: true
