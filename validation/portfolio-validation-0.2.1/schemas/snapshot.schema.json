@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pekhtography.local/schemas/snapshot.schema.json",
+  "title": "Portfolio v2 Snapshot",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["content_sha256", "posts"],
+  "properties": {
+    "content_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "posts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": true,
+        "required": ["source_id", "body", "original_markdown"],
+        "properties": {
+          "source_id": {"type": "string", "minLength": 1, "maxLength": 128},
+          "body": {"type": "string"},
+          "original_markdown": {"type": "string"},
+          "hashtags": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

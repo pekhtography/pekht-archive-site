@@ -1,0 +1,91 @@
+name: Portfolio Real Gemini Smoke Test
+
+on:
+  workflow_dispatch:
+    inputs:
+      snapshot_run_id:
+        description: "Successful Snapshot workflow run ID (default: approved Snapshot Run #2)"
+        required: true
+        type: string
+        default: "41331070359"
+      candidate_id:
+        description: "Optional existing canonical ID; leave blank to derive a smoke-only ID from the six source IDs"
+        required: false
+        type: string
+        default: ""
+      source_ids:
+        description: "Exactly six comma-separated source IDs present in the Snapshot"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+  actions: read
+
+concurrency:
+  group: portfolio-real-gemini-smoke-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  real-gemini-smoke:
+    name: One-candidate COMPOSE + independent TEST (no publication)
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout selected feature ref
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: pnpm
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Download the immutable Portfolio Snapshot artifact
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SNAPSHOT_RUN_ID: ${{ inputs.snapshot_run_id }}
+        run: |
+          if ! [[ "$SNAPSHOT_RUN_ID" =~ ^[0-9]+$ ]]; then
+            echo "::error::snapshot_run_id must be numeric."
+            exit 1
+          fi
+          mkdir -p snapshot
+          gh run download "$SNAPSHOT_RUN_ID" \
+            --repo "$GITHUB_REPOSITORY" \
+            --name "pekhtography-portfolio-snapshot-$SNAPSHOT_RUN_ID" \
+            --dir snapshot
+          test -s snapshot/portfolio-snapshot.json
+
+      - name: Run one-candidate Real Gemini smoke test
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+          GEMINI_FALLBACK_1: ${{ vars.GEMINI_FALLBACK_1 }}
+          GEMINI_FALLBACK_2: ${{ vars.GEMINI_FALLBACK_2 }}
+          GEMINI_FALLBACK_3: ${{ vars.GEMINI_FALLBACK_3 }}
+          GEMINI_FALLBACK_4: ${{ vars.GEMINI_FALLBACK_4 }}
+          PORTFOLIO_SNAPSHOT_PATH: snapshot/portfolio-snapshot.json
+          PORTFOLIO_CANDIDATE_ID: ${{ inputs.candidate_id }}
+          PORTFOLIO_SOURCE_IDS: ${{ inputs.source_ids }}
+          PORTFOLIO_RESULT_PATH: portfolio-real-gemini-smoke-result.json
+        run: pnpm exec tsx scripts/portfolio/real-gemini-smoke.ts
+
+      - name: Upload provider diagnostics and validated result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-real-gemini-smoke-${{ github.run_id }}
+          path: portfolio-real-gemini-smoke-result.json
+          if-no-files-found: warn
+          retention-days: 30
