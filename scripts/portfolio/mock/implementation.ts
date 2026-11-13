@@ -513,7 +513,7 @@ async function runMockPipeline(
         ? "Standalone COMPOSE generated a gallery for the current synthetic Candidate."
         : "Standalone REVISION regenerated the gallery after independent TEST findings.",
       async () => ({
-        data: compose(snapshot, audit.candidateSourceIdsById[options.candidateId!] ?? []),
+        data: compose(snapshot, [...(audit.candidateSourceIdsById[options.candidateId!] ?? [])]),
         model_used: [modelCall(
           `mock-${options.stage.toLowerCase()}-${options.candidateId}-${testInvocation}`,
           options.stage,
