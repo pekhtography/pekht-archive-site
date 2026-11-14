@@ -171,11 +171,15 @@ function safeErrorDescription(value: string): string {
     if (typeof parsed?.error?.message === "string") description = parsed.error.message;
     else if (typeof parsed?.error?.status === "string") description = parsed.error.status;
   } catch { /* Keep bounded plain text for non-JSON responses. */ }
-  return description.replace(/Bearer\\s+[^\\s,;]+/gi, "Bearer [REDACTED]")
-    .replace(/(x-goog-api-key|api[_-]?key|access[_-]?token)\\s*[:=]\\s*[^\\s,;]+/gi, "$1=[REDACTED]")
-    .replace(/https?:\\/\\/[^\\s]+/gi, "[URL]").replace(/\\s+/g, " ").trim().slice(0, 500)
-    || "No provider error description was returned.";
+  return description
+    .replace(/Bearer\s+[^\s,;]+/gi, "Bearer [REDACTED]")
+    .replace(/(x-goog-api-key|api[_-]?key|access[_-]?token)\s*[:=]\s*[^\s,;]+/gi, "$1=[REDACTED]")
+    .replace(/https?:\/\/[^\s]+/gi, "[URL]")
+    .replace(/\s+/g, " ")
+    .trim()
+    .slice(0, 500) || "No provider error description was returned.";
 }
+
 function responseText(payload: unknown): string {
   if (!payload || typeof payload !== "object") return "";
   const candidates = (payload as { candidates?: unknown }).candidates;
