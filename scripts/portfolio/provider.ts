@@ -29,10 +29,16 @@ export interface ModelFailureDiagnostic {
   error_description: string;
 }
 
+export interface GeminiResponseDiagnostics {
+  finish_reason: string | null;
+  usage_metadata: Record<string, unknown> | null;
+}
+
 export interface PortfolioProviderResult {
   data: GeminiOutput;
   model_used: ModelCallRecord[];
   model_diagnostics: ModelFailureDiagnostic[];
+  response_diagnostics: GeminiResponseDiagnostics;
 }
 
 export interface IndependentTestProviderOptions extends Omit<PortfolioProviderOptions, "stage" | "candidateId" | "callId"> {
@@ -209,7 +215,7 @@ async function requestModel(
   prompt: string,
   schema: JsonSchema,
   options: PortfolioProviderOptions,
-): Promise<{ data: unknown; attempts: number }> {
+): Promise<{ data: unknown; attempts: number; response_diagnostics: GeminiResponseDiagnostics }> {
   const apiKey = process.env.GEMINI_API_KEY;
   if (!apiKey) {
     throw new PortfolioProviderError("GEMINI_API_KEY is not configured.", {
@@ -249,7 +255,18 @@ async function requestModel(
           });
         }
         try {
-          return { data: JSON.parse(text) as unknown, attempts: attempt };
+          const candidate = (payload as { candidates?: Array<{ finishReason?: unknown }> }).candidates?.[0];
+          const usage = (payload as { usageMetadata?: unknown }).usageMetadata;
+          return {
+            data: JSON.parse(text) as unknown,
+            attempts: attempt,
+            response_diagnostics: {
+              finish_reason: typeof candidate?.finishReason === "string" ? candidate.finishReason : null,
+              usage_metadata: usage && typeof usage === "object" && !Array.isArray(usage)
+                ? usage as Record<string, unknown>
+                : null,
+            },
+          };
         } catch (error) {
           throw new PortfolioProviderError(`Gemini model ${model} returned invalid JSON: ${error instanceof Error ? error.message : String(error)}`, {
             retryable: false, model, attempts: attempt, status: response.status, cause: error,
@@ -346,7 +363,7 @@ export async function generatePortfolioJson(
         attempts: result.attempts,
         outcome: "SUCCESS",
       });
-      return { data: result.data as GeminiOutput, model_used: modelUsed, model_diagnostics: modelDiagnostics };
+      return { data: result.data as GeminiOutput, model_used: modelUsed, model_diagnostics: modelDiagnostics, response_diagnostics: result.response_diagnostics };
     } catch (error) {
       if (error instanceof PortfolioProviderError) {
         if (error.attempts > 0) {
