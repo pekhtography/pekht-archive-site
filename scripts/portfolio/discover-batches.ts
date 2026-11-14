@@ -74,7 +74,7 @@ export function buildDiscoveryResponseSchema(sourceIds: string[]) {
           required: ["source_id", "result", "observations"],
           properties: {
             source_id: { type: "string", enum: sourceIds },
-            result: { enum: ["SIGNALS_FOUND", "NO_SIGNAL"] },
+            result: { type: "string", enum: ["SIGNALS_FOUND", "NO_SIGNAL"] },
             observations: {
               type: "array",
               items: {
@@ -90,7 +90,7 @@ export function buildDiscoveryResponseSchema(sourceIds: string[]) {
                       type: "object",
                       required: ["source", "quote"],
                       properties: {
-                        source: { enum: ["BODY"] },
+                        source: { type: "string", enum: ["BODY"] },
                         quote: { type: "string" }
                       }
                     }
