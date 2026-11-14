@@ -47,9 +47,9 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p snapshot
-          gh run download 41331070359 \\
-            --repo "$GITHUB_REPOSITORY" \\
-            --name "pekhtography-portfolio-snapshot-41331070359" \\
+          gh run download 41331070359 \
+            --repo "$GITHUB_REPOSITORY" \
+            --name "pekhtography-portfolio-snapshot-41331070359" \
             --dir snapshot
           test -s snapshot/portfolio-snapshot.json
           echo "Downloaded approved Snapshot Run #2."
@@ -60,9 +60,9 @@ jobs:
           RESUME_RUN_ID: ${{ inputs.resume_run_id }}
         run: |
           mkdir -p prior
-          gh run download "$RESUME_RUN_ID" \\
-            --repo "$GITHUB_REPOSITORY" \\
-            --name "portfolio-discover-pilot-$RESUME_RUN_ID" \\
+          gh run download "$RESUME_RUN_ID" \
+            --repo "$GITHUB_REPOSITORY" \
+            --name "portfolio-discover-pilot-$RESUME_RUN_ID" \
             --dir prior
           test -s prior/portfolio-discover-pilot-result.json
           echo "Downloaded prior DISCOVER result for selective retry."
