@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { generatePortfolioJson, PortfolioProviderError } from "./provider.ts";
 import { computePortfolioSnapshotContentHash, PORTFOLIO_SNAPSHOT_PURPOSE } from "./snapshot.ts";
 import { validateDiscoveryRecords } from "../../validation/portfolio-validation-0.2.1/src/validators.ts";
-import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches } from "./discover-batches.ts";
+import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches, validateDiscoveryEvidenceQuotes } from "./discover-batches.ts";
 
 const snapshotPath = process.env.PORTFOLIO_SNAPSHOT_PATH ?? "snapshot/portfolio-snapshot.json";
 const outputPath = process.env.PORTFOLIO_DISCOVER_RESULT_PATH ?? "portfolio-discover-pilot-result.json";
@@ -155,12 +155,16 @@ try {
       )
     );
     const structurallyValid = validateDiscoveryRecords(priorRecords as never[]).length === 0;
+    const quoteValid = validateDiscoveryEvidenceQuotes(
+      priorRecords as Array<{ source_id: string; observations?: unknown }>,
+      batch.map((post) => ({ source_id: String(post.source_id), body: String(post.body) }))
+    ).length === 0;
     const reusable = prior.input_sha256 === currentInputHash &&
       priorRecords.length === BATCH_SIZE &&
       coverage.missingSourceIds.length === 0 &&
       coverage.unexpectedSourceIds.length === 0 &&
       coverage.duplicateSourceIds.length === 0 &&
-      bodyOnly && structurallyValid;
+      bodyOnly && structurallyValid && quoteValid;
     if (reusable) {
       batchResults[batchIndex] = prior;
       allSuccessfulRecords.push(...coverage.orderedRecords);
@@ -262,7 +266,11 @@ try {
         }
       }
 
-      const validationIssues = [...validateDiscoveryRecords(records as never[]), ...invalidEvidenceSources];
+      const quoteIssues = validateDiscoveryEvidenceQuotes(
+        records as Array<{ source_id: string; observations?: unknown }>,
+        batch.map((post) => ({ source_id: String(post.source_id), body: String(post.body) }))
+      );
+      const validationIssues = [...validateDiscoveryRecords(records as never[]), ...invalidEvidenceSources, ...quoteIssues];
       const coverage = inspectDiscoveryCoverage(batchSourceIds, records);
       const batchPass = validationIssues.length === 0 &&
         coverage.missingSourceIds.length === 0 &&
