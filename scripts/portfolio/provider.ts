@@ -19,9 +19,20 @@ export interface PortfolioProviderOptions {
 
 export interface GalleryProviderResult { data: GeminiGalleryResponse; model_used: ModelCallRecord[] }
 
+export interface ModelFailureDiagnostic {
+  model: string;
+  fallback_index: number;
+  attempts: number;
+  outcome: "FALLBACK" | "FAILED";
+  http_status: number | null;
+  quota_type: "daily" | "tpm" | "rpm" | "unknown" | null;
+  error_description: string;
+}
+
 export interface PortfolioProviderResult {
   data: GeminiOutput;
   model_used: ModelCallRecord[];
+  model_diagnostics: ModelFailureDiagnostic[];
 }
 
 export interface IndependentTestProviderOptions extends Omit<PortfolioProviderOptions, "stage" | "candidateId" | "callId"> {
@@ -41,6 +52,7 @@ export interface PortfolioProviderErrorOptions {
   status?: number | null;
   quotaType?: "daily" | "tpm" | "rpm" | "unknown" | null;
   model_used?: ModelCallRecord[];
+  model_diagnostics?: ModelFailureDiagnostic[];
   cause?: unknown;
 }
 
@@ -51,6 +63,7 @@ export class PortfolioProviderError extends Error {
   readonly attempts: number;
   readonly quotaType: "daily" | "tpm" | "rpm" | "unknown" | null;
   readonly model_used: ModelCallRecord[];
+  readonly model_diagnostics: ModelFailureDiagnostic[];
 
   constructor(message: string, options: PortfolioProviderErrorOptions) {
     super(message, { cause: options.cause });
@@ -61,11 +74,12 @@ export class PortfolioProviderError extends Error {
     this.attempts = options.attempts;
     this.quotaType = options.quotaType ?? null;
     this.model_used = [...(options.model_used ?? [])];
+    this.model_diagnostics = [...(options.model_diagnostics ?? [])];
   }
 }
 
 export class PortfolioModelsExhaustedError extends PortfolioProviderError {
-  constructor(modelUsed: ModelCallRecord[], cause?: unknown) {
+  constructor(modelUsed: ModelCallRecord[], diagnostics: ModelFailureDiagnostic[], cause?: unknown) {
     const last = modelUsed.at(-1);
     super(
       `INCOMPLETE: all configured Portfolio Gemini models were exhausted (${modelUsed.map((entry) => entry.model).join(", ")}).`,
@@ -74,6 +88,7 @@ export class PortfolioModelsExhaustedError extends PortfolioProviderError {
         model: last?.model ?? "unknown",
         attempts: last?.attempts ?? 0,
         model_used: modelUsed,
+        model_diagnostics: diagnostics,
         cause,
       },
     );
@@ -149,6 +164,18 @@ function retryAfterMs(response: Response, errorText: string): number | null {
   return Number.isFinite(seconds) && seconds >= 0 ? Math.ceil(seconds * 1000) : null;
 }
 
+function safeErrorDescription(value: string): string {
+  let description = value;
+  try {
+    const parsed = JSON.parse(value) as { error?: { message?: unknown; status?: unknown } };
+    if (typeof parsed?.error?.message === "string") description = parsed.error.message;
+    else if (typeof parsed?.error?.status === "string") description = parsed.error.status;
+  } catch { /* Keep bounded plain text for non-JSON responses. */ }
+  return description.replace(/Bearer\\s+[^\\s,;]+/gi, "Bearer [REDACTED]")
+    .replace(/(x-goog-api-key|api[_-]?key|access[_-]?token)\\s*[:=]\\s*[^\\s,;]+/gi, "$1=[REDACTED]")
+    .replace(/https?:\\/\\/[^\\s]+/gi, "[URL]").replace(/\\s+/g, " ").trim().slice(0, 500)
+    || "No provider error description was returned.";
+}
 function responseText(payload: unknown): string {
   if (!payload || typeof payload !== "object") return "";
   const candidates = (payload as { candidates?: unknown }).candidates;
@@ -236,7 +263,7 @@ async function requestModel(
         delayMs = retryAfterMs(response, errorText);
         if (lastQuota === "daily" || lastQuota === "unknown" || (delayMs !== null && delayMs > maxRetryDelayMs)) {
           throw new PortfolioProviderError(
-            `Gemini ${model} quota/delay requires model fallback (${lastQuota}).`,
+            `Gemini ${model} HTTP 429 (${lastQuota} quota): ${safeErrorDescription(errorText)}`,
             { retryable: true, model, attempts: attempt, status: response.status, quotaType: lastQuota },
           );
         }
@@ -281,7 +308,7 @@ async function requestModel(
     }
   }
 
-  throw new PortfolioProviderError(`Gemini ${model} exhausted ${maxAttempts} attempts: ${lastError}`, {
+  throw new PortfolioProviderError(`Gemini ${model} exhausted ${maxAttempts} attempts; HTTP ${lastStatus ?? "unavailable"}; ${safeErrorDescription(lastError)}`, {
     retryable: true, model, attempts: maxAttempts, status: lastStatus, quotaType: lastQuota,
   });
 }
@@ -299,6 +326,7 @@ export async function generatePortfolioJson(
   const callId = options.callId ?? randomUUID();
   const candidateId = options.candidateId ?? null;
   const modelUsed: ModelCallRecord[] = [];
+  const modelDiagnostics: ModelFailureDiagnostic[] = [];
   let lastError: unknown = null;
 
   for (let fallbackIndex = 0; fallbackIndex < modelList.length; fallbackIndex += 1) {
@@ -314,10 +342,12 @@ export async function generatePortfolioJson(
         attempts: result.attempts,
         outcome: "SUCCESS",
       });
-      return { data: result.data as GeminiOutput, model_used: modelUsed };
+      return { data: result.data as GeminiOutput, model_used: modelUsed, model_diagnostics: modelDiagnostics };
     } catch (error) {
       if (error instanceof PortfolioProviderError) {
         if (error.attempts > 0) {
+          const outcome = error.retryable && fallbackIndex < modelList.length - 1 ? "FALLBACK" : "FAILED";
+          modelDiagnostics.push({ model, fallback_index: fallbackIndex, attempts: error.attempts, outcome, http_status: error.status, quota_type: error.quotaType, error_description: safeErrorDescription(error.message) });
           modelUsed.push({
             call_id: callId,
             stage: options.stage,
@@ -336,6 +366,7 @@ export async function generatePortfolioJson(
             status: error.status,
             quotaType: error.quotaType,
             model_used: modelUsed,
+            model_diagnostics: modelDiagnostics,
             cause: error,
           });
         }
@@ -344,6 +375,7 @@ export async function generatePortfolioJson(
       }
 
       const message = error instanceof Error ? error.message : String(error);
+      modelDiagnostics.push({ model, fallback_index: fallbackIndex, attempts: 1, outcome: "FAILED", http_status: null, quota_type: null, error_description: safeErrorDescription(message) });
       modelUsed.push({
         call_id: callId,
         stage: options.stage,
@@ -363,7 +395,7 @@ export async function generatePortfolioJson(
     }
   }
 
-  throw new PortfolioModelsExhaustedError(modelUsed, lastError);
+  throw new PortfolioModelsExhaustedError(modelUsed, modelDiagnostics, lastError);
 }
 
 
