@@ -16,13 +16,11 @@ const responseSchema = {
   properties: {
     records: {
       type: "array",
-      minItems: PILOT_SIZE,
-      maxItems: PILOT_SIZE,
       items: {
         type: "object",
         required: ["source_id", "result", "observations"],
         properties: {
-          source_id: { type: "string", minLength: 1, maxLength: 128 },
+          source_id: { type: "string" },
           result: { enum: ["SIGNALS_FOUND", "NO_SIGNAL"] },
           observations: {
             type: "array",
@@ -30,18 +28,17 @@ const responseSchema = {
               type: "object",
               required: ["prism", "signal", "interpretation", "evidence"],
               properties: {
-                prism: { type: "string", minLength: 1 },
-                signal: { type: "string", minLength: 1 },
-                interpretation: { type: "string", minLength: 1 },
+                prism: { type: "string" },
+                signal: { type: "string" },
+                interpretation: { type: "string" },
                 evidence: {
                   type: "array",
-                  minItems: 1,
                   items: {
                     type: "object",
                     required: ["source", "quote"],
                     properties: {
                       source: { enum: ["BODY", "ORIGINAL_MARKDOWN"] },
-                      quote: { type: "string", minLength: 1 }
+                      quote: { type: "string" }
                     }
                   }
                 }
