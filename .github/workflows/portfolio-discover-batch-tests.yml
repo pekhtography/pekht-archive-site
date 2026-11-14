@@ -1,0 +1,40 @@
+name: Portfolio DISCOVER Batch Unit Tests
+
+on:
+  push:
+    branches:
+      - portfolio/lifecycle-amendment-1-integration-harness
+    paths:
+      - "scripts/portfolio/discover-batches.ts"
+      - "scripts/portfolio/discover-batches.test.ts"
+      - "scripts/portfolio/discover-pilot.ts"
+      - ".github/workflows/portfolio-discover-batch-tests.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  discover-batch-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout integration branch
+        uses: actions/checkout@v4
+        with:
+          ref: portfolio/lifecycle-amendment-1-integration-harness
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: pnpm
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run DISCOVER batch contract tests
+        run: pnpm exec tsx --test scripts/portfolio/discover-batches.test.ts
