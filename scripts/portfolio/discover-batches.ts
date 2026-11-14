@@ -56,3 +56,51 @@ export function selectBatchesToProcess<T>(batches: T[][], reusableSuccessIndexes
   }
   return batches.filter((_, index) => !reusable.has(index + 1));
 }
+
+export function buildDiscoveryResponseSchema(sourceIds: string[]) {
+  if (sourceIds.length !== 100 || new Set(sourceIds).size !== 100 || sourceIds.some((id) => !id)) {
+    throw new Error("DISCOVER response schema requires exactly 100 unique non-empty source IDs.");
+  }
+  return {
+    type: "object",
+    required: ["records"],
+    properties: {
+      records: {
+        type: "array",
+        minItems: 100,
+        maxItems: 100,
+        items: {
+          type: "object",
+          required: ["source_id", "result", "observations"],
+          properties: {
+            source_id: { type: "string", enum: sourceIds },
+            result: { enum: ["SIGNALS_FOUND", "NO_SIGNAL"] },
+            observations: {
+              type: "array",
+              items: {
+                type: "object",
+                required: ["prism", "signal", "interpretation", "evidence"],
+                properties: {
+                  prism: { type: "string" },
+                  signal: { type: "string" },
+                  interpretation: { type: "string" },
+                  evidence: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      required: ["source", "quote"],
+                      properties: {
+                        source: { enum: ["BODY"] },
+                        quote: { type: "string" }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  };
+}
