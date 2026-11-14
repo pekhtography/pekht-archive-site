@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches } from "./discover-batches.ts";
+import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches } from "./discover-batches.ts";
 
 test("splitIntoBatches preserves order and covers every item exactly once", () => {
   const batches = splitIntoBatches(Array.from({ length: 205 }, (_, index) => index), 100);
@@ -46,4 +46,40 @@ test("selectBatchesToProcess rejects invalid or duplicate reusable indexes", () 
   const batches = [[1], [2], [3]];
   assert.throws(() => selectBatchesToProcess(batches, [1, 1]), /unique/);
   assert.throws(() => selectBatchesToProcess(batches, [4]), /valid 1-based/);
+});
+
+test("buildDiscoveryResponseSchema restricts source IDs and evidence to the BODY contract", () => {
+  const ids = Array.from({ length: 100 }, (_, index) => `source-${index}`);
+  const schema = buildDiscoveryResponseSchema(ids) as {
+    properties: {
+      records: {
+        minItems: number;
+        maxItems: number;
+        items: {
+          properties: {
+            source_id: { enum: string[] };
+            observations: {
+              items: {
+                properties: {
+                  evidence: {
+                    items: { properties: { source: { enum: string[] } } };
+                  };
+                };
+              };
+            };
+          };
+        };
+      };
+    };
+  };
+  const record = schema.properties.records;
+  assert.equal(record.minItems, 100);
+  assert.equal(record.maxItems, 100);
+  assert.deepEqual(record.items.properties.source_id.enum, ids);
+  assert.deepEqual(record.items.properties.observations.items.properties.evidence.items.properties.source.enum, ["BODY"]);
+});
+
+test("buildDiscoveryResponseSchema rejects invalid batch ID sets", () => {
+  assert.throws(() => buildDiscoveryResponseSchema(["only-one"]), /exactly 100/);
+  assert.throws(() => buildDiscoveryResponseSchema(Array(100).fill("duplicate")), /unique/);
 });
