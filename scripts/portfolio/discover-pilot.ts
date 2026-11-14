@@ -3,57 +3,13 @@ import { readFile, writeFile } from "node:fs/promises";
 import { generatePortfolioJson, PortfolioProviderError } from "./provider.ts";
 import { computePortfolioSnapshotContentHash, PORTFOLIO_SNAPSHOT_PURPOSE } from "./snapshot.ts";
 import { validateDiscoveryRecords } from "../../validation/portfolio-validation-0.2.1/src/validators.ts";
-import { inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches } from "./discover-batches.ts";
+import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches } from "./discover-batches.ts";
 
 const snapshotPath = process.env.PORTFOLIO_SNAPSHOT_PATH ?? "snapshot/portfolio-snapshot.json";
 const outputPath = process.env.PORTFOLIO_DISCOVER_RESULT_PATH ?? "portfolio-discover-pilot-result.json";
 const PILOT_SIZE = 1000;
 const BATCH_SIZE = 100;
 const INTER_BATCH_DELAY_MS = 15_000;
-
-function buildResponseSchema(sourceIds: string[]) {
-  return {
-    // Gemini supports enum constraints; bind source_id to this exact 100-ID batch.
-    type: "object",
-    required: ["records"],
-    properties: {
-      records: {
-        type: "array",
-        items: {
-          type: "object",
-          required: ["source_id", "result", "observations"],
-          properties: {
-            source_id: { type: "string", enum: sourceIds },
-            result: { enum: ["SIGNALS_FOUND", "NO_SIGNAL"] },
-            observations: {
-              type: "array",
-              items: {
-                type: "object",
-                required: ["prism", "signal", "interpretation", "evidence"],
-                properties: {
-                  prism: { type: "string" },
-                  signal: { type: "string" },
-                  interpretation: { type: "string" },
-                  evidence: {
-                    type: "array",
-                    items: {
-                      type: "object",
-                      required: ["source", "quote"],
-                      properties: {
-                        source: { enum: ["BODY"] },
-                        quote: { type: "string" }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  };
-}
 
 const result: Record<string, unknown> = {
   status: "INCOMPLETE",
@@ -170,7 +126,7 @@ try {
   let priorBatchResults: Array<Record<string, unknown>> = [];
   if (resumePath) {
     priorResult = JSON.parse(await readFile(resumePath, "utf8")) as Record<string, unknown>;
-    if (priorResult.requested_count !== PILOT_SIZE || !Array.isArray(priorResult.batch_results)) {
+    if (priorResult.stage !== "DISCOVER" || priorResult.pilot !== true || priorResult.requested_count !== PILOT_SIZE || !Array.isArray(priorResult.batch_results) || priorResult.batch_results.length !== 10) {
       throw new Error("Resume artifact does not match the 1000-publication DISCOVER result contract.");
     }
     priorBatchResults = priorResult.batch_results as Array<Record<string, unknown>>;
@@ -253,7 +209,7 @@ try {
     };
 
     try {
-      const generated = await generatePortfolioJson(prompt, buildResponseSchema(batchSourceIds), {
+      const generated = await generatePortfolioJson(prompt, buildDiscoveryResponseSchema(batchSourceIds), {
         stage: "DISCOVER",
         candidateId: null,
         timeoutMs: 180_000,
