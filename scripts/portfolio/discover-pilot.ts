@@ -57,6 +57,7 @@ const result: Record<string, unknown> = {
   pilot: true,
   requested_count: PILOT_SIZE,
   model_used: [],
+  model_diagnostics: [],
   records: [],
   note: "Full 1000-publication live DISCOVER run on the approved immutable Snapshot. This integration run does not execute downstream Portfolio stages."
 };
@@ -215,6 +216,7 @@ try {
     maxRetryDelayMs: 120_000
   });
   result.model_used = generated.model_used;
+  result.model_diagnostics = generated.model_diagnostics;
 
   const payload = generated.data as unknown as { records?: unknown };
   if (!payload || !Array.isArray(payload.records)) throw new Error("Gemini DISCOVER response is missing the records array.");
@@ -242,6 +244,9 @@ try {
   result.error = error instanceof Error ? error.message : String(error);
   if (!Array.isArray(result.model_used) || result.model_used.length === 0) {
     result.model_used = modelDiagnostics(error);
+  }
+  if (error instanceof PortfolioProviderError) {
+    result.model_diagnostics = error.model_diagnostics;
   }
 }
 
