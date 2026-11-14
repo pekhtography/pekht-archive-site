@@ -1,13 +1,13 @@
 name: Portfolio Real Gemini DISCOVER Pilot
 
 on:
-  push:
-    branches:
-      - portfolio/lifecycle-amendment-1-integration-harness
-    paths:
-      - "scripts/portfolio/discover-pilot.ts"
-      - "scripts/portfolio/discover-batches.ts"
-      - "scripts/portfolio/discover-batches.test.ts"
+  workflow_dispatch:
+    inputs:
+      resume_run_id:
+        description: "Completed DISCOVER pilot run whose successful batches should be reused"
+        required: true
+        type: string
+        default: "43608707090"
 
 permissions:
   contents: read
@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   discover-pilot:
-    name: DISCOVER 1000 Snapshot publications (10 x 100 live Gemini)
+    name: Retry failed DISCOVER batches from prior run
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -47,17 +47,30 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           mkdir -p snapshot
-          gh run download 41331070359 \
-            --repo "$GITHUB_REPOSITORY" \
-            --name "pekhtography-portfolio-snapshot-41331070359" \
+          gh run download 41331070359 \\
+            --repo "$GITHUB_REPOSITORY" \\
+            --name "pekhtography-portfolio-snapshot-41331070359" \\
             --dir snapshot
           test -s snapshot/portfolio-snapshot.json
           echo "Downloaded approved Snapshot Run #2."
 
-      - name: Test deterministic DISCOVER batching and coverage
+      - name: Download prior DISCOVER result artifact
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RESUME_RUN_ID: ${{ inputs.resume_run_id }}
+        run: |
+          mkdir -p prior
+          gh run download "$RESUME_RUN_ID" \\
+            --repo "$GITHUB_REPOSITORY" \\
+            --name "portfolio-discover-pilot-$RESUME_RUN_ID" \\
+            --dir prior
+          test -s prior/portfolio-discover-pilot-result.json
+          echo "Downloaded prior DISCOVER result for selective retry."
+
+      - name: Test deterministic DISCOVER batching and resume selection
         run: pnpm exec tsx --test scripts/portfolio/discover-batches.test.ts
 
-      - name: Run 1000-publication batched live DISCOVER pilot
+      - name: Retry only failed batches (live Gemini)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
@@ -66,14 +79,15 @@ jobs:
           GEMINI_FALLBACK_3: ${{ vars.GEMINI_FALLBACK_3 }}
           GEMINI_FALLBACK_4: ${{ vars.GEMINI_FALLBACK_4 }}
           PORTFOLIO_SNAPSHOT_PATH: snapshot/portfolio-snapshot.json
+          PORTFOLIO_DISCOVER_RESUME_PATH: prior/portfolio-discover-pilot-result.json
           PORTFOLIO_DISCOVER_RESULT_PATH: portfolio-discover-pilot-result.json
         run: pnpm exec tsx scripts/portfolio/discover-pilot.ts
 
-      - name: Upload DISCOVER records and model-call audit
+      - name: Upload resumed DISCOVER records and model-call audit
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: portfolio-discover-pilot-${{ github.run_id }}
+          name: portfolio-discover-pilot-resume-${{ github.run_id }}
           path: portfolio-discover-pilot-result.json
           if-no-files-found: error
           retention-days: 30
