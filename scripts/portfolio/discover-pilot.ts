@@ -149,7 +149,7 @@ try {
     const priorRecords = prior.records as Array<{ source_id: string; [key: string]: unknown }>;
     const coverage = inspectDiscoveryCoverage(expectedIds, priorRecords);
     const bodyOnly = priorRecords.every((record) =>
-      Array.isArray(record.observations) && (record.observations as Array<Record<string, unknown>>).every((observation) =>
+      record !== null && typeof record === "object" && Array.isArray(record.observations) && (record.observations as Array<Record<string, unknown>>).every((observation) =>
         Array.isArray(observation.evidence) && (observation.evidence as Array<Record<string, unknown>>).every((evidence) => evidence.source === "BODY")
       )
     );
