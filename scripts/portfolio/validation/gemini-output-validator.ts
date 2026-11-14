@@ -50,3 +50,8 @@ export function validateGeminiOutput(value: unknown): ValidationResult {
   return result(errors);
 }
 export function isGeminiOutput(value: unknown): value is GeminiOutput { return validateGeminiOutput(value).ok; }
+
+/** Validate a standalone gallery response using the canonical gallery rules. */
+export function validateGeminiGallery(value: unknown): ValidationResult {
+  return validateGeminiOutput({ gallery: value, test: { decision: "APPROVE", findings: [], revision_cycles: 0 } });
+}

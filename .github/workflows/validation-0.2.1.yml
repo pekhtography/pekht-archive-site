@@ -1,0 +1,79 @@
+name: Portfolio Validation 0.2.1
+
+on:
+  push:
+    branches:
+      - portfolio/validators-0.2.1
+    paths:
+      - "validation/portfolio-validation-0.2.1/**"
+      - "validation/portfolio-validation-0.2.0-baseline/**"
+      - ".github/workflows/validation-0.2.1.yml"
+  pull_request:
+    branches:
+      - portfolio/orchestrator-v1
+    paths:
+      - "validation/portfolio-validation-0.2.1/**"
+      - "validation/portfolio-validation-0.2.0-baseline/**"
+      - ".github/workflows/validation-0.2.1.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-validation-0.2.1-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate Portfolio Validation 0.2.1
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.16.0"
+
+      - name: Verify unchanged 0.2.0 baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          baseline_dir="validation/portfolio-validation-0.2.0-baseline"
+          manifest="validation/portfolio-validation-0.2.1/BASELINE-0.2.0-SHA256.txt"
+          test -d "$baseline_dir"
+          test -f "$manifest"
+
+          checked=0
+          while read -r expected relative size bytes; do
+            [[ -z "${expected:-}" ]] && continue
+            target="$baseline_dir/$relative"
+            test -f "$target"
+            actual="$(sha256sum "$target" | awk '{print $1}')"
+            if [[ "$actual" != "$expected" ]]; then
+              echo "FAIL: baseline hash mismatch: $relative"
+              exit 1
+            fi
+            checked=$((checked + 1))
+          done < "$manifest"
+
+          test "$checked" -eq 13
+          echo "PASS: $checked baseline 0.2.0 files match their SHA-256 manifest"
+
+      - name: Install locked Node dependencies
+        working-directory: validation/portfolio-validation-0.2.1
+        run: npm ci --no-audit --no-fund
+
+      - name: Validate all JSON Schemas and fixtures with Ajv
+        working-directory: validation/portfolio-validation-0.2.1
+        run: npm run validate:schema
+
+      - name: Run full runtime and Ajv tests
+        working-directory: validation/portfolio-validation-0.2.1
+        run: npm run test:full
+
+      - name: TypeScript typecheck
+        working-directory: validation/portfolio-validation-0.2.1
+        run: npm run typecheck

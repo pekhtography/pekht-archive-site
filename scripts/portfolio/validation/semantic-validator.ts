@@ -1,6 +1,16 @@
 import { isNonEmptyString, isRecord, result } from "./shared.ts";
 import type { PortfolioSnapshot, ValidationResult } from "./types.ts";
-export function validatePortfolioSemantics(output: unknown, snapshot: PortfolioSnapshot): ValidationResult {
+function sameIds(left: readonly string[], right: readonly string[]): boolean {
+  return left.length === right.length &&
+    new Set(left).size === new Set(right).size &&
+    [...left].every((id) => right.includes(id));
+}
+
+export function validatePortfolioSemantics(
+  output: unknown,
+  snapshot: PortfolioSnapshot,
+  expectedCandidateSourceIds?: readonly string[],
+): ValidationResult {
   const errors: string[] = [];
   if (!isRecord(output)) return { ok: false, errors: ["semantic: expected a Gemini output object"] };
   if (output.gallery === null) return result(errors);
@@ -15,6 +25,9 @@ export function validatePortfolioSemantics(output: unknown, snapshot: PortfolioS
   }
   if (!Array.isArray(gallery.source_ids) || !Array.isArray(gallery.roles)) return { ok: false, errors: [...errors,"gallery: source_ids and roles must be arrays"] };
   const sourceIds = gallery.source_ids;
+  if (expectedCandidateSourceIds && !sameIds(sourceIds, expectedCandidateSourceIds)) {
+    errors.push("GALLERY_CANDIDATE_MISMATCH: gallery source_ids do not match the selected global candidate");
+  }
   const roleIds: string[] = [];
   for (const id of sourceIds) {
     if (!isNonEmptyString(id)) { errors.push("gallery.source_ids: invalid identifier"); continue; }

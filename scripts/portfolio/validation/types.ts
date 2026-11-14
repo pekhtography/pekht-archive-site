@@ -11,7 +11,42 @@ export interface GeminiGallery {
   composition_rationale: string; alternatives_considered: string[]; doubts: string[];
 }
 export interface GeminiTest { decision: GeminiDecision; findings: string[]; revision_cycles: number }
+
+/** Independent model-evaluated TEST response v1.3.1; separate from normalized TestResult. */
+export interface IndependentTestScores { semantic_coherence: number; curatorial_originality: number; narrative_integrity: number; visual_composition: number; evidence_integrity: number; }
+export interface IndependentTestResponse { candidate_id: string; decision: GeminiDecision; scores: IndependentTestScores; findings: string[]; blocking_issues: string[]; }
+
+/** Evidence reference for the versioned structured TEST response contract v1.3.2. */
+export type TestEvidenceReferenceV132 =
+  | { kind: "SOURCE"; source_id: string; quote: string }
+  | { kind: "COMPOSITION"; path: string; quote: string };
+
+export type IndependentTestCriterionV132 =
+  | "semantic_coherence"
+  | "curatorial_originality"
+  | "narrative_integrity"
+  | "visual_composition"
+  | "evidence_integrity";
+
+export interface IndependentTestFindingV132 {
+  criterion: IndependentTestCriterionV132;
+  issue: string;
+  blocking: boolean;
+  evidence: TestEvidenceReferenceV132;
+}
+
+/** Versioned v1.3.2 response; does not replace the historical v1.3.1 response type. */
+export interface IndependentTestResponseV132 {
+  candidate_id: string;
+  decision: GeminiDecision;
+  scores: IndependentTestScores;
+  findings: IndependentTestFindingV132[];
+  blocking_issues: string[];
+}
+
 export interface GeminiOutput { gallery: GeminiGallery | null; test: GeminiTest }
+/** Standalone COMPOSE/REVISION response, deliberately separate from TEST. */
+export type GeminiGalleryResponse = GeminiGallery;
 export interface PortfolioInputSnapshot {
   schema_version: string; repository_commit: string; generated_at: string;
   sampled_count: 1000; content_sha256: string;
@@ -31,12 +66,31 @@ export interface ModelCallRecord {
   /** HTTP/API attempts made against this model. */
   attempts: number; outcome: ModelCallOutcome;
 }
+export type PortfolioCandidateStatus = "APPROVED" | "REJECTED" | "REVISION_EXHAUSTED" | "INCOMPLETE";
+export interface PortfolioCandidateResult {
+  candidate_id: string;
+  status: PortfolioCandidateStatus;
+  composition: GeminiGallery | null;
+  independent_test: IndependentTestResponseV132 | null;
+  revision_cycles: number;
+  findings: string[];
+}
 export interface PortfolioRunResult {
   status: PortfolioRunStatus; input_snapshot: PortfolioInputSnapshot;
-  gemini_output: GeminiOutput | null; validation: PortfolioValidation; model_used: ModelCallRecord[];
+  /** Legacy combined provider output retained only during the staged Orchestrator migration. */
+  gemini_output: GeminiOutput | null;
+  /** Canonical standalone composition and independent TEST; populated by the Stage C Orchestrator. */
+  composition?: GeminiGallery | null;
+  independent_test?: IndependentTestResponseV132 | null;
+  candidate_results?: PortfolioCandidateResult[];
+  validation: PortfolioValidation; model_used: ModelCallRecord[];
 }
 export interface SnapshotPost { source_id: string; body: string }
-export interface PortfolioSnapshot extends PortfolioInputSnapshot { posts: SnapshotPost[] }
+export interface PortfolioSnapshot extends Omit<PortfolioInputSnapshot, "schema_version"> {
+  /** The persisted Snapshot schema uses numeric version 1; input_snapshot is normalized to a string. */
+  schema_version: number;
+  posts: SnapshotPost[];
+}
 export interface ProcessAudit {
   snapshotSourceIds: readonly string[]; processedSourceIds: readonly string[];
   /** Globally deduplicated shortlist; intermediate batch notes are excluded. */

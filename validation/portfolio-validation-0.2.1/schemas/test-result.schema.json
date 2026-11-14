@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pekhtography.local/schemas/test-result.schema.json",
+  "title": "Portfolio v2 Test Result",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "candidate_id",
+    "decision",
+    "scores",
+    "blocking_issues"
+  ],
+  "properties": {
+    "candidate_id": {
+      "type": "string",
+      "pattern": "^cand_[a-f0-9]{64}$"
+    },
+    "decision": {
+      "enum": [
+        "PASS",
+        "FAIL"
+      ]
+    },
+    "scores": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "semantic_coherence",
+        "curatorial_originality",
+        "narrative_integrity",
+        "visual_composition",
+        "evidence_integrity"
+      ],
+      "properties": {
+        "semantic_coherence": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "curatorial_originality": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "narrative_integrity": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "visual_composition": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 5
+        },
+        "evidence_integrity": {
+          "const": 5
+        }
+      }
+    },
+    "blocking_issues": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "decision": {
+            "const": "PASS"
+          }
+        },
+        "required": [
+          "decision"
+        ],
+        "type": "object"
+      },
+      "then": {
+        "properties": {
+          "scores": {
+            "type": "object",
+            "properties": {
+              "semantic_coherence": {
+                "minimum": 4,
+                "type": "integer"
+              },
+              "curatorial_originality": {
+                "minimum": 4,
+                "type": "integer"
+              },
+              "narrative_integrity": {
+                "minimum": 4,
+                "type": "integer"
+              },
+              "visual_composition": {
+                "minimum": 4,
+                "type": "integer"
+              },
+              "evidence_integrity": {
+                "const": 5
+              }
+            }
+          },
+          "blocking_issues": {
+            "maxItems": 0,
+            "type": "array"
+          }
+        },
+        "type": "object"
+      }
+    }
+  ]
+}

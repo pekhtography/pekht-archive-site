@@ -1,0 +1,17 @@
+{
+  "source_id": "305",
+  "result": "SIGNALS_FOUND",
+  "observations": [
+    {
+      "prism": "Material",
+      "signal": "blue detail",
+      "interpretation": "A textual blue detail in source 305",
+      "evidence": [
+        {
+          "source": "BODY",
+          "quote": "distinctive blue detail"
+        }
+      ]
+    }
+  ]
+}

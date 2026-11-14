@@ -1,0 +1,71 @@
+{
+  "candidate_id": "cand_4842d793284c56fc53a1e8453133677bc9c85c7e351732a8f13ff9cba87edea1",
+  "source_ids": [
+    "305",
+    "355",
+    "655",
+    "805",
+    "749",
+    "749"
+  ],
+  "observation_ids": [
+    "305:0",
+    "355:0",
+    "655:0",
+    "805:0",
+    "749:0",
+    "524:0"
+  ],
+  "relationships": [
+    {
+      "source_a": "305",
+      "source_b": "355",
+      "type": "resonance",
+      "explanation": "305 and 355 share a textual motif",
+      "observation_ids": [
+        "305:0",
+        "355:0"
+      ]
+    },
+    {
+      "source_a": "355",
+      "source_b": "655",
+      "type": "resonance",
+      "explanation": "355 and 655 share a textual motif",
+      "observation_ids": [
+        "355:0",
+        "655:0"
+      ]
+    },
+    {
+      "source_a": "655",
+      "source_b": "805",
+      "type": "resonance",
+      "explanation": "655 and 805 share a textual motif",
+      "observation_ids": [
+        "655:0",
+        "805:0"
+      ]
+    },
+    {
+      "source_a": "805",
+      "source_b": "749",
+      "type": "resonance",
+      "explanation": "805 and 749 share a textual motif",
+      "observation_ids": [
+        "805:0",
+        "749:0"
+      ]
+    },
+    {
+      "source_a": "749",
+      "source_b": "524",
+      "type": "resonance",
+      "explanation": "749 and 524 share a textual motif",
+      "observation_ids": [
+        "749:0",
+        "524:0"
+      ]
+    }
+  ]
+}

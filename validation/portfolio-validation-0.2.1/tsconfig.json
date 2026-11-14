@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "noEmit": true,
+    "allowImportingTsExtensions": true,
+    "skipLibCheck": true,
+    "types": [
+      "node"
+    ]
+  },
+  "include": [
+    "src/**/*.ts",
+    "../../scripts/portfolio/mock/**/*.ts",
+    "../../scripts/portfolio/real-gemini-smoke.ts",
+    "../../scripts/portfolio/validation/test-response-validator.ts",
+    "../../scripts/portfolio/validation/test-response-v132-validator.ts"
+  ]
+}

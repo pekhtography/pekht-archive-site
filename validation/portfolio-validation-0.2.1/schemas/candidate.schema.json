@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://pekhtography.local/schemas/candidate.schema.json",
+  "title": "Portfolio v2 Candidate",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["candidate_id", "source_ids", "observation_ids", "relationships"],
+  "properties": {
+    "candidate_id": {"type": "string", "pattern": "^cand_[a-f0-9]{64}$"},
+    "source_ids": {"type": "array", "minItems": 6, "maxItems": 6, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 128}},
+    "observation_ids": {"type": "array", "minItems": 6, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 260}},
+    "relationships": {
+      "type": "array", "minItems": 5,
+      "items": {
+        "type": "object", "additionalProperties": false,
+        "required": ["source_a", "source_b", "type", "explanation", "observation_ids"],
+        "properties": {
+          "source_a": {"type": "string", "minLength": 1, "maxLength": 128},
+          "source_b": {"type": "string", "minLength": 1, "maxLength": 128},
+          "type": {"type": "string", "minLength": 1, "maxLength": 64},
+          "explanation": {"type": "string", "minLength": 1},
+          "observation_ids": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "minLength": 1, "maxLength": 260}}
+        }
+      }
+    }
+  }
+}

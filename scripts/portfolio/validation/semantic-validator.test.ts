@@ -9,3 +9,5 @@ test("accepts exact quotes from corresponding source",()=>assert.equal(validateP
 test("rejects source outside snapshot",()=>{const v:any=output();v.gallery.source_ids[0]="outside";assert.equal(validatePortfolioSemantics(v,snapshot).ok,false);});
 test("rejects non-verbatim quote",()=>{const v:any=output();v.gallery.roles[2].evidence[0].quote="distinctive Sentence";assert.equal(validatePortfolioSemantics(v,snapshot).ok,false);});
 test("rejects role/source set mismatch",()=>{const v:any=output();v.gallery.roles[0].source_id="b";assert.equal(validatePortfolioSemantics(v,snapshot).ok,false);});
+
+test("rejects a gallery that does not match the selected global candidate",()=>assert.equal(validatePortfolioSemantics(output(),snapshot,[...ids.slice(1),"outside"]).ok,false));

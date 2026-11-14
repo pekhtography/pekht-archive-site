@@ -1,0 +1,20 @@
+{
+  "name": "pekhtography-portfolio-orchestrator-v2-validation",
+  "version": "0.2.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=22.6.0"
+  },
+  "scripts": {
+    "validate:schema": "node scripts/validate-schema.mjs",
+    "test": "node --experimental-strip-types --test",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "ajv": "8.17.1",
+    "ajv-formats": "3.0.1",
+    "typescript": "5.8.3",
+    "@types/node": "22.15.30"
+  }
+}

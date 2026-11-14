@@ -1,0 +1,24 @@
+{
+  "candidate_id": "cand_aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  "decision": "APPROVE",
+  "scores": {
+    "semantic_coherence": 5,
+    "curatorial_originality": 4,
+    "narrative_integrity": 4,
+    "visual_composition": 4,
+    "evidence_integrity": 5
+  },
+  "findings": [
+    {
+      "criterion": "semantic_coherence",
+      "issue": "The selected source sustains the temporal motif.",
+      "blocking": false,
+      "evidence": {
+        "kind": "SOURCE",
+        "source_id": "source-1",
+        "quote": "The river carries yesterday"
+      }
+    }
+  ],
+  "blocking_issues": []
+}

@@ -1,0 +1,102 @@
+name: Portfolio Mock Implementation
+
+on:
+  push:
+    branches:
+      - portfolio/mock-implementation-v1
+      - portfolio/test-contract-v1.3
+    paths:
+      - "scripts/portfolio/mock/**"
+      - "scripts/portfolio/orchestrator.ts"
+      - "scripts/portfolio/orchestrator-lifecycle.ts"
+      - "scripts/portfolio/orchestrator.test.ts"
+      - "scripts/portfolio/snapshot.ts"
+      - "scripts/portfolio/provider.ts"
+      - "scripts/portfolio/real-gemini-smoke.ts"
+      - "scripts/portfolio/validation/**"
+      - "scripts/portfolio/schemas/**"
+      - "validation/portfolio-validation-0.2.1/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/portfolio-mock-implementation.yml"
+      - ".github/workflows/portfolio-real-gemini-smoke.yml"
+  pull_request:
+    branches:
+      - portfolio/orchestrator-v1
+    paths:
+      - "scripts/portfolio/mock/**"
+      - "scripts/portfolio/orchestrator.ts"
+      - "scripts/portfolio/snapshot.ts"
+      - "scripts/portfolio/provider.ts"
+      - "scripts/portfolio/validation/**"
+      - "scripts/portfolio/schemas/**"
+      - "validation/portfolio-validation-0.2.1/**"
+      - "package.json"
+      - "pnpm-lock.yaml"
+      - ".github/workflows/portfolio-mock-implementation.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-mock-implementation-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  mock-implementation:
+    name: Portfolio mock implementation (synthetic data only)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.16.0"
+          cache: pnpm
+
+      - name: Install repository dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Install locked Validation 0.2.1 dependencies
+        working-directory: validation/portfolio-validation-0.2.1
+        run: npm ci --no-audit --no-fund
+
+      - name: Re-run Validation 0.2.1 gates and mock TypeScript check
+        working-directory: validation/portfolio-validation-0.2.1
+        run: |
+          npm run validate:schema
+          npm run test:full
+          npm run typecheck
+
+      - name: Set up Python for independent Draft 2020-12 validation
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate standalone run-result JSON Schema independently
+        run: |
+          python -m pip install --disable-pip-version-check jsonschema==4.26.0
+          python scripts/portfolio/validation/validate-run-result-schema.py
+
+      - name: Validate Portfolio run-result JSON Schema with Ajv
+        working-directory: validation/portfolio-validation-0.2.1
+        run: node scripts/validate-portfolio-run-result.mjs
+
+      - name: Run mock implementation and existing orchestrator tests
+        run: >-
+          pnpm exec tsx --test
+          scripts/portfolio/mock/implementation.test.ts
+          scripts/portfolio/mock/independent-test-contract.test.ts
+          scripts/portfolio/mock/independent-test-response-v132.test.ts
+          scripts/portfolio/provider.test.ts
+          scripts/portfolio/orchestrator.test.ts
+          scripts/portfolio/validation/process-validator.test.ts
+          scripts/portfolio/validation/run-result-validator.test.ts
