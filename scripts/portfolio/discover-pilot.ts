@@ -37,7 +37,7 @@ const responseSchema = {
                     type: "object",
                     required: ["source", "quote"],
                     properties: {
-                      source: { enum: ["BODY", "ORIGINAL_MARKDOWN"] },
+                      source: { enum: ["BODY"] },
                       quote: { type: "string" }
                     }
                   }
@@ -91,9 +91,6 @@ function normalizeDiscoveryEvidenceSources(records: unknown): unknown {
             if (!evidence || typeof evidence !== "object") return evidence;
             const evidenceObject = evidence as Record<string, unknown>;
             if (evidenceObject.source === "body") return { ...evidenceObject, source: "BODY" };
-            if (evidenceObject.source === "original_markdown") {
-              return { ...evidenceObject, source: "ORIGINAL_MARKDOWN" };
-            }
             return evidence;
           })
         };
@@ -185,14 +182,13 @@ try {
   const inputPosts = selected.map((post) => ({
     source_id: post.source_id,
     title: post.title,
-    body: post.body,
-    original_markdown: post.original_markdown
+    body: post.body
   }));
   const prompt = [
     "You are the DISCOVER stage of PEKHTOGRAPHY Portfolio.",
     "Analyze each publication independently. Do not compose galleries, compare publications, or propose six-post candidates.",
     "The complete body text is the primary source of meaning. Hashtags are part of the supplied text and may carry meaning, but are not privileged and must never be the sole evidence for an observation.",
-    "Use only explicit textual evidence from BODY or ORIGINAL_MARKDOWN. Do not infer meaning from images, filenames, metadata, popularity, or assumptions.",
+    "Use only explicit textual evidence from BODY. Do not infer meaning from images, filenames, metadata, popularity, or assumptions.",
     "Look for grounded observations through curatorial prisms including Motif, Field, Material, Rhetorical Transformation, Reframing, Metaphor, Contrast, Threshold, Time, Scale, Sensorial Shift, Vector, Resonance, Agency, Micro/Macro-dramaturgy, Observation, Composition, and Lexical echoes.",
     "An observation must identify a specific textual signal and explain its interpretation. Every observation must include at least one exact, verbatim, contiguous quotation from the named source field. Never invent or normalize quotations.",
     "Return exactly one Discovery record for every supplied source_id. Use SIGNALS_FOUND with one or more observations when grounded signals exist; otherwise use NO_SIGNAL with an empty observations array. Do not treat a technical uncertainty as NO_SIGNAL.",
@@ -223,7 +219,22 @@ try {
 
   const normalizedRecords = normalizeDiscoveryEvidenceSources(payload.records);
   const records = normalizedRecords as Array<{ source_id: string }>;
-  const validationIssues = validateDiscoveryRecords(records as never[]);
+  const invalidEvidenceSources: Array<{ code: string; message: string }> = [];
+  for (const record of records) {
+    if (!record || typeof record !== "object" || !Array.isArray((record as Record<string, unknown>).observations)) continue;
+    for (const [observationIndex, observation] of ((record as Record<string, unknown>).observations as unknown[]).entries()) {
+      if (!observation || typeof observation !== "object" || !Array.isArray((observation as Record<string, unknown>).evidence)) continue;
+      for (const [evidenceIndex, evidence] of ((observation as Record<string, unknown>).evidence as unknown[]).entries()) {
+        if (!evidence || typeof evidence !== "object" || (evidence as Record<string, unknown>).source !== "BODY") {
+          invalidEvidenceSources.push({
+            code: "DISCOVERY_EVIDENCE_SOURCE_INVALID",
+            message: `Evidence source must be BODY at ${String((record as Record<string, unknown>).source_id)}:${observationIndex}:${evidenceIndex}`
+          });
+        }
+      }
+    }
+  }
+  const validationIssues = [...validateDiscoveryRecords(records as never[]), ...invalidEvidenceSources];
   const returnedIds = records.map((record) => record?.source_id);
   const idCounts = new Map<string, number>();
   for (const id of returnedIds) if (typeof id === "string") idCounts.set(id, (idCounts.get(id) ?? 0) + 1);
