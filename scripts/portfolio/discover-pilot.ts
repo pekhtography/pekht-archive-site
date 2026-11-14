@@ -6,7 +6,7 @@ import { validateDiscoveryRecords } from "../../validation/portfolio-validation-
 
 const snapshotPath = process.env.PORTFOLIO_SNAPSHOT_PATH ?? "snapshot/portfolio-snapshot.json";
 const outputPath = process.env.PORTFOLIO_DISCOVER_RESULT_PATH ?? "portfolio-discover-pilot-result.json";
-const PILOT_SIZE = 20;
+const PILOT_SIZE = 100;
 
 const responseSchema = {
   // Gemini responseSchema supports a restricted schema subset; strict extra-key rejection
@@ -58,7 +58,7 @@ const result: Record<string, unknown> = {
   requested_count: PILOT_SIZE,
   model_used: [],
   records: [],
-  note: "Twenty-publication live DISCOVER pilot only. This is not full 1000-publication Discovery coverage and does not complete the production DISCOVER stage."
+  note: "One-hundred-publication live DISCOVER pilot only. This is not full 1000-publication Discovery coverage and does not complete the production DISCOVER stage."
 };
 
 function modelDiagnostics(error: unknown) {
@@ -230,7 +230,7 @@ try {
   if (validationIssues.length > 0 || missing.length > 0 || unexpected.length > 0 || records.length !== PILOT_SIZE) {
     result.validation = { status: "FAIL", issues: validationIssues, missing_or_duplicate_source_ids: missing, unexpected_source_ids: unexpected };
     result.records = records;
-    throw new Error("DISCOVER response failed record structure or exact 20-source coverage validation.");
+    throw new Error("DISCOVER response failed record structure or exact 100-source coverage validation.");
   }
 
   const byId = new Map(records.map((record) => [record.source_id, record]));
