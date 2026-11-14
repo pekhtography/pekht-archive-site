@@ -1,3 +1,4 @@
+// Contract tests for deterministic DISCOVER batching, strict IDs, BODY evidence, and resume selection.
 import test from "node:test";
 import assert from "node:assert/strict";
 import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches } from "./discover-batches.ts";
