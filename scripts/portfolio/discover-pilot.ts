@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { generatePortfolioJson, PortfolioProviderError } from "./provider.ts";
 import { computePortfolioSnapshotContentHash, PORTFOLIO_SNAPSHOT_PURPOSE } from "./snapshot.ts";
 import { validateDiscoveryRecords } from "../../validation/portfolio-validation-0.2.1/src/validators.ts";
-import { inspectDiscoveryCoverage, splitIntoBatches } from "./discover-batches.ts";
+import { inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches } from "./discover-batches.ts";
 
 const snapshotPath = process.env.PORTFOLIO_SNAPSHOT_PATH ?? "snapshot/portfolio-snapshot.json";
 const outputPath = process.env.PORTFOLIO_DISCOVER_RESULT_PATH ?? "portfolio-discover-pilot-result.json";
@@ -11,37 +11,38 @@ const PILOT_SIZE = 1000;
 const BATCH_SIZE = 100;
 const INTER_BATCH_DELAY_MS = 15_000;
 
-const responseSchema = {
-  // Gemini responseSchema supports a restricted schema subset; strict extra-key rejection
-  // is enforced locally by validateDiscoveryRecords after generation, not sent to Gemini.
-  type: "object",
-  required: ["records"],
-  properties: {
-    records: {
-      type: "array",
-      items: {
-        type: "object",
-        required: ["source_id", "result", "observations"],
-        properties: {
-          source_id: { type: "string" },
-          result: { enum: ["SIGNALS_FOUND", "NO_SIGNAL"] },
-          observations: {
-            type: "array",
-            items: {
-              type: "object",
-              required: ["prism", "signal", "interpretation", "evidence"],
-              properties: {
-                prism: { type: "string" },
-                signal: { type: "string" },
-                interpretation: { type: "string" },
-                evidence: {
-                  type: "array",
-                  items: {
-                    type: "object",
-                    required: ["source", "quote"],
-                    properties: {
-                      source: { enum: ["BODY"] },
-                      quote: { type: "string" }
+function buildResponseSchema(sourceIds: string[]) {
+  return {
+    // Gemini supports enum constraints; bind source_id to this exact 100-ID batch.
+    type: "object",
+    required: ["records"],
+    properties: {
+      records: {
+        type: "array",
+        items: {
+          type: "object",
+          required: ["source_id", "result", "observations"],
+          properties: {
+            source_id: { type: "string", enum: sourceIds },
+            result: { enum: ["SIGNALS_FOUND", "NO_SIGNAL"] },
+            observations: {
+              type: "array",
+              items: {
+                type: "object",
+                required: ["prism", "signal", "interpretation", "evidence"],
+                properties: {
+                  prism: { type: "string" },
+                  signal: { type: "string" },
+                  interpretation: { type: "string" },
+                  evidence: {
+                    type: "array",
+                    items: {
+                      type: "object",
+                      required: ["source", "quote"],
+                      properties: {
+                        source: { enum: ["BODY"] },
+                        quote: { type: "string" }
+                      }
                     }
                   }
                 }
@@ -51,8 +52,8 @@ const responseSchema = {
         }
       }
     }
-  }
-};
+  };
+}
 
 const result: Record<string, unknown> = {
   status: "INCOMPLETE",
@@ -74,36 +75,6 @@ function modelDiagnostics(error: unknown) {
   }
   return [];
 }
-
-function normalizeDiscoveryEvidenceSources(records: unknown): unknown {
-  if (!Array.isArray(records)) return records;
-
-  return records.map((record) => {
-    if (!record || typeof record !== "object") return record;
-    const recordObject = record as Record<string, unknown>;
-    if (!Array.isArray(recordObject.observations)) return record;
-
-    return {
-      ...recordObject,
-      observations: recordObject.observations.map((observation) => {
-        if (!observation || typeof observation !== "object") return observation;
-        const observationObject = observation as Record<string, unknown>;
-        if (!Array.isArray(observationObject.evidence)) return observation;
-
-        return {
-          ...observationObject,
-          evidence: observationObject.evidence.map((evidence) => {
-            if (!evidence || typeof evidence !== "object") return evidence;
-            const evidenceObject = evidence as Record<string, unknown>;
-            if (evidenceObject.source === "body") return { ...evidenceObject, source: "BODY" };
-            return evidence;
-          })
-        };
-      })
-    };
-  });
-}
-
 
 try {
   // Pilot-specific integrity gate: preserve the immutable Snapshot identity and full
@@ -189,13 +160,61 @@ try {
     throw new Error("Expected exactly 10 DISCOVER batches of 100 publications.");
   }
 
+  result.input_snapshot = loaded.input_snapshot;
+  result.snapshot_content_sha256 = loaded.snapshot.content_sha256;
+  result.selected_indices = indices;
+  result.selected_source_ids = sourceIds;
+
+  const resumePath = process.env.PORTFOLIO_DISCOVER_RESUME_PATH;
+  let priorResult: Record<string, unknown> | null = null;
+  let priorBatchResults: Array<Record<string, unknown>> = [];
+  if (resumePath) {
+    priorResult = JSON.parse(await readFile(resumePath, "utf8")) as Record<string, unknown>;
+    if (priorResult.requested_count !== PILOT_SIZE || !Array.isArray(priorResult.batch_results)) {
+      throw new Error("Resume artifact does not match the 1000-publication DISCOVER result contract.");
+    }
+    priorBatchResults = priorResult.batch_results as Array<Record<string, unknown>>;
+    result.resumed_from_run_id = process.env.PORTFOLIO_DISCOVER_RESUME_RUN_ID ?? "unspecified";
+  }
+
   const allSuccessfulRecords: Array<{ source_id: string; [key: string]: unknown }> = [];
-  const batchResults: Array<Record<string, unknown>> = [];
-  const allModelUsed: unknown[] = [];
-  const allModelDiagnostics: unknown[] = [];
-  const allResponseDiagnostics: unknown[] = [];
+  const batchResults: Array<Record<string, unknown> | undefined> = new Array(batches.length);
+  for (const [batchIndex, batch] of batches.entries()) {
+    const batchNumber = batchIndex + 1;
+    const prior = priorBatchResults.find((item) => item.batch_index === batchNumber && item.status === "SUCCESS");
+    if (!prior || !Array.isArray(prior.records)) continue;
+    const expectedIds = batch.map((post) => String(post.source_id));
+    const currentInput = batch.map((post) => ({ source_id: post.source_id, title: post.title, body: post.body }));
+    const currentInputHash = createHash("sha256").update(JSON.stringify(currentInput), "utf8").digest("hex");
+    const priorRecords = prior.records as Array<{ source_id: string; [key: string]: unknown }>;
+    const coverage = inspectDiscoveryCoverage(expectedIds, priorRecords);
+    const bodyOnly = priorRecords.every((record) =>
+      Array.isArray(record.observations) && (record.observations as Array<Record<string, unknown>>).every((observation) =>
+        Array.isArray(observation.evidence) && (observation.evidence as Array<Record<string, unknown>>).every((evidence) => evidence.source === "BODY")
+      )
+    );
+    const structurallyValid = validateDiscoveryRecords(priorRecords as never[]).length === 0;
+    const reusable = prior.input_sha256 === currentInputHash &&
+      priorRecords.length === BATCH_SIZE &&
+      coverage.missingSourceIds.length === 0 &&
+      coverage.unexpectedSourceIds.length === 0 &&
+      coverage.duplicateSourceIds.length === 0 &&
+      bodyOnly && structurallyValid;
+    if (reusable) {
+      batchResults[batchIndex] = prior;
+      allSuccessfulRecords.push(...coverage.orderedRecords);
+    }
+  }
+
+  const reusableBatchIndexes = batchResults.flatMap((item, index) => item ? [index + 1] : []);
+  const batchesToProcess = selectBatchesToProcess(batches, reusableBatchIndexes);
+  const pendingBatchIndexes = new Set(batchesToProcess.map((batch) => batches.indexOf(batch)));
+  const allModelUsed: unknown[] = Array.isArray(priorResult?.model_used) ? [...priorResult.model_used as unknown[]] : [];
+  const allModelDiagnostics: unknown[] = Array.isArray(priorResult?.model_diagnostics) ? [...priorResult.model_diagnostics as unknown[]] : [];
+  const allResponseDiagnostics: unknown[] = Array.isArray(priorResult?.response_diagnostics) ? [...priorResult.response_diagnostics as unknown[]] : [];
 
   for (const [batchIndex, batch] of batches.entries()) {
+    if (!pendingBatchIndexes.has(batchIndex)) continue;
     const batchNumber = batchIndex + 1;
     const batchSourceIds = batch.map((post) => String(post.source_id));
     const inputPosts = batch.map((post) => ({
@@ -210,7 +229,8 @@ try {
       "Use only explicit textual evidence from BODY. Do not infer meaning from images, filenames, metadata, popularity, or assumptions.",
       "Look for grounded observations through curatorial prisms including Motif, Field, Material, Rhetorical Transformation, Reframing, Metaphor, Contrast, Threshold, Time, Scale, Sensorial Shift, Vector, Resonance, Agency, Micro/Macro-dramaturgy, Observation, Composition, and Lexical echoes.",
       "An observation must identify a specific textual signal and explain its interpretation. Every observation must include at least one exact, verbatim, contiguous quotation from the named source field. Never invent or normalize quotations.",
-      "Return exactly one Discovery record for every supplied source_id. Use SIGNALS_FOUND with one or more observations when grounded signals exist; otherwise use NO_SIGNAL with an empty observations array. Do not treat a technical uncertainty as NO_SIGNAL.",
+      "Return exactly one Discovery record for every supplied source_id. Copy every source_id exactly as supplied, character-for-character; it is an opaque immutable identifier, never rewrite, shorten, normalize, or reconstruct it. The response schema enum lists the only permitted IDs for this batch.",
+      "Use SIGNALS_FOUND with one or more observations when grounded signals exist; otherwise use NO_SIGNAL with an empty observations array. Do not treat a technical uncertainty as NO_SIGNAL.",
       "Return only JSON matching the supplied response schema.",
       "PUBLICATIONS:",
       JSON.stringify(inputPosts)
@@ -230,7 +250,7 @@ try {
     };
 
     try {
-      const generated = await generatePortfolioJson(prompt, responseSchema, {
+      const generated = await generatePortfolioJson(prompt, buildResponseSchema(batchSourceIds), {
         stage: "DISCOVER",
         candidateId: null,
         timeoutMs: 180_000,
@@ -247,8 +267,7 @@ try {
       const payload = generated.data as unknown as { records?: unknown };
       if (!payload || !Array.isArray(payload.records)) throw new Error("Gemini DISCOVER response is missing the records array.");
 
-      const normalizedRecords = normalizeDiscoveryEvidenceSources(payload.records);
-      const records = normalizedRecords as Array<{ source_id: string; [key: string]: unknown }>;
+      const records = payload.records as Array<{ source_id: string; [key: string]: unknown }>;
       batchResult.returned_count = records.length;
       batchResult.records = records;
 
@@ -298,21 +317,24 @@ try {
       if (Array.isArray(batchResult.model_diagnostics)) allModelDiagnostics.push(...batchResult.model_diagnostics);
     }
 
-    batchResults.push(batchResult);
-    result.batch_results = batchResults;
+    batchResults[batchIndex] = batchResult;
+    result.batch_results = batchResults.filter((item): item is Record<string, unknown> => Boolean(item));
     result.model_used = allModelUsed;
     result.model_diagnostics = allModelDiagnostics;
     result.response_diagnostics = allResponseDiagnostics;
     result.records = allSuccessfulRecords;
-    result.completed_batches = batchResults.filter((item) => item.status === "SUCCESS").length;
-    result.failed_batches = batchResults.filter((item) => item.status !== "SUCCESS").map((item) => item.batch_index);
+    result.completed_batches = batchResults.filter((item) => item?.status === "SUCCESS").length;
+    result.failed_batches = batchResults.flatMap((item) => item && item.status !== "SUCCESS" ? [item.batch_index] : []);
     await writeFile(outputPath, JSON.stringify(result, null, 2) + "\n", "utf8");
 
-    if (batchIndex < batches.length - 1) await new Promise((resolve) => setTimeout(resolve, INTER_BATCH_DELAY_MS));
+    if (batchIndex < batches.length - 1 && pendingBatchIndexes.has(batchIndex + 1)) {
+      await new Promise((resolve) => setTimeout(resolve, INTER_BATCH_DELAY_MS));
+    }
   }
 
   const finalCoverage = inspectDiscoveryCoverage(sourceIds, allSuccessfulRecords);
-  const failedBatchNumbers = batchResults.filter((item) => item.status !== "SUCCESS").map((item) => item.batch_index);
+  const completeBatchResults = batchResults.filter((item): item is Record<string, unknown> => Boolean(item));
+  const failedBatchNumbers = completeBatchResults.filter((item) => item.status !== "SUCCESS").map((item) => item.batch_index);
   const finalPass = failedBatchNumbers.length === 0 &&
     allSuccessfulRecords.length === PILOT_SIZE &&
     finalCoverage.missingSourceIds.length === 0 &&
@@ -332,7 +354,7 @@ try {
     result.status = "SUCCESS";
   } else {
     result.status = "INCOMPLETE";
-    result.error = `DISCOVER batch processing incomplete. Successful batches: ${batchResults.length - failedBatchNumbers.length}/${batches.length}; failed batches: ${failedBatchNumbers.join(", ") || "none"}; final unique coverage: ${finalCoverage.orderedRecords.length}/${PILOT_SIZE}.`;
+    result.error = `DISCOVER batch processing incomplete. Successful batches: ${completeBatchResults.length - failedBatchNumbers.length}/${batches.length}; failed batches: ${failedBatchNumbers.join(", ") || "none"}; final unique coverage: ${finalCoverage.orderedRecords.length}/${PILOT_SIZE}.`;
   }
 } catch (error) {
   result.error = error instanceof Error ? error.message : String(error);
