@@ -80,6 +80,7 @@ jobs:
           GEMINI_FALLBACK_4: ${{ vars.GEMINI_FALLBACK_4 }}
           PORTFOLIO_SNAPSHOT_PATH: snapshot/portfolio-snapshot.json
           PORTFOLIO_DISCOVER_RESUME_PATH: prior/portfolio-discover-pilot-result.json
+          PORTFOLIO_DISCOVER_RESUME_RUN_ID: ${{ inputs.resume_run_id }}
           PORTFOLIO_DISCOVER_RESULT_PATH: portfolio-discover-pilot-result.json
         run: pnpm exec tsx scripts/portfolio/discover-pilot.ts
 
