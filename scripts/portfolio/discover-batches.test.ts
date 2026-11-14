@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { inspectDiscoveryCoverage, splitIntoBatches } from "./discover-batches.ts";
+import { inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches } from "./discover-batches.ts";
 
 test("splitIntoBatches preserves order and covers every item exactly once", () => {
   const batches = splitIntoBatches(Array.from({ length: 205 }, (_, index) => index), 100);
@@ -34,4 +34,16 @@ test("inspectDiscoveryCoverage accepts exact unique coverage", () => {
   assert.deepEqual(coverage.duplicateSourceIds, []);
   assert.deepEqual(coverage.unexpectedSourceIds, []);
   assert.deepEqual(coverage.orderedRecords.map((record) => record.source_id), ["a", "b"]);
+});
+
+test("selectBatchesToProcess retries only batches without reusable successes", () => {
+  const batches = Array.from({ length: 10 }, (_, index) => [index + 1]);
+  const pending = selectBatchesToProcess(batches, [1, 2, 3, 6, 7]);
+  assert.deepEqual(pending.flat(), [4, 5, 8, 9, 10]);
+});
+
+test("selectBatchesToProcess rejects invalid or duplicate reusable indexes", () => {
+  const batches = [[1], [2], [3]];
+  assert.throws(() => selectBatchesToProcess(batches, [1, 1]), /unique/);
+  assert.throws(() => selectBatchesToProcess(batches, [4]), /valid 1-based/);
 });
