@@ -130,6 +130,7 @@ try {
       throw new Error("Resume artifact does not match the 1000-publication DISCOVER result contract.");
     }
     priorBatchResults = priorResult.batch_results as Array<Record<string, unknown>>;
+    result.note = "Resumed DISCOVER from a prior immutable Snapshot run. Previously successful batches are reused only after exact input-hash, structure, BODY-evidence, and source-ID coverage checks; all other batches are regenerated.";
     const priorIndexes = priorBatchResults.map((item) => item.batch_index);
     if (new Set(priorIndexes).size !== 10 || Array.from({ length: 10 }, (_, index) => index + 1).some((index) => !priorIndexes.includes(index))) {
       throw new Error("Resume artifact must contain exactly one result for each of the 10 original batches.");
@@ -199,7 +200,18 @@ try {
       JSON.stringify(inputPosts)
     ].join("\n\n");
 
+    const previousAttempt = priorBatchResults.find((item) => item.batch_index === batchNumber);
     const batchResult: Record<string, unknown> = {
+      ...(previousAttempt ? { previous_attempt: {
+        status: previousAttempt.status,
+        returned_count: previousAttempt.returned_count,
+        input_sha256: previousAttempt.input_sha256,
+        prompt_sha256: previousAttempt.prompt_sha256,
+        validation: previousAttempt.validation,
+        error: previousAttempt.error,
+        model_used: previousAttempt.model_used,
+        model_diagnostics: previousAttempt.model_diagnostics
+      } } : {}),
       batch_index: batchNumber,
       batch_count: batches.length,
       requested_count: batch.length,
