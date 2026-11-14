@@ -342,6 +342,9 @@ try {
     finalCoverage.duplicateSourceIds.length === 0;
 
   result.records = finalCoverage.orderedRecords;
+  result.batch_results = completeBatchResults;
+  result.completed_batches = completeBatchResults.filter((item) => item.status === "SUCCESS").length;
+  result.failed_batches = failedBatchNumbers;
   result.validation = {
     status: finalPass ? "PASS" : "FAIL",
     issues: [],
