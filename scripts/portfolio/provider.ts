@@ -448,7 +448,7 @@ export async function generatePortfolioGallery(
       });
     }
   }
-  throw new PortfolioModelsExhaustedError(modelUsed, lastError);
+  throw new PortfolioModelsExhaustedError(modelUsed, [], lastError);
 }
 
 /**
@@ -579,5 +579,5 @@ export async function evaluateIndependentTest(
     }
   }
 
-  throw new PortfolioModelsExhaustedError(modelUsed, lastError);
+  throw new PortfolioModelsExhaustedError(modelUsed, [], lastError);
 }
