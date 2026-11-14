@@ -48,6 +48,55 @@ export function inspectDiscoveryCoverage(
   };
 }
 
+export interface DiscoveryPostText {
+  source_id: string;
+  body: string;
+}
+
+export interface DiscoveryQuoteIssue {
+  code: "DISCOVERY_EVIDENCE_QUOTE_NOT_FOUND";
+  message: string;
+}
+
+/**
+ * Verifies every BODY evidence quote against the exact BODY text belonging
+ * to that publication. A structurally valid quote is not sufficient unless
+ * it is a literal contiguous substring of the source publication.
+ */
+export function validateDiscoveryEvidenceQuotes(
+  records: Array<{ source_id: string; observations?: unknown }>,
+  posts: DiscoveryPostText[],
+): DiscoveryQuoteIssue[] {
+  const bodyById = new Map(posts.map((post) => [post.source_id, post.body]));
+  const issues: DiscoveryQuoteIssue[] = [];
+
+  for (const record of records) {
+    if (!record || typeof record !== "object" || typeof record.source_id !== "string") continue;
+    const body = bodyById.get(record.source_id);
+    if (typeof body !== "string" || !Array.isArray(record.observations)) continue;
+
+    for (const [observationIndex, observation] of record.observations.entries()) {
+      if (!observation || typeof observation !== "object") continue;
+      const evidence = (observation as { evidence?: unknown }).evidence;
+      if (!Array.isArray(evidence)) continue;
+
+      for (const [evidenceIndex, item] of evidence.entries()) {
+        if (!item || typeof item !== "object") continue;
+        const quote = (item as { quote?: unknown }).quote;
+        const source = (item as { source?: unknown }).source;
+        if (source === "BODY" && typeof quote === "string" && quote.length > 0 && !body.includes(quote)) {
+          issues.push({
+            code: "DISCOVERY_EVIDENCE_QUOTE_NOT_FOUND",
+            message: `Evidence quote is not an exact contiguous BODY substring at ${record.source_id}:${observationIndex}:${evidenceIndex}.`
+          });
+        }
+      }
+    }
+  }
+
+  return issues;
+}
+
 export function selectBatchesToProcess<T>(batches: T[][], reusableSuccessIndexes: number[]): T[][] {
   const reusable = new Set(reusableSuccessIndexes);
   if (reusable.size !== reusableSuccessIndexes.length ||
