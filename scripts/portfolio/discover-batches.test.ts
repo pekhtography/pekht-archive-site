@@ -104,7 +104,7 @@ test("validateDiscoveryEvidenceQuotes rejects paraphrase, omission, emoji loss, 
   ];
   const records = [
     { source_id: "a", observations: [
-      { evidence: [{ source: "BODY", quote: "Red flowers planted in perfect circles" }] },
+      { evidence: [{ source: "BODY", quote: "Red flowers planted in circles" }] },
       { evidence: [{ source: "BODY", quote: "the city said: even chaos needs geometry." }] },
       { evidence: [{ source: "BODY", quote: "Red flowers planted in perfect circles — 🌺" }] },
     ] },
