@@ -209,9 +209,12 @@ try {
   const reusableBatchIndexes = batchResults.flatMap((item, index) => item ? [index + 1] : []);
   const batchesToProcess = selectBatchesToProcess(batches, reusableBatchIndexes);
   const pendingBatchIndexes = new Set(batchesToProcess.map((batch) => batches.indexOf(batch)));
-  const allModelUsed: unknown[] = Array.isArray(priorResult?.model_used) ? [...priorResult.model_used as unknown[]] : [];
-  const allModelDiagnostics: unknown[] = Array.isArray(priorResult?.model_diagnostics) ? [...priorResult.model_diagnostics as unknown[]] : [];
-  const allResponseDiagnostics: unknown[] = Array.isArray(priorResult?.response_diagnostics) ? [...priorResult.response_diagnostics as unknown[]] : [];
+  const priorModelUsed = priorResult && Array.isArray(priorResult.model_used) ? priorResult.model_used : [];
+  const priorModelDiagnostics = priorResult && Array.isArray(priorResult.model_diagnostics) ? priorResult.model_diagnostics : [];
+  const priorResponseDiagnostics = priorResult && Array.isArray(priorResult.response_diagnostics) ? priorResult.response_diagnostics : [];
+  const allModelUsed: unknown[] = [...priorModelUsed];
+  const allModelDiagnostics: unknown[] = [...priorModelDiagnostics];
+  const allResponseDiagnostics: unknown[] = [...priorResponseDiagnostics];
 
   for (const [batchIndex, batch] of batches.entries()) {
     if (!pendingBatchIndexes.has(batchIndex)) continue;
