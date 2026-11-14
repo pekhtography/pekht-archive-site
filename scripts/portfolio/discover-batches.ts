@@ -47,3 +47,12 @@ export function inspectDiscoveryCoverage(
     duplicateSourceIds,
   };
 }
+
+export function selectBatchesToProcess<T>(batches: T[][], reusableSuccessIndexes: number[]): T[][] {
+  const reusable = new Set(reusableSuccessIndexes);
+  if (reusable.size !== reusableSuccessIndexes.length ||
+      [...reusable].some((index) => !Number.isInteger(index) || index < 1 || index > batches.length)) {
+    throw new Error("Reusable batch indexes must be unique, valid 1-based batch indexes.");
+  }
+  return batches.filter((_, index) => !reusable.has(index + 1));
+}
