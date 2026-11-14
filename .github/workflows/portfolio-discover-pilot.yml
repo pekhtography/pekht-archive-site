@@ -6,7 +6,8 @@ on:
       - portfolio/lifecycle-amendment-1-integration-harness
     paths:
       - "scripts/portfolio/discover-pilot.ts"
-      - ".github/workflows/portfolio-discover-pilot.yml"
+      - "scripts/portfolio/discover-batches.ts"
+      - "scripts/portfolio/discover-batches.test.ts"
 
 permissions:
   contents: read
@@ -18,9 +19,9 @@ concurrency:
 
 jobs:
   discover-pilot:
-    name: DISCOVER 20 Snapshot publications (live Gemini)
+    name: DISCOVER 1000 Snapshot publications (10 x 100 live Gemini)
     runs-on: ubuntu-latest
-    timeout-minutes: 35
+    timeout-minutes: 90
     steps:
       - name: Checkout isolated integration branch
         uses: actions/checkout@v4
@@ -53,7 +54,10 @@ jobs:
           test -s snapshot/portfolio-snapshot.json
           echo "Downloaded approved Snapshot Run #2."
 
-      - name: Run 20-publication live DISCOVER pilot
+      - name: Test deterministic DISCOVER batching and coverage
+        run: pnpm exec tsx --test scripts/portfolio/discover-batches.test.ts
+
+      - name: Run 1000-publication batched live DISCOVER pilot
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
