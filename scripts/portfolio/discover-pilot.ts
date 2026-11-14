@@ -130,6 +130,10 @@ try {
       throw new Error("Resume artifact does not match the 1000-publication DISCOVER result contract.");
     }
     priorBatchResults = priorResult.batch_results as Array<Record<string, unknown>>;
+    const priorIndexes = priorBatchResults.map((item) => item.batch_index);
+    if (new Set(priorIndexes).size !== 10 || Array.from({ length: 10 }, (_, index) => index + 1).some((index) => !priorIndexes.includes(index))) {
+      throw new Error("Resume artifact must contain exactly one result for each of the 10 original batches.");
+    }
     result.resumed_from_run_id = process.env.PORTFOLIO_DISCOVER_RESUME_RUN_ID ?? "unspecified";
   }
 
@@ -302,6 +306,9 @@ try {
 
   result.records = finalCoverage.orderedRecords;
   result.batch_results = completeBatchResults;
+  result.model_used = allModelUsed;
+  result.model_diagnostics = allModelDiagnostics;
+  result.response_diagnostics = allResponseDiagnostics;
   result.completed_batches = completeBatchResults.filter((item) => item.status === "SUCCESS").length;
   result.failed_batches = failedBatchNumbers;
   result.validation = {
