@@ -1,7 +1,7 @@
 // Contract tests for deterministic DISCOVER batching, strict IDs, BODY evidence, and resume selection.
 import test from "node:test";
 import assert from "node:assert/strict";
-import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches } from "./discover-batches.ts";
+import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches, validateDiscoveryEvidenceQuotes } from "./discover-batches.ts";
 
 test("splitIntoBatches preserves order and covers every item exactly once", () => {
   const batches = splitIntoBatches(Array.from({ length: 205 }, (_, index) => index), 100);
@@ -83,4 +83,41 @@ test("buildDiscoveryResponseSchema restricts source IDs and evidence to the BODY
 test("buildDiscoveryResponseSchema rejects invalid batch ID sets", () => {
   assert.throws(() => buildDiscoveryResponseSchema(["only-one"]), /exactly 100/);
   assert.throws(() => buildDiscoveryResponseSchema(Array(100).fill("duplicate")), /unique/);
+});
+
+
+test("validateDiscoveryEvidenceQuotes accepts only exact contiguous BODY substrings", () => {
+  const posts = [
+    { source_id: "a", body: "Red flowers planted in perfect circles 🌺 — the city said: even chaos needs a geometry." },
+    { source_id: "b", body: "A hundred years of footsteps — same destination, different soles." },
+  ];
+  const records = [
+    { source_id: "a", observations: [{ evidence: [{ source: "BODY", quote: "Red flowers planted in perfect circles 🌺" }] }] },
+    { source_id: "b", observations: [{ evidence: [{ source: "BODY", quote: "same destination, different soles." }] }] },
+  ];
+  assert.deepEqual(validateDiscoveryEvidenceQuotes(records, posts), []);
+});
+
+test("validateDiscoveryEvidenceQuotes rejects paraphrase, omission, emoji loss, and reordered fragments", () => {
+  const posts = [
+    { source_id: "a", body: "Red flowers planted in perfect circles 🌺 — the city said: even chaos needs a geometry." },
+  ];
+  const records = [
+    { source_id: "a", observations: [
+      { evidence: [{ source: "BODY", quote: "Red flowers planted in perfect circles" }] },
+      { evidence: [{ source: "BODY", quote: "the city said: even chaos needs geometry." }] },
+      { evidence: [{ source: "BODY", quote: "Red flowers planted in perfect circles — 🌺" }] },
+    ] },
+  ];
+  const issues = validateDiscoveryEvidenceQuotes(records, posts);
+  assert.equal(issues.length, 3);
+  assert.ok(issues.every((issue) => issue.code === "DISCOVERY_EVIDENCE_QUOTE_NOT_FOUND"));
+});
+
+test("validateDiscoveryEvidenceQuotes does not treat non-BODY evidence as BODY quotes", () => {
+  const issues = validateDiscoveryEvidenceQuotes(
+    [{ source_id: "a", observations: [{ evidence: [{ source: "ORIGINAL_MARKDOWN", quote: "not in body" }] }] }],
+    [{ source_id: "a", body: "body text" }]
+  );
+  assert.deepEqual(issues, []);
 });
