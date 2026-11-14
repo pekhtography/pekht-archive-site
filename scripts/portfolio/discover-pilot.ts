@@ -69,6 +69,39 @@ function modelDiagnostics(error: unknown) {
   return [];
 }
 
+function normalizeDiscoveryEvidenceSources(records: unknown): unknown {
+  if (!Array.isArray(records)) return records;
+
+  return records.map((record) => {
+    if (!record || typeof record !== "object") return record;
+    const recordObject = record as Record<string, unknown>;
+    if (!Array.isArray(recordObject.observations)) return record;
+
+    return {
+      ...recordObject,
+      observations: recordObject.observations.map((observation) => {
+        if (!observation || typeof observation !== "object") return observation;
+        const observationObject = observation as Record<string, unknown>;
+        if (!Array.isArray(observationObject.evidence)) return observation;
+
+        return {
+          ...observationObject,
+          evidence: observationObject.evidence.map((evidence) => {
+            if (!evidence || typeof evidence !== "object") return evidence;
+            const evidenceObject = evidence as Record<string, unknown>;
+            if (evidenceObject.source === "body") return { ...evidenceObject, source: "BODY" };
+            if (evidenceObject.source === "original_markdown") {
+              return { ...evidenceObject, source: "ORIGINAL_MARKDOWN" };
+            }
+            return evidence;
+          })
+        };
+      })
+    };
+  });
+}
+
+
 try {
   // Pilot-specific integrity gate: preserve the immutable Snapshot identity and full
   // content digest, while not requiring created_at (unused by DISCOVER). The general
@@ -186,7 +219,8 @@ try {
   const payload = generated.data as unknown as { records?: unknown };
   if (!payload || !Array.isArray(payload.records)) throw new Error("Gemini DISCOVER response is missing the records array.");
 
-  const records = payload.records as Array<{ source_id: string }>;
+  const normalizedRecords = normalizeDiscoveryEvidenceSources(payload.records);
+  const records = normalizedRecords as Array<{ source_id: string }>;
   const validationIssues = validateDiscoveryRecords(records as never[]);
   const returnedIds = records.map((record) => record?.source_id);
   const idCounts = new Map<string, number>();
