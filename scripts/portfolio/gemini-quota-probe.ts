@@ -47,7 +47,7 @@ try {
         maxOutputTokens: 16,
       },
     }),
-    signal: AbortSignal.timeout(30_000),
+    signal: AbortSignal.timeout(120_000),
   });
 
   result.http_status = response.status;
