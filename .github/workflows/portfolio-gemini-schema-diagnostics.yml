@@ -1,6 +1,12 @@
 name: Portfolio Gemini Schema Diagnostics
 
 on:
+  push:
+    branches:
+      - portfolio/lifecycle-amendment-1-integration-harness
+    paths:
+      - .github/workflows/portfolio-gemini-schema-diagnostics.yml
+      - scripts/portfolio/gemini-schema-diagnostics.ts
   workflow_dispatch:
     inputs:
       model:
