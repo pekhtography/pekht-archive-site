@@ -70,6 +70,28 @@ test("success: parses Gemini JSON from a successful mock response", async () => 
   });
 });
 
+test("MAX_TOKENS: classifies truncated output and preserves finish and usage diagnostics before JSON parsing", async () => {
+  await withHarness(async () => {
+    let caught: unknown;
+    try {
+      await generatePortfolioJson("prompt", {}, {
+        stage: "DISCOVER", maxAttemptsPerModel: 1,
+        fetchFn: async () => new Response(JSON.stringify({
+          candidates: [{ finishReason: "MAX_TOKENS", content: { parts: [{ text: '{"records":[' }] } }],
+          usageMetadata: { thoughtsTokenCount: 7000, candidatesTokenCount: 1192, totalTokenCount: 8192 },
+        }), { status: 200, headers: { "content-type": "application/json" } }),
+      });
+    } catch (error) { caught = error; }
+    assert.ok(caught instanceof PortfolioProviderError);
+    assert.match(caught.message, /^OUTPUT_TRUNCATED:/);
+    assert.equal(caught.response_diagnostics?.finish_reason, "MAX_TOKENS");
+    assert.deepEqual(caught.response_diagnostics?.usage_metadata, {
+      thoughtsTokenCount: 7000, candidatesTokenCount: 1192, totalTokenCount: 8192,
+    });
+    assert.equal(caught.model_diagnostics[0]?.http_status, 200);
+  });
+});
+
 test("fallback: advances after retryable primary failure and records both models", async () => {
   await withHarness(async ({ waits }) => {
     let request = 0;
