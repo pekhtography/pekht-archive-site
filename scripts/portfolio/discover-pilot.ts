@@ -3,7 +3,7 @@ import { readFile, writeFile } from "node:fs/promises";
 import { generatePortfolioJson, PortfolioProviderError } from "./provider.ts";
 import { computePortfolioSnapshotContentHash, PORTFOLIO_SNAPSHOT_PURPOSE } from "./snapshot.ts";
 import { validateDiscoveryRecords } from "../../validation/portfolio-validation-0.2.1/src/validators.ts";
-import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, selectBatchesToProcess, splitIntoBatches, validateDiscoveryEvidenceQuotes } from "./discover-batches.ts";
+import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, mapDiscoverySourceIndexes, selectBatchesToProcess, splitIntoBatches, validateDiscoveryEvidenceQuotes } from "./discover-batches.ts";
 
 const snapshotPath = process.env.PORTFOLIO_SNAPSHOT_PATH ?? "snapshot/portfolio-snapshot.json";
 const outputPath = process.env.PORTFOLIO_DISCOVER_RESULT_PATH ?? "portfolio-discover-pilot-result.json";
@@ -252,15 +252,7 @@ try {
       if (!payload || !Array.isArray(payload.records)) throw new Error("Gemini DISCOVER response is missing the records array.");
 
       const rawRecords = payload.records as Array<{ source_index?: unknown; [key: string]: unknown }>;
-      const records = rawRecords.map((record) => {
-        const { source_index, ...discoveryFields } = record;
-        const sourceId = Number.isInteger(source_index) &&
-          (source_index as number) >= 0 &&
-          (source_index as number) < batch.length
-          ? String(batch[source_index as number].source_id)
-          : "";
-        return { ...discoveryFields, source_id: sourceId } as { source_id: string; [key: string]: unknown };
-      });
+      const records = mapDiscoverySourceIndexes(rawRecords, batch);
       batchResult.returned_count = records.length;
       batchResult.records = records;
 
