@@ -49,16 +49,15 @@ test("selectBatchesToProcess rejects invalid or duplicate reusable indexes", () 
   assert.throws(() => selectBatchesToProcess(batches, [4]), /valid 1-based/);
 });
 
-test("buildDiscoveryResponseSchema restricts source IDs and evidence to the BODY contract", () => {
-  const ids = Array.from({ length: 100 }, (_, index) => `source-${index}`);
-  const schema = buildDiscoveryResponseSchema(ids) as {
+test("buildDiscoveryResponseSchema uses an integer source index and retains BODY-only evidence", () => {
+  const schema = buildDiscoveryResponseSchema() as {
     properties: {
       records: {
-        minItems: number;
-        maxItems: number;
         items: {
+          required: string[];
           properties: {
-            source_id: { enum: string[] };
+            source_index: { type: string };
+            source_id?: unknown;
             observations: {
               items: {
                 properties: {
@@ -73,16 +72,11 @@ test("buildDiscoveryResponseSchema restricts source IDs and evidence to the BODY
       };
     };
   };
-  const record = schema.properties.records;
-  assert.equal(record.minItems, 100);
-  assert.equal(record.maxItems, 100);
-  assert.deepEqual(record.items.properties.source_id.enum, ids);
-  assert.deepEqual(record.items.properties.observations.items.properties.evidence.items.properties.source.enum, ["BODY"]);
-});
-
-test("buildDiscoveryResponseSchema rejects invalid batch ID sets", () => {
-  assert.throws(() => buildDiscoveryResponseSchema(["only-one"]), /exactly 100/);
-  assert.throws(() => buildDiscoveryResponseSchema(Array(100).fill("duplicate")), /unique/);
+  const record = schema.properties.records.items;
+  assert.ok(record.required.includes("source_index"));
+  assert.equal(record.properties.source_index.type, "integer");
+  assert.equal("source_id" in record.properties, false);
+  assert.deepEqual(record.properties.observations.items.properties.evidence.items.properties.source.enum, ["BODY"]);
 });
 
 
