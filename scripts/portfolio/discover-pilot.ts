@@ -10,8 +10,8 @@ const outputPath = process.env.PORTFOLIO_DISCOVER_RESULT_PATH ?? "portfolio-disc
 const requestedPilotSize = Number(process.env.PORTFOLIO_DISCOVER_COUNT ?? "1000");
 if (![100, 1000].includes(requestedPilotSize)) throw new Error("PORTFOLIO_DISCOVER_COUNT must be 100 or 1000.");
 const PILOT_SIZE = requestedPilotSize;
-const BATCH_SIZE = SINGLE_REQUEST_MODE ? 25 : 100;
 const SINGLE_REQUEST_MODE = process.env.PORTFOLIO_DISCOVER_SINGLE_REQUEST === "true";
+const BATCH_SIZE = SINGLE_REQUEST_MODE ? 25 : 100;
 if (SINGLE_REQUEST_MODE && PILOT_SIZE !== 100) throw new Error("Small-batch integration mode is restricted to the 100-publication pilot.");
 const INTER_BATCH_DELAY_MS = 15_000;
 
