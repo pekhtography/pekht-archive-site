@@ -34,6 +34,8 @@ export interface ModelFailureDiagnostic {
 export interface GeminiResponseDiagnostics {
   finish_reason: string | null;
   usage_metadata: Record<string, unknown> | null;
+  raw_response_text?: string;
+  raw_response_truncated?: boolean;
 }
 
 export interface PortfolioProviderResult {
@@ -203,8 +205,7 @@ function responseText(payload: unknown): string {
     .map((part) => part && typeof part === "object" && typeof (part as { text?: unknown }).text === "string"
       ? (part as { text: string }).text
       : "")
-    .join("")
-    .trim();
+    .join("");
 }
 
 function isTimeout(error: unknown): boolean {
@@ -257,7 +258,22 @@ async function requestModel(
       });
 
       if (response.ok) {
-        const payload: unknown = await response.json();
+        const responseBody = await response.text();
+        let payload: unknown;
+        try {
+          payload = JSON.parse(responseBody) as unknown;
+        } catch (error) {
+          throw new PortfolioProviderError(`Gemini model ${model} returned an invalid response envelope: ${error instanceof Error ? error.message : String(error)}`, {
+            retryable: false, model, attempts: attempt, status: response.status,
+            response_diagnostics: {
+              finish_reason: null,
+              usage_metadata: null,
+              raw_response_text: responseBody.slice(0, 100_000),
+              raw_response_truncated: responseBody.length > 100_000,
+            },
+            cause: error,
+          });
+        }
         const text = responseText(payload);
         if (!text) {
           throw new PortfolioProviderError(`Gemini model ${model} returned no JSON text.`, {
@@ -273,6 +289,8 @@ async function requestModel(
             : null,
         };
         if (responseDiagnostics.finish_reason === "MAX_TOKENS") {
+          responseDiagnostics.raw_response_text = text.slice(0, 100_000);
+          responseDiagnostics.raw_response_truncated = text.length > 100_000;
           throw new PortfolioProviderError(`OUTPUT_TRUNCATED: Gemini model ${model} finished with MAX_TOKENS before JSON parsing.`, {
             retryable: false, model, attempts: attempt, status: response.status,
             response_diagnostics: responseDiagnostics,
@@ -285,6 +303,8 @@ async function requestModel(
             response_diagnostics: responseDiagnostics,
           };
         } catch (error) {
+          responseDiagnostics.raw_response_text = text.slice(0, 100_000);
+          responseDiagnostics.raw_response_truncated = text.length > 100_000;
           throw new PortfolioProviderError(`Gemini model ${model} returned invalid JSON: ${error instanceof Error ? error.message : String(error)}`, {
             retryable: false, model, attempts: attempt, status: response.status, cause: error,
             response_diagnostics: responseDiagnostics,
