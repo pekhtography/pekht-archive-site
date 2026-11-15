@@ -106,10 +106,7 @@ export function selectBatchesToProcess<T>(batches: T[][], reusableSuccessIndexes
   return batches.filter((_, index) => !reusable.has(index + 1));
 }
 
-export function buildDiscoveryResponseSchema(sourceIds: string[]) {
-  if (sourceIds.length !== 100 || new Set(sourceIds).size !== 100 || sourceIds.some((id) => !id)) {
-    throw new Error("DISCOVER response schema requires exactly 100 unique non-empty source IDs.");
-  }
+export function buildDiscoveryResponseSchema() {
   return {
     type: "object",
     required: ["records"],
@@ -120,9 +117,9 @@ export function buildDiscoveryResponseSchema(sourceIds: string[]) {
         maxItems: 100,
         items: {
           type: "object",
-          required: ["source_id", "result", "observations"],
+          required: ["source_index", "result", "observations"],
           properties: {
-            source_id: { type: "string", enum: sourceIds },
+            source_index: { type: "integer" },
             result: { type: "string", enum: ["SIGNALS_FOUND", "NO_SIGNAL"] },
             observations: {
               type: "array",
