@@ -28,8 +28,17 @@ jobs:
         with:
           ref: portfolio/lifecycle-amendment-1-integration-harness
 
+      - name: Detect single-100 trigger from checked-out commit
+        id: discover_mode
+        run: |
+          if git show --format= --name-only HEAD | grep -Fxq 'scripts/portfolio/discover-single-100.trigger'; then
+            echo "single_100=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "single_100=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - name: Read and validate prior run ID
-        if: github.event_name == 'push' && !(contains(github.event.head_commit.modified, 'scripts/portfolio/discover-single-100.trigger') || contains(github.event.head_commit.added, 'scripts/portfolio/discover-single-100.trigger'))
+        if: github.event_name == 'push' && steps.discover_mode.outputs.single_100 != 'true'
         run: |
           RESUME_RUN_ID="$(tr -d '[:space:]' < scripts/portfolio/discover-retry.trigger)"
           if ! [[ "$RESUME_RUN_ID" =~ ^[0-9]+$ ]]; then
@@ -65,7 +74,7 @@ jobs:
           echo "Downloaded approved Snapshot Run #2."
 
       - name: Download prior DISCOVER result artifact
-        if: github.event_name == 'push' && !(contains(github.event.head_commit.modified, 'scripts/portfolio/discover-single-100.trigger') || contains(github.event.head_commit.added, 'scripts/portfolio/discover-single-100.trigger'))
+        if: github.event_name == 'push' && steps.discover_mode.outputs.single_100 != 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -81,7 +90,7 @@ jobs:
         run: pnpm exec tsx --test scripts/portfolio/discover-batches.test.ts scripts/portfolio/provider.test.ts
 
       - name: Run one fresh 100-publication DISCOVER batch (live Gemini)
-        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && (contains(github.event.head_commit.modified, 'scripts/portfolio/discover-single-100.trigger') || contains(github.event.head_commit.added, 'scripts/portfolio/discover-single-100.trigger')))
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && steps.discover_mode.outputs.single_100 == 'true')
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: gemini-3.6-flash
@@ -96,7 +105,7 @@ jobs:
         run: pnpm exec tsx scripts/portfolio/discover-pilot.ts
 
       - name: Retry only failed DISCOVER batches from prior run (live Gemini)
-        if: github.event_name == 'push' && !(contains(github.event.head_commit.modified, 'scripts/portfolio/discover-single-100.trigger') || contains(github.event.head_commit.added, 'scripts/portfolio/discover-single-100.trigger'))
+        if: github.event_name == 'push' && steps.discover_mode.outputs.single_100 != 'true'
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
