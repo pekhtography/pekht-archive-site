@@ -8,6 +8,8 @@ on:
       - "scripts/portfolio/discover-batches.ts"
       - "scripts/portfolio/discover-batches.test.ts"
       - "scripts/portfolio/discover-pilot.ts"
+      - "scripts/portfolio/provider.ts"
+      - "scripts/portfolio/provider.test.ts"
       - ".github/workflows/portfolio-discover-batch-tests.yml"
 
 permissions:
@@ -36,5 +38,5 @@ jobs:
       - name: Install locked dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run DISCOVER batch contract tests
-        run: pnpm exec tsx --test scripts/portfolio/discover-batches.test.ts
+      - name: Run DISCOVER and provider contract tests
+        run: pnpm exec tsx --test scripts/portfolio/discover-batches.test.ts scripts/portfolio/provider.test.ts
