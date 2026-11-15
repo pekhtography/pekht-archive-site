@@ -1,7 +1,7 @@
 import { writeFile } from "node:fs/promises";
 
 const outputPath = process.env.GEMINI_PROBE_RESULT_PATH ?? "gemini-quota-probe-result.json";
-const model = process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash";
+const model = process.env.GEMINI_MODEL?.trim() || "gemini-3.6-flash";
 const apiKey = process.env.GEMINI_API_KEY ?? "";
 
 const result: Record<string, unknown> = {
@@ -15,10 +15,10 @@ const result: Record<string, unknown> = {
 
 function safeMessage(value: string): string {
   return value
-    .replace(/Bearer\s+[^\s,;]+/gi, "Bearer [REDACTED]")
-    .replace(/(x-goog-api-key|api[_-]?key|access[_-]?token)\s*[:=]\s*[^\s,;]+/gi, "$1=[REDACTED]")
-    .replace(/https?:\/\/[^\s]+/gi, "[URL]")
-    .replace(/\s+/g, " ")
+    .replace(/Bearer\\s+[^\\s,;]+/gi, "Bearer [REDACTED]")
+    .replace(/(x-goog-api-key|api[_-]?key|access[_-]?token)\\s*[:=]\\s*[^\\s,;]+/gi, "$1=[REDACTED]")
+    .replace(/https?:\\/\\/[^\\s]+/gi, "[URL]")
+    .replace(/\\s+/g, " ")
     .trim()
     .slice(0, 700);
 }
@@ -44,8 +44,8 @@ try {
           properties: { probe: { type: "STRING" } },
           required: ["probe"],
         },
-        thinkingConfig: { thinkingBudget: 0 },
-        maxOutputTokens: 128,
+        thinkingConfig: { thinkingLevel: "low" },
+        maxOutputTokens: 256,
       },
     }),
     signal: AbortSignal.timeout(120_000),
@@ -90,6 +90,6 @@ try {
   result.error = safeMessage(error instanceof Error ? error.message : String(error));
 }
 
-await writeFile(outputPath, JSON.stringify(result, null, 2) + "\n", "utf8");
+await writeFile(outputPath, JSON.stringify(result, null, 2) + "\\n", "utf8");
 console.log(JSON.stringify(result, null, 2));
 if (result.status !== "HTTP_200" || result.finish_reason !== "STOP" || result.json_valid !== true || result.probe_value !== "ok") process.exitCode = 1;
