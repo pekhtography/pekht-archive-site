@@ -70,27 +70,32 @@ test("success: parses Gemini JSON from a successful mock response", async () => 
   });
 });
 
-test("MAX_TOKENS: classifies truncated output and preserves finish and usage diagnostics before JSON parsing", async () => {
+test("MAX_TOKENS: preserves truncation diagnostics and advances to the next configured model", async () => {
   await withHarness(async () => {
-    let caught: unknown;
-    try {
-      await generatePortfolioJson("prompt", {}, {
-        stage: "DISCOVER", maxAttemptsPerModel: 1,
-        fetchFn: async () => new Response(JSON.stringify({
+    let request = 0;
+    const result = await generatePortfolioJson("prompt", {}, {
+      stage: "DISCOVER", maxAttemptsPerModel: 1,
+      fetchFn: async () => {
+        request += 1;
+        if (request === 1) return new Response(JSON.stringify({
           candidates: [{ finishReason: "MAX_TOKENS", content: { parts: [{ text: '{"records":[' }] } }],
           usageMetadata: { thoughtsTokenCount: 7000, candidatesTokenCount: 1192, totalTokenCount: 8192 },
-        }), { status: 200, headers: { "content-type": "application/json" } }),
-      });
-    } catch (error) { caught = error; }
-    assert.ok(caught instanceof PortfolioProviderError);
-    assert.match(caught.message, /^OUTPUT_TRUNCATED:/);
-    assert.equal(caught.response_diagnostics?.finish_reason, "MAX_TOKENS");
-    assert.equal(caught.response_diagnostics?.raw_response_text, '{"records":[');
-    assert.equal(caught.response_diagnostics?.raw_response_truncated, false);
-    assert.deepEqual(caught.response_diagnostics?.usage_metadata, {
+        }), { status: 200, headers: { "content-type": "application/json" } });
+        return okResponse();
+      },
+    });
+    assert.equal(request, 2);
+    assert.deepEqual(result.data, output);
+    assert.equal(result.model_used[0].model, "mock-primary");
+    assert.equal(result.model_used[0].outcome, "FALLBACK");
+    assert.equal(result.model_diagnostics[0]?.error_description.startsWith("OUTPUT_TRUNCATED:"), true);
+    assert.equal(result.model_diagnostics[0]?.response_diagnostics?.finish_reason, "MAX_TOKENS");
+    assert.equal(result.model_diagnostics[0]?.response_diagnostics?.raw_response_text, '{"records":[');
+    assert.deepEqual(result.model_diagnostics[0]?.response_diagnostics?.usage_metadata, {
       thoughtsTokenCount: 7000, candidatesTokenCount: 1192, totalTokenCount: 8192,
     });
-    assert.equal(caught.model_diagnostics[0]?.http_status, 200);
+    assert.equal(result.model_used[1].model, "mock-fallback");
+    assert.equal(result.model_used[1].outcome, "SUCCESS");
   });
 });
 
