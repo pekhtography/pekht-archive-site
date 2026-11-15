@@ -50,6 +50,8 @@ test("generation config: passes optional thinking level and output token limit",
       },
     });
     const generationConfig = requestBody?.generationConfig as Record<string, unknown>;
+    assert.deepEqual(generationConfig.responseJsonSchema, { type: "object" });
+    assert.equal("responseSchema" in generationConfig, false);
     assert.equal(generationConfig.maxOutputTokens, 256);
     assert.deepEqual(generationConfig.thinkingConfig, { thinkingLevel: "low" });
   });
