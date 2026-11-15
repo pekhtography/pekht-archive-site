@@ -6,10 +6,11 @@ on:
       - portfolio/lifecycle-amendment-1-integration-harness
     paths:
       - .github/workflows/portfolio-gemini-quota-probe.yml
+      - scripts/portfolio/gemini-quota-probe.ts
   workflow_dispatch:
     inputs:
       model:
-        description: "Optional model override; blank uses the repository GEMINI_MODEL variable"
+        description: "Optional model override; blank uses the same default model as the Portfolio provider"
         required: false
         type: string
         default: ""
