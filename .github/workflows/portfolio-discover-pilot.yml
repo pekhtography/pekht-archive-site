@@ -103,13 +103,9 @@ jobs:
 
       - name: Retry only failed DISCOVER batches from prior run (live Gemini)
         if: github.event_name == 'push' && steps.discover_mode.outputs.single_100 != 'true'
+        # Use the same built-in five-model chain for fresh and resumed DISCOVER runs.
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
-          GEMINI_FALLBACK_1: ${{ vars.GEMINI_FALLBACK_1 }}
-          GEMINI_FALLBACK_2: ${{ vars.GEMINI_FALLBACK_2 }}
-          GEMINI_FALLBACK_3: ${{ vars.GEMINI_FALLBACK_3 }}
-          GEMINI_FALLBACK_4: ${{ vars.GEMINI_FALLBACK_4 }}
           PORTFOLIO_SNAPSHOT_PATH: snapshot/portfolio-snapshot.json
           PORTFOLIO_DISCOVER_COUNT: "1000"
           PORTFOLIO_DISCOVER_RESUME_PATH: prior/portfolio-discover-pilot-result.json
