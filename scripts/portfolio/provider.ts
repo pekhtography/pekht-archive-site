@@ -62,6 +62,7 @@ export interface PortfolioProviderErrorOptions {
   model_used?: ModelCallRecord[];
   model_diagnostics?: ModelFailureDiagnostic[];
   cause?: unknown;
+  response_diagnostics?: GeminiResponseDiagnostics;
 }
 
 export class PortfolioProviderError extends Error {
@@ -72,6 +73,7 @@ export class PortfolioProviderError extends Error {
   readonly quotaType: "daily" | "tpm" | "rpm" | "unknown" | null;
   readonly model_used: ModelCallRecord[];
   readonly model_diagnostics: ModelFailureDiagnostic[];
+  readonly response_diagnostics: GeminiResponseDiagnostics | null;
 
   constructor(message: string, options: PortfolioProviderErrorOptions) {
     super(message, { cause: options.cause });
@@ -83,6 +85,7 @@ export class PortfolioProviderError extends Error {
     this.quotaType = options.quotaType ?? null;
     this.model_used = [...(options.model_used ?? [])];
     this.model_diagnostics = [...(options.model_diagnostics ?? [])];
+    this.response_diagnostics = options.response_diagnostics ?? null;
   }
 }
 
@@ -261,22 +264,30 @@ async function requestModel(
             retryable: false, model, attempts: attempt, status: response.status,
           });
         }
+        const candidate = (payload as { candidates?: Array<{ finishReason?: unknown }> }).candidates?.[0];
+        const usage = (payload as { usageMetadata?: unknown }).usageMetadata;
+        const responseDiagnostics: GeminiResponseDiagnostics = {
+          finish_reason: typeof candidate?.finishReason === "string" ? candidate.finishReason : null,
+          usage_metadata: usage && typeof usage === "object" && !Array.isArray(usage)
+            ? usage as Record<string, unknown>
+            : null,
+        };
+        if (responseDiagnostics.finish_reason === "MAX_TOKENS") {
+          throw new PortfolioProviderError(`OUTPUT_TRUNCATED: Gemini model ${model} finished with MAX_TOKENS before JSON parsing.`, {
+            retryable: false, model, attempts: attempt, status: response.status,
+            response_diagnostics: responseDiagnostics,
+          });
+        }
         try {
-          const candidate = (payload as { candidates?: Array<{ finishReason?: unknown }> }).candidates?.[0];
-          const usage = (payload as { usageMetadata?: unknown }).usageMetadata;
           return {
             data: JSON.parse(text) as unknown,
             attempts: attempt,
-            response_diagnostics: {
-              finish_reason: typeof candidate?.finishReason === "string" ? candidate.finishReason : null,
-              usage_metadata: usage && typeof usage === "object" && !Array.isArray(usage)
-                ? usage as Record<string, unknown>
-                : null,
-            },
+            response_diagnostics: responseDiagnostics,
           };
         } catch (error) {
           throw new PortfolioProviderError(`Gemini model ${model} returned invalid JSON: ${error instanceof Error ? error.message : String(error)}`, {
             retryable: false, model, attempts: attempt, status: response.status, cause: error,
+            response_diagnostics: responseDiagnostics,
           });
         }
       }
@@ -395,6 +406,7 @@ export async function generatePortfolioJson(
             quotaType: error.quotaType,
             model_used: modelUsed,
             model_diagnostics: modelDiagnostics,
+            response_diagnostics: error.response_diagnostics,
             cause: error,
           });
         }
