@@ -1,12 +1,6 @@
-name: Portfolio Real Gemini DISCOVER Pilot
+name: Portfolio Real Gemini DISCOVER
 
 on:
-  push:
-    branches:
-      - portfolio/lifecycle-amendment-1-integration-harness
-    paths:
-      - "scripts/portfolio/discover-retry.trigger"
-      - "scripts/portfolio/discover-single-100.trigger"
   workflow_dispatch:
 
 permissions:
@@ -18,8 +12,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  discover-pilot:
-    name: DISCOVER four 25-post batches or resume 1000 batches
+  discover:
+    name: DISCOVER one request for all 1000 Snapshot publications
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -27,25 +21,6 @@ jobs:
         uses: actions/checkout@v4
         with:
           ref: portfolio/lifecycle-amendment-1-integration-harness
-
-      - name: Detect four-by-25 trigger from checked-out commit
-        id: discover_mode
-        run: |
-          if git show --format= --name-only HEAD | grep -Fxq 'scripts/portfolio/discover-single-100.trigger'; then
-            echo "single_100=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "single_100=false" >> "$GITHUB_OUTPUT"
-          fi
-
-      - name: Read and validate prior run ID
-        if: github.event_name == 'push' && steps.discover_mode.outputs.single_100 != 'true'
-        run: |
-          RESUME_RUN_ID="$(tr -d '[:space:]' < scripts/portfolio/discover-retry.trigger)"
-          if ! [[ "$RESUME_RUN_ID" =~ ^[0-9]+$ ]]; then
-            echo "Retry trigger must contain a numeric GitHub Actions run ID."
-            exit 1
-          fi
-          echo "RESUME_RUN_ID=$RESUME_RUN_ID" >> "$GITHUB_ENV"
 
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
@@ -73,47 +48,18 @@ jobs:
           test -s snapshot/portfolio-snapshot.json
           echo "Downloaded approved Snapshot Run #2."
 
-      - name: Download prior DISCOVER result artifact
-        if: github.event_name == 'push' && steps.discover_mode.outputs.single_100 != 'true'
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          mkdir -p prior
-          gh run download "$RESUME_RUN_ID" \
-            --repo "$GITHUB_REPOSITORY" \
-            --name "portfolio-discover-pilot-$RESUME_RUN_ID" \
-            --dir prior
-          test -s prior/portfolio-discover-pilot-result.json
-          echo "Downloaded prior DISCOVER result for selective retry."
-
-      - name: Test deterministic DISCOVER batching and provider request configuration
+      - name: Test DISCOVER source mapping, evidence validation, and Gemini fallback chain
         run: pnpm exec tsx --test scripts/portfolio/discover-batches.test.ts scripts/portfolio/provider.test.ts
 
-      - name: Run four fresh 25-publication DISCOVER batches (live Gemini)
-        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && steps.discover_mode.outputs.single_100 == 'true')
-        # Leave GEMINI_MODEL and GEMINI_FALLBACK_* unset here so provider.ts
-        # uses the original built-in five-model fallback chain.
+      - name: Run original single-request 1000-publication DISCOVER (live Gemini)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          # Do not set GEMINI_MODEL or GEMINI_FALLBACK_*: provider.ts uses its built-in five-model chain.
           PORTFOLIO_SNAPSHOT_PATH: snapshot/portfolio-snapshot.json
-          PORTFOLIO_DISCOVER_COUNT: "100"
-          PORTFOLIO_DISCOVER_SINGLE_REQUEST: "true"
           PORTFOLIO_DISCOVER_RESULT_PATH: portfolio-discover-pilot-result.json
         run: pnpm exec tsx scripts/portfolio/discover-pilot.ts
 
-      - name: Retry only failed DISCOVER batches from prior run (live Gemini)
-        if: github.event_name == 'push' && steps.discover_mode.outputs.single_100 != 'true'
-        # Use the same built-in five-model chain for fresh and resumed DISCOVER runs.
-        env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          PORTFOLIO_SNAPSHOT_PATH: snapshot/portfolio-snapshot.json
-          PORTFOLIO_DISCOVER_COUNT: "1000"
-          PORTFOLIO_DISCOVER_RESUME_PATH: prior/portfolio-discover-pilot-result.json
-          PORTFOLIO_DISCOVER_RESUME_RUN_ID: ${{ env.RESUME_RUN_ID }}
-          PORTFOLIO_DISCOVER_RESULT_PATH: portfolio-discover-pilot-result.json
-        run: pnpm exec tsx scripts/portfolio/discover-pilot.ts
-
-      - name: Upload resumed DISCOVER records and model-call audit
+      - name: Upload full DISCOVER response and model-call diagnostics
         if: always()
         uses: actions/upload-artifact@v4
         with:
