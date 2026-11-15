@@ -106,6 +106,21 @@ export function selectBatchesToProcess<T>(batches: T[][], reusableSuccessIndexes
   return batches.filter((_, index) => !reusable.has(index + 1));
 }
 
+export function mapDiscoverySourceIndexes(
+  records: Array<{ source_index?: unknown; [key: string]: unknown }>,
+  batch: Array<{ source_id: string }>,
+): Array<{ source_id: string; [key: string]: unknown }> {
+  return records.map((record) => {
+    const { source_index, ...discoveryFields } = record;
+    const sourceId = Number.isInteger(source_index) &&
+      (source_index as number) >= 0 &&
+      (source_index as number) < batch.length
+      ? String(batch[source_index as number].source_id)
+      : "";
+    return { ...discoveryFields, source_id: sourceId };
+  });
+}
+
 export function buildDiscoveryResponseSchema() {
   return {
     type: "object",
