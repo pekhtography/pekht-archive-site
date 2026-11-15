@@ -19,7 +19,7 @@ concurrency:
 
 jobs:
   discover-pilot:
-    name: DISCOVER single 100 batch or resume 1000 batches
+    name: DISCOVER four 25-post batches or resume 1000 batches
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -28,7 +28,7 @@ jobs:
         with:
           ref: portfolio/lifecycle-amendment-1-integration-harness
 
-      - name: Detect single-100 trigger from checked-out commit
+      - name: Detect four-by-25 trigger from checked-out commit
         id: discover_mode
         run: |
           if git show --format= --name-only HEAD | grep -Fxq 'scripts/portfolio/discover-single-100.trigger'; then
@@ -89,7 +89,7 @@ jobs:
       - name: Test deterministic DISCOVER batching and provider request configuration
         run: pnpm exec tsx --test scripts/portfolio/discover-batches.test.ts scripts/portfolio/provider.test.ts
 
-      - name: Run one fresh 100-publication DISCOVER batch (live Gemini)
+      - name: Run four fresh 25-publication DISCOVER batches (live Gemini)
         if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && steps.discover_mode.outputs.single_100 == 'true')
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
