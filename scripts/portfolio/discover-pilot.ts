@@ -3,17 +3,11 @@ import { readFile, writeFile } from "node:fs/promises";
 import { generatePortfolioJson, PortfolioProviderError } from "./provider.ts";
 import { computePortfolioSnapshotContentHash, PORTFOLIO_SNAPSHOT_PURPOSE } from "./snapshot.ts";
 import { validateDiscoveryRecords } from "../../validation/portfolio-validation-0.2.1/src/validators.ts";
-import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, mapDiscoverySourceIndexes, selectBatchesToProcess, splitIntoBatches, validateDiscoveryEvidenceQuotes } from "./discover-batches.ts";
+import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, mapDiscoverySourceIndexes, validateDiscoveryEvidenceQuotes } from "./discover-batches.ts";
 
 const snapshotPath = process.env.PORTFOLIO_SNAPSHOT_PATH ?? "snapshot/portfolio-snapshot.json";
 const outputPath = process.env.PORTFOLIO_DISCOVER_RESULT_PATH ?? "portfolio-discover-pilot-result.json";
-const requestedPilotSize = Number(process.env.PORTFOLIO_DISCOVER_COUNT ?? "1000");
-if (![100, 1000].includes(requestedPilotSize)) throw new Error("PORTFOLIO_DISCOVER_COUNT must be 100 or 1000.");
-const PILOT_SIZE = requestedPilotSize;
-const SINGLE_REQUEST_MODE = process.env.PORTFOLIO_DISCOVER_SINGLE_REQUEST === "true";
-const BATCH_SIZE = SINGLE_REQUEST_MODE ? 25 : 100;
-if (SINGLE_REQUEST_MODE && PILOT_SIZE !== 100) throw new Error("Small-batch integration mode is restricted to the 100-publication pilot.");
-const INTER_BATCH_DELAY_MS = 15_000;
+const PILOT_SIZE = 1000;
 
 const result: Record<string, unknown> = {
   status: "INCOMPLETE",
@@ -23,13 +17,8 @@ const result: Record<string, unknown> = {
   model_used: [],
   model_diagnostics: [],
   response_diagnostics: [],
-  batch_results: [],
   records: [],
-  note: SINGLE_REQUEST_MODE
-    ? "Four 25-publication DISCOVER batches against the same approved immutable 1000-post Snapshot selection. This integration run does not execute downstream Portfolio stages."
-    : PILOT_SIZE === 100
-      ? "100-publication DISCOVER pilot against the approved immutable 1000-post Snapshot. This integration run does not execute downstream Portfolio stages."
-      : "Full 1000-publication live DISCOVER run on the approved immutable Snapshot. This integration run does not execute downstream Portfolio stages."
+  note: "Original single-request DISCOVER architecture: one Gemini request for all 1000 publications from the approved immutable Snapshot. This integration run does not execute downstream Portfolio stages."
 };
 
 function modelDiagnostics(error: unknown) {
@@ -119,255 +108,102 @@ try {
   const sourceIds = selected.map((post) => post.source_id);
   if (new Set(sourceIds).size !== PILOT_SIZE) throw new Error("Pilot selection contains duplicate source IDs.");
 
-  const batches = splitIntoBatches(selected, BATCH_SIZE);
-  const expectedBatchCount = PILOT_SIZE / BATCH_SIZE;
-  if (batches.length !== expectedBatchCount || batches.some((batch) => batch.length !== BATCH_SIZE)) {
-    throw new Error(`Expected exactly ${expectedBatchCount} DISCOVER batch(es) of ${BATCH_SIZE} publications.`);
-  }
+  const inputPosts = selected.map((post) => ({
+    source_id: post.source_id,
+    title: post.title,
+    body: post.body
+  }));
+  const promptPosts = inputPosts.map((post, source_index) => ({
+    source_index,
+    title: post.title,
+    body: post.body
+  }));
+  const prompt = [
+    "You are the DISCOVER stage of PEKHTOGRAPHY Portfolio.",
+    "Analyze each publication independently. Do not compose galleries, compare publications, or propose six-post candidates.",
+    "The complete body text is the primary source of meaning. Hashtags are part of the supplied text and may carry meaning, but are not privileged and must never be the sole evidence for an observation.",
+    "Use only explicit textual evidence from BODY. Do not infer meaning from images, filenames, metadata, popularity, or assumptions.",
+    "Look for grounded observations through curatorial prisms including Motif, Field, Material, Rhetorical Transformation, Reframing, Metaphor, Contrast, Threshold, Time, Scale, Sensorial Shift, Vector, Resonance, Agency, Micro/Macro-dramaturgy, Observation, Composition, and Lexical echoes.",
+    "An observation must identify a specific textual signal and explain its interpretation. Every observation must include at least one exact, verbatim, contiguous quotation from BODY. Never invent or normalize quotations.",
+    "Return exactly one Discovery record for every supplied publication. Identify each publication only by its supplied zero-based source_index (0 through 999). Copy the integer index exactly; do not invent, omit, duplicate, or reorder indexes. Never return or reconstruct source_id values.",
+    "Use SIGNALS_FOUND with one or more observations when grounded signals exist; otherwise use NO_SIGNAL with an empty observations array. Do not treat a technical uncertainty as NO_SIGNAL.",
+    "Return only JSON matching the supplied response schema.",
+    "PUBLICATIONS:",
+    JSON.stringify(promptPosts)
+  ].join("\n\n");
 
   result.input_snapshot = loaded.input_snapshot;
   result.snapshot_content_sha256 = loaded.snapshot.content_sha256;
   result.selected_indices = indices;
   result.selected_source_ids = sourceIds;
+  result.input_sha256 = createHash("sha256").update(JSON.stringify(inputPosts), "utf8").digest("hex");
+  result.prompt_sha256 = createHash("sha256").update(prompt, "utf8").digest("hex");
 
-  const resumePath = process.env.PORTFOLIO_DISCOVER_RESUME_PATH;
-  if (resumePath && PILOT_SIZE !== 1000) throw new Error("Resume is supported only by the unchanged 1000-publication DISCOVER mode.");
-  let priorResult: Record<string, unknown> | null = null;
-  let priorBatchResults: Array<Record<string, unknown>> = [];
-  if (resumePath) {
-    priorResult = JSON.parse(await readFile(resumePath, "utf8")) as Record<string, unknown>;
-    if (priorResult.stage !== "DISCOVER" || priorResult.pilot !== true || priorResult.requested_count !== PILOT_SIZE || !Array.isArray(priorResult.batch_results) || priorResult.batch_results.length !== expectedBatchCount) {
-      throw new Error("Resume artifact does not match the 1000-publication DISCOVER result contract.");
-    }
-    priorBatchResults = priorResult.batch_results as Array<Record<string, unknown>>;
-    result.note = "Resumed DISCOVER from a prior immutable Snapshot run. Previously successful batches are reused only after exact input-hash, structure, BODY-evidence, and source-ID coverage checks; all other batches are regenerated.";
-    const priorIndexes = priorBatchResults.map((item) => item.batch_index);
-    if (new Set(priorIndexes).size !== expectedBatchCount || Array.from({ length: expectedBatchCount }, (_, index) => index + 1).some((index) => !priorIndexes.includes(index))) {
-      throw new Error("Resume artifact must contain exactly one result for each of the 10 original batches.");
-    }
-    result.resumed_from_run_id = process.env.PORTFOLIO_DISCOVER_RESUME_RUN_ID ?? "unspecified";
-  }
+  try {
+    const generated = await generatePortfolioJson(prompt, buildDiscoveryResponseSchema(), {
+      stage: "DISCOVER",
+      candidateId: null,
+      timeoutMs: 180_000,
+      maxAttemptsPerModel: 3,
+      maxRetryDelayMs: 120_000
+    });
+    result.model_used = generated.model_used;
+    result.model_diagnostics = generated.model_diagnostics;
+    result.response_diagnostics = generated.response_diagnostics;
 
-  const allSuccessfulRecords: Array<{ source_id: string; [key: string]: unknown }> = [];
-  const batchResults: Array<Record<string, unknown> | undefined> = new Array(batches.length);
-  for (const [batchIndex, batch] of batches.entries()) {
-    const batchNumber = batchIndex + 1;
-    const prior = priorBatchResults.find((item) => item.batch_index === batchNumber && item.status === "SUCCESS");
-    if (!prior || !Array.isArray(prior.records)) continue;
-    const expectedIds = batch.map((post) => String(post.source_id));
-    const currentInput = batch.map((post) => ({ source_id: post.source_id, title: post.title, body: post.body }));
-    const currentInputHash = createHash("sha256").update(JSON.stringify(currentInput), "utf8").digest("hex");
-    const priorRecords = prior.records as Array<{ source_id: string; [key: string]: unknown }>;
-    const coverage = inspectDiscoveryCoverage(expectedIds, priorRecords);
-    const bodyOnly = priorRecords.every((record) =>
-      record !== null && typeof record === "object" && Array.isArray(record.observations) && (record.observations as Array<Record<string, unknown>>).every((observation) =>
-        Array.isArray(observation.evidence) && (observation.evidence as Array<Record<string, unknown>>).every((evidence) => evidence.source === "BODY")
-      )
-    );
-    const structurallyValid = validateDiscoveryRecords(priorRecords as never[]).length === 0;
-    const quoteValid = validateDiscoveryEvidenceQuotes(
-      priorRecords as Array<{ source_id: string; observations?: unknown }>,
-      batch.map((post) => ({ source_id: String(post.source_id), body: String(post.body) }))
-    ).length === 0;
-    const reusable = prior.input_sha256 === currentInputHash &&
-      priorRecords.length === batch.length &&
-      coverage.missingSourceIds.length === 0 &&
-      coverage.unexpectedSourceIds.length === 0 &&
-      coverage.duplicateSourceIds.length === 0 &&
-      bodyOnly && structurallyValid && quoteValid;
-    if (reusable) {
-      batchResults[batchIndex] = prior;
-      allSuccessfulRecords.push(...coverage.orderedRecords);
-    }
-  }
+    const payload = generated.data as unknown as { records?: unknown };
+    if (!payload || !Array.isArray(payload.records)) throw new Error("Gemini DISCOVER response is missing the records array.");
 
-  const reusableBatchIndexes = batchResults.flatMap((item, index) => item ? [index + 1] : []);
-  const batchesToProcess = selectBatchesToProcess(batches, reusableBatchIndexes);
-  const pendingBatchIndexes = new Set(batchesToProcess.map((batch) => batches.indexOf(batch)));
-  const priorModelUsed = priorResult && Array.isArray(priorResult.model_used) ? priorResult.model_used : [];
-  const priorModelDiagnostics = priorResult && Array.isArray(priorResult.model_diagnostics) ? priorResult.model_diagnostics : [];
-  const priorResponseDiagnostics = priorResult && Array.isArray(priorResult.response_diagnostics) ? priorResult.response_diagnostics : [];
-  const allModelUsed: unknown[] = [...priorModelUsed];
-  const allModelDiagnostics: unknown[] = [...priorModelDiagnostics];
-  const allResponseDiagnostics: unknown[] = [...priorResponseDiagnostics];
+    const rawRecords = payload.records as Array<{ source_index?: unknown; [key: string]: unknown }>;
+    const records = mapDiscoverySourceIndexes(rawRecords, selected);
+    result.returned_count = records.length;
+    result.records = records;
 
-  for (const [batchIndex, batch] of batches.entries()) {
-    if (!pendingBatchIndexes.has(batchIndex)) continue;
-    const batchNumber = batchIndex + 1;
-    const batchSourceIds = batch.map((post) => String(post.source_id));
-    const inputPosts = batch.map((post) => ({
-      source_id: post.source_id,
-      title: post.title,
-      body: post.body
-    }));
-    const promptPosts = inputPosts.map((post, source_index) => ({
-      source_index,
-      title: post.title,
-      body: post.body
-    }));
-    const prompt = [
-      "You are the DISCOVER stage of PEKHTOGRAPHY Portfolio.",
-      "Analyze each publication independently. Do not compose galleries, compare publications, or propose six-post candidates.",
-      "The complete body text is the primary source of meaning. Hashtags are part of the supplied text and may carry meaning, but are not privileged and must never be the sole evidence for an observation.",
-      "Use only explicit textual evidence from BODY. Do not infer meaning from images, filenames, metadata, popularity, or assumptions.",
-      "Look for grounded observations through curatorial prisms including Motif, Field, Material, Rhetorical Transformation, Reframing, Metaphor, Contrast, Threshold, Time, Scale, Sensorial Shift, Vector, Resonance, Agency, Micro/Macro-dramaturgy, Observation, Composition, and Lexical echoes.",
-      "An observation must identify a specific textual signal and explain its interpretation. Every observation must include at least one exact, verbatim, contiguous quotation from the named source field. Never invent or normalize quotations.",
-      "Return exactly one Discovery record for every supplied publication. Identify each publication only by its supplied zero-based source_index (0 through ${batch.length - 1}). Copy the integer index exactly; do not invent, omit, duplicate, or reorder indexes. Never return or reconstruct source_id values.",
-      "Use SIGNALS_FOUND with one or more observations when grounded signals exist; otherwise use NO_SIGNAL with an empty observations array. Do not treat a technical uncertainty as NO_SIGNAL.",
-      "Return only JSON matching the supplied response schema.",
-      "PUBLICATIONS:",
-      JSON.stringify(promptPosts)
-    ].join("\n\n");
-
-    const previousAttempt = priorBatchResults.find((item) => item.batch_index === batchNumber);
-    const batchResult: Record<string, unknown> = {
-      ...(previousAttempt ? { previous_attempt: {
-        status: previousAttempt.status,
-        returned_count: previousAttempt.returned_count,
-        input_sha256: previousAttempt.input_sha256,
-        prompt_sha256: previousAttempt.prompt_sha256,
-        validation: previousAttempt.validation,
-        error: previousAttempt.error,
-        model_used: previousAttempt.model_used,
-        model_diagnostics: previousAttempt.model_diagnostics
-      } } : {}),
-      batch_index: batchNumber,
-      batch_count: batches.length,
-      requested_count: batch.length,
-      first_source_id: batchSourceIds[0],
-      last_source_id: batchSourceIds.at(-1),
-      input_sha256: createHash("sha256").update(JSON.stringify(inputPosts), "utf8").digest("hex"),
-      prompt_sha256: createHash("sha256").update(prompt, "utf8").digest("hex"),
-      status: "INCOMPLETE",
-      returned_count: 0,
-      records: []
-    };
-
-    try {
-      const generated = await generatePortfolioJson(prompt, buildDiscoveryResponseSchema(), {
-        stage: "DISCOVER",
-        candidateId: null,
-        timeoutMs: 180_000,
-        maxAttemptsPerModel: SINGLE_REQUEST_MODE ? 1 : 3,
-        maxRetryDelayMs: 120_000,
-        ...(SINGLE_REQUEST_MODE ? { thinkingLevel: "low" as const, maxOutputTokens: 8192 } : {})
-      });
-      batchResult.model_used = generated.model_used;
-      batchResult.model_diagnostics = generated.model_diagnostics;
-      batchResult.response_diagnostics = generated.response_diagnostics;
-      allModelUsed.push(...generated.model_used);
-      allModelDiagnostics.push(...generated.model_diagnostics);
-      allResponseDiagnostics.push({ batch_index: batchNumber, ...generated.response_diagnostics });
-
-      const payload = generated.data as unknown as { records?: unknown };
-      if (!payload || !Array.isArray(payload.records)) throw new Error("Gemini DISCOVER response is missing the records array.");
-
-      const rawRecords = payload.records as Array<{ source_index?: unknown; [key: string]: unknown }>;
-      const records = mapDiscoverySourceIndexes(rawRecords, batch);
-      batchResult.returned_count = records.length;
-      batchResult.records = records;
-
-      const invalidEvidenceSources: Array<{ code: string; message: string }> = [];
-      for (const record of records) {
-        if (!record || typeof record !== "object" || !Array.isArray((record as Record<string, unknown>).observations)) continue;
-        for (const [observationIndex, observation] of ((record as Record<string, unknown>).observations as unknown[]).entries()) {
-          if (!observation || typeof observation !== "object" || !Array.isArray((observation as Record<string, unknown>).evidence)) continue;
-          for (const [evidenceIndex, evidence] of ((observation as Record<string, unknown>).evidence as unknown[]).entries()) {
-            if (!evidence || typeof evidence !== "object" || (evidence as Record<string, unknown>).source !== "BODY") {
-              invalidEvidenceSources.push({
-                code: "DISCOVERY_EVIDENCE_SOURCE_INVALID",
-                message: `Evidence source must be BODY at ${String((record as Record<string, unknown>).source_id)}:${observationIndex}:${evidenceIndex}`
-              });
-            }
+    const invalidEvidenceSources: Array<{ code: string; message: string }> = [];
+    for (const record of records) {
+      if (!record || typeof record !== "object" || !Array.isArray((record as Record<string, unknown>).observations)) continue;
+      for (const [observationIndex, observation] of ((record as Record<string, unknown>).observations as unknown[]).entries()) {
+        if (!observation || typeof observation !== "object" || !Array.isArray((observation as Record<string, unknown>).evidence)) continue;
+        for (const [evidenceIndex, evidence] of ((observation as Record<string, unknown>).evidence as unknown[]).entries()) {
+          if (!evidence || typeof evidence !== "object" || (evidence as Record<string, unknown>).source !== "BODY") {
+            invalidEvidenceSources.push({
+              code: "DISCOVERY_EVIDENCE_SOURCE_INVALID",
+              message: `Evidence source must be BODY at ${String((record as Record<string, unknown>).source_id)}:${observationIndex}:${evidenceIndex}`
+            });
           }
         }
       }
-
-      const quoteIssues = validateDiscoveryEvidenceQuotes(
-        records as Array<{ source_id: string; observations?: unknown }>,
-        batch.map((post) => ({ source_id: String(post.source_id), body: String(post.body) }))
-      );
-      const validationIssues = [...validateDiscoveryRecords(records as never[]), ...invalidEvidenceSources, ...quoteIssues];
-      const coverage = inspectDiscoveryCoverage(batchSourceIds, records);
-      const batchPass = validationIssues.length === 0 &&
-        coverage.missingSourceIds.length === 0 &&
-        coverage.unexpectedSourceIds.length === 0 &&
-        coverage.duplicateSourceIds.length === 0 &&
-        records.length === batch.length;
-
-      batchResult.validation = {
-        status: batchPass ? "PASS" : "FAIL",
-        issues: validationIssues,
-        missing_or_duplicate_source_ids: coverage.missingSourceIds,
-        duplicate_source_ids: coverage.duplicateSourceIds,
-        unexpected_source_ids: coverage.unexpectedSourceIds
-      };
-
-      if (batchPass) {
-        batchResult.status = "SUCCESS";
-        allSuccessfulRecords.push(...coverage.orderedRecords);
-      } else {
-        batchResult.error = "Batch failed record structure, BODY evidence, or exact ${batch.length}-source coverage validation.";
-      }
-    } catch (error) {
-      batchResult.error = error instanceof Error ? error.message : String(error);
-      batchResult.model_used = modelDiagnostics(error);
-      if (error instanceof PortfolioProviderError) {
-        batchResult.model_diagnostics = error.model_diagnostics;
-        if (error.response_diagnostics) {
-          batchResult.response_diagnostics = error.response_diagnostics;
-          allResponseDiagnostics.push({ batch_index: batchNumber, ...error.response_diagnostics });
-        }
-        if (error.message.startsWith("OUTPUT_TRUNCATED:")) batchResult.error_code = "OUTPUT_TRUNCATED";
-      }
-      if (Array.isArray(batchResult.model_used)) allModelUsed.push(...batchResult.model_used);
-      if (Array.isArray(batchResult.model_diagnostics)) allModelDiagnostics.push(...batchResult.model_diagnostics);
     }
 
-    batchResults[batchIndex] = batchResult;
-    result.batch_results = batchResults.filter((item): item is Record<string, unknown> => Boolean(item));
-    result.model_used = allModelUsed;
-    result.model_diagnostics = allModelDiagnostics;
-    result.response_diagnostics = allResponseDiagnostics;
-    result.records = allSuccessfulRecords;
-    result.completed_batches = batchResults.filter((item) => item?.status === "SUCCESS").length;
-    result.failed_batches = batchResults.flatMap((item) => item && item.status !== "SUCCESS" ? [item.batch_index] : []);
-    await writeFile(outputPath, JSON.stringify(result, null, 2) + "\n", "utf8");
+    const quoteIssues = validateDiscoveryEvidenceQuotes(
+      records as Array<{ source_id: string; observations?: unknown }>,
+      selected.map((post) => ({ source_id: String(post.source_id), body: String(post.body) }))
+    );
+    const validationIssues = [...validateDiscoveryRecords(records as never[]), ...invalidEvidenceSources, ...quoteIssues];
+    const coverage = inspectDiscoveryCoverage(sourceIds, records);
+    const validationPass = validationIssues.length === 0 &&
+      coverage.missingSourceIds.length === 0 &&
+      coverage.unexpectedSourceIds.length === 0 &&
+      coverage.duplicateSourceIds.length === 0 &&
+      records.length === PILOT_SIZE;
 
-    if (batchIndex < batches.length - 1 && pendingBatchIndexes.has(batchIndex + 1)) {
-      await new Promise((resolve) => setTimeout(resolve, INTER_BATCH_DELAY_MS));
+    result.validation = {
+      status: validationPass ? "PASS" : "FAIL",
+      issues: validationIssues,
+      missing_or_duplicate_source_ids: coverage.missingSourceIds,
+      duplicate_source_ids: coverage.duplicateSourceIds,
+      unexpected_source_ids: coverage.unexpectedSourceIds
+    };
+    result.records = coverage.orderedRecords.length ? coverage.orderedRecords : records;
+    if (!validationPass) {
+      throw new Error("DISCOVER response failed record structure, BODY evidence, exact quotation, or exact 1000-source coverage validation.");
     }
-  }
-
-  const finalCoverage = inspectDiscoveryCoverage(sourceIds, allSuccessfulRecords);
-  const completeBatchResults = batchResults.filter((item): item is Record<string, unknown> => Boolean(item));
-  const failedBatchNumbers = completeBatchResults.filter((item) => item.status !== "SUCCESS").map((item) => item.batch_index);
-  const finalPass = failedBatchNumbers.length === 0 &&
-    allSuccessfulRecords.length === PILOT_SIZE &&
-    finalCoverage.missingSourceIds.length === 0 &&
-    finalCoverage.unexpectedSourceIds.length === 0 &&
-    finalCoverage.duplicateSourceIds.length === 0;
-
-  result.records = finalCoverage.orderedRecords;
-  result.batch_results = completeBatchResults;
-  result.model_used = allModelUsed;
-  result.model_diagnostics = allModelDiagnostics;
-  result.response_diagnostics = allResponseDiagnostics;
-  result.completed_batches = completeBatchResults.filter((item) => item.status === "SUCCESS").length;
-  result.failed_batches = failedBatchNumbers;
-  result.validation = {
-    status: finalPass ? "PASS" : "FAIL",
-    issues: [],
-    missing_or_duplicate_source_ids: finalCoverage.missingSourceIds,
-    duplicate_source_ids: finalCoverage.duplicateSourceIds,
-    unexpected_source_ids: finalCoverage.unexpectedSourceIds,
-    failed_batches: failedBatchNumbers
-  };
-  if (finalPass) {
     result.status = "SUCCESS";
-  } else {
-    result.status = "INCOMPLETE";
-    result.error = `DISCOVER batch processing incomplete. Successful batches: ${completeBatchResults.length - failedBatchNumbers.length}/${batches.length}; failed batches: ${failedBatchNumbers.join(", ") || "none"}; final unique coverage: ${finalCoverage.orderedRecords.length}/${PILOT_SIZE}.`;
+  } catch (error) {
+    if (error instanceof PortfolioProviderError && error.response_diagnostics) {
+      result.response_diagnostics = error.response_diagnostics;
+    }
+    throw error;
   }
 } catch (error) {
   result.error = error instanceof Error ? error.message : String(error);
