@@ -1,7 +1,12 @@
 name: Portfolio Real Gemini DISCOVER
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - portfolio/lifecycle-amendment-1-integration-harness
+    paths:
+      - "scripts/portfolio/discover-pilot.ts"
+      - ".github/workflows/portfolio-discover-pilot.yml"
 
 permissions:
   contents: read
