@@ -310,7 +310,14 @@ try {
     } catch (error) {
       batchResult.error = error instanceof Error ? error.message : String(error);
       batchResult.model_used = modelDiagnostics(error);
-      if (error instanceof PortfolioProviderError) {\n        batchResult.model_diagnostics = error.model_diagnostics;\n        if (error.response_diagnostics) {\n          batchResult.response_diagnostics = error.response_diagnostics;\n          allResponseDiagnostics.push({ batch_index: batchNumber, ...error.response_diagnostics });\n        }\n        if (error.message.startsWith("OUTPUT_TRUNCATED:")) batchResult.error_code = "OUTPUT_TRUNCATED";\n      }
+      if (error instanceof PortfolioProviderError) {
+        batchResult.model_diagnostics = error.model_diagnostics;
+        if (error.response_diagnostics) {
+          batchResult.response_diagnostics = error.response_diagnostics;
+          allResponseDiagnostics.push({ batch_index: batchNumber, ...error.response_diagnostics });
+        }
+        if (error.message.startsWith("OUTPUT_TRUNCATED:")) batchResult.error_code = "OUTPUT_TRUNCATED";
+      }
       if (Array.isArray(batchResult.model_used)) allModelUsed.push(...batchResult.model_used);
       if (Array.isArray(batchResult.model_diagnostics)) allModelDiagnostics.push(...batchResult.model_diagnostics);
     }
