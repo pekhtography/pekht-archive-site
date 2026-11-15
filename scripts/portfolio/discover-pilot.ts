@@ -10,9 +10,9 @@ const outputPath = process.env.PORTFOLIO_DISCOVER_RESULT_PATH ?? "portfolio-disc
 const requestedPilotSize = Number(process.env.PORTFOLIO_DISCOVER_COUNT ?? "1000");
 if (![100, 1000].includes(requestedPilotSize)) throw new Error("PORTFOLIO_DISCOVER_COUNT must be 100 or 1000.");
 const PILOT_SIZE = requestedPilotSize;
-const BATCH_SIZE = 100;
+const BATCH_SIZE = SINGLE_REQUEST_MODE ? 25 : 100;
 const SINGLE_REQUEST_MODE = process.env.PORTFOLIO_DISCOVER_SINGLE_REQUEST === "true";
-if (SINGLE_REQUEST_MODE && PILOT_SIZE !== 100) throw new Error("Single-request mode is restricted to the 100-publication one-batch test.");
+if (SINGLE_REQUEST_MODE && PILOT_SIZE !== 100) throw new Error("Small-batch integration mode is restricted to the 100-publication pilot.");
 const INTER_BATCH_DELAY_MS = 15_000;
 
 const result: Record<string, unknown> = {
@@ -25,9 +25,11 @@ const result: Record<string, unknown> = {
   response_diagnostics: [],
   batch_results: [],
   records: [],
-  note: PILOT_SIZE === 100
-    ? "Single 100-publication DISCOVER batch against the approved immutable 1000-post Snapshot. This integration run does not execute downstream Portfolio stages."
-    : "Full 1000-publication live DISCOVER run on the approved immutable Snapshot. This integration run does not execute downstream Portfolio stages."
+  note: SINGLE_REQUEST_MODE
+    ? "Four 25-publication DISCOVER batches against the same approved immutable 1000-post Snapshot selection. This integration run does not execute downstream Portfolio stages."
+    : PILOT_SIZE === 100
+      ? "100-publication DISCOVER pilot against the approved immutable 1000-post Snapshot. This integration run does not execute downstream Portfolio stages."
+      : "Full 1000-publication live DISCOVER run on the approved immutable Snapshot. This integration run does not execute downstream Portfolio stages."
 };
 
 function modelDiagnostics(error: unknown) {
@@ -120,7 +122,7 @@ try {
   const batches = splitIntoBatches(selected, BATCH_SIZE);
   const expectedBatchCount = PILOT_SIZE / BATCH_SIZE;
   if (batches.length !== expectedBatchCount || batches.some((batch) => batch.length !== BATCH_SIZE)) {
-    throw new Error(`Expected exactly ${expectedBatchCount} DISCOVER batch(es) of 100 publications.`);
+    throw new Error(`Expected exactly ${expectedBatchCount} DISCOVER batch(es) of ${BATCH_SIZE} publications.`);
   }
 
   result.input_snapshot = loaded.input_snapshot;
@@ -210,7 +212,7 @@ try {
       "Use only explicit textual evidence from BODY. Do not infer meaning from images, filenames, metadata, popularity, or assumptions.",
       "Look for grounded observations through curatorial prisms including Motif, Field, Material, Rhetorical Transformation, Reframing, Metaphor, Contrast, Threshold, Time, Scale, Sensorial Shift, Vector, Resonance, Agency, Micro/Macro-dramaturgy, Observation, Composition, and Lexical echoes.",
       "An observation must identify a specific textual signal and explain its interpretation. Every observation must include at least one exact, verbatim, contiguous quotation from the named source field. Never invent or normalize quotations.",
-      "Return exactly one Discovery record for every supplied publication. Identify each publication only by its supplied zero-based source_index (0 through 99). Copy the integer index exactly; do not invent, omit, duplicate, or reorder indexes. Never return or reconstruct source_id values.",
+      "Return exactly one Discovery record for every supplied publication. Identify each publication only by its supplied zero-based source_index (0 through ${batch.length - 1}). Copy the integer index exactly; do not invent, omit, duplicate, or reorder indexes. Never return or reconstruct source_id values.",
       "Use SIGNALS_FOUND with one or more observations when grounded signals exist; otherwise use NO_SIGNAL with an empty observations array. Do not treat a technical uncertainty as NO_SIGNAL.",
       "Return only JSON matching the supplied response schema.",
       "PUBLICATIONS:",
@@ -305,7 +307,7 @@ try {
         batchResult.status = "SUCCESS";
         allSuccessfulRecords.push(...coverage.orderedRecords);
       } else {
-        batchResult.error = "Batch failed record structure, BODY evidence, or exact 100-source coverage validation.";
+        batchResult.error = "Batch failed record structure, BODY evidence, or exact ${batch.length}-source coverage validation.";
       }
     } catch (error) {
       batchResult.error = error instanceof Error ? error.message : String(error);
