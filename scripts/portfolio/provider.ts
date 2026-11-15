@@ -29,6 +29,7 @@ export interface ModelFailureDiagnostic {
   http_status: number | null;
   quota_type: "daily" | "tpm" | "rpm" | "unknown" | null;
   error_description: string;
+  response_diagnostics?: GeminiResponseDiagnostics;
 }
 
 export interface GeminiResponseDiagnostics {
@@ -292,7 +293,7 @@ async function requestModel(
           responseDiagnostics.raw_response_text = text.slice(0, 100_000);
           responseDiagnostics.raw_response_truncated = text.length > 100_000;
           throw new PortfolioProviderError(`OUTPUT_TRUNCATED: Gemini model ${model} finished with MAX_TOKENS before JSON parsing.`, {
-            retryable: false, model, attempts: attempt, status: response.status,
+            retryable: true, model, attempts: attempt, status: response.status,
             response_diagnostics: responseDiagnostics,
           });
         }
@@ -406,7 +407,7 @@ export async function generatePortfolioJson(
       if (error instanceof PortfolioProviderError) {
         if (error.attempts > 0) {
           const outcome = error.retryable && fallbackIndex < modelList.length - 1 ? "FALLBACK" : "FAILED";
-          modelDiagnostics.push({ model, fallback_index: fallbackIndex, attempts: error.attempts, outcome, http_status: error.status, quota_type: error.quotaType, error_description: safeErrorDescription(error.message) });
+          modelDiagnostics.push({ model, fallback_index: fallbackIndex, attempts: error.attempts, outcome, http_status: error.status, quota_type: error.quotaType, error_description: safeErrorDescription(error.message), ...(error.response_diagnostics ? { response_diagnostics: error.response_diagnostics } : {}) });
           modelUsed.push({
             call_id: callId,
             stage: options.stage,
