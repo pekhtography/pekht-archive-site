@@ -1,6 +1,11 @@
 name: Portfolio Gemini Single-Request Quota Probe
 
 on:
+  push:
+    branches:
+      - portfolio/lifecycle-amendment-1-integration-harness
+    paths:
+      - .github/workflows/portfolio-gemini-quota-probe.yml
   workflow_dispatch:
     inputs:
       model:
