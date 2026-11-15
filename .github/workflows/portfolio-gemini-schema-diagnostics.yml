@@ -1,0 +1,58 @@
+name: Portfolio Gemini Schema Diagnostics
+
+on:
+  workflow_dispatch:
+    inputs:
+      model:
+        description: "Optional Gemini model override; blank uses gemini-3.6-flash"
+        required: false
+        type: string
+        default: ""
+
+permissions:
+  contents: read
+
+concurrency:
+  group: portfolio-gemini-schema-diagnostics-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  diagnostics:
+    name: Four isolated schema/configuration probes
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - name: Checkout selected feature ref
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ github.ref }}
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: pnpm
+
+      - name: Install locked dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Run four isolated Gemini diagnostics
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ inputs.model }}
+          GEMINI_DIAGNOSTIC_RESULT_PATH: gemini-schema-diagnostic.json
+        run: pnpm exec tsx scripts/portfolio/gemini-schema-diagnostics.ts
+
+      - name: Upload diagnostic result
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-gemini-schema-diagnostics-${{ github.run_id }}
+          path: gemini-schema-diagnostic.json
+          if-no-files-found: warn
+          retention-days: 30
