@@ -190,6 +190,11 @@ try {
       title: post.title,
       body: post.body
     }));
+    const promptPosts = inputPosts.map((post, source_index) => ({
+      source_index,
+      title: post.title,
+      body: post.body
+    }));
     const prompt = [
       "You are the DISCOVER stage of PEKHTOGRAPHY Portfolio.",
       "Analyze each publication independently. Do not compose galleries, compare publications, or propose six-post candidates.",
@@ -197,11 +202,11 @@ try {
       "Use only explicit textual evidence from BODY. Do not infer meaning from images, filenames, metadata, popularity, or assumptions.",
       "Look for grounded observations through curatorial prisms including Motif, Field, Material, Rhetorical Transformation, Reframing, Metaphor, Contrast, Threshold, Time, Scale, Sensorial Shift, Vector, Resonance, Agency, Micro/Macro-dramaturgy, Observation, Composition, and Lexical echoes.",
       "An observation must identify a specific textual signal and explain its interpretation. Every observation must include at least one exact, verbatim, contiguous quotation from the named source field. Never invent or normalize quotations.",
-      "Return exactly one Discovery record for every supplied source_id. Copy every source_id exactly as supplied, character-for-character; it is an opaque immutable identifier, never rewrite, shorten, normalize, or reconstruct it. The response schema enum lists the only permitted IDs for this batch.",
+      "Return exactly one Discovery record for every supplied publication. Identify each publication only by its supplied zero-based source_index (0 through 99). Copy the integer index exactly; do not invent, omit, duplicate, or reorder indexes. Never return or reconstruct source_id values.",
       "Use SIGNALS_FOUND with one or more observations when grounded signals exist; otherwise use NO_SIGNAL with an empty observations array. Do not treat a technical uncertainty as NO_SIGNAL.",
       "Return only JSON matching the supplied response schema.",
       "PUBLICATIONS:",
-      JSON.stringify(inputPosts)
+      JSON.stringify(promptPosts)
     ].join("\n\n");
 
     const previousAttempt = priorBatchResults.find((item) => item.batch_index === batchNumber);
@@ -229,7 +234,7 @@ try {
     };
 
     try {
-      const generated = await generatePortfolioJson(prompt, buildDiscoveryResponseSchema(batchSourceIds), {
+      const generated = await generatePortfolioJson(prompt, buildDiscoveryResponseSchema(), {
         stage: "DISCOVER",
         candidateId: null,
         timeoutMs: 180_000,
@@ -246,7 +251,16 @@ try {
       const payload = generated.data as unknown as { records?: unknown };
       if (!payload || !Array.isArray(payload.records)) throw new Error("Gemini DISCOVER response is missing the records array.");
 
-      const records = payload.records as Array<{ source_id: string; [key: string]: unknown }>;
+      const rawRecords = payload.records as Array<{ source_index?: unknown; [key: string]: unknown }>;
+      const records = rawRecords.map((record) => {
+        const { source_index, ...discoveryFields } = record;
+        const sourceId = Number.isInteger(source_index) &&
+          (source_index as number) >= 0 &&
+          (source_index as number) < batch.length
+          ? String(batch[source_index as number].source_id)
+          : "";
+        return { ...discoveryFields, source_id: sourceId } as { source_id: string; [key: string]: unknown };
+      });
       batchResult.returned_count = records.length;
       batchResult.records = records;
 
