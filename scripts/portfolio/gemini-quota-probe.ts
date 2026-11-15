@@ -15,10 +15,10 @@ const result: Record<string, unknown> = {
 
 function safeMessage(value: string): string {
   return value
-    .replace(/Bearer\\s+[^\\s,;]+/gi, "Bearer [REDACTED]")
-    .replace(/(x-goog-api-key|api[_-]?key|access[_-]?token)\\s*[:=]\\s*[^\\s,;]+/gi, "$1=[REDACTED]")
-    .replace(/https?:\\/\\/[^\\s]+/gi, "[URL]")
-    .replace(/\\s+/g, " ")
+    .replace(/Bearer\s+[^\s,;]+/gi, "Bearer [REDACTED]")
+    .replace(/(x-goog-api-key|api[_-]?key|access[_-]?token)\s*[:=]\s*[^\s,;]+/gi, "$1=[REDACTED]")
+    .replace(/https?:\/\/[^\s]+/gi, "[URL]")
+    .replace(/\s+/g, " ")
     .trim()
     .slice(0, 700);
 }
@@ -71,6 +71,6 @@ try {
   result.error = safeMessage(error instanceof Error ? error.message : String(error));
 }
 
-await writeFile(outputPath, JSON.stringify(result, null, 2) + "\\n", "utf8");
+await writeFile(outputPath, JSON.stringify(result, null, 2) + "\n", "utf8");
 console.log(JSON.stringify(result, null, 2));
 if (result.status !== "HTTP_200") process.exitCode = 1;
