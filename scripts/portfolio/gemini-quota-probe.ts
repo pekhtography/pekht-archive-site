@@ -1,7 +1,7 @@
 import { writeFile } from "node:fs/promises";
 
 const outputPath = process.env.GEMINI_PROBE_RESULT_PATH ?? "gemini-quota-probe-result.json";
-const model = process.env.GEMINI_MODEL?.trim() ?? "";
+const model = process.env.GEMINI_MODEL?.trim() || "gemini-3.8-flash";
 const apiKey = process.env.GEMINI_API_KEY ?? "";
 
 const result: Record<string, unknown> = {
@@ -36,7 +36,7 @@ try {
       "x-goog-api-key": apiKey,
     },
     body: JSON.stringify({
-      contents: [{ role: "user", parts: [{ text: "Return the JSON object {\\"probe\\":\\"ok\\"}." }] }],
+      contents: [{ role: "user", parts: [{ text: 'Return a JSON object with the property probe set to "ok".' }] }],
       generationConfig: {
         responseMimeType: "application/json",
         responseSchema: {
