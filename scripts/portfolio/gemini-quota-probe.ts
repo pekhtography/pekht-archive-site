@@ -44,7 +44,7 @@ try {
           properties: { probe: { type: "STRING" } },
           required: ["probe"],
         },
-        maxOutputTokens: 16,
+        maxOutputTokens: 128,
       },
     }),
     signal: AbortSignal.timeout(120_000),
@@ -54,13 +54,31 @@ try {
   result.retry_after = response.headers.get("Retry-After");
   if (response.ok) {
     const payload = await response.json() as {
-      candidates?: Array<{ finishReason?: unknown }>;
+      candidates?: Array<{
+        finishReason?: unknown;
+        content?: { parts?: Array<{ text?: unknown }> };
+      }>;
       usageMetadata?: Record<string, unknown>;
     };
+    const candidate = payload.candidates?.[0];
+    const responseText = candidate?.content?.parts
+      ?.map((part) => typeof part.text === "string" ? part.text : "")
+      .join("")
+      .trim() ?? "";
     result.status = "HTTP_200";
-    result.finish_reason = typeof payload.candidates?.[0]?.finishReason === "string"
-      ? payload.candidates[0].finishReason
+    result.finish_reason = typeof candidate?.finishReason === "string"
+      ? candidate.finishReason
       : null;
+    result.response_text = responseText;
+    result.json_valid = false;
+    result.probe_value = null;
+    try {
+      const parsed = JSON.parse(responseText) as { probe?: unknown };
+      result.json_valid = true;
+      result.probe_value = parsed.probe ?? null;
+    } catch {
+      result.json_valid = false;
+    }
     result.usage_metadata = payload.usageMetadata ?? null;
   } else {
     result.status = response.status === 429 ? "QUOTA_LIMITED" : "HTTP_ERROR";
@@ -73,4 +91,4 @@ try {
 
 await writeFile(outputPath, JSON.stringify(result, null, 2) + "\n", "utf8");
 console.log(JSON.stringify(result, null, 2));
-if (result.status !== "HTTP_200") process.exitCode = 1;
+if (result.status !== "HTTP_200" || result.finish_reason !== "STOP" || result.json_valid !== true || result.probe_value !== "ok") process.exitCode = 1;
