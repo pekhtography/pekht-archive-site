@@ -27,7 +27,10 @@ try {
   if (!model) throw new Error("GEMINI_MODEL is empty; no request was sent.");
   if (!apiKey) throw new Error("GEMINI_API_KEY is not configured; no request was sent.");
 
-  const url = \`https://generativelanguage.googleapis.com/v1beta/models/\${encodeURIComponent(model)}:generateContent\`;
+  const url =
+    "https://generativelanguage.googleapis.com/v1beta/models/" +
+    encodeURIComponent(model) +
+    ":generateContent";
   result.request_count = 1;
   const response = await fetch(url, {
     method: "POST",
