@@ -85,6 +85,8 @@ test("MAX_TOKENS: classifies truncated output and preserves finish and usage dia
     assert.ok(caught instanceof PortfolioProviderError);
     assert.match(caught.message, /^OUTPUT_TRUNCATED:/);
     assert.equal(caught.response_diagnostics?.finish_reason, "MAX_TOKENS");
+    assert.equal(caught.response_diagnostics?.raw_response_text, '{"records":[');
+    assert.equal(caught.response_diagnostics?.raw_response_truncated, false);
     assert.deepEqual(caught.response_diagnostics?.usage_metadata, {
       thoughtsTokenCount: 7000, candidatesTokenCount: 1192, totalTokenCount: 8192,
     });
