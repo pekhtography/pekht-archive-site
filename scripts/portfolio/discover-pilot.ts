@@ -248,7 +248,7 @@ try {
         timeoutMs: 180_000,
         maxAttemptsPerModel: SINGLE_REQUEST_MODE ? 1 : 3,
         maxRetryDelayMs: 120_000,
-        ...(SINGLE_REQUEST_MODE ? { thinkingLevel: "low" as const, maxOutputTokens: 256 } : {})
+        ...(SINGLE_REQUEST_MODE ? { thinkingLevel: "low" as const, maxOutputTokens: 8192 } : {})
       });
       batchResult.model_used = generated.model_used;
       batchResult.model_diagnostics = generated.model_diagnostics;
@@ -310,7 +310,7 @@ try {
     } catch (error) {
       batchResult.error = error instanceof Error ? error.message : String(error);
       batchResult.model_used = modelDiagnostics(error);
-      if (error instanceof PortfolioProviderError) batchResult.model_diagnostics = error.model_diagnostics;
+      if (error instanceof PortfolioProviderError) {\n        batchResult.model_diagnostics = error.model_diagnostics;\n        if (error.response_diagnostics) {\n          batchResult.response_diagnostics = error.response_diagnostics;\n          allResponseDiagnostics.push({ batch_index: batchNumber, ...error.response_diagnostics });\n        }\n        if (error.message.startsWith("OUTPUT_TRUNCATED:")) batchResult.error_code = "OUTPUT_TRUNCATED";\n      }
       if (Array.isArray(batchResult.model_used)) allModelUsed.push(...batchResult.model_used);
       if (Array.isArray(batchResult.model_diagnostics)) allModelDiagnostics.push(...batchResult.model_diagnostics);
     }
