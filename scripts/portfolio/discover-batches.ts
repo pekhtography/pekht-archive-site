@@ -128,8 +128,6 @@ export function buildDiscoveryResponseSchema() {
     properties: {
       records: {
         type: "array",
-        minItems: 100,
-        maxItems: 100,
         items: {
           type: "object",
           required: ["source_index", "result", "observations"],

@@ -53,6 +53,8 @@ test("buildDiscoveryResponseSchema uses an integer source index and retains BODY
   const schema = buildDiscoveryResponseSchema() as {
     properties: {
       records: {
+        minItems?: number;
+        maxItems?: number;
         items: {
           required: string[];
           properties: {
@@ -72,6 +74,8 @@ test("buildDiscoveryResponseSchema uses an integer source index and retains BODY
       };
     };
   };
+  assert.equal(schema.properties.records.minItems, undefined);
+  assert.equal(schema.properties.records.maxItems, undefined);
   const record = schema.properties.records.items;
   assert.ok(record.required.includes("source_index"));
   assert.equal(record.properties.source_index.type, "integer");
