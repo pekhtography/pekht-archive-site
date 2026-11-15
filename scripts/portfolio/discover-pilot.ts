@@ -7,8 +7,12 @@ import { buildDiscoveryResponseSchema, inspectDiscoveryCoverage, mapDiscoverySou
 
 const snapshotPath = process.env.PORTFOLIO_SNAPSHOT_PATH ?? "snapshot/portfolio-snapshot.json";
 const outputPath = process.env.PORTFOLIO_DISCOVER_RESULT_PATH ?? "portfolio-discover-pilot-result.json";
-const PILOT_SIZE = 1000;
+const requestedPilotSize = Number(process.env.PORTFOLIO_DISCOVER_COUNT ?? "1000");
+if (![100, 1000].includes(requestedPilotSize)) throw new Error("PORTFOLIO_DISCOVER_COUNT must be 100 or 1000.");
+const PILOT_SIZE = requestedPilotSize;
 const BATCH_SIZE = 100;
+const SINGLE_REQUEST_MODE = process.env.PORTFOLIO_DISCOVER_SINGLE_REQUEST === "true";
+if (SINGLE_REQUEST_MODE && PILOT_SIZE !== 100) throw new Error("Single-request mode is restricted to the 100-publication one-batch test.");
 const INTER_BATCH_DELAY_MS = 15_000;
 
 const result: Record<string, unknown> = {
@@ -21,7 +25,9 @@ const result: Record<string, unknown> = {
   response_diagnostics: [],
   batch_results: [],
   records: [],
-  note: "Full 1000-publication live DISCOVER run on the approved immutable Snapshot. This integration run does not execute downstream Portfolio stages."
+  note: PILOT_SIZE === 100
+    ? "Single 100-publication DISCOVER batch against the approved immutable 1000-post Snapshot. This integration run does not execute downstream Portfolio stages."
+    : "Full 1000-publication live DISCOVER run on the approved immutable Snapshot. This integration run does not execute downstream Portfolio stages."
 };
 
 function modelDiagnostics(error: unknown) {
@@ -112,8 +118,9 @@ try {
   if (new Set(sourceIds).size !== PILOT_SIZE) throw new Error("Pilot selection contains duplicate source IDs.");
 
   const batches = splitIntoBatches(selected, BATCH_SIZE);
-  if (batches.length !== 10 || batches.some((batch) => batch.length !== BATCH_SIZE)) {
-    throw new Error("Expected exactly 10 DISCOVER batches of 100 publications.");
+  const expectedBatchCount = PILOT_SIZE / BATCH_SIZE;
+  if (batches.length !== expectedBatchCount || batches.some((batch) => batch.length !== BATCH_SIZE)) {
+    throw new Error(`Expected exactly ${expectedBatchCount} DISCOVER batch(es) of 100 publications.`);
   }
 
   result.input_snapshot = loaded.input_snapshot;
@@ -122,17 +129,18 @@ try {
   result.selected_source_ids = sourceIds;
 
   const resumePath = process.env.PORTFOLIO_DISCOVER_RESUME_PATH;
+  if (resumePath && PILOT_SIZE !== 1000) throw new Error("Resume is supported only by the unchanged 1000-publication DISCOVER mode.");
   let priorResult: Record<string, unknown> | null = null;
   let priorBatchResults: Array<Record<string, unknown>> = [];
   if (resumePath) {
     priorResult = JSON.parse(await readFile(resumePath, "utf8")) as Record<string, unknown>;
-    if (priorResult.stage !== "DISCOVER" || priorResult.pilot !== true || priorResult.requested_count !== PILOT_SIZE || !Array.isArray(priorResult.batch_results) || priorResult.batch_results.length !== 10) {
+    if (priorResult.stage !== "DISCOVER" || priorResult.pilot !== true || priorResult.requested_count !== PILOT_SIZE || !Array.isArray(priorResult.batch_results) || priorResult.batch_results.length !== expectedBatchCount) {
       throw new Error("Resume artifact does not match the 1000-publication DISCOVER result contract.");
     }
     priorBatchResults = priorResult.batch_results as Array<Record<string, unknown>>;
     result.note = "Resumed DISCOVER from a prior immutable Snapshot run. Previously successful batches are reused only after exact input-hash, structure, BODY-evidence, and source-ID coverage checks; all other batches are regenerated.";
     const priorIndexes = priorBatchResults.map((item) => item.batch_index);
-    if (new Set(priorIndexes).size !== 10 || Array.from({ length: 10 }, (_, index) => index + 1).some((index) => !priorIndexes.includes(index))) {
+    if (new Set(priorIndexes).size !== expectedBatchCount || Array.from({ length: expectedBatchCount }, (_, index) => index + 1).some((index) => !priorIndexes.includes(index))) {
       throw new Error("Resume artifact must contain exactly one result for each of the 10 original batches.");
     }
     result.resumed_from_run_id = process.env.PORTFOLIO_DISCOVER_RESUME_RUN_ID ?? "unspecified";
@@ -160,7 +168,7 @@ try {
       batch.map((post) => ({ source_id: String(post.source_id), body: String(post.body) }))
     ).length === 0;
     const reusable = prior.input_sha256 === currentInputHash &&
-      priorRecords.length === BATCH_SIZE &&
+      priorRecords.length === batch.length &&
       coverage.missingSourceIds.length === 0 &&
       coverage.unexpectedSourceIds.length === 0 &&
       coverage.duplicateSourceIds.length === 0 &&
@@ -238,8 +246,9 @@ try {
         stage: "DISCOVER",
         candidateId: null,
         timeoutMs: 180_000,
-        maxAttemptsPerModel: 3,
-        maxRetryDelayMs: 120_000
+        maxAttemptsPerModel: SINGLE_REQUEST_MODE ? 1 : 3,
+        maxRetryDelayMs: 120_000,
+        ...(SINGLE_REQUEST_MODE ? { thinkingLevel: "low" as const, maxOutputTokens: 256 } : {})
       });
       batchResult.model_used = generated.model_used;
       batchResult.model_diagnostics = generated.model_diagnostics;

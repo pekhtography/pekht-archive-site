@@ -13,6 +13,8 @@ export interface PortfolioProviderOptions {
   timeoutMs?: number;
   maxAttemptsPerModel?: number;
   maxRetryDelayMs?: number;
+  thinkingLevel?: "low" | "medium" | "high";
+  maxOutputTokens?: number;
   sleepFn?: (ms: number) => Promise<void>;
   fetchFn?: ProviderFetch;
 }
@@ -229,7 +231,12 @@ async function requestModel(
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
   const body = JSON.stringify({
     contents: [{ role: "user", parts: [{ text: prompt }] }],
-    generationConfig: { responseMimeType: "application/json", responseSchema: schema },
+    generationConfig: {
+      responseMimeType: "application/json",
+      responseSchema: schema,
+      ...(options.maxOutputTokens !== undefined ? { maxOutputTokens: options.maxOutputTokens } : {}),
+      ...(options.thinkingLevel ? { thinkingConfig: { thinkingLevel: options.thinkingLevel } } : {}),
+    },
   });
 
   let lastError = "Unknown Gemini provider error";

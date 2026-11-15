@@ -39,6 +39,22 @@ async function withHarness(
   }
 }
 
+test("generation config: passes optional thinking level and output token limit", async () => {
+  await withHarness(async () => {
+    let requestBody: Record<string, unknown> | null = null;
+    await generatePortfolioJson("prompt", { type: "object" }, {
+      stage: "DISCOVER", maxAttemptsPerModel: 1, thinkingLevel: "low", maxOutputTokens: 256,
+      fetchFn: async (_input, init) => {
+        requestBody = JSON.parse(String(init?.body)) as Record<string, unknown>;
+        return okResponse();
+      },
+    });
+    const generationConfig = requestBody?.generationConfig as Record<string, unknown>;
+    assert.equal(generationConfig.maxOutputTokens, 256);
+    assert.deepEqual(generationConfig.thinkingConfig, { thinkingLevel: "low" });
+  });
+});
+
 test("success: parses Gemini JSON from a successful mock response", async () => {
   await withHarness(async ({ waits }) => {
     const result = await generatePortfolioJson("prompt", {}, {

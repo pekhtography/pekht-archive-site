@@ -6,6 +6,8 @@ on:
       - portfolio/lifecycle-amendment-1-integration-harness
     paths:
       - "scripts/portfolio/discover-retry.trigger"
+      - "scripts/portfolio/discover-single-100.trigger"
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -17,7 +19,7 @@ concurrency:
 
 jobs:
   discover-pilot:
-    name: Retry only failed DISCOVER batches from prior run
+    name: DISCOVER single 100 batch or resume 1000 batches
     runs-on: ubuntu-latest
     timeout-minutes: 90
     steps:
@@ -27,6 +29,7 @@ jobs:
           ref: portfolio/lifecycle-amendment-1-integration-harness
 
       - name: Read and validate prior run ID
+        if: github.event_name == 'push' && !contains(github.event.head_commit.modified, 'scripts/portfolio/discover-single-100.trigger')
         run: |
           RESUME_RUN_ID="$(tr -d '[:space:]' < scripts/portfolio/discover-retry.trigger)"
           if ! [[ "$RESUME_RUN_ID" =~ ^[0-9]+$ ]]; then
@@ -62,6 +65,7 @@ jobs:
           echo "Downloaded approved Snapshot Run #2."
 
       - name: Download prior DISCOVER result artifact
+        if: github.event_name == 'push' && !contains(github.event.head_commit.modified, 'scripts/portfolio/discover-single-100.trigger')
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
@@ -73,10 +77,26 @@ jobs:
           test -s prior/portfolio-discover-pilot-result.json
           echo "Downloaded prior DISCOVER result for selective retry."
 
-      - name: Test deterministic DISCOVER batching and resume selection
-        run: pnpm exec tsx --test scripts/portfolio/discover-batches.test.ts
+      - name: Test deterministic DISCOVER batching and provider request configuration
+        run: pnpm exec tsx --test scripts/portfolio/discover-batches.test.ts scripts/portfolio/provider.test.ts
 
-      - name: Retry only failed batches (live Gemini)
+      - name: Run one fresh 100-publication DISCOVER batch (live Gemini)
+        if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && contains(github.event.head_commit.modified, 'scripts/portfolio/discover-single-100.trigger'))
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_MODEL: gemini-3.6-flash
+          GEMINI_FALLBACK_1: ""
+          GEMINI_FALLBACK_2: ""
+          GEMINI_FALLBACK_3: ""
+          GEMINI_FALLBACK_4: ""
+          PORTFOLIO_SNAPSHOT_PATH: snapshot/portfolio-snapshot.json
+          PORTFOLIO_DISCOVER_COUNT: "100"
+          PORTFOLIO_DISCOVER_SINGLE_REQUEST: "true"
+          PORTFOLIO_DISCOVER_RESULT_PATH: portfolio-discover-pilot-result.json
+        run: pnpm exec tsx scripts/portfolio/discover-pilot.ts
+
+      - name: Retry only failed DISCOVER batches from prior run (live Gemini)
+        if: github.event_name == 'push' && !contains(github.event.head_commit.modified, 'scripts/portfolio/discover-single-100.trigger')
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
@@ -85,6 +105,7 @@ jobs:
           GEMINI_FALLBACK_3: ${{ vars.GEMINI_FALLBACK_3 }}
           GEMINI_FALLBACK_4: ${{ vars.GEMINI_FALLBACK_4 }}
           PORTFOLIO_SNAPSHOT_PATH: snapshot/portfolio-snapshot.json
+          PORTFOLIO_DISCOVER_COUNT: "1000"
           PORTFOLIO_DISCOVER_RESUME_PATH: prior/portfolio-discover-pilot-result.json
           PORTFOLIO_DISCOVER_RESUME_RUN_ID: ${{ env.RESUME_RUN_ID }}
           PORTFOLIO_DISCOVER_RESULT_PATH: portfolio-discover-pilot-result.json
@@ -94,7 +115,7 @@ jobs:
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: portfolio-discover-pilot-resume-${{ github.run_id }}
+          name: portfolio-discover-pilot-${{ github.run_id }}
           path: portfolio-discover-pilot-result.json
           if-no-files-found: error
           retention-days: 30
