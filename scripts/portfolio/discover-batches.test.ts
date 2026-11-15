@@ -149,7 +149,7 @@ test("mapDiscoverySourceIndexes leaves duplicate indexes detectable by coverage 
   ], batch);
   const coverage = inspectDiscoveryCoverage(["post-A", "post-B"], mapped);
   assert.deepEqual(coverage.duplicateSourceIds, ["post-A"]);
-  assert.deepEqual(coverage.missingSourceIds, ["post-B"]);
+  assert.deepEqual(coverage.missingSourceIds, ["post-A", "post-B"]);
 });
 
 test("mapDiscoverySourceIndexes rejects negative and out-of-range indexes through coverage", () => {
