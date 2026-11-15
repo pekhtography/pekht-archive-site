@@ -91,13 +91,10 @@ jobs:
 
       - name: Run four fresh 25-publication DISCOVER batches (live Gemini)
         if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && steps.discover_mode.outputs.single_100 == 'true')
+        # Leave GEMINI_MODEL and GEMINI_FALLBACK_* unset here so provider.ts
+        # uses the original built-in five-model fallback chain.
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: gemini-3.6-flash
-          GEMINI_FALLBACK_1: ""
-          GEMINI_FALLBACK_2: ""
-          GEMINI_FALLBACK_3: ""
-          GEMINI_FALLBACK_4: ""
           PORTFOLIO_SNAPSHOT_PATH: snapshot/portfolio-snapshot.json
           PORTFOLIO_DISCOVER_COUNT: "100"
           PORTFOLIO_DISCOVER_SINGLE_REQUEST: "true"
