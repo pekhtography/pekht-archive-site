@@ -1,7 +1,7 @@
 import { writeFile } from "node:fs/promises";
 
 const outputPath = process.env.GEMINI_PROBE_RESULT_PATH ?? "gemini-quota-probe-result.json";
-const model = process.env.GEMINI_MODEL?.trim() || "gemini-3.6-flash";
+const model = process.env.GEMINI_MODEL?.trim() || "gemini-2.5-flash";
 const apiKey = process.env.GEMINI_API_KEY ?? "";
 
 const result: Record<string, unknown> = {
@@ -44,6 +44,7 @@ try {
           properties: { probe: { type: "STRING" } },
           required: ["probe"],
         },
+        thinkingConfig: { thinkingBudget: 0 },
         maxOutputTokens: 128,
       },
     }),
