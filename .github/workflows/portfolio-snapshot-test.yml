@@ -1,6 +1,7 @@
 name: Portfolio Snapshot Tests
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - portfolio/orchestrator-v1

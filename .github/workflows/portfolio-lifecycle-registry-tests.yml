@@ -1,6 +1,7 @@
 name: Portfolio Lifecycle Registry Unit Tests
 
 on:
+  workflow_dispatch:
   push:
     branches:
       - portfolio/lifecycle-amendment-1-integration-harness
