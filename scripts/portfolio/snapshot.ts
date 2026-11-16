@@ -207,7 +207,9 @@ export function validatePortfolioSnapshot(
         errors.push(`${path}.hashtags: expected an array of strings`);
       }
       if (isNonEmptyString(post.source_id)) postIds.push(post.source_id);
-      if (typeof post.created_at !== "string") {\n        errors.push(`${path}.created_at: expected a string (empty when the source archive has no date)`);\n      } else if (isNonEmptyString(post.created_at) && !isIsoDate(post.created_at)) {
+      if (typeof post.created_at !== "string") {
+        errors.push(`${path}.created_at: expected a string (empty when the source archive has no date)`);
+      } else if (isNonEmptyString(post.created_at) && !isIsoDate(post.created_at)) {
         errors.push(`${path}.created_at: expected an ISO date`);
       }
     });
