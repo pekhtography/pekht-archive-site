@@ -1,0 +1,53 @@
+name: Portfolio Lifecycle-Filtered Snapshot
+
+on:
+  push:
+    branches:
+      - portfolio/lifecycle-amendment-1-integration-harness
+    paths:
+      - 'scripts/portfolio/create-snapshot.ts'
+      - 'scripts/portfolio/lifecycle-registry.ts'
+      - 'scripts/portfolio/snapshot.ts'
+      - 'src/content/archive/**'
+      - 'src/lib/stratified-sample.ts'
+      - 'src/lib/explore-sort.ts'
+      - '.github/workflows/portfolio-lifecycle-snapshot.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  create-snapshot:
+    name: Build immutable lifecycle-filtered Snapshot (no Gemini)
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout isolated integration branch
+        uses: actions/checkout@v4
+        with:
+          ref: portfolio/lifecycle-amendment-1-integration-harness
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.12.0
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Create and validate lifecycle-filtered Snapshot
+        run: pnpm exec tsx scripts/portfolio/create-snapshot.ts
+
+      - name: Upload immutable Snapshot artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: pekhtography-portfolio-lifecycle-snapshot-${{ github.run_id }}
+          path: snapshot/portfolio-snapshot.json
+          if-no-files-found: error
+          retention-days: 90

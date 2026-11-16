@@ -1,6 +1,6 @@
 import { createHash } from "node:crypto";
-import { readdir, readFile, writeFile } from "node:fs/promises";
-import { join, resolve } from "node:path";
+import { mkdir, readdir, readFile, writeFile } from "node:fs/promises";
+import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { stratifiedSample } from "../../src/lib/stratified-sample.ts";
 import {
@@ -178,6 +178,7 @@ export async function createPortfolioSnapshotFromArchive(options: SnapshotArchiv
     repositoryCommit,
     ...(options.sample ? { sample: options.sample } : {}),
   });
+  await mkdir(dirname(outputPath), { recursive: true });
   await writeFile(outputPath, JSON.stringify(snapshot, null, 2) + "\n", "utf8");
   return snapshot;
 }
