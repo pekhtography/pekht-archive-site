@@ -7,6 +7,7 @@ on:
     paths:
       - 'scripts/portfolio/create-snapshot.ts'
       - 'scripts/portfolio/lifecycle-registry.ts'
+      - 'scripts/portfolio/lifecycle-registry.json'
       - 'scripts/portfolio/snapshot.ts'
       - 'src/content/archive/**'
       - 'src/lib/stratified-sample.ts'
