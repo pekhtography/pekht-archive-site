@@ -23,7 +23,6 @@ export interface LifecycleRegistry {
 
 export interface Publication {
   source_id: string;
-  [key: string]: unknown;
 }
 
 function isObject(value: unknown): value is Record<string, unknown> {
