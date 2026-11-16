@@ -4,14 +4,19 @@ on:
   push:
     branches:
       - portfolio/orchestrator-v1
+      - portfolio/lifecycle-amendment-1-integration-harness
     paths:
       - 'scripts/portfolio/**'
+      - 'src/lib/stratified-sample.ts'
+      - 'src/lib/explore-sort.ts'
       - '.github/workflows/portfolio-snapshot-test.yml'
   pull_request:
     branches:
       - main
     paths:
       - 'scripts/portfolio/**'
+      - 'src/lib/stratified-sample.ts'
+      - 'src/lib/explore-sort.ts'
       - '.github/workflows/portfolio-snapshot-test.yml'
 
 permissions:
@@ -19,7 +24,7 @@ permissions:
 
 jobs:
   portfolio-snapshot-test:
-    name: Portfolio snapshot tests
+    name: Portfolio snapshot and lifecycle integration tests
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -40,5 +45,5 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      - name: Run Portfolio snapshot tests
-        run: pnpm exec tsx --test scripts/portfolio/snapshot.test.ts
+      - name: Run Portfolio snapshot and lifecycle tests
+        run: pnpm exec tsx --test scripts/portfolio/snapshot.test.ts scripts/portfolio/lifecycle-registry.test.ts scripts/portfolio/create-snapshot.test.ts
