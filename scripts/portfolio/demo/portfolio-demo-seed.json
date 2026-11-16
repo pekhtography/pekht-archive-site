@@ -1,0 +1,408 @@
+{
+  "schema_version": 1,
+  "mode": "DEMO_ONLY",
+  "generated_at": "2026-11-16T00:00:00Z",
+  "notice": "All gallery titles, statements, facets, captions and lifecycle events in this file are synthetic demonstration data. Image files and source IDs point to real archive entries. Do not treat demo curation or dates as confirmed publication history.",
+  "gallery_count": 6,
+  "photos_per_gallery": 6,
+  "galleries": [
+    {
+      "id": "demo-gallery-01",
+      "slug": "light-shadow",
+      "title": "Light Between Worlds",
+      "statement": "Light does not merely reveal a scene; it changes what the scene can mean.",
+      "facets": [
+        "Light",
+        "Shadow",
+        "Reflection",
+        "Perception"
+      ],
+      "photos": [
+        {
+          "source_id": "a-bridge-to-yesterday-mirrored-in-today-the-water-doesnt-for",
+          "image": "/images/archive/a-bridge-to-yesterday-mirrored-in-today-the-water-doesnt-for.jpg",
+          "title": "A Bridge To Yesterday Mirrored In Today The",
+          "caption": "A study in the way illumination changes the emotional temperature of an image. (demo caption 1)"
+        },
+        {
+          "source_id": "a-bronze-fist-wet-with-soil-shoves-through-the-dark-not-grow",
+          "image": "/images/archive/a-bronze-fist-wet-with-soil-shoves-through-the-dark-not-grow.jpg",
+          "title": "A Bronze Fist Wet With Soil Shoves Through",
+          "caption": "A study in the way illumination changes the emotional temperature of an image. (demo caption 2)"
+        },
+        {
+          "source_id": "a-capsule-with-a-painted-sun-the-real-one-just-ducked-behind",
+          "image": "/images/archive/a-capsule-with-a-painted-sun-the-real-one-just-ducked-behind.jpg",
+          "title": "A Capsule With A Painted Sun The Real",
+          "caption": "A study in the way illumination changes the emotional temperature of an image. (demo caption 3)"
+        },
+        {
+          "source_id": "a-cat-the-sunny-monarch-of-the-couch-lounges-like-a-fluffy-r",
+          "image": "/images/archive/a-cat-the-sunny-monarch-of-the-couch-lounges-like-a-fluffy-r.jpg",
+          "title": "A Cat The Sunny Monarch Of The Couch",
+          "caption": "A study in the way illumination changes the emotional temperature of an image. (demo caption 4)"
+        },
+        {
+          "source_id": "a-cat-the-ultimate-furry-philosopher-lounges-in-the-sun-pond",
+          "image": "/images/archive/a-cat-the-ultimate-furry-philosopher-lounges-in-the-sun-pond.jpg",
+          "title": "A Cat The Ultimate Furry Philosopher Lounges In",
+          "caption": "A study in the way illumination changes the emotional temperature of an image. (demo caption 5)"
+        },
+        {
+          "source_id": "a-city-without-lights-is-like-a-heart-without-a-pulse-night",
+          "image": "/images/archive/a-city-without-lights-is-like-a-heart-without-a-pulse-night.jpg",
+          "title": "A City Without Lights Is Like A Heart",
+          "caption": "A study in the way illumination changes the emotional temperature of an image. (demo caption 6)"
+        }
+      ]
+    },
+    {
+      "id": "demo-gallery-02",
+      "slug": "urban-forms",
+      "title": "The City Remembers",
+      "statement": "Buildings, bridges and streets become vessels for memory rather than mere structures.",
+      "facets": [
+        "Architecture",
+        "Memory",
+        "Urban",
+        "Geometry"
+      ],
+      "photos": [
+        {
+          "source_id": "a-bridge-trembles-under-the-weight-of-yesterday-yet-stretche",
+          "image": "/images/archive/a-bridge-trembles-under-the-weight-of-yesterday-yet-stretche.jpg",
+          "title": "A Bridge Trembles Under The Weight Of Yesterday",
+          "caption": "An urban fragment where structure carries traces of time and human passage. (demo caption 1)"
+        },
+        {
+          "source_id": "a-carousel-spins-between-towers-that-have-seen-centuries-of",
+          "image": "/images/archive/a-carousel-spins-between-towers-that-have-seen-centuries-of.jpg",
+          "title": "A Carousel Spins Between Towers That Have Seen",
+          "caption": "An urban fragment where structure carries traces of time and human passage. (demo caption 2)"
+        },
+        {
+          "source_id": "a-city-is-a-work-of-art-and-its-buildings-are-the-brush-stro",
+          "image": "/images/archive/a-city-is-a-work-of-art-and-its-buildings-are-the-brush-stro.jpg",
+          "title": "A City Is A Work Of Art And",
+          "caption": "An urban fragment where structure carries traces of time and human passage. (demo caption 3)"
+        },
+        {
+          "source_id": "a-city-kissed-by-a-rainbow-finds-magic-in-mundane-moments",
+          "image": "/images/archive/a-city-kissed-by-a-rainbow-finds-magic-in-mundane-moments.jpg",
+          "title": "A City Kissed By A Rainbow Finds Magic",
+          "caption": "An urban fragment where structure carries traces of time and human passage. (demo caption 4)"
+        },
+        {
+          "source_id": "a-citys-heart-beats-with-the-rhythm-of-history-where-bronze",
+          "image": "/images/archive/a-citys-heart-beats-with-the-rhythm-of-history-where-bronze.jpg",
+          "title": "A Citys Heart Beats With The Rhythm Of",
+          "caption": "An urban fragment where structure carries traces of time and human passage. (demo caption 5)"
+        },
+        {
+          "source_id": "a-citys-skyline-is-like-an-aging-rock-star-jamming-with-a-hi",
+          "image": "/images/archive/a-citys-skyline-is-like-an-aging-rock-star-jamming-with-a-hi.jpg",
+          "title": "A Citys Skyline Is Like An Aging Rock",
+          "caption": "An urban fragment where structure carries traces of time and human passage. (demo caption 6)"
+        }
+      ]
+    },
+    {
+      "id": "demo-gallery-03",
+      "slug": "nature-patterns",
+      "title": "Nature Keeps Its Own Time",
+      "statement": "Growth, weather and stillness reveal a rhythm that exists beyond human schedules.",
+      "facets": [
+        "Nature",
+        "Time",
+        "Growth",
+        "Stillness"
+      ],
+      "photos": [
+        {
+          "source_id": "12-grams-of-feathers-zero-grams-of-self-doubt-the-branch-got",
+          "image": "/images/archive/12-grams-of-feathers-zero-grams-of-self-doubt-the-branch-got.jpg",
+          "title": "12 Grams Of Feathers Zero Grams Of Self",
+          "caption": "A small encounter with nature's patient patterns and quiet transformations. (demo caption 1)"
+        },
+        {
+          "source_id": "30-kilos-of-snow-on-each-branch-not-one-has-snapped-the-whol",
+          "image": "/images/archive/30-kilos-of-snow-on-each-branch-not-one-has-snapped-the-whol.jpg",
+          "title": "30 Kilos Of Snow On Each Branch Not",
+          "caption": "A small encounter with nature's patient patterns and quiet transformations. (demo caption 2)"
+        },
+        {
+          "source_id": "a-boat-glides-under-stormy-clouds-while-flowers-bloom-bright",
+          "image": "/images/archive/a-boat-glides-under-stormy-clouds-while-flowers-bloom-bright.jpg",
+          "title": "A Boat Glides Under Stormy Clouds While Flowers",
+          "caption": "A small encounter with nature's patient patterns and quiet transformations. (demo caption 3)"
+        },
+        {
+          "source_id": "a-boat-ride-on-the-moskva-river-where-every-ripple-tells-a-s",
+          "image": "/images/archive/a-boat-ride-on-the-moskva-river-where-every-ripple-tells-a-s.jpg",
+          "title": "A Boat Ride On The Moskva River Where",
+          "caption": "A small encounter with nature's patient patterns and quiet transformations. (demo caption 4)"
+        },
+        {
+          "source_id": "a-botanist-walks-past-clipboard-out-stops-pencil-mid-air-squ",
+          "image": "/images/archive/a-botanist-walks-past-clipboard-out-stops-pencil-mid-air-squ.jpg",
+          "title": "A Botanist Walks Past Clipboard Out Stops Pencil",
+          "caption": "A small encounter with nature's patient patterns and quiet transformations. (demo caption 5)"
+        },
+        {
+          "source_id": "a-botanist-would-note-subject-exhibits-aggressive-canopy-inf",
+          "image": "/images/archive/a-botanist-would-note-subject-exhibits-aggressive-canopy-inf.jpg",
+          "title": "A Botanist Would Note Subject Exhibits Aggressive Canopy",
+          "caption": "A small encounter with nature's patient patterns and quiet transformations. (demo caption 6)"
+        }
+      ]
+    },
+    {
+      "id": "demo-gallery-04",
+      "slug": "human-presence",
+      "title": "The Human Trace",
+      "statement": "Presence can be felt even when the person is only a passing figure or a distant observer.",
+      "facets": [
+        "Human Presence",
+        "Observation",
+        "Identity",
+        "Distance"
+      ],
+      "photos": [
+        {
+          "source_id": "2020s-portrait-blurred-face-sharp-pupils-youre-visible-only-",
+          "image": "/images/archive/2020s-portrait-blurred-face-sharp-pupils-youre-visible-only-.jpg",
+          "title": "2020s Portrait Blurred Face Sharp Pupils Youre Visible",
+          "caption": "A moment that suggests a person through gesture, gaze or the space they leave behind. (demo caption 1)"
+        },
+        {
+          "source_id": "a-cats-daily-schedule-eat-sleep-stare-at-human-until-they-fe",
+          "image": "/images/archive/a-cats-daily-schedule-eat-sleep-stare-at-human-until-they-fe.jpg",
+          "title": "A Cats Daily Schedule Eat Sleep Stare At",
+          "caption": "A moment that suggests a person through gesture, gaze or the space they leave behind. (demo caption 2)"
+        },
+        {
+          "source_id": "a-man-walks-past-the-glass-wall-hes-not-going-to-work-hes-st",
+          "image": "/images/archive/a-man-walks-past-the-glass-wall-hes-not-going-to-work-hes-st.jpg",
+          "title": "A Man Walks Past The Glass Wall Hes",
+          "caption": "A moment that suggests a person through gesture, gaze or the space they leave behind. (demo caption 3)"
+        },
+        {
+          "source_id": "a-portrait-so-powerful-it-feels-like-a-scene-from-one-of-his",
+          "image": "/images/archive/a-portrait-so-powerful-it-feels-like-a-scene-from-one-of-his.jpg",
+          "title": "A Portrait So Powerful It Feels Like A",
+          "caption": "A moment that suggests a person through gesture, gaze or the space they leave behind. (demo caption 4)"
+        },
+        {
+          "source_id": "a-still-lake-mirrors-the-thoughts-of-a-fisherman-lost-in-the",
+          "image": "/images/archive/a-still-lake-mirrors-the-thoughts-of-a-fisherman-lost-in-the.jpg",
+          "title": "A Still Lake Mirrors The Thoughts Of A",
+          "caption": "A moment that suggests a person through gesture, gaze or the space they leave behind. (demo caption 5)"
+        },
+        {
+          "source_id": "an-entomologist-would-call-it-thermoregulatory-surface-selec",
+          "image": "/images/archive/an-entomologist-would-call-it-thermoregulatory-surface-selec.jpg",
+          "title": "An Entomologist Would Call It Thermoregulatory Surface Selec",
+          "caption": "A moment that suggests a person through gesture, gaze or the space they leave behind. (demo caption 6)"
+        }
+      ]
+    },
+    {
+      "id": "demo-gallery-05",
+      "slug": "quiet-objects",
+      "title": "Objects With Other Lives",
+      "statement": "Ordinary objects become strange when attention shifts from their use to their atmosphere.",
+      "facets": [
+        "Still Life",
+        "Everyday",
+        "Atmosphere",
+        "Surreal"
+      ],
+      "photos": [
+        {
+          "source_id": "a-bookstore-exploded-into-a-christmas-fever-dream-neon-bleed",
+          "image": "/images/archive/a-bookstore-exploded-into-a-christmas-fever-dream-neon-bleed.jpg",
+          "title": "A Bookstore Exploded Into A Christmas Fever Dream",
+          "caption": "An ordinary object or interior seen as a fragment of a larger, quieter story. (demo caption 1)"
+        },
+        {
+          "source_id": "a-day-in-the-park-is-like-a-day-in-paradise-architecture-ele",
+          "image": "/images/archive/a-day-in-the-park-is-like-a-day-in-paradise-architecture-ele.jpg",
+          "title": "A Day In The Park Is Like A",
+          "caption": "An ordinary object or interior seen as a fragment of a larger, quieter story. (demo caption 2)"
+        },
+        {
+          "source_id": "a-river-a-soviet-slab-a-glass-tower-then-a-ufo-docked-betwee",
+          "image": "/images/archive/a-river-a-soviet-slab-a-glass-tower-then-a-ufo-docked-betwee.jpg",
+          "title": "A River A Soviet Slab A Glass Tower",
+          "caption": "An ordinary object or interior seen as a fragment of a larger, quieter story. (demo caption 3)"
+        },
+        {
+          "source_id": "aesthetic-harmony-in-architecture-is-like-crafting-a-perfect",
+          "image": "/images/archive/aesthetic-harmony-in-architecture-is-like-crafting-a-perfect.jpg",
+          "title": "Aesthetic Harmony In Architecture Is Like Crafting A",
+          "caption": "An ordinary object or interior seen as a fragment of a larger, quieter story. (demo caption 4)"
+        },
+        {
+          "source_id": "amanitamuscaria-mushroom-psychoactive-mind-toxic-danger-ench",
+          "image": "/images/archive/amanitamuscaria-mushroom-psychoactive-mind-toxic-danger-ench.jpg",
+          "title": "Amanitamuscaria Mushroom Psychoactive Mind Toxic Danger Ench",
+          "caption": "An ordinary object or interior seen as a fragment of a larger, quieter story. (demo caption 5)"
+        },
+        {
+          "source_id": "architecture-is-frozen-music-illuminated-by-the-sparkle-of-w",
+          "image": "/images/archive/architecture-is-frozen-music-illuminated-by-the-sparkle-of-w.jpg",
+          "title": "Architecture Is Frozen Music Illuminated By The Sparkle",
+          "caption": "An ordinary object or interior seen as a fragment of a larger, quieter story. (demo caption 6)"
+        }
+      ]
+    },
+    {
+      "id": "demo-gallery-06",
+      "slug": "movement-weather",
+      "title": "Everything Is in Motion",
+      "statement": "Movement and weather turn familiar scenes into temporary, unstable compositions.",
+      "facets": [
+        "Movement",
+        "Weather",
+        "Water",
+        "Change"
+      ],
+      "photos": [
+        {
+          "source_id": "a-car-that-makes-you-double-check-is-it-wood-or-wizardry-ill",
+          "image": "/images/archive/a-car-that-makes-you-double-check-is-it-wood-or-wizardry-ill.jpg",
+          "title": "A Car That Makes You Double Check Is",
+          "caption": "A passing movement, shifting sky or changing surface held for a single instant. (demo caption 1)"
+        },
+        {
+          "source_id": "a-car-that-outlived-presidents-wars-and-trendsyet-still-turn",
+          "image": "/images/archive/a-car-that-outlived-presidents-wars-and-trendsyet-still-turn.jpg",
+          "title": "A Car That Outlived Presidents Wars And Trendsyet",
+          "caption": "A passing movement, shifting sky or changing surface held for a single instant. (demo caption 2)"
+        },
+        {
+          "source_id": "a-cruise-ship-white-casual-full-of-daydreams-drifts-past-a-f",
+          "image": "/images/archive/a-cruise-ship-white-casual-full-of-daydreams-drifts-past-a-f.jpg",
+          "title": "A Cruise Ship White Casual Full Of Daydreams",
+          "caption": "A passing movement, shifting sky or changing surface held for a single instant. (demo caption 3)"
+        },
+        {
+          "source_id": "a-fluffy-cloud-of-fur-a-wildflower-at-heart-needs-a-hairdres",
+          "image": "/images/archive/a-fluffy-cloud-of-fur-a-wildflower-at-heart-needs-a-hairdres.jpg",
+          "title": "A Fluffy Cloud Of Fur A Wildflower At",
+          "caption": "A passing movement, shifting sky or changing surface held for a single instant. (demo caption 4)"
+        },
+        {
+          "source_id": "a-kaleidoscope-of-petunias-guards-the-river-a-boat-drifts-by",
+          "image": "/images/archive/a-kaleidoscope-of-petunias-guards-the-river-a-boat-drifts-by.jpg",
+          "title": "A Kaleidoscope Of Petunias Guards The River A",
+          "caption": "A passing movement, shifting sky or changing surface held for a single instant. (demo caption 5)"
+        },
+        {
+          "source_id": "a-monument-to-friendship-where-water-and-art-intertwine-in-a",
+          "image": "/images/archive/a-monument-to-friendship-where-water-and-art-intertwine-in-a.jpg",
+          "title": "A Monument To Friendship Where Water And Art",
+          "caption": "A passing movement, shifting sky or changing surface held for a single instant. (demo caption 6)"
+        }
+      ]
+    }
+  ],
+  "cooldown_demo": [
+    {
+      "source_id": "14-colors-two-wing-sails-that-do-absolutely-nothing-aerodyna",
+      "image": "/images/archive/14-colors-two-wing-sails-that-do-absolutely-nothing-aerodyna.jpg",
+      "title": "14 Colors Two Wing Sails That Do Absolutely",
+      "gallery_id": "demo-retired-gallery-01",
+      "removedFromExhibitionAt": "2026-10-20T00:00:00Z",
+      "eligible_again_at": "2026-12-19T00:00:00Z"
+    },
+    {
+      "source_id": "1969-were-changing-the-world-with-music-2026-posters-on-etsy",
+      "image": "/images/archive/1969-were-changing-the-world-with-music-2026-posters-on-etsy.jpg",
+      "title": "1969 Were Changing The World With Music 2026",
+      "gallery_id": "demo-retired-gallery-01",
+      "removedFromExhibitionAt": "2026-10-20T00:00:00Z",
+      "eligible_again_at": "2026-12-19T00:00:00Z"
+    },
+    {
+      "source_id": "45-billion-years-one-angle-zero-pivot-historians-call-it-loy",
+      "image": "/images/archive/45-billion-years-one-angle-zero-pivot-historians-call-it-loy.jpg",
+      "title": "45 Billion Years One Angle Zero Pivot Historians",
+      "gallery_id": "demo-retired-gallery-01",
+      "removedFromExhibitionAt": "2026-10-20T00:00:00Z",
+      "eligible_again_at": "2026-12-19T00:00:00Z"
+    },
+    {
+      "source_id": "a-blush-of-pink-amidst-the-evergreen-a-moment-of-fleeting-be",
+      "image": "/images/archive/a-blush-of-pink-amidst-the-evergreen-a-moment-of-fleeting-be.jpg",
+      "title": "A Blush Of Pink Amidst The Evergreen A",
+      "gallery_id": "demo-retired-gallery-01",
+      "removedFromExhibitionAt": "2026-10-20T00:00:00Z",
+      "eligible_again_at": "2026-12-19T00:00:00Z"
+    },
+    {
+      "source_id": "a-bouquet-of-colorful-flowers-is-a-celebration-of-life-flowe",
+      "image": "/images/archive/a-bouquet-of-colorful-flowers-is-a-celebration-of-life-flowe.jpg",
+      "title": "A Bouquet Of Colorful Flowers Is A Celebration",
+      "gallery_id": "demo-retired-gallery-01",
+      "removedFromExhibitionAt": "2026-10-20T00:00:00Z",
+      "eligible_again_at": "2026-12-19T00:00:00Z"
+    },
+    {
+      "source_id": "a-canopy-of-twinkling-baubles-hangs-above-like-a-starry-sky",
+      "image": "/images/archive/a-canopy-of-twinkling-baubles-hangs-above-like-a-starry-sky.jpg",
+      "title": "A Canopy Of Twinkling Baubles Hangs Above Like",
+      "gallery_id": "demo-retired-gallery-01",
+      "removedFromExhibitionAt": "2026-10-20T00:00:00Z",
+      "eligible_again_at": "2026-12-19T00:00:00Z"
+    },
+    {
+      "source_id": "a-cat-a-furry-enigma-tiptoes-through-life-with-mischief-in-i",
+      "image": "/images/archive/a-cat-a-furry-enigma-tiptoes-through-life-with-mischief-in-i.jpg",
+      "title": "A Cat A Furry Enigma Tiptoes Through Life",
+      "gallery_id": "demo-retired-gallery-02",
+      "removedFromExhibitionAt": "2026-11-01T00:00:00Z",
+      "eligible_again_at": "2026-12-31T00:00:00Z"
+    },
+    {
+      "source_id": "a-cat-a-tiny-power-packed-universe-the-furry-boss-of-the-hou",
+      "image": "/images/archive/a-cat-a-tiny-power-packed-universe-the-furry-boss-of-the-hou.png",
+      "title": "A Cat A Tiny Power Packed Universe The",
+      "gallery_id": "demo-retired-gallery-02",
+      "removedFromExhibitionAt": "2026-11-01T00:00:00Z",
+      "eligible_again_at": "2026-12-31T00:00:00Z"
+    },
+    {
+      "source_id": "a-cat-is-a-furry-masterpiece-a-poetic-nap-artist-who-effortl",
+      "image": "/images/archive/a-cat-is-a-furry-masterpiece-a-poetic-nap-artist-who-effortl.jpg",
+      "title": "A Cat Is A Furry Masterpiece A Poetic",
+      "gallery_id": "demo-retired-gallery-02",
+      "removedFromExhibitionAt": "2026-11-01T00:00:00Z",
+      "eligible_again_at": "2026-12-31T00:00:00Z"
+    },
+    {
+      "source_id": "a-cat-is-a-mystery-that-cannot-be-unraveled-cat-comfort-love",
+      "image": "/images/archive/a-cat-is-a-mystery-that-cannot-be-unraveled-cat-comfort-love.jpg",
+      "title": "A Cat Is A Mystery That Cannot Be",
+      "gallery_id": "demo-retired-gallery-02",
+      "removedFromExhibitionAt": "2026-11-01T00:00:00Z",
+      "eligible_again_at": "2026-12-31T00:00:00Z"
+    },
+    {
+      "source_id": "a-cat-knows-how-to-be-silent-cat-observer-wisdom-comfort-adm",
+      "image": "/images/archive/a-cat-knows-how-to-be-silent-cat-observer-wisdom-comfort-adm.jpg",
+      "title": "A Cat Knows How To Be Silent Cat",
+      "gallery_id": "demo-retired-gallery-02",
+      "removedFromExhibitionAt": "2026-11-01T00:00:00Z",
+      "eligible_again_at": "2026-12-31T00:00:00Z"
+    },
+    {
+      "source_id": "a-cat-lounges-blissfully-on-the-couch-pondering-life-while-m",
+      "image": "/images/archive/a-cat-lounges-blissfully-on-the-couch-pondering-life-while-m.jpg",
+      "title": "A Cat Lounges Blissfully On The Couch Pondering",
+      "gallery_id": "demo-retired-gallery-02",
+      "removedFromExhibitionAt": "2026-11-01T00:00:00Z",
+      "eligible_again_at": "2026-12-31T00:00:00Z"
+    }
+  ]
+}
