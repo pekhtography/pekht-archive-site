@@ -78,13 +78,13 @@ export function parseArchivePublication(sourceId: string, raw: string): ArchiveP
     } else fields.set(field[1], parseScalar(field[2]));
   }
   const body = match[2].trim();
-  const required = ["x_id", "title", "image", "x_created_at"] as const;
+  const required = ["x_id", "title", "image"] as const;
   for (const key of required) {
     if (!fields.get(key)?.trim()) throw new Error(`archive/${sourceId}: missing required frontmatter field ${key}`);
   }
   if (!body) throw new Error(`archive/${sourceId}: empty publication body`);
-  const createdAt = fields.get("x_created_at") as string;
-  if (Number.isNaN(Date.parse(createdAt))) throw new Error(`archive/${sourceId}: invalid x_created_at`);
+  const createdAt = fields.get("x_created_at") ?? fields.get("created_at") ?? "";
+  if (createdAt && Number.isNaN(Date.parse(createdAt))) throw new Error(`archive/${sourceId}: invalid creation timestamp`);
   return {
     source_id: sourceId,
     x_id: fields.get("x_id") as string,

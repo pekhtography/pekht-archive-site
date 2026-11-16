@@ -139,3 +139,10 @@ test("archive command reads files and writes a validated Snapshot without provid
     await rm(root, { recursive: true, force: true });
   }
 });
+
+test("preserves an absent archive creation date as an empty value instead of inventing one", () => {
+  const raw = `---\ntitle: "Undated archive entry"\nx_id: "987654321"\nimage: "/image.jpg"\nhashtags:\n  - "Urban"\n---\nBody without an archive date.\n`;
+  const parsed = parseArchivePublication("undated-entry", raw);
+  assert.equal(parsed.created_at, "");
+  assert.equal(parsed.original_markdown, raw);
+});
