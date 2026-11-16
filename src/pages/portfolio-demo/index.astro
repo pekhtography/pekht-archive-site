@@ -5,7 +5,7 @@ import seed from "@/portfolio-demo-seed.json";
 
 const base = import.meta.env.BASE_URL;
 const facets = [...new Set(seed.galleries.flatMap((gallery) => gallery.facets))].sort();
-const imageUrl = (path: string) => base + path.replace(/^\\//, "");
+const imageUrl = (path: string) => base + path.slice(1);
 ---
 
 <IndexLayout title="Portfolio Demo — PEKHTography" description="A demonstration of six curated mini-galleries and a 60-day lifecycle exclusion register." image="/og/default.png">
