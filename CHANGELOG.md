@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## [v3.33.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.33.0) | 2026-11-26
+
+### Features
+- publish Journal entry [6733d1d](https://github.com/pekhtography/pekht-archive-site/commit/6733d1d)
+- sync new PEKHTOGRAPHY posts [1f3fea6](https://github.com/pekhtography/pekht-archive-site/commit/1f3fea6)
+
 ## [v3.32.0](https://github.com/pekhtography/pekht-archive-site/releases/tag/v3.32.0) | 2026-11-19
 
 ### Features
